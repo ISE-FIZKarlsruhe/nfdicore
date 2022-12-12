@@ -1,0 +1,2 @@
+# nfdico
+NFDI Core Ontology
