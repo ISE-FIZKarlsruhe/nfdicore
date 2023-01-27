@@ -85,9 +85,9 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  http://nfdi.fiz-karlsruhe.de/ontology/bestPractice
 nfdicore:bestPractice rdf:type owl:ObjectProperty ;
                   owl:inverseOf nfdicore:bestPracticeOf ;
-                  rdfs:domain nfdicore:Work ;
+                  rdfs:domain nfdicore:Resource ;
                   rdfs:range nfdicore:Specification ;
-                  rdfs:comment "The property is a relationship between a work and the best practice."@en ;
+                  rdfs:comment "The property is a relationship between a resource and the best practice."@en ;
                   rdfs:label "best practice"@en .
 
 
@@ -99,13 +99,13 @@ nfdicore:bestPracticeOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/contactPoint
 nfdicore:contactPoint rdf:type owl:ObjectProperty ;
                   owl:inverseOf nfdicore:contactPointOf ;
-                  rdfs:domain nfdicore:Work ;
+                  rdfs:domain nfdicore:Resource ;
                   rdfs:range [ rdf:type owl:Class ;
                                owl:unionOf ( nfdicore:Organization
                                              nfdicore:Person
                                            )
                              ] ;
-                  rdfs:comment "The property is a relationship between a work and a contact point."@en ;
+                  rdfs:comment "The property is a relationship between a resource and a contact point."@en ;
                   rdfs:label "contact point"@en .
 
 
@@ -117,13 +117,13 @@ nfdicore:contactPointOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/contributor
 nfdicore:contributor rdf:type owl:ObjectProperty ;
                  owl:inverseOf nfdicore:contributorOf ;
-                 rdfs:domain nfdicore:Work ;
+                 rdfs:domain nfdicore:Resource ;
                  rdfs:range [ rdf:type owl:Class ;
                               owl:unionOf ( nfdicore:Organization
                                             nfdicore:Person
                                           )
                             ] ;
-                 rdfs:comment "The property related a work to a person or an organisation responsible for making contributions to the work."@en ;
+                 rdfs:comment "The property related a resource to a person or an organisation responsible for making contributions to a resource."@en ;
                  rdfs:label "contributor"@en .
 
 
@@ -152,9 +152,9 @@ nfdicore:countryOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/exportFormat
 nfdicore:exportFormat rdf:type owl:ObjectProperty ;
                   owl:inverseOf nfdicore:exportFormatOf ;
-                  rdfs:domain nfdicore:Work ;
+                  rdfs:domain nfdicore:Resource ;
                   rdfs:range nfdicore:MediaType ;
-                  rdfs:comment "The property relates a work to the format available for the export of a work."@en ;
+                  rdfs:comment "The property relates a resource to the format available for the export of a resource."@en ;
                   rdfs:label "export format"@en .
 
 
@@ -200,11 +200,11 @@ nfdicore:fundingOrganisation rdf:type owl:ObjectProperty ;
                          owl:inverseOf nfdicore:fundingOrganisationOf ;
                          rdfs:domain [ rdf:type owl:Class ;
                                        owl:unionOf ( nfdicore:Project
-                                                     nfdicore:Work
+                                                     nfdicore:Resource
                                                    )
                                      ] ;
                          rdfs:range nfdicore:Organization ;
-                         rdfs:comment "The property relates a work or a project to the organisation that provided funding for it."@en ;
+                         rdfs:comment "The property relates a resource or a project to the organisation that provided funding for it."@en ;
                          rdfs:label "funding organisation"@en .
 
 
@@ -213,7 +213,7 @@ nfdicore:fundingOrganisationOf rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf nfdicore:funderOf ;
                            rdfs:domain [ rdf:type owl:Class ;
                                          owl:unionOf ( nfdicore:Project
-                                                       nfdicore:Work
+                                                       nfdicore:Resource
                                                      )
                                        ] ;
                            rdfs:label "funding organisation of"@en .
@@ -223,9 +223,9 @@ nfdicore:fundingOrganisationOf rdf:type owl:ObjectProperty ;
 nfdicore:fundingProject rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf nfdicore:funder ;
                     owl:inverseOf nfdicore:fundingProjectOf ;
-                    rdfs:domain nfdicore:Work ;
+                    rdfs:domain nfdicore:Resource ;
                     rdfs:range nfdicore:Project ;
-                    rdfs:comment "The property relateds a work to the project that provided funding for it."@en ;
+                    rdfs:comment "The property relateds a resource to the project that provided funding for it."@en ;
                     rdfs:label "funding project"@en .
 
 
@@ -252,9 +252,9 @@ nfdicore:instanceOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/license
 nfdicore:license rdf:type owl:ObjectProperty ;
              owl:inverseOf nfdicore:licenseOf ;
-             rdfs:domain nfdicore:Work ;
+             rdfs:domain nfdicore:Resource ;
              rdfs:range nfdicore:License ;
-             rdfs:comment "The property is a relationship between a work and a license file." ;
+             rdfs:comment "The property is a relationship between a resource and a license file." ;
              rdfs:label "license"@en .
 
 
@@ -280,7 +280,7 @@ nfdicore:locationOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/mapping
 nfdicore:mapping rdf:type owl:ObjectProperty ;
              owl:inverseOf nfdicore:mappingOf ;
-             rdfs:domain nfdicore:Work ;
+             rdfs:domain nfdicore:Resource ;
              rdfs:range nfdicore:Mapping ;
              rdfs:comment "The property is a relationship between a a data resource and its various representations, e.g. same resource that exists in different data formats. "@en ;
              rdfs:label "mapping"@en .
@@ -294,7 +294,7 @@ nfdicore:mappingOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/mediaType
 nfdicore:mediaType rdf:type owl:ObjectProperty ;
                owl:inverseOf nfdicore:mediaTypeOf ;
-               rdfs:domain nfdicore:Work ;
+               rdfs:domain nfdicore:Resource ;
                rdfs:range nfdicore:MediaType ;
                rdfs:comment "The property relates a contrbution to its data format."@en ;
                rdfs:label "media type"@en .
@@ -352,16 +352,16 @@ nfdicore:programmingLanguageOf rdf:type owl:ObjectProperty ;
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/provisionType
 nfdicore:provisionType rdf:type owl:ObjectProperty ;
-                   rdfs:domain nfdicore:ProvidedWork ;
-                   rdfs:range nfdicore:Work ;
-                   rdfs:comment "The property links a work provided by a community to its type."@en ;
+                   rdfs:domain nfdicore:ProvidedResource ;
+                   rdfs:range nfdicore:Resource ;
+                   rdfs:comment "The property links a resource provided by a community to its type."@en ;
                    rdfs:label "provision type"@en .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/publisher
 nfdicore:publisher rdf:type owl:ObjectProperty ;
                owl:inverseOf nfdicore:publisherOf ;
-               rdfs:domain nfdicore:Work ;
+               rdfs:domain nfdicore:Resource ;
                rdfs:range [ rdf:type owl:Class ;
                             owl:unionOf ( nfdicore:Organization
                                           nfdicore:Person
@@ -388,9 +388,9 @@ nfdicore:relatedProject rdf:type owl:ObjectProperty ,
 ###  http://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity
 nfdicore:semanticExpressivity rdf:type owl:ObjectProperty ;
                           owl:inverseOf nfdicore:semanticExpressivityOf ;
-                          rdfs:domain nfdicore:Work ;
+                          rdfs:domain nfdicore:Resource ;
                           rdfs:range nfdicore:SemanticExpressivity ;
-                          rdfs:comment "The property relates a work to its semantic expressivity spectrum."@en ;
+                          rdfs:comment "The property relates a resource to its semantic expressivity spectrum."@en ;
                           rdfs:label "semantic expressivity"@en .
 
 
@@ -416,9 +416,9 @@ nfdicore:serviceTypeOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/software
 nfdicore:software rdf:type owl:ObjectProperty ;
               owl:inverseOf nfdicore:sofwareOf ;
-              rdfs:domain nfdicore:Work ;
+              rdfs:domain nfdicore:Resource ;
               rdfs:range nfdicore:Software ;
-              rdfs:comment "The property is a relationship between a work and a software it uses."@en ;
+              rdfs:comment "The property is a relationship between a resource and a software it uses."@en ;
               rdfs:label "software"@en .
 
 
@@ -435,8 +435,8 @@ nfdicore:sofwareOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint
 nfdicore:sparqlEndpoint rdf:type owl:ObjectProperty ;
                     owl:inverseOf nfdicore:sparqlEndpointOf ;
-                    rdfs:domain nfdicore:Work ;
-                    rdfs:range nfdicore:Work ;
+                    rdfs:domain nfdicore:Resource ;
+                    rdfs:range nfdicore:Resource ;
                     rdfs:comment "The property relates a data resource to its SPARQL Endpoint. "@en ;
                     rdfs:label "sparql endpoint"@en .
 
@@ -449,7 +449,7 @@ nfdicore:sparqlEndpointOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/specification
 nfdicore:specification rdf:type owl:ObjectProperty ;
                    owl:inverseOf nfdicore:specificationOf ;
-                   rdfs:domain nfdicore:Work ;
+                   rdfs:domain nfdicore:Resource ;
                    rdfs:range nfdicore:Specification ;
                    rdfs:comment "The property is a relationship between a resource and the international standard or norm."@en ;
                    rdfs:label "specification"@en .
@@ -463,9 +463,9 @@ nfdicore:specificationOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/standard
 nfdicore:standard rdf:type owl:ObjectProperty ;
               owl:inverseOf nfdicore:standardOf ;
-              rdfs:domain nfdicore:Work ;
+              rdfs:domain nfdicore:Resource ;
               rdfs:range nfdicore:Standard ;
-              rdfs:comment "The property relates a work to the standard it relies on."@en ;
+              rdfs:comment "The property relates a resource to the standard it relies on."@en ;
               rdfs:label "standard"@en .
 
 
@@ -477,9 +477,9 @@ nfdicore:standardOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/subjectArea
 nfdicore:subjectArea rdf:type owl:ObjectProperty ;
                  owl:inverseOf nfdicore:subjectAreaOf ;
-                 rdfs:domain nfdicore:Work ;
+                 rdfs:domain nfdicore:Resource ;
                  rdfs:range nfdicore:AcademicDiscipline ;
-                 rdfs:comment "The property is a relationship between a work and its academic discipline, subject area or domain."@en ;
+                 rdfs:comment "The property is a relationship between a resource and its academic discipline, subject area or domain."@en ;
                  rdfs:label "subject area"@en .
 
 
@@ -496,7 +496,7 @@ nfdicore:subsidiaryOrganization rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/technology
 nfdicore:technology rdf:type owl:ObjectProperty ;
                 owl:inverseOf nfdicore:technologyOf ;
-                rdfs:domain nfdicore:Work ;
+                rdfs:domain nfdicore:Resource ;
                 rdfs:range nfdicore:TechnologicalMeans ;
                 rdfs:comment "The property is a relationship between a resource and a technology it uses. "@en ;
                 rdfs:label "technology"@en .
@@ -664,10 +664,10 @@ nfdicore:Project rdf:type owl:Class ;
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/ProvidedWork
-nfdicore:ProvidedWork rdf:type owl:Class ;
-                  rdfs:subClassOf nfdicore:Work ;
-                  rdfs:comment "A ressource that identifies a work provided to the nfdi."@en ;
-                  rdfs:label "provided work"@en .
+nfdicore:ProvidedResource rdf:type owl:Class ;
+                  rdfs:subClassOf nfdicore:Resource ;
+                  rdfs:comment "A ressource that identifies a resource provided to the nfdi."@en ;
+                  rdfs:label "provided resource"@en .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/Publication
@@ -681,7 +681,7 @@ nfdicore:Publication rdf:type owl:Class ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity
 nfdicore:SemanticExpressivity rdf:type owl:Class ;
                           nfdicore:example "controlled vocabulary, ontology, taxonomy"@en ;
-                          rdfs:comment "A resource that identifies the level of the semantic expressivity of the work. Five instances are now included in nfdicore."@en ;
+                          rdfs:comment "An entity that identifies the level of the semantic expressivity of a resource. Five instances are now included in nfdicore."@en ;
                           rdfs:label "semantic expressivity"@en .
 
 
@@ -740,15 +740,15 @@ nfdicore:Website rdf:type owl:Class ;
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/Work
-nfdicore:Work rdf:type owl:Class ;
+nfdicore:Resource rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Class ;
                             owl:unionOf ( schema:CreativeWork
                                           schema:Intangible
                                           schema:Product
                                         )
                           ] ;
-          rdfs:comment "A ressource that identifies the most generic kind of work and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations."@en ;
-          rdfs:label "work"@en .
+          rdfs:comment "The most generic kind of a resource and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations."@en ;
+          rdfs:label "resource"@en .
 
 
 ###  http://schema.org/CreativeWork
