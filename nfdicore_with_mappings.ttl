@@ -345,8 +345,7 @@ nfdicore:parentOrganisation rdf:type owl:ObjectProperty ;
                             owl:inverseOf nfdicore:subsidiaryOrganization ;
                             rdfs:domain nfdicore:Organization ;
                             rdfs:range nfdicore:Organization ;
-                            rdfs:comment """The property is a parental relationship between organisations. 
-"""@en ;
+                            rdfs:comment "The property is a parental relationship between organisations."@en ;
                             rdfs:label "parent organisation"@en .
 
 
