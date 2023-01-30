@@ -38,7 +38,7 @@
                                                     <https://orcid.org/0000-0001-7192-7143> ;
                                          dc:title "NFDICORE Ontology" ;
                                          dcterms:abstract "The NFDICORE ontology is the core ontology that describes all resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI. It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology, and contains mappings to numerous external vocabularies and ontologies."@en ;
-                                         dcterms:hasVersion "1.0.0" ;
+                                         dcterms:hasVersion "1.0.2" ;
                                          rdfs:label "NFDICORE Ontology (nfdicore)" .
 
 #################################################################
