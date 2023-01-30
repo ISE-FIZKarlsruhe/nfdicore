@@ -1,0 +1,38 @@
+name: Update the /docs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - documentation
+    paths:
+      - nfdicore.ttl
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+      - uses: actions/cache@v2
+        name: Configure pip caching
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-publish-pip-${{ hashFiles('**/setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-publish-pip-
+      - name: Install dependencies
+        run: |
+          pip install pyLODE==3.0.1
+      - name: Generate LODE docs
+        run: pylode nfdicore.ttl -o docs/LODE.html
+      - name: Commit and push if README changed
+        run: |-
+          git diff
+          git config --global user.email "eposthumus@gmail.com"
+          git config --global user.name "Etienne Posthumus"
+          git diff --quiet || (git add docs/LODE.html && git commit -m "Updated LODE")
+          git push
