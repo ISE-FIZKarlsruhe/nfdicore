@@ -28,7 +28,9 @@ jobs:
         run: |
           pip install pyLODE==3.0.1
       - name: Generate LODE docs
-        run: pylode nfdicore.ttl -o docs/LODE.html
+        run: |-
+          mkdir docs
+          pylode nfdicore.ttl -o docs/LODE.html
       - name: Commit and push if README changed
         run: |-
           git diff
