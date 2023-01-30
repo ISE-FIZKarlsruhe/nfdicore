@@ -83,6 +83,17 @@ void:feature rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://nfdi.fiz-karlsruhe.de/ontology#representedCollection
+:representedCollection rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :representedCollectionOf ;
+                       rdfs:label "represented collection of"@en .
+
+###  http://nfdi.fiz-karlsruhe.de/ontology#representedCollectionOf
+:representedCollectionOf rdf:type owl:ObjectProperty ;
+                         rdfs:comment "The property is a relationship between a dataset and a collection it represents."@en ;
+                         rdfs:label "represented collection"@en .
+
+
 ###  http://nfdi.fiz-karlsruhe.de/ontology/bestPractice
 nfdicore:bestPractice rdf:type owl:ObjectProperty ;
                       owl:inverseOf nfdicore:bestPracticeOf ;
@@ -334,8 +345,7 @@ nfdicore:parentOrganisation rdf:type owl:ObjectProperty ;
                             owl:inverseOf nfdicore:subsidiaryOrganization ;
                             rdfs:domain nfdicore:Organization ;
                             rdfs:range nfdicore:Organization ;
-                            rdfs:comment """The property is a parental relationship between organisations. 
-"""@en ;
+                            rdfs:comment "The property is a parental relationship between organisations."@en ;
                             rdfs:label "parent organisation"@en .
 
 
@@ -604,6 +614,13 @@ nfdicore:url rdf:type owl:DatatypeProperty ;
 ###  http://dbpedia.org/ontology/Person
 <http://dbpedia.org/ontology/Person> rdf:type owl:Class ;
                                      owl:equivalentClass nfdicore:Person .
+
+
+
+###  http://nfdi.fiz-karlsruhe.de/ontology#Dataset
+:Dataset rdf:type owl:Class ;
+         owl:equivalentClass schema:Dataset ;
+         rdfs:subClassOf schema:CreativeWork .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline
@@ -978,6 +995,7 @@ dbo:Place rdf:type owl:Class .
 
 ###  https://dbpedia.org/ontology/ProgrammingLanguage
 dbo:ProgrammingLanguage rdf:type owl:Class .
+
 
 
 ###  https://dbpedia.org/ontology/federalState
