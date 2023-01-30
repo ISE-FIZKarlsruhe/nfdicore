@@ -29,9 +29,8 @@ jobs:
           pip install pyLODE==3.0.1
       - name: Generate LODE docs
         run: |-
-          mkdir docs
           pylode nfdicore.ttl -o docs/LODE.html
-      - name: Commit and push if README changed
+      - name: Commit and push if anything changed
         run: |-
           git diff
           git config --global user.email "eposthumus@gmail.com"
