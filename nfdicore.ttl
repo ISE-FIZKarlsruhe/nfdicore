@@ -50,6 +50,7 @@ nfdicore:acronym rdf:type owl:AnnotationProperty ;
                  rdfs:label "nfdicore:acronym"@en .
 
 
+
 ###  http://nfdi.fiz-karlsruhe.de/ontology/example
 nfdicore:example rdf:type owl:AnnotationProperty ;
                  rdfs:label "nfdicore:example"@en .
@@ -118,7 +119,7 @@ nfdicore:contactPointOf rdf:type owl:ObjectProperty ;
 ###  http://nfdi.fiz-karlsruhe.de/ontology/contributor
 nfdicore:contributor rdf:type owl:ObjectProperty ;
                      owl:inverseOf nfdicore:contributorOf ;
-                     rdfs:domain nfdicore:Resource ;
+                     rdfs:domain nfdicore:Work ;
                      rdfs:range [ rdf:type owl:Class ;
                                   owl:unionOf ( nfdicore:Organization
                                                 nfdicore:Person
@@ -385,6 +386,20 @@ nfdicore:relatedProject rdf:type owl:ObjectProperty ,
                         rdfs:comment "The property is a relationship between related projects. The property is symmetric."@en ;
                         rdfs:label "related project"@en .
 
+###  http://nfdi.fiz-karlsruhe.de/ontology/representedCollection
+nfdicore:representedCollection rdf:type owl:ObjectProperty ;
+                               owl:inverseOf nfdicore:representedCollectionOf ;
+                               rdfs:domain nfdicore:Dataset ;
+                               rdfs:range nfdicore:Collection ;
+                               rdfs:comment "The property is a relationship between a dataset and a collection it represents."@en ;
+                               rdfs:label "represented collection"@en .
+
+
+###  http://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf
+nfdicore:representedCollectionOf rdf:type owl:ObjectProperty ;
+                                 rdfs:label "represented collection of"@en .
+
+
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity
 nfdicore:semanticExpressivity rdf:type owl:ObjectProperty ;
@@ -584,6 +599,11 @@ nfdicore:DataPortal rdf:type owl:Class ;
                     rdfs:comment "An online platform that provides access to data collections and datasets."@en ;
                     rdfs:label "data portal"@en .
 
+###  http://nfdi.fiz-karlsruhe.de/ontology/Dataset
+nfdicore:Dataset rdf:type owl:Class ;
+                 rdfs:subClassOf schema:CreativeWork ;
+                 rdfs:comment "A dataset is associated with a structured information about a resource."@en ;
+                 rdfs:label "dataset"@en .
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork
 nfdicore:DevelopmentWork rdf:type owl:Class ;
@@ -670,14 +690,12 @@ nfdicore:ProvidedResource rdf:type owl:Class ;
                           rdfs:comment "A ressource that identifies a resource provided to the nfdi."@en ;
                           rdfs:label "provided resource"@en .
 
-
 ###  http://nfdi.fiz-karlsruhe.de/ontology/Publication
 nfdicore:Publication rdf:type owl:Class ;
                      rdfs:subClassOf schema:CreativeWork ;
                      nfdicore:example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" ;
                      rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
                      rdfs:label "publication"@en .
-
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/Resource
 nfdicore:Resource rdf:type owl:Class ;
@@ -750,6 +768,7 @@ nfdicore:Website rdf:type owl:Class ;
                  nfdicore:example "https:\\/\\/opac.rism.info" ;
                  rdfs:comment "A collection of webpages contributed by an organisation or a person."@en ;
                  rdfs:label "website"@en .
+
 
 
 ###  http://schema.org/CreativeWork
