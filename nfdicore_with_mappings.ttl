@@ -26,11 +26,11 @@
 @prefix schema: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
-@prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
-@base <http://nfdi.fiz-karlsruhe.de/ontology> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
-<http://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
+<https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                          dc:creator n4c:E1925 ,
                                                     n4c:E2415 ,
                                                     n4c:E2416 ,
