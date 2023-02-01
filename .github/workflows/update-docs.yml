@@ -31,9 +31,11 @@ jobs:
         run: |-
           mkdir -p docs && pylode nfdicore.ttl -o docs/index.html
       - name: Commit and push if anything changed
-        run: |-
-          git diff
-          git config --global user.email "eposthumus@gmail.com"
-          git config --global user.name "Etienne Posthumus"
-          git diff --quiet || (git add docs/index.html && git commit -m "Updated LODE")
-          git push
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+            target_branch: documentation
+            build_dir: docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
