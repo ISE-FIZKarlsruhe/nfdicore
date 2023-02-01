@@ -29,7 +29,7 @@ jobs:
           pip install pyLODE==3.0.1
       - name: Generate LODE docs
         run: |-
-          pylode nfdicore.ttl -o docs/index.html
+          mkdir -p docs && pylode nfdicore.ttl -o docs/index.html
       - name: Commit and push if anything changed
         run: |-
           git diff
