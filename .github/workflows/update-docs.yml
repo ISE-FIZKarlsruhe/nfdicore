@@ -35,5 +35,5 @@ jobs:
           git diff
           git config --global user.email "eposthumus@gmail.com"
           git config --global user.name "Etienne Posthumus"
-          git diff --quiet || (git add docs/LODE.html && git commit -m "Updated LODE")
+          git diff --quiet || (git add docs/index.html && git commit -m "Updated LODE")
           git push
