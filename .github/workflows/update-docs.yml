@@ -30,7 +30,6 @@ jobs:
       - name: Generate LODE docs
         run: |-
           mkdir -p docs && pylode nfdicore.ttl -o docs/index.html
-      - name: Commit and push if anything changed
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v3
