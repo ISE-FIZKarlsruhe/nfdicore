@@ -1,3 +1,4 @@
 
 *.properties
 .DS_Store
+*ignore
