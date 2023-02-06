@@ -126,7 +126,7 @@ void:feature rdf:type owl:AnnotationProperty .
                                         :Person
                                       )
                         ] ;
-             rdfs:comment "The property related a resource to a person or an organisation responsible for making contributions to a resource."@en ;
+             rdfs:comment "The property related a resource to a person or an organization responsible for making contributions to a resource."@en ;
              rdfs:label "contributor"@en .
 
 
@@ -188,7 +188,7 @@ void:feature rdf:type owl:AnnotationProperty .
                                    :Project
                                  )
                    ] ;
-        rdfs:comment "The property relates thing to an organisation or a project that provided funding for it. The subproperties are used to specify more specific funding relationships. "@en ;
+        rdfs:comment "The property relates thing to an organization or a project that provided funding for it. The subproperties are used to specify more specific funding relationships. "@en ;
         rdfs:label "funder"@en .
 
 
@@ -197,29 +197,29 @@ void:feature rdf:type owl:AnnotationProperty .
           rdfs:label "funder of"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganisation
-:fundingOrganisation rdf:type owl:ObjectProperty ;
+###  https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization
+:fundingOrganization rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :funder ;
-                     owl:inverseOf :fundingOrganisationOf ;
+                     owl:inverseOf :fundingOrganizationOf ;
                      rdfs:domain [ rdf:type owl:Class ;
                                    owl:unionOf ( :Project
                                                  :Resource
                                                )
                                  ] ;
                      rdfs:range :Organization ;
-                     rdfs:comment "The property relates a resource or a project to the organisation that provided funding for it."@en ;
-                     rdfs:label "funding organisation"@en .
+                     rdfs:comment "The property relates a resource or a project to the organization that provided funding for it."@en ;
+                     rdfs:label "funding organization"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganisationOf
-:fundingOrganisationOf rdf:type owl:ObjectProperty ;
+###  https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf
+:fundingOrganizationOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :funderOf ;
                        rdfs:domain [ rdf:type owl:Class ;
                                      owl:unionOf ( :Project
                                                    :Resource
                                                  )
                                    ] ;
-                       rdfs:label "funding organisation of"@en .
+                       rdfs:label "funding organization of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fundingProject
@@ -299,7 +299,7 @@ void:feature rdf:type owl:AnnotationProperty .
            owl:inverseOf :mediaTypeOf ;
            rdfs:domain :Resource ;
            rdfs:range :MediaType ;
-           rdfs:comment "The property relates a contrbution to its data format."@en ;
+           rdfs:comment "The property relates a contribution to its data format."@en ;
            rdfs:label "media type"@en .
 
 
@@ -322,13 +322,13 @@ void:feature rdf:type owl:AnnotationProperty .
               rdfs:label "object type of"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/parentOrganisation
-:parentOrganisation rdf:type owl:ObjectProperty ;
+###  https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization
+:parentOrganization rdf:type owl:ObjectProperty ;
                     owl:inverseOf :subsidiaryOrganization ;
                     rdfs:domain :Organization ;
                     rdfs:range :Organization ;
-                    rdfs:comment "The property is a parental relationship between organisations."@en ;
-                    rdfs:label "parent organisation"@en .
+                    rdfs:comment "The property is a parental relationship between organizations."@en ;
+                    rdfs:label "parent organization"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization
@@ -369,7 +369,7 @@ void:feature rdf:type owl:AnnotationProperty .
                                       :Person
                                     )
                       ] ;
-           rdfs:comment "The property is a relationship between a resource and an organisation or a person responsible for publishing it."@en ;
+           rdfs:comment "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en ;
            rdfs:label "publisher"@en .
 
 
@@ -431,7 +431,6 @@ void:feature rdf:type owl:AnnotationProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/software
 :software rdf:type owl:ObjectProperty ;
-          owl:inverseOf :sofwareOf ;
           rdfs:domain :Resource ;
           rdfs:range :Software ;
           rdfs:comment "The property is a relationship between a resource and a software it uses."@en ;
@@ -441,11 +440,6 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/softwareOf
 :softwareOf rdf:type owl:ObjectProperty ;
             rdfs:label "software of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/sofwareOf
-:sofwareOf rdf:type owl:ObjectProperty ;
-           rdfs:label "sofware of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint
@@ -572,7 +566,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline
 :AcademicDiscipline rdf:type owl:Class ;
-                    rdfs:comment "An academic discipline, a research field or domain of a resource, e.g. a data portal or a filed of study of a person."@en ;
+                    rdfs:comment "An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person."@en ;
                     rdfs:label "academic discipline"@en ;
                     :example wikidata:Q12271 ,
                              "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en .
@@ -589,7 +583,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Collection
 :Collection rdf:type owl:Class ;
             rdfs:subClassOf schema:Product ;
-            rdfs:comment "A tangible collection of valuables published or curated by an organisation or a person."@en ;
+            rdfs:comment "A tangible collection of valuables published or curated by an organization or a person."@en ;
             rdfs:label "collection"@en ;
             :example "RISM catalogue of musical sources"@en .
 
@@ -669,9 +663,9 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Organization
 :Organization rdf:type owl:Class ;
-              rdfs:comment "An organisation of some kind, e.g. research organisation or business organisation"@en ;
+              rdfs:comment "An organization of some kind, e.g. research organization or business organization"@en ;
               rdfs:label "organization"@en ;
-              :example "Universit\\u00e4tsbibliothek Leipzig, S\\u00e4chsisches Wirtschaftsarchiv, Museen der Stadt K\\u00f6ln" .
+              :example "Univerity Library in Leipzig, Museums of City Cologne" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Person
@@ -706,7 +700,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource
 :ProvidedResource rdf:type owl:Class ;
                   rdfs:subClassOf :Resource ;
-                  rdfs:comment "A ressource that identifies a resource provided to the nfdi."@en ;
+                  rdfs:comment "A resource that identifies a resource provided to the NFDI."@en ;
                   rdfs:label "provided resource"@en .
 
 
@@ -740,7 +734,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Service
 :Service rdf:type owl:Class ;
          rdfs:subClassOf schema:Service ;
-         rdfs:comment "A service, expertise or skill provided by an organisation or a person."@en ;
+         rdfs:comment "A service, expertise or skill provided by an organization or a person."@en ;
          rdfs:label "service"@en ;
          :example "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en .
 
@@ -755,7 +749,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Software
 :Software rdf:type owl:Class ;
           rdfs:subClassOf schema:Product ;
-          rdfs:comment "A computer software provided by an organisation or a person."@en ;
+          rdfs:comment "A computer software provided by an organization or a person."@en ;
           rdfs:label "software"@en ;
           :example "Edirom, Muscat" .
 
@@ -763,7 +757,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Specification
 :Specification rdf:type owl:Class ;
                rdfs:subClassOf schema:Product ;
-               rdfs:comment "A set of requirements, guidelines, standards contributed by an organisation or a person."@en ;
+               rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
                rdfs:label "specification"@en ;
                :example "RDF, SPARQL, Federation" .
 
@@ -771,7 +765,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Standard
 :Standard rdf:type owl:Class ;
           rdfs:subClassOf :Specification ;
-          rdfs:comment "An international standard and norm that can be used to evaluate or create services."@en ;
+          rdfs:comment "An international standard and norm that can be used to evaluate or create a resource."@en ;
           rdfs:label "standard"@en ;
           :example "ISO 15511, DINI-Zertifikat" .
 
@@ -786,7 +780,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Website
 :Website rdf:type owl:Class ;
          rdfs:subClassOf schema:Product ;
-         rdfs:comment "A collection of webpages contributed by an organisation or a person."@en ;
+         rdfs:comment "A collection of webpages contributed by an organization or a person."@en ;
          rdfs:label "website"@en ;
          :example "https:\\/\\/opac.rism.info" .
 
