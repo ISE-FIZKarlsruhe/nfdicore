@@ -694,7 +694,7 @@ schema:Service rdf:type owl:Class ;
 :Project rdf:type owl:Class ;
          rdfs:comment "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
          rdfs:label "project"@en ;
-         :example "Freisch\\u00fctz digital, Corpus Vitrearum Medii Aevi" .
+         :example "Freischütz digital, Corpus Vitrearum Medii Aevi" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource
