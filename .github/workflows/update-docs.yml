@@ -26,15 +26,10 @@ jobs:
             ${{ runner.os }}-publish-pip-
       - name: Install dependencies
         run: |
-          pip install pyLODE==3.0.1
+          pip install pyLODE==3.0.1 httpx==0.21.1
       - name: Generate LODE docs
         run: |-
-          mkdir -p docs && pylode nfdicore.ttl -o docs/index.html
-      - name: Deploy to GitHub Pages
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: documentation
-          build_dir: docs
+          python docs/update.py nfdicore.ttl
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SCHPIEL_TOKEN: ${{ secrets.SCHPIEL_TOKEN }}
+          DOCS_URI: ${{secrets.DOCS_URI}}
