@@ -243,7 +243,7 @@ void:feature rdf:type owl:AnnotationProperty .
           owl:inverseOf :instanceOf ;
           rdfs:domain :Service ;
           rdfs:range :Service ;
-          rdfs:comment "The property is a relationship between an RDM Tool to its running instance."@en ;
+          rdfs:comment "The property is a relationship between a service and its running instance."@en ;
           rdfs:label "instance"@en .
 
 
@@ -487,7 +487,11 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/subjectArea
 :subjectArea rdf:type owl:ObjectProperty ;
              owl:inverseOf :subjectAreaOf ;
-             rdfs:domain :Resource ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Person
+                                         :Resource
+                                       )
+                         ] ;
              rdfs:range :AcademicDiscipline ;
              rdfs:comment "The property is a relationship between a resource and its academic discipline, subject area or domain."@en ;
              rdfs:label "subject area"@en .
@@ -530,7 +534,11 @@ void:feature rdf:type owl:AnnotationProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/emailAddress
 :emailAddress rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Organization ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Organization
+                                          :Person
+                                        )
+                          ] ;
               rdfs:range rdfs:Literal ;
               rdfs:label "email address"@en .
 
