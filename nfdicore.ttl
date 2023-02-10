@@ -390,7 +390,11 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/representedCollection
 :representedCollection rdf:type owl:ObjectProperty ;
                        owl:inverseOf :representedCollectionOf ;
-                       rdfs:domain :Dataset ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :DataPortal
+                                                   :Dataset
+                                                 )
+                                   ] ;
                        rdfs:range :Collection ;
                        rdfs:comment "The property is a relationship between a dataset and a collection it represents."@en ;
                        rdfs:label "represented collection"@en .
@@ -590,7 +594,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Collection
 :Collection rdf:type owl:Class ;
-            rdfs:subClassOf schema:Product ;
+            rdfs:subClassOf :Resource ;
             rdfs:comment "A tangible collection of valuables published or curated by an organization or a person."@en ;
             rdfs:label "collection"@en ;
             :example "RISM catalogue of musical sources"@en .
@@ -756,7 +760,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Software
 :Software rdf:type owl:Class ;
-          rdfs:subClassOf schema:Product ;
+          rdfs:subClassOf :Resource ;
           rdfs:comment "A computer software provided by an organization or a person."@en ;
           rdfs:label "software"@en ;
           :example "Edirom, Muscat" .
@@ -787,7 +791,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Website
 :Website rdf:type owl:Class ;
-         rdfs:subClassOf schema:Product ;
+         rdfs:subClassOf :Resource ;
          rdfs:comment "A collection of webpages contributed by an organization or a person."@en ;
          rdfs:label "website"@en ;
          :example "https:\\/\\/opac.rism.info" .
