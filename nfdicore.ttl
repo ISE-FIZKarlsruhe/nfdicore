@@ -121,6 +121,7 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/contributor
 :contributor rdf:type owl:ObjectProperty ;
              owl:inverseOf :contributorOf ;
+             rdfs:domain :Resource ;
              rdfs:range [ rdf:type owl:Class ;
                           owl:unionOf ( :Organization
                                         :Person
@@ -285,7 +286,7 @@ void:feature rdf:type owl:AnnotationProperty .
          owl:inverseOf :mappingOf ;
          rdfs:domain :Resource ;
          rdfs:range :Mapping ;
-         rdfs:comment "The property is a relationship between a a data resource and its various representations, e.g. same resource that exists in different data formats. "@en ;
+         rdfs:comment "The property is a relationship between a resource and its various representations, e.g. same resource that exists in different data formats. "@en ;
          rdfs:label "mapping"@en .
 
 
@@ -299,7 +300,7 @@ void:feature rdf:type owl:AnnotationProperty .
            owl:inverseOf :mediaTypeOf ;
            rdfs:domain :Resource ;
            rdfs:range :MediaType ;
-           rdfs:comment "The property relates a contribution to its data format."@en ;
+           rdfs:comment "The property relates a resource to its data format."@en ;
            rdfs:label "media type"@en .
 
 
@@ -311,9 +312,13 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/objectType
 :objectType rdf:type owl:ObjectProperty ;
             owl:inverseOf :objectTypeOf ;
-            rdfs:domain :Collection ;
+            rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Collection
+                                                   :Dataset
+                                                 )
+                                   ] ;
             rdfs:range :ObjectType ;
-            rdfs:comment "The property relates a data collection to the type of object it contains. "@en ;
+            rdfs:comment "The property relates a collection or a data set to the type of object it contains. "@en ;
             rdfs:label "object type"@en .
 
 
@@ -618,7 +623,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/DataPortal
 :DataPortal rdf:type owl:Class ;
             rdfs:subClassOf schema:Service ;
-            rdfs:comment "An online platform that provides access to data collections and datasets."@en ;
+            rdfs:comment "An online platform that provides access to datasets."@en ;
             rdfs:label "data portal"@en ;
             :example "Bach digital, KultSam, MusiXplora"@en .
 
@@ -668,7 +673,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ObjectType
 :ObjectType rdf:type owl:Class ;
-            rdfs:comment "A resource that identifies the type of object in a data collection."@en ;
+            rdfs:comment "A resource that identifies the type of object in a data set or collection."@en ;
             rdfs:label "object type"@en ;
             :example "book, photograph, music sheet"@en .
 
