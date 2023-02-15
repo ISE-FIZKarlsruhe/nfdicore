@@ -20,7 +20,7 @@
 ########
 
 
-<http://dbpedia.org/ontology/Person> <http://www.w3.org/2002/07/owl#equivalentClass> <https://nfdi.fiz-karlsruhe.de/ontology/Person> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://dbpedia.org/ontology/Person> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Dataset> .
 <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/spar/fabio/SubjectDiscipline> .
 <https://nfdi.fiz-karlsruhe.de/ontology/City> <http://www.w3.org/2002/07/owl#equivalentClass> <https://dbpedia.org/ontology/City> .
@@ -62,15 +62,12 @@
 
 
 <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Resource> .
 <https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Service> .
 <https://nfdi.fiz-karlsruhe.de/ontology/InstanceOfRDMTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Product> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Service> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Resource> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Specification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Product> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Website> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Resource> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Website> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
 
 
