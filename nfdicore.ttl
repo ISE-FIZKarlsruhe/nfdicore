@@ -313,10 +313,10 @@ void:feature rdf:type owl:AnnotationProperty .
 :objectType rdf:type owl:ObjectProperty ;
             owl:inverseOf :objectTypeOf ;
             rdfs:domain [ rdf:type owl:Class ;
-                                     owl:unionOf ( :Collection
-                                                   :Dataset
-                                                 )
-                                   ] ;
+                          owl:unionOf ( :Collection
+                                        :Dataset
+                                      )
+                        ] ;
             rdfs:range :ObjectType ;
             rdfs:comment "The property relates a collection or a data set to the type of object it contains. "@en ;
             rdfs:label "object type"@en .
@@ -657,6 +657,14 @@ schema:Service rdf:type owl:Class ;
          :example "cc-by-3, Digital Peer Publishing Lizenz"@en .
 
 
+###  https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type
+:MIME-Type rdf:type owl:Class ;
+           rdfs:subClassOf :MediaType ;
+           rdfs:comment "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
+           rdfs:label "MIME-type"@en ;
+           :example "application/dicom, video/mp4, text/n3"@en .
+
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Mapping
 :Mapping rdf:type owl:Class ;
          rdfs:comment "A resource that documents a mapping from a format\\/vocabulary to other format\\/vocabulary."@en ;
@@ -666,9 +674,9 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/MediaType
 :MediaType rdf:type owl:Class ;
-           rdfs:comment "A format or a physical medium of digital data."@en ;
+           rdfs:comment "A digital resource format or physical medium."@en ;
            rdfs:label "media type"@en ;
-           :example "doc, avi, epub" .
+           :example "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ObjectType
