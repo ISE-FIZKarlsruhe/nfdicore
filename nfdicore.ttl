@@ -552,6 +552,12 @@ void:feature rdf:type owl:AnnotationProperty .
               rdfs:label "email address"@en .
 
 
+###  https://nfdi.fiz-karlsruhe.de/ontology/fileExtension
+:fileExtension rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:label "file extension" .
+
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/url
 :url rdf:type owl:DatatypeProperty ;
      rdfs:domain owl:Thing ;
