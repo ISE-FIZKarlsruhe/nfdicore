@@ -340,7 +340,9 @@ void:feature rdf:type owl:AnnotationProperty .
 :partnerOrganization rdf:type owl:ObjectProperty ,
                               owl:SymmetricProperty ;
                      rdfs:domain :Organization ;
-                     rdfs:range :Organization .
+                     rdfs:range :Organization ;
+                     rdfs:comment "The property is a partner relationship between organizations. The property is symmetric."@en ,
+                                  "partner organization"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage
