@@ -557,6 +557,7 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fileExtension
 :fileExtension rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Resource ;
                rdfs:label "file extension" .
 
 
