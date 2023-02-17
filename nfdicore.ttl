@@ -556,7 +556,6 @@ void:feature rdf:type owl:AnnotationProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fileExtension
 :fileExtension rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain :Resource ;
                rdfs:label "file extension" .
 
@@ -574,15 +573,18 @@ void:feature rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://schema.org/CreativeWork
-schema:CreativeWork rdf:type owl:Class .
+schema:CreativeWork rdf:type owl:Class ;
+                    rdfs:subClassOf :Resource .
 
 
 ###  http://schema.org/Intangible
-schema:Intangible rdf:type owl:Class .
+schema:Intangible rdf:type owl:Class ;
+                  rdfs:subClassOf :Resource .
 
 
 ###  http://schema.org/Product
-schema:Product rdf:type owl:Class .
+schema:Product rdf:type owl:Class ;
+               rdfs:subClassOf :Resource .
 
 
 ###  http://schema.org/Service
@@ -671,7 +673,7 @@ schema:Service rdf:type owl:Class ;
            rdfs:subClassOf :MediaType ;
            rdfs:comment "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
            rdfs:label "MIME-type"@en ;
-           :example "application/dicom, video/mp4, text/n3"@en .
+           :example "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Mapping
@@ -748,12 +750,6 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Resource
 :Resource rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Class ;
-                            owl:unionOf ( schema:CreativeWork
-                                          schema:Intangible
-                                          schema:Product
-                                        )
-                          ] ;
           rdfs:comment "The most generic kind of a resource and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations."@en ;
           rdfs:label "resource"@en .
 
