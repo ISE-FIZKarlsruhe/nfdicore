@@ -359,14 +359,6 @@ void:feature rdf:type owl:AnnotationProperty .
                        rdfs:label "programming language of"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/provisionType
-:provisionType rdf:type owl:ObjectProperty ;
-               rdfs:domain :ProvidedResource ;
-               rdfs:range :Resource ;
-               rdfs:comment "The property links a resource provided by a community to its type."@en ;
-               rdfs:label "provision type"@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/publisher
 :publisher rdf:type owl:ObjectProperty ;
            owl:inverseOf :publisherOf ;
