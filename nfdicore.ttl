@@ -285,7 +285,6 @@ void:feature rdf:type owl:AnnotationProperty .
 :mapping rdf:type owl:ObjectProperty ;
          owl:inverseOf :mappingOf ;
          rdfs:domain :Resource ;
-         rdfs:range :Mapping ;
          rdfs:comment "The property is a relationship between a resource and its various representations, e.g. same resource that exists in different data formats. "@en ;
          rdfs:label "mapping"@en .
 
@@ -671,13 +670,6 @@ schema:Service rdf:type owl:Class ;
            rdfs:comment "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
            rdfs:label "MIME-type"@en ;
            :example "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/Mapping
-:Mapping rdf:type owl:Class ;
-         rdfs:comment "A resource that documents a mapping from a format\\/vocabulary to other format\\/vocabulary."@en ;
-         rdfs:label "mapping"@en ;
-         :example "Bach Digital Mapping, WeGA Gudielines"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/MediaType
