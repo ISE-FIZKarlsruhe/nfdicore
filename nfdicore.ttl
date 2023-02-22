@@ -281,19 +281,6 @@ void:feature rdf:type owl:AnnotationProperty .
             rdfs:label "location of"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/mapping
-:mapping rdf:type owl:ObjectProperty ;
-         owl:inverseOf :mappingOf ;
-         rdfs:domain :Resource ;
-         rdfs:comment "The property is a relationship between a resource and its various representations, e.g. same resource that exists in different data formats. "@en ;
-         rdfs:label "mapping"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/mappingOf
-:mappingOf rdf:type owl:ObjectProperty ;
-           rdfs:label "mapping of"@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/mediaType
 :mediaType rdf:type owl:ObjectProperty ;
            owl:inverseOf :mediaTypeOf ;
