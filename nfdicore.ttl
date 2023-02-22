@@ -549,7 +549,12 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fileExtension
 :fileExtension rdf:type owl:DatatypeProperty ;
                rdfs:domain :Resource ;
-               rdfs:label "file extension" .
+               rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
+               rdfs:label "file extension" ;
+               :example "mp4" ,
+                        "ttl" ,
+                        "txt" ,
+                        "xml" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/url
