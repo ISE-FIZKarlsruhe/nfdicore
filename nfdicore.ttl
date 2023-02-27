@@ -1,31 +1,16 @@
 @prefix : <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dk: <http://www.data-knowledge.org/dk/> .
-@prefix sd: <https://w3id.org/okn/o/sd#> .
-@prefix dbo: <https://dbpedia.org/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix ovm: <http://omv.ontoware.org/2005/05/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix swo: <http://www.ebi.ac.uk/swo/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix fabio: <http://purl.org/spar/fabio/> .
-@prefix frapo: <http://purl.org/cerif/frapo/> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix modsci: <https://w3id.org/skgo/modsci#> .
 @prefix schema: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
@@ -36,9 +21,9 @@
                                                      n4c:E2416 ,
                                                      n4c:E3095 ,
                                                      <https://orcid.org/0000-0001-7192-7143> ;
-                                          rdfs:label "NFDICORE Ontology" ;
-                                          owl:versionInfo "v1.1.0-alpha" ;
-                                          <http://www.w3.org/2004/02/skos/core#definition> "The NFDICORE ontology  (prefix nfdicore) s the core ontology that describes all resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI. It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology, and contains mappings to numerous external vocabularies and ontologies."@en .
+                                          rdfs:label "NFDIcore Ontology" ;
+                                          owl:versionInfo "v1.1.0" ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file."@en .
 
 #################################################################
 #    Annotation properties
