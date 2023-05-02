@@ -349,11 +349,14 @@ void:feature rdf:type owl:AnnotationProperty .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/relatedProject
-:relatedProject rdf:type owl:ObjectProperty ,
-                         owl:SymmetricProperty ;
-                rdfs:domain :Project ;
+:relatedProject rdf:type owl:ObjectProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Resource 
+                                                   :Project 
+                                                 )
+                                   ] ;
                 rdfs:range :Project ;
-                rdfs:comment "The property is a relationship between related projects. The property is symmetric."@en ;
+                rdfs:comment "The property is a relationship between a project or a resource and related projects."@en ;
                 rdfs:label "related project"@en .
 
 
