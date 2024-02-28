@@ -1,6 +1,8 @@
 # NFDI Core Ontology
 
-This is the development version v1.1.1-alpha1 of the NFDIcore ontology.
+This is the development version v2.0.0-alpha1 of the NFDIcore ontology that maps on BFO compliant ontologies.
+
+The development version is [nfdicore(bfo).ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore(bfo).ttl). It imports the [iao.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/iao.ttl) ontology.
 
 A documentation can be found at the [GitHub page](https://ise-fizkarlsruhe.github.io/nfdicore/).
 
