@@ -628,6 +628,36 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://nfdi.fiz-karlsruhe.de/ontology/birthDate
+nfdicore:birthDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Person .
+
+
+###  http://nfdi.fiz-karlsruhe.de/ontology/deathDate
+nfdicore:deathDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Person .
+
+
+###  http://nfdi.fiz-karlsruhe.de/ontology/endDate
+nfdicore:endDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> .
+
+
+###  http://nfdi.fiz-karlsruhe.de/ontology/startDate
+nfdicore:startDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology#dissolutionDate
+:dissolutionDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Organization .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology#foundationDate
+:foundationDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Organization .
+
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/areaCode
 :areaCode rdf:type owl:DatatypeProperty ;
           rdfs:range rdfs:Literal ;
