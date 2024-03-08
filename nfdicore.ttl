@@ -197,6 +197,7 @@ void:feature rdf:type owl:AnnotationProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/funder
 :funder rdf:type owl:ObjectProperty ;
+        owl:inverseOf :funderOf ;
         rdfs:domain owl:Thing ;
         rdfs:range [ rdf:type owl:Class ;
                      owl:unionOf ( :Organization
@@ -437,6 +438,7 @@ void:feature rdf:type owl:AnnotationProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/software
 :software rdf:type owl:ObjectProperty ;
+          owl:inverseOf :softwareOf ;
           rdfs:domain :Resource ;
           rdfs:range :Software ;
           rdfs:comment "The property is a relationship between a resource and a software it uses."@en ;
