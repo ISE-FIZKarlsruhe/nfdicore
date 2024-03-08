@@ -17,7 +17,9 @@
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
-                                          dcterms:abstract "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file."@en ;
+                                          dcterms:abstract "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file. 
+                                          Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore Feel free to give feedback, contribute, or raise issues.
+                                          "@en ;
                                           dcterms:created "2024-03-08" ;
                                           dcterms:creator n4c:E1925 ,
                                                           n4c:E2415 ,
