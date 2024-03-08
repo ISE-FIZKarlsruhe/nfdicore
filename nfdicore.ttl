@@ -16,7 +16,9 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology/> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
                                           dcterms:abstract "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file."@en ;
+                                          dcterms:created "2024-03-08" ;
                                           dcterms:creator n4c:E1925 ,
                                                           n4c:E2415 ,
                                                           n4c:E2416 ,
@@ -35,6 +37,14 @@
 
 ###  http://purl.org/dc/terms/abstract
 dcterms:abstract rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
@@ -77,14 +87,13 @@ void:feature rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/acronym
 :acronym rdf:type owl:AnnotationProperty ;
          rdfs:label "nfdicore:acronym"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/example
-:example rdf:type owl:AnnotationProperty ;
-         rdfs:label "nfdicore:example"@en .
 
 
 #################################################################
@@ -545,10 +554,10 @@ void:feature rdf:type owl:AnnotationProperty .
                rdfs:domain :Resource ;
                rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
                rdfs:label "file extension" ;
-               :example "mp4" ,
-                        "ttl" ,
-                        "txt" ,
-                        "xml" .
+               <http://www.w3.org/2004/02/skos/core#example> "mp4" ,
+                                                             "ttl" ,
+                                                             "txt" ,
+                                                             "xml" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/url
@@ -587,8 +596,8 @@ schema:Service rdf:type owl:Class ;
 :AcademicDiscipline rdf:type owl:Class ;
                     rdfs:comment "An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person."@en ;
                     rdfs:label "academic discipline"@en ;
-                    :example wikidata:Q12271 ,
-                             "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en .
+                    <http://www.w3.org/2004/02/skos/core#example> wikidata:Q12271 ,
+                                                                  "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/City
@@ -596,7 +605,7 @@ schema:Service rdf:type owl:Class ;
       rdfs:subClassOf :Place ;
       rdfs:comment "A city or a town where the thing is located."@en ;
       rdfs:label "city"@en ;
-      :example "Berlin, Hannover, Kyiv"@en .
+      <http://www.w3.org/2004/02/skos/core#example> "Berlin, Hannover, Kyiv"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Collection
@@ -604,7 +613,7 @@ schema:Service rdf:type owl:Class ;
             rdfs:subClassOf :Resource ;
             rdfs:comment "A tangible collection of valuables published or curated by an organization or a person."@en ;
             rdfs:label "collection"@en ;
-            :example "RISM catalogue of musical sources"@en .
+            <http://www.w3.org/2004/02/skos/core#example> "RISM catalogue of musical sources"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Consortium
@@ -612,7 +621,7 @@ schema:Service rdf:type owl:Class ;
             rdfs:subClassOf :Organization ;
             rdfs:comment "NFDI consortia grouped by a discipline based in a science-led process managed by the German Research Foundation (DFG)."@en ;
             rdfs:label "consortium"@en ;
-            :example "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
+            <http://www.w3.org/2004/02/skos/core#example> "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Country
@@ -627,7 +636,7 @@ schema:Service rdf:type owl:Class ;
             rdfs:subClassOf schema:Service ;
             rdfs:comment "An online platform that provides access to datasets."@en ;
             rdfs:label "data portal"@en ;
-            :example "Bach digital, KultSam, MusiXplora"@en .
+            <http://www.w3.org/2004/02/skos/core#example> "Bach digital, KultSam, MusiXplora"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Dataset
@@ -641,7 +650,7 @@ schema:Service rdf:type owl:Class ;
 :DevelopmentWork rdf:type owl:Class ;
                  rdfs:comment "A resource that identifies an ongoing development of standards, services, data models, vocabularies, ontologies, etc."@en ;
                  rdfs:label "development work"@en ;
-                 :example "Development of a controlled vocabulary for audivisual material in publication and research data; Extension of the AAT vocabulary for the history of architecture"@en .
+                 <http://www.w3.org/2004/02/skos/core#example> "Development of a controlled vocabulary for audivisual material in publication and research data; Extension of the AAT vocabulary for the history of architecture"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/FederalState
@@ -649,14 +658,14 @@ schema:Service rdf:type owl:Class ;
               rdfs:subClassOf :Place ;
               rdfs:comment "A federal state where the thing is located."@en ;
               rdfs:label "federal state"@en ;
-              :example "Sachsen, Berlin"@de .
+              <http://www.w3.org/2004/02/skos/core#example> "Sachsen, Berlin"@de .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/License
 :License rdf:type owl:Class ;
          rdfs:comment "A document that provides legal guidelines for the use of a resource, e.g. a software."@en ;
          rdfs:label "license"@en ;
-         :example "cc-by-3, Digital Peer Publishing Lizenz"@en .
+         <http://www.w3.org/2004/02/skos/core#example> "cc-by-3, Digital Peer Publishing Lizenz"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type
@@ -664,42 +673,42 @@ schema:Service rdf:type owl:Class ;
            rdfs:subClassOf :MediaType ;
            rdfs:comment "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
            rdfs:label "MIME-type"@en ;
-           :example "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en .
+           <http://www.w3.org/2004/02/skos/core#example> "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/MediaType
 :MediaType rdf:type owl:Class ;
            rdfs:comment "A digital resource format or physical medium."@en ;
            rdfs:label "media type"@en ;
-           :example "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book" .
+           <http://www.w3.org/2004/02/skos/core#example> "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ObjectType
 :ObjectType rdf:type owl:Class ;
             rdfs:comment "A resource that identifies the type of object in a data set or collection."@en ;
             rdfs:label "object type"@en ;
-            :example "book, photograph, music sheet"@en .
+            <http://www.w3.org/2004/02/skos/core#example> "book, photograph, music sheet"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Organization
 :Organization rdf:type owl:Class ;
               rdfs:comment "An organization of some kind, e.g. research organization or business organization"@en ;
               rdfs:label "organization"@en ;
-              :example "Univerity Library in Leipzig, Museums of City Cologne" .
+              <http://www.w3.org/2004/02/skos/core#example> "Univerity Library in Leipzig, Museums of City Cologne" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Person
 :Person rdf:type owl:Class ;
         rdfs:comment "A resource that represents a single person."@en ;
         rdfs:label "person"@en ;
-        :example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
+        <http://www.w3.org/2004/02/skos/core#example> "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Place
 :Place rdf:type owl:Class ;
        rdfs:comment "A spatial region, e.g. country, city or district."@en ;
        rdfs:label "place"@en ;
-       :example "Hessen, Berlin, Schweiz" .
+       <http://www.w3.org/2004/02/skos/core#example> "Hessen, Berlin, Schweiz" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage
@@ -707,14 +716,14 @@ schema:Service rdf:type owl:Class ;
                      rdfs:subClassOf :TechnologicalMeans ;
                      rdfs:comment "A formal language used for implementing a software."@en ;
                      rdfs:label "programming language"@en ;
-                     :example "Java, Ruby, C++, Perl, PHP" .
+                     <http://www.w3.org/2004/02/skos/core#example> "Java, Ruby, C++, Perl, PHP" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Project
 :Project rdf:type owl:Class ;
          rdfs:comment "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
          rdfs:label "project"@en ;
-         :example "Freischütz digital, Corpus Vitrearum Medii Aevi" .
+         <http://www.w3.org/2004/02/skos/core#example> "Freischütz digital, Corpus Vitrearum Medii Aevi" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource
@@ -729,7 +738,7 @@ schema:Service rdf:type owl:Class ;
              rdfs:subClassOf schema:CreativeWork ;
              rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
              rdfs:label "publication"@en ;
-             :example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" .
+             <http://www.w3.org/2004/02/skos/core#example> "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Resource
@@ -742,7 +751,7 @@ schema:Service rdf:type owl:Class ;
 :SemanticExpressivity rdf:type owl:Class ;
                       rdfs:comment "An entity that identifies the level of the semantic expressivity of a resource. Five instances are now included in nfdicore."@en ;
                       rdfs:label "semantic expressivity"@en ;
-                      :example "controlled vocabulary, ontology, taxonomy"@en .
+                      <http://www.w3.org/2004/02/skos/core#example> "controlled vocabulary, ontology, taxonomy"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Service
@@ -750,14 +759,14 @@ schema:Service rdf:type owl:Class ;
          rdfs:subClassOf schema:Service ;
          rdfs:comment "A service, expertise or skill provided by an organization or a person."@en ;
          rdfs:label "service"@en ;
-         :example "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en .
+         <http://www.w3.org/2004/02/skos/core#example> "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ServiceType
 :ServiceType rdf:type owl:Class ;
              rdfs:comment "A resource that identifies the type of a service."@en ;
              rdfs:label "service type"@en ;
-             :example "Expertise, advertisement, curation"@en .
+             <http://www.w3.org/2004/02/skos/core#example> "Expertise, advertisement, curation"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Software
@@ -765,7 +774,7 @@ schema:Service rdf:type owl:Class ;
           rdfs:subClassOf :Resource ;
           rdfs:comment "A computer software provided by an organization or a person."@en ;
           rdfs:label "software"@en ;
-          :example "Edirom, Muscat" .
+          <http://www.w3.org/2004/02/skos/core#example> "Edirom, Muscat" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Specification
@@ -773,7 +782,7 @@ schema:Service rdf:type owl:Class ;
                rdfs:subClassOf schema:Product ;
                rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
                rdfs:label "specification"@en ;
-               :example "RDF, SPARQL, Federation" .
+               <http://www.w3.org/2004/02/skos/core#example> "RDF, SPARQL, Federation" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Standard
@@ -781,14 +790,14 @@ schema:Service rdf:type owl:Class ;
           rdfs:subClassOf :Specification ;
           rdfs:comment "An international standard and norm that can be used to evaluate or create a resource."@en ;
           rdfs:label "standard"@en ;
-          :example "ISO 15511, DINI-Zertifikat" .
+          <http://www.w3.org/2004/02/skos/core#example> "ISO 15511, DINI-Zertifikat" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans
 :TechnologicalMeans rdf:type owl:Class ;
                     rdfs:comment "A technology, e.g. a web application or a programming framework used in a resource."@en ;
                     rdfs:label "technological means"@en ;
-                    :example "Groovy on Grails, Angular"@en .
+                    <http://www.w3.org/2004/02/skos/core#example> "Groovy on Grails, Angular"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Website
@@ -796,7 +805,7 @@ schema:Service rdf:type owl:Class ;
          rdfs:subClassOf :Resource ;
          rdfs:comment "A collection of webpages contributed by an organization or a person."@en ;
          rdfs:label "website"@en ;
-         :example "https:\\/\\/opac.rism.info" .
+         <http://www.w3.org/2004/02/skos/core#example> "https:\\/\\/opac.rism.info" .
 
 
 #################################################################
