@@ -16,15 +16,15 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology/> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
-                                          dc:creator n4c:E1925 ,
-                                                     n4c:E2415 ,
-                                                     n4c:E2416 ,
-                                                     n4c:E3095 ,
-                                                     <https://orcid.org/0000-0001-7192-7143> ;
-                                          dc:title "NFDIcore Ontology" ;
-                                          dcterms:description "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file."@en ;
+                                          dcterms:abstract "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file."@en ;
+                                          dcterms:creator n4c:E1925 ,
+                                                          n4c:E2415 ,
+                                                          n4c:E2416 ,
+                                                          n4c:E3095 ,
+                                                          <https://orcid.org/0000-0001-7192-7143> ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> <nfdi> ;
+                                          dcterms:title "NFDIcore Ontology" ;
+                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> :nfdi ;
                                           <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                                           rdfs:label "NFDIcore" ;
                                           owl:versionInfo "v1.1.1-alpha1" .
@@ -33,24 +33,20 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/format
-dc:format rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/abstract
 dcterms:abstract rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/description
 dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/format
+dcterms:format rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/hasVersion
@@ -59,6 +55,10 @@ dcterms:hasVersion rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
