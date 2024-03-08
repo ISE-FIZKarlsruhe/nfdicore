@@ -17,14 +17,13 @@ jobs:
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.21/widoco-1.4.21-jar-with-dependencies_JDK-11.jar
            mkdir public
            java -jar widoco.jar -ontFile main/nfdicore.ttl -outFolder public -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
-           cp public/index-en.html public/doc/index.html
+           cp public/index-en.html public/index.html
     - uses: actions/checkout@v3
       with:
         ref: tags/1.1.1
         path: tag1.1.1
     - name: Build HTML for tag1.1.1
       run: | 
-           wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.21/widoco-1.4.21-jar-with-dependencies_JDK-11.jar
            mkdir public/1.1.1 
            java -jar widoco.jar -ontFile main/nfdicore.ttl -outFolder public/1.1.1  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/1.1.1/index-en.html public/1.1.1/index.html
