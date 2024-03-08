@@ -13,7 +13,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
