@@ -230,11 +230,6 @@ void:feature rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf
 :fundingOrganizationOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :funderOf ;
-                       rdfs:domain [ rdf:type owl:Class ;
-                                     owl:unionOf ( :Project
-                                                   :Resource
-                                                 )
-                                   ] ;
                        rdfs:label "funding organization of"@en .
 
 
