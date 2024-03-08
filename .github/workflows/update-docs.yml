@@ -1,4 +1,4 @@
-name: HTML
+tioname: HTML
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
       if: success()
       uses: crazy-max/ghaction-github-pages@v3
       with:
-        target_branch: gh-pages
+        target_branch: documentation
         build_dir: public
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
