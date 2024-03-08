@@ -14,16 +14,16 @@ jobs:
         path: main
     - name: Build HTML for main
       run: | 
-           wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar
+           wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.21/widoco-1.4.21-jar-with-dependencies_JDK-11.jar
            mkdir public 
            java -jar widoco.jar -ontFile main/nfdicore.ttl -outFolder public -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            ls public
-           cp public/index-en.html public/index.html
+           cp public/doc/index-en.html public/doc/index.html
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v3
       with:
         target_branch: documentation
-        build_dir: public
+        build_dir: public/doc
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
