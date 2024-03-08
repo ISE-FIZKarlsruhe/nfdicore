@@ -26,7 +26,8 @@ jobs:
       run: | 
            mkdir public/1.1.1 
            java -jar widoco.jar -ontFile v1.1.1/nfdicore.ttl -outFolder public/1.1.1  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
-           cp public/1.1.1/index-en.html public/1.1.1/index.html
+           ls public/1.1.1/
+           #cp public/1.1.1/index-en.html public/1.1.1/index.html
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v3
