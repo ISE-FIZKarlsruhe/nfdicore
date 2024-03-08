@@ -1,7 +1,7 @@
 @prefix : <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix obo: <<http://purl.obolibrary.org/obo/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -14,9 +14,10 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology/> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                           owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
                                           dc:creator n4c:E1925 ,
                                                      n4c:E2415 ,
@@ -26,6 +27,13 @@
                                           rdfs:label "NFDIcore Ontology" ;
                                           owl:versionInfo "v2.0.0-alpha1" ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file."@en .
+
+
+<https://orcid.org/0000-0001-7192-7143> rdfs:label "Jörg Waitelonis" .
+n4c:E1925 rdfs:label "Harald Sack" .
+n4c:E2415 rdfs:label "Tabea Tietz" .
+n4c:E2416 rdfs:label "Oleksandra Bruns" .
+n4c:E3095 rdfs:label "Etienne Posthumus" .
 
 #################################################################
 #    Annotation properties
@@ -105,8 +113,8 @@ nfdicore:part rdf:type owl:ObjectProperty ;
               rdfs:label "part"@en .
 
 
-###  http://purl.obofoundry.org/obo/IAO_0000136
-<http://purl.obofoundry.org/obo/IAO_0000136> rdf:type owl:ObjectProperty .
+###  http://purl.obolibrary.org/obo/IAO_0000136
+<http://purl.obolibrary.org/obo/IAO_0000136> rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0001015
@@ -123,7 +131,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/bestPractice
 :bestPractice rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
               owl:inverseOf :bestPracticeOf ;
               rdfs:domain :Resource ;
               rdfs:range :Specification ;
@@ -133,7 +141,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf
 :bestPracticeOf rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+                rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
                 rdfs:label "best practice of"@en .
 
 
@@ -190,13 +198,13 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/datasetOf
 :datasetOf rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+           rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
            rdfs:label "data set of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/exportFormat
 :exportFormat rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
               owl:inverseOf :exportFormatOf ;
               rdfs:domain :Resource ;
               rdfs:range :MediaType ;
@@ -206,7 +214,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf
 :exportFormatOf rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+                rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
                 rdfs:label "export format of"@en .
 
 
@@ -297,7 +305,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/licenseOf
 :licenseOf rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+           rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
            rdfs:label "license of"@en .
 
 
@@ -317,7 +325,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/mediaType
 :mediaType rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+           rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
            owl:inverseOf :mediaTypeOf ;
            rdfs:domain :Resource ;
            rdfs:range :MediaType ;
@@ -327,7 +335,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf
 :mediaTypeOf rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
              rdfs:label "media type of"@en .
 
 
@@ -409,7 +417,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage
 :programmingLanguage rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ,
+                     rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ,
                                         <http://www.ebi.ac.uk/swo/SWO_0000741> ;
                      owl:inverseOf :programmingLanguageOf ;
                      rdfs:domain :Software ;
@@ -505,7 +513,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/software
 :software rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+          rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
           owl:inverseOf :softwareOf ;
           rdfs:domain :Resource ;
           rdfs:range :Software ;
@@ -515,13 +523,13 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/softwareOf
 :softwareOf rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
             rdfs:label "software of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint
 :sparqlEndpoint rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+                rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
                 owl:inverseOf :sparqlEndpointOf ;
                 rdfs:domain :Resource ;
                 rdfs:range :Resource ;
@@ -531,13 +539,13 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf
 :sparqlEndpointOf rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+                  rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
                   rdfs:label "sparql endpoint of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/specification
 :specification rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
                owl:inverseOf :specificationOf ;
                rdfs:domain :Resource ;
                rdfs:range :Specification ;
@@ -547,13 +555,13 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/specificationOf
 :specificationOf rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+                 rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
                  rdfs:label "specification of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/standard
 :standard rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+          rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
           owl:inverseOf :standardOf ;
           rdfs:domain :Resource ;
           rdfs:range :Standard ;
@@ -563,7 +571,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/standardOf
 :standardOf rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
             rdfs:label "standard of"@en .
 
 
@@ -594,7 +602,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/technology
 :technology rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
             owl:inverseOf :technologyOf ;
             rdfs:domain :Resource ;
             rdfs:range :TechnologicalMeans ;
@@ -604,7 +612,7 @@ nfdicore:part rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/technologyOf
 :technologyOf rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf <http://purl.obofoundry.org/obo/IAO_0000136> ;
+              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
               rdfs:label "technology of"@en .
 
 
@@ -648,20 +656,15 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology#dissolutionDate
-:dissolutionDate rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Organization .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology#foundationDate
-:foundationDate rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Organization .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/areaCode
 :areaCode rdf:type owl:DatatypeProperty ;
           rdfs:range rdfs:Literal ;
           rdfs:label "area code"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate
+:dissolutionDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Organization .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/emailAddress
@@ -679,6 +682,11 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
                         "ttl" ,
                         "txt" ,
                         "xml" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/foundationDate
+:foundationDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Organization .
 
 
 #################################################################
@@ -1125,8 +1133,8 @@ schema:Service rdf:type owl:Class ;
 :f rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S8"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S8" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1158,8 +1166,8 @@ schema:Service rdf:type owl:Class ;
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "funding organisation"^^xsd:string ;
-   rdfs:label "S3"^^xsd:string ;
+   rdfs:comment "funding organisation" ;
+   rdfs:label "S3" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1212,8 +1220,8 @@ schema:Service rdf:type owl:Class ;
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "publisher"^^xsd:string ;
-   rdfs:label "S4"^^xsd:string ;
+   rdfs:comment "publisher" ;
+   rdfs:label "S4" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1279,8 +1287,8 @@ schema:Service rdf:type owl:Class ;
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "contact point resource"^^xsd:string ;
-   rdfs:label "S6"^^xsd:string ;
+   rdfs:comment "contact point resource" ;
+   rdfs:label "S6" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1346,8 +1354,8 @@ schema:Service rdf:type owl:Class ;
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "contact point project"^^xsd:string ;
-   rdfs:label "S7"^^xsd:string ;
+   rdfs:comment "contact point project" ;
+   rdfs:label "S7" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1400,8 +1408,8 @@ schema:Service rdf:type owl:Class ;
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "contributor"^^xsd:string ;
-   rdfs:label "S5"^^xsd:string ;
+   rdfs:comment "contributor" ;
+   rdfs:label "S5" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1466,4 +1474,4 @@ schema:Service rdf:type owl:Class ;
                                          ]
  ] .
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
