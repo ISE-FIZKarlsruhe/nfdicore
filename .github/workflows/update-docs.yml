@@ -14,7 +14,7 @@ jobs:
         path: main
     - name: Build HTML for main
       run: | 
-           wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar
+           wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.21/widoco-1.4.21-jar-with-dependencies_JDK-11.jar
            mkdir public 
            java -jar widoco.jar -ontFile main/nfdicore.ttl -outFolder public -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/index-en.html public/index.html
