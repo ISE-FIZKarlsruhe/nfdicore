@@ -17,6 +17,7 @@ jobs:
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.21/widoco-1.4.21-jar-with-dependencies_JDK-11.jar
            mkdir public 
            java -jar widoco.jar -ontFile main/nfdicore.ttl -outFolder public -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           ls public
            cp public/index-en.html public/index.html
     - name: Deploy to GitHub Pages
       if: success()
