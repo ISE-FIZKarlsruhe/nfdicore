@@ -25,7 +25,9 @@
                                                      n4c:E3095 ,
                                                      <https://orcid.org/0000-0001-7192-7143> ;
                                           dc:title "NFDIcore Ontology" ;
-                                          dcterms:abstract "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file."@en ;
+                                          dcterms:abstract """The NFDIcore ontology  (prefix nfdicore) describes resources (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file.
+
+Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues."""@en ;
                                           dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
                                           dcterms:created "2024-03-11" ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
