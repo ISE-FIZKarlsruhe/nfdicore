@@ -18,6 +18,7 @@
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
                                           owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
                                           dc:creator n4c:E1925 ,
                                                      n4c:E2415 ,
