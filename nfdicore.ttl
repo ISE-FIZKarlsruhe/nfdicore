@@ -32,7 +32,7 @@
                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> :nfdicore ;
                                           <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                                           rdfs:label "NFDIcore" ;
-                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
+                                          #owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;#
                                           owl:versionInfo "v2.0.0-alpha1" .
 
 #################################################################
