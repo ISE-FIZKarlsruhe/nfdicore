@@ -805,7 +805,6 @@ schema:Service rdf:type owl:Class ;
                                                            ) ;
                                         rdf:type owl:Class
                                       ] ;
-                  rdfs:subClassOf :Organization ;
                   rdfs:comment "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
                   rdfs:label "consortium member"@en ;
                   <http://www.w3.org/2004/02/skos/core#example> "Museums of City Cologne is a member of NFDI4Culture consortium."@en .
@@ -1103,35 +1102,37 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary
 :ControlledVocabulary rdf:type owl:NamedIndividual ,
                                :SemanticExpressivity ;
-                      rdfs:comment "A list of terms, natural language definitions and naming conventions. In comparisson to a glossary, there is a dedicated curation mechanism for new terms in a controlled vocabulary."@en ;
+                      rdfs:comment "Represents the semantic expressability of a controlled vocabulary, which is a list of terms, natural language definitions and naming conventions. In comparison to a glossary, there is a dedicated curation mechanism for new terms in a controlled vocabulary."@en ;
                       rdfs:label "controlled vocabulary"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Glossary
 :Glossary rdf:type owl:NamedIndividual ,
                    :SemanticExpressivity ;
-          rdfs:comment "A list of terms and their with natural language definitions."@en ;
+          rdfs:comment "Represents the semantic expressability of a glossary, which is a list of terms and their natural language definitions. In comparison to a controlled vocabulary, there is no dedicated curation mechanism for new terms in a glossary."@en ;
           rdfs:label "glossary"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Ontology
 :Ontology rdf:type owl:NamedIndividual ,
                    :SemanticExpressivity ;
-          rdfs:comment "A complete, machine-readable specification of a conceptualization using URIs (and then IRIs) for all elements, properties and relationship types."@en ;
+          rdfs:comment "Represents the semantic expressivity of an ontology in information science. An ontology is an explicit, complete, machine-readable specification of a conceptualization using URIs (and then IRIs) to identify their elements, properties, and relationship types."@en ;
           rdfs:label "ontology"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy
 :Taxonomy rdf:type owl:NamedIndividual ,
                    :SemanticExpressivity ;
-          rdfs:comment "A data model in a class hierarchy, where all concepts inherit their behaviour from the super-class concept. Taxonomies can be strict or non strict and can contain instances."@en ;
+          obo:IAO_0000114 obo:IAO_0000428 ;
+          obo:IAO_0000232 "needs a better description, what means \"strict\"?" ;
+          rdfs:comment "Represents the semantic expressivity of a taxonomy, which is a class hierarchy, where all concepts inherit their behaviour from the super-class concept. Taxonomies can be strict or non strict and can contain instances."@en ;
           rdfs:label "taxonomy"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus
 :Thesaurus rdf:type owl:NamedIndividual ,
                     :SemanticExpressivity ;
-           rdfs:comment "A structured list of terms and relations between the terms, as e.g. broader/narrower."@en ;
+           rdfs:comment "Represents the semantic expressivity of a thesaurus, which is a structured list of terms and relations between the terms, as e.g. broader/narrower."@en ;
            rdfs:label "thesaurus"@en .
 
 
