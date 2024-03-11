@@ -749,6 +749,8 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline
 :AcademicDiscipline rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000030 ;
+                    obo:IAO_0000114 obo:IAO_0000428 ;
+                    obo:IAO_0000232 "definition and examples need improvements,  why is  \"e.g. a data portal\" an academic discipline?" ;
                     rdfs:comment "An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person."@en ;
                     rdfs:label "academic discipline"@en ;
                     <http://www.w3.org/2004/02/skos/core#example> wikidata:Q12271 ,
@@ -1025,8 +1027,12 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity
 :SemanticExpressivity rdf:type owl:Class ;
-                      rdfs:subClassOf obo:IAO_0000030 ;
-                      rdfs:comment "An entity that identifies the level of the semantic expressivity of a resource. Five instances are now included in nfdicore."@en ;
+                      rdfs:subClassOf obo:IAO_0000030 ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty obo:IAO_0000136 ;
+                                        owl:someValuesFrom :Resource
+                                      ] ;
+                      rdfs:comment "An information content entity that represents the level of the semantic expressivity of a resource."@en ;
                       rdfs:label "semantic expressivity"@en ;
                       <http://www.w3.org/2004/02/skos/core#example> "controlled vocabulary, ontology, taxonomy"@en .
 
