@@ -16,5 +16,5 @@ jobs:
            ls -la           
            curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
            java -jar robot.jar --version
-           java -jar robot validate-profile --profile DL --input main/nfdicore.ttl --output validation.txt
+           java -jar robot.jar validate-profile --profile DL --input main/nfdicore.ttl --output validation.txt
            cat validation.txt
