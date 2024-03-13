@@ -1,6 +1,5 @@
 ![build docs](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/update-docs.yml/badge.svg)
-
-![reasoning example](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/reasoning.yml/badge.svg)
+![verification](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/verification.yml/badge.svg)
 
 # NFDI Core Ontology
 
