@@ -630,7 +630,9 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                                        )
                          ] ;
              rdfs:range :AcademicDiscipline ;
+             obo:IAO_0000232 "to check for BFO superproperty" ;
              rdfs:comment "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en ;
+             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "subject area"@en .
 
 
