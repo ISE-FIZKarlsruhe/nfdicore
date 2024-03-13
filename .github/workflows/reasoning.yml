@@ -1,4 +1,4 @@
-name: reasoning example
+name: verification rules
 on:
   push:
     branches:
