@@ -10,11 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        ref: develop-3.0.0
+        ref: main
         path: main
     - name: Reasoning example
       run: |
-           ls -la
-           
+           ls -la           
            curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
            java -jar robot.jar --version
