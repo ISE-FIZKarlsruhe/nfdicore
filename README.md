@@ -1,5 +1,7 @@
 ![build docs](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/update-docs.yml/badge.svg)
 
+![reasoning example](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/reasoning.yml/badge.svg)
+
 # NFDI Core Ontology
 
 This is the development version v2.0.0a of the NFDIcore ontology that maps on BFO compliant ontologies.
