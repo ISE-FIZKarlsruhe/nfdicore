@@ -128,6 +128,7 @@ nfdicore:dataset rdf:type owl:ObjectProperty ;
 nfdicore:part rdf:type owl:ObjectProperty ;
               owl:inverseOf :partOf ;
               rdfs:comment "The generic property is a relationship between a thing and its part."@en ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "part"@en .
 
 
@@ -179,6 +180,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf
 :contactPointOf rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "contact point of"@en .
 
 
@@ -188,11 +190,13 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
              rdfs:domain :Resource ;
              rdfs:range :Agent ;
              rdfs:comment "The property related a resource to a person or an organization responsible for making contributions to a resource."@en ;
+             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "contributor"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/contributorOf
-:contributorOf rdf:type owl:ObjectProperty .
+:contributorOf rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/country
@@ -206,12 +210,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                      ] ;
          rdfs:range :Country ;
          rdfs:comment "The property relates a city or a state to a country where it is located."@en ;
+         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "country"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/countryOf
 :countryOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf nfdicore:part ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "country of"@en .
 
 
@@ -244,12 +250,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
               rdfs:domain :City ;
               rdfs:range :FederalState ;
               rdfs:comment "The property relates a city to a federal state where it is located."@en ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "federal state"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf
 :federalStateOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :partOf ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "federal state of"@en .
 
 
@@ -273,6 +281,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                      rdfs:domain :Project ;
                      rdfs:range :Organization ;
                      rdfs:comment "The property relates a project to the organization that provided funding for it."@en ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                      rdfs:label "funding organization"@en .
 
 
@@ -280,6 +289,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 :fundingOrganizationOf rdf:type owl:ObjectProperty ;
                        rdfs:domain :Organization ;
                        rdfs:range :Project ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                        rdfs:label "funding organization of"@en .
 
 
@@ -319,6 +329,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
          rdfs:domain :Resource ;
          rdfs:range :License ;
          rdfs:comment "The property is a relationship between a resource and a license file." ;
+         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "license"@en .
 
 
@@ -334,11 +345,13 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
           rdfs:domain owl:Thing ;
           rdfs:range :Place ;
           rdfs:comment "The property is a relationship between a thing and a place its located at. "@en ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "location"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/locationOf
 :locationOf rdf:type owl:ObjectProperty ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "location of"@en .
 
 
@@ -364,6 +377,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                            obo:BFO_0000051 ;
         owl:inverseOf :memberOf ;
         rdfs:comment "The property is a relationship between a consortium and an organization that is a member of the consortium."@en ;
+        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
         rdfs:label "member"@en .
 
 
@@ -371,6 +385,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 :memberOf rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :partOf ;
           rdfs:comment "The property is a relationship between an organization and a consortium it belongs to."@en ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "member of"@en .
 
 
@@ -399,6 +414,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 :parentOrganization rdf:type owl:ObjectProperty ;
                     owl:inverseOf :subsidiaryOrganization ;
                     rdfs:comment "The property is a parental relationship between organizations."@en ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                     rdfs:label "parent organization"@en .
 
 
@@ -408,6 +424,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
         rdfs:domain owl:Thing ;
         rdfs:range owl:Thing ;
         rdfs:comment "The generic property is a relationship between a thing and a thing in which it is physically or logically included."@en ;
+        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
         rdfs:label "part of"@en .
 
 
@@ -424,6 +441,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/participantOf
 :participantOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000056 ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "participant of"@en .
 
 
@@ -431,6 +449,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 :partnerOrganization rdf:type owl:ObjectProperty ,
                               owl:SymmetricProperty ;
                      rdfs:comment "The property is a partner relationship between organizations. The property is symmetric."@en ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                      rdfs:label "partner organization"@en .
 
 
@@ -442,11 +461,13 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                      rdfs:domain :Software ;
                      rdfs:range :ProgrammingLanguage ;
                      rdfs:comment "The property links software to a programming language its written in." ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                      rdfs:label "programming language"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf
 :programmingLanguageOf rdf:type owl:ObjectProperty ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                        rdfs:label "programming language of"@en .
 
 
@@ -456,11 +477,13 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
            rdfs:domain :Resource ;
            rdfs:range :Agent ;
            rdfs:comment "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "publisher"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/publisherOf
 :publisherOf rdf:type owl:ObjectProperty ;
+             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "publisher of"@en .
 
 
@@ -473,6 +496,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                             ] ;
                 rdfs:range :Project ;
                 rdfs:comment "The property is a relationship between a project or a resource and related projects."@en ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "related project"@en .
 
 
@@ -598,7 +622,6 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/subjectArea
 :subjectArea rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf obo:RO_0000086 ;
              owl:inverseOf :subjectAreaOf ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :Agent
@@ -613,11 +636,13 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf
 :subjectAreaOf rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "subject area of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization
 :subsidiaryOrganization rdf:type owl:ObjectProperty ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                         rdfs:label "subsidiary organization"@en .
 
 
