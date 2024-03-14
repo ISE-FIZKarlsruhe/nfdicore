@@ -17,5 +17,5 @@ jobs:
            java -jar robot.jar --version
            java -jar robot.jar validate-profile --profile DL --input main/nfdicore.ttl --output validation.txt
            cat validation.txt
-           java -jar robot.jar verify --input main/nfdicore.ttl --queries main/.github/workflows/verification-queries/label-missing.sparql  main/.github/workflows/verification-queries/isdefinedby-missing.sparql  main/.github/workflows/verification-queries/description-missing.sparql   main/.github/workflows/verification-queries/http.sparql
+           java -jar robot.jar verify --input main/nfdicore.ttl --queries main/.github/workflows/verification-queries/label-missing.sparql  main/.github/workflows/verification-queries/isdefinedby-missing.sparql  main/.github/workflows/verification-queries/description-missing.sparql   main/.github/workflows/verification-queries/https-missing.sparql
 
