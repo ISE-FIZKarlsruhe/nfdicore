@@ -37,6 +37,72 @@ Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/n
                                           owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
                                           owl:versionInfo "v2.0.0-alpha1" .
 
+
+<https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Country> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Contacting> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Collection> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/City> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResourceRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/SupportiveResourceRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Event> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/specification> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/funderOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/standardOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/instanceOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/fundingProject> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/software> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/objectType> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/funder> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/participant> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/serviceType> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/instance> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<http://nfdi.fiz-karlsruhe.de/ontology/dataset> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/urlOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/standard> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/technology> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/url> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<https://nfdi.fiz-karlsruhe.de/ontology/areaCode> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<http://nfdi.fiz-karlsruhe.de/ontology/startDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<http://nfdi.fiz-karlsruhe.de/ontology/endDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<http://nfdi.fiz-karlsruhe.de/ontology/deathDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+<http://nfdi.fiz-karlsruhe.de/ontology/birthDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+
+
+
 #################################################################
 #    Annotation properties
 #################################################################
