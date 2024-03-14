@@ -37,72 +37,6 @@ Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/n
                                           owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
                                           owl:versionInfo "v2.0.0-alpha1" .
 
-
-<https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Country> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Contacting> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Collection> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/City> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResourceRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/SupportiveResourceRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Project> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Event> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/specification> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/funderOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/standardOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/instanceOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/fundingProject> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/software> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/objectType> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/funder> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/participant> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/serviceType> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/instance> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<http://nfdi.fiz-karlsruhe.de/ontology/dataset> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/urlOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/standard> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/technology> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/url> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<https://nfdi.fiz-karlsruhe.de/ontology/areaCode> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<http://nfdi.fiz-karlsruhe.de/ontology/startDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<http://nfdi.fiz-karlsruhe.de/ontology/endDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<http://nfdi.fiz-karlsruhe.de/ontology/deathDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-<http://nfdi.fiz-karlsruhe.de/ontology/birthDate> rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-
-
-
 #################################################################
 #    Annotation properties
 #################################################################
@@ -187,6 +121,7 @@ nfdicore:dataset rdf:type owl:ObjectProperty ;
                  rdfs:domain :Resource ;
                  rdfs:range :Dataset ;
                  rdfs:comment "The property is a relation between a resource and a data set."@en ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                  rdfs:label "data set"@en .
 
 
@@ -221,12 +156,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
               rdfs:domain :Resource ;
               rdfs:range :Specification ;
               rdfs:comment "The property is a relationship between a resource and the specified best practice."@en ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "best practice"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf
 :bestPracticeOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:IAO_0000136 ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "best practice of"@en .
 
 
@@ -290,6 +227,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/datasetOf
 :datasetOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf obo:IAO_0000136 ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "data set of"@en .
 
 
@@ -300,12 +238,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
               rdfs:domain :Resource ;
               rdfs:range :MediaType ;
               rdfs:comment "The property relates a resource to the format available for the export of a resource."@en ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "export format"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf
 :exportFormatOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:IAO_0000136 ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "export format of"@en .
 
 
@@ -332,12 +272,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
         rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
         rdfs:domain owl:Thing ;
         rdfs:comment "The property relates thing to an organization or a project that provided funding for it. The subproperties are used to specify more specific funding relationships. "@en ;
+        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
         rdfs:label "funder"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/funderOf
 :funderOf rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "funder of"@en .
 
 
@@ -365,12 +307,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                 rdfs:domain :Resource ;
                 rdfs:range :Project ;
                 rdfs:comment "The property relateds a resource to the project that provided funding for it."@en ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "funding project"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf
 :fundingProjectOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                   rdfs:label "funding project of"@en .
 
 
@@ -380,12 +324,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
           owl:inverseOf :instanceOf ;
           rdfs:domain :Service ;
           rdfs:comment "The property is a relationship between a service and its running instance."@en ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "instance"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/instanceOf
 :instanceOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "instance of"@en .
 
 
@@ -402,6 +348,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/licenseOf
 :licenseOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf obo:IAO_0000136 ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "license of"@en .
 
 
@@ -428,12 +375,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
            rdfs:domain :Resource ;
            rdfs:range :MediaType ;
            rdfs:comment "The property relates a resource to its data format."@en ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "media type"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf
 :mediaTypeOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf obo:IAO_0000136 ;
+             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "media type of"@en .
 
 
@@ -467,12 +416,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
             rdfs:range <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ,
                        :ObjectType ;
             rdfs:comment "The property relates a collection or a data set to the type of object it contains. "@en ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "object type"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf
 :objectTypeOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "object type of"@en .
 
 
@@ -501,6 +452,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
              rdfs:domain :Project ;
              rdfs:range :Agent ;
              rdfs:comment "The property is a relationship between a project and an agent that participates in the project."@en ;
+             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "participant"@en .
 
 
@@ -577,6 +529,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                                    ] ;
                        rdfs:range :Collection ;
                        rdfs:comment "The property is a relationship between a dataset and a collection it represents."@en ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                        rdfs:label "represented collection"@en .
 
 
@@ -585,6 +538,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                          rdfs:subPropertyOf obo:IAO_0000235 ;
                          rdfs:domain :Collection ;
                          rdfs:range :Resource ;
+                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                          rdfs:label "represented collection of"@en .
 
 
@@ -595,6 +549,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                       rdfs:domain :Resource ;
                       rdfs:range :SemanticExpressivity ;
                       rdfs:comment "The property relates a resource to its semantic expressivity spectrum."@en ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                       rdfs:label "semantic expressivity"@en .
 
 
@@ -612,6 +567,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
              rdfs:domain :Service ;
              rdfs:range :ServiceType ;
              rdfs:comment "The property relates a service to its type." ;
+             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "service type"@en .
 
 
@@ -629,12 +585,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
           rdfs:domain :Resource ;
           rdfs:range :Software ;
           rdfs:comment "The property is a relationship between a resource and a software it uses."@en ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "software"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/softwareOf
 :softwareOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf obo:IAO_0000136 ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "software of"@en .
 
 
@@ -645,12 +603,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                 rdfs:domain :Resource ;
                 rdfs:range :Resource ;
                 rdfs:comment "The property relates a data resource to its SPARQL Endpoint. "@en ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "sparql endpoint"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf
 :sparqlEndpointOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf obo:IAO_0000136 ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                   rdfs:label "sparql endpoint of"@en .
 
 
@@ -661,12 +621,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
                rdfs:domain :Resource ;
                rdfs:range :Specification ;
                rdfs:comment "The property is a relationship between a resource and the international standard or norm."@en ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "specification"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/specificationOf
 :specificationOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf obo:IAO_0000136 ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                  rdfs:label "specification of"@en .
 
 
@@ -677,12 +639,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
           rdfs:domain :Resource ;
           rdfs:range :Standard ;
           rdfs:comment "The property relates a resource to the standard it relies on."@en ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "standard"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/standardOf
 :standardOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf obo:IAO_0000136 ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "standard of"@en .
 
 
@@ -721,12 +685,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
             rdfs:domain :Resource ;
             rdfs:range :TechnologicalMeans ;
             rdfs:comment "The property is a relationship between a resource and a technology it uses. "@en ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "technology"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/technologyOf
 :technologyOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf obo:IAO_0000136 ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "technology of"@en .
 
 
@@ -737,12 +703,14 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
      rdfs:domain owl:Thing ;
      rdfs:range owl:Thing ;
      rdfs:comment "The property is a relationship between a thing and a url associated with the thing."@en ;
+     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
      rdfs:label "url"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/urlOf
 :urlOf rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf obo:IAO_0000219 ;
+       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
        rdfs:label "url of"@en .
 
 
@@ -752,38 +720,45 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/birthDate
 nfdicore:birthDate rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Person .
+                   rdfs:domain :Person ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/deathDate
 nfdicore:deathDate rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Person .
+                   rdfs:domain :Person ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/endDate
 nfdicore:endDate rdf:type owl:DatatypeProperty ;
-                 rdfs:domain obo:BFO_0000003 .
+                 rdfs:domain obo:BFO_0000003 ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/startDate
 nfdicore:startDate rdf:type owl:DatatypeProperty ;
-                   rdfs:domain obo:BFO_0000003 .
+                   rdfs:domain obo:BFO_0000003 ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/areaCode
 :areaCode rdf:type owl:DatatypeProperty ;
           rdfs:range rdfs:Literal ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "area code"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate
 :dissolutionDate rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Organization .
+                 rdfs:domain :Organization ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/emailAddress
 :emailAddress rdf:type owl:DatatypeProperty ;
               rdfs:range rdfs:Literal ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "email address"@en .
 
 
@@ -791,6 +766,7 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
 :fileExtension rdf:type owl:DatatypeProperty ;
                rdfs:domain :Resource ;
                rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "file extension" ;
                <http://www.w3.org/2004/02/skos/core#example> "mp4" ,
                                                              "ttl" ,
@@ -800,7 +776,8 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/foundationDate
 :foundationDate rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Organization .
+                rdfs:domain :Organization ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
 
 
 #################################################################
@@ -865,6 +842,7 @@ schema:Service rdf:type owl:Class ;
 :City rdf:type owl:Class ;
       rdfs:subClassOf :Place ;
       rdfs:comment "A city or a town where the thing is located."@en ;
+      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
       rdfs:label "city"@en ;
       <http://www.w3.org/2004/02/skos/core#example> "Berlin, Hannover, Kyiv"@en .
 
@@ -873,6 +851,7 @@ schema:Service rdf:type owl:Class ;
 :Collection rdf:type owl:Class ;
             rdfs:subClassOf obo:BFO_0000040 ;
             rdfs:comment "A tangible collection of valuables published or curated by an organization or a person."@en ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "collection"@en ;
             <http://www.w3.org/2004/02/skos/core#example> "A collection of arts displayed at the museum"@en .
 
@@ -914,18 +893,21 @@ schema:Service rdf:type owl:Class ;
 :ConsortiumMemberRole rdf:type owl:Class ;
                       rdfs:subClassOf obo:BFO_0000023 ;
                       rdfs:comment "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                       rdfs:label "consortium member role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole
 :ContactPointRole rdf:type owl:Class ;
                   rdfs:subClassOf obo:BFO_0000023 ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                   rdfs:label "contact point role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Contacting
 :Contacting rdf:type owl:Class ;
             rdfs:subClassOf obo:OBI_0000011 ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "contacting"@en ;
             :definition "A planned process in which the contact information of an entity is provided."@en .
 
@@ -933,6 +915,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Contributing
 :Contributing rdf:type owl:Class ;
               rdfs:subClassOf obo:OBI_0000011 ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "contributing"@en ;
               :definition "A planned process of contibuting or providing information to an endeavor."@en .
 
@@ -940,6 +923,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole
 :ContributorRole rdf:type owl:Class ;
                  rdfs:subClassOf obo:BFO_0000023 ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                  rdfs:label "contributor role"@en .
 
 
@@ -947,6 +931,7 @@ schema:Service rdf:type owl:Class ;
 :Country rdf:type owl:Class ;
          rdfs:subClassOf :Place ;
          rdfs:comment "A country where the thing is located."@en ;
+         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "country"@en .
 
 
@@ -981,6 +966,7 @@ schema:Service rdf:type owl:Class ;
        rdfs:subClassOf obo:BFO_0000003 ;
        rdfs:comment "A class that represents entities that occur or unfold in time, typically characterized by a specific happening or occurrence with temporal properties. Events encompass a wide range of occurrences, including but not limited to happenings, incidents, activities, or processes."@en ,
                     "An event is an occurent that represents an occurence or happening that unfolds in time."@en ;
+       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
        rdfs:label "event"@en ;
        <http://www.w3.org/2004/02/skos/core#example> "conferences, wars, strikes, celebrations, accidents, workshops, meetings, or any other specific incident or happening."@en .
 
@@ -989,6 +975,7 @@ schema:Service rdf:type owl:Class ;
 :FederalState rdf:type owl:Class ;
               rdfs:subClassOf :Place ;
               rdfs:comment "A federal state where the thing is located."@en ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "federal state"@en ;
               <http://www.w3.org/2004/02/skos/core#example> "Sachsen, Berlin"@de .
 
@@ -997,6 +984,7 @@ schema:Service rdf:type owl:Class ;
 :FundingOrganizationRole rdf:type owl:Class ;
                          rdfs:subClassOf obo:BFO_0000023 ;
                          rdfs:comment "A role inhering in an organization that is realized when the organsation serves as a funder to endevaours, e.g. projects."@en ;
+                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                          rdfs:label "funding organization role"@en .
 
 
@@ -1012,6 +1000,7 @@ schema:Service rdf:type owl:Class ;
 :MIME-Type rdf:type owl:Class ;
            rdfs:subClassOf :MediaType ;
            rdfs:comment "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "MIME-type"@en ;
            <http://www.w3.org/2004/02/skos/core#example> "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en .
 
@@ -1020,6 +1009,7 @@ schema:Service rdf:type owl:Class ;
 :MediaType rdf:type owl:Class ;
            rdfs:subClassOf obo:IAO_0000033 ;
            rdfs:comment "A digital resource format or physical medium."@en ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "media type"@en ;
            <http://www.w3.org/2004/02/skos/core#example> "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book" .
 
@@ -1064,6 +1054,7 @@ schema:Service rdf:type owl:Class ;
 :ProgrammingLanguage rdf:type owl:Class ;
                      rdfs:subClassOf :TechnologicalMeans ;
                      rdfs:comment "A formal language used for implementing a software."@en ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                      rdfs:label "programming language"@en ;
                      <http://www.w3.org/2004/02/skos/core#example> "Java, Ruby, C++, Perl, PHP" .
 
@@ -1090,6 +1081,7 @@ schema:Service rdf:type owl:Class ;
                                               ]
                          ] ;
          rdfs:comment "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
+         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "project"@en ;
          <http://www.w3.org/2004/02/skos/core#example> "Freischütz digital, Corpus Vitrearum Medii Aevi" .
 
@@ -1108,6 +1100,7 @@ schema:Service rdf:type owl:Class ;
 :ProvidedResourceRole rdf:type owl:Class ;
                       rdfs:subClassOf obo:BFO_0000023 ;
                       rdfs:comment "A role that identifies a resource that was intentionally contributed to the National Research Data Infrastructure (NFDI) project by a data provider."@en ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                       rdfs:label "provided resource role"@en .
 
 
@@ -1123,6 +1116,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole
 :PublisherRole rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000023 ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "publisher role"@en .
 
 
@@ -1178,6 +1172,8 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Specification
 :Specification rdf:type owl:Class ;
                rdfs:subClassOf schema:CreativeWork ;
+               obo:IAO_0000114 obo:IAO_0000428 ;
+               obo:IAO_0000232 "why not subclass of  iao:plan_specification ?" ;
                rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "specification"@en ;
@@ -1197,6 +1193,7 @@ schema:Service rdf:type owl:Class ;
 :SupportiveResourceRole rdf:type owl:Class ;
                         rdfs:subClassOf obo:BFO_0000023 ;
                         rdfs:comment "A role of a resource that, while not originally designated for provision to the NFDI, serves a supportive role for other resources within the NFDI project."@en ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                         rdfs:label "supportive resource role"@en .
 
 
@@ -1204,6 +1201,7 @@ schema:Service rdf:type owl:Class ;
 :TechnologicalMeans rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000104 ;
                     rdfs:comment "A technology, e.g. a web application or a programming framework used in a resource."@en ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                     rdfs:label "technological means"@en ;
                     <http://www.w3.org/2004/02/skos/core#example> "Groovy on Grails, Angular"@en .
 
