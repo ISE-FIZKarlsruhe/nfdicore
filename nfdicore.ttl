@@ -19,13 +19,13 @@
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                           owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
-                                          dc:creator n4c:E1925 ,
+                                          dcterms:creator n4c:E1925 ,
                                                      n4c:E2415 ,
                                                      n4c:E2416 ,
                                                      n4c:E3095 ,
                                                      <https://orcid.org/0000-0001-7192-7143> ;
-                                          dc:title "NFDIcore Ontology" ;
-                                          dc:description """The NFDIcore ontology  (prefix nfdicore) describes resources (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file.
+                                          dcterms:title "NFDIcore Ontology" ;
+                                          dcterms:description """The NFDIcore ontology  (prefix nfdicore) describes resources (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file.
 
 Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues."""@en ;
                                           dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
