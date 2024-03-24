@@ -14,23 +14,23 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                           owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
-                                          dcterms:creator n4c:E1925 ,
-                                                     n4c:E2415 ,
-                                                     n4c:E2416 ,
-                                                     n4c:E3095 ,
-                                                     <https://orcid.org/0000-0001-7192-7143> ;
-                                          dcterms:title "NFDIcore Ontology" ;
                                           dcterms:abstract """The NFDIcore ontology  (prefix nfdicore) describes resources (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file.
 
 Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues."""@en ;
                                           dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
                                           dcterms:created "2024-03-11" ;
+                                          dcterms:creator n4c:E1925 ,
+                                                          n4c:E2415 ,
+                                                          n4c:E2416 ,
+                                                          n4c:E3095 ,
+                                                          <https://orcid.org/0000-0001-7192-7143> ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                          dcterms:title "NFDIcore Ontology" ;
                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> :nfdicore ;
                                           <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                                           rdfs:label "NFDIcore" ;
@@ -721,43 +721,52 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 ###  http://nfdi.fiz-karlsruhe.de/ontology/birthDate
 nfdicore:birthDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Person ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+                   rdfs:range rdfs:Literal ;
+                   rdfs:comment "The property refers to the date on which a person was born."@en ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:label "birth date"@en .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/deathDate
 nfdicore:deathDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Person ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+                   rdfs:range rdfs:Literal ;
+                   rdfs:comment "The property refers to the date on which a person passed away."@en ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:label "death date"@en .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/endDate
 nfdicore:endDate rdf:type owl:DatatypeProperty ;
-                 rdfs:domain obo:BFO_0000003 ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+                 rdfs:domain :Event ;
+                 rdfs:comment "The property refers to the moment in time when an event ends."@en ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:label "end date"@en .
 
 
 ###  http://nfdi.fiz-karlsruhe.de/ontology/startDate
 nfdicore:startDate rdf:type owl:DatatypeProperty ;
-                   rdfs:domain obo:BFO_0000003 ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/areaCode
-:areaCode rdf:type owl:DatatypeProperty ;
-          rdfs:range rdfs:Literal ;
-          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-          rdfs:label "area code"@en .
+                   rdfs:domain :Event ;
+                   rdfs:range rdfs:Literal ;
+                   rdfs:comment "The property refers to the moment in time when an event begins."@en ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:label "start date"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate
 :dissolutionDate rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Organization ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+                 rdfs:range rdfs:Literal ;
+                 rdfs:comment "The property refers to the date on which the organization ceased to exist or was formally dissolved."@en ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:label "dissolution date"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/emailAddress
 :emailAddress rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Agent ;
               rdfs:range rdfs:Literal ;
+              rdfs:comment "The property relates an agent to their email address."@en ;
               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "email address"@en .
 
@@ -777,7 +786,10 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/foundationDate
 :foundationDate rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Organization ;
-                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "The property refers to the specific date on which the organization was officially established or founded."@en ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                rdfs:label "foundation date"@en .
 
 
 #################################################################
@@ -789,18 +801,25 @@ obo:GAZ_00000448 rdf:type owl:Class ;
                  owl:equivalentClass :Place .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000010
+obo:IAO_0000010 owl:equivalentClass :Software .
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000025
 obo:IAO_0000025 owl:equivalentClass :ProgrammingLanguage .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000311
+obo:IAO_0000311 owl:equivalentClass :Publication .
+
+
 ###  http://schema.org/CreativeWork
-schema:CreativeWork rdf:type owl:Class ;
-                    rdfs:subClassOf :Resource .
+schema:CreativeWork rdf:type owl:Class .
 
 
 ###  http://schema.org/Product
 schema:Product rdf:type owl:Class ;
-               rdfs:subClassOf :Resource .
+               rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> .
 
 
 ###  http://schema.org/Service
@@ -819,10 +838,9 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline
 :AcademicDiscipline rdf:type owl:Class ;
-                    rdfs:subClassOf obo:IAO_0000030 ;
+                    rdfs:subClassOf obo:BFO_0000031 ;
                     obo:IAO_0000114 obo:IAO_0000428 ;
-                    obo:IAO_0000232 "definition and examples need improvements,  why is  \"e.g. a data portal\" an academic discipline?" ;
-                    rdfs:comment "An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person."@en ;
+                    rdfs:comment "An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en ;
                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                     rdfs:label "academic discipline"@en ;
                     <http://www.w3.org/2004/02/skos/core#example> wikidata:Q12271 ,
@@ -935,6 +953,19 @@ schema:Service rdf:type owl:Class ;
          rdfs:label "country"@en .
 
 
+###  https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork
+:CreativeWork rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0000030
+                                                         schema:CreativeWork
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :Resource ;
+              obo:IAO_0000116 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en ;
+              rdfs:comment "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
+              rdfs:label "creative work"@en .
+
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/DataPortal
 :DataPortal rdf:type owl:Class ;
             rdfs:subClassOf :Website ;
@@ -946,7 +977,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Dataset
 :Dataset rdf:type owl:Class ;
-         rdfs:subClassOf schema:CreativeWork ;
+         rdfs:subClassOf :CreativeWork ;
          rdfs:comment "A dataset is associated with a structured information about a resource."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "dataset"@en .
@@ -1035,6 +1066,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Person
 :Person rdf:type owl:Class ;
         rdfs:subClassOf :Agent ;
+        obo:IAO_0000116 "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
         rdfs:comment "A resource that represents a single person."@en ;
         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
         rdfs:label "person"@en ;
@@ -1088,8 +1120,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource
 :ProvidedResource rdf:type owl:Class ;
-                  rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ,
-                                  :Resource ;
+                  rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                   rdfs:comment "A resource that has been provided by a contributor. The class should be used to distinguisch between a resource from the resources that only have a supportive role in other resources, but have not been an active part of the NFDI4Culture."@en ,
                                "A resource that identifies a resource provided to the NFDI."@en ;
                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1106,7 +1137,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Publication
 :Publication rdf:type owl:Class ;
-             rdfs:subClassOf schema:CreativeWork ;
+             rdfs:subClassOf :CreativeWork ;
              rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "publication"@en ;
@@ -1130,7 +1161,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity
 :SemanticExpressivity rdf:type owl:Class ;
-                      rdfs:subClassOf obo:IAO_0000030 ,
+                      rdfs:subClassOf obo:BFO_0000031 ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty obo:IAO_0000136 ;
                                         owl:someValuesFrom :Resource
@@ -1152,7 +1183,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ServiceType
 :ServiceType rdf:type owl:Class ;
-             rdfs:subClassOf obo:IAO_0000030 ;
+             rdfs:subClassOf obo:BFO_0000031 ;
              obo:IAO_0000114 "" ;
              rdfs:comment "A resource that identifies the type of a service."@en ;
              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1162,7 +1193,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Software
 :Software rdf:type owl:Class ;
-          rdfs:subClassOf schema:CreativeWork ;
+          rdfs:subClassOf :CreativeWork ;
           rdfs:comment "A computer software provided by an organization or a person."@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "software"@en ;
@@ -1171,8 +1202,13 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Specification
 :Specification rdf:type owl:Class ;
-               rdfs:subClassOf schema:CreativeWork ;
+               rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000104
+                                                      :CreativeWork
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
                obo:IAO_0000114 obo:IAO_0000428 ;
+               obo:IAO_0000116 "2024-03-24. Sasha Bruns: specifications have duel nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en ;
                obo:IAO_0000232 "why not subclass of  iao:plan_specification ?" ;
                rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1208,7 +1244,7 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Website
 :Website rdf:type owl:Class ;
-         rdfs:subClassOf schema:CreativeWork ;
+         rdfs:subClassOf :CreativeWork ;
          rdfs:comment "A collection of webpages contributed by an organization or a person."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "website"@en ;
@@ -1635,4 +1671,4 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
                                          ]
  ] .
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
