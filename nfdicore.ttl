@@ -823,8 +823,7 @@ schema:Product rdf:type owl:Class ;
 
 
 ###  http://schema.org/Service
-schema:Service rdf:type owl:Class ;
-               rdfs:subClassOf :Resource .
+schema:Service rdf:type owl:Class .
 
 
 ###  http://www.ebi.ac.uk/swo/SWO_0000002
@@ -850,6 +849,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Agent
 :Agent rdf:type owl:Class ;
        rdfs:subClassOf obo:BFO_0000004 ;
+       obo:IAO_0000115 "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
        rdfs:comment "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
        rdfs:label "agent"@en ;
@@ -859,6 +859,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/City
 :City rdf:type owl:Class ;
       rdfs:subClassOf :Place ;
+      obo:IAO_0000115 "A place that refers to a densely populated urban area."@en ;
       rdfs:comment "A city or a town where the thing is located."@en ;
       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
       rdfs:label "city"@en ;
@@ -868,6 +869,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Collection
 :Collection rdf:type owl:Class ;
             rdfs:subClassOf obo:BFO_0000040 ;
+            obo:IAO_0000115 "A material entity that represents a collection of material entities intended to be understood together as a whole."@en ;
             rdfs:comment "A tangible collection of valuables published or curated by an organization or a person."@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "collection"@en ;
@@ -885,6 +887,7 @@ schema:Service rdf:type owl:Class ;
                                                  ) ;
                               rdf:type owl:Class
                             ] ;
+            obo:IAO_0000115 "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en ;
             rdfs:comment "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "consortium"@en ;
@@ -901,6 +904,7 @@ schema:Service rdf:type owl:Class ;
                                                            ) ;
                                         rdf:type owl:Class
                                       ] ;
+                  obo:IAO_0000115 "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
                   rdfs:comment "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                   rdfs:label "consortium member"@en ;
@@ -910,6 +914,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole
 :ConsortiumMemberRole rdf:type owl:Class ;
                       rdfs:subClassOf obo:BFO_0000023 ;
+                      obo:IAO_0000115 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en ;
                       rdfs:comment "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en ;
                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                       rdfs:label "consortium member role"@en .
@@ -941,6 +946,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole
 :ContributorRole rdf:type owl:Class ;
                  rdfs:subClassOf obo:BFO_0000023 ;
+                 obo:IAO_0000115 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en ;
                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                  rdfs:label "contributor role"@en .
 
@@ -948,6 +954,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Country
 :Country rdf:type owl:Class ;
          rdfs:subClassOf :Place ;
+         obo:IAO_0000115 "A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty."@en ;
          rdfs:comment "A country where the thing is located."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "country"@en .
@@ -961,6 +968,7 @@ schema:Service rdf:type owl:Class ;
                                     rdf:type owl:Class
                                   ] ;
               rdfs:subClassOf :Resource ;
+              obo:IAO_0000115 "An information content entity that refers to a manifestation of someone's creative effort."@en ;
               obo:IAO_0000116 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en ;
               rdfs:comment "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
               rdfs:label "creative work"@en .
@@ -969,6 +977,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/DataPortal
 :DataPortal rdf:type owl:Class ;
             rdfs:subClassOf :Website ;
+            obo:IAO_0000115 "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en ;
             rdfs:comment "An online platform that provides access to datasets."@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "data portal"@en ;
@@ -978,9 +987,11 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Dataset
 :Dataset rdf:type owl:Class ;
          rdfs:subClassOf :CreativeWork ;
-         rdfs:comment "A dataset is associated with a structured information about a resource."@en ;
+         obo:IAO_0000115 "A creative work that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference."@en ;
+         rdfs:comment "Structured information about a resource provided by an organization or a person."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-         rdfs:label "dataset"@en .
+         rdfs:label "dataset"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork
@@ -1005,6 +1016,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/FederalState
 :FederalState rdf:type owl:Class ;
               rdfs:subClassOf :Place ;
+              obo:IAO_0000115 "A place that refers to a geographical territory forming part of a country."@en ;
               rdfs:comment "A federal state where the thing is located."@en ;
               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "federal state"@en ;
@@ -1014,6 +1026,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole
 :FundingOrganizationRole rdf:type owl:Class ;
                          rdfs:subClassOf obo:BFO_0000023 ;
+                         obo:IAO_0000115 "A role inhering in an organization that is realized when the organsation serves as a funder to endevaours, e.g. projects."@en ;
                          rdfs:comment "A role inhering in an organization that is realized when the organsation serves as a funder to endevaours, e.g. projects."@en ;
                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                          rdfs:label "funding organization role"@en .
@@ -1021,6 +1034,8 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/License
 :License rdf:type owl:Class ;
+         rdfs:subClassOf obo:IAO_0000030 ;
+         obo:IAO_0000115 "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en ;
          rdfs:comment "A document that provides legal guidelines for the use of a resource, e.g. a software."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "license"@en ;
@@ -1030,6 +1045,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type
 :MIME-Type rdf:type owl:Class ;
            rdfs:subClassOf :MediaType ;
+           obo:IAO_0000115 "A media type that serves as a standardized identifier for specifying the nature and format of data."@en ;
            rdfs:comment "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "MIME-type"@en ;
@@ -1039,6 +1055,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/MediaType
 :MediaType rdf:type owl:Class ;
            rdfs:subClassOf obo:IAO_0000033 ;
+           obo:IAO_0000115 "A directive information entity that describes a media type a bearer has."@en ;
            rdfs:comment "A digital resource format or physical medium."@en ;
            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "media type"@en ;
@@ -1057,15 +1074,17 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Organization
 :Organization rdf:type owl:Class ;
               rdfs:subClassOf :Agent ;
+              obo:IAO_0000115 "An agent that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en ;
               rdfs:comment "An organization of some kind, e.g. research organization or business organization"@en ;
               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "organization"@en ;
-              <http://www.w3.org/2004/02/skos/core#example> "Univerity Library in Leipzig, Museums of City Cologne" .
+              <http://www.w3.org/2004/02/skos/core#example> "University Library in Leipzig, Museums of City Cologne" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Person
 :Person rdf:type owl:Class ;
         rdfs:subClassOf :Agent ;
+        obo:IAO_0000115 "An agent that represents a single human individual."@en ;
         obo:IAO_0000116 "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
         rdfs:comment "A resource that represents a single person."@en ;
         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1076,6 +1095,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Place
 :Place rdf:type owl:Class ;
        rdfs:subClassOf obo:BFO_0000029 ;
+       obo:IAO_0000115 "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en ;
        rdfs:comment "A spatial region, e.g. country, city or district."@en ;
        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
        rdfs:label "place"@en ;
@@ -1085,6 +1105,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage
 :ProgrammingLanguage rdf:type owl:Class ;
                      rdfs:subClassOf :TechnologicalMeans ;
+                     obo:IAO_0000115 "A technological means that is used for implementing software."@en ;
                      rdfs:comment "A formal language used for implementing a software."@en ;
                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                      rdfs:label "programming language"@en ;
@@ -1127,17 +1148,10 @@ schema:Service rdf:type owl:Class ;
                   rdfs:label "provided resource"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResourceRole
-:ProvidedResourceRole rdf:type owl:Class ;
-                      rdfs:subClassOf obo:BFO_0000023 ;
-                      rdfs:comment "A role that identifies a resource that was intentionally contributed to the National Research Data Infrastructure (NFDI) project by a data provider."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                      rdfs:label "provided resource role"@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Publication
 :Publication rdf:type owl:Class ;
              rdfs:subClassOf :CreativeWork ;
+             obo:IAO_0000115 "A creative work that is the output of a publishing process."@en ;
              rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "publication"@en ;
@@ -1147,6 +1161,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole
 :PublisherRole rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000023 ;
+               obo:IAO_0000115 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "publisher role"@en .
 
@@ -1154,7 +1169,10 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Resource
 :Resource rdf:type owl:Class ;
           rdfs:subClassOf obo:IAO_0000030 ;
-          rdfs:comment "The most generic kind of a resource and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations."@en ;
+          obo:IAO_0000115 "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI."@en ;
+          obo:IAO_0000116 """2024-03-25 - Sasha Bruns: 
+This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."""@en ;
+          rdfs:comment "The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "resource"@en .
 
@@ -1166,6 +1184,7 @@ schema:Service rdf:type owl:Class ;
                                         owl:onProperty obo:IAO_0000136 ;
                                         owl:someValuesFrom :Resource
                                       ] ;
+                      obo:IAO_0000114 "'requires discussion''" ;
                       rdfs:comment "An information content entity that represents the level of the semantic expressivity of a resource."@en ;
                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                       rdfs:label "semantic expressivity"@en ;
@@ -1174,7 +1193,13 @@ schema:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Service
 :Service rdf:type owl:Class ;
-         rdfs:subClassOf schema:Service ;
+         owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0000030
+                                                    schema:Service
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :Resource ;
+         obo:IAO_0000115 "An information content entity that refers to offerings provided by individuals or organizations to facilitate and contribute to the specific goals."@en ;
          rdfs:comment "Services are resources offered by organizations or people to support and contribute to the predefined goals of a project. Services may encompass a diverse range of contributions such as data curation, specialized expertise, skill and various other forms of support."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "service"@en ;
@@ -1184,7 +1209,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ServiceType
 :ServiceType rdf:type owl:Class ;
              rdfs:subClassOf obo:BFO_0000031 ;
-             obo:IAO_0000114 "" ;
+             obo:IAO_0000114 "'requires discussion''" ;
              rdfs:comment "A resource that identifies the type of a service."@en ;
              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "service type"@en ;
@@ -1194,6 +1219,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Software
 :Software rdf:type owl:Class ;
           rdfs:subClassOf :CreativeWork ;
+          obo:IAO_0000115 "A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en ;
           rdfs:comment "A computer software provided by an organization or a person."@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "software"@en ;
@@ -1208,8 +1234,8 @@ schema:Service rdf:type owl:Class ;
                                  rdf:type owl:Class
                                ] ;
                obo:IAO_0000114 obo:IAO_0000428 ;
+               obo:IAO_0000115 "A creative work that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process."@en ;
                obo:IAO_0000116 "2024-03-24. Sasha Bruns: specifications have duel nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en ;
-               obo:IAO_0000232 "why not subclass of  iao:plan_specification ?" ;
                rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "specification"@en ;
@@ -1219,23 +1245,17 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Standard
 :Standard rdf:type owl:Class ;
           rdfs:subClassOf :Specification ;
+          obo:IAO_0000115 "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en ;
           rdfs:comment "An international standard and norm that can be used to evaluate or create a resource."@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "standard"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "ISO 15511, DINI-Zertifikat" .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/SupportiveResourceRole
-:SupportiveResourceRole rdf:type owl:Class ;
-                        rdfs:subClassOf obo:BFO_0000023 ;
-                        rdfs:comment "A role of a resource that, while not originally designated for provision to the NFDI, serves a supportive role for other resources within the NFDI project."@en ;
-                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                        rdfs:label "supportive resource role"@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans
 :TechnologicalMeans rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000104 ;
+                    obo:IAO_0000115 "A plan specification that refers to technology employed for the creation, management, utilization, or control of a resource."@en ;
                     rdfs:comment "A technology, e.g. a web application or a programming framework used in a resource."@en ;
                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                     rdfs:label "technological means"@en ;
@@ -1245,6 +1265,7 @@ schema:Service rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Website
 :Website rdf:type owl:Class ;
          rdfs:subClassOf :CreativeWork ;
+         obo:IAO_0000115 "A creative work that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en ;
          rdfs:comment "A collection of webpages contributed by an organization or a person."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "website"@en ;
@@ -1328,6 +1349,73 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
 :o rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :f rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "contributor" ;
+   rdfs:label "S5" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Agent ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Resource ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Contributing ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :ContributorRole ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :cr
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> obo:RO_0000056 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> obo:RO_0000056 ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> obo:RO_0000087 ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :cr
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> obo:BFO_0000054 ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :cr ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :contributorOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :r
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
@@ -1599,73 +1687,6 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :contactPointOf ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :a ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> :p
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "contributor" ;
-   rdfs:label "S5" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Agent ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Resource ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Contributing ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
-                                                                           ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :ContributorRole ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :cr
-                                                                                      ] ;
-                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> obo:RO_0000056 ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :a ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :p
-                                                                                                 ] ;
-                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> obo:RO_0000056 ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :r ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :p
-                                                                                                            ] ;
-                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> obo:RO_0000087 ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :a ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :cr
-                                                                                                                       ] ;
-                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> obo:BFO_0000054 ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :cr ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> :p
-                                                                                                                                  ] ;
-                                                                                                                        rdf:rest rdf:nil
-                                                                                                                      ]
-                                                                                                           ]
-                                                                                                ]
-                                                                                     ]
-                                                                          ]
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :contributorOf ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :a ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :r
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
