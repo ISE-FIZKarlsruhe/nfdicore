@@ -555,6 +555,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf
 :semanticExpressivityOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf obo:RO_0000080 ;
                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                         rdfs:label "semantic expressivity of"@en .
 
@@ -667,6 +668,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf
 :subjectAreaOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000080 ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "subject area of"@en .
 
