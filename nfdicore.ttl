@@ -980,7 +980,6 @@ schema:Service rdf:type owl:Class .
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "contacting"@en .
 
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Contributing
 :Contributing rdf:type owl:Class ;
               rdfs:subClassOf obo:OBI_0000011 ;
@@ -990,10 +989,13 @@ schema:Service rdf:type owl:Class .
               rdfs:label "contributing"@en .
 
 
+#######
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole
 :ContributorRole rdf:type owl:Class ;
                  rdfs:subClassOf obo:BFO_0000023 ;
                  obo:IAO_0000115 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en ;
+                 rdfs:comment "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en ;
                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                  rdfs:label "contributor role"@en .
 
@@ -1061,8 +1063,8 @@ schema:Service rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Event
 :Event rdf:type owl:Class ;
        rdfs:subClassOf obo:BFO_0000003 ;
-       rdfs:comment "A class that represents entities that occur or unfold in time, typically characterized by a specific happening or occurrence with temporal properties. Events encompass a wide range of occurrences, including but not limited to happenings, incidents, activities, or processes."@en ,
-                    "An event is an occurent that represents an occurence or happening that unfolds in time."@en ;
+       obo:IAO_0000115 "An occurent that represents an occurence or happening that unfolds in time."@en ;
+       rdfs:comment "A class that represents entities that occur or unfold in time, typically characterized by a specific happening or occurrence with temporal properties. Events encompass a wide range of occurrences, including but not limited to happenings, incidents, activities, or processes."@en ;
        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
        rdfs:label "event"@en ;
        <http://www.w3.org/2004/02/skos/core#example> "conferences, wars, strikes, celebrations, accidents, workshops, meetings, or any other specific incident or happening."@en .
@@ -1081,8 +1083,8 @@ schema:Service rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole
 :FundingOrganizationRole rdf:type owl:Class ;
                          rdfs:subClassOf obo:BFO_0000023 ;
-                         obo:IAO_0000115 "A role inhering in an organization that is realized when the organsation serves as a funder to endevaours, e.g. projects."@en ;
-                         rdfs:comment "A role inhering in an organization that is realized when the organsation serves as a funder to endevaours, e.g. projects."@en ;
+                         obo:IAO_0000115 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en ;
+                         rdfs:comment "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en ;
                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                          rdfs:label "funding organization role"@en .
 
@@ -1092,7 +1094,8 @@ schema:Service rdf:type owl:Class .
           rdfs:subClassOf :SemanticExpressivity ;
           obo:IAO_0000115 "Semantic expressivity that refers to a list of terms and their definitions within a specific domain or academic discipline."@en ;
           rdfs:comment "A compilation of terms and their definitions within a specific domain or academic discipline."@en ;
-          rdfs:label "glossary"@en .
+          rdfs:label "glossary"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "ICOM Museum Glossary"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/License
@@ -1207,6 +1210,7 @@ schema:Service rdf:type owl:Class .
                                                 owl:someValuesFrom obo:IAO_0000104
                                               ]
                          ] ;
+         obo:IAO_0000115 "A planned process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
          rdfs:comment "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "project"@en ;
@@ -1237,6 +1241,7 @@ schema:Service rdf:type owl:Class .
 :PublisherRole rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000023 ;
                obo:IAO_0000115 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en ;
+               rdfs:comment "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "publisher role"@en .
 
@@ -1301,7 +1306,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "specification"@en ;
-               <http://www.w3.org/2004/02/skos/core#example> "Guidelines... add" .
+               <http://www.w3.org/2004/02/skos/core#example> "Guidelines, technical specifications, design specifications"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Standard
@@ -1319,8 +1324,8 @@ This class is useful in nfdicore to provide a unified and structured representat
           rdfs:subClassOf :SemanticExpressivity ;
           obo:IAO_0000115 "Semantic expressivity that refers to a hierarchical classification system that organizes concepts into a tree-like structure."@en ;
           rdfs:comment "A hierarchical classification system that organizes concepts into a tree-like structure based on their shared characteristics and relationships."@en ;
-          rdfs:label "taxonomy"@en .
-
+          rdfs:label "taxonomy"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "Linnaean Taxonomy, Iconclass"@en .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans
 :TechnologicalMeans rdf:type owl:Class ;
@@ -1349,6 +1354,7 @@ This class is useful in nfdicore to provide a unified and structured representat
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "website"@en ;
          <http://www.w3.org/2004/02/skos/core#example> "https:\\/\\/opac.rism.info" .
+
 
 #################################################################
 #    Annotations
