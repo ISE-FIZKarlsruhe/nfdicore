@@ -1337,7 +1337,8 @@ This class is useful in nfdicore to provide a unified and structured representat
            rdfs:subClassOf :ControlledVocabulary ;
            obo:IAO_0000115 "A controlled vocabulary organized hierarchically and provided with associative relationships, such as synonyms, broader terms, and narrower terms."@en ;
            rdfs:comment "A controlled vocabulary organized hierarchically and provided with associative relationships, such as synonyms, broader terms, and narrower terms."@en ;
-           rdfs:label "thesaurus"@en .
+           rdfs:label "thesaurus"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Getty Art & Architecture Thesaurus"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Website
@@ -1348,7 +1349,6 @@ This class is useful in nfdicore to provide a unified and structured representat
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "website"@en ;
          <http://www.w3.org/2004/02/skos/core#example> "https:\\/\\/opac.rism.info" .
-
 
 #################################################################
 #    Annotations
