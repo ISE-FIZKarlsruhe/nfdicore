@@ -975,9 +975,10 @@ schema:Service rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Contacting
 :Contacting rdf:type owl:Class ;
             rdfs:subClassOf obo:OBI_0000011 ;
+            obo:IAO_0000115 "A planned process in which the contact information of an entity is provided."@en ;
+            rdfs:comment "A planned process in which the contact information of an entity is provided."@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-            rdfs:label "contacting"@en ;
-            :definition "A planned process in which the contact information of an entity is provided."@en .
+            rdfs:label "contacting"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Contributing
