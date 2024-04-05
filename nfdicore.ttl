@@ -984,9 +984,10 @@ schema:Service rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Contributing
 :Contributing rdf:type owl:Class ;
               rdfs:subClassOf obo:OBI_0000011 ;
+              obo:IAO_0000115 "A planned process of contibuting or providing information to an endeavor."@en ;
+              rdfs:comment "The contibution or provision of information to an endeavor."@en ;
               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-              rdfs:label "contributing"@en ;
-              :definition "A planned process of contibuting or providing information to an endeavor."@en .
+              rdfs:label "contributing"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole
