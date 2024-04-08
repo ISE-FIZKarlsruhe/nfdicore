@@ -968,7 +968,7 @@ swo:SWO_0000002 rdf:type owl:Class ;
                       rdfs:subClassOf :SemanticExpressivity ;
                       obo:IAO_0000115 "Semantic expressivity that refers to a standardized set of terms and descriptors used to index and retrieve information systematically."@en ;
                       rdfs:comment "A standardized set of terms and descriptors used to index and retrieve information systematically."@en ;
-                      rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                       rdfs:label "controlled vocabulary"@en ;
                       <http://www.w3.org/2004/02/skos/core#example> "the Union List of Artist Names (ULAN), the Cultural Objects Name Authority (CONA)" .
 
@@ -993,7 +993,7 @@ swo:SWO_0000002 rdf:type owl:Class ;
               obo:IAO_0000115 "An information content entity that refers to a manifestation of someone's creative effort."@en ;
               obo:IAO_0000116 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en ;
               rdfs:comment "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
-              rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "creative work"@en ;
               <http://www.w3.org/2004/02/skos/core#example> "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc." .
 
@@ -1060,7 +1060,7 @@ swo:SWO_0000002 rdf:type owl:Class ;
           rdfs:subClassOf :SemanticExpressivity ;
           obo:IAO_0000115 "Semantic expressivity that refers to a list of terms and their definitions within a specific domain or academic discipline."@en ;
           rdfs:comment "A compilation of terms and their definitions within a specific domain or academic discipline."@en ;
-          rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "glossary"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "ICOM Museum Glossary"@en .
 
@@ -1109,7 +1109,7 @@ swo:SWO_0000002 rdf:type owl:Class ;
           rdfs:subClassOf :SemanticExpressivity ;
           obo:IAO_0000115 "Semantic expressivity that refers to a semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and machine-understandable manner."@en ;
           rdfs:comment "A semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and formalized manner, enabling machine-understandable reasoning and inference."@en ;
-          rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "ontology"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "CIDOC-CRM, BFO, nfdicore" .
 
@@ -1287,7 +1287,7 @@ This class is useful in nfdicore to provide a unified and structured representat
           rdfs:subClassOf :SemanticExpressivity ;
           obo:IAO_0000115 "Semantic expressivity that refers to a hierarchical classification system that organizes concepts into a tree-like structure."@en ;
           rdfs:comment "A hierarchical classification system that organizes concepts into a tree-like structure based on their shared characteristics and relationships."@en ;
-          rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "taxonomy"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "Linnaean Taxonomy, Iconclass"@en .
 
@@ -1307,7 +1307,7 @@ This class is useful in nfdicore to provide a unified and structured representat
            rdfs:subClassOf :ControlledVocabulary ;
            obo:IAO_0000115 "A controlled vocabulary organized hierarchically and provided with associative relationships, such as synonyms, broader terms, and narrower terms."@en ;
            rdfs:comment "A hierarchical controlled vocabulary enriched with associative relationships, including synonyms, broader terms, and narrower terms."@en ;
-           rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "thesaurus"@en ;
            <http://www.w3.org/2004/02/skos/core#example> "Getty Art & Architecture Thesaurus, UNESCO Thesaurus for cultural and scientific documentation" .
 
@@ -1327,7 +1327,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                                                             rdfs:subClassOf :Service ;
                                                             obo:IAO_0000115 "A service that contributes to providing expert guidance in broad range of topics, including securing funding and navigating the application process for research projects."@en ;
                                                             rdfs:comment "Services that aim at providing expert advice, guidance, and support to agents, particular with securing funding opportunities for their efforts. This may include providing individual support for a broad range of research data and software concerns to scholars, institutions and data providers, assistance in identifying suitable funding sources, crafting grant proposals, and navigating the application process."@en ;
-                                                            rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                                             rdfs:label "consulting & funding"@en ;
                                                             <http://www.w3.org/2004/02/skos/core#example> "Flex Funds, NFDI4Culture Helpdesk"^^rdfs:Literal .
 
@@ -1337,7 +1337,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                                                                    rdfs:subClassOf :Service ;
                                                                    obo:IAO_0000115 "A service that contributes to organizing and managing research data."@en ;
                                                                    rdfs:comment "Services related to organizing, cataloging, and managing research data and information. This includes developing metadata schemas, creating data dictionaries, establishing standardized data formats, and ensuring data quality and integrity"@en ;
-                                                                   rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                                                    rdfs:label "information & documentation"@en ;
                                                                    <http://www.w3.org/2004/02/skos/core#example> "Registry for Tools & Services, Culture Information Portal" .
 
@@ -1347,7 +1347,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                                                            rdfs:subClassOf :Service ;
                                                            obo:IAO_0000115 "A service that contributes to educating agents on research data management."@en ;
                                                            rdfs:comment "Services that aim to support agents in developing essential skills and competencies related to research data management. This includes organizing training workshops, webinars, and educational resources, providing personalized consultations, mentoring programs, and community engagement initiatives."@en ;
-                                                           rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                                           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                                            rdfs:label "learning & teaching"@en ;
                                                            <http://www.w3.org/2004/02/skos/core#example> "Educational Resource Finder" .
 
@@ -1357,7 +1357,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                                                             rdfs:subClassOf :Service ;
                                                             obo:IAO_0000115 "A service that contributes to integrating research data with external sources and data enrichment."@en ;
                                                             rdfs:comment "Services that focus on enhancing research data by integrating it with external datasets, vocabularies, and ontologies. This involves establishing interoperability frameworks, data integration pipelines, and semantic enrichment techniques to connect disparate datasets and enable cross-disciplinary research."@en ;
-                                                            rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                                             rdfs:label "linkage & enrichment"@en ;
                                                             <http://www.w3.org/2004/02/skos/core#example> "Culture Knowledge Graph, Semantic Kompakkt, Wikibase4Research" .
 
@@ -1367,7 +1367,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                                                                      rdfs:subClassOf :Service ;
                                                                      obo:IAO_0000115 "A service that contributes to fostering interdisciplinary collaboration and community engagement within the research community."@en ;
                                                                      rdfs:comment "Services that focus on fostering interdisciplinary collaboration, knowledge exchange, and community engagement within the research ecosystem. This includes organizing networking events, collaborative projects, and virtual platforms for researchers to connect, share ideas, and collaborate on common research challenges."@en ;
-                                                                     rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                                                      rdfs:label "participation & collaboration"@en ;
                                                                      <http://www.w3.org/2004/02/skos/core#example> "Forum for Data Standards and Data Quality, Expert Forum for sustainable Software Development in NFDI4Culture, Linked Open Data Working Group" .
 
@@ -1377,7 +1377,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                                                                    rdfs:subClassOf :Service ;
                                                                    obo:IAO_0000115 "A service that contributes to sharing and publication of research findings."@en ;
                                                                    rdfs:comment "Services that aim at facilitating the sharing and dissemination of research findings and outputs with wider audiences. This includes supporting agents in preparing resources for publication, production, publishing, sprint services, etc."@en ;
-                                                                   rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                                                    rdfs:label "publication & dissemination"@en ;
                                                                    <http://www.w3.org/2004/02/skos/core#example> "NextGen Books" .
 
@@ -1387,7 +1387,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                                                               rdfs:subClassOf :Service ;
                                                               obo:IAO_0000115 "A service that contributes to long-term archiving and data integrity through secure storage and preservation strategies."@en ;
                                                               rdfs:comment "Services that focus on the long-term archiving and preservation of research data and digital assets. This involves providing secure storage infrastructures, backup solutions, and preservation strategies to prevent data loss over time."@en ;
-                                                              rdfs:isDefinedBy "https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                                               rdfs:label "storage & preservation"@en ;
                                                               <http://www.w3.org/2004/02/skos/core#example> "RADAR4Culture, Curated Repository List"@en .
 
