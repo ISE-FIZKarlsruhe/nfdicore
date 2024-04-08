@@ -15,7 +15,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology/> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -191,6 +191,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf
 :contactPointOf rdf:type owl:ObjectProperty ;
+                rdfs:comment "inverse of  property \"contact point\""@en ;
                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "contact point of"@en .
 
@@ -207,7 +208,9 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/contributorOf
 :contributorOf rdf:type owl:ObjectProperty ;
-               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> .
+               rdfs:comment "inverse of property \"contributor\""@en ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+               rdfs:label "contributor of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/country
@@ -228,6 +231,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/countryOf
 :countryOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf nfdicore:part ;
+           rdfs:comment "inverse of property \"country\""@en ;
            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "country of"@en .
 
@@ -271,6 +275,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf
 :federalStateOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :partOf ;
+                rdfs:comment "inverse of property \"federal state\""@en ;
                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "federal state of"@en .
 
@@ -287,6 +292,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/funderOf
 :funderOf rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+          rdfs:comment "inverse of  property \"funder\""@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "funder of"@en .
 
@@ -305,6 +311,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 :fundingOrganizationOf rdf:type owl:ObjectProperty ;
                        rdfs:domain :Organization ;
                        rdfs:range :Project ;
+                       rdfs:comment "inverse of property \"funding organization\""@en ;
                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                        rdfs:label "funding organization of"@en .
 
@@ -322,6 +329,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf
 :fundingProjectOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+                  rdfs:comment "inverse of  property \"funding project\""@en ;
                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                   rdfs:label "funding project of"@en .
 
@@ -339,6 +347,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/instanceOf
 :instanceOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+            rdfs:comment "inverse of  property \"instance\""@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "instance of"@en .
 
@@ -372,6 +381,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/locationOf
 :locationOf rdf:type owl:ObjectProperty ;
+            rdfs:comment "inverse of property \"location\""@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "location of"@en .
 
@@ -407,7 +417,8 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/memberOf
 :memberOf rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :partOf ;
-          rdfs:comment "The property is a relationship between an organization and a consortium it belongs to."@en ;
+          rdfs:comment "The property is a relationship between an organization and a consortium it belongs to."@en ,
+                       "inverse of property \"member\""@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "member of"@en .
 
@@ -431,6 +442,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf
 :objectTypeOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+              rdfs:comment "inverse of  property \"object type\""@en ;
               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "object type of"@en .
 
@@ -467,6 +479,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/participantOf
 :participantOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000056 ;
+               rdfs:comment "inverse of  property \"prticipant\""@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "participant of"@en .
 
@@ -493,6 +506,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf
 :programmingLanguageOf rdf:type owl:ObjectProperty ;
+                       rdfs:comment "inverse of  property \"programming language\""@en ;
                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                        rdfs:label "programming language of"@en .
 
@@ -509,6 +523,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/publisherOf
 :publisherOf rdf:type owl:ObjectProperty ;
+             rdfs:comment "inverse of  property \"publisher\""@en ;
              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "publisher of"@en .
 
@@ -581,6 +596,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf
 :serviceTypeOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
+               rdfs:comment "inverse of  property \"service type\""@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "service type of"@en .
 
@@ -1430,8 +1446,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
 :f rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Funding Organization"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Funding Organization" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1484,8 +1500,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Publisher"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Publisher" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1551,8 +1567,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Contact Point of Resource"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Contact Point of Resource" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1618,8 +1634,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Contact Point of Project"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Contact Point of Project" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1672,8 +1688,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Contributor"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Contributor" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1738,4 +1754,4 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
                                          ]
  ] .
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
