@@ -4,6 +4,7 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix swo: <http://www.ebi.ac.uk/swo/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
@@ -14,14 +15,19 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
-@prefix swo: <http://www.ebi.ac.uk/swo/> .
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
-
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                           owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
-                                          dcterms:abstract """The NFDIcore ontology  (prefix nfdicore) describes resources (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file.
+                                          dcterms:abstract """The National Research Data Infrastructure (NFDI) initiative (https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a top level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
+
+Recognizing the diverse needs of consortia, NFDIcore establishes mappings to a wide array of standards across domains, including the Basic Formal Ontology (BFO) and schema.org, which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module CTO (https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module MWO (https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
+
+Aligning with IAO and SCHEMA, NFDIcore focuses on describing 3 main concepts:
+1. Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, software, etc. 
+2. Independent Continuants that act autonomously (nfdicore:Agent), e.g. organizations and persons
+3. Planned processes and events, e.g. nfdicore:Project, nfdicore:Contributing, nfdicore:Event.
 
 Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues."""@en ;
                                           dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
@@ -148,7 +154,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 
 
 ###  http://www.ebi.ac.uk/swo/SWO_0000741
-<http://www.ebi.ac.uk/swo/SWO_0000741> rdf:type owl:ObjectProperty .
+swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/bestPractice
@@ -476,7 +482,7 @@ obo:RO_0001015 owl:equivalentProperty :locationOf .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage
 :programmingLanguage rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf obo:IAO_0000136 ,
-                                        <http://www.ebi.ac.uk/swo/SWO_0000741> ;
+                                        swo:SWO_0000741 ;
                      owl:inverseOf :programmingLanguageOf ;
                      rdfs:domain :Software ;
                      rdfs:range :ProgrammingLanguage ;
@@ -799,6 +805,23 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://purl.obolibrary.org/obo/GAZ_00000448
+obo:GAZ_00000448 rdf:type owl:Class ;
+                 owl:equivalentClass :Place .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000010
+obo:IAO_0000010 owl:equivalentClass :Software .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000025
+obo:IAO_0000025 owl:equivalentClass :ProgrammingLanguage .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000311
+obo:IAO_0000311 owl:equivalentClass :Publication .
+
+
 ###  http://schema.org/CreativeWork
 schema:CreativeWork rdf:type owl:Class .
 
@@ -812,71 +835,13 @@ schema:Product rdf:type owl:Class ;
 schema:Service rdf:type owl:Class .
 
 
+###  http://www.ebi.ac.uk/swo/SWO_0000002
+swo:SWO_0000002 rdf:type owl:Class ;
+                owl:equivalentClass :License .
+
+
 ###  http://www.geneontology.org/formats/oboInOwl#ObsoleteClass
 <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> rdf:type owl:Class .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding
-<https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> rdf:type owl:Class ;
-                                                            rdfs:subClassOf :Service ;
-                                                            obo:IAO_0000115 "A service that contributes to providing expert guidance in broad range of topics, including securing funding and navigating the application process for research projects."@en ;
-                                                            rdfs:comment "Services that aim at providing expert advice, guidance, and support to agents, particular with securing funding opportunities for their efforts. This may include providing individual support for a broad range of research data and software concerns to scholars, institutions and data providers, assistance in identifying suitable funding sources, crafting grant proposals, and navigating the application process."@en ;
-                                                            rdfs:label "consulting & funding"@en ;
-                                                            <http://www.w3.org/2004/02/skos/core#example> "Flex Funds, NFDI4Culture Helpdesk"^^rdfs:Literal .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation
-<https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf :Service ;
-                                                                   obo:IAO_0000115 "A service that contributes to organizing and managing research data."@en ;
-                                                                   rdfs:comment "Services related to organizing, cataloging, and managing research data and information. This includes developing metadata schemas, creating data dictionaries, establishing standardized data formats, and ensuring data quality and integrity"@en ;
-                                                                   rdfs:label "information & documentation"@en ;
-                                                                   <http://www.w3.org/2004/02/skos/core#example> "Registry for Tools & Services, Culture Information Portal" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching
-<https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> rdf:type owl:Class ;
-                                                           rdfs:subClassOf :Service ;
-                                                           obo:IAO_0000115 "A service that contributes to educating agents on research data management."@en ;
-                                                           rdfs:comment "Services that aim to support agents in developing essential skills and competencies related to research data management. This includes organizing training workshops, webinars, and educational resources, providing personalized consultations, mentoring programs, and community engagement initiatives."@en ;
-                                                           rdfs:label "learning & teaching"@en ;
-                                                           <http://www.w3.org/2004/02/skos/core#example> "Educational Resource Finder" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment
-<https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> rdf:type owl:Class ;
-                                                            rdfs:subClassOf :Service ;
-                                                            obo:IAO_0000115 "A service that contributes to integrating research data with external sources and data enrichment."@en ;
-                                                            rdfs:comment "Services that focus on enhancing research data by integrating it with external datasets, vocabularies, and ontologies. This involves establishing interoperability frameworks, data integration pipelines, and semantic enrichment techniques to connect disparate datasets and enable cross-disciplinary research."@en ;
-                                                            rdfs:label "linkage & enrichment"@en ;
-                                                            <http://www.w3.org/2004/02/skos/core#example> "Culture Knowledge Graph, Semantic Kompakkt, Wikibase4Research" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration
-<https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf :Service ;
-                                                                     obo:IAO_0000115 "A service that contributes to fostering interdisciplinary collaboration and community engagement within the research community."@en ;
-                                                                     rdfs:comment "Services that focus on fostering interdisciplinary collaboration, knowledge exchange, and community engagement within the research ecosystem. This includes organizing networking events, collaborative projects, and virtual platforms for researchers to connect, share ideas, and collaborate on common research challenges."@en ;
-                                                                     rdfs:label "participation & collaboration"@en ;
-                                                                     <http://www.w3.org/2004/02/skos/core#example> "Forum for Data Standards and Data Quality, Expert Forum for sustainable Software Development in NFDI4Culture, Linked Open Data Working Group" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination
-<https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf :Service ;
-                                                                   obo:IAO_0000115 "A service that contributes to sharing and publication of research findings."@en ;
-                                                                   rdfs:comment "Services that aim at facilitating the sharing and dissemination of research findings and outputs with wider audiences. This includes supporting agents in preparing resources for publication, production, publishing, sprint services, etc."@en ;
-                                                                   rdfs:label "publication & dissemination"@en ;
-                                                                   <http://www.w3.org/2004/02/skos/core#example> "NextGen Books" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation
-<https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> rdf:type owl:Class ;
-                                                              rdfs:subClassOf :Service ;
-                                                              obo:IAO_0000115 "A service that contributes to long-term archiving and data integrity through secure storage and preservation strategies."@en ;
-                                                              rdfs:comment "Services that focus on the long-term archiving and preservation of research data and digital assets. This involves providing secure storage infrastructures, backup solutions, and preservation strategies to prevent data loss over time."@en ;
-                                                              rdfs:label "storage & preservation"@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#example> "RADAR4Culture, Curated Repository List"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline
@@ -980,6 +945,7 @@ schema:Service rdf:type owl:Class .
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "contacting"@en .
 
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Contributing
 :Contributing rdf:type owl:Class ;
               rdfs:subClassOf obo:OBI_0000011 ;
@@ -988,8 +954,6 @@ schema:Service rdf:type owl:Class .
               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "contributing"@en .
 
-
-#######
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole
 :ContributorRole rdf:type owl:Class ;
@@ -1101,7 +1065,6 @@ schema:Service rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/License
 :License rdf:type owl:Class ;
          rdfs:subClassOf obo:IAO_0000030 ;
-         owl:equivalentClass swo:SWO_0000002 ;
          obo:IAO_0000115 "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en ;
          rdfs:comment "A document that provides legal guidelines for the use of a resource, e.g. a software."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1170,7 +1133,6 @@ schema:Service rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Place
 :Place rdf:type owl:Class ;
        rdfs:subClassOf obo:BFO_0000029 ;
-       owl:equivalentClass obo:GAZ_00000448 ;
        obo:IAO_0000115 "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en ;
        rdfs:comment "A spatial region, e.g. country, city or district."@en ;
        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1181,7 +1143,6 @@ schema:Service rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage
 :ProgrammingLanguage rdf:type owl:Class ;
                      rdfs:subClassOf :TechnologicalMeans ;
-                     owl:equivalentClass obo:IAO_0000025 ;
                      obo:IAO_0000115 "A technological means that is used for implementing software."@en ;
                      rdfs:comment "A formal language used for implementing a software."@en ;
                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1229,7 +1190,6 @@ schema:Service rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Publication
 :Publication rdf:type owl:Class ;
              rdfs:subClassOf :CreativeWork ;
-             owl:equivalentClass obo:IAO_0000311 ;
              obo:IAO_0000115 "A creative work that is the output of a publishing process."@en ;
              rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1285,7 +1245,6 @@ This class is useful in nfdicore to provide a unified and structured representat
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Software
 :Software rdf:type owl:Class ;
           rdfs:subClassOf :CreativeWork ;
-          owl:equivalentClass obo:IAO_0000010 ;
           obo:IAO_0000115 "A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en ;
           rdfs:comment "A computer software provided by an organization or a person."@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1327,6 +1286,7 @@ This class is useful in nfdicore to provide a unified and structured representat
           rdfs:label "taxonomy"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "Linnaean Taxonomy, Iconclass"@en .
 
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans
 :TechnologicalMeans rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000104 ;
@@ -1354,6 +1314,69 @@ This class is useful in nfdicore to provide a unified and structured representat
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
          rdfs:label "website"@en ;
          <http://www.w3.org/2004/02/skos/core#example> "https:\\/\\/opac.rism.info" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding
+<https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> rdf:type owl:Class ;
+                                                            rdfs:subClassOf :Service ;
+                                                            obo:IAO_0000115 "A service that contributes to providing expert guidance in broad range of topics, including securing funding and navigating the application process for research projects."@en ;
+                                                            rdfs:comment "Services that aim at providing expert advice, guidance, and support to agents, particular with securing funding opportunities for their efforts. This may include providing individual support for a broad range of research data and software concerns to scholars, institutions and data providers, assistance in identifying suitable funding sources, crafting grant proposals, and navigating the application process."@en ;
+                                                            rdfs:label "consulting & funding"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#example> "Flex Funds, NFDI4Culture Helpdesk"^^rdfs:Literal .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation
+<https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf :Service ;
+                                                                   obo:IAO_0000115 "A service that contributes to organizing and managing research data."@en ;
+                                                                   rdfs:comment "Services related to organizing, cataloging, and managing research data and information. This includes developing metadata schemas, creating data dictionaries, establishing standardized data formats, and ensuring data quality and integrity"@en ;
+                                                                   rdfs:label "information & documentation"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#example> "Registry for Tools & Services, Culture Information Portal" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching
+<https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> rdf:type owl:Class ;
+                                                           rdfs:subClassOf :Service ;
+                                                           obo:IAO_0000115 "A service that contributes to educating agents on research data management."@en ;
+                                                           rdfs:comment "Services that aim to support agents in developing essential skills and competencies related to research data management. This includes organizing training workshops, webinars, and educational resources, providing personalized consultations, mentoring programs, and community engagement initiatives."@en ;
+                                                           rdfs:label "learning & teaching"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#example> "Educational Resource Finder" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment
+<https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> rdf:type owl:Class ;
+                                                            rdfs:subClassOf :Service ;
+                                                            obo:IAO_0000115 "A service that contributes to integrating research data with external sources and data enrichment."@en ;
+                                                            rdfs:comment "Services that focus on enhancing research data by integrating it with external datasets, vocabularies, and ontologies. This involves establishing interoperability frameworks, data integration pipelines, and semantic enrichment techniques to connect disparate datasets and enable cross-disciplinary research."@en ;
+                                                            rdfs:label "linkage & enrichment"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#example> "Culture Knowledge Graph, Semantic Kompakkt, Wikibase4Research" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration
+<https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf :Service ;
+                                                                     obo:IAO_0000115 "A service that contributes to fostering interdisciplinary collaboration and community engagement within the research community."@en ;
+                                                                     rdfs:comment "Services that focus on fostering interdisciplinary collaboration, knowledge exchange, and community engagement within the research ecosystem. This includes organizing networking events, collaborative projects, and virtual platforms for researchers to connect, share ideas, and collaborate on common research challenges."@en ;
+                                                                     rdfs:label "participation & collaboration"@en ;
+                                                                     <http://www.w3.org/2004/02/skos/core#example> "Forum for Data Standards and Data Quality, Expert Forum for sustainable Software Development in NFDI4Culture, Linked Open Data Working Group" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf :Service ;
+                                                                   obo:IAO_0000115 "A service that contributes to sharing and publication of research findings."@en ;
+                                                                   rdfs:comment "Services that aim at facilitating the sharing and dissemination of research findings and outputs with wider audiences. This includes supporting agents in preparing resources for publication, production, publishing, sprint services, etc."@en ;
+                                                                   rdfs:label "publication & dissemination"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#example> "NextGen Books" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation
+<https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> rdf:type owl:Class ;
+                                                              rdfs:subClassOf :Service ;
+                                                              obo:IAO_0000115 "A service that contributes to long-term archiving and data integrity through secure storage and preservation strategies."@en ;
+                                                              rdfs:comment "Services that focus on the long-term archiving and preservation of research data and digital assets. This involves providing secure storage infrastructures, backup solutions, and preservation strategies to prevent data loss over time."@en ;
+                                                              rdfs:label "storage & preservation"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#example> "RADAR4Culture, Curated Repository List"@en .
 
 
 #################################################################
@@ -1394,8 +1417,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
 :f rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "S8" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Provided Resource"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1427,8 +1450,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "funding organisation" ;
-   rdfs:label "S3" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Funding Organization"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1481,8 +1504,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "publisher" ;
-   rdfs:label "S4" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Publisher"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1548,8 +1571,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "contact point resource" ;
-   rdfs:label "S6" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Contact Point of Resource"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1615,8 +1638,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "contact point project" ;
-   rdfs:label "S7" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Contact Point of Project"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1669,8 +1692,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "contributor" ;
-   rdfs:label "S5" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Contributor"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
