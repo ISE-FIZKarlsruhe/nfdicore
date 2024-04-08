@@ -566,6 +566,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
                          rdfs:subPropertyOf obo:IAO_0000235 ;
                          rdfs:domain :Collection ;
                          rdfs:range :Resource ;
+                         rdfs:comment "inverse of  property \"represented collection\""@en ;
                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                          rdfs:label "represented collection of"@en .
 
@@ -584,6 +585,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf
 :semanticExpressivityOf rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf obo:RO_0000080 ;
+                        rdfs:comment "inverse of  property \"semantic expressivity\""@en ;
                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                         rdfs:label "semantic expressivity of"@en .
 
@@ -702,6 +704,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf
 :subjectAreaOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000080 ;
+               rdfs:comment "inverse of  property \"subject area\""@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "subject area of"@en .
 
