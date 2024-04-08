@@ -15,12 +15,14 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                                           owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
-                                          dcterms:abstract """The National Research Data Infrastructure (NFDI) initiative (https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a top level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
+                                          dcterms:abstract """INTRODUCTION
+
+The National Research Data Infrastructure (NFDI) initiative (https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a top level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
 
 Recognizing the diverse needs of consortia, NFDIcore establishes mappings to a wide array of standards across domains, including the Basic Formal Ontology (BFO) and schema.org, which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module CTO (https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module MWO (https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
 
@@ -29,7 +31,11 @@ Aligning with IAO and SCHEMA, NFDIcore focuses on describing 3 main concepts:
 2. Independent Continuants that act autonomously (nfdicore:Agent), e.g. organizations and persons
 3. Planned processes and events, e.g. nfdicore:Project, nfdicore:Contributing, nfdicore:Event.
 
-Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues."""@en ;
+Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues.
+
+RESOURCES
+
+Within NFDIcore, resources encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization. These resources are categorized as information content entities (IAO_0000030), derived from material entities (BFO_0000040). Each information content entity may establish \"is about\" (IAO_0000136) object relations, linking it to other material entities or information content entities that define its subject matter. In NFDIcore, the \"is about\" property is expanded to offer more detailed semantics and a comprehensive overview of the relationships between resources and material entities."""@en ;
                                           dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
                                           dcterms:created "2024-03-11" ;
                                           dcterms:creator n4c:E1925 ,
@@ -357,6 +363,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/license
 :license rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf obo:IAO_0000136 ;
          owl:inverseOf :licenseOf ;
          rdfs:domain :Resource ;
          rdfs:range :License ;
@@ -1460,8 +1467,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
 :f rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Funding Organization" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Funding Organization"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1514,8 +1521,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Publisher" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Publisher"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1581,8 +1588,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Contact Point of Resource" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Contact Point of Resource"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1648,8 +1655,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Contact Point of Project" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Contact Point of Project"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1702,8 +1709,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Contributor" ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Contributor"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1768,4 +1775,4 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
                                          ]
  ] .
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
