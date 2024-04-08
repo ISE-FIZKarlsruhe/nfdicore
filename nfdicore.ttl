@@ -171,6 +171,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf
 :bestPracticeOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:IAO_0000136 ;
+                rdfs:comment "inverse of  property \"best practice\""@en ;
                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "best practice of"@en .
 
@@ -239,6 +240,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/datasetOf
 :datasetOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf obo:IAO_0000136 ;
+           rdfs:comment "inverse of  property \"data set\""@en ;
            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "data set of"@en .
 
@@ -257,6 +259,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf
 :exportFormatOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:IAO_0000136 ;
+                rdfs:comment "inverse of  property \"export format\""@en ;
                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "export format of"@en .
 
@@ -365,6 +368,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/licenseOf
 :licenseOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf obo:IAO_0000136 ;
+           rdfs:comment "inverse of property \"license\""@en ;
            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "license of"@en .
 
@@ -400,6 +404,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf
 :mediaTypeOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf obo:IAO_0000136 ;
+             rdfs:comment "inverse of  property \"media type\""@en ;
              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
              rdfs:label "media type of"@en .
 
@@ -615,6 +620,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/softwareOf
 :softwareOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf obo:IAO_0000136 ;
+            rdfs:comment "inverse of  property \"sofware\""@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "software of"@en .
 
@@ -633,6 +639,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf
 :sparqlEndpointOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf obo:IAO_0000136 ;
+                  rdfs:comment "inverse of  property \"sparql endpoint\""@en ;
                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                   rdfs:label "sparql endpoint of"@en .
 
@@ -651,6 +658,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/specificationOf
 :specificationOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf obo:IAO_0000136 ;
+                 rdfs:comment "inverse of  property \"specification\""@en ;
                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                  rdfs:label "specification of"@en .
 
@@ -669,6 +677,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/standardOf
 :standardOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf obo:IAO_0000136 ;
+            rdfs:comment "inverse of  property \"standard\""@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "standard of"@en .
 
@@ -717,6 +726,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/technologyOf
 :technologyOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf obo:IAO_0000136 ;
+              rdfs:comment "inverse of  property \"technology\""@en ;
               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "technology of"@en .
 
@@ -735,6 +745,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/urlOf
 :urlOf rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf obo:IAO_0000219 ;
+       rdfs:comment "inverse of  property \"url\""@en ;
        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
        rdfs:label "url of"@en .
 
