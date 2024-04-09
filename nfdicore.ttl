@@ -15,7 +15,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology/> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -144,6 +144,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 :acronym rdf:type owl:AnnotationProperty ;
          rdfs:label "nfdicore:acronym"@en .
 
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -174,8 +175,10 @@ obo:BFO_0000050 rdf:type owl:ObjectProperty .
 ###  http://purl.obolibrary.org/obo/IAO_0000136
 obo:IAO_0000136 rdf:type owl:ObjectProperty .
 
+
 ###  http://purl.obolibrary.org/obo/RO_0001015
-obo:RO_0001015 rdf:type owl:ObjectProperty .
+obo:RO_0001015 rdf:type owl:ObjectProperty ;
+               owl:equivalentProperty :locationOf .
 
 
 ###  http://www.ebi.ac.uk/swo/SWO_0000741
@@ -308,23 +311,6 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
                 rdfs:label "federal state of"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/funder
-:funder rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-        rdfs:domain owl:Thing ;
-        rdfs:comment "The property relates thing to an organization or a project that provided funding for it. The subproperties are used to specify more specific funding relationships. "@en ;
-        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-        rdfs:label "funder"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/funderOf
-:funderOf rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-          rdfs:comment "inverse of  property \"funder\""@en ;
-          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-          rdfs:label "funder of"@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization
 :fundingOrganization rdf:type owl:ObjectProperty ;
                      owl:inverseOf :fundingOrganizationOf ;
@@ -342,42 +328,6 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
                        rdfs:comment "inverse of property \"funding organization\""@en ;
                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                        rdfs:label "funding organization of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/fundingProject
-:fundingProject rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-                rdfs:domain :Resource ;
-                rdfs:range :Project ;
-                rdfs:comment "The property relateds a resource to the project that provided funding for it."@en ;
-                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                rdfs:label "funding project"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf
-:fundingProjectOf rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-                  rdfs:comment "inverse of  property \"funding project\""@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                  rdfs:label "funding project of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/instance
-:instance rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-          owl:inverseOf :instanceOf ;
-          rdfs:domain :Service ;
-          rdfs:comment "The property is a relationship between a service and its running instance."@en ;
-          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-          rdfs:label "instance"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/instanceOf
-:instanceOf rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-            rdfs:comment "inverse of  property \"instance\""@en ;
-            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-            rdfs:label "instance of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/license
@@ -411,7 +361,6 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/locationOf
 :locationOf rdf:type owl:ObjectProperty ;
-            owl:equivalentProperty obo:RO_0001015;
             rdfs:comment "inverse of property \"location\""@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "location of"@en .
@@ -453,30 +402,6 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
                        "inverse of property \"member\""@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
           rdfs:label "member of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/objectType
-:objectType rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-            owl:inverseOf :objectTypeOf ;
-            rdfs:domain [ rdf:type owl:Class ;
-                          owl:unionOf ( :Collection
-                                        :Dataset
-                                      )
-                        ] ;
-            rdfs:range <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ,
-                       :ObjectType ;
-            rdfs:comment "The property relates a collection or a data set to the type of object it contains. "@en ;
-            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-            rdfs:label "object type"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf
-:objectTypeOf rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-              rdfs:comment "inverse of  property \"object type\""@en ;
-              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-              rdfs:label "object type of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization
@@ -615,24 +540,6 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
                         rdfs:comment "inverse of  property \"semantic expressivity\""@en ;
                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                         rdfs:label "semantic expressivity of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/serviceType
-:serviceType rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-             owl:inverseOf :serviceTypeOf ;
-             rdfs:domain :Service ;
-             rdfs:comment "The property relates a service to its type." ;
-             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-             rdfs:label "service type"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf
-:serviceTypeOf rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty> ;
-               rdfs:comment "inverse of  property \"service type\""@en ;
-               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-               rdfs:label "service type of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/software
@@ -863,18 +770,25 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/GAZ_00000448
-obo:GAZ_00000448 rdf:type owl:Class .
+obo:GAZ_00000448 rdf:type owl:Class ;
+                 owl:equivalentClass :Place .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000010
+obo:IAO_0000010 owl:equivalentClass :Software .
+
 
 ###  http://purl.obolibrary.org/obo/IAO_0000025
-obo:IAO_0000025 rdf:type owl:Class .
+obo:IAO_0000025 rdf:type owl:Class ;
+                owl:equivalentClass :ProgrammingLanguage .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000311
+obo:IAO_0000311 owl:equivalentClass :Publication .
+
 
 ###  http://schema.org/CreativeWork
 schema:CreativeWork rdf:type owl:Class .
-
-
-###  http://schema.org/Product
-schema:Product rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> .
 
 
 ###  http://schema.org/Service
@@ -882,7 +796,8 @@ schema:Service rdf:type owl:Class .
 
 
 ###  http://www.ebi.ac.uk/swo/SWO_0000002
-swo:SWO_0000002 rdf:type owl:Class .
+swo:SWO_0000002 rdf:type owl:Class ;
+                owl:equivalentClass :License .
 
 
 ###  http://www.geneontology.org/formats/oboInOwl#ObsoleteClass
@@ -1063,15 +978,6 @@ swo:SWO_0000002 rdf:type owl:Class .
          <http://www.w3.org/2004/02/skos/core#example> "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)" .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork
-:DevelopmentWork rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
-                 rdfs:comment "A resource that identifies an ongoing development of standards, services, data models, vocabularies, ontologies, etc."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                 rdfs:label "development work"@en ;
-                 <http://www.w3.org/2004/02/skos/core#example> "Development of a controlled vocabulary for audivisual material in publication and research data; Extension of the AAT vocabulary for the history of architecture"@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Event
 :Event rdf:type owl:Class ;
        rdfs:subClassOf obo:BFO_0000003 ;
@@ -1113,7 +1019,6 @@ swo:SWO_0000002 rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/License
 :License rdf:type owl:Class ;
          rdfs:subClassOf obo:IAO_0000030 ;
-         owl:equivalentClass swo:SWO_0000002 ;
          obo:IAO_0000115 "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en ;
          rdfs:comment "A document that provides legal guidelines for the use of a resource, e.g. a software."@en ;
          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1139,15 +1044,6 @@ swo:SWO_0000002 rdf:type owl:Class .
            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "media type"@en ;
            <http://www.w3.org/2004/02/skos/core#example> "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/ObjectType
-:ObjectType rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
-            rdfs:comment "A resource that identifies the type of object in a data set or collection."@en ;
-            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-            rdfs:label "object type"@en ;
-            <http://www.w3.org/2004/02/skos/core#example> "book, photograph, music sheet"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Ontology
@@ -1183,7 +1079,6 @@ swo:SWO_0000002 rdf:type owl:Class .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Place
 :Place rdf:type owl:Class ;
-       owl:equivalentClass obo:GAZ_00000448 ;
        rdfs:subClassOf obo:BFO_0000029 ;
        obo:IAO_0000115 "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en ;
        rdfs:comment "A spatial region, e.g. country, city or district."@en ;
@@ -1195,7 +1090,6 @@ swo:SWO_0000002 rdf:type owl:Class .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage
 :ProgrammingLanguage rdf:type owl:Class ;
                      rdfs:subClassOf :TechnologicalMeans ;
-                     owl:equivalentClass obo:IAO_0000025 ;
                      obo:IAO_0000115 "A technological means that is used for implementing software."@en ;
                      rdfs:comment "A formal language used for implementing a software."@en ;
                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1231,19 +1125,9 @@ swo:SWO_0000002 rdf:type owl:Class .
          <http://www.w3.org/2004/02/skos/core#example> "Freischütz digital, Corpus Vitrearum Medii Aevi" .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource
-:ProvidedResource rdf:type owl:Class ;
-                  rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
-                  rdfs:comment "A resource that has been provided by a contributor. The class should be used to distinguisch between a resource from the resources that only have a supportive role in other resources, but have not been an active part of the NFDI4Culture."@en ,
-                               "A resource that identifies a resource provided to the NFDI."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                  rdfs:label "provided resource"@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Publication
 :Publication rdf:type owl:Class ;
              rdfs:subClassOf :CreativeWork ;
-             owl:equivalentClass obo:IAO_0000311 ;
              obo:IAO_0000115 "A creative work that is the output of a publishing process."@en ;
              rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1298,7 +1182,6 @@ This class is useful in nfdicore to provide a unified and structured representat
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Software
 :Software rdf:type owl:Class ;
           rdfs:subClassOf :CreativeWork ;
-          owl:equivalentClass obo:IAO_0000010 ;
           obo:IAO_0000115 "A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en ;
           rdfs:comment "A computer software provided by an organization or a person."@en ;
           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -1313,9 +1196,8 @@ This class is useful in nfdicore to provide a unified and structured representat
                                                     ) ;
                                  rdf:type owl:Class
                                ] ;
-               obo:IAO_0000114 obo:IAO_0000428 ;
                obo:IAO_0000115 "A creative work that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process."@en ;
-               obo:IAO_0000116 "2024-03-24. Sasha Bruns: specifications have duel nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en ;
+               obo:IAO_0000116 "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en ;
                rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                rdfs:label "specification"@en ;
@@ -1480,8 +1362,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
 :f rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Funding Organization"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Funding Organization" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1534,8 +1416,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Publisher"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Publisher" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1601,8 +1483,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Contact Point of Resource"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Contact Point of Resource" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1668,8 +1550,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Contact Point of Project"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Contact Point of Project" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1722,8 +1604,8 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "Contributor"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "Contributor" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1788,4 +1670,4 @@ n4c:E3095 rdfs:label "Etienne Posthumus" .
                                          ]
  ] .
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
