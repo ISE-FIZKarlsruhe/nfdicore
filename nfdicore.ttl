@@ -13,7 +13,7 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix schema: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix nfdicore: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix wikidata: <https://www.wikidata.org/entity/> .
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
@@ -22,11 +22,11 @@
                                           owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
                                           dcterms:abstract """### INTRODUCTION
 
-The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a top level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
+The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
 
 Recognizing the diverse needs of consortia, NFDIcore establishes mappings to a wide array of standards across domains, including the Basic Formal Ontology (BFO) and schema.org, which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module [CTO](https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module [MWO](https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
 
-Aligning with IAO and SCHEMA, NFDIcore focuses on describing 3 main concepts:
+Aligning with [IAO](https://github.com/information-artifact-ontology/IAO) and [SCHEMA](https://schema.org/), NFDIcore focuses on describing 3 main concepts:
 1. Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, software, etc. 
 2. Independent Continuants that act autonomously (nfdicore:Agent), e.g. organizations and persons
 3. Planned processes and events, e.g. nfdicore:Project, nfdicore:Contributing, nfdicore:Event.
@@ -149,25 +149,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/dataset
-nfdicore:dataset rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf obo:IAO_0000219 ;
-                 owl:inverseOf :datasetOf ;
-                 rdfs:domain :Resource ;
-                 rdfs:range :Dataset ;
-                 rdfs:comment "The property is a relation between a resource and a data set."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                 rdfs:label "data set"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/part
-nfdicore:part rdf:type owl:ObjectProperty ;
-              owl:inverseOf :partOf ;
-              rdfs:comment "The generic property is a relationship between a thing and its part."@en ;
-              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-              rdfs:label "part"@en .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000050
 obo:BFO_0000050 rdf:type owl:ObjectProperty .
 
@@ -260,10 +241,21 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/countryOf
 :countryOf rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf nfdicore:part ;
+           rdfs:subPropertyOf :part ;
            rdfs:comment "inverse of property \"country\""@en ;
            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
            rdfs:label "country of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/dataset
+:dataset rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf obo:IAO_0000219 ;
+         owl:inverseOf :datasetOf ;
+         rdfs:domain :Resource ;
+         rdfs:range :Dataset ;
+         rdfs:comment "The property is a relation between a resource and a data set."@en ;
+         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+         rdfs:label "data set"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/datasetOf
@@ -297,7 +289,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/federalState
 :federalState rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf nfdicore:part ;
+              rdfs:subPropertyOf :part ;
               owl:inverseOf :federalStateOf ;
               rdfs:domain :City ;
               rdfs:range :FederalState ;
@@ -391,8 +383,8 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/member
 :member rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf nfdicore:part ,
-                           obo:BFO_0000051 ;
+        rdfs:subPropertyOf obo:BFO_0000051 ,
+                           :part ;
         owl:inverseOf :memberOf ;
         rdfs:comment "The property is a relationship between a consortium and an organization that is a member of the consortium."@en ;
         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
@@ -414,6 +406,14 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
                     rdfs:comment "The property is a parental relationship between organizations."@en ;
                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                     rdfs:label "parent organization"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/part
+:part rdf:type owl:ObjectProperty ;
+      owl:inverseOf :partOf ;
+      rdfs:comment "The generic property is a relationship between a thing and its part."@en ;
+      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+      rdfs:label "part"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/partOf
@@ -702,38 +702,21 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 #################################################################
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/birthDate
-nfdicore:birthDate rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Person ;
-                   rdfs:range rdfs:Literal ;
-                   rdfs:comment "The property refers to the date on which a person was born."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                   rdfs:label "birth date"@en .
+:birthDate rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Person ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "The property refers to the date on which a person was born."@en ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+           rdfs:label "birth date"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/deathDate
-nfdicore:deathDate rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Person ;
-                   rdfs:range rdfs:Literal ;
-                   rdfs:comment "The property refers to the date on which a person passed away."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                   rdfs:label "death date"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/endDate
-nfdicore:endDate rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Event ;
-                 rdfs:comment "The property refers to the moment in time when an event ends."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                 rdfs:label "end date"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/startDate
-nfdicore:startDate rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Event ;
-                   rdfs:range rdfs:Literal ;
-                   rdfs:comment "The property refers to the moment in time when an event begins."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                   rdfs:label "start date"@en .
+:deathDate rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Person ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "The property refers to the date on which a person passed away."@en ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+           rdfs:label "death date"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate
@@ -752,6 +735,14 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
               rdfs:comment "The property relates an agent to their email address."@en ;
               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
               rdfs:label "email address"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/endDate
+:endDate rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Event ;
+         rdfs:comment "The property refers to the moment in time when an event ends."@en ;
+         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+         rdfs:label "end date"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/fileExtension
@@ -773,6 +764,15 @@ nfdicore:startDate rdf:type owl:DatatypeProperty ;
                 rdfs:comment "The property refers to the specific date on which the organization was officially established or founded."@en ;
                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
                 rdfs:label "foundation date"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/startDate
+:startDate rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Event ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "The property refers to the moment in time when an event begins."@en ;
+           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+           rdfs:label "start date"@en .
 
 
 #################################################################
@@ -861,7 +861,7 @@ swo:SWO_0000002 rdf:type owl:Class ;
             rdfs:subClassOf :Organization ,
                             [ owl:intersectionOf ( :Organization
                                                    [ rdf:type owl:Restriction ;
-                                                     owl:onProperty nfdicore:part ;
+                                                     owl:onProperty :part ;
                                                      owl:someValuesFrom :ConsortiumMember
                                                    ]
                                                  ) ;
