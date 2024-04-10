@@ -83,6 +83,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> :nfdicore ;
                                           <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                                           rdfs:label "NFDIcore" ;
+                                          <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/status/published> ;
                                           owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
                                           owl:versionInfo "v2.0.0-alpha1" .
 
