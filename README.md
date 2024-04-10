@@ -3,9 +3,9 @@
 
 # NFDI Core Ontology
 
-This is the development version v2.0.0a of the NFDIcore ontology that maps on BFO compliant ontologies.
+This is the development version v2.0.0 of the NFDIcore ontology that maps on BFO compliant ontologies.
 
-A documentation of nfdicore.ttl (version 2.0.0a) can be found at the [GitHub page](https://ise-fizkarlsruhe.github.io/nfdicore/).
+A documentation of nfdicore.ttl (version 2.0.0) can be found at the [GitHub page](https://ise-fizkarlsruhe.github.io/nfdicore/).
 
 
 The most recent release of NFDIcore is [version 1.1.1](https://github.com/ISE-FIZKarlsruhe/nfdicore/tree/v1.1.1).
