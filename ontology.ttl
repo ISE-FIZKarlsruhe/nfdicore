@@ -1,0 +1,1675 @@
+@prefix : <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology#> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                          owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
+                                          <http://purl.org/dc/terms/abstract> """### INTRODUCTION
+
+The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
+
+Recognizing the diverse needs of consortia, NFDIcore establishes mappings to a wide array of standards across domains, including the [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) and [schema.org](https://schema.org/), which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module [CTO](https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module [MWO](https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
+
+Aligning with [IAO](https://github.com/information-artifact-ontology/IAO) and [SCHEMA](https://schema.org/), NFDIcore focuses on describing 3 main concepts:
+1. Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, software, etc. 
+2. Independent Continuants that act autonomously (nfdicore:Agent), e.g. organizations and persons
+3. Planned processes and events, e.g. nfdicore:Project, nfdicore:Contributing, nfdicore:Event.
+
+Current development is managed via [GitHub](https://github.com/ISE-FIZKarlsruhe/nfdicore). Feel free to give feedback, contribute, or raise issues.
+
+### RESOURCES
+
+Within NFDIcore, resources encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization. These resources are categorized as information content entities (IAO_0000030), derived from material entities (BFO_0000040). 
+
+Each information content entity may establish \"is about\" (IAO_0000136) object relations, linking it to other material entities or information content entities that define its subject matter. In NFDIcore, the \"is about\" property is expanded to offer more detailed semantics and a comprehensive overview of the relationships between resources and material entities.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources1.png)
+
+
+Apart from relations to information content entities and material entities, resources within NFDIcore can also be described using specific qualities (BFO_0000019). For instance, resources can be associated with academic disciplines (nfdicore:AcademicDiscipline) they belong to or a degree of semantic expressivity the resources hold, allowing for a more nuanced understanding of their context and relevance. For this, property \"has quality\" (RO_0000086) is extended with more granular nfdicore properties.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources2.png)
+
+
+Resources within NFDIcore engage in diverse relationships with agents, facilitated by various properties such as nfdicore:contributor, nfdicore:publisher, and nfdicore:contactPoint. While these properties enable direct connections between agents and resources, they may lack some expressivity. In scenarios requiring more detailed semantics to describe the relationship between an agent and a resource, the modeling proposed by BFO can be employed. To maintain consistency, we establish nfdicore properties like nfdicore:publisher as shortcuts using SWRL rules.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources3.png)
+
+
+### AGENTS
+
+Likewise, in NFDIcore, the concept of Agents extends to both organizations and persons, serving as independent continuants within BFO ontology. Agents are essential for management of research data resources, and include entities such as research institutions, consortia, universities, companies, and individual researchers or data scientists. 
+
+Within NFDIcore, agents can be directly linked to resources via different relations; may participate in different processes (BFO_0000015) and be associated with diverse roles (BFO_0000023), e.g. nfdicore:PublisherRole, nfdicore:ContributorRole, etc. within the processes. Moreover, agents engage in diverse relationships with other agents, e.g. nfdicore:member, nfdicore:partnerOrganization, etc. For consistency's sake, we streamline NFDIcore properties like nfdicore:contactPoint and nfdicore:fundingOrganization by creating shortcuts through SWRL rules.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/agents.png)
+
+
+### PROCESSES AND EVENTS
+
+In general, a process (BFO_0000015) can encompass subordinate processes and may involve instances marked by defined start and end times. Within NFDIcore, a planned process (OBI_0000011) commonly serves to establish connections between agents and information content entities (IAO_0000030), defining the roles (BFO_0000023) of agents with respect to the involved information content entities.
+
+The nfdicore:Event is associated with temporal entities that transpire over time, commonly marked by specific incidents or occurrences. The nfdicore:Event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, workshops, or activities like \"the 37th German Congress for Art History\" or \"Workshop \"Introduction to Iconclass\"\". Events are characterized by their start and end times and can be connected to agents involved in the events.
+
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)"""@en ;
+                                          <http://purl.org/dc/terms/bibliographicCitation> "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                          <http://purl.org/dc/terms/created> "2024-04-10" ;
+                                          <http://purl.org/dc/terms/creator> <https://nfdi4culture.de/id/E1925> ,
+                                                                             <https://nfdi4culture.de/id/E2415> ,
+                                                                             <https://nfdi4culture.de/id/E2416> ,
+                                                                             <https://nfdi4culture.de/id/E3095> ,
+                                                                             <https://orcid.org/0000-0001-7192-7143> ;
+                                          <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                          <http://purl.org/dc/terms/title> "NFDIcore Ontology" ;
+                                          <http://purl.org/ontology/bibo/status> "Ontology Specification"@en ;
+                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore> ;
+                                          <http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-karlsruhe.de/ontology/> ;
+                                          rdfs:label "NFDIcore" ;
+                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
+                                          owl:versionInfo "v2.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/format
+<http://purl.org/dc/terms/format> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://rdfs.org/ns/void#feature
+<http://rdfs.org/ns/void#feature> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/acronym
+<https://nfdi.fiz-karlsruhe.de/ontology/acronym> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:label "nfdicore:acronym"@en .
+
+
+###  https://w3id.org/mod#status
+<https://w3id.org/mod#status> rdf:type owl:AnnotationProperty ;
+                              rdfs:subPropertyOf <http://purl.org/ontology/bibo/status> .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+<http://purl.obolibrary.org/obo/BFO_0000050> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+<http://purl.obolibrary.org/obo/IAO_0000136> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001015
+<http://purl.obolibrary.org/obo/RO_0001015> rdf:type owl:ObjectProperty ;
+                                            owl:equivalentProperty <https://nfdi.fiz-karlsruhe.de/ontology/locationOf> .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_0000741
+<http://www.ebi.ac.uk/swo/SWO_0000741> rdf:type owl:ObjectProperty .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/bestPractice
+<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                      owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> ;
+                                                      rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                      rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Specification> ;
+                                                      rdfs:comment "The property is a relationship between a resource and the specified best practice."@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "best practice"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf
+<https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                        <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                        rdfs:comment "inverse of  property \"best practice\""@en ;
+                                                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                        rdfs:label "best practice of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/contactPoint
+<https://nfdi.fiz-karlsruhe.de/ontology/contactPoint> rdf:type owl:ObjectProperty ;
+                                                      owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> ;
+                                                      rdfs:domain [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( <https://nfdi.fiz-karlsruhe.de/ontology/Project>
+                                                                                  <https://nfdi.fiz-karlsruhe.de/ontology/Resource>
+                                                                                )
+                                                                  ] ;
+                                                      rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                      rdfs:comment "The property is a relationship between a resource and a contact point."@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "contact point"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf
+<https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> rdf:type owl:ObjectProperty ;
+                                                        rdfs:comment "inverse of  property \"contact point\""@en ;
+                                                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                        rdfs:label "contact point of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/contributor
+<https://nfdi.fiz-karlsruhe.de/ontology/contributor> rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> ;
+                                                     rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                     rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                     rdfs:comment "The property related a resource to a person or an organization responsible for making contributions to a resource."@en ;
+                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                     rdfs:label "contributor"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/contributorOf
+<https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> rdf:type owl:ObjectProperty ;
+                                                       rdfs:comment "inverse of property \"contributor\""@en ;
+                                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                       rdfs:label "contributor of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/country
+<https://nfdi.fiz-karlsruhe.de/ontology/country> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                 owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/countryOf> ;
+                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                               owl:unionOf ( <https://nfdi.fiz-karlsruhe.de/ontology/City>
+                                                                             <https://nfdi.fiz-karlsruhe.de/ontology/FederalState>
+                                                                           )
+                                                             ] ;
+                                                 rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Country> ;
+                                                 rdfs:comment "The property relates a city or a state to a country where it is located."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "country"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/countryOf
+<https://nfdi.fiz-karlsruhe.de/ontology/countryOf> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://nfdi.fiz-karlsruhe.de/ontology/part> ;
+                                                   rdfs:comment "inverse of property \"country\""@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "country of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/dataset
+<https://nfdi.fiz-karlsruhe.de/ontology/dataset> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000219> ;
+                                                 owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> ;
+                                                 rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                 rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> ;
+                                                 rdfs:comment "The property is a relation between a resource and a data set."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "data set"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/datasetOf
+<https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                   rdfs:comment "inverse of  property \"data set\""@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "data set of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/exportFormat
+<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                      owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> ;
+                                                      rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                      rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> ;
+                                                      rdfs:comment "The property relates a resource to the format available for the export of a resource."@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "export format"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf
+<https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                        <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                        rdfs:comment "inverse of  property \"export format\""@en ;
+                                                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                        rdfs:label "export format of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/federalState
+<https://nfdi.fiz-karlsruhe.de/ontology/federalState> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <https://nfdi.fiz-karlsruhe.de/ontology/part> ;
+                                                      owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf> ;
+                                                      rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/City> ;
+                                                      rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/FederalState> ;
+                                                      rdfs:comment "The property relates a city to a federal state where it is located."@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "federal state"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf
+<https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://nfdi.fiz-karlsruhe.de/ontology/partOf> ;
+                                                        rdfs:comment "inverse of property \"federal state\""@en ;
+                                                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                        rdfs:label "federal state of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization
+<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> rdf:type owl:ObjectProperty ;
+                                                             owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> ;
+                                                             rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Project> ;
+                                                             rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
+                                                             rdfs:comment "The property relates a project to the organization that provided funding for it."@en ;
+                                                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                             rdfs:label "funding organization"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf
+<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
+                                                               rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Project> ;
+                                                               rdfs:comment "inverse of property \"funding organization\""@en ;
+                                                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                               rdfs:label "funding organization of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/license
+<https://nfdi.fiz-karlsruhe.de/ontology/license> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                 owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> ;
+                                                 rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                 rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/License> ;
+                                                 rdfs:comment "The property is a relationship between a resource and a license file." ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "license"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/licenseOf
+<https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                   rdfs:comment "inverse of property \"license\""@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "license of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/location
+<https://nfdi.fiz-karlsruhe.de/ontology/location> rdf:type owl:ObjectProperty ;
+                                                  owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/locationOf> ;
+                                                  rdfs:domain owl:Thing ;
+                                                  rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Place> ;
+                                                  rdfs:comment "The property is a relationship between a thing and a place its located at. "@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "location"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/locationOf
+<https://nfdi.fiz-karlsruhe.de/ontology/locationOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:comment "inverse of property \"location\""@en ;
+                                                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                    rdfs:label "location of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/mediaType
+<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                   owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> ;
+                                                   rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                   rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> ;
+                                                   rdfs:comment "The property relates a resource to its data format."@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "media type"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf
+<https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                     <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                     rdfs:comment "inverse of  property \"media type\""@en ;
+                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                     rdfs:label "media type of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/member
+<https://nfdi.fiz-karlsruhe.de/ontology/member> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
+                                                                   <https://nfdi.fiz-karlsruhe.de/ontology/part> ;
+                                                owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/memberOf> ;
+                                                rdfs:comment "The property is a relationship between a consortium and an organization that is a member of the consortium."@en ;
+                                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                rdfs:label "member"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/memberOf
+<https://nfdi.fiz-karlsruhe.de/ontology/memberOf> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <https://nfdi.fiz-karlsruhe.de/ontology/partOf> ;
+                                                  rdfs:comment "The property is a relationship between an organization and a consortium it belongs to."@en ,
+                                                               "inverse of property \"member\""@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "member of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization
+<https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization> rdf:type owl:ObjectProperty ;
+                                                            owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization> ;
+                                                            rdfs:comment "The property is a parental relationship between organizations."@en ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                            rdfs:label "parent organization"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/part
+<https://nfdi.fiz-karlsruhe.de/ontology/part> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/partOf> ;
+                                              rdfs:comment "The generic property is a relationship between a thing and its part."@en ;
+                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                              rdfs:label "part"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/partOf
+<https://nfdi.fiz-karlsruhe.de/ontology/partOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                rdfs:domain owl:Thing ;
+                                                rdfs:range owl:Thing ;
+                                                rdfs:comment "The generic property is a relationship between a thing and a thing in which it is physically or logically included."@en ;
+                                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                rdfs:label "part of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/participant
+<https://nfdi.fiz-karlsruhe.de/ontology/participant> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000057> ;
+                                                     owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/participantOf> ;
+                                                     rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Project> ;
+                                                     rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                     rdfs:comment "The property is a relationship between a project and an agent that participates in the project."@en ;
+                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                     rdfs:label "participant"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/participantOf
+<https://nfdi.fiz-karlsruhe.de/ontology/participantOf> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                       rdfs:comment "inverse of  property \"prticipant\""@en ;
+                                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                       rdfs:label "participant of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization
+<https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> rdf:type owl:ObjectProperty ,
+                                                                      owl:SymmetricProperty ;
+                                                             rdfs:comment "The property is a partner relationship between organizations. The property is symmetric."@en ;
+                                                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                             rdfs:label "partner organization"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage
+<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ,
+                                                                                <http://www.ebi.ac.uk/swo/SWO_0000741> ;
+                                                             owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> ;
+                                                             rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Software> ;
+                                                             rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> ;
+                                                             rdfs:comment "The property links software to a programming language its written in." ;
+                                                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                             rdfs:label "programming language"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf
+<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:comment "inverse of  property \"programming language\""@en ;
+                                                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                               rdfs:label "programming language of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/publisher
+<https://nfdi.fiz-karlsruhe.de/ontology/publisher> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/publisherOf> ;
+                                                   rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                   rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                   rdfs:comment "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "publisher"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/publisherOf
+<https://nfdi.fiz-karlsruhe.de/ontology/publisherOf> rdf:type owl:ObjectProperty ;
+                                                     rdfs:comment "inverse of  property \"publisher\""@en ;
+                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                     rdfs:label "publisher of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/relatedProject
+<https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain [ rdf:type owl:Class ;
+                                                                      owl:unionOf ( <https://nfdi.fiz-karlsruhe.de/ontology/Project>
+                                                                                    <https://nfdi.fiz-karlsruhe.de/ontology/Resource>
+                                                                                  )
+                                                                    ] ;
+                                                        rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Project> ;
+                                                        rdfs:comment "The property is a relationship between a project or a resource and related projects."@en ;
+                                                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                        rdfs:label "related project"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/representedCollection
+<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000219> ;
+                                                               owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> ;
+                                                               rdfs:domain [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( <https://nfdi.fiz-karlsruhe.de/ontology/DataPortal>
+                                                                                           <https://nfdi.fiz-karlsruhe.de/ontology/Dataset>
+                                                                                         )
+                                                                           ] ;
+                                                               rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Collection> ;
+                                                               rdfs:comment "The property is a relationship between a dataset and a collection it represents."@en ;
+                                                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                               rdfs:label "represented collection"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf
+<https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000235> ;
+                                                                 rdfs:comment "inverse of  property \"represented collection\""@en ;
+                                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                 rdfs:label "represented collection of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity
+<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000086> ;
+                                                              owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> ;
+                                                              rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                              rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> ;
+                                                              rdfs:comment "The property relates a resource to its semantic expressivity spectrum."@en ;
+                                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                              rdfs:label "semantic expressivity"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf
+<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000080> ;
+                                                                rdfs:comment "inverse of  property \"semantic expressivity\""@en ;
+                                                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                rdfs:label "semantic expressivity of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/software
+<https://nfdi.fiz-karlsruhe.de/ontology/software> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                  owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> ;
+                                                  rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                  rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Software> ;
+                                                  rdfs:comment "The property is a relationship between a resource and a software it uses."@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "software"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/softwareOf
+<https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                    rdfs:comment "inverse of  property \"sofware\""@en ;
+                                                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                    rdfs:label "software of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint
+<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                        owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> ;
+                                                        rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                        rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                        rdfs:comment "The property relates a data resource to its SPARQL Endpoint. "@en ;
+                                                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                        rdfs:label "sparql endpoint"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf
+<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                          <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                          rdfs:comment "inverse of  property \"sparql endpoint\""@en ;
+                                                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                          rdfs:label "sparql endpoint of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/specification
+<https://nfdi.fiz-karlsruhe.de/ontology/specification> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                       owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> ;
+                                                       rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                       rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Specification> ;
+                                                       rdfs:comment "The property is a relationship between a resource and the international standard or norm."@en ;
+                                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                       rdfs:label "specification"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/specificationOf
+<https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                         <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                         rdfs:comment "inverse of  property \"specification\""@en ;
+                                                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                         rdfs:label "specification of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/standard
+<https://nfdi.fiz-karlsruhe.de/ontology/standard> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                  owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/standardOf> ;
+                                                  rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                  rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/Standard> ;
+                                                  rdfs:comment "The property relates a resource to the standard it relies on."@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "standard"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/standardOf
+<https://nfdi.fiz-karlsruhe.de/ontology/standardOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                    rdfs:comment "inverse of  property \"standard\""@en ;
+                                                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                    rdfs:label "standard of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/subjectArea
+<https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000086> ;
+                                                     owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf> ;
+                                                     rdfs:domain [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( <https://nfdi.fiz-karlsruhe.de/ontology/Agent>
+                                                                                 <https://nfdi.fiz-karlsruhe.de/ontology/Project>
+                                                                                 <https://nfdi.fiz-karlsruhe.de/ontology/Resource>
+                                                                               )
+                                                                 ] ;
+                                                     rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> ;
+                                                     <http://purl.obolibrary.org/obo/IAO_0000232> "to check for BFO superproperty" ;
+                                                     rdfs:comment "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en ;
+                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                     rdfs:label "subject area"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf
+<https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000080> ;
+                                                       rdfs:comment "inverse of  property \"subject area\""@en ;
+                                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                       rdfs:label "subject area of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization
+<https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization> rdf:type owl:ObjectProperty ;
+                                                                rdfs:comment "inverse of \"parent organization\""@en ;
+                                                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                rdfs:label "subsidiary organization"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/technology
+<https://nfdi.fiz-karlsruhe.de/ontology/technology> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                    owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> ;
+                                                    rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                    rdfs:range <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> ;
+                                                    rdfs:comment "The property is a relationship between a resource and a technology it uses. "@en ;
+                                                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                    rdfs:label "technology"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/technologyOf
+<https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                      <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
+                                                      rdfs:comment "inverse of  property \"technology\""@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "technology of"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/url
+<https://nfdi.fiz-karlsruhe.de/ontology/url> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000235> ;
+                                             owl:inverseOf <https://nfdi.fiz-karlsruhe.de/ontology/urlOf> ;
+                                             rdfs:domain owl:Thing ;
+                                             rdfs:range owl:Thing ;
+                                             rdfs:comment "The property is a relationship between a thing and a url associated with the thing."@en ;
+                                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                             rdfs:label "url"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/urlOf
+<https://nfdi.fiz-karlsruhe.de/ontology/urlOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000219> ;
+                                               rdfs:comment "inverse of  property \"url\""@en ;
+                                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                               rdfs:label "url of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/birthDate
+<https://nfdi.fiz-karlsruhe.de/ontology/birthDate> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Person> ;
+                                                   rdfs:range rdfs:Literal ;
+                                                   rdfs:comment "The property refers to the date on which a person was born."@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "birth date"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/deathDate
+<https://nfdi.fiz-karlsruhe.de/ontology/deathDate> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Person> ;
+                                                   rdfs:range rdfs:Literal ;
+                                                   rdfs:comment "The property refers to the date on which a person passed away."@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "death date"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate
+<https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
+                                                         rdfs:range rdfs:Literal ;
+                                                         rdfs:comment "The property refers to the date on which the organization ceased to exist or was formally dissolved."@en ;
+                                                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                         rdfs:label "dissolution date"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/emailAddress
+<https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                      rdfs:range rdfs:Literal ;
+                                                      rdfs:comment "The property relates an agent to their email address."@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "email address"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/endDate
+<https://nfdi.fiz-karlsruhe.de/ontology/endDate> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Event> ;
+                                                 rdfs:comment "The property refers to the moment in time when an event ends."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "end date"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/fileExtension
+<https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                       rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
+                                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                       rdfs:label "file extension" ;
+                                                       <http://www.w3.org/2004/02/skos/core#example> "mp4" ,
+                                                                                                     "ttl" ,
+                                                                                                     "txt" ,
+                                                                                                     "xml" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/foundationDate
+<https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
+                                                        rdfs:range rdfs:Literal ;
+                                                        rdfs:comment "The property refers to the specific date on which the organization was officially established or founded."@en ;
+                                                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                        rdfs:label "foundation date"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/startDate
+<https://nfdi.fiz-karlsruhe.de/ontology/startDate> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://nfdi.fiz-karlsruhe.de/ontology/Event> ;
+                                                   rdfs:range rdfs:Literal ;
+                                                   rdfs:comment "The property refers to the moment in time when an event begins."@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "start date"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/GAZ_00000448
+<http://purl.obolibrary.org/obo/GAZ_00000448> rdf:type owl:Class ;
+                                              owl:equivalentClass <https://nfdi.fiz-karlsruhe.de/ontology/Place> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000010
+<http://purl.obolibrary.org/obo/IAO_0000010> owl:equivalentClass <https://nfdi.fiz-karlsruhe.de/ontology/Software> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000025
+<http://purl.obolibrary.org/obo/IAO_0000025> rdf:type owl:Class ;
+                                             owl:equivalentClass <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000311
+<http://purl.obolibrary.org/obo/IAO_0000311> owl:equivalentClass <https://nfdi.fiz-karlsruhe.de/ontology/Publication> .
+
+
+###  http://schema.org/CreativeWork
+<http://schema.org/CreativeWork> rdf:type owl:Class .
+
+
+###  http://schema.org/Service
+<http://schema.org/Service> rdf:type owl:Class .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_0000002
+<http://www.ebi.ac.uk/swo/SWO_0000002> rdf:type owl:Class ;
+                                       owl:equivalentClass <https://nfdi.fiz-karlsruhe.de/ontology/License> .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#ObsoleteClass
+<http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> rdf:type owl:Class .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline
+<https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A quality of an entity that specifies the subject area, domain or academic discipline of an entity."@en ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000116> "2024-03-26: SB & JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)"@en ;
+                                                            rdfs:comment "An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                            rdfs:label "academic discipline"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#example> <https://www.wikidata.org/entity/Q12271> ,
+                                                                                                          "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Agent
+<https://nfdi.fiz-karlsruhe.de/ontology/Agent> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
+                                               rdfs:comment "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
+                                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                               rdfs:label "agent"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#example> "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/City
+<https://nfdi.fiz-karlsruhe.de/ontology/City> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Place> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A place that refers to a densely populated urban area."@en ;
+                                              rdfs:comment "A city or a town where the thing is located."@en ;
+                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                              rdfs:label "city"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#example> "Berlin, Hannover, Kyiv"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Collection
+<https://nfdi.fiz-karlsruhe.de/ontology/Collection> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A material entity that represents a collection of material entities intended to be understood together as a whole."@en ;
+                                                    rdfs:comment "A tangible collection of valuables published or curated by an organization or a person."@en ;
+                                                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                    rdfs:label "collection"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#example> "A collection of arts displayed at the museum"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Consortium
+<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ,
+                                                                    [ owl:intersectionOf ( <https://nfdi.fiz-karlsruhe.de/ontology/Organization>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://nfdi.fiz-karlsruhe.de/ontology/part> ;
+                                                                                             owl:someValuesFrom <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en ;
+                                                    rdfs:comment "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en ;
+                                                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                    rdfs:label "consortium"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#example> "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> rdf:type owl:Class ;
+                                                          owl:equivalentClass [ owl:intersectionOf ( <https://nfdi.fiz-karlsruhe.de/ontology/Organization>
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                                                       owl:allValuesFrom <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole>
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ;
+                                                          <http://purl.obolibrary.org/obo/IAO_0000115> "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
+                                                          rdfs:comment "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
+                                                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                          rdfs:label "consortium member"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#example> "Museums of City Cologne is a member of NFDI4Culture consortium."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en ;
+                                                              rdfs:comment "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en ;
+                                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                              rdfs:label "consortium member role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole
+<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                          <http://purl.obolibrary.org/obo/IAO_0000115> "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en ;
+                                                          rdfs:comment "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en ;
+                                                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                          rdfs:label "contact point role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Contacting
+<https://nfdi.fiz-karlsruhe.de/ontology/Contacting> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A planned process in which the contact information of an entity is provided."@en ;
+                                                    rdfs:comment "A planned process in which the contact information of an entity is provided."@en ;
+                                                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                    rdfs:label "contacting"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Contributing
+<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                                      <http://purl.obolibrary.org/obo/IAO_0000115> "A planned process of contibuting or providing information to an endeavor."@en ;
+                                                      rdfs:comment "The contibution or provision of information to an endeavor."@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "contributing"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole
+<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                         <http://purl.obolibrary.org/obo/IAO_0000115> "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en ;
+                                                         rdfs:comment "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en ;
+                                                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                         rdfs:label "contributor role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary
+<https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> ;
+                                                              <http://purl.obolibrary.org/obo/IAO_0000115> "Semantic expressivity that refers to a standardized set of terms and descriptors used to index and retrieve information systematically."@en ;
+                                                              rdfs:comment "A standardized set of terms and descriptors used to index and retrieve information systematically."@en ;
+                                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                              rdfs:label "controlled vocabulary"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#example> "the Union List of Artist Names (ULAN), the Cultural Objects Name Authority (CONA)" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Country
+<https://nfdi.fiz-karlsruhe.de/ontology/Country> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Place> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty."@en ;
+                                                 rdfs:comment "A country where the thing is located."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "country"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork
+<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> rdf:type owl:Class ;
+                                                      owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000030>
+                                                                                                 <http://schema.org/CreativeWork>
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ] ;
+                                                      rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                      <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that refers to a manifestation of someone's creative effort."@en ;
+                                                      <http://purl.obolibrary.org/obo/IAO_0000116> "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en ;
+                                                      rdfs:comment "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "creative work"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#example> "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/DataPortal
+<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Website> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en ;
+                                                    rdfs:comment "An online platform that provides access to datasets."@en ;
+                                                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                    rdfs:label "data portal"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#example> "Bach digital, KultSam, MusiXplora"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Dataset
+<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A creative work that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference."@en ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000116> "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en ;
+                                                 rdfs:comment "Structured information about a resource provided by an organization or a person."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "dataset"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Event
+<https://nfdi.fiz-karlsruhe.de/ontology/Event> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An occurent that represents an occurence or happening that unfolds in time."@en ;
+                                               rdfs:comment "A class that represents entities that occur or unfold in time, typically characterized by a specific happening or occurrence with temporal properties. Events encompass a wide range of occurrences, including but not limited to happenings, incidents, activities, or processes."@en ;
+                                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                               rdfs:label "event"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#example> "conferences, wars, strikes, celebrations, accidents, workshops, meetings, or any other specific incident or happening."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/FederalState
+<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Place> ;
+                                                      <http://purl.obolibrary.org/obo/IAO_0000115> "A place that refers to a geographical territory forming part of a country."@en ;
+                                                      rdfs:comment "A federal state where the thing is located."@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "federal state"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#example> "Sachsen, Berlin"@de .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole
+<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en ;
+                                                                 rdfs:comment "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en ;
+                                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                 rdfs:label "funding organization role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Glossary
+<https://nfdi.fiz-karlsruhe.de/ontology/Glossary> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> ;
+                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "Semantic expressivity that refers to a list of terms and their definitions within a specific domain or academic discipline."@en ;
+                                                  rdfs:comment "A compilation of terms and their definitions within a specific domain or academic discipline."@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "glossary"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#example> "ICOM Museum Glossary"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/License
+<https://nfdi.fiz-karlsruhe.de/ontology/License> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en ;
+                                                 rdfs:comment "A document that provides legal guidelines for the use of a resource, e.g. a software."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "license"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "cc-by-3, Digital Peer Publishing Lizenz"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type
+<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A media type that serves as a standardized identifier for specifying the nature and format of data."@en ;
+                                                   rdfs:comment "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "MIME-type"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/MediaType
+<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A directive information entity that describes a media type a bearer has."@en ;
+                                                   rdfs:comment "A digital resource format or physical medium."@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "media type"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Ontology
+<https://nfdi.fiz-karlsruhe.de/ontology/Ontology> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> ;
+                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "Semantic expressivity that refers to a semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and machine-understandable manner."@en ;
+                                                  rdfs:comment "A semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and formalized manner, enabling machine-understandable reasoning and inference."@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "ontology"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#example> "CIDOC-CRM, BFO, nfdicore" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Organization
+<https://nfdi.fiz-karlsruhe.de/ontology/Organization> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                      <http://purl.obolibrary.org/obo/IAO_0000115> "An agent that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en ;
+                                                      rdfs:comment "An organization of some kind, e.g. research organization or business organization"@en ;
+                                                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                      rdfs:label "organization"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#example> "University Library in Leipzig, Museums of City Cologne" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Person
+<https://nfdi.fiz-karlsruhe.de/ontology/Person> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                <http://purl.obolibrary.org/obo/IAO_0000115> "An agent that represents a single human individual."@en ;
+                                                <http://purl.obolibrary.org/obo/IAO_0000116> "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
+                                                rdfs:comment "A resource that represents a single person."@en ;
+                                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                rdfs:label "person"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#example> "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Place
+<https://nfdi.fiz-karlsruhe.de/ontology/Place> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000029> ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en ;
+                                               rdfs:comment "A spatial region, e.g. country, city or district."@en ;
+                                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                               rdfs:label "place"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#example> "Hessen, Berlin, Schweiz" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage
+<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> ;
+                                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A technological means that is used for implementing software."@en ;
+                                                             rdfs:comment "A formal language used for implementing a software."@en ;
+                                                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                             rdfs:label "programming language"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#example> "Java, Ruby, C++, Perl, PHP" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Project
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A planned process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
+                                                 rdfs:comment "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "project"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "Freischütz digital, Corpus Vitrearum Medii Aevi" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Publication
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ;
+                                                     <http://purl.obolibrary.org/obo/IAO_0000115> "A creative work that is the output of a publishing process."@en ;
+                                                     rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
+                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                     rdfs:label "publication"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#example> "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole
+<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                       <http://purl.obolibrary.org/obo/IAO_0000115> "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en ;
+                                                       rdfs:comment "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en ;
+                                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                       rdfs:label "publisher role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Resource
+<https://nfdi.fiz-karlsruhe.de/ontology/Resource> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI."@en ;
+                                                  <http://purl.obolibrary.org/obo/IAO_0000116> """2024-03-25 - Sasha Bruns: 
+This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."""@en ;
+                                                  rdfs:comment "The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "resource"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity
+<https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A quality of a resource that defines the degree of expressivity in the semantic representation of a resource."@en ;
+                                                              rdfs:comment "The class represents the degree of expressivity in the semantic representation of a resource, such as an ontology, taxonomy, or glossary. It specifies the extent to which the resource captures and conveys the meaning, relationships, and semantics of concepts within a knowledge domain."@en ;
+                                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                              rdfs:label "semantic expressivity"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#example> "controlled vocabulary, ontology, taxonomy"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Service
+<https://nfdi.fiz-karlsruhe.de/ontology/Service> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000030>
+                                                                                            <http://schema.org/Service>
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that refers to offerings provided by individuals or organizations to facilitate and contribute to the specific goals."@en ;
+                                                 rdfs:comment "Services are resources offered by organizations or people to support and contribute to the predefined goals of a project. Services may encompass a diverse range of contributions such as data curation, specialized expertise, skill and various other forms of support."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "service"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Software
+<https://nfdi.fiz-karlsruhe.de/ontology/Software> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ;
+                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en ;
+                                                  rdfs:comment "A computer software provided by an organization or a person."@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "software"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#example> "Edirom, Muscat" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Specification
+<https://nfdi.fiz-karlsruhe.de/ontology/Specification> rdf:type owl:Class ;
+                                                       rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000104>
+                                                                                              <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                       <http://purl.obolibrary.org/obo/IAO_0000115> "A creative work that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process."@en ;
+                                                       <http://purl.obolibrary.org/obo/IAO_0000116> "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en ;
+                                                       rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
+                                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                       rdfs:label "specification"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#example> "Guidelines, technical specifications, design specifications"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Standard
+<https://nfdi.fiz-karlsruhe.de/ontology/Standard> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Specification> ;
+                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en ;
+                                                  rdfs:comment "An international standard and norm that can be used to evaluate or create a resource."@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "standard"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#example> "ISO 15511, DINI-Zertifikat" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy
+<https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> ;
+                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "Semantic expressivity that refers to a hierarchical classification system that organizes concepts into a tree-like structure."@en ;
+                                                  rdfs:comment "A hierarchical classification system that organizes concepts into a tree-like structure based on their shared characteristics and relationships."@en ;
+                                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                  rdfs:label "taxonomy"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#example> "Linnaean Taxonomy, Iconclass"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans
+<https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A plan specification that refers to technology employed for the creation, management, utilization, or control of a resource."@en ;
+                                                            rdfs:comment "A technology, e.g. a web application or a programming framework used in a resource."@en ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                            rdfs:label "technological means"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#example> "Groovy on Grails, Angular"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus
+<https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A controlled vocabulary organized hierarchically and provided with associative relationships, such as synonyms, broader terms, and narrower terms."@en ;
+                                                   rdfs:comment "A hierarchical controlled vocabulary enriched with associative relationships, including synonyms, broader terms, and narrower terms."@en ;
+                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                   rdfs:label "thesaurus"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "Getty Art & Architecture Thesaurus, UNESCO Thesaurus for cultural and scientific documentation" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Website
+<https://nfdi.fiz-karlsruhe.de/ontology/Website> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A creative work that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en ;
+                                                 rdfs:comment "A collection of webpages contributed by an organization or a person."@en ;
+                                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                 rdfs:label "website"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "https:\\/\\/opac.rism.info" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding
+<https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A service that contributes to providing expert guidance in broad range of topics, including securing funding and navigating the application process for research projects."@en ;
+                                                            rdfs:comment "Services that aim at providing expert advice, guidance, and support to agents, particular with securing funding opportunities for their efforts. This may include providing individual support for a broad range of research data and software concerns to scholars, institutions and data providers, assistance in identifying suitable funding sources, crafting grant proposals, and navigating the application process."@en ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                            rdfs:label "consulting & funding"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#example> "Flex Funds, NFDI4Culture Helpdesk"^^rdfs:Literal .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation
+<https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> ;
+                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A service that contributes to organizing and managing research data."@en ;
+                                                                   rdfs:comment "Services related to organizing, cataloging, and managing research data and information. This includes developing metadata schemas, creating data dictionaries, establishing standardized data formats, and ensuring data quality and integrity"@en ;
+                                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                   rdfs:label "information & documentation"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#example> "Registry for Tools & Services, Culture Information Portal" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching
+<https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "A service that contributes to educating agents on research data management."@en ;
+                                                           rdfs:comment "Services that aim to support agents in developing essential skills and competencies related to research data management. This includes organizing training workshops, webinars, and educational resources, providing personalized consultations, mentoring programs, and community engagement initiatives."@en ;
+                                                           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                           rdfs:label "learning & teaching"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#example> "Educational Resource Finder" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment
+<https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A service that contributes to integrating research data with external sources and data enrichment."@en ;
+                                                            rdfs:comment "Services that focus on enhancing research data by integrating it with external datasets, vocabularies, and ontologies. This involves establishing interoperability frameworks, data integration pipelines, and semantic enrichment techniques to connect disparate datasets and enable cross-disciplinary research."@en ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                            rdfs:label "linkage & enrichment"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#example> "Culture Knowledge Graph, Semantic Kompakkt, Wikibase4Research" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration
+<https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> ;
+                                                                     <http://purl.obolibrary.org/obo/IAO_0000115> "A service that contributes to fostering interdisciplinary collaboration and community engagement within the research community."@en ;
+                                                                     rdfs:comment "Services that focus on fostering interdisciplinary collaboration, knowledge exchange, and community engagement within the research ecosystem. This includes organizing networking events, collaborative projects, and virtual platforms for researchers to connect, share ideas, and collaborate on common research challenges."@en ;
+                                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                     rdfs:label "participation & collaboration"@en ;
+                                                                     <http://www.w3.org/2004/02/skos/core#example> "Forum for Data Standards and Data Quality, Expert Forum for sustainable Software Development in NFDI4Culture, Linked Open Data Working Group" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> ;
+                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A service that contributes to sharing and publication of research findings."@en ;
+                                                                   rdfs:comment "Services that aim at facilitating the sharing and dissemination of research findings and outputs with wider audiences. This includes supporting agents in preparing resources for publication, production, publishing, sprint services, etc."@en ;
+                                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                   rdfs:label "publication & dissemination"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#example> "NextGen Books" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation
+<https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> ;
+                                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A service that contributes to long-term archiving and data integrity through secure storage and preservation strategies."@en ;
+                                                              rdfs:comment "Services that focus on the long-term archiving and preservation of research data and digital assets. This involves providing secure storage infrastructures, backup solutions, and preservation strategies to prevent data loss over time."@en ;
+                                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                              rdfs:label "storage & preservation"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#example> "RADAR4Culture, Curated Repository List"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://nfdi4culture.de/id/E1925> rdfs:label "Harald Sack" .
+
+
+<https://nfdi4culture.de/id/E2415> rdfs:label "Tabea Tietz" .
+
+
+<https://nfdi4culture.de/id/E2416> rdfs:label "Oleksandra Bruns" .
+
+
+<https://nfdi4culture.de/id/E3095> rdfs:label "Etienne Posthumus" .
+
+
+<https://orcid.org/0000-0001-7192-7143> rdfs:label "Jörg Waitelonis" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<https://nfdi.fiz-karlsruhe.de/ontology/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/cr> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/pr> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/o> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Funding Organization" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/o>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Project> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/f>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/o> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/f>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/f> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/o> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/p> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Contact Point of Project" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Project> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/cr>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/cr>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/cr> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Publisher" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://purl.obolibrary.org/obo/IAO_0000444> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/pr>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/r> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/pr>
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/pr> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/publisherOf> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Contact Point of Resource" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Contacting> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/cr>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/cr>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/r> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/cr> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Contributor" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Resource> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/cr>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/r> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/cr>
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/cr> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/p>
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://nfdi.fiz-karlsruhe.de/ontology/a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://nfdi.fiz-karlsruhe.de/ontology/r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
