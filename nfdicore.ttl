@@ -80,7 +80,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
                                                           <https://orcid.org/0000-0001-7192-7143> ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                           dcterms:title "NFDIcore Ontology" ;
-                                          bibo:status <http://purl.org/ontology/bibo/status/published> ;
+                                          bibo:status "Ontology Specification"@en ;
                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> :nfdicore ;
                                           <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                                           rdfs:label "NFDIcore" ;
@@ -158,6 +158,11 @@ rdfs:label rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/acronym
 :acronym rdf:type owl:AnnotationProperty ;
          rdfs:label "nfdicore:acronym"@en .
+
+
+###  https://w3id.org/mod#status
+<https://w3id.org/mod#status> rdf:type owl:AnnotationProperty ;
+                              rdfs:subPropertyOf bibo:status .
 
 
 #################################################################
