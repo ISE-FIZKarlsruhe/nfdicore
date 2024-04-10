@@ -364,7 +364,6 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/location
 :location rdf:type owl:ObjectProperty ;
           owl:inverseOf :locationOf ;
-          rdf:type owl:TransitiveProperty ;
           rdfs:domain owl:Thing ;
           rdfs:range :Place ;
           rdfs:comment "The property is a relationship between a thing and a place its located at. "@en ;
@@ -373,8 +372,7 @@ swo:SWO_0000741 rdf:type owl:ObjectProperty .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/locationOf
-:locationOf rdf:type owl:ObjectProperty ,
-                     owl:TransitiveProperty ;
+:locationOf rdf:type owl:ObjectProperty ;
             rdfs:comment "inverse of property \"location\""@en ;
             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
             rdfs:label "location of"@en .
