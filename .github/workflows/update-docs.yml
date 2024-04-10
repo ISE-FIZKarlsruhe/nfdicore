@@ -18,6 +18,7 @@ jobs:
            mkdir public
            java -jar widoco.jar -ontFile main/nfdicore.ttl -outFolder public -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            ls public
+           echo "\n img {max-width:1000px}" >> public/doc/resources/extra.css
            mv public/doc/* public/
            cp public/index-en.html public/index.html
            cp -r public 2.0.0
