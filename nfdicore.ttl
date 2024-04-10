@@ -38,7 +38,7 @@ Current development is managed via [GitHub](https://github.com/ISE-FIZKarlsruhe/
 Within NFDIcore, resources encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization. These resources are categorized as information content entities (IAO_0000030), derived from material entities (BFO_0000040). 
 
 Each information content entity may establish \"is about\" (IAO_0000136) object relations, linking it to other material entities or information content entities that define its subject matter. In NFDIcore, the \"is about\" property is expanded to offer more detailed semantics and a comprehensive overview of the relationships between resources and material entities.
- ![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/main/figures/resources1.png)
+ <img src="https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/main/figures/resources1.png" alt="image" width="1000px">
 
 
 Apart from relations to information content entities and material entities, resources within NFDIcore can also be described using specific qualities (BFO_0000019). For instance, resources can be associated with academic disciplines (nfdicore:AcademicDiscipline) they belong to or a degree of semantic expressivity the resources hold, allowing for a more nuanced understanding of their context and relevance. For this, property \"has quality\" (RO_0000086) is extended with more granular nfdicore properties.
