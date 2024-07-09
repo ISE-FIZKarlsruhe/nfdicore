@@ -41,9 +41,7 @@ nfdicore:subjectArea ex:MaterialScience .
 - **SPARQL:**
 ```sparql
 SELECT ?resource ?event ?process
-WHERE
-{  { ?resource bfo:RO_0000056 ?process} UNION { ?event bfo:BFO_0000050 ?process . } 
-
+WHERE {  { ?resource bfo:RO_0000056 ?process} UNION { ?event bfo:BFO_0000050 ?process . } 
  FILTER (?process = ex:Demonstration || ?p = ex:Teaching )
 }
 ```
@@ -52,8 +50,7 @@ WHERE
 - **SPARQL:**
 ```sparql
 SELECT ?organisation ?role ?process
-WHERE
-{ 
+WHERE { 
 ?organisation rdf:type nfdicore:Organization ;
 bfo:RO_0000087 ?role ;
 bfo:RO_0000056 ?process . 
@@ -67,8 +64,7 @@ bfo:RO_0000056 ?process .
 - **SPARQL:**
 ```sparql
 SELECT ?dataset ?standard
-WHERE
-{ 
+WHERE { 
 ?dataset rdf:type nfdicore:Dataset ;
 nfdicore:representedCollection ?collection ;
 nfdicore:standard ?standard .
@@ -203,7 +199,6 @@ rdf:type ?type nfdicore:Standard.
 ```sparql
 SELECT ?resource
 WHERE {
-
 ?process rdf:type bfo:IAO_0000572 ; %documenting
 bfo:BFO_0000050 ex:DataAnalysis ; %partOf
 bfo:OBI_0000299 ?resource .   %has_specified_output
@@ -251,7 +246,6 @@ ex:NFDIMatWerk bfo:RO_0000056 ?process ;
 bfo:RO_0000087 ex:Repository .
 ?role bfo:BFO_0000054 ?process . 
 ?process rdf:type nfdicore:Contributing .
-
 ?resource bfo:RO_0000056 ?process ;
 nfdicore:standard ?standard .
 ?standard nfdicore:semanticExpressivity ?ontology ;
@@ -349,7 +343,6 @@ rdf:type nfdicore:Service .
 ```sparql
 SELECT ?resource ?agent
 WHERE {
-
 ?process rdf:type bfo:IAO_0000572 ;
 bfo:BFO_0000050 ?event ; 
 bfo:OBI_0000299 ?resource .
@@ -370,7 +363,6 @@ SELECT distinct ?r ?type ?task
 WHERE
 { {?r bfo:RO_0000056 ?task ;
 rdf:type nfdicore:Learning\&Teaching ;}
-
 UNION 
 { ?r bfo:BFO_0000050 ?task ;
 rdf:type nfdicore:Event }
@@ -413,7 +405,6 @@ nfdicore:endDate ?end .
 ```sparql
 SELECT ?resource
 WHERE {
-
 ?process rdf:type bfo:IAO_0000572 ; %documenting
 bfo:BFO_0000050 ex:DataAnalysis ; %partOf
 bfo:OBI_0000299 ?resource .   %has_specified_output
