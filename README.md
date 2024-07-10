@@ -21,6 +21,17 @@ A documentation of nfdicore.ttl (version 2.0.0) can be found at the namespace [h
 
 # NFDIcore Competency Questions (CQs) and SPARQL Queries
 
+```
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ex: <http://example.org/>
+PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
+PREFIX bfo: <http://purl.obolibrary.org/obo/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+```
+
 ## NFDI-MatWerk
 All NFDI-MatWerk Use Cases are available [at the MatWerk Consortium Webpage](https://nfdi-matwerk.de/infrastructure-use-cases)
 
