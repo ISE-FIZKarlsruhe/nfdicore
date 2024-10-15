@@ -34,7 +34,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000031>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://www.ebi.ac.uk/swo/SWO_0000002>))
-Declaration(ObjectProperty(<http://purl.obofoundry.org/obo/IAO_0000136>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://www.ebi.ac.uk/swo/SWO_0000741>))
 Declaration(ObjectProperty(owl:topObjectProperty))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/BFO_0000179>))
@@ -178,14 +178,14 @@ AnnotationAssertion(rdfs:label rdfs:label "label")
 #   Object Properties
 ############################
 
-# Object Property: <http://purl.obofoundry.org/obo/IAO_0000136> (is about)
+# Object Property: <http://purl.obolibrary.org/obo/IAO_0000136> (is about)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obofoundry.org/obo/IAO_0000136> "'is about' relates an information entity to other entities in which the information entity holds some information which dscribes some facet of the other entity, such as the arrow direction on a sign.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obofoundry.org/obo/IAO_0000136> "IAO")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obofoundry.org/obo/IAO_0000136> "James Malone")
-AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obofoundry.org/obo/IAO_0000136> "Alan Ruttenberg"@en)
-AnnotationAssertion(rdfs:label <http://purl.obofoundry.org/obo/IAO_0000136> "is about")
-SubObjectPropertyOf(<http://purl.obofoundry.org/obo/IAO_0000136> owl:topObjectProperty)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000136> "'is about' relates an information entity to other entities in which the information entity holds some information which dscribes some facet of the other entity, such as the arrow direction on a sign.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000136> "IAO")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000136> "James Malone")
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obolibrary.org/obo/IAO_0000136> "Alan Ruttenberg"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000136> "is about")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000136> owl:topObjectProperty)
 
 # Object Property: <http://www.ebi.ac.uk/swo/SWO_0000741> (is encoded in)
 
@@ -193,7 +193,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://www.ebi
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.ebi.ac.uk/swo/SWO_0000741> "Is encoded in is an \"is about\" relationship which describes the type of encoding used for the referenced class.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://www.ebi.ac.uk/swo/SWO_0000741> "Allyson Lister")
 AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/swo/SWO_0000741> "is encoded in")
-SubObjectPropertyOf(<http://www.ebi.ac.uk/swo/SWO_0000741> <http://purl.obofoundry.org/obo/IAO_0000136>)
+SubObjectPropertyOf(<http://www.ebi.ac.uk/swo/SWO_0000741> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 
 

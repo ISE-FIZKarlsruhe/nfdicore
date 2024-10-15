@@ -1,4 +1,3 @@
-
 Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -9,38 +8,1249 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
-Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore>
-
-
+Ontology(<https://nfdi.fiz-karlsruhe.de/ontology>
+<https://nfdi.fiz-karlsruhe.de/ontology/2.1.0>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
+Annotation(dcterms:abstract "### INTRODUCTION
+
+The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
+
+Recognizing the diverse needs of consortia, NFDIcore establishes mappings to a wide array of standards across domains, including the [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) and [schema.org](https://schema.org/), which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module [CTO](https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module [MWO](https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
+
+Aligning with [IAO](https://github.com/information-artifact-ontology/IAO) and [SCHEMA](https://schema.org/), NFDIcore focuses on describing 3 main concepts:
+1. Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, software, etc. 
+2. Independent Continuants that act autonomously (nfdicore:Agent), e.g. organizations and persons
+3. Planned processes and events, e.g. nfdicore:Project, nfdicore:Contributing, nfdicore:Event.
+
+Current development is managed via [GitHub](https://github.com/ISE-FIZKarlsruhe/nfdicore). Feel free to give feedback, contribute, or raise issues.
+
+### RESOURCES
+
+Within NFDIcore, resources encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization. These resources are categorized as information content entities (IAO_0000030), derived from material entities (BFO_0000040). 
+
+Each information content entity may establish \"is about\" (IAO_0000136) object relations, linking it to other material entities or information content entities that define its subject matter. In NFDIcore, the \"is about\" property is expanded to offer more detailed semantics and a comprehensive overview of the relationships between resources and material entities.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources1.png)
 
 
+Apart from relations to information content entities and material entities, resources within NFDIcore can also be described using specific qualities (BFO_0000019). For instance, resources can be associated with academic disciplines (nfdicore:AcademicDiscipline) they belong to or a degree of semantic expressivity the resources hold, allowing for a more nuanced understanding of their context and relevance. For this, property \"has quality\" (RO_0000086) is extended with more granular nfdicore properties.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources2.png)
 
-Annotation(dcterms:description "None")
-Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
-Annotation(dcterms:title "NFDI Core Ontology")
+
+Resources within NFDIcore engage in diverse relationships with agents, facilitated by various properties such as nfdicore:contributor, nfdicore:publisher, and nfdicore:contactPoint. While these properties enable direct connections between agents and resources, they may lack some expressivity. In scenarios requiring more detailed semantics to describe the relationship between an agent and a resource, the modeling proposed by BFO can be employed. To maintain consistency, we establish nfdicore properties like nfdicore:publisher as shortcuts using SWRL rules.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources3.png)
 
 
+### AGENTS
+
+Likewise, in NFDIcore, the concept of Agents extends to both organizations and persons, serving as independent continuants within BFO ontology. Agents are essential for management of research data resources, and include entities such as research institutions, consortia, universities, companies, and individual researchers or data scientists. 
+
+Within NFDIcore, agents can be directly linked to resources via different relations; may participate in different processes (BFO_0000015) and be associated with diverse roles (BFO_0000023), e.g. nfdicore:PublisherRole, nfdicore:ContributorRole, etc. within the processes. Moreover, agents engage in diverse relationships with other agents, e.g. nfdicore:member, nfdicore:partnerOrganization, etc. For consistency's sake, we streamline NFDIcore properties like nfdicore:contactPoint and nfdicore:fundingOrganization by creating shortcuts through SWRL rules.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/agents.png)
+
+
+### PROCESSES AND EVENTS
+
+In general, a process (BFO_0000015) can encompass subordinate processes and may involve instances marked by defined start and end times. Within NFDIcore, a planned process (OBI_0000011) commonly serves to establish connections between agents and information content entities (IAO_0000030), defining the roles (BFO_0000023) of agents with respect to the involved information content entities.
+
+The nfdicore:Event is associated with temporal entities that transpire over time, commonly marked by specific incidents or occurrences. The nfdicore:Event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, workshops, or activities like \"the 37th German Congress for Art History\" or \"Workshop \"Introduction to Iconclass\"\". Events are characterized by their start and end times and can be connected to agents involved in the events.
+
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)"@en)
+Annotation(dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0")
+Annotation(dcterms:created "2024-04-10")
+Annotation(dcterms:creator <https://nfdi4culture.de/id/E1925>)
+Annotation(dcterms:creator <https://nfdi4culture.de/id/E2415>)
+Annotation(dcterms:creator <https://nfdi4culture.de/id/E2416>)
+Annotation(dcterms:creator <https://nfdi4culture.de/id/E3095>)
+Annotation(dcterms:creator <https://orcid.org/0000-0001-7192-7143>)
+Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
+Annotation(dcterms:title "NFDIcore Ontology")
+Annotation(<http://purl.org/ontology/bibo/status> "Ontology Specification"@en)
+Annotation(<http://purl.org/vocab/vann/preferredNamespacePrefix> <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore>)
+Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-karlsruhe.de/ontology/>)
+Annotation(rdfs:label "NFDIcore")
+Annotation(owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1>)
+Annotation(owl:versionInfo "v2.1.0")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000029>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000010>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000025>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000033>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000104>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000311>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000444>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000011>))
+Declaration(Class(<https://schema.org/CreativeWork>))
+Declaration(Class(<https://schema.org/Service>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Agent>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/City>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Collection>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Consortium>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Contacting>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Contributing>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Country>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Dataset>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Event>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/FederalState>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Glossary>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/License>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/MediaType>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDICORE_0000000>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Ontology>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Organization>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Person>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Place>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Project>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Publication>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Resource>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Service>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Software>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Specification>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Standard>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Website>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001015>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/contactPoint>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/contributor>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/contributorOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/country>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/countryOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/dataset>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/datasetOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/federalState>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/license>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/licenseOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/location>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/locationOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/member>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/memberOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/part>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/partOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/participant>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/participantOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/publisher>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/publisherOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/relatedProject>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/software>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/softwareOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/specification>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/specificationOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/standard>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/standardOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/subjectArea>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/technology>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/technologyOf>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/url>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/urlOf>))
+Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/birthDate>))
+Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/deathDate>))
+Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate>))
+Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/emailAddress>))
+Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/endDate>))
+Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/fileExtension>))
+Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/foundationDate>))
+Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/startDate>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000232>))
+Declaration(AnnotationProperty(dcterms:abstract))
+Declaration(AnnotationProperty(dcterms:bibliographicCitation))
+Declaration(AnnotationProperty(dcterms:created))
+Declaration(AnnotationProperty(dcterms:creator))
 Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:format))
+Declaration(AnnotationProperty(dcterms:hasVersion))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
-
+Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/status>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespacePrefix>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri>))
+Declaration(AnnotationProperty(<http://rdfs.org/ns/void#feature>))
+Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
+Declaration(AnnotationProperty(rdfs:label))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
+Declaration(AnnotationProperty(<https://nfdi.fiz-karlsruhe.de/ontology/acronym>))
+Declaration(AnnotationProperty(<https://w3id.org/mod#status>))
 ############################
 #   Annotation Properties
 ############################
 
+# Annotation Property: dcterms:description (description)
+
 AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (license)
+
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (title)
+
 AnnotationAssertion(rdfs:label dcterms:title "title")
+
+# Annotation Property: <https://nfdi.fiz-karlsruhe.de/ontology/acronym> (nfdicore:acronym)
+
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/acronym> "nfdicore:acronym"@en)
+
+# Annotation Property: <https://w3id.org/mod#status> (<https://w3id.org/mod#status>)
+
+SubAnnotationPropertyOf(<https://w3id.org/mod#status> <http://purl.org/ontology/bibo/status>)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0001015> (location of)
+
+EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0001015> <https://nfdi.fiz-karlsruhe.de/ontology/locationOf>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> (best practice)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> "The property is a relationship between a resource and the specified best practice."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> "best practice"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <https://nfdi.fiz-karlsruhe.de/ontology/Specification>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> (best practice of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> "inverse of  property \"best practice\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> "best practice of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/contactPoint> (contact point)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/contactPoint> "The property is a relationship between a resource and a contact point."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/contactPoint> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/contactPoint> "contact point"@en)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/contactPoint> <https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/contactPoint> ObjectUnionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Project> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>))
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/contactPoint> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> (contact point of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> "inverse of  property \"contact point\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> "contact point of"@en)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/contributor> (contributor)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/contributor> "The property related a resource to a person or an organization responsible for making contributions to a resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/contributor> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/contributor> "contributor"@en)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/contributor> <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/contributor> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/contributor> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> (contributor of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> "inverse of property \"contributor\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> "contributor of"@en)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/country> (country)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/country> "The property relates a city or a state to a country where it is located."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/country> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/country> "country"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/country> <http://purl.obolibrary.org/obo/BFO_0000050>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/country> <https://nfdi.fiz-karlsruhe.de/ontology/countryOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/country> ObjectUnionOf(<https://nfdi.fiz-karlsruhe.de/ontology/City> <https://nfdi.fiz-karlsruhe.de/ontology/FederalState>))
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/country> <https://nfdi.fiz-karlsruhe.de/ontology/Country>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/countryOf> (country of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/countryOf> "inverse of property \"country\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/countryOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/countryOf> "country of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/countryOf> <https://nfdi.fiz-karlsruhe.de/ontology/part>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/dataset> (data set)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/dataset> "The property is a relation between a resource and a data set."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/dataset> "data set"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <http://purl.obolibrary.org/obo/IAO_0000219>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> (data set of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> "inverse of  property \"data set\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> "data set of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> (export format)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> "The property relates a resource to the format available for the export of a resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> "export format"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <https://nfdi.fiz-karlsruhe.de/ontology/MediaType>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> (export format of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> "inverse of  property \"export format\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> "export format of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/federalState> (federal state)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/federalState> "The property relates a city to a federal state where it is located."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/federalState> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/federalState> "federal state"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/federalState> <https://nfdi.fiz-karlsruhe.de/ontology/part>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/federalState> <https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/federalState> <https://nfdi.fiz-karlsruhe.de/ontology/City>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/federalState> <https://nfdi.fiz-karlsruhe.de/ontology/FederalState>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf> (federal state of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf> "inverse of property \"federal state\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf> "federal state of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf> <https://nfdi.fiz-karlsruhe.de/ontology/partOf>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> (funding organization)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> "The property relates a project to the organization that provided funding for it."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> "funding organization"@en)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/Project>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> (funding organization of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> "inverse of property \"funding organization\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> "funding organization of"@en)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> <https://nfdi.fiz-karlsruhe.de/ontology/Project>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/license> (license)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/license> "The property is a relationship between a resource and a license file.")
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/license> "license"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/license> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/licenseOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/License>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> (license of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> "inverse of property \"license\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> "license of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/licenseOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/location> (location)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/location> "The property is a relationship between a thing and a place its located at. "@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/location> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/location> "location"@en)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/location> <https://nfdi.fiz-karlsruhe.de/ontology/locationOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/location> owl:Thing)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/location> <https://nfdi.fiz-karlsruhe.de/ontology/Place>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/locationOf> (location of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/locationOf> "inverse of property \"location\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/locationOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/locationOf> "location of"@en)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> (media type)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> "The property relates a resource to its data format."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> "media type"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/MediaType>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> (media type of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> "inverse of  property \"media type\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> "media type of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/member> (member)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/member> "The property is a relationship between a consortium and an organization that is a member of the consortium."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/member> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/member> "member"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/member> <http://purl.obolibrary.org/obo/BFO_0000051>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/member> <https://nfdi.fiz-karlsruhe.de/ontology/part>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/member> <https://nfdi.fiz-karlsruhe.de/ontology/memberOf>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/memberOf> (member of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/memberOf> "The property is a relationship between an organization and a consortium it belongs to."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/memberOf> "inverse of property \"member\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/memberOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/memberOf> "member of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/memberOf> <https://nfdi.fiz-karlsruhe.de/ontology/partOf>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization> (parent organization)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization> "The property is a parental relationship between organizations."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization> "parent organization"@en)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/part> (part)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/part> "The generic property is a relationship between a thing and its part."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/part> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/part> "part"@en)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/part> <https://nfdi.fiz-karlsruhe.de/ontology/partOf>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/partOf> (part of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/partOf> "The generic property is a relationship between a thing and a thing in which it is physically or logically included."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/partOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/partOf> "part of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/partOf> <http://purl.obolibrary.org/obo/BFO_0000050>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/partOf> owl:Thing)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/partOf> owl:Thing)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/participant> (participant)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/participant> "The property is a relationship between a project and an agent that participates in the project."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/participant> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/participant> "participant"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/participant> <http://purl.obolibrary.org/obo/RO_0000057>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/participant> <https://nfdi.fiz-karlsruhe.de/ontology/participantOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/participant> <https://nfdi.fiz-karlsruhe.de/ontology/Project>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/participant> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/participantOf> (participant of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/participantOf> "inverse of  property \"prticipant\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/participantOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/participantOf> "participant of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/participantOf> <http://purl.obolibrary.org/obo/RO_0000056>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> (partner organization)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> "The property is a partner relationship between organizations. The property is symmetric."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> "partner organization"@en)
+SymmetricObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> (programming language)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> "The property links software to a programming language its written in.")
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> "programming language"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <http://purl.obolibrary.org/obo/IAO_0000136>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <http://www.ebi.ac.uk/swo/SWO_0000741>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/Software>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> (programming language of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> "inverse of  property \"programming language\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> "programming language of"@en)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/publisher> (publisher)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/publisher> "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/publisher> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/publisher> "publisher"@en)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/publisher> <https://nfdi.fiz-karlsruhe.de/ontology/publisherOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/publisher> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/publisher> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/publisherOf> (publisher of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/publisherOf> "inverse of  property \"publisher\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/publisherOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/publisherOf> "publisher of"@en)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> (related project)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> "The property is a relationship between a project or a resource and related projects."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> "related project"@en)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> ObjectUnionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Project> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>))
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> <https://nfdi.fiz-karlsruhe.de/ontology/Project>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> (represented collection)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> "The property is a relationship between a dataset and a collection it represents."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> "represented collection"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> <http://purl.obolibrary.org/obo/IAO_0000219>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> <https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> ObjectUnionOf(<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset>))
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> <https://nfdi.fiz-karlsruhe.de/ontology/Collection>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> (represented collection of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> "inverse of  property \"represented collection\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> "represented collection of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> <http://purl.obolibrary.org/obo/IAO_0000235>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> (semantic expressivity)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> "The property relates a resource to its semantic expressivity spectrum."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> "semantic expressivity"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> <http://purl.obolibrary.org/obo/RO_0000086>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> (semantic expressivity of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> "inverse of  property \"semantic expressivity\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> "semantic expressivity of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> <http://purl.obolibrary.org/obo/RO_0000080>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/software> (software)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/software> "The property is a relationship between a resource and a software it uses."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/software> "software"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/software> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/Software>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> (software of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> "inverse of  property \"sofware\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> "software of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> (sparql endpoint)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> "The property relates a data resource to its SPARQL Endpoint. "@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> "sparql endpoint"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> (sparql endpoint of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> "inverse of  property \"sparql endpoint\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> "sparql endpoint of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/specification> (specification)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/specification> "The property is a relationship between a resource and the international standard or norm."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/specification> "specification"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/specification> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/Specification>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> (specification of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> "inverse of  property \"specification\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> "specification of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/standard> (standard)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/standard> "The property relates a resource to the standard it relies on."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/standard> "standard"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/standard> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/standardOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/Standard>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/standardOf> (standard of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/standardOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/standardOf> "inverse of  property \"standard\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/standardOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/standardOf> "standard of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/standardOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> (subject area)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> "to check for BFO superproperty")
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> "subject area"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> <http://purl.obolibrary.org/obo/RO_0000086>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> <https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> ObjectUnionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <https://nfdi.fiz-karlsruhe.de/ontology/Project> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>))
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/subjectArea> <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf> (subject area of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf> "inverse of  property \"subject area\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf> "subject area of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf> <http://purl.obolibrary.org/obo/RO_0000080>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization> (subsidiary organization)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization> "inverse of \"parent organization\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization> "subsidiary organization"@en)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/technology> (technology)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/technology> "The property is a relationship between a resource and a technology it uses. "@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/technology> "technology"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> (technology of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> "inverse of  property \"technology\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> "technology of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/technologyOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/url> (url)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/url> "The property is a relationship between a thing and a url associated with the thing."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/url> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/url> "url"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/url> <http://purl.obolibrary.org/obo/IAO_0000235>)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/url> <https://nfdi.fiz-karlsruhe.de/ontology/urlOf>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/url> owl:Thing)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/url> owl:Thing)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/urlOf> (url of)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/urlOf> "inverse of  property \"url\""@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/urlOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/urlOf> "url of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/urlOf> <http://purl.obolibrary.org/obo/IAO_0000219>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <https://nfdi.fiz-karlsruhe.de/ontology/birthDate> (birth date)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/birthDate> "The property refers to the date on which a person was born."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/birthDate> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/birthDate> "birth date"@en)
+DataPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/birthDate> <https://nfdi.fiz-karlsruhe.de/ontology/Person>)
+DataPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/birthDate> rdfs:Literal)
+
+# Data Property: <https://nfdi.fiz-karlsruhe.de/ontology/deathDate> (death date)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/deathDate> "The property refers to the date on which a person passed away."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/deathDate> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/deathDate> "death date"@en)
+DataPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/deathDate> <https://nfdi.fiz-karlsruhe.de/ontology/Person>)
+DataPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/deathDate> rdfs:Literal)
+
+# Data Property: <https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> (dissolution date)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> "The property refers to the date on which the organization ceased to exist or was formally dissolved."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> "dissolution date"@en)
+DataPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
+DataPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate> rdfs:Literal)
+
+# Data Property: <https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> (email address)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> "The property relates an agent to their email address."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> "email address"@en)
+DataPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+DataPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/emailAddress> rdfs:Literal)
+
+# Data Property: <https://nfdi.fiz-karlsruhe.de/ontology/endDate> (end date)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/endDate> "The property refers to the moment in time when an event ends."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/endDate> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/endDate> "end date"@en)
+DataPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/endDate> <https://nfdi.fiz-karlsruhe.de/ontology/Event>)
+
+# Data Property: <https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> (file extension)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> "file extension")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> "mp4")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> "ttl")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> "txt")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> "xml")
+DataPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/fileExtension> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+
+# Data Property: <https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> (foundation date)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> "The property refers to the specific date on which the organization was officially established or founded."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> "foundation date"@en)
+DataPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
+DataPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/foundationDate> rdfs:Literal)
+
+# Data Property: <https://nfdi.fiz-karlsruhe.de/ontology/startDate> (start date)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/startDate> "The property refers to the moment in time when an event begins."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/startDate> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/startDate> "start date"@en)
+DataPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/startDate> <https://nfdi.fiz-karlsruhe.de/ontology/Event>)
+DataPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/startDate> rdfs:Literal)
+
+
 
 ############################
 #   Classes
 ############################
 
+# Class: <http://purl.obolibrary.org/obo/IAO_0000010> (software)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000010> <https://nfdi.fiz-karlsruhe.de/ontology/Software>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000025> (programming language)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000025> <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000311> (publication)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000311> <https://nfdi.fiz-karlsruhe.de/ontology/Publication>)
+
+# Class: <http://www.ebi.ac.uk/swo/SWO_0000002> (software license)
+
+EquivalentClasses(<http://www.ebi.ac.uk/swo/SWO_0000002> <https://nfdi.fiz-karlsruhe.de/ontology/License>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> (academic discipline)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> "A quality of an entity that specifies the subject area, domain or academic discipline of an entity."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> "2024-03-26: SB & JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)"@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> "An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> "academic discipline"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> <https://www.wikidata.org/entity/Q12271>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Agent> (agent)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Agent> "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Agent> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Agent> "agent"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://purl.obolibrary.org/obo/BFO_0000004>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/City> (city)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/City> "A place that refers to a densely populated urban area."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/City> "A city or a town where the thing is located."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/City> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/City> "city"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/City> "Berlin, Hannover, Kyiv"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/City> <https://nfdi.fiz-karlsruhe.de/ontology/Place>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Collection> (collection)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Collection> "A material entity that represents a collection of material entities intended to be understood together as a whole."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Collection> "A tangible collection of valuables published or curated by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Collection> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Collection> "collection"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Collection> "A collection of arts displayed at the museum"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Collection> <http://purl.obolibrary.org/obo/BFO_0000040>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> (consortium)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> "consortium"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Organization> ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/part> <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember>)))
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> (consortium member)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> "consortium member"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> "Museums of City Cologne is a member of NFDI4Culture consortium."@en)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Organization> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole>)))
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> (consortium member role)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> "consortium member role"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> (contact point role)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> "contact point role"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Contacting> (contacting)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Contacting> "A planned process in which the contact information of an entity is provided."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Contacting> "A planned process in which the contact information of an entity is provided."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Contacting> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Contacting> "contacting"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Contacting> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> (contributing)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> "A planned process of contibuting or providing information to an endeavor."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> "The contibution or provision of information to an endeavor."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> "contributing"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> (contributor role)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "contributor role"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> (controlled vocabulary)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> "Semantic expressivity that refers to a standardized set of terms and descriptors used to index and retrieve information systematically."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> "A standardized set of terms and descriptors used to index and retrieve information systematically."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> "controlled vocabulary"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> "the Union List of Artist Names (ULAN), the Cultural Objects Name Authority (CONA)")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Country> (country)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Country> "A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Country> "A country where the thing is located."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Country> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Country> "country"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Country> <https://nfdi.fiz-karlsruhe.de/ontology/Place>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> (creative work)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "An information content entity that refers to a manifestation of someone's creative effort."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "creative work"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> <https://schema.org/CreativeWork>))
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> (data portal)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> "An online platform that provides access to datasets."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> "data portal"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> "Bach digital, KultSam, MusiXplora"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <https://nfdi.fiz-karlsruhe.de/ontology/Website>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> (dataset)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "A creative work that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "Structured information about a resource provided by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "dataset"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Event> (event)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Event> "An occurent that represents an occurence or happening that unfolds in time."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Event> "A class that represents entities that occur or unfold in time, typically characterized by a specific happening or occurrence with temporal properties. Events encompass a wide range of occurrences, including but not limited to happenings, incidents, activities, or processes."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Event> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Event> "event"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Event> "conferences, wars, strikes, celebrations, accidents, workshops, meetings, or any other specific incident or happening."@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/FederalState> (federal state)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/FederalState> "A place that refers to a geographical territory forming part of a country."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/FederalState> "A federal state where the thing is located."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/FederalState> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/FederalState> "federal state"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/FederalState> "Sachsen, Berlin"@de)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> <https://nfdi.fiz-karlsruhe.de/ontology/Place>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> (funding organization role)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> "funding organization role"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Glossary> (glossary)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Glossary> "Semantic expressivity that refers to a list of terms and their definitions within a specific domain or academic discipline."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Glossary> "A compilation of terms and their definitions within a specific domain or academic discipline."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Glossary> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Glossary> "glossary"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Glossary> "ICOM Museum Glossary"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Glossary> <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/License> (license)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/License> "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/License> "A document that provides legal guidelines for the use of a resource, e.g. a software."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/License> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/License> "license"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/License> "cc-by-3, Digital Peer Publishing Lizenz"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/License> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> (MIME-type)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> "A media type that serves as a standardized identifier for specifying the nature and format of data."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> "MIME-type"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> <https://nfdi.fiz-karlsruhe.de/ontology/MediaType>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> (media type)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> "A directive information entity that describes a media type a bearer has."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> "A digital resource format or physical medium."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> "media type"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> <http://purl.obolibrary.org/obo/IAO_0000033>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Ontology> (ontology)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Ontology> "Semantic expressivity that refers to a semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and machine-understandable manner."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Ontology> "A semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and formalized manner, enabling machine-understandable reasoning and inference."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Ontology> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Ontology> "ontology"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Ontology> "CIDOC-CRM, BFO, nfdicore")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Ontology> <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Organization> (organization)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Organization> "An agent that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Organization> "An organization of some kind, e.g. research organization or business organization"@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Organization> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Organization> "organization"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Organization> "University Library in Leipzig, Museums of City Cologne")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Person> (person)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Person> "An agent that represents a single human individual."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/Person> "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Person> "A resource that represents a single person."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Person> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Person> "person"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Person> "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Person> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Place> (place)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Place> "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Place> "A spatial region, e.g. country, city or district."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Place> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Place> "place"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Place> "Hessen, Berlin, Schweiz")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://purl.obolibrary.org/obo/BFO_0000029>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> (programming language)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> "A technological means that is used for implementing software."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> "A formal language used for implementing a software."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> "programming language"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> "Java, Ruby, C++, Perl, PHP")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Project> (project)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Project> "A planned process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Project> "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Project> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Project> "project"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Project> "Freischütz digital, Corpus Vitrearum Medii Aevi")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Publication> (publication)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "A creative work that is the output of a publishing process."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Publication> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "publication"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> (publisher role)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> "publisher role"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Resource> (resource)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Resource> "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/Resource> "2024-03-25 - Sasha Bruns: 
+This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Resource> "The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Resource> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Resource> "resource"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> (semantic expressivity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> "A quality of a resource that defines the degree of expressivity in the semantic representation of a resource."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> "The class represents the degree of expressivity in the semantic representation of a resource, such as an ontology, taxonomy, or glossary. It specifies the extent to which the resource captures and conveys the meaning, relationships, and semantics of concepts within a knowledge domain."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> "semantic expressivity"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> "controlled vocabulary, ontology, taxonomy"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Service> (service)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Service> "An information content entity that refers to offerings provided by individuals or organizations to facilitate and contribute to the specific goals."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Service> "Services are resources offered by organizations or people to support and contribute to the predefined goals of a project. Services may encompass a diverse range of contributions such as data curation, specialized expertise, skill and various other forms of support."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Service> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Service> "service"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Service> "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/Service> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> <https://schema.org/Service>))
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Service> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Software> (software)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Software> "A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Software> "A computer software provided by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Software> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Software> "software"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Software> "Edirom, Muscat")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Software> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Specification> (specification)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "A creative work that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "A set of requirements, guidelines, standards contributed by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Specification> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "specification"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "Guidelines, technical specifications, design specifications"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Specification> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000104> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>))
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Standard> (standard)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Standard> "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Standard> "An international standard and norm that can be used to evaluate or create a resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Standard> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Standard> "standard"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Standard> "ISO 15511, DINI-Zertifikat")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Standard> <https://nfdi.fiz-karlsruhe.de/ontology/Specification>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> (taxonomy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> "Semantic expressivity that refers to a hierarchical classification system that organizes concepts into a tree-like structure."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> "A hierarchical classification system that organizes concepts into a tree-like structure based on their shared characteristics and relationships."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> "taxonomy"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> "Linnaean Taxonomy, Iconclass"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> (technological means)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> "A plan specification that refers to technology employed for the creation, management, utilization, or control of a resource."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> "A technology, e.g. a web application or a programming framework used in a resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> "technological means"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> "Groovy on Grails, Angular"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> <http://purl.obolibrary.org/obo/IAO_0000104>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> (thesaurus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> "A controlled vocabulary organized hierarchically and provided with associative relationships, such as synonyms, broader terms, and narrower terms."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> "A hierarchical controlled vocabulary enriched with associative relationships, including synonyms, broader terms, and narrower terms."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> "thesaurus"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> "Getty Art & Architecture Thesaurus, UNESCO Thesaurus for cultural and scientific documentation")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Website> (website)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Website> "A creative work that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Website> "A collection of webpages contributed by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Website> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Website> "website"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Website> "https:\\/\\/opac.rism.info")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Website> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> (consulting & funding)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> "A service that contributes to providing expert guidance in broad range of topics, including securing funding and navigating the application process for research projects."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> "Services that aim at providing expert advice, guidance, and support to agents, particular with securing funding opportunities for their efforts. This may include providing individual support for a broad range of research data and software concerns to scholars, institutions and data providers, assistance in identifying suitable funding sources, crafting grant proposals, and navigating the application process."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> "consulting & funding"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> "Flex Funds, NFDI4Culture Helpdesk"^^rdfs:Literal)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Consulting&Funding> <https://nfdi.fiz-karlsruhe.de/ontology/Service>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> (information & documentation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> "A service that contributes to organizing and managing research data."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> "Services related to organizing, cataloging, and managing research data and information. This includes developing metadata schemas, creating data dictionaries, establishing standardized data formats, and ensuring data quality and integrity"@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> "information & documentation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> "Registry for Tools & Services, Culture Information Portal")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Information&Documentation> <https://nfdi.fiz-karlsruhe.de/ontology/Service>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> (learning & teaching)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> "A service that contributes to educating agents on research data management."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> "Services that aim to support agents in developing essential skills and competencies related to research data management. This includes organizing training workshops, webinars, and educational resources, providing personalized consultations, mentoring programs, and community engagement initiatives."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> "learning & teaching"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> "Educational Resource Finder")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Learning&Teaching> <https://nfdi.fiz-karlsruhe.de/ontology/Service>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> (linkage & enrichment)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> "A service that contributes to integrating research data with external sources and data enrichment."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> "Services that focus on enhancing research data by integrating it with external datasets, vocabularies, and ontologies. This involves establishing interoperability frameworks, data integration pipelines, and semantic enrichment techniques to connect disparate datasets and enable cross-disciplinary research."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> "linkage & enrichment"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> "Culture Knowledge Graph, Semantic Kompakkt, Wikibase4Research")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Linkage&Enrichment> <https://nfdi.fiz-karlsruhe.de/ontology/Service>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> (participation & collaboration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> "A service that contributes to fostering interdisciplinary collaboration and community engagement within the research community."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> "Services that focus on fostering interdisciplinary collaboration, knowledge exchange, and community engagement within the research ecosystem. This includes organizing networking events, collaborative projects, and virtual platforms for researchers to connect, share ideas, and collaborate on common research challenges."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> "participation & collaboration"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> "Forum for Data Standards and Data Quality, Expert Forum for sustainable Software Development in NFDI4Culture, Linked Open Data Working Group")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Participation&Collaboration> <https://nfdi.fiz-karlsruhe.de/ontology/Service>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> (publication & dissemination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> "A service that contributes to sharing and publication of research findings."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> "Services that aim at facilitating the sharing and dissemination of research findings and outputs with wider audiences. This includes supporting agents in preparing resources for publication, production, publishing, sprint services, etc."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> "publication & dissemination"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> "NextGen Books")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Publication&Dissemination> <https://nfdi.fiz-karlsruhe.de/ontology/Service>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> (storage & preservation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> "A service that contributes to long-term archiving and data integrity through secure storage and preservation strategies."@en)
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> "Services that focus on the long-term archiving and preservation of research data and digital assets. This involves providing secure storage infrastructures, backup solutions, and preservation strategies to prevent data loss over time."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> "storage & preservation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> "RADAR4Culture, Curated Repository List"@en)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Storage&Preservation> <https://nfdi.fiz-karlsruhe.de/ontology/Service>)
 
 
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Publisher") Body(ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>)) ClassAtom(<http://purl.obolibrary.org/obo/IAO_0000444> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/pr>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/pr>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/pr>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)))Head(ObjectPropertyAtom(<https://nfdi.fiz-karlsruhe.de/ontology/publisherOf> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Contact Point of Resource") Body(ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Contacting> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)))Head(ObjectPropertyAtom(<https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Contact Point of Project") Body(ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Project> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)))Head(ObjectPropertyAtom(<https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Contributor") Body(ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/cr>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)))Head(ObjectPropertyAtom(<https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/a>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/r>))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Funding Organization") Body(ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Organization> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/o>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/Project> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ClassAtom(<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/f>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/o>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/f>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/f>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/o>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>)))Head(ObjectPropertyAtom(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization> Variable(<https://nfdi.fiz-karlsruhe.de/ontology/p>) Variable(<https://nfdi.fiz-karlsruhe.de/ontology/o>))))
+AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
+AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2415> "Tabea Tietz")
+AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2416> "Oleksandra Bruns")
+AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E3095> "Etienne Posthumus")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
 )
-
