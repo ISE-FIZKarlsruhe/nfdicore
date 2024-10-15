@@ -8,8 +8,6 @@
   
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl" uri="imports/iao_import.owl"/>
   
-  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/https://schema.org_import.owl" uri="imports/https://schema.org_import.owl"/>
-  
   
 
 

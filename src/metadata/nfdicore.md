@@ -32,7 +32,6 @@ products:
 dependencies:
 - id: ro
 - id: iao
-- id: https://schema.org
 
 tracker: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues
 license:

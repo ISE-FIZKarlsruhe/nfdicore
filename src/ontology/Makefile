@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                e06e777c8088a6a2c8c04d4aadf43ef801ba4d2ee530edb6084e889d647c4649
+CONFIG_HASH=                05b8afb2ffe769deffdb160eb1e74240367b02e4682669de157036178cc88eb9
 
 
 # ----------------------------------------
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro iao https://schema.org
+IMPORTS =  ro iao
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -422,14 +422,6 @@ mirror-ro: | $(TMPDIR)
 mirror-iao: | $(TMPDIR)
 	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: https://schema.org
-.PHONY: mirror-https://schema.org
-.PRECIOUS: $(MIRRORDIR)/https://schema.org.owl
-mirror-https://schema.org: | $(TMPDIR)
-	curl -L $(OBOBASE)/https://schema.org.owl --create-dirs -o $(TMPDIR)/https://schema.org-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/https://schema.org-download.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

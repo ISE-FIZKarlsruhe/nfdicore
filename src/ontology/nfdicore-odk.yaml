@@ -2,6 +2,7 @@ id: nfdicore
 title: "NFDI Core Ontology"
 github_org: ISE-FIZKarlsruhe
 git_main_branch: odk
+git_user: joerg
 repo: nfdicore
 uribase: https://nfdi.fiz-karlsruhe.de/ontology
 release_artefacts:
@@ -16,7 +17,7 @@ import_group:
   products:
     - id: ro
     - id: iao
-    - id: https://schema.org
+    #- id: https://schema.org
 robot_java_args: "-Xmx8G"
 robot_report:
   use_labels: TRUE
