@@ -15,9 +15,20 @@ export_formats:
   - ttl
 import_group:
   products:
-    - id: ro
     - id: iao
-    #- id: https://schema.org
+#    - id: gaz
+    - id: schema
+      mirror_from:  "https://raw.githubusercontent.com/schemaorg/schemaorg/refs/tags/v28.0-release/data/releases/28.0/schemaorg.owl"
+      module_type: slme
+      module_type_slme: STAR
+      slme_individuals: exclude
+    - id: swo
+      mirror_from: "https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl"
+      #module_type: SUBSET
+      module_type: custom
+      #module_type_slme: STAR
+      #slme_individuals: exclude
+
 robot_java_args: "-Xmx8G"
 robot_report:
   use_labels: TRUE

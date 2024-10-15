@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                05b8afb2ffe769deffdb160eb1e74240367b02e4682669de157036178cc88eb9
+CONFIG_HASH=                df5d9b55da3a8c2c24e5180dc00b34d10152bfe8745a9b942e736f94c7e77cab
 
 
 # ----------------------------------------
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro iao
+IMPORTS =  iao gaz schema swo
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -376,6 +376,18 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: schema
+
+$(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl $(IMPORTDIR)/schema_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/schema_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method STAR \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: swo
+
+$(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -408,20 +420,34 @@ IMP_LARGE=true # Global parameter to bypass handling of large imports
 ifeq ($(strip $(MIR)),true)
 
 
-## ONTOLOGY: ro
-.PHONY: mirror-ro
-.PRECIOUS: $(MIRRORDIR)/ro.owl
-mirror-ro: | $(TMPDIR)
-	curl -L $(OBOBASE)/ro.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: iao
 .PHONY: mirror-iao
 .PRECIOUS: $(MIRRORDIR)/iao.owl
 mirror-iao: | $(TMPDIR)
 	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: gaz
+.PHONY: mirror-gaz
+.PRECIOUS: $(MIRRORDIR)/gaz.owl
+mirror-gaz: | $(TMPDIR)
+	curl -L $(OBOBASE)/gaz.owl --create-dirs -o $(TMPDIR)/gaz-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/gaz-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schema
+.PHONY: mirror-schema
+.PRECIOUS: $(MIRRORDIR)/schema.owl
+mirror-schema: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/schemaorg/schemaorg/refs/tags/v28.0-release/data/releases/28.0/schemaorg.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: swo
+.PHONY: mirror-swo
+.PRECIOUS: $(MIRRORDIR)/swo.owl
+mirror-swo: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

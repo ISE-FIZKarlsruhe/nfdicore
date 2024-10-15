@@ -1,5 +1,5 @@
 
-Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.owl#>)
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -9,12 +9,12 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
-Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.owl>
+Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore>
 
-
-Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/ro_import.owl>)
 
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
 
 
 
@@ -40,9 +40,6 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 #   Classes
 ############################
 
-# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDICORE_0000000> (root node)
-
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDICORE_0000000> "root node"@en)
 
 
 )
