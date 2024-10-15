@@ -1,0 +1,26 @@
+id: nfdicore
+title: "NFDI Core Ontology"
+github_org: ISE-FIZKarlsruhe
+git_main_branch: odk
+repo: nfdicore
+uribase: https://nfdi.fiz-karlsruhe.de/ontology
+release_artefacts:
+  - base
+  - full
+  - simple
+primary_release: full
+export_formats:
+  - owl
+  - ttl
+import_group:
+  products:
+    - id: ro
+    - id: iao
+    - id: https://schema.org
+robot_java_args: "-Xmx8G"
+robot_report:
+  use_labels: TRUE
+  fail_on: ERROR
+  custom_profile: TRUE
+  report_on:
+    - edit

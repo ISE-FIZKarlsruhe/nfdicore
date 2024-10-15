@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
+
+  
+  
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/ro_import.owl" uri="imports/ro_import.owl"/>
+  
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl" uri="imports/iao_import.owl"/>
+  
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/https://schema.org_import.owl" uri="imports/https://schema.org_import.owl"/>
+  
+  
+
+
+  
+
+</group>
+</catalog>
