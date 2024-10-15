@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                df5d9b55da3a8c2c24e5180dc00b34d10152bfe8745a9b942e736f94c7e77cab
+CONFIG_HASH=                ae33d1e9becac7f3325584ac2acc2dab0f0c745bca70d8e2d14669126267469f
 
 
 # ----------------------------------------
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao gaz schema swo
+IMPORTS =  iao schema swo
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -426,14 +426,6 @@ ifeq ($(strip $(MIR)),true)
 mirror-iao: | $(TMPDIR)
 	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: gaz
-.PHONY: mirror-gaz
-.PRECIOUS: $(MIRRORDIR)/gaz.owl
-mirror-gaz: | $(TMPDIR)
-	curl -L $(OBOBASE)/gaz.owl --create-dirs -o $(TMPDIR)/gaz-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/gaz-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schema
