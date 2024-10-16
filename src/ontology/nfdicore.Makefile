@@ -10,7 +10,7 @@
 ## because of https://github.com/allysonlister/swo/issues/48 we have to make a replacement "s/obofoundry/obolibrary/g"
 ##
 ## also "Declaration(AnnotationProperty(rdf:type))" had to be deleted and
-## we need to remove the IAO_0000589 anotation, because it has been annotated in a way, that rdf:type would be inferred as annotation property, which is wrong (that's and error in SWO)
+## we need to remove the IAO_0000589 anotation, because it has been annotated in a way, that rdf:type would be inferred as annotation property, which is not OWL DL conform
 
 $(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl $(IMPORTDIR)/swo_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
