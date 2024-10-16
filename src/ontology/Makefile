@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                ae33d1e9becac7f3325584ac2acc2dab0f0c745bca70d8e2d14669126267469f
+CONFIG_HASH=                18f21e9cd6e5bb073225ab5ee4747e94122dcf3e4910e3b890fb0d1dd577a9af
 
 
 # ----------------------------------------
@@ -51,7 +51,7 @@ ODK_VERSION_MAKEFILE =      v1.5.2
 
 TODAY ?=                    $(shell date +%Y-%m-%d)
 OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
-VERSION=                    2.1.0
+VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
 OTHER_SRC =                 
@@ -511,7 +511,7 @@ $(ONT).ttl: $(ONT).owl
 # -----------------------------------------------------
 # Release artefacts: variants (base, full, simple, etc)
 # -----------------------------------------------------
-SHARED_ROBOT_COMMANDS = 
+SHARED_ROBOT_COMMANDS = remove --term owl:Nothing
 
 $(ONTOLOGYTERMS): $(SRCMERGED)
 	$(ROBOT) query -f csv -i $< --query ../sparql/nfdicore_terms.sparql $@
@@ -528,7 +528,7 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms False \
 	relax \
 	reduce -r ELK \
-	remove --base-iri $(URIBASE)/NFDICORE --axioms external --preserve-structure false --trim false \
+	remove --base-iri $(URIBASE) --axioms external --preserve-structure true --trim false \
 	$(SHARED_ROBOT_COMMANDS) \
 	annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
 		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
