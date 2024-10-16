@@ -6,15 +6,78 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-base.owl">
-        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-10-15/nfdicore-base.owl"/>
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2.1.0/nfdicore-base.owl"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <dcterms:description>None</dcterms:description>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
-        <dcterms:title>NFDI Core Ontology</dcterms:title>
-        <owl:versionInfo>2024-10-15</owl:versionInfo>
+        <dcterms:abstract xml:lang="en">### INTRODUCTION
+
+The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
+
+Recognizing the diverse needs of consortia, NFDIcore establishes mappings to a wide array of standards across domains, including the [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) and [schema.org](https://schema.org/), which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module [CTO](https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module [MWO](https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
+
+Aligning with [IAO](https://github.com/information-artifact-ontology/IAO) and [SCHEMA](https://schema.org/), NFDIcore focuses on describing 3 main concepts:
+1. Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, software, etc. 
+2. Independent Continuants that act autonomously (nfdicore:Agent), e.g. organizations and persons
+3. Planned processes and events, e.g. nfdicore:Project, nfdicore:Contributing, nfdicore:Event.
+
+Current development is managed via [GitHub](https://github.com/ISE-FIZKarlsruhe/nfdicore). Feel free to give feedback, contribute, or raise issues.
+
+### RESOURCES
+
+Within NFDIcore, resources encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization. These resources are categorized as information content entities (IAO_0000030), derived from material entities (BFO_0000040). 
+
+Each information content entity may establish &quot;is about&quot; (IAO_0000136) object relations, linking it to other material entities or information content entities that define its subject matter. In NFDIcore, the &quot;is about&quot; property is expanded to offer more detailed semantics and a comprehensive overview of the relationships between resources and material entities.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources1.png)
+
+
+Apart from relations to information content entities and material entities, resources within NFDIcore can also be described using specific qualities (BFO_0000019). For instance, resources can be associated with academic disciplines (nfdicore:AcademicDiscipline) they belong to or a degree of semantic expressivity the resources hold, allowing for a more nuanced understanding of their context and relevance. For this, property &quot;has quality&quot; (RO_0000086) is extended with more granular nfdicore properties.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources2.png)
+
+
+Resources within NFDIcore engage in diverse relationships with agents, facilitated by various properties such as nfdicore:contributor, nfdicore:publisher, and nfdicore:contactPoint. While these properties enable direct connections between agents and resources, they may lack some expressivity. In scenarios requiring more detailed semantics to describe the relationship between an agent and a resource, the modeling proposed by BFO can be employed. To maintain consistency, we establish nfdicore properties like nfdicore:publisher as shortcuts using SWRL rules.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources3.png)
+
+
+### AGENTS
+
+Likewise, in NFDIcore, the concept of Agents extends to both organizations and persons, serving as independent continuants within BFO ontology. Agents are essential for management of research data resources, and include entities such as research institutions, consortia, universities, companies, and individual researchers or data scientists. 
+
+Within NFDIcore, agents can be directly linked to resources via different relations; may participate in different processes (BFO_0000015) and be associated with diverse roles (BFO_0000023), e.g. nfdicore:PublisherRole, nfdicore:ContributorRole, etc. within the processes. Moreover, agents engage in diverse relationships with other agents, e.g. nfdicore:member, nfdicore:partnerOrganization, etc. For consistency&apos;s sake, we streamline NFDIcore properties like nfdicore:contactPoint and nfdicore:fundingOrganization by creating shortcuts through SWRL rules.
+ 
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/agents.png)
+
+
+### PROCESSES AND EVENTS
+
+In general, a process (BFO_0000015) can encompass subordinate processes and may involve instances marked by defined start and end times. Within NFDIcore, a planned process (OBI_0000011) commonly serves to establish connections between agents and information content entities (IAO_0000030), defining the roles (BFO_0000023) of agents with respect to the involved information content entities.
+
+The nfdicore:Event is associated with temporal entities that transpire over time, commonly marked by specific incidents or occurrences. The nfdicore:Event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, workshops, or activities like &quot;the 37th German Congress for Art History&quot; or &quot;Workshop &quot;Introduction to Iconclass&quot;&quot;. Events are characterized by their start and end times and can be connected to agents involved in the events.
+
+![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)</dcterms:abstract>
+        <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0</dcterms:bibliographicCitation>
+        <dcterms:created>2024-04-10</dcterms:created>
+        <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
+        <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
+        <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
+        <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E3095"/>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
+        <dcterms:description xml:lang="en">NFDIcore ontology</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dcterms:title>NFDIcore Ontology</dcterms:title>
+        <bibo:status xml:lang="en">Ontology Specification</bibo:status>
+        <vann:preferredNamespacePrefix rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore"/>
+        <vann:preferredNamespaceUri rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/"/>
+        <rdfs:label>NFDIcore</rdfs:label>
+        <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/1.1.1"/>
+        <owl:versionInfo>v2.1.0</owl:versionInfo>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -36,6 +99,30 @@
     
 
 
+    <!-- http://purl.org/dc/terms/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
@@ -54,22 +141,21 @@
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://purl.org/ontology/bibo/status -->
 
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
     
 
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDICORE_0000000 -->
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDICORE_0000000">
-        <rdfs:label xml:lang="en">root node</rdfs:label>
-    </owl:Class>
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
 </rdf:RDF>
 
 
