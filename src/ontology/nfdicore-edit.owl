@@ -9,7 +9,6 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology>
-<https://nfdi.fiz-karlsruhe.de/ontology/2.1.0>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
@@ -76,7 +75,6 @@ Annotation(<http://purl.org/vocab/vann/preferredNamespacePrefix> <https://nfdi.f
 Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-karlsruhe.de/ontology/>)
 Annotation(rdfs:label "NFDIcore")
 Annotation(owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1>)
-Annotation(owl:versionInfo "v2.1.0")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000029>))
@@ -304,7 +302,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/contrib
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> "contributor of"@en)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/country> (country)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/country> (of country)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/country> "The property relates a city or a state to a country where it is located."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/country> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
@@ -357,7 +355,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/exp
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> "export format of"@en)
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/federalState> (federal state)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/federalState> (has federal state)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/federalState> "The property relates a city to a federal state where it is located."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/federalState> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
@@ -391,7 +389,7 @@ AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/fundingOr
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf> <https://nfdi.fiz-karlsruhe.de/ontology/Project>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/license> (license)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/license> (has license)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/license> "The property is a relationship between a resource and a license file.")
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
@@ -423,7 +421,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/locatio
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/locationOf> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/locationOf> "location of"@en)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> (media type)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> (has media type)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> "The property relates a resource to its data format."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
@@ -505,7 +503,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/par
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> "partner organization"@en)
 SymmetricObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> (programming language)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> (has programming language)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> "The property links software to a programming language its written in.")
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
@@ -562,7 +560,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/rep
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> "represented collection of"@en)
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf> <http://purl.obolibrary.org/obo/IAO_0000235>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> (semantic expressivity)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> (has semantic expressivity)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> "The property relates a resource to its semantic expressivity spectrum."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
@@ -579,7 +577,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/sem
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> "semantic expressivity of"@en)
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf> <http://purl.obolibrary.org/obo/RO_0000080>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/software> (software)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/software> (has software)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/software> "The property is a relationship between a resource and a software it uses."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
@@ -615,7 +613,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/spa
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> "sparql endpoint of"@en)
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/specification> (specification)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/specification> (has specification)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/specification> "The property is a relationship between a resource and the international standard or norm."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
@@ -633,7 +631,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/spe
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> "specification of"@en)
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/standard> (standard)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/standard> (has standard)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/standard> "The property relates a resource to the standard it relies on."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)

@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-10-16/imports/schema_import.owl>
-Annotation(owl:versionInfo "2024-10-16")
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2.1.0/imports/schema_import.owl>
+Annotation(owl:versionInfo "2.1.0")
 
 Declaration(Class(<https://schema.org/CreativeWork>))
 Declaration(Class(<https://schema.org/Service>))
