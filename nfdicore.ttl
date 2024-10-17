@@ -1,4 +1,4 @@
-@prefix : <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.ttl#> .
+@prefix : <https://nfdi.fiz-karlsruhe.de/ontology#> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -16,11 +16,11 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
 @prefix ontology: <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.ttl> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.ttl> rdf:type owl:Ontology ;
-                                                       owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2.1.0/nfdicore.ttl> ;
-                                                       dcterms:abstract """### INTRODUCTION
+<https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.1.0> ;
+                                          dcterms:abstract """### INTRODUCTION
 
 The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
 
@@ -68,22 +68,21 @@ In general, a process (BFO_0000015) can encompass subordinate processes and may 
 The nfdicore:Event is associated with temporal entities that transpire over time, commonly marked by specific incidents or occurrences. The nfdicore:Event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, workshops, or activities like \"the 37th German Congress for Art History\" or \"Workshop \"Introduction to Iconclass\"\". Events are characterized by their start and end times and can be connected to agents involved in the events.
 
 ![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)"""@en ;
-                                                       dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
-                                                       dcterms:created "2024-04-10" ;
-                                                       dcterms:creator <https://nfdi4culture.de/id/E1925> ,
-                                                                       <https://nfdi4culture.de/id/E2415> ,
-                                                                       <https://nfdi4culture.de/id/E2416> ,
-                                                                       <https://nfdi4culture.de/id/E3095> ,
-                                                                       <https://orcid.org/0000-0001-7192-7143> ;
-                                                       dcterms:description "NFDIcore ontology"@en ;
-                                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                                       dcterms:title "NFDIcore Ontology" ;
-                                                       bibo:status "Ontology Specification"@en ;
-                                                       vann:preferredNamespacePrefix ontology:nfdicore ;
-                                                       vann:preferredNamespaceUri ontology: ;
-                                                       rdfs:label "NFDIcore" ;
-                                                       owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
-                                                       owl:versionInfo "2.1.0" .
+                                          dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                          dcterms:created "2024-04-10" ;
+                                          dcterms:creator <https://nfdi4culture.de/id/E1925> ,
+                                                          <https://nfdi4culture.de/id/E2415> ,
+                                                          <https://nfdi4culture.de/id/E2416> ,
+                                                          <https://nfdi4culture.de/id/E3095> ,
+                                                          <https://orcid.org/0000-0001-7192-7143> ;
+                                          dcterms:description "NFDIcore ontology"@en ;
+                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                          dcterms:title "NFDIcore Ontology"@en ;
+                                          bibo:status "Ontology Specification"@en ;
+                                          vann:preferredNamespaceUri ontology: ;
+                                          rdfs:label "NFDIcore" ;
+                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                          owl:versionInfo "2.1.0" .
 
 #################################################################
 #    Annotation properties
@@ -103,20 +102,20 @@ obo:BFO_0000180 rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/IAO_0000111
 obo:IAO_0000111 rdf:type owl:AnnotationProperty ;
-                obo:IAO_0000111 "editor preferred label" ,
-                                "editor preferred label"@en ,
-                                "editor preferred term" ,
+                obo:IAO_0000111 "editor preferred label"@en ,
                                 "editor preferred term"@en ,
+                                "editor preferred label" ,
+                                "editor preferred term" ,
                                 "editor preferred term~editor preferred label" ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)"@en ;
                 obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
                 obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
                 rdfs:isDefinedBy obo:iao.owl ;
-                rdfs:label "editor preferred label" ,
-                           "editor preferred label"@en ,
-                           "editor preferred term" ,
+                rdfs:label "editor preferred label"@en ,
                            "editor preferred term"@en ,
+                           "editor preferred label" ,
+                           "editor preferred term" ,
                            "editor preferred term~editor preferred label" .
 
 
@@ -124,14 +123,14 @@ obo:IAO_0000111 rdf:type owl:AnnotationProperty ;
 obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
                 obo:IAO_0000111 "example of usage"@en ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
-                obo:IAO_0000115 "A phrase describing how a class name should be used. May also include other kinds of examples that facilitate immediate understanding of a class semantics, such as widely known prototypical subclasses or instances of the class. Although essential for high level terms, examples for low level terms (e.g., Affymetrix HU133 array) are not." ,
-                                "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold."@en ;
+                obo:IAO_0000115 "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold."@en ,
+                                "A phrase describing how a class name should be used. May also include other kinds of examples that facilitate immediate understanding of a class semantics, such as widely known prototypical subclasses or instances of the class. Although essential for high level terms, examples for low level terms (e.g., Affymetrix HU133 array) are not." ;
                 obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
                 obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ,
                                 "IAO" ;
                 rdfs:isDefinedBy obo:iao.owl ;
-                rdfs:label "example of usage" ,
-                           "example of usage"@en .
+                rdfs:label "example of usage"@en ,
+                           "example of usage" .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000114
@@ -140,8 +139,8 @@ obo:IAO_0000114 rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/IAO_0000115
 obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
-                obo:IAO_0000111 "definition" ,
-                                "definition"@en ,
+                obo:IAO_0000111 "definition"@en ,
+                                "definition" ,
                                 "textual definition" ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ,
@@ -169,8 +168,8 @@ We also have the outstanding issue of how to aim different definitions to differ
                 obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
                 obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
                 rdfs:isDefinedBy obo:iao.owl ;
-                rdfs:label "definition" ,
-                           "definition"@en ,
+                rdfs:label "definition"@en ,
+                           "definition" ,
                            "textual definition" .
 
 
@@ -210,8 +209,8 @@ obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
                 obo:IAO_0000119 "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w"@en ,
                                 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
                 rdfs:isDefinedBy obo:iao.owl ;
-                rdfs:label "definition source" ,
-                           "definition source"@en .
+                rdfs:label "definition source"@en ,
+                           "definition source" .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000232
@@ -445,20 +444,20 @@ obo:IAO_0000136 rdf:type owl:ObjectProperty ;
                 rdfs:domain obo:IAO_0000030 ;
                 obo:IAO_0000112 "This document is about information artifacts and their representations"@en ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
-                obo:IAO_0000115 "'is about' relates an information entity to other entities in which the information entity holds some information which dscribes some facet of the other entity, such as the arrow direction on a sign." ,
-                                "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+                obo:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ,
+                                "'is about' relates an information entity to other entities in which the information entity holds some information which dscribes some facet of the other entity, such as the arrow direction on a sign." ;
                 obo:IAO_0000116 """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of \"mentions\" relation. Weaken the is_about relationship to be primitive. 
 
 We will try to build it back up by elaborating the various subproperties that are more precisely defined.
 
 Some currently missing phenomena that should be considered \"about\" are predications - \"The only person who knows the answer is sitting beside me\" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
                 obo:IAO_0000117 "person:Alan Ruttenberg"@en ;
-                obo:IAO_0000119 "IAO" ,
-                                "James Malone" ,
-                                "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
+                obo:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ,
+                                "IAO" ,
+                                "James Malone" ;
                 dcterms:creator "Alan Ruttenberg"@en ;
-                rdfs:label "is about" ,
-                           "is about"@en .
+                rdfs:label "is about"@en ,
+                           "is about" .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000219
@@ -496,8 +495,8 @@ obo:OBI_0000299 rdf:type owl:ObjectProperty ;
                                        ] ;
                 rdfs:subPropertyOf obo:RO_0000057 ;
                 rdfs:domain obo:OBI_0000011 ;
-                obo:IAO_0000111 "has_specified_output" ,
-                                "has_specified_output"@en ;
+                obo:IAO_0000111 "has_specified_output"@en ,
+                                "has_specified_output" ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "The inverse property of is_specified_output_of"@en ;
                 obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
@@ -512,8 +511,8 @@ obo:OBI_0000299 rdf:type owl:ObjectProperty ;
 obo:OBI_0000312 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:RO_0000056 ;
                 rdfs:range obo:OBI_0000011 ;
-                obo:IAO_0000111 "is_specified_output_of" ,
-                                "is_specified_output_of"@en ;
+                obo:IAO_0000111 "is_specified_output_of"@en ,
+                                "is_specified_output_of" ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ,
@@ -2210,14 +2209,14 @@ obo:IAO_0000027 rdf:type owl:Class ;
                 obo:IAO_0000116 "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en ,
                                 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en ,
                                 "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym."@en ,
-                                "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/" ,
                                 """JAR: datum     -- well, this will be very tricky to define, but maybe some 
 information-like stuff that might be put into a computer and that is 
 meant, by someone, to denote and/or to be interpreted by some 
 process... I would include lists, tables, sentences... I think I might 
 defer to Barry, or to Brian Cantwell Smith
 
-JAR: A data item is an approximately justified approximately true approximate belief"""@en ;
+JAR: A data item is an approximately justified approximately true approximate belief"""@en ,
+                                "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/" ;
                 obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
                                 "PERSON: Chris Stoeckert"@en ,
                                 "PERSON: Jonathan Rees"@en ;
@@ -2233,8 +2232,8 @@ obo:IAO_0000030 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:BFO_0000001
                                 ] ;
                 obo:IAO_0000111 "information content entity"@en ;
-                obo:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs." ,
-                                "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
+                obo:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ,
+                                "Examples of information content entites include journal articles, data, graphical layouts, and graphs." ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "A generically dependent continuant that is about some thing."@en ,
                                 "An information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity." ;
@@ -2243,10 +2242,10 @@ obo:IAO_0000030 rdf:type owl:Class ;
 
 Previous. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."""@en ;
                 obo:IAO_0000117 "PERSON: Chris Stoeckert"@en ;
-                obo:IAO_0000119 "IAO" ,
-                                "OBI_0000142"@en ;
-                rdfs:label "information content entity" ,
-                           "information content entity"@en .
+                obo:IAO_0000119 "OBI_0000142"@en ,
+                                "IAO" ;
+                rdfs:label "information content entity"@en ,
+                           "information content entity" .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000033

@@ -1,4 +1,4 @@
-@prefix : <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-full.ttl#> .
+@prefix : <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-full.ttl#> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -16,11 +16,11 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
 @prefix ontology: <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-full.ttl> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-full.ttl> .
 
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-full.ttl> rdf:type owl:Ontology ;
-                                                                     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2.1.0/nfdicore-full.ttl> ;
-                                                                     dcterms:abstract """### INTRODUCTION
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-full.ttl> rdf:type owl:Ontology ;
+                                                            owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.1.0/nfdicore-full.ttl> ;
+                                                            dcterms:abstract """### INTRODUCTION
 
 The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
 
@@ -68,22 +68,21 @@ In general, a process (BFO_0000015) can encompass subordinate processes and may 
 The nfdicore:Event is associated with temporal entities that transpire over time, commonly marked by specific incidents or occurrences. The nfdicore:Event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, workshops, or activities like \"the 37th German Congress for Art History\" or \"Workshop \"Introduction to Iconclass\"\". Events are characterized by their start and end times and can be connected to agents involved in the events.
 
 ![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)"""@en ;
-                                                                     dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
-                                                                     dcterms:created "2024-04-10" ;
-                                                                     dcterms:creator <https://nfdi4culture.de/id/E1925> ,
-                                                                                     <https://nfdi4culture.de/id/E2415> ,
-                                                                                     <https://nfdi4culture.de/id/E2416> ,
-                                                                                     <https://nfdi4culture.de/id/E3095> ,
-                                                                                     <https://orcid.org/0000-0001-7192-7143> ;
-                                                                     dcterms:description "NFDIcore ontology"@en ;
-                                                                     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                                                     dcterms:title "NFDIcore Ontology" ;
-                                                                     bibo:status "Ontology Specification"@en ;
-                                                                     vann:preferredNamespacePrefix ontology:nfdicore ;
-                                                                     vann:preferredNamespaceUri ontology: ;
-                                                                     rdfs:label "NFDIcore" ;
-                                                                     owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/1.1.1> ;
-                                                                     owl:versionInfo "2.1.0" .
+                                                            dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
+                                                            dcterms:created "2024-04-10" ;
+                                                            dcterms:creator <https://nfdi4culture.de/id/E1925> ,
+                                                                            <https://nfdi4culture.de/id/E2415> ,
+                                                                            <https://nfdi4culture.de/id/E2416> ,
+                                                                            <https://nfdi4culture.de/id/E3095> ,
+                                                                            <https://orcid.org/0000-0001-7192-7143> ;
+                                                            dcterms:description "NFDIcore ontology"@en ;
+                                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                                            dcterms:title "NFDIcore Ontology"@en ;
+                                                            bibo:status "Ontology Specification"@en ;
+                                                            vann:preferredNamespaceUri ontology: ;
+                                                            rdfs:label "NFDIcore" ;
+                                                            owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                            owl:versionInfo "2.1.0" .
 
 #################################################################
 #    Annotation properties

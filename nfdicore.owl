@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.owl#"
-     xml:base="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.owl"
+<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology#"
+     xml:base="https://nfdi.fiz-karlsruhe.de/ontology"
      xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -18,8 +18,8 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
-    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.owl">
-        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2.1.0/nfdicore.owl"/>
+    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology">
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.1.0"/>
         <dcterms:abstract xml:lang="en">### INTRODUCTION
 
 The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
@@ -77,12 +77,11 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <dcterms:description xml:lang="en">NFDIcore ontology</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <dcterms:title>NFDIcore Ontology</dcterms:title>
+        <dcterms:title xml:lang="en">NFDIcore Ontology</dcterms:title>
         <bibo:status xml:lang="en">Ontology Specification</bibo:status>
-        <vann:preferredNamespacePrefix rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore"/>
         <vann:preferredNamespaceUri rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/"/>
         <rdfs:label>NFDIcore</rdfs:label>
-        <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/1.1.1"/>
+        <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
         <owl:versionInfo>2.1.0</owl:versionInfo>
     </owl:Ontology>
     

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-simple.owl#"
-     xml:base="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-simple.owl"
+<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-simple.owl#"
+     xml:base="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-simple.owl"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -12,8 +12,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
-    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-simple.owl">
-        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2.1.0/nfdicore-simple.owl"/>
+    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-simple.owl">
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.1.0/nfdicore-simple.owl"/>
         <terms:abstract xml:lang="en">### INTRODUCTION
 
 The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
@@ -71,12 +71,11 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:description xml:lang="en">NFDIcore ontology</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <terms:title>NFDIcore Ontology</terms:title>
+        <terms:title xml:lang="en">NFDIcore Ontology</terms:title>
         <bibo:status xml:lang="en">Ontology Specification</bibo:status>
-        <vann:preferredNamespacePrefix rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore"/>
         <vann:preferredNamespaceUri rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/"/>
         <rdfs:label>NFDIcore</rdfs:label>
-        <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/1.1.1"/>
+        <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
         <owl:versionInfo>2.1.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -156,12 +155,6 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- http://purl.org/ontology/bibo/status -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
     
 
 
