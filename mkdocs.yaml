@@ -5,5 +5,5 @@ nav:
   - Getting started: index.md
   - Introduction: intro.md
   - How-to guides:
-      - Competency Questions: workflows/cqc.md
+      - Competency Questions: cqc.md
 
