@@ -1,0 +1,36 @@
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-10-17/imports/schema_import.owl>
+Annotation(owl:versionInfo "2024-10-17")
+
+Declaration(Class(<https://schema.org/CreativeWork>))
+Declaration(Class(<https://schema.org/Service>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/modified>))
+Declaration(Datatype(xsd:date))
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://schema.org/CreativeWork> (CreativeWork)
+
+AnnotationAssertion(rdfs:comment <https://schema.org/CreativeWork> "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://schema.org/CreativeWork> <https://schema.org/CreativeWork>)
+AnnotationAssertion(rdfs:label <https://schema.org/CreativeWork> "CreativeWork"@en)
+
+# Class: <https://schema.org/Service> (Service)
+
+AnnotationAssertion(rdfs:comment <https://schema.org/Service> "A service provided by an organization, e.g. delivery service, print services, etc."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://schema.org/Service> <https://schema.org/Service>)
+AnnotationAssertion(rdfs:label <https://schema.org/Service> "Service"@en)
+
+
+)
