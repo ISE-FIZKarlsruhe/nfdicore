@@ -22,8 +22,21 @@ jobs:
            cat public/doc/resources/extra.css
            mv public/doc/* public/
            cp public/index-en.html public/index.html
-           cp -r public 2.0.0
-           mv 2.0.0 public/
+           cp -r public 2.1.0
+           mv 2.1.0 public/
+
+    - uses: actions/checkout@v3
+      with:
+        ref: v2.0.0
+        path: v2.0.0
+    - name: Build HTML for 2.0.0
+      run: |
+           mkdir public/2.0.0 
+           java -jar widoco.jar -ontFile v2.0.0/nfdicore.ttl -outFolder public/2.0.0  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           ls public/2.0.0/
+           mv public/2.0.0/doc/* public/2.0.0/
+           cp public/2.0.0/index-en.html public/2.0.0/index.html
+
     - uses: actions/checkout@v3
       with:
         ref: v1.1.1
