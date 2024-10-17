@@ -2,8 +2,11 @@ site_name: NFDIcore Ontology
 theme: readthedocs
 #theme: mkdocs
 nav:
-  - Getting started: index.md
+  - Welcome: index.md
   - Introduction: intro.md
-  - How-to guides:
-      - Competency Questions: cqc.md
+  - Versions: versions.md
+  - Ontology: ontology.md
+  - Competency Questions: questions.md
+  - Contributing: contributing.md
+
 

@@ -1,29 +1,13 @@
+![build status](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/qc.yml/badge.svg)
+![build docs](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/update-docs.yml/badge.svg)
+![verification](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/verification.yml/badge.svg)
 
-![Build Status](https://github.com/ISE-FIZKarlsruhe/nfdicore/actions/workflows/qc.yml/badge.svg)
-# NFDI Core Ontology
+# NFDI core ontology
 
-Description: None
+This is the documentation of the NFDI core ontology. Here you will find information about:
 
-More information can be found at http://obofoundry.org/ontology/nfdicore
-
-## Versions
-
-### Stable release versions
-
-The latest version of the ontology can always be found at:
-
-https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.owl
-
-(note this will not show up until the request has been approved by obofoundry.org)
-
-### Editors' version
-
-Editors of this ontology should use the edit version, [src/ontology/nfdicore-edit.owl](src/ontology/nfdicore-edit.owl)
-
-## Contact
-
-Please use this GitHub repository's [Issue tracker](https://github.com/ISE-FIZKarlsruhe/nfdicore/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
-
-## Acknowledgements
-
-This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
+- [introduction and scope of the ontology](intro.md)
+- [different versions of the ontology](versions.md)
+- [key aspects and modeling descisions](ontology.md)
+- [evaluation with competency questions](questions.md)
+- [how to contribute](contributing.md)

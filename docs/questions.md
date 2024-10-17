@@ -1,7 +1,10 @@
 
 # NFDIcore Competency Questions (CQs) and SPARQL Queries
 
+For the design and evaluation different projects contributed competecy questions the ontology should be able to answer.
+
 ## NFDI-MatWerk
+
 All NFDI-MatWerk Use Cases are available [at the MatWerk Consortium Webpage](https://nfdi-matwerk.de/infrastructure-use-cases)
 
 ### Use Case 1
