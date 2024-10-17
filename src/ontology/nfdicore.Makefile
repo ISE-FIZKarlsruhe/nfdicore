@@ -55,6 +55,12 @@ $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILE
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 
 
+update-ontolgy-iris: 
+	$(ROBOT) annotate --input ../../nfdicore.owl --ontology-iri https://nfdi.fiz-karlsruhe.de/ontology --output ../../nfdicore.owl && \
+	$(ROBOT) annotate --input ../../nfdicore.ttl --ontology-iri https://nfdi.fiz-karlsruhe.de/ontology --output ../../nfdicore.ttl && \
+	$(ROBOT) annotate --input ../../nfdicore.owl -V https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION) --output ../../nfdicore.owl && \
+	$(ROBOT) annotate --input ../../nfdicore.ttl -V https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION) --output ../../nfdicore.ttl 
+
 
 
 
