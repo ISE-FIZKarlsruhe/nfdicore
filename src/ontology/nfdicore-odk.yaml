@@ -24,9 +24,10 @@ import_group:
       slme_individuals: exclude
     - id: swo
       mirror_from: "https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl"
-      #mirror_from: "https://raw.githubusercontent.com/allysonlister/swo/refs/heads/master/swo-base.owl"
       module_type: custom
-      release_imports: true
+
+documentation:
+  documentation_system: mkdocs
 remove_owl_nothing: TRUE
 robot_java_args: "-Xmx8G"
 robot_report:
