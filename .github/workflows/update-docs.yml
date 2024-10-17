@@ -27,11 +27,13 @@ jobs:
 
 
            pip install mkdocs
+           cd main
            mkdocs build -f mkdocs.yaml
 
-           mkdir public/docs/
-           cp -r site/* public/docs/
-           
+           cd ..
+           mkdir public/docs
+           cp -r main/site/* public/docs/
+
 
     - uses: actions/checkout@v3
       with:
