@@ -69,7 +69,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
 ![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)</dcterms:abstract>
         <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0</dcterms:bibliographicCitation>
-        <dcterms:created>2024-04-10</dcterms:created>
+        <dcterms:created>2024-10-17</dcterms:created>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
