@@ -11,9 +11,9 @@ The latest version of the ontology can always be found at:
 
 The ontology is shipped in three varaints, each as OWL (\*.owl) and Turtle serializations (\*.ttl):
 
-* **full:** [nfdicore-full.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore-full.ttl.ttl), [nfdicore.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore.ttl) (default)
-* **base:** [nfdicore-base.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore-base.ttl.ttl)
-* **simple:** [nfdicore-simple.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore-simple.ttl.ttl)
+* **full:** [nfdicore-full.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore-full.ttl), [nfdicore.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore.ttl) (default)
+* **base:** [nfdicore-base.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore-base.ttl)
+* **simple:** [nfdicore-simple.ttl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/nfdicore-simple.ttl)
 
 The **"full release"** artefact contains all logical axioms, including inferred subsumptions. All imports and components are merged into the full release artefact to ensure easy version management. The full release represents most closely the actual ontology as it was intended at the time of release, including all its logical implications. 
 
