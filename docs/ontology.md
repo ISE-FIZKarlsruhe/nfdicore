@@ -1,12 +1,63 @@
 # Ontology
 
-Aligning with [IAO](https://github.com/information-artifact-ontology/IAO) and [SCHEMA](https://schema.org/), NFDIcore focuses on describing 3 main concepts:
+The NFDI Ontology is a mid-level ontology designed to represent both the organizational structure of the Nationale Forschungsdateninfrastruktur (NFDI) and the diverse datasets provided by NFDI project partners.
 
-1. Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, software, etc. 
+## Overview
 
-2. Independent Continuants that act autonomously (nfdicore:Agent), e.g. organizations and persons
+The Ontology provides a shared vocabulary and a consistent framework that supports data management, integration, and interoperability across a wide range of disciplines. Below is an overview of key concepts within the ontology:
 
-3. Planned processes and events, e.g. nfdicore:Project, nfdicore:Contributing, nfdicore:Event.
+### Key Concepts
+
+#### Organizational 
+- **Organization**: Represents institutions, research groups, or companies involved in NFDI activities.
+- **Person**: An individual, such as a researcher or contributor, participating in NFDI projects.
+- **Consortium**: Represents collaborative groups formed by multiple organizations within the NFDI.
+- **ConsortiumMember**: A participant within a consortium, whether an organization or person.
+- **ConsortiumMemberRole**: Defines the roles played by members within a consortium, such as "lead partner" or "contributor"
+- **Project**: Represents individual research projects or initiatives within the NFDI ecosystem.
+
+#### Research and Academic
+- **AcademicDiscipline**: Categories representing different fields of study or research disciplines.
+- **Publication**: Scholarly works or research reports published as a result of NFDI projects.
+- **Contributing**: Represents contributions made by people or organizations to a project or dataset.
+- **Event**: Represents events such as conferences, workshops, or meetings organized by NFDI or related entities.
+
+#### Geographical
+- **City**: Represents cities related to projects, events, or organizational locations.
+- **Country**: Countries where NFDI organizations or research activities are based.
+- **FederalState**: States or provinces within a country, relevant to the localization of activities or organizations.
+- **Place**: A more general class representing any location such as cities, countries, or regions.
+
+#### Data and Information
+- **Dataset**: Structured collections of data produced or managed by NFDI partners.
+- **DataPortal**: Digital platforms or repositories where datasets are stored and accessed.
+- **Collection**: Represents grouped resources, such as datasets, publications, or software.
+- **CreativeWork**: Any intellectual output, including publications, datasets, software, or media.
+
+
+#### Vocabulary and Metadata
+- **ControlledVocabulary**: Standardized lists of terms used to maintain consistency in data descriptions.
+- **Glossary**: A collection of terms with definitions, helping to clarify terminology across NFDI datasets.
+- **Thesaurus**: Structured lists of related terms, including hierarchical and associative relationships.
+- **Taxonomy**: Organized classification systems for categorizing data or entities.
+
+#### Technology and Standards
+- **Software**: Represents software tools or applications developed and used within the NFDI.
+- **ProgrammingLanguage**: Programming languages used in developing software or tools.
+- **Specification**: Defines technical specifications related to datasets, software, or services.
+- **Standard**: Represents standards followed for data management, storage, and dissemination.
+- **TechnologicalMeans**: Technologies or tools employed within the NFDI system to facilitate data management.
+- **Ontology**: Formalized structures of knowledge representation, including the NFDI Ontology itself.
+- **SemanticExpressivity**: Represents the extent to which a dataset or ontology supports rich, detailed data descriptions.
+
+
+#### Resource and Service
+- **Resource**: General class for any entity utilized within the NFDI framework, such as datasets or software.
+- **Service**: Represents services provided within NFDI, including data storage, management, and preservation.
+- **License**: Represents the legal terms under which datasets, publications, or software are made available.
+- **Website**: Represents websites or web services associated with NFDI partners or projects.
+- **MIME-Type**: Standardized file formats used in datasets, defining how files should be interpreted.
+- **MediaType**: Represents the type of media used in datasets, such as images, text, or audio.
 
 
 

@@ -2,7 +2,7 @@ site_name: NFDIcore Ontology
 theme: readthedocs
 #theme: mkdocs
 nav:
-  - Welcome: index.md
+  - Welcome: welcome.md
   - Introduction: intro.md
   - Versions: versions.md
   - Ontology: ontology.md
