@@ -12,3 +12,7 @@ sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE ANNOTATE_ONTOLOGY_VERSION="$ANN
 #sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE prepare_release
 
 sh run.sh make VERSION=$VERSION PRIOR_VERSION=$PRIOR_VERSION update-ontology-annotations
+
+
+# finally refresh imports again, so that version IRIs are updated back to "normal". 
+sh run.sh make IMP=false MIR=false refresh-imports
