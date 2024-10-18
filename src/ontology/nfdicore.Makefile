@@ -3,9 +3,9 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-#########
+#################################################################
 ## import SWO terms
-#########
+#################################################################
 
 ## because of https://github.com/allysonlister/swo/issues/48 we have to make a replacement "s/obofoundry/obolibrary/g"
 ##
@@ -21,9 +21,9 @@ $(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl $(IMPORTDIR)/swo_terms.txt
 
 
 
-#########
-## release base version 
-#########
+#################################################################
+## release base version (modification)
+#################################################################
 
 ## here we need "remove --base-iri $(URIBASE)/""  instead of "remove --base-iri $(URIBASE)/NFDICORE"  as suggested in the generated main file
 
@@ -39,10 +39,12 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
+#################################################################
+## release simple version (modification) 
+#################################################################
+# somehow the standart method does not work, so we adapted the filter here
+#
 
-# foo-simple: (edit->reason,relax,reduce,drop imports, drop every axiom which contains an entity outside the "namespaces of interest")
-# drop every axiom: filter --term-file keep_terms.txt --trim true
-#	remove --select imports --trim false
 $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILES)
 	$(ROBOT_RELEASE_IMPORT_MODE) \
 		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms False \
@@ -55,11 +57,28 @@ $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILE
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 
 
-update-ontolgy-iris: 
-	$(ROBOT) annotate --input ../../nfdicore.owl --ontology-iri https://nfdi.fiz-karlsruhe.de/ontology --output ../../nfdicore.owl && \
-	$(ROBOT) annotate --input ../../nfdicore.ttl --ontology-iri https://nfdi.fiz-karlsruhe.de/ontology --output ../../nfdicore.ttl && \
-	$(ROBOT) annotate --input ../../nfdicore.owl -V https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION) --output ../../nfdicore.owl && \
-	$(ROBOT) annotate --input ../../nfdicore.ttl -V https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION) --output ../../nfdicore.ttl 
+
+#############################################################################
+# lets add some additional annotations to the release artefacts
+#############################################################################
+
+CITATION="'Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v$(VERSION). Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION)'"
+
+ALL_ANNOTATIONS=--annotate-defined-by true \
+	--ontology-iri https://nfdi.fiz-karlsruhe.de/ontology -V https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION) \
+	--annotation http://purl.org/dc/terms/created "$(TODAY)" \
+	--annotation http://purl.org/dc/terms/bibliographicCitation "$(CITATION)"  \
+	--link-annotation owl:priorVersion https://nfdi.fiz-karlsruhe.de/ontology/$(PRIOR_VERSION) \
+
+update-ontology-annotations: 
+	$(ROBOT) annotate --input ../../nfdicore.owl $(ALL_ANNOTATIONS) --output ../../nfdicore.owl && \
+	$(ROBOT) annotate --input ../../nfdicore.ttl $(ALL_ANNOTATIONS) --output ../../nfdicore.ttl && \
+	$(ROBOT) annotate --input ../../nfdicore-simple.owl $(ALL_ANNOTATIONS) --output ../../nfdicore-simple.owl && \
+	$(ROBOT) annotate --input ../../nfdicore-simple.ttl $(ALL_ANNOTATIONS) --output ../../nfdicore-simple.ttl && \
+	$(ROBOT) annotate --input ../../nfdicore-full.owl $(ALL_ANNOTATIONS) --output ../../nfdicore-full.owl && \
+	$(ROBOT) annotate --input ../../nfdicore-full.ttl $(ALL_ANNOTATIONS) --output ../../nfdicore-full.ttl && \
+	$(ROBOT) annotate --input ../../nfdicore-base.owl $(ALL_ANNOTATIONS) --output ../../nfdicore-base.owl && \
+	$(ROBOT) annotate --input ../../nfdicore-base.ttl $(ALL_ANNOTATIONS) --output ../../nfdicore-base.ttl 
 
 
 

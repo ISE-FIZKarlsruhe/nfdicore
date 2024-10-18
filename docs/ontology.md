@@ -4,7 +4,7 @@ The NFDI Ontology is a mid-level ontology designed to represent both the organiz
 
 ## Overview
 
-The Ontology provides a shared vocabulary and a consistent framework that supports data management, integration, and interoperability across a wide range of disciplines. Below is an overview of key concepts within the ontology:
+The Ontology provides a shared vocabulary and a consistent framework that supports data management, integration, and interoperability across a wide range of disciplines. Below is an overview of key concepts within the ontology. The comlpete list of concepts can be found in the generated ontology description: [https://nfdi.fiz-karlsruhe.de/ontology/](https://nfdi.fiz-karlsruhe.de/ontology/).
 
 ### Key Concepts
 

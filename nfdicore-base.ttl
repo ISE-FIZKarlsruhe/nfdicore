@@ -1,4 +1,4 @@
-@prefix : <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-base.ttl#> .
+@prefix : <https://nfdi.fiz-karlsruhe.de/ontology#> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,12 +11,12 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ontology: <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@base <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-base.ttl> .
+@base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-base.ttl> rdf:type owl:Ontology ;
-                                                            owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.1.0/nfdicore-base.ttl> ;
-                                                            dce:type obo:IAO_8000001 ;
-                                                            dcterms:abstract """### INTRODUCTION
+<https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/2.1.0> ;
+                                          dce:type obo:IAO_8000001 ;
+                                          dcterms:abstract """### INTRODUCTION
 
 The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
 
@@ -28,6 +28,8 @@ Aligning with [IAO](https://github.com/information-artifact-ontology/IAO) and [S
 3. Planned processes and events, e.g. nfdicore:Project, nfdicore:Contributing, nfdicore:Event.
 
 Current development is managed via [GitHub](https://github.com/ISE-FIZKarlsruhe/nfdicore). Feel free to give feedback, contribute, or raise issues.
+
+More detailed information and can be found in the [NFDIcore ontology documentation](https://ise-fizkarlsruhe.github.io/nfdicore/docs/). 
 
 ### RESOURCES
 
@@ -64,84 +66,100 @@ In general, a process (BFO_0000015) can encompass subordinate processes and may 
 The nfdicore:Event is associated with temporal entities that transpire over time, commonly marked by specific incidents or occurrences. The nfdicore:Event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, workshops, or activities like \"the 37th German Congress for Art History\" or \"Workshop \"Introduction to Iconclass\"\". Events are characterized by their start and end times and can be connected to agents involved in the events.
 
 ![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)"""@en ;
-                                                            dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ;
-                                                            dcterms:created "2024-10-17" ;
-                                                            dcterms:creator <https://nfdi4culture.de/id/E1925> ,
-                                                                            <https://nfdi4culture.de/id/E2415> ,
-                                                                            <https://nfdi4culture.de/id/E2416> ,
-                                                                            <https://nfdi4culture.de/id/E3095> ,
-                                                                            <https://orcid.org/0000-0001-7192-7143> ;
-                                                            dcterms:description "NFDIcore ontology"@en ;
-                                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                                            dcterms:title "NFDIcore Ontology"@en ;
-                                                            bibo:status "Ontology Specification"@en ;
-                                                            vann:preferredNamespaceUri ontology: ;
-                                                            rdfs:label "NFDIcore" ;
-                                                            owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                                                            owl:versionInfo "2.1.0" .
+                                          dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0" ,
+                                                                        "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.1.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.1.0" ;
+                                          dcterms:created "2024-10-18" ;
+                                          dcterms:creator <https://nfdi4culture.de/id/E1925> ,
+                                                          <https://nfdi4culture.de/id/E2415> ,
+                                                          <https://nfdi4culture.de/id/E2416> ,
+                                                          <https://nfdi4culture.de/id/E3095> ,
+                                                          <https://orcid.org/0000-0001-7192-7143> ;
+                                          dcterms:description "NFDIcore ontology"@en ;
+                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                          dcterms:title "NFDIcore Ontology"@en ;
+                                          bibo:status "Ontology Specification"@en ;
+                                          vann:preferredNamespaceUri ontology: ;
+                                          rdfs:label "NFDIcore" ;
+                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                          owl:versionInfo "2.1.0" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/IAO_0000115
-obo:IAO_0000115 rdf:type owl:AnnotationProperty .
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000116
-obo:IAO_0000116 rdf:type owl:AnnotationProperty .
+obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000232
-obo:IAO_0000232 rdf:type owl:AnnotationProperty .
+obo:IAO_0000232 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/dc/elements/1.1/type
-dce:type rdf:type owl:AnnotationProperty .
+dce:type rdf:type owl:AnnotationProperty ;
+         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/dc/terms/abstract
-dcterms:abstract rdf:type owl:AnnotationProperty .
+dcterms:abstract rdf:type owl:AnnotationProperty ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/dc/terms/bibliographicCitation
-dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty ;
+                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/dc/terms/created
-dcterms:created rdf:type owl:AnnotationProperty .
+dcterms:created rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
+dcterms:creator rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/dc/terms/description
-dcterms:description rdf:type owl:AnnotationProperty .
+dcterms:description rdf:type owl:AnnotationProperty ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty .
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:AnnotationProperty .
+dcterms:title rdf:type owl:AnnotationProperty ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/ontology/bibo/status
-bibo:status rdf:type owl:AnnotationProperty .
+bibo:status rdf:type owl:AnnotationProperty ;
+            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
-vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty ;
+                           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://www.w3.org/2004/02/skos/core#example
-skos:example rdf:type owl:AnnotationProperty .
+skos:example rdf:type owl:AnnotationProperty ;
+             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/acronym
 ontology:acronym rdf:type owl:AnnotationProperty ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "nfdicore:acronym"@en .
 
 
@@ -150,52 +168,64 @@ ontology:acronym rdf:type owl:AnnotationProperty ;
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/BFO_0000050
-obo:BFO_0000050 rdf:type owl:ObjectProperty .
+obo:BFO_0000050 rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000051
-obo:BFO_0000051 rdf:type owl:ObjectProperty .
+obo:BFO_0000051 rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000136
-obo:IAO_0000136 rdf:type owl:ObjectProperty .
+obo:IAO_0000136 rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000219
-obo:IAO_0000219 rdf:type owl:ObjectProperty .
+obo:IAO_0000219 rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000235
-obo:IAO_0000235 rdf:type owl:ObjectProperty .
+obo:IAO_0000235 rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000056
-obo:RO_0000056 rdf:type owl:ObjectProperty .
+obo:RO_0000056 rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000057
-obo:RO_0000057 rdf:type owl:ObjectProperty .
+obo:RO_0000057 rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000080
-obo:RO_0000080 rdf:type owl:ObjectProperty .
+obo:RO_0000080 rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000086
-obo:RO_0000086 rdf:type owl:ObjectProperty .
+obo:RO_0000086 rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000087
-obo:RO_0000087 rdf:type owl:ObjectProperty .
+obo:RO_0000087 rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0001015
 obo:RO_0001015 rdf:type owl:ObjectProperty ;
-               owl:equivalentProperty ontology:locationOf .
+               owl:equivalentProperty ontology:locationOf ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://www.ebi.ac.uk/swo/SWO_0000741
-<http://www.ebi.ac.uk/swo/SWO_0000741> rdf:type owl:ObjectProperty .
+<http://www.ebi.ac.uk/swo/SWO_0000741> rdf:type owl:ObjectProperty ;
+                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/bestPractice
@@ -205,7 +235,7 @@ ontology:bestPractice rdf:type owl:ObjectProperty ;
                       rdfs:domain ontology:Resource ;
                       rdfs:range ontology:Specification ;
                       rdfs:comment "The property is a relationship between a resource and the specified best practice."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "best practice"@en .
 
 
@@ -214,7 +244,7 @@ ontology:bestPracticeOf rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf obo:IAO_0000136 ;
                         obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                         rdfs:comment "inverse of  property \"best practice\""@en ;
-                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                         rdfs:label "best practice of"@en .
 
 
@@ -228,14 +258,14 @@ ontology:contactPoint rdf:type owl:ObjectProperty ;
                                   ] ;
                       rdfs:range ontology:Agent ;
                       rdfs:comment "The property is a relationship between a resource and a contact point."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "contact point"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf
 ontology:contactPointOf rdf:type owl:ObjectProperty ;
                         rdfs:comment "inverse of  property \"contact point\""@en ;
-                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                         rdfs:label "contact point of"@en .
 
 
@@ -245,14 +275,14 @@ ontology:contributor rdf:type owl:ObjectProperty ;
                      rdfs:domain ontology:Resource ;
                      rdfs:range ontology:Agent ;
                      rdfs:comment "The property related a resource to a person or an organization responsible for making contributions to a resource."@en ;
-                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                      rdfs:label "contributor"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/contributorOf
 ontology:contributorOf rdf:type owl:ObjectProperty ;
                        rdfs:comment "inverse of property \"contributor\""@en ;
-                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                        rdfs:label "contributor of"@en .
 
 
@@ -267,7 +297,7 @@ ontology:country rdf:type owl:ObjectProperty ;
                              ] ;
                  rdfs:range ontology:Country ;
                  rdfs:comment "The property relates a city or a state to a country where it is located."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "of country"@en .
 
 
@@ -275,7 +305,7 @@ ontology:country rdf:type owl:ObjectProperty ;
 ontology:countryOf rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf ontology:part ;
                    rdfs:comment "inverse of property \"country\""@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "country of"@en .
 
 
@@ -286,7 +316,7 @@ ontology:dataset rdf:type owl:ObjectProperty ;
                  rdfs:domain ontology:Resource ;
                  rdfs:range ontology:Dataset ;
                  rdfs:comment "The property is a relation between a resource and a data set."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "data set"@en .
 
 
@@ -295,7 +325,7 @@ ontology:datasetOf rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf obo:IAO_0000136 ;
                    obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                    rdfs:comment "inverse of  property \"data set\""@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "data set of"@en .
 
 
@@ -306,7 +336,7 @@ ontology:exportFormat rdf:type owl:ObjectProperty ;
                       rdfs:domain ontology:Resource ;
                       rdfs:range ontology:MediaType ;
                       rdfs:comment "The property relates a resource to the format available for the export of a resource."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "export format"@en .
 
 
@@ -315,7 +345,7 @@ ontology:exportFormatOf rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf obo:IAO_0000136 ;
                         obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                         rdfs:comment "inverse of  property \"export format\""@en ;
-                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                         rdfs:label "export format of"@en .
 
 
@@ -326,7 +356,7 @@ ontology:federalState rdf:type owl:ObjectProperty ;
                       rdfs:domain ontology:City ;
                       rdfs:range ontology:FederalState ;
                       rdfs:comment "The property relates a city to a federal state where it is located."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "has federal state"@en .
 
 
@@ -334,7 +364,7 @@ ontology:federalState rdf:type owl:ObjectProperty ;
 ontology:federalStateOf rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf ontology:partOf ;
                         rdfs:comment "inverse of property \"federal state\""@en ;
-                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                         rdfs:label "federal state of"@en .
 
 
@@ -344,7 +374,7 @@ ontology:fundingOrganization rdf:type owl:ObjectProperty ;
                              rdfs:domain ontology:Project ;
                              rdfs:range ontology:Organization ;
                              rdfs:comment "The property relates a project to the organization that provided funding for it."@en ;
-                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                              rdfs:label "funding organization"@en .
 
 
@@ -353,7 +383,7 @@ ontology:fundingOrganizationOf rdf:type owl:ObjectProperty ;
                                rdfs:domain ontology:Organization ;
                                rdfs:range ontology:Project ;
                                rdfs:comment "inverse of property \"funding organization\""@en ;
-                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                rdfs:label "funding organization of"@en .
 
 
@@ -364,7 +394,7 @@ ontology:license rdf:type owl:ObjectProperty ;
                  rdfs:domain ontology:Resource ;
                  rdfs:range ontology:License ;
                  rdfs:comment "The property is a relationship between a resource and a license file." ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "has license"@en .
 
 
@@ -372,7 +402,7 @@ ontology:license rdf:type owl:ObjectProperty ;
 ontology:licenseOf rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf obo:IAO_0000136 ;
                    rdfs:comment "inverse of property \"license\""@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "license of"@en .
 
 
@@ -382,14 +412,14 @@ ontology:location rdf:type owl:ObjectProperty ;
                   rdfs:domain owl:Thing ;
                   rdfs:range ontology:Place ;
                   rdfs:comment "The property is a relationship between a thing and a place its located at. "@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "location"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/locationOf
 ontology:locationOf rdf:type owl:ObjectProperty ;
                     rdfs:comment "inverse of property \"location\""@en ;
-                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                     rdfs:label "location of"@en .
 
 
@@ -400,7 +430,7 @@ ontology:mediaType rdf:type owl:ObjectProperty ;
                    rdfs:domain ontology:Resource ;
                    rdfs:range ontology:MediaType ;
                    rdfs:comment "The property relates a resource to its data format."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "has media type"@en .
 
 
@@ -409,7 +439,7 @@ ontology:mediaTypeOf rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf obo:IAO_0000136 ;
                      obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                      rdfs:comment "inverse of  property \"media type\""@en ;
-                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                      rdfs:label "media type of"@en .
 
 
@@ -419,7 +449,7 @@ ontology:member rdf:type owl:ObjectProperty ;
                                    ontology:part ;
                 owl:inverseOf ontology:memberOf ;
                 rdfs:comment "The property is a relationship between a consortium and an organization that is a member of the consortium."@en ;
-                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                 rdfs:label "member"@en .
 
 
@@ -428,7 +458,7 @@ ontology:memberOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf ontology:partOf ;
                   rdfs:comment "The property is a relationship between an organization and a consortium it belongs to."@en ,
                                "inverse of property \"member\""@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "member of"@en .
 
 
@@ -436,7 +466,7 @@ ontology:memberOf rdf:type owl:ObjectProperty ;
 ontology:parentOrganization rdf:type owl:ObjectProperty ;
                             owl:inverseOf ontology:subsidiaryOrganization ;
                             rdfs:comment "The property is a parental relationship between organizations."@en ;
-                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                             rdfs:label "parent organization"@en .
 
 
@@ -444,7 +474,7 @@ ontology:parentOrganization rdf:type owl:ObjectProperty ;
 ontology:part rdf:type owl:ObjectProperty ;
               owl:inverseOf ontology:partOf ;
               rdfs:comment "The generic property is a relationship between a thing and its part."@en ;
-              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
               rdfs:label "part"@en .
 
 
@@ -454,7 +484,7 @@ ontology:partOf rdf:type owl:ObjectProperty ;
                 rdfs:domain owl:Thing ;
                 rdfs:range owl:Thing ;
                 rdfs:comment "The generic property is a relationship between a thing and a thing in which it is physically or logically included."@en ;
-                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                 rdfs:label "part of"@en .
 
 
@@ -465,7 +495,7 @@ ontology:participant rdf:type owl:ObjectProperty ;
                      rdfs:domain ontology:Project ;
                      rdfs:range ontology:Agent ;
                      rdfs:comment "The property is a relationship between a project and an agent that participates in the project."@en ;
-                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                      rdfs:label "participant"@en .
 
 
@@ -473,7 +503,7 @@ ontology:participant rdf:type owl:ObjectProperty ;
 ontology:participantOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf obo:RO_0000056 ;
                        rdfs:comment "inverse of  property \"prticipant\""@en ;
-                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                        rdfs:label "participant of"@en .
 
 
@@ -481,7 +511,7 @@ ontology:participantOf rdf:type owl:ObjectProperty ;
 ontology:partnerOrganization rdf:type owl:ObjectProperty ,
                                       owl:SymmetricProperty ;
                              rdfs:comment "The property is a partner relationship between organizations. The property is symmetric."@en ;
-                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                              rdfs:label "partner organization"@en .
 
 
@@ -493,14 +523,14 @@ ontology:programmingLanguage rdf:type owl:ObjectProperty ;
                              rdfs:domain ontology:Software ;
                              rdfs:range ontology:ProgrammingLanguage ;
                              rdfs:comment "The property links software to a programming language its written in." ;
-                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                              rdfs:label "has programming language"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf
 ontology:programmingLanguageOf rdf:type owl:ObjectProperty ;
                                rdfs:comment "inverse of  property \"programming language\""@en ;
-                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                rdfs:label "programming language of"@en .
 
 
@@ -510,14 +540,14 @@ ontology:publisher rdf:type owl:ObjectProperty ;
                    rdfs:domain ontology:Resource ;
                    rdfs:range ontology:Agent ;
                    rdfs:comment "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "publisher"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/publisherOf
 ontology:publisherOf rdf:type owl:ObjectProperty ;
                      rdfs:comment "inverse of  property \"publisher\""@en ;
-                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                      rdfs:label "publisher of"@en .
 
 
@@ -530,7 +560,7 @@ ontology:relatedProject rdf:type owl:ObjectProperty ;
                                     ] ;
                         rdfs:range ontology:Project ;
                         rdfs:comment "The property is a relationship between a project or a resource and related projects."@en ;
-                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                         rdfs:label "related project"@en .
 
 
@@ -545,7 +575,7 @@ ontology:representedCollection rdf:type owl:ObjectProperty ;
                                            ] ;
                                rdfs:range ontology:Collection ;
                                rdfs:comment "The property is a relationship between a dataset and a collection it represents."@en ;
-                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                rdfs:label "represented collection"@en .
 
 
@@ -553,7 +583,7 @@ ontology:representedCollection rdf:type owl:ObjectProperty ;
 ontology:representedCollectionOf rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf obo:IAO_0000235 ;
                                  rdfs:comment "inverse of  property \"represented collection\""@en ;
-                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                  rdfs:label "represented collection of"@en .
 
 
@@ -564,7 +594,7 @@ ontology:semanticExpressivity rdf:type owl:ObjectProperty ;
                               rdfs:domain ontology:Resource ;
                               rdfs:range ontology:SemanticExpressivity ;
                               rdfs:comment "The property relates a resource to its semantic expressivity spectrum."@en ;
-                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                               rdfs:label "has semantic expressivity"@en .
 
 
@@ -572,7 +602,7 @@ ontology:semanticExpressivity rdf:type owl:ObjectProperty ;
 ontology:semanticExpressivityOf rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf obo:RO_0000080 ;
                                 rdfs:comment "inverse of  property \"semantic expressivity\""@en ;
-                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                 rdfs:label "semantic expressivity of"@en .
 
 
@@ -583,7 +613,7 @@ ontology:software rdf:type owl:ObjectProperty ;
                   rdfs:domain ontology:Resource ;
                   rdfs:range ontology:Software ;
                   rdfs:comment "The property is a relationship between a resource and a software it uses."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "has software"@en .
 
 
@@ -592,7 +622,7 @@ ontology:softwareOf rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf obo:IAO_0000136 ;
                     obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                     rdfs:comment "inverse of  property \"sofware\""@en ;
-                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                     rdfs:label "software of"@en .
 
 
@@ -603,7 +633,7 @@ ontology:sparqlEndpoint rdf:type owl:ObjectProperty ;
                         rdfs:domain ontology:Resource ;
                         rdfs:range ontology:Resource ;
                         rdfs:comment "The property relates a data resource to its SPARQL Endpoint. "@en ;
-                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                         rdfs:label "sparql endpoint"@en .
 
 
@@ -612,7 +642,7 @@ ontology:sparqlEndpointOf rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf obo:IAO_0000136 ;
                           obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                           rdfs:comment "inverse of  property \"sparql endpoint\""@en ;
-                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                           rdfs:label "sparql endpoint of"@en .
 
 
@@ -623,7 +653,7 @@ ontology:specification rdf:type owl:ObjectProperty ;
                        rdfs:domain ontology:Resource ;
                        rdfs:range ontology:Specification ;
                        rdfs:comment "The property is a relationship between a resource and the international standard or norm."@en ;
-                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                        rdfs:label "has specification"@en .
 
 
@@ -632,7 +662,7 @@ ontology:specificationOf rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf obo:IAO_0000136 ;
                          obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                          rdfs:comment "inverse of  property \"specification\""@en ;
-                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                          rdfs:label "specification of"@en .
 
 
@@ -643,7 +673,7 @@ ontology:standard rdf:type owl:ObjectProperty ;
                   rdfs:domain ontology:Resource ;
                   rdfs:range ontology:Standard ;
                   rdfs:comment "The property relates a resource to the standard it relies on."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "has standard"@en .
 
 
@@ -652,7 +682,7 @@ ontology:standardOf rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf obo:IAO_0000136 ;
                     obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                     rdfs:comment "inverse of  property \"standard\""@en ;
-                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                     rdfs:label "standard of"@en .
 
 
@@ -669,7 +699,7 @@ ontology:subjectArea rdf:type owl:ObjectProperty ;
                      rdfs:range ontology:AcademicDiscipline ;
                      obo:IAO_0000232 "to check for BFO superproperty" ;
                      rdfs:comment "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en ;
-                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                      rdfs:label "subject area"@en .
 
 
@@ -677,14 +707,14 @@ ontology:subjectArea rdf:type owl:ObjectProperty ;
 ontology:subjectAreaOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf obo:RO_0000080 ;
                        rdfs:comment "inverse of  property \"subject area\""@en ;
-                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                        rdfs:label "subject area of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization
 ontology:subsidiaryOrganization rdf:type owl:ObjectProperty ;
                                 rdfs:comment "inverse of \"parent organization\""@en ;
-                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                 rdfs:label "subsidiary organization"@en .
 
 
@@ -695,7 +725,7 @@ ontology:technology rdf:type owl:ObjectProperty ;
                     rdfs:domain ontology:Resource ;
                     rdfs:range ontology:TechnologicalMeans ;
                     rdfs:comment "The property is a relationship between a resource and a technology it uses. "@en ;
-                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                     rdfs:label "technology"@en .
 
 
@@ -704,7 +734,7 @@ ontology:technologyOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf obo:IAO_0000136 ;
                       obo:IAO_0000116 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en ;
                       rdfs:comment "inverse of  property \"technology\""@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "technology of"@en .
 
 
@@ -715,7 +745,7 @@ ontology:url rdf:type owl:ObjectProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range owl:Thing ;
              rdfs:comment "The property is a relationship between a thing and a url associated with the thing."@en ;
-             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
              rdfs:label "url"@en .
 
 
@@ -723,7 +753,7 @@ ontology:url rdf:type owl:ObjectProperty ;
 ontology:urlOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:IAO_0000219 ;
                rdfs:comment "inverse of  property \"url\""@en ;
-               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                rdfs:label "url of"@en .
 
 
@@ -736,7 +766,7 @@ ontology:birthDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain ontology:Person ;
                    rdfs:range rdfs:Literal ;
                    rdfs:comment "The property refers to the date on which a person was born."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "birth date"@en .
 
 
@@ -745,7 +775,7 @@ ontology:deathDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain ontology:Person ;
                    rdfs:range rdfs:Literal ;
                    rdfs:comment "The property refers to the date on which a person passed away."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "death date"@en .
 
 
@@ -754,7 +784,7 @@ ontology:dissolutionDate rdf:type owl:DatatypeProperty ;
                          rdfs:domain ontology:Organization ;
                          rdfs:range rdfs:Literal ;
                          rdfs:comment "The property refers to the date on which the organization ceased to exist or was formally dissolved."@en ;
-                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                          rdfs:label "dissolution date"@en .
 
 
@@ -763,7 +793,7 @@ ontology:emailAddress rdf:type owl:DatatypeProperty ;
                       rdfs:domain ontology:Agent ;
                       rdfs:range rdfs:Literal ;
                       rdfs:comment "The property relates an agent to their email address."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "email address"@en .
 
 
@@ -771,7 +801,7 @@ ontology:emailAddress rdf:type owl:DatatypeProperty ;
 ontology:endDate rdf:type owl:DatatypeProperty ;
                  rdfs:domain ontology:Event ;
                  rdfs:comment "The property refers to the moment in time when an event ends."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "end date"@en .
 
 
@@ -779,7 +809,7 @@ ontology:endDate rdf:type owl:DatatypeProperty ;
 ontology:fileExtension rdf:type owl:DatatypeProperty ;
                        rdfs:domain ontology:Resource ;
                        rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
-                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                        rdfs:label "file extension" ;
                        skos:example "mp4" ,
                                     "ttl" ,
@@ -792,7 +822,7 @@ ontology:foundationDate rdf:type owl:DatatypeProperty ;
                         rdfs:domain ontology:Organization ;
                         rdfs:range rdfs:Literal ;
                         rdfs:comment "The property refers to the specific date on which the organization was officially established or founded."@en ;
-                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                        rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                         rdfs:label "foundation date"@en .
 
 
@@ -801,7 +831,7 @@ ontology:startDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain ontology:Event ;
                    rdfs:range rdfs:Literal ;
                    rdfs:comment "The property refers to the moment in time when an event begins."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "start date"@en .
 
 
@@ -810,67 +840,82 @@ ontology:startDate rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/BFO_0000003
-obo:BFO_0000003 rdf:type owl:Class .
+obo:BFO_0000003 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000004
-obo:BFO_0000004 rdf:type owl:Class .
+obo:BFO_0000004 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000019
-obo:BFO_0000019 rdf:type owl:Class .
+obo:BFO_0000019 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000023
-obo:BFO_0000023 rdf:type owl:Class .
+obo:BFO_0000023 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000029
-obo:BFO_0000029 rdf:type owl:Class .
+obo:BFO_0000029 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000040
-obo:BFO_0000040 rdf:type owl:Class .
+obo:BFO_0000040 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000010
 obo:IAO_0000010 rdf:type owl:Class ;
-                owl:equivalentClass ontology:Software .
+                owl:equivalentClass ontology:Software ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000025
 obo:IAO_0000025 rdf:type owl:Class ;
-                owl:equivalentClass ontology:ProgrammingLanguage .
+                owl:equivalentClass ontology:ProgrammingLanguage ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000030
-obo:IAO_0000030 rdf:type owl:Class .
+obo:IAO_0000030 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000033
-obo:IAO_0000033 rdf:type owl:Class .
+obo:IAO_0000033 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000104
-obo:IAO_0000104 rdf:type owl:Class .
+obo:IAO_0000104 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000310
-obo:IAO_0000310 rdf:type owl:Class .
+obo:IAO_0000310 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000311
 obo:IAO_0000311 rdf:type owl:Class ;
-                owl:equivalentClass ontology:Publication .
+                owl:equivalentClass ontology:Publication ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000011
-obo:OBI_0000011 rdf:type owl:Class .
+obo:OBI_0000011 rdf:type owl:Class ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  http://www.ebi.ac.uk/swo/SWO_0000002
 <http://www.ebi.ac.uk/swo/SWO_0000002> rdf:type owl:Class ;
-                                       owl:equivalentClass ontology:License .
+                                       owl:equivalentClass ontology:License ;
+                                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline
@@ -879,7 +924,7 @@ ontology:AcademicDiscipline rdf:type owl:Class ;
                             obo:IAO_0000115 "A quality of an entity that specifies the subject area, domain or academic discipline of an entity."@en ;
                             obo:IAO_0000116 "2024-03-26: SB & JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)"@en ;
                             rdfs:comment "An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en ;
-                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                             rdfs:label "academic discipline"@en ;
                             skos:example <https://www.wikidata.org/entity/Q12271> ,
                                          "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en .
@@ -890,7 +935,7 @@ ontology:Agent rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000004 ;
                obo:IAO_0000115 "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
                rdfs:comment "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
-               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                rdfs:label "agent"@en ;
                skos:example "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en .
 
@@ -900,7 +945,7 @@ ontology:City rdf:type owl:Class ;
               rdfs:subClassOf ontology:Place ;
               obo:IAO_0000115 "A place that refers to a densely populated urban area."@en ;
               rdfs:comment "A city or a town where the thing is located."@en ;
-              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
               rdfs:label "city"@en ;
               skos:example "Berlin, Hannover, Kyiv"@en .
 
@@ -910,7 +955,7 @@ ontology:Collection rdf:type owl:Class ;
                     rdfs:subClassOf obo:BFO_0000040 ;
                     obo:IAO_0000115 "A material entity that represents a collection of material entities intended to be understood together as a whole."@en ;
                     rdfs:comment "A tangible collection of valuables published or curated by an organization or a person."@en ;
-                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                     rdfs:label "collection"@en ;
                     skos:example "A collection of arts displayed at the museum"@en .
 
@@ -927,7 +972,7 @@ ontology:Consortium rdf:type owl:Class ;
                                     ] ;
                     obo:IAO_0000115 "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en ;
                     rdfs:comment "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en ;
-                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                     rdfs:label "consortium"@en ;
                     skos:example "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
 
@@ -945,7 +990,7 @@ ontology:ConsortiumMember rdf:type owl:Class ;
                           rdfs:subClassOf ontology:Organization ;
                           obo:IAO_0000115 "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
                           rdfs:comment "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
-                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                           rdfs:label "consortium member"@en ;
                           skos:example "Museums of City Cologne is a member of NFDI4Culture consortium."@en .
 
@@ -955,7 +1000,7 @@ ontology:ConsortiumMemberRole rdf:type owl:Class ;
                               rdfs:subClassOf obo:BFO_0000023 ;
                               obo:IAO_0000115 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en ;
                               rdfs:comment "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en ;
-                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                               rdfs:label "consortium member role"@en .
 
 
@@ -964,7 +1009,7 @@ ontology:ContactPointRole rdf:type owl:Class ;
                           rdfs:subClassOf obo:BFO_0000023 ;
                           obo:IAO_0000115 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en ;
                           rdfs:comment "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en ;
-                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                          rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                           rdfs:label "contact point role"@en .
 
 
@@ -973,7 +1018,7 @@ ontology:Contacting rdf:type owl:Class ;
                     rdfs:subClassOf obo:OBI_0000011 ;
                     obo:IAO_0000115 "A planned process in which the contact information of an entity is provided."@en ;
                     rdfs:comment "A planned process in which the contact information of an entity is provided."@en ;
-                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                     rdfs:label "contacting"@en .
 
 
@@ -982,7 +1027,7 @@ ontology:Contributing rdf:type owl:Class ;
                       rdfs:subClassOf obo:OBI_0000011 ;
                       obo:IAO_0000115 "A planned process of contibuting or providing information to an endeavor."@en ;
                       rdfs:comment "The contibution or provision of information to an endeavor."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "contributing"@en .
 
 
@@ -991,7 +1036,7 @@ ontology:ContributorRole rdf:type owl:Class ;
                          rdfs:subClassOf obo:BFO_0000023 ;
                          obo:IAO_0000115 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en ;
                          rdfs:comment "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en ;
-                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                          rdfs:label "contributor role"@en .
 
 
@@ -1000,7 +1045,7 @@ ontology:ControlledVocabulary rdf:type owl:Class ;
                               rdfs:subClassOf ontology:SemanticExpressivity ;
                               obo:IAO_0000115 "Semantic expressivity that refers to a standardized set of terms and descriptors used to index and retrieve information systematically."@en ;
                               rdfs:comment "A standardized set of terms and descriptors used to index and retrieve information systematically."@en ;
-                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                               rdfs:label "controlled vocabulary"@en ;
                               skos:example "the Union List of Artist Names (ULAN), the Cultural Objects Name Authority (CONA)" .
 
@@ -1010,7 +1055,7 @@ ontology:Country rdf:type owl:Class ;
                  rdfs:subClassOf ontology:Place ;
                  obo:IAO_0000115 "A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty."@en ;
                  rdfs:comment "A country where the thing is located."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "country"@en .
 
 
@@ -1026,7 +1071,7 @@ ontology:CreativeWork rdf:type owl:Class ;
                       obo:IAO_0000115 "An information content entity that refers to a manifestation of someone's creative effort."@en ;
                       obo:IAO_0000116 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en ;
                       rdfs:comment "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "creative work"@en ;
                       skos:example "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc." .
 
@@ -1036,7 +1081,7 @@ ontology:DataPortal rdf:type owl:Class ;
                     rdfs:subClassOf ontology:Website ;
                     obo:IAO_0000115 "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en ;
                     rdfs:comment "An online platform that provides access to datasets."@en ;
-                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                    rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                     rdfs:label "data portal"@en ;
                     skos:example "Bach digital, KultSam, MusiXplora"@en .
 
@@ -1047,7 +1092,7 @@ ontology:Dataset rdf:type owl:Class ;
                  obo:IAO_0000115 "A creative work that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference."@en ;
                  obo:IAO_0000116 "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en ;
                  rdfs:comment "Structured information about a resource provided by an organization or a person."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "dataset"@en ;
                  skos:example "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)" .
 
@@ -1057,7 +1102,7 @@ ontology:Event rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000003 ;
                obo:IAO_0000115 "An occurent that represents an occurence or happening that unfolds in time."@en ;
                rdfs:comment "A class that represents entities that occur or unfold in time, typically characterized by a specific happening or occurrence with temporal properties. Events encompass a wide range of occurrences, including but not limited to happenings, incidents, activities, or processes."@en ;
-               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                rdfs:label "event"@en ;
                skos:example "conferences, wars, strikes, celebrations, accidents, workshops, meetings, or any other specific incident or happening."@en .
 
@@ -1067,7 +1112,7 @@ ontology:FederalState rdf:type owl:Class ;
                       rdfs:subClassOf ontology:Place ;
                       obo:IAO_0000115 "A place that refers to a geographical territory forming part of a country."@en ;
                       rdfs:comment "A federal state where the thing is located."@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "federal state"@en ;
                       skos:example "Sachsen, Berlin"@de .
 
@@ -1077,7 +1122,7 @@ ontology:FundingOrganizationRole rdf:type owl:Class ;
                                  rdfs:subClassOf obo:BFO_0000023 ;
                                  obo:IAO_0000115 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en ;
                                  rdfs:comment "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en ;
-                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                  rdfs:label "funding organization role"@en .
 
 
@@ -1086,7 +1131,7 @@ ontology:Glossary rdf:type owl:Class ;
                   rdfs:subClassOf ontology:SemanticExpressivity ;
                   obo:IAO_0000115 "Semantic expressivity that refers to a list of terms and their definitions within a specific domain or academic discipline."@en ;
                   rdfs:comment "A compilation of terms and their definitions within a specific domain or academic discipline."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "glossary"@en ;
                   skos:example "ICOM Museum Glossary"@en .
 
@@ -1096,7 +1141,7 @@ ontology:License rdf:type owl:Class ;
                  rdfs:subClassOf obo:IAO_0000030 ;
                  obo:IAO_0000115 "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en ;
                  rdfs:comment "A document that provides legal guidelines for the use of a resource, e.g. a software."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "license"@en ;
                  skos:example "cc-by-3, Digital Peer Publishing Lizenz"@en .
 
@@ -1106,7 +1151,7 @@ ontology:MIME-Type rdf:type owl:Class ;
                    rdfs:subClassOf ontology:MediaType ;
                    obo:IAO_0000115 "A media type that serves as a standardized identifier for specifying the nature and format of data."@en ;
                    rdfs:comment "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "MIME-type"@en ;
                    skos:example "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en .
 
@@ -1116,7 +1161,7 @@ ontology:MediaType rdf:type owl:Class ;
                    rdfs:subClassOf obo:IAO_0000033 ;
                    obo:IAO_0000115 "A directive information entity that describes a media type a bearer has."@en ;
                    rdfs:comment "A digital resource format or physical medium."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "media type"@en ;
                    skos:example "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book" .
 
@@ -1126,7 +1171,7 @@ ontology:Ontology rdf:type owl:Class ;
                   rdfs:subClassOf ontology:SemanticExpressivity ;
                   obo:IAO_0000115 "Semantic expressivity that refers to a semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and machine-understandable manner."@en ;
                   rdfs:comment "A semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and formalized manner, enabling machine-understandable reasoning and inference."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "ontology"@en ;
                   skos:example "CIDOC-CRM, BFO, nfdicore" .
 
@@ -1136,7 +1181,7 @@ ontology:Organization rdf:type owl:Class ;
                       rdfs:subClassOf ontology:Agent ;
                       obo:IAO_0000115 "An agent that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en ;
                       rdfs:comment "An organization of some kind, e.g. research organization or business organization"@en ;
-                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                       rdfs:label "organization"@en ;
                       skos:example "University Library in Leipzig, Museums of City Cologne" .
 
@@ -1147,7 +1192,7 @@ ontology:Person rdf:type owl:Class ;
                 obo:IAO_0000115 "An agent that represents a single human individual."@en ;
                 obo:IAO_0000116 "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
                 rdfs:comment "A resource that represents a single person."@en ;
-                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                 rdfs:label "person"@en ;
                 skos:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
 
@@ -1157,7 +1202,7 @@ ontology:Place rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000029 ;
                obo:IAO_0000115 "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en ;
                rdfs:comment "A spatial region, e.g. country, city or district."@en ;
-               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+               rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                rdfs:label "place"@en ;
                skos:example "Hessen, Berlin, Schweiz" .
 
@@ -1167,7 +1212,7 @@ ontology:ProgrammingLanguage rdf:type owl:Class ;
                              rdfs:subClassOf ontology:TechnologicalMeans ;
                              obo:IAO_0000115 "A technological means that is used for implementing software."@en ;
                              rdfs:comment "A formal language used for implementing a software."@en ;
-                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                              rdfs:label "programming language"@en ;
                              skos:example "Java, Ruby, C++, Perl, PHP" .
 
@@ -1177,7 +1222,7 @@ ontology:Project rdf:type owl:Class ;
                  rdfs:subClassOf obo:OBI_0000011 ;
                  obo:IAO_0000115 "A planned process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
                  rdfs:comment "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "project"@en ;
                  skos:example "Freischütz digital, Corpus Vitrearum Medii Aevi" .
 
@@ -1188,7 +1233,7 @@ ontology:Publication rdf:type owl:Class ;
                                      ontology:CreativeWork ;
                      obo:IAO_0000115 "A creative work that is the output of a publishing process."@en ;
                      rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
-                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                      rdfs:label "publication"@en ;
                      skos:example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" .
 
@@ -1198,7 +1243,7 @@ ontology:PublisherRole rdf:type owl:Class ;
                        rdfs:subClassOf obo:BFO_0000023 ;
                        obo:IAO_0000115 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en ;
                        rdfs:comment "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en ;
-                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                        rdfs:label "publisher role"@en .
 
 
@@ -1209,7 +1254,7 @@ ontology:Resource rdf:type owl:Class ;
                   obo:IAO_0000116 """2024-03-25 - Sasha Bruns: 
 This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."""@en ;
                   rdfs:comment "The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "resource"@en .
 
 
@@ -1218,7 +1263,7 @@ ontology:SemanticExpressivity rdf:type owl:Class ;
                               rdfs:subClassOf obo:BFO_0000019 ;
                               obo:IAO_0000115 "A quality of a resource that defines the degree of expressivity in the semantic representation of a resource."@en ;
                               rdfs:comment "The class represents the degree of expressivity in the semantic representation of a resource, such as an ontology, taxonomy, or glossary. It specifies the extent to which the resource captures and conveys the meaning, relationships, and semantics of concepts within a knowledge domain."@en ;
-                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                               rdfs:label "semantic expressivity"@en ;
                               skos:example "controlled vocabulary, ontology, taxonomy"@en .
 
@@ -1234,7 +1279,7 @@ ontology:Service rdf:type owl:Class ;
                                  <https://schema.org/Service> ;
                  obo:IAO_0000115 "An information content entity that refers to offerings provided by individuals or organizations to facilitate and contribute to the specific goals."@en ;
                  rdfs:comment "Services are resources offered by organizations or people to support and contribute to the predefined goals of a project. Services may encompass a diverse range of contributions such as data curation, specialized expertise, skill and various other forms of support."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "service"@en ;
                  skos:example "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en .
 
@@ -1245,7 +1290,7 @@ ontology:Software rdf:type owl:Class ;
                                   ontology:CreativeWork ;
                   obo:IAO_0000115 "A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en ;
                   rdfs:comment "A computer software provided by an organization or a person."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "software"@en ;
                   skos:example "Edirom, Muscat" .
 
@@ -1260,7 +1305,7 @@ ontology:Specification rdf:type owl:Class ;
                        obo:IAO_0000115 "A creative work that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process."@en ;
                        obo:IAO_0000116 "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en ;
                        rdfs:comment "A set of requirements, guidelines, standards contributed by an organization or a person."@en ;
-                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                       rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                        rdfs:label "specification"@en ;
                        skos:example "Guidelines, technical specifications, design specifications"@en .
 
@@ -1270,7 +1315,7 @@ ontology:Standard rdf:type owl:Class ;
                   rdfs:subClassOf ontology:Specification ;
                   obo:IAO_0000115 "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en ;
                   rdfs:comment "An international standard and norm that can be used to evaluate or create a resource."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "standard"@en ;
                   skos:example "ISO 15511, DINI-Zertifikat" .
 
@@ -1280,7 +1325,7 @@ ontology:Taxonomy rdf:type owl:Class ;
                   rdfs:subClassOf ontology:SemanticExpressivity ;
                   obo:IAO_0000115 "Semantic expressivity that refers to a hierarchical classification system that organizes concepts into a tree-like structure."@en ;
                   rdfs:comment "A hierarchical classification system that organizes concepts into a tree-like structure based on their shared characteristics and relationships."@en ;
-                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                   rdfs:label "taxonomy"@en ;
                   skos:example "Linnaean Taxonomy, Iconclass"@en .
 
@@ -1290,7 +1335,7 @@ ontology:TechnologicalMeans rdf:type owl:Class ;
                             rdfs:subClassOf obo:IAO_0000104 ;
                             obo:IAO_0000115 "A plan specification that refers to technology employed for the creation, management, utilization, or control of a resource."@en ;
                             rdfs:comment "A technology, e.g. a web application or a programming framework used in a resource."@en ;
-                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                             rdfs:label "technological means"@en ;
                             skos:example "Groovy on Grails, Angular"@en .
 
@@ -1300,7 +1345,7 @@ ontology:Thesaurus rdf:type owl:Class ;
                    rdfs:subClassOf ontology:ControlledVocabulary ;
                    obo:IAO_0000115 "A controlled vocabulary organized hierarchically and provided with associative relationships, such as synonyms, broader terms, and narrower terms."@en ;
                    rdfs:comment "A hierarchical controlled vocabulary enriched with associative relationships, including synonyms, broader terms, and narrower terms."@en ;
-                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                    rdfs:label "thesaurus"@en ;
                    skos:example "Getty Art & Architecture Thesaurus, UNESCO Thesaurus for cultural and scientific documentation" .
 
@@ -1310,7 +1355,7 @@ ontology:Website rdf:type owl:Class ;
                  rdfs:subClassOf ontology:CreativeWork ;
                  obo:IAO_0000115 "A creative work that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en ;
                  rdfs:comment "A collection of webpages contributed by an organization or a person."@en ;
-                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                  rdfs:label "website"@en ;
                  skos:example "https:\\/\\/opac.rism.info" .
 
@@ -1320,7 +1365,7 @@ ontology:Website rdf:type owl:Class ;
                                                             rdfs:subClassOf ontology:Service ;
                                                             obo:IAO_0000115 "A service that contributes to providing expert guidance in broad range of topics, including securing funding and navigating the application process for research projects."@en ;
                                                             rdfs:comment "Services that aim at providing expert advice, guidance, and support to agents, particular with securing funding opportunities for their efforts. This may include providing individual support for a broad range of research data and software concerns to scholars, institutions and data providers, assistance in identifying suitable funding sources, crafting grant proposals, and navigating the application process."@en ;
-                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                                             rdfs:label "consulting & funding"@en ;
                                                             skos:example "Flex Funds, NFDI4Culture Helpdesk"^^rdfs:Literal .
 
@@ -1330,7 +1375,7 @@ ontology:Website rdf:type owl:Class ;
                                                                    rdfs:subClassOf ontology:Service ;
                                                                    obo:IAO_0000115 "A service that contributes to organizing and managing research data."@en ;
                                                                    rdfs:comment "Services related to organizing, cataloging, and managing research data and information. This includes developing metadata schemas, creating data dictionaries, establishing standardized data formats, and ensuring data quality and integrity"@en ;
-                                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                                                    rdfs:label "information & documentation"@en ;
                                                                    skos:example "Registry for Tools & Services, Culture Information Portal" .
 
@@ -1340,7 +1385,7 @@ ontology:Website rdf:type owl:Class ;
                                                            rdfs:subClassOf ontology:Service ;
                                                            obo:IAO_0000115 "A service that contributes to educating agents on research data management."@en ;
                                                            rdfs:comment "Services that aim to support agents in developing essential skills and competencies related to research data management. This includes organizing training workshops, webinars, and educational resources, providing personalized consultations, mentoring programs, and community engagement initiatives."@en ;
-                                                           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                           rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                                            rdfs:label "learning & teaching"@en ;
                                                            skos:example "Educational Resource Finder" .
 
@@ -1350,7 +1395,7 @@ ontology:Website rdf:type owl:Class ;
                                                             rdfs:subClassOf ontology:Service ;
                                                             obo:IAO_0000115 "A service that contributes to integrating research data with external sources and data enrichment."@en ;
                                                             rdfs:comment "Services that focus on enhancing research data by integrating it with external datasets, vocabularies, and ontologies. This involves establishing interoperability frameworks, data integration pipelines, and semantic enrichment techniques to connect disparate datasets and enable cross-disciplinary research."@en ;
-                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                            rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                                             rdfs:label "linkage & enrichment"@en ;
                                                             skos:example "Culture Knowledge Graph, Semantic Kompakkt, Wikibase4Research" .
 
@@ -1360,7 +1405,7 @@ ontology:Website rdf:type owl:Class ;
                                                                      rdfs:subClassOf ontology:Service ;
                                                                      obo:IAO_0000115 "A service that contributes to fostering interdisciplinary collaboration and community engagement within the research community."@en ;
                                                                      rdfs:comment "Services that focus on fostering interdisciplinary collaboration, knowledge exchange, and community engagement within the research ecosystem. This includes organizing networking events, collaborative projects, and virtual platforms for researchers to connect, share ideas, and collaborate on common research challenges."@en ;
-                                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                                                      rdfs:label "participation & collaboration"@en ;
                                                                      skos:example "Forum for Data Standards and Data Quality, Expert Forum for sustainable Software Development in NFDI4Culture, Linked Open Data Working Group" .
 
@@ -1370,7 +1415,7 @@ ontology:Website rdf:type owl:Class ;
                                                                    rdfs:subClassOf ontology:Service ;
                                                                    obo:IAO_0000115 "A service that contributes to sharing and publication of research findings."@en ;
                                                                    rdfs:comment "Services that aim at facilitating the sharing and dissemination of research findings and outputs with wider audiences. This includes supporting agents in preparing resources for publication, production, publishing, sprint services, etc."@en ;
-                                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                                   rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                                                    rdfs:label "publication & dissemination"@en ;
                                                                    skos:example "NextGen Books" .
 
@@ -1380,17 +1425,19 @@ ontology:Website rdf:type owl:Class ;
                                                               rdfs:subClassOf ontology:Service ;
                                                               obo:IAO_0000115 "A service that contributes to long-term archiving and data integrity through secure storage and preservation strategies."@en ;
                                                               rdfs:comment "Services that focus on the long-term archiving and preservation of research data and digital assets. This involves providing secure storage infrastructures, backup solutions, and preservation strategies to prevent data loss over time."@en ;
-                                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
+                                                              rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                                               rdfs:label "storage & preservation"@en ;
                                                               skos:example "RADAR4Culture, Curated Repository List"@en .
 
 
 ###  https://schema.org/CreativeWork
-<https://schema.org/CreativeWork> rdf:type owl:Class .
+<https://schema.org/CreativeWork> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  https://schema.org/Service
-<https://schema.org/Service> rdf:type owl:Class .
+<https://schema.org/Service> rdf:type owl:Class ;
+                             rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

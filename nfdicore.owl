@@ -33,6 +33,8 @@ Aligning with [IAO](https://github.com/information-artifact-ontology/IAO) and [S
 
 Current development is managed via [GitHub](https://github.com/ISE-FIZKarlsruhe/nfdicore). Feel free to give feedback, contribute, or raise issues.
 
+More detailed information and can be found in the [NFDIcore ontology documentation](https://ise-fizkarlsruhe.github.io/nfdicore/docs/). 
+
 ### RESOURCES
 
 Within NFDIcore, resources encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization. These resources are categorized as information content entities (IAO_0000030), derived from material entities (BFO_0000040). 
@@ -69,7 +71,8 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
 ![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)</dcterms:abstract>
         <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0</dcterms:bibliographicCitation>
-        <dcterms:created>2024-10-17</dcterms:created>
+        <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.1.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.1.0</dcterms:bibliographicCitation>
+        <dcterms:created>2024-10-18</dcterms:created>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
@@ -100,19 +103,25 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <!-- http://protege.stanford.edu/plugins/owl/protege#defaultLanguage -->
 
-    <owl:AnnotationProperty rdf:about="http://protege.stanford.edu/plugins/owl/protege#defaultLanguage"/>
+    <owl:AnnotationProperty rdf:about="http://protege.stanford.edu/plugins/owl/protege#defaultLanguage">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000179 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000179"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000179">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000180 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000180"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000180">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -157,7 +166,9 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -231,7 +242,9 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -266,103 +279,136 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000234 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000234"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000234">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000600 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000601 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000601"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000601">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000602 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000602"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000602">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0010000 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0010000"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0010000">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/contributor -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/source -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/abstract -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/created -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label>description</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -370,19 +416,24 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://purl.org/dc/terms/format -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/hasVersion -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label>license</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -390,13 +441,16 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://purl.org/dc/terms/modified -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label>title</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -404,31 +458,41 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://purl.org/ontology/bibo/status -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://rdfs.org/ns/void#feature -->
 
-    <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#feature"/>
+    <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#feature">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
 
-    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -449,19 +513,24 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#example -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/acronym -->
 
     <owl:AnnotationProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/acronym">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">nfdicore:acronym</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -512,6 +581,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">part of</rdfs:label>
         <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -534,6 +604,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -595,6 +666,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000119>James Malone</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
         <dcterms:creator xml:lang="en">Alan Ruttenberg</dcterms:creator>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label>is about</rdfs:label>
         <rdfs:label xml:lang="en">is about</rdfs:label>
     </owl:ObjectProperty>
@@ -618,6 +690,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan</obo:IAO_0000119>
         <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">denotes</rdfs:label>
     </owl:ObjectProperty>
     
@@ -631,6 +704,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">inverse of the relation &apos;denotes&apos;</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Person: Jie Zheng, Chris Stoeckert, Mike Conlon</obo:IAO_0000117>
         <obo:IAO_0000233 rdf:resource="https://github.com/information-artifact-ontology/IAO/issues/206"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">denoted by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -655,6 +729,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON: Larry Hunter</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has_specified_output</rdfs:label>
     </owl:ObjectProperty>
     
@@ -672,6 +747,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON:Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">is_specified_output_of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -689,6 +765,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">characteristic of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -707,6 +784,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has characteristic</rdfs:label>
     </owl:ObjectProperty>
     
@@ -724,6 +802,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000112 xml:lang="en">this investigator participates in this investigation</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a continuant and a process, in which the continuant is somehow involved in the process</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">participates_in</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">participates in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -742,6 +821,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
         <dce:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</dce:source>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
     </owl:ObjectProperty>
     
@@ -759,6 +839,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">function_of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">is function of</obo:IAO_0000118>
         <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">function of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -775,6 +856,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">is quality of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">quality_of</obo:IAO_0000118>
         <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">quality of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -791,6 +873,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">is role of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">role_of</obo:IAO_0000118>
         <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">role of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -806,6 +889,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">has_function</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has function</rdfs:label>
     </owl:ObjectProperty>
     
@@ -820,6 +904,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">has_quality</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has quality</rdfs:label>
     </owl:ObjectProperty>
     
@@ -835,6 +920,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">has_role</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has role</rdfs:label>
     </owl:ObjectProperty>
     
@@ -848,6 +934,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
         <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has disposition</rdfs:label>
     </owl:ObjectProperty>
     
@@ -858,6 +945,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000092">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
         <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">disposition of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -876,6 +964,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">location_of</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">location of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -916,6 +1005,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">located_in</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <dce:source>http://www.obofoundry.org/ro/#OBO_REL:located_in</dce:source>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">located in</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -940,6 +1030,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000112>Linking a type of software to its particular programming language.</obo:IAO_0000112>
         <obo:IAO_0000115>Is encoded in is an &quot;is about&quot; relationship which describes the type of encoding used for the referenced class.</obo:IAO_0000115>
         <obo:IAO_0000119>Allyson Lister</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label>is encoded in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -959,7 +1050,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Specification"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and the specified best practice.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">best practice</rdfs:label>
     </owl:ObjectProperty>
     
@@ -971,7 +1062,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;best practice&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">best practice of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -991,7 +1082,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and a contact point.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">contact point</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1001,7 +1092,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf">
         <rdfs:comment xml:lang="en">inverse of  property &quot;contact point&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">contact point of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1014,7 +1105,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:comment xml:lang="en">The property related a resource to a person or an organization responsible for making contributions to a resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">contributor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1024,7 +1115,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/contributorOf">
         <rdfs:comment xml:lang="en">inverse of property &quot;contributor&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">contributor of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1045,7 +1136,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Country"/>
         <rdfs:comment xml:lang="en">The property relates a city or a state to a country where it is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">of country</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1056,7 +1147,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/countryOf">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/part"/>
         <rdfs:comment xml:lang="en">inverse of property &quot;country&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">country of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1070,7 +1161,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Dataset"/>
         <rdfs:comment xml:lang="en">The property is a relation between a resource and a data set.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">data set</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1082,7 +1173,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;data set&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">data set of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1096,7 +1187,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/MediaType"/>
         <rdfs:comment xml:lang="en">The property relates a resource to the format available for the export of a resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">export format</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1108,7 +1199,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;export format&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">export format of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1122,7 +1213,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/City"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/FederalState"/>
         <rdfs:comment xml:lang="en">The property relates a city to a federal state where it is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has federal state</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1133,7 +1224,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/partOf"/>
         <rdfs:comment xml:lang="en">inverse of property &quot;federal state&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">federal state of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1146,7 +1237,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
         <rdfs:comment xml:lang="en">The property relates a project to the organization that provided funding for it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">funding organization</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1158,7 +1249,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
         <rdfs:comment xml:lang="en">inverse of property &quot;funding organization&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">funding organization of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1172,7 +1263,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/License"/>
         <rdfs:comment>The property is a relationship between a resource and a license file.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has license</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1183,7 +1274,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/licenseOf">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:comment xml:lang="en">inverse of property &quot;license&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">license of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1196,7 +1287,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a thing and a place its located at. </rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">location</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1206,7 +1297,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/locationOf">
         <rdfs:comment xml:lang="en">inverse of property &quot;location&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">location of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1220,7 +1311,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/MediaType"/>
         <rdfs:comment xml:lang="en">The property relates a resource to its data format.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has media type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1232,7 +1323,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;media type&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">media type of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1245,7 +1336,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/part"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/memberOf"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a consortium and an organization that is a member of the consortium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">member</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1257,7 +1348,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/partOf"/>
         <rdfs:comment xml:lang="en">The property is a relationship between an organization and a consortium it belongs to.</rdfs:comment>
         <rdfs:comment xml:lang="en">inverse of property &quot;member&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">member of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1268,7 +1359,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization">
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization"/>
         <rdfs:comment xml:lang="en">The property is a parental relationship between organizations.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">parent organization</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1279,7 +1370,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/part">
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/partOf"/>
         <rdfs:comment xml:lang="en">The generic property is a relationship between a thing and its part.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1292,7 +1383,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">The generic property is a relationship between a thing and a thing in which it is physically or logically included.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">part of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1306,7 +1397,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a project and an agent that participates in the project.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">participant</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1317,7 +1408,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/participantOf">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:comment xml:lang="en">inverse of  property &quot;prticipant&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">participant of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1328,7 +1419,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:comment xml:lang="en">The property is a partner relationship between organizations. The property is symmetric.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">partner organization</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1343,7 +1434,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Software"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage"/>
         <rdfs:comment>The property links software to a programming language its written in.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has programming language</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1353,7 +1444,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf">
         <rdfs:comment xml:lang="en">inverse of  property &quot;programming language&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">programming language of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1366,7 +1457,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and an organization or a person responsible for publishing it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">publisher</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1376,7 +1467,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/publisherOf">
         <rdfs:comment xml:lang="en">inverse of  property &quot;publisher&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">publisher of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1395,7 +1486,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a project or a resource and related projects.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">related project</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1416,7 +1507,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Collection"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a dataset and a collection it represents.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">represented collection</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1427,7 +1518,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
         <rdfs:comment xml:lang="en">inverse of  property &quot;represented collection&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">represented collection of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1441,7 +1532,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
         <rdfs:comment xml:lang="en">The property relates a resource to its semantic expressivity spectrum.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has semantic expressivity</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1452,7 +1543,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
         <rdfs:comment xml:lang="en">inverse of  property &quot;semantic expressivity&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">semantic expressivity of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1466,7 +1557,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Software"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and a software it uses.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has software</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1478,7 +1569,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;sofware&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">software of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1492,7 +1583,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:comment xml:lang="en">The property relates a data resource to its SPARQL Endpoint. </rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">sparql endpoint</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1504,7 +1595,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;sparql endpoint&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">sparql endpoint of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1518,7 +1609,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Specification"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and the international standard or norm.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has specification</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1530,7 +1621,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;specification&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">specification of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1544,7 +1635,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Standard"/>
         <rdfs:comment xml:lang="en">The property relates a resource to the standard it relies on.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has standard</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1556,7 +1647,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;standard&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">standard of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1579,7 +1670,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline"/>
         <obo:IAO_0000232>to check for BFO superproperty</obo:IAO_0000232>
         <rdfs:comment xml:lang="en">The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">subject area</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1590,7 +1681,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
         <rdfs:comment xml:lang="en">inverse of  property &quot;subject area&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">subject area of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1600,7 +1691,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization">
         <rdfs:comment xml:lang="en">inverse of &quot;parent organization&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">subsidiary organization</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1614,7 +1705,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and a technology it uses. </rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">technology</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1626,7 +1717,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;technology&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">technology of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1640,7 +1731,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a thing and a url associated with the thing.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">url</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1651,7 +1742,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/urlOf">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
         <rdfs:comment xml:lang="en">inverse of  property &quot;url&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">url of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1674,7 +1765,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The property refers to the date on which a person was born.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">birth date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1686,7 +1777,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The property refers to the date on which a person passed away.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">death date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1698,7 +1789,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The property refers to the date on which the organization ceased to exist or was formally dissolved.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">dissolution date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1710,7 +1801,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The property relates an agent to their email address.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">email address</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1721,7 +1812,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/endDate">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Event"/>
         <rdfs:comment xml:lang="en">The property refers to the moment in time when an event ends.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">end date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1732,7 +1823,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/fileExtension">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:comment xml:lang="en">An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don&apos;t use dot at start.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label>file extension</rdfs:label>
         <skos:example>mp4</skos:example>
         <skos:example>ttl</skos:example>
@@ -1748,7 +1839,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The property refers to the specific date on which the organization was officially established or founded.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">foundation date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1760,7 +1851,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The property refers to the moment in time when an event begins.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">start date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1817,6 +1908,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Software_development</obo:IAO_0000119>
         <obo:IAO_0000600 xml:lang="en">A planned process resulting in a software product involving the creation of source code.</obo:IAO_0000600>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">software development</rdfs:label>
     </owl:Class>
     
@@ -2581,6 +2673,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">goal specification</obo:IAO_0000118>
         <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process/Roles Branch</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">OBI_0000217</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">objective specification</rdfs:label>
     </owl:Class>
     
@@ -2595,6 +2688,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">A directive information entity that describes an action the bearer will take.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process branch</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">action specification</rdfs:label>
     </owl:Class>
     
@@ -2616,6 +2710,7 @@ interpreted by or directly executed by a processing unit.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">GROUP: OBI</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">software</rdfs:label>
     </owl:Class>
     
@@ -2634,6 +2729,7 @@ interpreted by or directly executed by a processing unit.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI_0000058</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">programming language</rdfs:label>
     </owl:Class>
     
@@ -2662,6 +2758,7 @@ JAR: A data item is an approximately justified approximately true approximate be
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">data</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">data item</rdfs:label>
     </owl:Class>
     
@@ -2690,6 +2787,7 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000119>IAO</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label>information content entity</rdfs:label>
         <rdfs:label xml:lang="en">information content entity</rdfs:label>
     </owl:Class>
@@ -2714,6 +2812,7 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000116 xml:lang="en">Werner pushed back on calling it realizable information entity as it isn&apos;t realizable. However this name isn&apos;t right either. An example would be a recipe. The realizable entity would be a plan, but the information entity isn&apos;t about the plan, it, once concretized, *is* the plan. -Alan</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">directive information entity</rdfs:label>
     </owl:Class>
     
@@ -2745,6 +2844,7 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000117 xml:lang="en">PERSON:Bill Bug</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">OBI_0000266</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">curation status specification</rdfs:label>
     </owl:Class>
     
@@ -2762,6 +2862,7 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI_0000039</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">source code module</rdfs:label>
     </owl:Class>
     
@@ -2774,6 +2875,7 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000111 xml:lang="en">data about an ontology part</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Data about an ontology part is a data item about a part of an ontology, for example a term</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">data about an ontology part</rdfs:label>
     </owl:Class>
     
@@ -2814,6 +2916,7 @@ Conditional specification not well enough specified.
 Question whether all plan specifications have objective specifications.
 
 Request that IAO either clarify these or change definitions not to use them</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">plan specification</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://github.com/information-artifact-ontology/IAO/issues/231#issuecomment-1010455131</rdfs:seeAlso>
     </owl:Class>
@@ -2842,6 +2945,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000116 xml:lang="en">The creation of this class has been inspired in part by Werner Ceusters&apos; paper, Applying evolutionary terminology auditing to the Gene Ontology.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">obsolescence reason specification</rdfs:label>
     </owl:Class>
     
@@ -2856,6 +2960,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
         <obo:IAO_0000115 xml:lang="en">A collection of information content entities intended to be understood together as a whole</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">document</rdfs:label>
     </owl:Class>
     
@@ -2888,6 +2993,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000118 xml:lang="en">published document</obo:IAO_0000118>
         <obo:IAO_0000233 rdf:resource="https://github.com/information-artifact-ontology/IAO/issues/232"/>
         <rdfs:comment xml:lang="en">Revisit the term in Octorber 2020. Improve the defintion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">publication</rdfs:label>
     </owl:Class>
     
@@ -2911,6 +3017,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000115 xml:lang="en">A denotator type indicates how a term should be interpreted from an ontological perspective.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Barry Smith, Werner Ceusters</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">denotator type</rdfs:label>
     </owl:Class>
     
@@ -2926,6 +3033,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Publishing</obo:IAO_0000119>
         <obo:IAO_0000233 rdf:resource="https://github.com/information-artifact-ontology/IAO/issues/232"/>
         <obo:IAO_0000234 xml:lang="en">VEuPathDB</obo:IAO_0000234>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">publishing process</rdfs:label>
     </owl:Class>
     
@@ -2938,6 +3046,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000111 xml:lang="en">planned process</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A process that realizes a plan which is the concretization of a plan specification.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">planned process</rdfs:label>
     </owl:Class>
     
@@ -2951,6 +3060,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000115>A licence is a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence.</obo:IAO_0000115>
         <obo:IAO_0000119>Modified from http://en.wikipedia.org/wiki/Software_license</obo:IAO_0000119>
         <dcterms:creator>James Malone</dcterms:creator>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">licence</rdfs:label>
         <rdfs:label>software license</rdfs:label>
     </owl:Class>
@@ -2964,7 +3074,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000115 xml:lang="en">A quality of an entity that specifies the subject area, domain or academic discipline of an entity.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2024-03-26: SB &amp; JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">academic discipline</rdfs:label>
         <skos:example rdf:resource="https://www.wikidata.org/entity/Q12271"/>
         <skos:example xml:lang="en">Architecture, Art History, Musicology, Media Studies, Performing Arts</skos:example>
@@ -2978,7 +3088,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <obo:IAO_0000115 xml:lang="en">An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">agent</rdfs:label>
         <skos:example xml:lang="en">Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz</skos:example>
     </owl:Class>
@@ -2991,7 +3101,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
         <obo:IAO_0000115 xml:lang="en">A place that refers to a densely populated urban area.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A city or a town where the thing is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">city</rdfs:label>
         <skos:example xml:lang="en">Berlin, Hannover, Kyiv</skos:example>
     </owl:Class>
@@ -3004,7 +3114,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that represents a collection of material entities intended to be understood together as a whole.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A tangible collection of valuables published or curated by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">collection</rdfs:label>
         <skos:example xml:lang="en">A collection of arts displayed at the museum</skos:example>
     </owl:Class>
@@ -3027,7 +3137,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">consortium</rdfs:label>
         <skos:example>NFDI4Culture, NFDI-MatWerk, DataPLANT.</skos:example>
     </owl:Class>
@@ -3051,7 +3161,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
         <obo:IAO_0000115 xml:lang="en">An organization that has a specific role, responsibilities or contributions within the consortium framework.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">consortium member</rdfs:label>
         <skos:example xml:lang="en">Museums of City Cologne is a member of NFDI4Culture consortium.</skos:example>
     </owl:Class>
@@ -3064,7 +3174,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">consortium member role</rdfs:label>
     </owl:Class>
     
@@ -3076,7 +3186,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">contact point role</rdfs:label>
     </owl:Class>
     
@@ -3088,7 +3198,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000115 xml:lang="en">A planned process in which the contact information of an entity is provided.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A planned process in which the contact information of an entity is provided.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">contacting</rdfs:label>
     </owl:Class>
     
@@ -3100,7 +3210,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000115 xml:lang="en">A planned process of contibuting or providing information to an endeavor.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">The contibution or provision of information to an endeavor.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">contributing</rdfs:label>
     </owl:Class>
     
@@ -3112,7 +3222,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">contributor role</rdfs:label>
     </owl:Class>
     
@@ -3124,7 +3234,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
         <obo:IAO_0000115 xml:lang="en">Semantic expressivity that refers to a standardized set of terms and descriptors used to index and retrieve information systematically.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A standardized set of terms and descriptors used to index and retrieve information systematically.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">controlled vocabulary</rdfs:label>
         <skos:example>the Union List of Artist Names (ULAN), the Cultural Objects Name Authority (CONA)</skos:example>
     </owl:Class>
@@ -3137,7 +3247,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
         <obo:IAO_0000115 xml:lang="en">A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A country where the thing is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">country</rdfs:label>
     </owl:Class>
     
@@ -3159,7 +3269,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000115 xml:lang="en">An information content entity that refers to a manifestation of someone&apos;s creative effort.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to &quot;schema:CreativeWork and &apos;information content entity&apos;&quot;, we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">creative work</rdfs:label>
         <skos:example>TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools &amp; Services, RADAR4Culture service, etc.</skos:example>
     </owl:Class>
@@ -3172,7 +3282,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Website"/>
         <obo:IAO_0000115 xml:lang="en">A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">An online platform that provides access to datasets.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">data portal</rdfs:label>
         <skos:example xml:lang="en">Bach digital, KultSam, MusiXplora</skos:example>
     </owl:Class>
@@ -3186,7 +3296,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000115 xml:lang="en">A creative work that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn&apos;t necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">Structured information about a resource provided by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">dataset</rdfs:label>
         <skos:example>Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)</skos:example>
     </owl:Class>
@@ -3199,7 +3309,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <obo:IAO_0000115 xml:lang="en">An occurent that represents an occurence or happening that unfolds in time.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A class that represents entities that occur or unfold in time, typically characterized by a specific happening or occurrence with temporal properties. Events encompass a wide range of occurrences, including but not limited to happenings, incidents, activities, or processes.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">event</rdfs:label>
         <skos:example xml:lang="en">conferences, wars, strikes, celebrations, accidents, workshops, meetings, or any other specific incident or happening.</skos:example>
     </owl:Class>
@@ -3212,7 +3322,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
         <obo:IAO_0000115 xml:lang="en">A place that refers to a geographical territory forming part of a country.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A federal state where the thing is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">federal state</rdfs:label>
         <skos:example xml:lang="de">Sachsen, Berlin</skos:example>
     </owl:Class>
@@ -3225,7 +3335,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">funding organization role</rdfs:label>
     </owl:Class>
     
@@ -3237,7 +3347,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
         <obo:IAO_0000115 xml:lang="en">Semantic expressivity that refers to a list of terms and their definitions within a specific domain or academic discipline.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A compilation of terms and their definitions within a specific domain or academic discipline.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">glossary</rdfs:label>
         <skos:example xml:lang="en">ICOM Museum Glossary</skos:example>
     </owl:Class>
@@ -3250,7 +3360,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A document that provides legal guidelines for the use of a resource, e.g. a software.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">license</rdfs:label>
         <skos:example xml:lang="en">cc-by-3, Digital Peer Publishing Lizenz</skos:example>
     </owl:Class>
@@ -3263,7 +3373,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/MediaType"/>
         <obo:IAO_0000115 xml:lang="en">A media type that serves as a standardized identifier for specifying the nature and format of data.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">MIME-type</rdfs:label>
         <skos:example xml:lang="en">https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3</skos:example>
     </owl:Class>
@@ -3276,7 +3386,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <obo:IAO_0000115 xml:lang="en">A directive information entity that describes a media type a bearer has.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A digital resource format or physical medium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">media type</rdfs:label>
         <skos:example>doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book</skos:example>
     </owl:Class>
@@ -3289,7 +3399,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
         <obo:IAO_0000115 xml:lang="en">Semantic expressivity that refers to a semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and machine-understandable manner.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and formalized manner, enabling machine-understandable reasoning and inference.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">ontology</rdfs:label>
         <skos:example>CIDOC-CRM, BFO, nfdicore</skos:example>
     </owl:Class>
@@ -3302,7 +3412,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <obo:IAO_0000115 xml:lang="en">An agent that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">An organization of some kind, e.g. research organization or business organization</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">organization</rdfs:label>
         <skos:example>University Library in Leipzig, Museums of City Cologne</skos:example>
     </owl:Class>
@@ -3316,7 +3426,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000115 xml:lang="en">An agent that represents a single human individual.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. &quot;Person&quot; in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">A resource that represents a single person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">person</rdfs:label>
         <skos:example>Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus</skos:example>
     </owl:Class>
@@ -3329,7 +3439,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
         <obo:IAO_0000115 xml:lang="en">A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A spatial region, e.g. country, city or district.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">place</rdfs:label>
         <skos:example>Hessen, Berlin, Schweiz</skos:example>
     </owl:Class>
@@ -3342,7 +3452,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans"/>
         <obo:IAO_0000115 xml:lang="en">A technological means that is used for implementing software.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A formal language used for implementing a software.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">programming language</rdfs:label>
         <skos:example>Java, Ruby, C++, Perl, PHP</skos:example>
     </owl:Class>
@@ -3355,7 +3465,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000115 xml:lang="en">A planned process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A scientific or business endeavor that aims to conclude an investigation or to answer a research question.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">project</rdfs:label>
         <skos:example>Freischütz digital, Corpus Vitrearum Medii Aevi</skos:example>
     </owl:Class>
@@ -3369,7 +3479,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork"/>
         <obo:IAO_0000115 xml:lang="en">A creative work that is the output of a publishing process.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">publication</rdfs:label>
         <skos:example>MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten</skos:example>
     </owl:Class>
@@ -3382,7 +3492,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">publisher role</rdfs:label>
     </owl:Class>
     
@@ -3396,7 +3506,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <obo:IAO_0000116 xml:lang="en">2024-03-25 - Sasha Bruns: 
 This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">resource</rdfs:label>
     </owl:Class>
     
@@ -3408,7 +3518,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:IAO_0000115 xml:lang="en">A quality of a resource that defines the degree of expressivity in the semantic representation of a resource.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">The class represents the degree of expressivity in the semantic representation of a resource, such as an ontology, taxonomy, or glossary. It specifies the extent to which the resource captures and conveys the meaning, relationships, and semantics of concepts within a knowledge domain.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">semantic expressivity</rdfs:label>
         <skos:example xml:lang="en">controlled vocabulary, ontology, taxonomy</skos:example>
     </owl:Class>
@@ -3430,7 +3540,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://schema.org/Service"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity that refers to offerings provided by individuals or organizations to facilitate and contribute to the specific goals.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Services are resources offered by organizations or people to support and contribute to the predefined goals of a project. Services may encompass a diverse range of contributions such as data curation, specialized expertise, skill and various other forms of support.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">service</rdfs:label>
         <skos:example xml:lang="en">Data curation for HeiDATA, Expertise for the development and application of LIDO</skos:example>
     </owl:Class>
@@ -3444,7 +3554,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork"/>
         <obo:IAO_0000115 xml:lang="en">A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A computer software provided by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">software</rdfs:label>
         <skos:example>Edirom, Muscat</skos:example>
     </owl:Class>
@@ -3465,7 +3575,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <obo:IAO_0000115 xml:lang="en">A creative work that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">A set of requirements, guidelines, standards contributed by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">specification</rdfs:label>
         <skos:example xml:lang="en">Guidelines, technical specifications, design specifications</skos:example>
     </owl:Class>
@@ -3478,7 +3588,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Specification"/>
         <obo:IAO_0000115 xml:lang="en">A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">An international standard and norm that can be used to evaluate or create a resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">standard</rdfs:label>
         <skos:example>ISO 15511, DINI-Zertifikat</skos:example>
     </owl:Class>
@@ -3491,7 +3601,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
         <obo:IAO_0000115 xml:lang="en">Semantic expressivity that refers to a hierarchical classification system that organizes concepts into a tree-like structure.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A hierarchical classification system that organizes concepts into a tree-like structure based on their shared characteristics and relationships.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">taxonomy</rdfs:label>
         <skos:example xml:lang="en">Linnaean Taxonomy, Iconclass</skos:example>
     </owl:Class>
@@ -3504,7 +3614,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
         <obo:IAO_0000115 xml:lang="en">A plan specification that refers to technology employed for the creation, management, utilization, or control of a resource.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A technology, e.g. a web application or a programming framework used in a resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">technological means</rdfs:label>
         <skos:example xml:lang="en">Groovy on Grails, Angular</skos:example>
     </owl:Class>
@@ -3517,7 +3627,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary"/>
         <obo:IAO_0000115 xml:lang="en">A controlled vocabulary organized hierarchically and provided with associative relationships, such as synonyms, broader terms, and narrower terms.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A hierarchical controlled vocabulary enriched with associative relationships, including synonyms, broader terms, and narrower terms.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">thesaurus</rdfs:label>
         <skos:example>Getty Art &amp; Architecture Thesaurus, UNESCO Thesaurus for cultural and scientific documentation</skos:example>
     </owl:Class>
@@ -3530,7 +3640,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork"/>
         <obo:IAO_0000115 xml:lang="en">A creative work that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A collection of webpages contributed by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">website</rdfs:label>
         <skos:example>https:\/\/opac.rism.info</skos:example>
     </owl:Class>
@@ -3543,7 +3653,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
         <obo:IAO_0000115 xml:lang="en">A service that contributes to providing expert guidance in broad range of topics, including securing funding and navigating the application process for research projects.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Services that aim at providing expert advice, guidance, and support to agents, particular with securing funding opportunities for their efforts. This may include providing individual support for a broad range of research data and software concerns to scholars, institutions and data providers, assistance in identifying suitable funding sources, crafting grant proposals, and navigating the application process.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">consulting &amp; funding</rdfs:label>
         <skos:example rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Flex Funds, NFDI4Culture Helpdesk</skos:example>
     </owl:Class>
@@ -3556,7 +3666,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
         <obo:IAO_0000115 xml:lang="en">A service that contributes to organizing and managing research data.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Services related to organizing, cataloging, and managing research data and information. This includes developing metadata schemas, creating data dictionaries, establishing standardized data formats, and ensuring data quality and integrity</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">information &amp; documentation</rdfs:label>
         <skos:example>Registry for Tools &amp; Services, Culture Information Portal</skos:example>
     </owl:Class>
@@ -3569,7 +3679,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
         <obo:IAO_0000115 xml:lang="en">A service that contributes to educating agents on research data management.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Services that aim to support agents in developing essential skills and competencies related to research data management. This includes organizing training workshops, webinars, and educational resources, providing personalized consultations, mentoring programs, and community engagement initiatives.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">learning &amp; teaching</rdfs:label>
         <skos:example>Educational Resource Finder</skos:example>
     </owl:Class>
@@ -3582,7 +3692,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
         <obo:IAO_0000115 xml:lang="en">A service that contributes to integrating research data with external sources and data enrichment.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Services that focus on enhancing research data by integrating it with external datasets, vocabularies, and ontologies. This involves establishing interoperability frameworks, data integration pipelines, and semantic enrichment techniques to connect disparate datasets and enable cross-disciplinary research.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">linkage &amp; enrichment</rdfs:label>
         <skos:example>Culture Knowledge Graph, Semantic Kompakkt, Wikibase4Research</skos:example>
     </owl:Class>
@@ -3595,7 +3705,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
         <obo:IAO_0000115 xml:lang="en">A service that contributes to fostering interdisciplinary collaboration and community engagement within the research community.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Services that focus on fostering interdisciplinary collaboration, knowledge exchange, and community engagement within the research ecosystem. This includes organizing networking events, collaborative projects, and virtual platforms for researchers to connect, share ideas, and collaborate on common research challenges.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">participation &amp; collaboration</rdfs:label>
         <skos:example>Forum for Data Standards and Data Quality, Expert Forum for sustainable Software Development in NFDI4Culture, Linked Open Data Working Group</skos:example>
     </owl:Class>
@@ -3608,7 +3718,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
         <obo:IAO_0000115 xml:lang="en">A service that contributes to sharing and publication of research findings.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Services that aim at facilitating the sharing and dissemination of research findings and outputs with wider audiences. This includes supporting agents in preparing resources for publication, production, publishing, sprint services, etc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">publication &amp; dissemination</rdfs:label>
         <skos:example>NextGen Books</skos:example>
     </owl:Class>
@@ -3621,7 +3731,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
         <obo:IAO_0000115 xml:lang="en">A service that contributes to long-term archiving and data integrity through secure storage and preservation strategies.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Services that focus on the long-term archiving and preservation of research data and digital assets. This involves providing secure storage infrastructures, backup solutions, and preservation strategies to prevent data loss over time.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">storage &amp; preservation</rdfs:label>
         <skos:example xml:lang="en">RADAR4Culture, Curated Repository List</skos:example>
     </owl:Class>
@@ -3664,6 +3774,7 @@ This class is useful in nfdicore to provide a unified and structured representat
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000002">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">example to be eventually removed</obo:IAO_0000111>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">example to be eventually removed</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3676,6 +3787,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <obo:IAO_0000111 xml:lang="en">failed exploratory term</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">failed exploratory term</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3687,6 +3799,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">metadata complete</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete.</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">metadata complete</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3698,6 +3811,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">organizational term</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Term created to ease viewing/sort terms for development purpose, and will not be included in a release</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">organizational term</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3709,6 +3823,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">ready for release</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking &quot;ready_for_release&quot; should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed &quot;ready_for_release&quot; will also derived from a chain of ancestor classes that are also &quot;ready_for_release.&quot;</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">ready for release</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3720,6 +3835,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">metadata incomplete</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors.</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">metadata incomplete</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3731,6 +3847,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">uncurated</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Nothing done yet beyond assigning a unique class ID and proposing a preferred term.</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">uncurated</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3742,6 +3859,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">pending final vetting</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor.</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">pending final vetting</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3752,6 +3870,7 @@ This class is useful in nfdicore to provide a unified and structured representat
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000226">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">placeholder removed</obo:IAO_0000111>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">placeholder removed</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3763,6 +3882,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">terms merged</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">An editor note should explain what were the merged terms and the reason for the merge.</obo:IAO_0000116>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">terms merged</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3774,6 +3894,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">term imported</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">This is to be used when the original term has been replaced by a term imported from an other ontology. An editor note should indicate what is the URI of the new term to use.</obo:IAO_0000116>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">term imported</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3785,6 +3906,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">term split</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split and indicate the URIs of the new terms created.</obo:IAO_0000116>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">term split</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3798,6 +3920,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <obo:IAO_0000116 xml:lang="en">Hard to give a definition for. Intuitively a &quot;natural kind&quot; rather than a collection of any old things, which a class is able to be, formally. At the meta level, universals are defined as positives, are disjoint with their siblings, have single asserted parents.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">A Formal Theory of Substances, Qualities, and Universals, http://ontology.buffalo.edu/bfo/SQU.pdf</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">universal</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3811,6 +3934,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <obo:IAO_0000115 xml:lang="en">A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">&quot;definitions&quot;, in some readings, always are given by necessary and sufficient conditions. So one must be careful (and this is difficult sometimes) to distinguish between defined classes and universal.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">defined class</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3824,6 +3948,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <obo:IAO_0000115 xml:lang="en">A named class expression is a logical expression that is given a name. The name can be used in place of the expression.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">named class expressions are used in order to have more concise logical definition but their extensions may not be interesting classes on their own. In languages such as OWL, with no provisions for macros, these show up as actuall classes. Tools may with to not show them as such, and to replace uses of the macros with their expansions</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">named class expression</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3837,6 +3962,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <obo:IAO_0000115 xml:lang="en">Terms with this status should eventually replaced with a term from another ontology.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">to be replaced with external ontology term</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3850,6 +3976,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <obo:IAO_0000115 xml:lang="en">A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">requires discussion</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3864,6 +3991,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <obo:IAO_0000233>https://github.com/information-artifact-ontology/ontology-metadata/issues/77</obo:IAO_0000233>
         <obo:IAO_0000234>https://orcid.org/0000-0001-5208-3432</obo:IAO_0000234>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label>out of scope</rdfs:label>
     </owl:NamedIndividual>
     
