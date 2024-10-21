@@ -28,6 +28,11 @@ The latest version of the ontology can always be found at:
 
 Editors of this ontology should use the edit version, [src/ontology/nfdicore-edit.owl](src/ontology/nfdicore-edit.owl)
 
+## Documentation
+
+* Read the docs [documentation](https://ise-fizkarlsruhe.github.io/nfdicore/docs/)
+* Widoco generated [list of resources](https://ise-fizkarlsruhe.github.io/nfdicore/)
+
 ## Contact
 
 Please use this GitHub repository's [Issue tracker](https://github.com/ISE-FIZKarlsruhe/nfdicore/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
