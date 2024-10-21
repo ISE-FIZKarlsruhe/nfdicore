@@ -66,7 +66,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 ![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)</terms:abstract>
         <terms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0</terms:bibliographicCitation>
         <terms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.1.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.1.0</terms:bibliographicCitation>
-        <terms:created>2024-10-18</terms:created>
+        <terms:created>2024-10-21</terms:created>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
@@ -106,6 +106,14 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116">
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119">
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
     </owl:AnnotationProperty>
     
@@ -227,7 +235,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Specification"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and the specified best practice.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">best practice</rdfs:label>
+        <rdfs:label xml:lang="en">has best practice</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -235,7 +243,6 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf">
-        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;best practice&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">best practice of</rdfs:label>
@@ -250,7 +257,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and a contact point.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">contact point</rdfs:label>
+        <rdfs:label xml:lang="en">has contact point</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -273,7 +280,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:comment xml:lang="en">The property related a resource to a person or an organization responsible for making contributions to a resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">contributor</rdfs:label>
+        <rdfs:label xml:lang="en">has contributor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -291,6 +298,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/country -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/country">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/partOf"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/countryOf"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Country"/>
         <rdfs:comment xml:lang="en">The property relates a city or a state to a country where it is located.</rdfs:comment>
@@ -327,7 +335,6 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/datasetOf -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/datasetOf">
-        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;data set&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">data set of</rdfs:label>
@@ -343,7 +350,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/MediaType"/>
         <rdfs:comment xml:lang="en">The property relates a resource to the format available for the export of a resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">export format</rdfs:label>
+        <rdfs:label xml:lang="en">has export format</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -351,7 +358,6 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf">
-        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">inverse of  property &quot;export format&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">export format of</rdfs:label>
@@ -362,13 +368,13 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/federalState -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/federalState">
-        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/part"/>
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/partOf"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/City"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/FederalState"/>
         <rdfs:comment xml:lang="en">The property relates a city to a federal state where it is located.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">has federal state</rdfs:label>
+        <rdfs:label xml:lang="en">of federal state</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -376,7 +382,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf">
-        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/partOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/part"/>
         <rdfs:comment xml:lang="en">inverse of property &quot;federal state&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">federal state of</rdfs:label>
@@ -392,7 +398,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
         <rdfs:comment xml:lang="en">The property relates a project to the organization that provided funding for it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">funding organization</rdfs:label>
+        <rdfs:label xml:lang="en">has funding organization</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -415,6 +421,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/licenseOf"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/License"/>
+        <obo:IAO_0000116>2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
         <rdfs:comment>The property is a relationship between a resource and a license file.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">has license</rdfs:label>
@@ -436,10 +443,9 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/location">
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/locationOf"/>
-        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a thing and a place its located at. </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">location</rdfs:label>
+        <rdfs:label xml:lang="en">has location</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -508,7 +514,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization"/>
         <rdfs:comment xml:lang="en">The property is a parental relationship between organizations.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">parent organization</rdfs:label>
+        <rdfs:label xml:lang="en">has parent organization</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -519,7 +525,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/partOf"/>
         <rdfs:comment xml:lang="en">The generic property is a relationship between a thing and its part.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">part</rdfs:label>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -538,11 +544,9 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/participant">
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/participantOf"/>
-        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
-        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a project and an agent that participates in the project.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">participant</rdfs:label>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -550,7 +554,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/participantOf -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/participantOf">
-        <rdfs:comment xml:lang="en">inverse of  property &quot;prticipant&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;participant&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">participant of</rdfs:label>
     </owl:ObjectProperty>
@@ -563,7 +567,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:comment xml:lang="en">The property is a partner relationship between organizations. The property is symmetric.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">partner organization</rdfs:label>
+        <rdfs:label xml:lang="en">has partner organization</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -599,7 +603,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Agent"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and an organization or a person responsible for publishing it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">publisher</rdfs:label>
+        <rdfs:label xml:lang="en">has publisher</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -620,7 +624,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a project or a resource and related projects.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">related project</rdfs:label>
+        <rdfs:label xml:lang="en">has related project</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -702,7 +706,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
         <rdfs:comment xml:lang="en">The property relates a data resource to its SPARQL Endpoint. </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">sparql endpoint</rdfs:label>
+        <rdfs:label xml:lang="en">has sparql endpoint</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -794,7 +798,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization">
         <rdfs:comment xml:lang="en">inverse of &quot;parent organization&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">subsidiary organization</rdfs:label>
+        <rdfs:label xml:lang="en">has subsidiary organization</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -807,7 +811,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a resource and a technology it uses. </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">technology</rdfs:label>
+        <rdfs:label xml:lang="en">has technology</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -859,6 +863,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/birthDate">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
+        <obo:IAO_0000116 xml:lang="en">The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the date on which a person was born.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">birth date</rdfs:label>
@@ -870,6 +875,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/deathDate">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the date on which a person passed away.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">death date</rdfs:label>
@@ -881,6 +887,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/dissolutionDate">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the date on which the organization ceased to exist or was formally dissolved.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">dissolution date</rdfs:label>
@@ -903,6 +910,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/endDate">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Event"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the moment in time when an event ends.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">end date</rdfs:label>
@@ -929,6 +937,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/foundationDate">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the specific date on which the organization was officially established or founded.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">foundation date</rdfs:label>
@@ -940,6 +949,7 @@ The nfdicore:Event is associated with temporal entities that transpire over time
 
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/startDate">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Event"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the moment in time when an event begins.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">start date</rdfs:label>
@@ -1139,6 +1149,18 @@ The nfdicore:Event is associated with temporal entities that transpire over time
     
 
 
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">The activity of managing and promoting the use of data from their point of creation to ensure that they are fit for contemporary purpose and available for discovery and reuse. For dynamic datasets this may mean continuous enrichment or updating to keep them fit for purpose. Higher levels of curation will also involve links with annotation and with other published materials</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">data curation service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/DataPortal -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/DataPortal">
@@ -1148,6 +1170,18 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">data portal</rdfs:label>
         <skos:example xml:lang="en">Bach digital, KultSam, MusiXplora</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Software that provides large amounts of structured data from repositories and archives to the user. Usually the data can be uploaded, accessed, searched and/or downloaded via a web browser.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">databases service</rdfs:label>
     </owl:Class>
     
 
@@ -1211,6 +1245,18 @@ The nfdicore:Event is associated with temporal entities that transpire over time
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
         <rdfs:label xml:lang="en">glossary</rdfs:label>
         <skos:example xml:lang="en">ICOM Museum Glossary</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsService -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsService">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">libraries &amp; APIs service</rdfs:label>
     </owl:Class>
     
 
@@ -1431,6 +1477,30 @@ This class is useful in nfdicore to provide a unified and structured representat
     
 
 
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/StorageService -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/StorageService">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Provision of storage space for research data as a service to external users. Access is possible via web protocols.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">storage service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/SupportAndConsultingService -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/SupportAndConsultingService">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Service with direct user contact for topics going beyond the support for specific single services.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">support &amp; consulting service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy">
@@ -1469,6 +1539,42 @@ This class is useful in nfdicore to provide a unified and structured representat
     
 
 
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/ToolsAndApplicationsService -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/ToolsAndApplicationsService">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Software that can be downloaded and executed locally on the users&apos; hardware.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">tools &amp; applications service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/TrainingService -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/TrainingService">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Standalone training for self-study can be considered a technical service (usually a web application). Generally speaking, training materials often come in the form of specific measures or tutorials that are attached to a service and that are designed to improve the user’s service experience. Our joint understanding of training as a stand-alone service, however, is not limited to the above and includes materials designed for education in all fields of research data management.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">training service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/WebApplicationsService -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/WebApplicationsService">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">web applications service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/Website -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Website">
@@ -1482,94 +1588,40 @@ This class is useful in nfdicore to provide a unified and structured representat
     
 
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Consulting&amp;Funding -->
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/WorkflowsAndPipelinesService -->
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Consulting&amp;Funding">
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/WorkflowsAndPipelinesService">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
-        <obo:IAO_0000115 xml:lang="en">A service that contributes to providing expert guidance in broad range of topics, including securing funding and navigating the application process for research projects.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Services that aim at providing expert advice, guidance, and support to agents, particular with securing funding opportunities for their efforts. This may include providing individual support for a broad range of research data and software concerns to scholars, institutions and data providers, assistance in identifying suitable funding sources, crafting grant proposals, and navigating the application process.</rdfs:comment>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Software that combines multiple tools/applications. They may be used locally or remotely via the internet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">consulting &amp; funding</rdfs:label>
-        <skos:example rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Flex Funds, NFDI4Culture Helpdesk</skos:example>
+        <rdfs:label xml:lang="en">workflows &amp; pipelines service</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Information&amp;Documentation -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Information&amp;Documentation">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
-        <obo:IAO_0000115 xml:lang="en">A service that contributes to organizing and managing research data.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Services related to organizing, cataloging, and managing research data and information. This includes developing metadata schemas, creating data dictionaries, establishing standardized data formats, and ensuring data quality and integrity</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">information &amp; documentation</rdfs:label>
-        <skos:example>Registry for Tools &amp; Services, Culture Information Portal</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Learning&amp;Teaching -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Learning&amp;Teaching">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
-        <obo:IAO_0000115 xml:lang="en">A service that contributes to educating agents on research data management.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Services that aim to support agents in developing essential skills and competencies related to research data management. This includes organizing training workshops, webinars, and educational resources, providing personalized consultations, mentoring programs, and community engagement initiatives.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">learning &amp; teaching</rdfs:label>
-        <skos:example>Educational Resource Finder</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Linkage&amp;Enrichment -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Linkage&amp;Enrichment">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
-        <obo:IAO_0000115 xml:lang="en">A service that contributes to integrating research data with external sources and data enrichment.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Services that focus on enhancing research data by integrating it with external datasets, vocabularies, and ontologies. This involves establishing interoperability frameworks, data integration pipelines, and semantic enrichment techniques to connect disparate datasets and enable cross-disciplinary research.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">linkage &amp; enrichment</rdfs:label>
-        <skos:example>Culture Knowledge Graph, Semantic Kompakkt, Wikibase4Research</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Participation&amp;Collaboration -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Participation&amp;Collaboration">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
-        <obo:IAO_0000115 xml:lang="en">A service that contributes to fostering interdisciplinary collaboration and community engagement within the research community.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Services that focus on fostering interdisciplinary collaboration, knowledge exchange, and community engagement within the research ecosystem. This includes organizing networking events, collaborative projects, and virtual platforms for researchers to connect, share ideas, and collaborate on common research challenges.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">participation &amp; collaboration</rdfs:label>
-        <skos:example>Forum for Data Standards and Data Quality, Expert Forum for sustainable Software Development in NFDI4Culture, Linked Open Data Working Group</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Publication&amp;Dissemination -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Publication&amp;Dissemination">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
-        <obo:IAO_0000115 xml:lang="en">A service that contributes to sharing and publication of research findings.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Services that aim at facilitating the sharing and dissemination of research findings and outputs with wider audiences. This includes supporting agents in preparing resources for publication, production, publishing, sprint services, etc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">publication &amp; dissemination</rdfs:label>
-        <skos:example>NextGen Books</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Storage&amp;Preservation -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Storage&amp;Preservation">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
-        <obo:IAO_0000115 xml:lang="en">A service that contributes to long-term archiving and data integrity through secure storage and preservation strategies.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Services that focus on the long-term archiving and preservation of research data and digital assets. This involves providing secure storage infrastructures, backup solutions, and preservation strategies to prevent data loss over time.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">storage &amp; preservation</rdfs:label>
-        <skos:example xml:lang="en">RADAR4Culture, Curated Repository List</skos:example>
-    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService"/>
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService"/>
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsService"/>
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/StorageService"/>
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/SupportAndConsultingService"/>
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/ToolsAndApplicationsService"/>
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/TrainingService"/>
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/WebApplicationsService"/>
+            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/WorkflowsAndPipelinesService"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 

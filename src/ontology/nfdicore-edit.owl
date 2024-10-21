@@ -288,11 +288,11 @@ EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0001015> <https://
 
 EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0001025> <https://nfdi.fiz-karlsruhe.de/ontology/location>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> (best practice)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> (has best practice)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> "The property is a relationship between a resource and the specified best practice."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> "best practice"@en)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> "has best practice"@en)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> <https://nfdi.fiz-karlsruhe.de/ontology/Specification>)
@@ -367,11 +367,11 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/dat
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> "data set of"@en)
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/datasetOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> (export format)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> (has export format)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> "The property relates a resource to the format available for the export of a resource."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> "export format"@en)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> "has export format"@en)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/exportFormat> <https://nfdi.fiz-karlsruhe.de/ontology/MediaType>)
@@ -610,11 +610,11 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/sof
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> "software of"@en)
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> (sparql endpoint)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> (has sparql endpoint)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> "The property relates a data resource to its SPARQL Endpoint. "@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> "sparql endpoint"@en)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> "has sparql endpoint"@en)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
@@ -685,11 +685,11 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/subsidi
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization> "has subsidiary organization"@en)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/technology> (technology)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/technology> (has technology)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/technology> "The property is a relationship between a resource and a technology it uses. "@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/technology> "technology"@en)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/technology> "has technology"@en)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans>)
