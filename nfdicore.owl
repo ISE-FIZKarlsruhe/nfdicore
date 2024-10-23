@@ -70,7 +70,6 @@ In general, a process (BFO_0000015) can encompass subordinate processes and may 
 The nfdicore:Event is associated with temporal entities that transpire over time, commonly marked by specific incidents or occurrences. The nfdicore:Event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, workshops, or activities like &quot;the 37th German Congress for Art History&quot; or &quot;Workshop &quot;Introduction to Iconclass&quot;&quot;. Events are characterized by their start and end times and can be connected to agents involved in the events.
 
 ![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)</dcterms:abstract>
-        <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.0.0</dcterms:bibliographicCitation>
         <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v2.1.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/2.1.0</dcterms:bibliographicCitation>
         <dcterms:created>2024-10-21</dcterms:created>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
