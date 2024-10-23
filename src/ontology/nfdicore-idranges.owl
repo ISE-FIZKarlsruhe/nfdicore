@@ -16,7 +16,7 @@ Ontology: <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-idranges.owl
 
 Annotations: 
     idsfor: "NFDICORE",
-    idprefix: "https://nfdi.fiz-karlsruhe.de/ontology/NFDICORE_",
+    idprefix: "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_",
     iddigits: 7
 
 AnnotationProperty: idprefix:
