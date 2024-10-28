@@ -836,6 +836,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Agent> 
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Agent> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Agent> "agent"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectUnionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <https://nfdi.fiz-karlsruhe.de/ontology/Person>))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://purl.obolibrary.org/obo/BFO_0000004>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/City> (city)
@@ -905,6 +906,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> "The contibution or provision of information to an endeavor."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Contributing> "contributing"@en)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>))))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> <http://purl.obolibrary.org/obo/OBI_0000011>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> (contributor role)
@@ -913,6 +915,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "contributor role"@en)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/participantOf> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>))))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> (controlled vocabulary)
@@ -1060,7 +1063,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Organiz
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Organization> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Organization> "organization"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Organization> "University Library in Leipzig, Museums of City Cologne")
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <http://purl.obolibrary.org/obo/BFO_0000141>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Person> (person)
 
@@ -1070,7 +1073,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Person>
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Person> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Person> "person"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Person> "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus")
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Person> <https://nfdi.fiz-karlsruhe.de/ontology/Agent>)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Place> (place)
 
