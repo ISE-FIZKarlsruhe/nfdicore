@@ -915,7 +915,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "contributor role"@en)
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/participantOf> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>))))
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>))))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> (controlled vocabulary)
