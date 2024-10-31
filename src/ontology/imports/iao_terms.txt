@@ -1,4 +1,4 @@
-IAO_0000025
-BFO_0000050
-IAO_0000136
-RO_0001015
+IAO_0000025  # programming language
+BFO_0000050  # part of
+IAO_0000136  # is about
+RO_0001015 # location of
