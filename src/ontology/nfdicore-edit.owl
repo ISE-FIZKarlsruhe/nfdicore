@@ -912,6 +912,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> "consortium member role"@en)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/Project>)))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> (contact point role)
@@ -972,8 +973,8 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <https://schema.org/CreativeWork>))
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService> (data curation service)
 
@@ -1141,6 +1142,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Project
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Project> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Project> "project"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Project> "Freischütz digital, Corpus Vitrearum Medii Aevi")
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/Project> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole>))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://purl.obolibrary.org/obo/OBI_0000011>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Publication> (publication)
@@ -1187,8 +1189,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Service> "Services are resources offered by organizations or people to support and contribute to the predefined goals of a project. Services may encompass a diverse range of contributions such as data curation, specialized expertise, skill and various other forms of support."@en)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Service> "service"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Service> "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en)
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/Service> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <https://schema.org/Service>))
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Service> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Service> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <https://schema.org/Service>))
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Software> (software)
 
