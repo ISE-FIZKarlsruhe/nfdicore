@@ -25,6 +25,11 @@ import_group:
     - id: swo
       mirror_from: "https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl"
       module_type: custom
+    - id: obi
+      module_type: slme
+      module_type_slme: BOT
+      slme_individuals: exclude
+      #use_base: true
 
 documentation:
   documentation_system: mkdocs

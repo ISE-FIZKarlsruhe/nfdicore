@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                892eae1da3b6ed262e78d049a8b624e8bda9299201abf29ded918b491ca04a1a
+CONFIG_HASH=                12fe9cd11b42cf77093a7621dae15888da1e6cdecf92d696f77984d94fbc7567
 
 
 # ----------------------------------------
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao schema swo
+IMPORTS =  iao schema swo obi
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -388,6 +388,14 @@ $(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl $(IMPORTDIR)/schema_term
 
 $(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
+## Module for ontology: obi
+
+$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/obi_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -440,6 +448,14 @@ mirror-schema: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/swo.owl
 mirror-swo: | $(TMPDIR)
 	$(ROBOT) convert -I https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: obi
+.PHONY: mirror-obi
+.PRECIOUS: $(MIRRORDIR)/obi.owl
+mirror-obi: | $(TMPDIR)
+	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

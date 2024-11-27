@@ -10,6 +10,7 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/obi_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
 Annotation(dcterms:abstract "### INTRODUCTION
@@ -116,6 +117,8 @@ Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsServic
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/License>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/MediaType>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Ontology>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Organization>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/Person>))
@@ -155,6 +158,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000086>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001015>))
 Declaration(ObjectProperty(<http://www.ebi.ac.uk/swo/SWO_0000741>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/contactPoint>))
@@ -271,6 +275,14 @@ EquivalentObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000050> <https:/
 
 EquivalentObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000051> <https://nfdi.fiz-karlsruhe.de/ontology/part>)
 
+# Object Property: <http://purl.obolibrary.org/obo/IAO_0000136> (is about)
+
+InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000136> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
+
+# Object Property: <http://purl.obolibrary.org/obo/IAO_0000235> (denoted by)
+
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000235> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
+
 # Object Property: <http://purl.obolibrary.org/obo/RO_0000056> (participates in)
 
 EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/participantOf>)
@@ -286,6 +298,11 @@ EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0001015> <https://
 # Object Property: <http://purl.obolibrary.org/obo/RO_0001025> (located in)
 
 EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0001025> <https://nfdi.fiz-karlsruhe.de/ontology/location>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000> (isDescribedBy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000> "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/79")
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000> "isDescribedBy"@de)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/bestPractice> (has best practice)
 
@@ -349,12 +366,12 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/cou
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/countryOf> "country of"@en)
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/countryOf> <https://nfdi.fiz-karlsruhe.de/ontology/part>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/dataset> (data set)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/dataset> (has data set)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/dataset> "The property is a relation between a resource and a data set."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/dataset> "data set"@en)
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <http://purl.obolibrary.org/obo/IAO_0000219>)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/dataset> "has data set"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology/datasetOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/dataset> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset>)
@@ -421,7 +438,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/license> "The property is a relationship between a resource and a license file.")
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/license> "has license"@en)
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/license> <http://purl.obolibrary.org/obo/IAO_0000136>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/licenseOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/license> <https://nfdi.fiz-karlsruhe.de/ontology/License>)
@@ -451,6 +468,7 @@ AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/locationO
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> "The property relates a resource to its data format."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/mediaType> "has media type"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/mediaType> <https://nfdi.fiz-karlsruhe.de/ontology/MediaType>)
@@ -524,7 +542,7 @@ SymmetricObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganizat
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> "The property links software to a programming language its written in.")
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> "has programming language"@en)
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <http://www.ebi.ac.uk/swo/SWO_0000741>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/Software>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> <https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage>)
@@ -534,6 +552,7 @@ ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage>
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> "inverse of  property \"programming language\""@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> "programming language of"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/publisher> (has publisher)
 
@@ -558,11 +577,12 @@ AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/relatedPr
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> ObjectUnionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Project> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>))
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/relatedProject> <https://nfdi.fiz-karlsruhe.de/ontology/Project>)
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> (represented collection)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> (has represented collection)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> "The property is a relationship between a dataset and a collection it represents."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> "represented collection"@en)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> "has represented collection"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> "a dataportal is about some collection of pieces of art")
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> <http://purl.obolibrary.org/obo/IAO_0000219>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> <https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/representedCollection> ObjectUnionOf(<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset>))
@@ -597,6 +617,7 @@ SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/software> "The property is a relationship between a resource and a software it uses."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/software> "has software"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/softwareOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/software> <https://nfdi.fiz-karlsruhe.de/ontology/Software>)
@@ -614,6 +635,7 @@ SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/softwareOf> <http://
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> "The property relates a data resource to its SPARQL Endpoint. "@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> "has sparql endpoint"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
@@ -631,6 +653,7 @@ SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf> <h
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/specification> "The property is a relationship between a resource and the international standard or norm."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/specification> "has specification"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/specificationOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/specification> <https://nfdi.fiz-karlsruhe.de/ontology/Specification>)
@@ -648,6 +671,7 @@ SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/specificationOf> <ht
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/standard> "The property relates a resource to the standard it relies on."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/standard> "has standard"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/standardOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/standard> <https://nfdi.fiz-karlsruhe.de/ontology/Standard>)
@@ -689,6 +713,7 @@ AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/subsidiar
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/technology> "The property is a relationship between a resource and a technology it uses. "@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/technology> "has technology"@en)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/technologyOf>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/technology> <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans>)
@@ -915,8 +940,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> "contributor role"@en)
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>)))))
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>))))))
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectUnionOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>)))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/contributorOf> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/Contributing>))))))))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> (controlled vocabulary)
@@ -943,7 +967,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> <https://schema.org/CreativeWork>))
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService> (data curation service)
@@ -971,13 +995,13 @@ SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService> <https://nf
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> (dataset)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "A creative work that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en)
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "Structured information about a resource provided by an organization or a person."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "dataset"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Dataset> "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)")
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Event> (event)
 
@@ -1048,6 +1072,17 @@ AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/MediaType
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book")
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> <http://purl.obolibrary.org/obo/IAO_0000033>)
 
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> (creative process)
+
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> "creative process"@de)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/participantOf>) <https://nfdi.fiz-karlsruhe.de/ontology/Person>)))
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002> (product role)
+
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002> "product role"@de)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002> <http://purl.obolibrary.org/obo/BFO_0000023>)
+
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Ontology> (ontology)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Ontology> "Semantic expressivity that refers to a semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and machine-understandable manner."@en)
@@ -1105,12 +1140,13 @@ SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://purl.obolibr
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Publication> (publication)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "A creative work that is the output of a publishing process."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "A publication that is the output of a publishing process and a creative process."@en)
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Publication> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "publication"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten")
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>)
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/Publication> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000310> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/IAO_0000444>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://purl.obolibrary.org/obo/IAO_0000310>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> (publisher role)
 
@@ -1118,7 +1154,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> "publisher role"@en)
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <http://purl.obolibrary.org/obo/IAO_0000444>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/IAO_0000444>)))))
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <http://purl.obolibrary.org/obo/IAO_0000444>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Agent> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/IAO_0000444>))))))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Resource> (resource)
@@ -1156,17 +1192,17 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Softwar
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Software> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Software> "software"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Software> "Edirom, Muscat")
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Software> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Software> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000104> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Specification> (specification)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "A creative work that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "A directive information entity that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en)
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "A set of requirements, guidelines, standards contributed by an organization or a person."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Specification> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Specification> "Guidelines, technical specifications, design specifications"@en)
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Specification> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000104> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>))
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Specification> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Standard> (standard)
 
@@ -1246,7 +1282,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Website
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Website> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Website> "website"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Website> "https:\\/\\/opac.rism.info")
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Website> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork>)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Website> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/WorkflowsAndPipelinesService> (workflows & pipelines service)
 

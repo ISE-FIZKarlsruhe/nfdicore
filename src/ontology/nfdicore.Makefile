@@ -19,6 +19,21 @@ $(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl $(IMPORTDIR)/swo_terms.txt
 		remove --term http://purl.obolibrary.org/obo/IAO_0000589 \
 		$(ANNOTATE_CONVERT_FILE); sed -i "s/obofoundry/obolibrary/g" $(IMPORTDIR)/swo_import.owl ;  sed -i "s/Declaration(AnnotationProperty(rdf:type))//g" $(IMPORTDIR)/swo_import.owl ; fi		
 
+######
+## process import of obi
+##
+##   remove the http://purl.obolibrary.org/obo/OBI_0000659 specimen collection process 
+######
+$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		remove --term http://purl.obolibrary.org/obo/OBI_0000659 \
+		remove --term http://purl.obolibrary.org/obo/OBI_0002076 \
+		remove --term http://purl.obolibrary.org/obo/OBI_0100051 \
+		remove --term http://purl.obolibrary.org/obo/OBI_0000112 \
+		extract -T $(IMPORTDIR)/obi_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 
 
 #################################################################

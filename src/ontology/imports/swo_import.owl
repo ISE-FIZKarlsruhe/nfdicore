@@ -7,15 +7,12 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-10-21/imports/swo_import.owl>
-Annotation(owl:versionInfo "2024-10-21")
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-11-27/imports/swo_import.owl>
+Annotation(owl:versionInfo "2024-11-27")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://www.ebi.ac.uk/swo/SWO_0000002>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
-Declaration(ObjectProperty(<http://www.ebi.ac.uk/swo/SWO_0000741>))
-Declaration(ObjectProperty(owl:topObjectProperty))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000111>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000112>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
@@ -132,15 +129,6 @@ AnnotationAssertion(rdfs:label rdfs:label "label")
 
 # Object Property: <http://purl.obolibrary.org/obo/IAO_0000136> (is about)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000136> "'is about' relates an information entity to other entities in which the information entity holds some information which dscribes some facet of the other entity, such as the arrow direction on a sign.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000136> "IAO")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000136> "James Malone")
-AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obolibrary.org/obo/IAO_0000136> "Alan Ruttenberg"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000136> "is about")
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000136> owl:topObjectProperty)
-
-# Object Property: <http://purl.obolibrary.org/obo/IAO_0000136> (is about)
-
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/IAO_0000136> "This document is about information artifacts and their representations"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000136> <http://purl.obolibrary.org/obo/IAO_0000125>)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000136> "A (currently) primitive relation that relates an information artifact to an entity."@en)
@@ -152,14 +140,6 @@ Some currently missing phenomena that should be considered \"about\" are predica
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000136> "person:Alan Ruttenberg"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000136> "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000136> "is about"@en)
-
-# Object Property: <http://www.ebi.ac.uk/swo/SWO_0000741> (is encoded in)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://www.ebi.ac.uk/swo/SWO_0000741> "Linking a type of software to its particular programming language.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.ebi.ac.uk/swo/SWO_0000741> "Is encoded in is an \"is about\" relationship which describes the type of encoding used for the referenced class.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://www.ebi.ac.uk/swo/SWO_0000741> "Allyson Lister")
-AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/swo/SWO_0000741> "is encoded in")
-SubObjectPropertyOf(<http://www.ebi.ac.uk/swo/SWO_0000741> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 
 
