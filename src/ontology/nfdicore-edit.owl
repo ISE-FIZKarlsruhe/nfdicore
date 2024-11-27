@@ -157,7 +157,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000080>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000086>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001015>))
-Declaration(ObjectProperty(<http://www.ebi.ac.uk/swo/SWO_0000741>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/bestPractice>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf>))
@@ -242,6 +241,7 @@ Declaration(AnnotationProperty(rdfs:label))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(<https://nfdi.fiz-karlsruhe.de/ontology/acronym>))
+Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0001032>))
 ############################
 #   Annotation Properties
 ############################
@@ -261,6 +261,12 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 # Annotation Property: <https://nfdi.fiz-karlsruhe.de/ontology/acronym> (nfdicore:acronym)
 
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/acronym> "nfdicore:acronym"@en)
+
+# Annotation Property: <https://w3id.org/pmd/co/PMD_0001032> (term tracker annotation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://w3id.org/pmd/co/PMD_0001032> "hijacked from http://openenergy-platform.org/ontology/oeo/OEO_00020426")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0001032> "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.")
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0001032> "term tracker annotation"@de)
 
 
 ############################
@@ -889,7 +895,6 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Consort
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Organization> ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/part> <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember>)))
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> (consortium member)
@@ -967,7 +972,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService> (data curation service)
@@ -1182,7 +1187,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.f
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/Service> "Services are resources offered by organizations or people to support and contribute to the predefined goals of a project. Services may encompass a diverse range of contributions such as data curation, specialized expertise, skill and various other forms of support."@en)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/Service> "service"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/Service> "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en)
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/Service> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> <https://schema.org/Service>))
+EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/Service> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <https://schema.org/Service>))
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/Service> <https://nfdi.fiz-karlsruhe.de/ontology/Resource>)
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/Software> (software)

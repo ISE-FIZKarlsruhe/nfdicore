@@ -1,4 +1,5 @@
 @prefix : <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.ttl#> .
+@prefix co: <https://w3id.org/pmd/co/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -93,11 +94,18 @@ protege:defaultLanguage rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000179
-obo:BFO_0000179 rdf:type owl:AnnotationProperty .
+obo:BFO_0000179 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "Relates an entity in the ontology to the name of the variable that is used to represent it in the code that generates the BFO OWL file from the lispy specification."@en ;
+                obo:IAO_0000232 "Really of interest to developers only"@en ;
+                rdfs:label "BFO OWL specification label"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000180
-obo:BFO_0000180 rdf:type owl:AnnotationProperty .
+obo:BFO_0000180 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "Relates an entity in the ontology to the term that is used to represent it in the the CLIF specification of BFO2"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg" ;
+                obo:IAO_0000232 "Really of interest to developers only"@en ;
+                rdfs:label "BFO CLIF specification label"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000111
@@ -134,7 +142,12 @@ obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000114
-obo:IAO_0000114 rdf:type owl:AnnotationProperty .
+obo:IAO_0000114 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has curation status"@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Bill Bug"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                rdfs:label "has curation status"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000115
@@ -217,7 +230,15 @@ obo:IAO_0000117 rdf:type owl:AnnotationProperty ;
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000118
-obo:IAO_0000118 rdf:type owl:AnnotationProperty .
+obo:IAO_0000118 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "alternative label"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like."@en ;
+                obo:IAO_0000117 "OBO Operations committee" ,
+                                "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:comment "Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related)." ;
+                rdfs:label "alternative label"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000119
@@ -244,39 +265,98 @@ obo:IAO_0000232 rdf:type owl:AnnotationProperty ;
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000233
-obo:IAO_0000233 rdf:type owl:AnnotationProperty .
+obo:IAO_0000233 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "term tracker item"@en ;
+                obo:IAO_0000112 "the URI for an OBI Terms ticket at sourceforge, such as https://sourceforge.net/p/obi/obi-terms/772/"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An IRI or similar locator for a request or discussion of an ontology term."@en ;
+                obo:IAO_0000117 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                rdfs:comment "The 'tracker item' can associate a tracker with a specific ontology term."@en ;
+                rdfs:label "term tracker item"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000234
-obo:IAO_0000234 rdf:type owl:AnnotationProperty .
+obo:IAO_0000234 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "ontology term requester"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "The name of the person, project, or organization that motivated inclusion of an ontology term by requesting its addition."@en ;
+                obo:IAO_0000117 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                rdfs:comment "The 'term requester' can credit the person, organization or project who request the ontology term." ;
+                rdfs:label "ontology term requester"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000412
-obo:IAO_0000412 rdf:type owl:AnnotationProperty .
+obo:IAO_0000412 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "imported from"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "For external terms/classes, the ontology from which the term was imported"@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "imported from"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000589
-obo:IAO_0000589 rdf:type owl:AnnotationProperty .
+obo:IAO_0000589 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "OBO foundry unique label"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An alternative name for a class or property which is unique across the OBO Foundry."@en ;
+                obo:IAO_0000116 "The intended usage of that property is as follow: OBO foundry unique labels are automatically generated based on regular expressions provided by each ontology, so that SO could specify unique label = 'sequence ' + [label], etc. , MA could specify 'mouse + [label]' etc. Upon importing terms, ontology developers can choose to use the 'OBO foundry unique label' for an imported term or not. The same applies to tools ."@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Bjoern Peters"@en ,
+                                "PERSON:Chris Mungall"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                obo:IAO_0000119 "GROUP:OBO Foundry <http://obofoundry.org/>"@en ;
+                rdfs:label "OBO foundry unique label"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000600
-obo:IAO_0000600 rdf:type owl:AnnotationProperty .
+obo:IAO_0000600 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "elucidation"@en ;
+                obo:IAO_0000117 "person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Barry Smith"@en ;
+                obo:IAO_0000600 "Primitive terms in a highest-level ontology such as BFO are terms which are so basic to our understanding of reality that there is no way of defining them in a non-circular fashion. For these, therefore, we can provide only elucidations, supplemented by examples and by axioms"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "elucidation"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000601
-obo:IAO_0000601 rdf:type owl:AnnotationProperty .
+obo:IAO_0000601 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has associated axiom(nl)"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "An axiom associated with a term expressed using natural language"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has associated axiom(nl)"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000602
-obo:IAO_0000602 rdf:type owl:AnnotationProperty .
+obo:IAO_0000602 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has associated axiom(fol)"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "An axiom expressed in first order logic using CLIF syntax"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has associated axiom(fol)"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0010000
-obo:IAO_0010000 rdf:type owl:AnnotationProperty .
+obo:IAO_0010000 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has axiom id"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "A URI that is intended to be unique label for an axiom used for tracking change to the ontology. For an axiom expressed in different languages, each expression is given the same URI"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has axiom label"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0001900
-obo:RO_0001900 rdf:type owl:AnnotationProperty .
+obo:RO_0001900 rdf:type owl:AnnotationProperty ;
+               obo:IAO_0000115 "An assertion that holds between an OWL Object Property and a temporal interpretation that elucidates how OWL Class Axioms that use this property are to be interpreted in a temporal context." ;
+               rdfs:label "temporal interpretation"@en .
 
 
 ###  http://purl.org/dc/elements/1.1/contributor
@@ -397,6 +477,13 @@ skos:example rdf:type owl:AnnotationProperty .
 ###  https://nfdi.fiz-karlsruhe.de/ontology/acronym
 ontology:acronym rdf:type owl:AnnotationProperty ;
                  rdfs:label "nfdicore:acronym"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0001032
+co:PMD_0001032 rdf:type owl:AnnotationProperty ;
+               obo:IAO_0000116 "hijacked from http://openenergy-platform.org/ontology/oeo/OEO_00020426" ;
+               rdfs:comment "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request." ;
+               rdfs:label "term tracker annotation"@de .
 
 
 #################################################################
@@ -816,10 +903,6 @@ obo:RO_0001025 rdf:type owl:ObjectProperty ;
    owl:annotatedTarget obo:BFO_0000004 ;
    obo:IAO_0000116 "This is redundant with the more specific 'independent and not spatial region' constraint. We leave in the redundant axiom for use with reasoners that do not use negation."
  ] .
-
-
-###  http://www.ebi.ac.uk/swo/SWO_0000741
-<http://www.ebi.ac.uk/swo/SWO_0000741> rdf:type owl:ObjectProperty .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000000
@@ -2275,8 +2358,7 @@ obo:IAO_0000007 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/IAO_0000010
 obo:IAO_0000010 rdf:type owl:Class ;
                 owl:equivalentClass ontology:Software ;
-                rdfs:subClassOf obo:IAO_0000104 ,
-                                ontology:CreativeWork ;
+                rdfs:subClassOf obo:IAO_0000104 ;
                 obo:IAO_0000111 "software"@en ;
                 obo:IAO_0000114 obo:IAO_0000120 ;
                 obo:IAO_0000115 """Software is a plan specification composed of a series of instructions that can be 
@@ -2508,8 +2590,7 @@ obo:IAO_0000311 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf obo:IAO_0000310 ,
-                                ontology:CreativeWork ;
+                rdfs:subClassOf obo:IAO_0000310 ;
                 obo:IAO_0000111 "publication"@en ;
                 obo:IAO_0000112 "journal article, newspaper story, book, etc."@en ;
                 obo:IAO_0000114 obo:IAO_0000120 ;
@@ -2847,7 +2928,7 @@ ontology:Country rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork
 ontology:CreativeWork rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0000030
+                      owl:equivalentClass [ owl:intersectionOf ( ontology:Resource
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty obo:OBI_0000312 ;
                                                                    owl:someValuesFrom ontology:NFDI_0000001
@@ -3085,10 +3166,13 @@ ontology:Publication rdf:type owl:Class ;
                                            rdf:type owl:Class
                                          ] ;
                      rdfs:subClassOf obo:IAO_0000310 ,
-                                     ontology:CreativeWork ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty obo:OBI_0000312 ;
                                        owl:someValuesFrom obo:IAO_0000444
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty obo:OBI_0000312 ;
+                                       owl:someValuesFrom ontology:NFDI_0000001
                                      ] ;
                      obo:IAO_0000115 "A publication that is the output of a publishing process and a creative process."@en ;
                      rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
@@ -3166,7 +3250,7 @@ ontology:SemanticExpressivity rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Service
 ontology:Service rdf:type owl:Class ;
-                 owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0000030
+                 owl:equivalentClass [ owl:intersectionOf ( ontology:Resource
                                                             <https://schema.org/Service>
                                                           ) ;
                                        rdf:type owl:Class
@@ -3181,8 +3265,7 @@ ontology:Service rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Software
 ontology:Software rdf:type owl:Class ;
-                  rdfs:subClassOf ontology:CreativeWork ,
-                                  [ owl:intersectionOf ( obo:IAO_0000104
+                  rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000104
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty obo:OBI_0000312 ;
                                                            owl:someValuesFrom ontology:NFDI_0000001
@@ -3199,8 +3282,7 @@ ontology:Software rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Specification
 ontology:Specification rdf:type owl:Class ;
-                       rdfs:subClassOf ontology:CreativeWork ,
-                                       [ owl:intersectionOf ( obo:IAO_0000033
+                       rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000033
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty obo:OBI_0000312 ;
                                                                 owl:someValuesFrom ontology:NFDI_0000001
@@ -3298,7 +3380,14 @@ ontology:WebApplicationsService rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Website
 ontology:Website rdf:type owl:Class ;
-                 rdfs:subClassOf ontology:CreativeWork ;
+                 rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000030
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty obo:OBI_0000312 ;
+                                                          owl:someValuesFrom ontology:NFDI_0000001
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
                  obo:IAO_0000115 "A creative work that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en ;
                  rdfs:comment "A collection of webpages contributed by an organization or a person."@en ;
                  rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
