@@ -542,6 +542,8 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/partner
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> "has partner organization"@en)
 SymmetricObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization>)
+ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
+ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization> <https://nfdi.fiz-karlsruhe.de/ontology/Organization>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage> (has programming language)
 
@@ -1081,8 +1083,7 @@ SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> <http://purl.oboli
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> (creative process)
 
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> "creative process"@de)
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/participantOf>) <https://nfdi.fiz-karlsruhe.de/ontology/Person>)))
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> <http://purl.obolibrary.org/obo/OBI_0000011>)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/participant> <https://nfdi.fiz-karlsruhe.de/ontology/Person>)))
 
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002> (product role)
 
