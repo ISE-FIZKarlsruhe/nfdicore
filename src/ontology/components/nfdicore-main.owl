@@ -10,6 +10,7 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl>)
+Annotation(dcterms:title "Main module of NFDIcore ontology"@en)
 
 Declaration(Class(<http://www.ebi.ac.uk/swo/SWO_0000002>))
 Declaration(Class(:AcademicDiscipline))
@@ -101,12 +102,6 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>)
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(:acronym))
 Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0001032>))
-
-
-AnnotationAssertion(rdfs:label :NFDI_0000101 "service"@de)
-EquivalentClasses(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> :Service)))
-
-
 ############################
 #   Annotation Properties
 ############################
@@ -440,6 +435,11 @@ SubClassOf(:NFDI_0000003 <http://purl.obolibrary.org/obo/BFO_0000023>)
 AnnotationAssertion(rdfs:label :NFDI_0000004 "contributor"@de)
 EquivalentClasses(:NFDI_0000004 ObjectIntersectionOf(:Person ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :ContributorRole)))
 SubClassOf(:NFDI_0000004 :Person)
+
+# Class: :NFDI_0000101 (service)
+
+AnnotationAssertion(rdfs:label :NFDI_0000101 "service"@de)
+EquivalentClasses(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> :Service)))
 
 # Class: :Ontology (ontology)
 

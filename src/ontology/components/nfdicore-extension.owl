@@ -11,6 +11,8 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl>)
+Annotation(dcterms:description "This module extends nfdicore main module with axioms for simplification in data querying and ease of use. This module also contains SWRL rules."@en)
+Annotation(dcterms:title "Extension module of NFDIcore ontology"@en)
 
 Declaration(Class(:Collection))
 Declaration(Class(:NFDI_0000101))
