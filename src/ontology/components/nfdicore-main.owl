@@ -12,7 +12,6 @@ Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-ma
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl>)
 Annotation(dcterms:title "Main module of NFDIcore ontology"@en)
 
-Declaration(Class(<http://www.ebi.ac.uk/swo/SWO_0000002>))
 Declaration(Class(:AcademicDiscipline))
 Declaration(Class(:Agent))
 Declaration(Class(:City))
@@ -154,20 +153,7 @@ AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000100 "Issue: 
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000010> (software)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_0000010> "software"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000010> <http://purl.obolibrary.org/obo/IAO_0000120>)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000010> "Software is a plan specification composed of a series of instructions that can be 
-interpreted by or directly executed by a processing unit."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000010> "see sourceforge tracker discussion at http://sourceforge.net/tracker/index.php?func=detail&aid=1958818&group_id=177891&atid=886178"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000010> "PERSON: Alan Ruttenberg"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000010> "PERSON: Bjoern Peters"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000010> "PERSON: Chris Stoeckert"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000010> "PERSON: Melanie Courtot"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000010> "GROUP: OBI"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/IAO_0000010> <http://purl.obolibrary.org/obo/iao.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000010> "software"@en)
 EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000010> :Software)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000010> <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000025> (programming language)
 
@@ -179,13 +165,7 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000311> :Publication)
 
 # Class: <http://www.ebi.ac.uk/swo/SWO_0000002> (software license)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.ebi.ac.uk/swo/SWO_0000002> "A licence is a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://www.ebi.ac.uk/swo/SWO_0000002> "Modified from http://en.wikipedia.org/wiki/Software_license")
-AnnotationAssertion(dcterms:creator <http://www.ebi.ac.uk/swo/SWO_0000002> "James Malone")
-AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/swo/SWO_0000002> "licence"@en)
-AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/swo/SWO_0000002> "software license")
 EquivalentClasses(<http://www.ebi.ac.uk/swo/SWO_0000002> :License)
-SubClassOf(<http://www.ebi.ac.uk/swo/SWO_0000002> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :AcademicDiscipline (academic discipline)
 
