@@ -14,7 +14,6 @@ export_formats:
   - owl
   - ttl
 import_group:
-
   products:
     - id: iao
     - id: schema
@@ -30,6 +29,12 @@ import_group:
       module_type_slme: BOT
       slme_individuals: exclude
       #use_base: true
+
+components:
+  products:
+      - filename: imports-edit.owl
+      - filename: nfdicore-main.owl
+      - filename: nfdicore-extension.owl
 
 documentation:
   documentation_system: mkdocs

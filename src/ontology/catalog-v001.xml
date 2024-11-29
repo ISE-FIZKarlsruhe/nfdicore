@@ -9,10 +9,12 @@
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl" uri="imports/schema_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl" uri="imports/swo_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/obi_import.owl" uri="imports/obi_import.owl"/>
+
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl" uri="components/imports-edit.owl"/>
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl" uri="components/nfdicore-main.owl"/>
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl" uri="components/nfdicore-extension.owl"/>
   
 
-
-  
 
 </group>
 </catalog>
