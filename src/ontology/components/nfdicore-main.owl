@@ -38,10 +38,15 @@ Declaration(Class(:LibrariesAndAPIsService))
 Declaration(Class(:License))
 Declaration(Class(:MIME-Type))
 Declaration(Class(:MediaType))
+Declaration(Class(:NFDI_0000000))
 Declaration(Class(:NFDI_0000001))
 Declaration(Class(:NFDI_0000002))
 Declaration(Class(:NFDI_0000003))
 Declaration(Class(:NFDI_0000004))
+Declaration(Class(:NFDI_0000005))
+Declaration(Class(:NFDI_0000006))
+Declaration(Class(:NFDI_0000007))
+Declaration(Class(:NFDI_0000008))
 Declaration(Class(:NFDI_0000101))
 Declaration(Class(:Ontology))
 Declaration(Class(:Organization))
@@ -53,7 +58,6 @@ Declaration(Class(:Publication))
 Declaration(Class(:PublisherRole))
 Declaration(Class(:Resource))
 Declaration(Class(:SemanticExpressivity))
-Declaration(Class(:Service))
 Declaration(Class(:Software))
 Declaration(Class(:Specification))
 Declaration(Class(:Standard))
@@ -293,12 +297,12 @@ AnnotationAssertion(rdfs:label :CreativeWork "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :CreativeWork "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
 EquivalentClasses(:CreativeWork ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> :NFDI_0000001)))
 
-# Class: :DataCurationService (data curation service role)
+# Class: :DataCurationService (data curation service)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :DataCurationService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :DataCurationService "The activity of managing and promoting the use of data from their point of creation to ensure that they are fit for contemporary purpose and available for discovery and reuse. For dynamic datasets this may mean continuous enrichment or updating to keep them fit for purpose. Higher levels of curation will also involve links with annotation and with other published materials"@en)
-AnnotationAssertion(rdfs:label :DataCurationService "data curation service role"@en)
-SubClassOf(:DataCurationService :Service)
+AnnotationAssertion(rdfs:label :DataCurationService "data curation service"@en)
+SubClassOf(:DataCurationService :NFDI_0000101)
 
 # Class: :DataPortal (data portal)
 
@@ -309,12 +313,12 @@ AnnotationAssertion(rdfs:label :DataPortal "data portal"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :DataPortal "Bach digital, KultSam, MusiXplora"@en)
 SubClassOf(:DataPortal :Website)
 
-# Class: :DatabasesService (databases service role)
+# Class: :DatabasesService (databases software)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :DatabasesService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :DatabasesService "Software that provides large amounts of structured data from repositories and archives to the user. Usually the data can be uploaded, accessed, searched and/or downloaded via a web browser."@en)
-AnnotationAssertion(rdfs:label :DatabasesService "databases service role"@en)
-SubClassOf(:DatabasesService :Service)
+AnnotationAssertion(rdfs:label :DatabasesService "databases software"@en)
+SubClassOf(:DatabasesService <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :Dataset (dataset)
 
@@ -361,12 +365,13 @@ AnnotationAssertion(rdfs:label :Glossary "glossary"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Glossary "ICOM Museum Glossary"@en)
 SubClassOf(:Glossary :SemanticExpressivity)
 
-# Class: :LibrariesAndAPIsService (libraries & APIs service role)
+# Class: :LibrariesAndAPIsService (software library)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :LibrariesAndAPIsService "libraries & APIs service"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :LibrariesAndAPIsService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :LibrariesAndAPIsService "Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface."@en)
-AnnotationAssertion(rdfs:label :LibrariesAndAPIsService "libraries & APIs service role"@en)
-SubClassOf(:LibrariesAndAPIsService :Service)
+AnnotationAssertion(rdfs:label :LibrariesAndAPIsService "software library"@en)
+SubClassOf(:LibrariesAndAPIsService <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :License (license)
 
@@ -395,14 +400,19 @@ AnnotationAssertion(rdfs:label :MediaType "media type"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :MediaType "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book")
 SubClassOf(:MediaType <http://purl.obolibrary.org/obo/IAO_0000033>)
 
+# Class: :NFDI_0000000 (service specification)
+
+AnnotationAssertion(rdfs:label :NFDI_0000000 "service specification"@en)
+SubClassOf(:NFDI_0000000 <http://purl.obolibrary.org/obo/IAO_0000104>)
+
 # Class: :NFDI_0000001 (creative process)
 
 AnnotationAssertion(rdfs:label :NFDI_0000001 "creative process"@de)
 SubClassOf(:NFDI_0000001 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(:participant :Person)))
 
-# Class: :NFDI_0000002 (product role)
+# Class: :NFDI_0000002 (service product role)
 
-AnnotationAssertion(rdfs:label :NFDI_0000002 "product role"@de)
+AnnotationAssertion(rdfs:label :NFDI_0000002 "service product role"@de)
 SubClassOf(:NFDI_0000002 <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: :NFDI_0000003 (agent role)
@@ -416,10 +426,32 @@ AnnotationAssertion(rdfs:label :NFDI_0000004 "contributor"@de)
 EquivalentClasses(:NFDI_0000004 ObjectIntersectionOf(:Person ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :ContributorRole)))
 SubClassOf(:NFDI_0000004 :Person)
 
+# Class: :NFDI_0000005 (service product)
+
+AnnotationAssertion(rdfs:label :NFDI_0000005 "service product"@en)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000005 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
+SubClassOf(:NFDI_0000005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000002) ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/IAO_0000136>) :NFDI_0000000)))
+
+# Class: :NFDI_0000006 (plan (replace with iao))
+
+AnnotationAssertion(rdfs:label :NFDI_0000006 "plan (replace with iao)"@en)
+SubClassOf(:NFDI_0000006 <http://purl.obolibrary.org/obo/BFO_0000017>)
+
+# Class: :NFDI_0000007 (workflow specification)
+
+AnnotationAssertion(rdfs:label :NFDI_0000007 "workflow specification"@en)
+SubClassOf(:NFDI_0000007 <http://purl.obolibrary.org/obo/IAO_0000104>)
+
+# Class: :NFDI_0000008 (workflow process)
+
+AnnotationAssertion(rdfs:label :NFDI_0000008 "workflow process"@en)
+SubClassOf(:NFDI_0000008 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> :WorkflowsAndPipelinesService)))
+
 # Class: :NFDI_0000101 (service)
 
-AnnotationAssertion(rdfs:label :NFDI_0000101 "service"@de)
-EquivalentClasses(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> :Service)))
+AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@de)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
+SubClassOf(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> :NFDI_0000005)))
 
 # Class: :Ontology (ontology)
 
@@ -517,14 +549,6 @@ AnnotationAssertion(rdfs:label :SemanticExpressivity "semantic expressivity"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :SemanticExpressivity "controlled vocabulary, ontology, taxonomy"@en)
 SubClassOf(:SemanticExpressivity <http://purl.obolibrary.org/obo/BFO_0000019>)
 
-# Class: :Service (service role)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Service "An information content entity that refers to offerings provided by individuals or organizations to facilitate and contribute to the specific goals."@en)
-AnnotationAssertion(rdfs:comment :Service "Services are resources offered by organizations or people to support and contribute to the predefined goals of a project. Services may encompass a diverse range of contributions such as data curation, specialized expertise, skill and various other forms of support."@en)
-AnnotationAssertion(rdfs:label :Service "service role"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Service "Data curation for HeiDATA, Expertise for the development and application of LIDO"@en)
-SubClassOf(:Service <http://purl.obolibrary.org/obo/BFO_0000023>)
-
 # Class: :Software (software)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Software "A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en)
@@ -553,19 +577,19 @@ AnnotationAssertion(rdfs:label :Standard "standard"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Standard "ISO 15511, DINI-Zertifikat")
 SubClassOf(:Standard :Specification)
 
-# Class: :StorageService (storage service role)
+# Class: :StorageService (storage service)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :StorageService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :StorageService "Provision of storage space for research data as a service to external users. Access is possible via web protocols."@en)
-AnnotationAssertion(rdfs:label :StorageService "storage service role"@en)
-SubClassOf(:StorageService :Service)
+AnnotationAssertion(rdfs:label :StorageService "storage service"@en)
+SubClassOf(:StorageService :NFDI_0000101)
 
-# Class: :SupportAndConsultingService (support & consulting service role)
+# Class: :SupportAndConsultingService (support service)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :SupportAndConsultingService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :SupportAndConsultingService "Service with direct user contact for topics going beyond the support for specific single services."@en)
-AnnotationAssertion(rdfs:label :SupportAndConsultingService "support & consulting service role"@en)
-SubClassOf(:SupportAndConsultingService :Service)
+AnnotationAssertion(rdfs:label :SupportAndConsultingService "support service"@en)
+SubClassOf(:SupportAndConsultingService :NFDI_0000101)
 
 # Class: :Taxonomy (taxonomy)
 
@@ -594,26 +618,26 @@ AnnotationAssertion(rdfs:label :Thesaurus "thesaurus"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Thesaurus "Getty Art & Architecture Thesaurus, UNESCO Thesaurus for cultural and scientific documentation")
 SubClassOf(:Thesaurus :ControlledVocabulary)
 
-# Class: :ToolsAndApplicationsService (tools & applications service role)
+# Class: :ToolsAndApplicationsService (software application)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :ToolsAndApplicationsService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :ToolsAndApplicationsService "Software that can be downloaded and executed locally on the users' hardware."@en)
-AnnotationAssertion(rdfs:label :ToolsAndApplicationsService "tools & applications service role"@en)
-SubClassOf(:ToolsAndApplicationsService :Service)
+AnnotationAssertion(rdfs:label :ToolsAndApplicationsService "software application"@en)
+SubClassOf(:ToolsAndApplicationsService <http://purl.obolibrary.org/obo/IAO_0000010>)
 
-# Class: :TrainingService (training service role)
+# Class: :TrainingService (training service)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :TrainingService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :TrainingService "Standalone training for self-study can be considered a technical service (usually a web application). Generally speaking, training materials often come in the form of specific measures or tutorials that are attached to a service and that are designed to improve the user’s service experience. Our joint understanding of training as a stand-alone service, however, is not limited to the above and includes materials designed for education in all fields of research data management."@en)
-AnnotationAssertion(rdfs:label :TrainingService "training service role"@en)
-SubClassOf(:TrainingService :Service)
+AnnotationAssertion(rdfs:label :TrainingService "training service"@en)
+SubClassOf(:TrainingService :NFDI_0000101)
 
-# Class: :WebApplicationsService (web applications service role)
+# Class: :WebApplicationsService (web application software)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :WebApplicationsService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :WebApplicationsService "Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS)."@en)
-AnnotationAssertion(rdfs:label :WebApplicationsService "web applications service role"@en)
-SubClassOf(:WebApplicationsService :Service)
+AnnotationAssertion(rdfs:label :WebApplicationsService "web application software"@en)
+SubClassOf(:WebApplicationsService <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :Website (website)
 
@@ -624,12 +648,12 @@ AnnotationAssertion(rdfs:label :Website "website"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Website "https:\\/\\/opac.rism.info")
 SubClassOf(:Website ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> :NFDI_0000001)))
 
-# Class: :WorkflowsAndPipelinesService (workflows & pipelines service role)
+# Class: :WorkflowsAndPipelinesService (workflow)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :WorkflowsAndPipelinesService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :WorkflowsAndPipelinesService "Software that combines multiple tools/applications. They may be used locally or remotely via the internet."@en)
-AnnotationAssertion(rdfs:label :WorkflowsAndPipelinesService "workflows & pipelines service role"@en)
-SubClassOf(:WorkflowsAndPipelinesService :Service)
+AnnotationAssertion(rdfs:label :WorkflowsAndPipelinesService "workflow"@en)
+SubClassOf(:WorkflowsAndPipelinesService ObjectIntersectionOf(:NFDI_0000006 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> :NFDI_0000007)))
 
 
 DisjointClasses(:DataCurationService :DatabasesService :LibrariesAndAPIsService :StorageService :SupportAndConsultingService :ToolsAndApplicationsService :TrainingService :WebApplicationsService :WorkflowsAndPipelinesService)
