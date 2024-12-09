@@ -44,7 +44,6 @@ Declaration(Class(:NFDI_0000002))
 Declaration(Class(:NFDI_0000003))
 Declaration(Class(:NFDI_0000004))
 Declaration(Class(:NFDI_0000005))
-Declaration(Class(:NFDI_0000006))
 Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000008))
 Declaration(Class(:NFDI_0000101))
@@ -432,11 +431,6 @@ AnnotationAssertion(rdfs:label :NFDI_0000005 "service product"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000005 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 SubClassOf(:NFDI_0000005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000002) ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/IAO_0000136>) :NFDI_0000000)))
 
-# Class: :NFDI_0000006 (plan (replace with iao))
-
-AnnotationAssertion(rdfs:label :NFDI_0000006 "plan (replace with iao)"@en)
-SubClassOf(:NFDI_0000006 <http://purl.obolibrary.org/obo/BFO_0000017>)
-
 # Class: :NFDI_0000007 (workflow specification)
 
 AnnotationAssertion(rdfs:label :NFDI_0000007 "workflow specification"@en)
@@ -653,7 +647,7 @@ SubClassOf(:Website ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_000
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :WorkflowsAndPipelinesService <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :WorkflowsAndPipelinesService "Software that combines multiple tools/applications. They may be used locally or remotely via the internet."@en)
 AnnotationAssertion(rdfs:label :WorkflowsAndPipelinesService "workflow"@en)
-SubClassOf(:WorkflowsAndPipelinesService ObjectIntersectionOf(:NFDI_0000006 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> :NFDI_0000007)))
+SubClassOf(:WorkflowsAndPipelinesService ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000260> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> :NFDI_0000007)))
 
 
 DisjointClasses(:DataCurationService :DatabasesService :LibrariesAndAPIsService :StorageService :SupportAndConsultingService :ToolsAndApplicationsService :TrainingService :WebApplicationsService :WorkflowsAndPipelinesService)
