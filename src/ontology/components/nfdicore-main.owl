@@ -44,6 +44,7 @@ Declaration(Class(:NFDI_0000002))
 Declaration(Class(:NFDI_0000003))
 Declaration(Class(:NFDI_0000004))
 Declaration(Class(:NFDI_0000005))
+Declaration(Class(:NFDI_0000006))
 Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000008))
 Declaration(Class(:NFDI_0000101))
@@ -430,6 +431,11 @@ SubClassOf(:NFDI_0000004 :Person)
 AnnotationAssertion(rdfs:label :NFDI_0000005 "service product"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000005 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 SubClassOf(:NFDI_0000005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000002) ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/IAO_0000136>) :NFDI_0000000)))
+
+# Class: :NFDI_0000006 (service provider role)
+
+AnnotationAssertion(rdfs:label :NFDI_0000006 "service provider role"@de)
+SubClassOf(:NFDI_0000006 :NFDI_0000003)
 
 # Class: :NFDI_0000007 (workflow specification)
 
