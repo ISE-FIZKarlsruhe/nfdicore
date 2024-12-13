@@ -14,6 +14,14 @@ http://purl.obolibrary.org/obo/IAO_0000708 # ORCID
 http://purl.obolibrary.org/obo/IAO_0020016 # Given Name
 http://purl.obolibrary.org/obo/IAO_0020017 # Family name
 
+http://purl.obolibrary.org/obo/IAO_8000000 # ontology module
+
+http://purl.obolibrary.org/obo/IAO_8000001 # base ontology module
+http://purl.obolibrary.org/obo/IAO_8000003 # main release ontology module
+http://purl.obolibrary.org/obo/IAO_8000013 # reasoned ontology module
+http://purl.obolibrary.org/obo/IAO_8000002 # editor ontology module
+
+
 http://purl.obolibrary.org/obo/IAO_0000111
 http://purl.obolibrary.org/obo/IAO_0000112
 http://purl.obolibrary.org/obo/IAO_0000114

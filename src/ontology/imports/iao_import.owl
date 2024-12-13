@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-12-11/imports/iao_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-12-13/imports/iao_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl>)
-Annotation(owl:versionInfo "2024-12-11")
+Annotation(owl:versionInfo "2024-12-13")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
@@ -54,7 +54,15 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000579>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000708>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020010>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020015>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020016>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020017>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020020>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000013>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000011>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
@@ -1399,6 +1407,42 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020010> "ide
 EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020010> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/IAO_0020000>)))
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020010> <http://purl.obolibrary.org/obo/OBI_0000011>)
 
+# Class: <http://purl.obolibrary.org/obo/IAO_0020015> (personal name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020015> "An identifier referring to an individual entity that is ascribed personhood by the user of the identifier."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020015> "Justin Whorton"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020015> "Mathias Brochhausen"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020015> "http://en.wikipedia.org/wiki/Personal_name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020015> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Personal names \"today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.\" (http://en.wikipedia.org/wiki/Personal_name)"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Personal names to not include names of fictional characters, e.g. Sherlock Holmes."@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Sep 29, 2016: The comment that including the wikipedia definition of personal name is not to be interpreted in a way that restricts this class to only contain strings of letters. A numerical or alphanumerical identifier that denotes a human is being is a personal name, too. (MB)"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020015> "personal name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020015> <http://purl.obolibrary.org/obo/IAO_0020000>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0020016> (given name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020016> "A personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child's parents at or near birth, in contrast to an inherited one such as a family name"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020016> "Justin Whorton"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020016> "Mathias Brochhausen"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020016> "first name"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020016> "http://en.wikipedia.org/wiki/Given_name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020016> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020016> "given name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020016> <http://purl.obolibrary.org/obo/IAO_0020015>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0020017> (family name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020017> "An identifier that is typically a part of a person's name which has been passed, according to law or custom, from one or both parents to their children."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020017> "Justin Whorton"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020017> "Mathias Brochhausen"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020017> "last name"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020017> "surname"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020017> "http://en.wikipedia.org/wiki/Family_name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020017> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020017> "family name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020017> <http://purl.obolibrary.org/obo/IAO_0020000>)
+
 # Class: <http://purl.obolibrary.org/obo/IAO_0020020> (code set)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020020> "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."@en)
@@ -1429,6 +1473,47 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "T
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020020> "code set"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020020> <http://purl.obolibrary.org/obo/IAO_0000030>)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020020> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/IAO_0020000>))
+
+# Class: <http://purl.obolibrary.org/obo/IAO_8000000> (ontology module)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_8000000> "ontology module"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_8000000> "I have placed this under 'data about an ontology part', but this can be discussed. I think this is OK if 'part' is interpreted reflexively, as an ontology module is the whole ontology rather than part of it."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_8000000> "ontology file"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/IAO_8000000> "This class and it's subclasses are applied to OWL ontologies. Using an rdf:type triple will result in problems with OWL-DL. I propose that dcterms:type is instead used to connect an ontology URI with a class from this hierarchy. The class hierarchy is not disjoint, so multiple assertions can be made about a single ontology."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_8000000> "ontology module"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000000> <http://purl.obolibrary.org/obo/IAO_0000102>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_8000001> (base ontology module)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_8000001> "base ontology module"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_8000001> "An ontology module that comprises only of asserted axioms local to the ontology, excludes import directives, and excludes axioms or declarations from external ontologies."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_8000001> "base ontology module"@en)
+AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/IAO_8000001> <https://github.com/INCATools/ontology-starter-kit/issues/50>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000001> <http://purl.obolibrary.org/obo/IAO_8000000>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_8000002> (editors ontology module)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_8000002> "editors ontology module"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_8000002> "An ontology module that is intended to be directly edited, typically managed in source control, and typically not intended for direct consumption by end-users."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_8000002> "source ontology module"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_8000002> "editors ontology module"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000002> <http://purl.obolibrary.org/obo/IAO_8000000>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_8000003> (main release ontology module)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_8000003> "main release ontology module"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_8000003> "An ontology module that is intended to be the primary release product and the one consumed by the majority of tools."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_8000003> "TODO: Add logical axioms that state that a main release ontology module is derived from (directly or indirectly) an editors module"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_8000003> "main release ontology module"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000003> <http://purl.obolibrary.org/obo/IAO_8000000>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_8000013> (reasoned ontology module)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_8000013> "reasoned ontology module"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_8000013> "An ontology module that contains axioms generated by a reasoner. The generated axioms are typically direct SubClassOf axioms, but other possibilities are available."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_8000013> "reasoned ontology module"@en)
+AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/IAO_8000013> <http://robot.obolibrary.org/reason>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000013> <http://purl.obolibrary.org/obo/IAO_8000000>)
 
 # Class: <http://purl.obolibrary.org/obo/OBI_0000011> (planned process)
 
