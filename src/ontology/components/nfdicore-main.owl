@@ -23,7 +23,6 @@ Declaration(Class(:ContactPointRole))
 Declaration(Class(:Contacting))
 Declaration(Class(:Contributing))
 Declaration(Class(:ContributorRole))
-Declaration(Class(:ControlledVocabulary))
 Declaration(Class(:Country))
 Declaration(Class(:CreativeWork))
 Declaration(Class(:DataCurationService))
@@ -33,7 +32,6 @@ Declaration(Class(:Dataset))
 Declaration(Class(:Event))
 Declaration(Class(:FederalState))
 Declaration(Class(:FundingOrganizationRole))
-Declaration(Class(:Glossary))
 Declaration(Class(:LibrariesAndAPIsService))
 Declaration(Class(:License))
 Declaration(Class(:MIME-Type))
@@ -48,7 +46,6 @@ Declaration(Class(:NFDI_0000006))
 Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000008))
 Declaration(Class(:NFDI_0000101))
-Declaration(Class(:Ontology))
 Declaration(Class(:Organization))
 Declaration(Class(:Person))
 Declaration(Class(:Place))
@@ -57,15 +54,12 @@ Declaration(Class(:Project))
 Declaration(Class(:Publication))
 Declaration(Class(:PublisherRole))
 Declaration(Class(:Resource))
-Declaration(Class(:SemanticExpressivity))
 Declaration(Class(:Software))
 Declaration(Class(:Specification))
 Declaration(Class(:Standard))
 Declaration(Class(:StorageService))
 Declaration(Class(:SupportAndConsultingService))
-Declaration(Class(:Taxonomy))
 Declaration(Class(:TechnologicalMeans))
-Declaration(Class(:Thesaurus))
 Declaration(Class(:ToolsAndApplicationsService))
 Declaration(Class(:TrainingService))
 Declaration(Class(:WebApplicationsService))
@@ -83,6 +77,7 @@ Declaration(ObjectProperty(:NFDI_0000100))
 Declaration(ObjectProperty(:contributorOf))
 Declaration(ObjectProperty(:part))
 Declaration(ObjectProperty(:participant))
+Declaration(ObjectProperty(:participantOf))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000232>))
@@ -180,7 +175,7 @@ AnnotationAssertion(rdfs:isDefinedBy :AcademicDiscipline <https://nfdi.fiz-karls
 AnnotationAssertion(rdfs:label :AcademicDiscipline "academic discipline"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :AcademicDiscipline <https://www.wikidata.org/entity/Q12271>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :AcademicDiscipline "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en)
-SubClassOf(:AcademicDiscipline <http://purl.obolibrary.org/obo/BFO_0000019>)
+SubClassOf(:AcademicDiscipline <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :Agent (agent)
 
@@ -234,8 +229,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :ConsortiumMemb
 AnnotationAssertion(rdfs:comment :ConsortiumMemberRole "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
 AnnotationAssertion(rdfs:isDefinedBy :ConsortiumMemberRole <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :ConsortiumMemberRole "consortium member role"@en)
-EquivalentClasses(:ConsortiumMemberRole ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :Project)))
-SubClassOf(:ConsortiumMemberRole <http://purl.obolibrary.org/obo/BFO_0000023>)
+EquivalentClasses(:ConsortiumMemberRole ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :Project)))
 
 # Class: :ContactPointRole (contact point role)
 
@@ -243,7 +237,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :ContactPointRo
 AnnotationAssertion(rdfs:comment :ContactPointRole "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
 AnnotationAssertion(rdfs:isDefinedBy :ContactPointRole <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :ContactPointRole "contact point role"@en)
-SubClassOf(:ContactPointRole <http://purl.obolibrary.org/obo/BFO_0000023>)
+SubClassOf(:ContactPointRole :NFDI_0000003)
 
 # Class: :Contacting (contacting)
 
@@ -268,17 +262,8 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :ContributorRol
 AnnotationAssertion(rdfs:comment :ContributorRole "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
 AnnotationAssertion(rdfs:isDefinedBy :ContributorRole <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :ContributorRole "contributor role"@en)
-EquivalentClasses(:ContributorRole ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectUnionOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :Contributing) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> :Contributing)))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(:contributorOf ObjectIntersectionOf(:Resource ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> :Contributing))))))))
-SubClassOf(:ContributorRole <http://purl.obolibrary.org/obo/BFO_0000023>)
-
-# Class: :ControlledVocabulary (controlled vocabulary)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :ControlledVocabulary "Semantic expressivity that refers to a standardized set of terms and descriptors used to index and retrieve information systematically."@en)
-AnnotationAssertion(rdfs:comment :ControlledVocabulary "A standardized set of terms and descriptors used to index and retrieve information systematically."@en)
-AnnotationAssertion(rdfs:isDefinedBy :ControlledVocabulary <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :ControlledVocabulary "controlled vocabulary"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :ControlledVocabulary "the Union List of Artist Names (ULAN), the Cultural Objects Name Authority (CONA)")
-SubClassOf(:ControlledVocabulary :SemanticExpressivity)
+EquivalentClasses(:ContributorRole ObjectIntersectionOf(:NFDI_0000003 ObjectUnionOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :Contributing) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> :Contributing)))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(:contributorOf ObjectIntersectionOf(:Resource ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> :Contributing))))))))
+SubClassOf(:ContributorRole :NFDI_0000003)
 
 # Class: :Country (country)
 
@@ -290,12 +275,13 @@ SubClassOf(:Country :Place)
 
 # Class: :CreativeWork (creative work)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :CreativeWork "An information content entity that refers to a manifestation of someone's creative effort."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :CreativeWork "An independent continuant or information content entity that refers to a manifestation of someone's creative effort."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :CreativeWork "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
 AnnotationAssertion(rdfs:comment :CreativeWork "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
 AnnotationAssertion(rdfs:label :CreativeWork "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :CreativeWork "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
-EquivalentClasses(:CreativeWork ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> :NFDI_0000001)))
+EquivalentClasses(:CreativeWork ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> :NFDI_0000001)))
+SubClassOf(:CreativeWork <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Class: :DataCurationService (data curation service)
 
@@ -354,16 +340,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :FundingOrganiz
 AnnotationAssertion(rdfs:comment :FundingOrganizationRole "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
 AnnotationAssertion(rdfs:isDefinedBy :FundingOrganizationRole <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :FundingOrganizationRole "funding organization role"@en)
-SubClassOf(:FundingOrganizationRole <http://purl.obolibrary.org/obo/BFO_0000023>)
-
-# Class: :Glossary (glossary)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Glossary "Semantic expressivity that refers to a list of terms and their definitions within a specific domain or academic discipline."@en)
-AnnotationAssertion(rdfs:comment :Glossary "A compilation of terms and their definitions within a specific domain or academic discipline."@en)
-AnnotationAssertion(rdfs:isDefinedBy :Glossary <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :Glossary "glossary"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Glossary "ICOM Museum Glossary"@en)
-SubClassOf(:Glossary :SemanticExpressivity)
+SubClassOf(:FundingOrganizationRole :NFDI_0000003)
 
 # Class: :LibrariesAndAPIsService (software library)
 
@@ -413,6 +390,7 @@ SubClassOf(:NFDI_0000001 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OB
 # Class: :NFDI_0000002 (service product role)
 
 AnnotationAssertion(rdfs:label :NFDI_0000002 "service product role"@de)
+EquivalentClasses(:NFDI_0000002 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000101)))
 SubClassOf(:NFDI_0000002 <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: :NFDI_0000003 (agent role)
@@ -435,7 +413,7 @@ SubClassOf(:NFDI_0000005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 # Class: :NFDI_0000006 (service provider role)
 
 AnnotationAssertion(rdfs:label :NFDI_0000006 "service provider role"@de)
-SubClassOf(:NFDI_0000006 :NFDI_0000003)
+EquivalentClasses(:NFDI_0000006 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(:participantOf :NFDI_0000101)))
 
 # Class: :NFDI_0000007 (workflow specification)
 
@@ -452,15 +430,6 @@ SubClassOf(:NFDI_0000008 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OB
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@de)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 SubClassOf(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> :NFDI_0000005)))
-
-# Class: :Ontology (ontology)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Ontology "Semantic expressivity that refers to a semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and machine-understandable manner."@en)
-AnnotationAssertion(rdfs:comment :Ontology "A semantic framework that represents knowledge about a domain, including concepts, entities, properties, and relationships, in a structured and formalized manner, enabling machine-understandable reasoning and inference."@en)
-AnnotationAssertion(rdfs:isDefinedBy :Ontology <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :Ontology "ontology"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Ontology "CIDOC-CRM, BFO, nfdicore")
-SubClassOf(:Ontology :SemanticExpressivity)
 
 # Class: :Organization (organization)
 
@@ -527,27 +496,18 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :PublisherRole 
 AnnotationAssertion(rdfs:comment :PublisherRole "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
 AnnotationAssertion(rdfs:isDefinedBy :PublisherRole <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :PublisherRole "publisher role"@en)
-EquivalentClasses(:PublisherRole ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <http://purl.obolibrary.org/obo/IAO_0000444>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/IAO_0000444>))))))
-SubClassOf(:PublisherRole <http://purl.obolibrary.org/obo/BFO_0000023>)
+EquivalentClasses(:PublisherRole ObjectIntersectionOf(:NFDI_0000003 ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <http://purl.obolibrary.org/obo/IAO_0000444>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/IAO_0000444>))))))
 
-# Class: :Resource (resource)
+# Class: :Resource (NFDI resource)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Resource "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :Resource "2024-03-25 - Sasha Bruns: 
 This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."@en)
 AnnotationAssertion(rdfs:comment :Resource "The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Resource <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :Resource "resource"@en)
-SubClassOf(:Resource <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-# Class: :SemanticExpressivity (semantic expressivity)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :SemanticExpressivity "A quality of a resource that defines the degree of expressivity in the semantic representation of a resource."@en)
-AnnotationAssertion(rdfs:comment :SemanticExpressivity "The class represents the degree of expressivity in the semantic representation of a resource, such as an ontology, taxonomy, or glossary. It specifies the extent to which the resource captures and conveys the meaning, relationships, and semantics of concepts within a knowledge domain."@en)
-AnnotationAssertion(rdfs:isDefinedBy :SemanticExpressivity <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :SemanticExpressivity "semantic expressivity"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :SemanticExpressivity "controlled vocabulary, ontology, taxonomy"@en)
-SubClassOf(:SemanticExpressivity <http://purl.obolibrary.org/obo/BFO_0000019>)
+AnnotationAssertion(rdfs:label :Resource "NFDI resource"@en)
+EquivalentClasses(:Resource ObjectUnionOf(:CreativeWork :NFDI_0000005))
+SubClassOf(:Resource <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Class: :Software (software)
 
@@ -591,15 +551,6 @@ AnnotationAssertion(rdfs:comment :SupportAndConsultingService "Service with dire
 AnnotationAssertion(rdfs:label :SupportAndConsultingService "support service"@en)
 SubClassOf(:SupportAndConsultingService :NFDI_0000101)
 
-# Class: :Taxonomy (taxonomy)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Taxonomy "Semantic expressivity that refers to a hierarchical classification system that organizes concepts into a tree-like structure."@en)
-AnnotationAssertion(rdfs:comment :Taxonomy "A hierarchical classification system that organizes concepts into a tree-like structure based on their shared characteristics and relationships."@en)
-AnnotationAssertion(rdfs:isDefinedBy :Taxonomy <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :Taxonomy "taxonomy"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Taxonomy "Linnaean Taxonomy, Iconclass"@en)
-SubClassOf(:Taxonomy :SemanticExpressivity)
-
 # Class: :TechnologicalMeans (technological means)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :TechnologicalMeans "A plan specification that refers to technology employed for the creation, management, utilization, or control of a resource."@en)
@@ -608,15 +559,6 @@ AnnotationAssertion(rdfs:isDefinedBy :TechnologicalMeans <https://nfdi.fiz-karls
 AnnotationAssertion(rdfs:label :TechnologicalMeans "technological means"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :TechnologicalMeans "Groovy on Grails, Angular"@en)
 SubClassOf(:TechnologicalMeans <http://purl.obolibrary.org/obo/IAO_0000104>)
-
-# Class: :Thesaurus (thesaurus)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Thesaurus "A controlled vocabulary organized hierarchically and provided with associative relationships, such as synonyms, broader terms, and narrower terms."@en)
-AnnotationAssertion(rdfs:comment :Thesaurus "A hierarchical controlled vocabulary enriched with associative relationships, including synonyms, broader terms, and narrower terms."@en)
-AnnotationAssertion(rdfs:isDefinedBy :Thesaurus <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :Thesaurus "thesaurus"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Thesaurus "Getty Art & Architecture Thesaurus, UNESCO Thesaurus for cultural and scientific documentation")
-SubClassOf(:Thesaurus :ControlledVocabulary)
 
 # Class: :ToolsAndApplicationsService (software application)
 

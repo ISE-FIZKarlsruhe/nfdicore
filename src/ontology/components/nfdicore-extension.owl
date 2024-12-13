@@ -62,8 +62,6 @@ Declaration(ObjectProperty(:publisherOf))
 Declaration(ObjectProperty(:relatedProject))
 Declaration(ObjectProperty(:representedCollection))
 Declaration(ObjectProperty(:representedCollectionOf))
-Declaration(ObjectProperty(:semanticExpressivity))
-Declaration(ObjectProperty(:semanticExpressivityOf))
 Declaration(ObjectProperty(:software))
 Declaration(ObjectProperty(:softwareOf))
 Declaration(ObjectProperty(:sparqlEndpoint))
@@ -490,23 +488,6 @@ AnnotationAssertion(rdfs:isDefinedBy :representedCollectionOf <https://nfdi.fiz-
 AnnotationAssertion(rdfs:label :representedCollectionOf "represented collection of"@en)
 SubObjectPropertyOf(:representedCollectionOf <http://purl.obolibrary.org/obo/IAO_0000235>)
 
-# Object Property: :semanticExpressivity (has semantic expressivity)
-
-AnnotationAssertion(rdfs:comment :semanticExpressivity "The property relates a resource to its semantic expressivity spectrum."@en)
-AnnotationAssertion(rdfs:isDefinedBy :semanticExpressivity <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :semanticExpressivity "has semantic expressivity"@en)
-SubObjectPropertyOf(:semanticExpressivity <http://purl.obolibrary.org/obo/RO_0000086>)
-InverseObjectProperties(:semanticExpressivity :semanticExpressivityOf)
-ObjectPropertyDomain(:semanticExpressivity :Resource)
-ObjectPropertyRange(:semanticExpressivity :SemanticExpressivity)
-
-# Object Property: :semanticExpressivityOf (semantic expressivity of)
-
-AnnotationAssertion(rdfs:comment :semanticExpressivityOf "inverse of  property \"semantic expressivity\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :semanticExpressivityOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :semanticExpressivityOf "semantic expressivity of"@en)
-SubObjectPropertyOf(:semanticExpressivityOf <http://purl.obolibrary.org/obo/RO_0000080>)
-
 # Object Property: :software (has software)
 
 AnnotationAssertion(rdfs:comment :software "The property is a relationship between a resource and a software it uses."@en)
@@ -585,7 +566,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> :subjectArea "t
 AnnotationAssertion(rdfs:comment :subjectArea "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en)
 AnnotationAssertion(rdfs:isDefinedBy :subjectArea <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :subjectArea "subject area"@en)
-SubObjectPropertyOf(:subjectArea <http://purl.obolibrary.org/obo/RO_0000086>)
 InverseObjectProperties(:subjectArea :subjectAreaOf)
 ObjectPropertyDomain(:subjectArea ObjectUnionOf(:Agent :Project :Resource))
 ObjectPropertyRange(:subjectArea :AcademicDiscipline)
