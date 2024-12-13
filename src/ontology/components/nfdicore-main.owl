@@ -51,6 +51,7 @@ Declaration(Class(:NFDI_0000019))
 Declaration(Class(:NFDI_0000020))
 Declaration(Class(:NFDI_0000023))
 Declaration(Class(:NFDI_0000024))
+Declaration(Class(:NFDI_0000026))
 Declaration(Class(:NFDI_0000101))
 Declaration(Class(:Organization))
 Declaration(Class(:Person))
@@ -470,10 +471,17 @@ AnnotationAssertion(rdfs:label :NFDI_0000023 "ontology"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0000023 "An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it."@en)
 SubClassOf(:NFDI_0000023 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
-# Class: :NFDI_0000024 (variant)
+# Class: :NFDI_0000024 (ontology variant)
 
-AnnotationAssertion(rdfs:label :NFDI_0000024 "variant"@de)
+AnnotationAssertion(rdfs:comment :NFDI_0000024 "An ontology variant represents a self-contained, reusable subset of an ontology that provides a specific functionality while maintaining interoperability with the larger ontology. Typically, an ontology is released in different variants, which makes a variant a release artifact."@en)
+AnnotationAssertion(rdfs:label :NFDI_0000024 "ontology variant"@de)
 SubClassOf(:NFDI_0000024 <http://purl.obolibrary.org/obo/IAO_8000000>)
+
+# Class: :NFDI_0000026 (ontology release version)
+
+AnnotationAssertion(rdfs:comment :NFDI_0000026 "An (nfdi) ontology release version represents a particular release of an ontology."@en)
+AnnotationAssertion(rdfs:label :NFDI_0000026 "ontology release version"@de)
+SubClassOf(:NFDI_0000026 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 # Class: :NFDI_0000101 (service)
 
