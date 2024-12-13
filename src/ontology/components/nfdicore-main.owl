@@ -45,6 +45,8 @@ Declaration(Class(:NFDI_0000005))
 Declaration(Class(:NFDI_0000006))
 Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000008))
+Declaration(Class(:NFDI_0000017))
+Declaration(Class(:NFDI_0000018))
 Declaration(Class(:NFDI_0000101))
 Declaration(Class(:Organization))
 Declaration(Class(:Person))
@@ -424,6 +426,16 @@ SubClassOf(:NFDI_0000007 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 AnnotationAssertion(rdfs:label :NFDI_0000008 "workflow process"@en)
 SubClassOf(:NFDI_0000008 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> :WorkflowsAndPipelinesService)))
+
+# Class: :NFDI_0000017 (spokes person role)
+
+AnnotationAssertion(rdfs:label :NFDI_0000017 "spokes person role"@de)
+SubClassOf(:NFDI_0000017 :NFDI_0000003)
+
+# Class: :NFDI_0000018 (academic event)
+
+AnnotationAssertion(rdfs:label :NFDI_0000018 "academic event"@de)
+SubClassOf(:NFDI_0000018 :Event)
 
 # Class: :NFDI_0000101 (service)
 
