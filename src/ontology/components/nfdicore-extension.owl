@@ -706,10 +706,13 @@ DataPropertyRange(:startDate rdfs:Literal)
 
 SubClassOf(:CreativeWork ObjectIntersectionOf(:Resource <https://schema.org/CreativeWork>))
 
+# Class: :NFDI_0000005 (service product)
+
+SubClassOf(:NFDI_0000005 <https://schema.org/Service>)
+
 # Class: :NFDI_0000101 (service)
 
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service"@de)
-SubClassOf(:NFDI_0000101 <https://schema.org/Service>)
 
 
 DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Publisher") Body(ClassAtom(:Agent Variable(:a)) ClassAtom(:Resource Variable(:r)) ClassAtom(<http://purl.obolibrary.org/obo/IAO_0000444> Variable(:p)) ClassAtom(:PublisherRole Variable(:pr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:a) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:r) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(:a) Variable(:pr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(:pr) Variable(:p)))Head(ObjectPropertyAtom(:publisherOf Variable(:a) Variable(:r))))
