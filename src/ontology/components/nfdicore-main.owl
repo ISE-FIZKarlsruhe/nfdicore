@@ -47,6 +47,8 @@ Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000008))
 Declaration(Class(:NFDI_0000017))
 Declaration(Class(:NFDI_0000018))
+Declaration(Class(:NFDI_0000019))
+Declaration(Class(:NFDI_0000020))
 Declaration(Class(:NFDI_0000101))
 Declaration(Class(:Organization))
 Declaration(Class(:Person))
@@ -252,7 +254,7 @@ SubClassOf(:Contacting <http://purl.obolibrary.org/obo/OBI_0000011>)
 # Class: :Contributing (contributing)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Contributing "A planned process of contibuting or providing information to an endeavor."@en)
-AnnotationAssertion(rdfs:comment :Contributing "The contibution or provision of information to an endeavor."@en)
+AnnotationAssertion(rdfs:comment :Contributing "A planned process of contibuting or providing information to an endeavor."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Contributing <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Contributing "contributing"@en)
 EquivalentClasses(:Contributing ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(:ContributorRole ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :Agent))) ObjectSomeValuesFrom(:participant :Resource) ObjectSomeValuesFrom(:participant ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :ContributorRole)))))
@@ -320,12 +322,12 @@ SubClassOf(:Dataset <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :Event (event)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Event "An occurent that represents an occurence or happening that unfolds in time."@en)
-AnnotationAssertion(rdfs:comment :Event "A class that represents entities that occur or unfold in time, typically characterized by a specific happening or occurrence with temporal properties. Events encompass a wide range of occurrences, including but not limited to happenings, incidents, activities, or processes."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Event "An planned process that represents an organized happening that unfolds in time."@en)
+AnnotationAssertion(rdfs:comment :Event "A class that represents entities that occur or unfold in time, typically characterized by a specific organized happening or occurrence with temporal properties."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Event <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Event "event"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Event "conferences, wars, strikes, celebrations, accidents, workshops, meetings, or any other specific incident or happening."@en)
-SubClassOf(:Event <http://purl.obolibrary.org/obo/BFO_0000003>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Event "conferences, celebrations, workshops, meetings, or any other specific incident or happening that has been planned somehow."@en)
+SubClassOf(:Event <http://purl.obolibrary.org/obo/OBI_0000011>)
 
 # Class: :FederalState (federal state)
 
@@ -435,7 +437,18 @@ SubClassOf(:NFDI_0000017 :NFDI_0000003)
 # Class: :NFDI_0000018 (academic event)
 
 AnnotationAssertion(rdfs:label :NFDI_0000018 "academic event"@de)
-SubClassOf(:NFDI_0000018 :Event)
+SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:Event ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000019)))))
+
+# Class: :NFDI_0000019 (academic organization role)
+
+AnnotationAssertion(rdfs:label :NFDI_0000019 "academic organization role"@de)
+SubClassOf(:NFDI_0000019 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :Organization)))
+
+# Class: :NFDI_0000020 (industry organization role)
+
+AnnotationAssertion(rdfs:label :NFDI_0000020 "industry organization role"@de)
+SubClassOf(:NFDI_0000020 :NFDI_0000003)
+SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :Organization)))
 
 # Class: :NFDI_0000101 (service)
 
@@ -488,7 +501,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Project "A pla
 AnnotationAssertion(rdfs:comment :Project "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Project <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Project "project"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Project "Freischütz digital, Corpus Vitrearum Medii Aevi")
 EquivalentClasses(:Project ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> :ConsortiumMemberRole))
 SubClassOf(:Project <http://purl.obolibrary.org/obo/OBI_0000011>)
 
