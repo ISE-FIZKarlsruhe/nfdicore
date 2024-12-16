@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-12-13/imports/iao_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-12-16/imports/iao_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl>)
-Annotation(owl:versionInfo "2024-12-13")
+Annotation(owl:versionInfo "2024-12-16")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
@@ -40,6 +40,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000096>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000098>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000102>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000104>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000129>))
@@ -1206,6 +1207,22 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000096> "group:OBI"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000096> "source code module"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000096> <http://purl.obolibrary.org/obo/IAO_0000033>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000098> (data format specification)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_0000098> "data format specification"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000098> <http://purl.obolibrary.org/obo/IAO_0000123>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000098> "A data format specification is the information content borne by the document published defining the specification.
+Example: The ISO document specifying what encompasses an XML document; The instructions in a XSD file"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000098> "2009-03-16: provenance: term imported from OBI_0000187, which had original definition \"A data format specification is a plan which organizes
+information. Example: The ISO document specifying what encompasses an
+XML document; The instructions in a XSD file\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000098> "PERSON: Alan Ruttenberg"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000098> "PlanAndPlannedProcess Branch"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000098> "OBI branch derived"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000098> "OBI_0000187"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000098> "data format specification"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000098> <http://purl.obolibrary.org/obo/IAO_0000033>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000102> (data about an ontology part)
 

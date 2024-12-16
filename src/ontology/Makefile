@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                42415a871a4271e5c58f1a00775bc103a6638531fc016182c4b07e7ba195c636
+CONFIG_HASH=                63a1342cd156a799e03943d3f9060386384da4490b33104019b9c102b2535961
 
 
 # ----------------------------------------
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao schema swo obi
+IMPORTS =  iao schema swo obi edam
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -396,6 +396,14 @@ $(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms_combine
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
+## Module for ontology: edam
+
+$(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl $(IMPORTDIR)/edam_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/edam_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method STAR \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -490,6 +498,13 @@ mirror-swo: | $(TMPDIR)
 mirror-obi: | $(TMPDIR)
 	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: edam
+.PHONY: mirror-edam
+.PRECIOUS: $(MIRRORDIR)/edam.owl
+mirror-edam: | $(TMPDIR)
+	$(ROBOT) convert -I https://edamontology.org/EDAM_1.25.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

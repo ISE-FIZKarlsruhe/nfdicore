@@ -1,0 +1,11 @@
+http://edamontology.org/format_2376
+http://edamontology.org/format_3749
+http://edamontology.org/format_3956
+http://edamontology.org/format_3256
+http://edamontology.org/format_3257
+http://edamontology.org/format_3253
+http://edamontology.org/format_3252
+http://edamontology.org/format_3262
+http://edamontology.org/format_2197
+http://edamontology.org/format_3261
+http://edamontology.org/format_3255
