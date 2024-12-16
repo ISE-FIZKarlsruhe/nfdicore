@@ -189,6 +189,7 @@ EquivalentClasses(<http://www.ebi.ac.uk/swo/SWO_0000002> :License)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :AcademicDiscipline "A quality of an entity that specifies the subject area, domain or academic discipline of an entity."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :AcademicDiscipline "2024-03-26: SB & JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :AcademicDiscipline "2024-12-16: TT & JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information."@en)
 AnnotationAssertion(rdfs:comment :AcademicDiscipline "An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en)
 AnnotationAssertion(rdfs:isDefinedBy :AcademicDiscipline <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :AcademicDiscipline "academic discipline"@en)
@@ -483,7 +484,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000026 "An (nfdi) ontology release versi
 AnnotationAssertion(rdfs:label :NFDI_0000026 "ontology release version"@de)
 SubClassOf(:NFDI_0000026 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
-# Class: :NFDI_0000101 (service)
+# Class: :NFDI_0000101 (service process)
 
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@de)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
