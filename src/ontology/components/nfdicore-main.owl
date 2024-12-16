@@ -52,6 +52,8 @@ Declaration(Class(:NFDI_0000020))
 Declaration(Class(:NFDI_0000023))
 Declaration(Class(:NFDI_0000024))
 Declaration(Class(:NFDI_0000026))
+Declaration(Class(:NFDI_0000027))
+Declaration(Class(:NFDI_0000028))
 Declaration(Class(:NFDI_0000101))
 Declaration(Class(:Organization))
 Declaration(Class(:Person))
@@ -484,7 +486,21 @@ AnnotationAssertion(rdfs:comment :NFDI_0000026 "An (nfdi) ontology release versi
 AnnotationAssertion(rdfs:label :NFDI_0000026 "ontology release version"@de)
 SubClassOf(:NFDI_0000026 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
+
 # Class: :NFDI_0000101 (service process)
+
+# Class: :NFDI_0000027 (file data item)
+
+AnnotationAssertion(rdfs:comment :NFDI_0000027 "A file data item is a data item that represents a file stored on a hard drive. It might also include essential attributes like its name, location, download URL, size, type, and timestamps for creation, modification, and access. It might also capture permissions and ownership details to control how the file can be accessed or modified."@en)
+AnnotationAssertion(rdfs:label :NFDI_0000027 "file data item"@de)
+SubClassOf(:NFDI_0000027 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000027> ObjectSomeValuesFrom(:NFDI_0000100 <http://purl.obolibrary.org/obo/IAO_0000098>)))
+
+# Class: :NFDI_0000028 (RDF file)
+
+AnnotationAssertion(rdfs:label :NFDI_0000028 "RDF file"@de)
+SubClassOf(:NFDI_0000028 ObjectIntersectionOf(:NFDI_0000027 ObjectSomeValuesFrom(:NFDI_0000100 <http://edamontology.org/format_2376>)))
+
+# Class: :NFDI_0000101 (service)
 
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@de)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
