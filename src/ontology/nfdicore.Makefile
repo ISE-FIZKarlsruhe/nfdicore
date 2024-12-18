@@ -24,23 +24,39 @@ $(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl $(IMPORTDIR)/swo_terms.txt
 ##
 ##   remove the http://purl.obolibrary.org/obo/OBI_0000659 specimen collection process 
 ######
-$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms_combined.txt
+$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl 
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		remove --term http://purl.obolibrary.org/obo/OBI_0000659 \
 		remove --term http://purl.obolibrary.org/obo/OBI_0002076 \
 		remove --term http://purl.obolibrary.org/obo/OBI_0100051 \
 		remove --term http://purl.obolibrary.org/obo/OBI_0000112 \
-		extract -T $(IMPORTDIR)/obi_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method BOT \
+		extract -T $(IMPORTDIR)/obi_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method BOT \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
 #### special handling for EDAM
-$(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl $(IMPORTDIR)/edam_terms_combined.txt
+$(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl 
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/edam_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
+		extract -T $(IMPORTDIR)/edam_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
+## Module for ontology: dcat
+
+$(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl 
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/dcat_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+
+## Module for ontology: schema
+$(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl 
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/schema_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method STAR \
+	    remove --term https://schema.org/additionalType \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
 
 #################################################################
 ## release base version (modification)

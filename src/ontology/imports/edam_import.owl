@@ -87,15 +87,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynon
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/media_type> "concept_properties")
 AnnotationAssertion(rdfs:label <http://edamontology.org/media_type> "Media type")
 
-# Annotation Property: <http://edamontology.org/repository> (Repository)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/is_metadata_tag> <http://edamontology.org/repository> "true")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/repository> "'Repository' trailing modifier (qualifier, 'repository') of 'xref' links of 'Format' concepts. When 'true', the link is pointing to the public source-code repository where the given data format is developed or maintained.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://edamontology.org/repository> "Public repository")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://edamontology.org/repository> "Source-code repository")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/repository> "concept_properties")
-AnnotationAssertion(rdfs:label <http://edamontology.org/repository> "Repository")
-
 # Annotation Property: <http://purl.obolibrary.org/obo/edam#edam> (<http://purl.obolibrary.org/obo/edam#edam>)
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/edam#edam> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
