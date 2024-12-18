@@ -66,6 +66,7 @@ Declaration(ObjectProperty(:technology))
 Declaration(ObjectProperty(:technologyOf))
 Declaration(ObjectProperty(:url))
 Declaration(ObjectProperty(:urlOf))
+Declaration(DataProperty(:NFDI_0000011))
 Declaration(DataProperty(:birthDate))
 Declaration(DataProperty(:deathDate))
 Declaration(DataProperty(:dissolutionDate))
@@ -461,7 +462,7 @@ SubObjectPropertyOf(:subjectAreaOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 AnnotationAssertion(rdfs:comment :subsidiaryOrganization "inverse of \"parent organization\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :subsidiaryOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :subsidiaryOrganization "has subsidiary organization"@en)
-SubObjectPropertyOf(:subsidiaryOrganization :NFDI_0000009)
+SubObjectPropertyOf(:subsidiaryOrganization :NFDI_0000010)
 
 # Object Property: :technology (has technology)
 
@@ -499,6 +500,10 @@ SubObjectPropertyOf(:urlOf <http://purl.obolibrary.org/obo/IAO_0000219>)
 ############################
 #   Data Properties
 ############################
+
+# Data Property: :NFDI_0000011 (url)
+
+AnnotationAssertion(rdfs:label :NFDI_0000011 "url"@en)
 
 # Data Property: :birthDate (birth date)
 

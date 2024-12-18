@@ -10,8 +10,6 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl>)
-
-
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E1925>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E2415>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E2416>)
@@ -24,6 +22,7 @@ Annotation(<http://purl.org/ontology/bibo/status> "Ontology Specification"@en)
 Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-karlsruhe.de/ontology/>)
 Annotation(rdfs:label "NFDIcore")
 Annotation(owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
+
 
 
 

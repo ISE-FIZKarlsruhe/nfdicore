@@ -13,6 +13,7 @@ Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/obi_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl>)
 Annotation(dce:description "This module contains ontology parts which extend the definitions of elements defined in imported ontologies. This is necessary to prevent manual edits on the automatically generated import modules."@en)
 Annotation(dcterms:title "Import edit module of NFDIcore ontology"@en)
 

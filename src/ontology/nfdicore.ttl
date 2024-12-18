@@ -1110,7 +1110,6 @@ obo:RO_0001025 rdf:type owl:ObjectProperty ,
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009
 ontology:NFDI_0000009 rdf:type owl:ObjectProperty ;
                       owl:inverseOf ontology:NFDI_0000010 ;
-                      rdfs:range ontology:Agent ;
                       rdfs:label "has agent"@en .
 
 
@@ -1160,7 +1159,6 @@ ontology:contactPoint rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf
 ontology:contactPointOf rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf ontology:NFDI_0000010 ;
                         rdfs:comment "inverse of  property \"contact point\""@en ;
                         rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                         rdfs:label "contact point of"@en .
@@ -1338,7 +1336,6 @@ ontology:publisher rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/publisherOf
 ontology:publisherOf rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf ontology:NFDI_0000010 ;
                      rdfs:comment "inverse of  property \"publisher\""@en ;
                      rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                      rdfs:label "publisher of"@en .
@@ -1484,7 +1481,7 @@ ontology:subjectAreaOf rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization
 ontology:subsidiaryOrganization rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf ontology:NFDI_0000010 ;
+                                rdfs:subPropertyOf ontology:NFDI_0000009 ;
                                 rdfs:comment "inverse of \"parent organization\""@en ;
                                 rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
                                 rdfs:label "has subsidiary organization"@en .
@@ -1777,6 +1774,31 @@ obo:APOLLO_SV_00000008 rdf:type owl:Class ;
                        obo:IAO_0000119 "http://en.wikipedia.org/wiki/Software_development" ;
                        obo:IAO_0000600 "A planned process resulting in a software product involving the creation of source code."@en ;
                        rdfs:label "software development"@en .
+
+
+###  http://purl.obolibrary.org/obo/APOLLO_SV_00000522
+obo:APOLLO_SV_00000522 rdf:type owl:Class ;
+                       rdfs:subClassOf obo:IAO_0000310 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty obo:BFO_0000051 ;
+                                         owl:someValuesFrom obo:IAO_0000096
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty obo:BFO_0000051 ;
+                                         owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000027
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty obo:IAO_0000136 ;
+                                                                                     owl:someValuesFrom obo:IAO_0000096
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ]
+                                       ] ;
+                       obo:IAO_0000111 "software source code version control repository"@en ;
+                       obo:IAO_0000115 "A document that comprises at least one source code module and provenance data about who contributed the set of files making up the module(s), and optionally comprises also multiple versions of files with detailed change history about who committed files and when, a license for the software, readme files, documentation, executables, etc."@en ;
+                       obo:IAO_0000117 "William R. Hogan"@en ;
+                       rdfs:comment "Refers to the stuff that lives on GitHub, not to GitHub or the git software on which it is based"@en ;
+                       rdfs:label "source code repository"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000001
@@ -2460,15 +2482,15 @@ obo:BFO_0000034 rdf:type owl:Class ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource obo:BFO_0000034 ;
-   owl:annotatedProperty obo:IAO_0000600 ;
-   owl:annotatedTarget "A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])"@en ;
+   owl:annotatedProperty obo:IAO_0000602 ;
+   owl:annotatedTarget "(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] " ;
    obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/064-001>
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource obo:BFO_0000034 ;
-   owl:annotatedProperty obo:IAO_0000602 ;
-   owl:annotatedTarget "(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] " ;
+   owl:annotatedProperty obo:IAO_0000600 ;
+   owl:annotatedTarget "A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])"@en ;
    obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/064-001>
  ] .
 
@@ -2508,13 +2530,6 @@ obo:BFO_0000040 rdf:type owl:Class ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource obo:BFO_0000040 ;
-   owl:annotatedProperty obo:IAO_0000602 ;
-   owl:annotatedTarget "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] " ;
-   obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/020-002>
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource obo:BFO_0000040 ;
    owl:annotatedProperty obo:IAO_0000600 ;
    owl:annotatedTarget "A material entity is an independent continuant that has some portion of matter as proper or improper continuant part. (axiom label in BFO2 Reference: [019-002])"@en ;
    obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/019-002>
@@ -2546,6 +2561,13 @@ obo:BFO_0000040 rdf:type owl:Class ;
    owl:annotatedProperty obo:IAO_0000602 ;
    owl:annotatedTarget "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] " ;
    obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/021-002>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BFO_0000040 ;
+   owl:annotatedProperty obo:IAO_0000602 ;
+   owl:annotatedTarget "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] " ;
+   obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/020-002>
  ] .
 
 
@@ -3402,6 +3424,14 @@ ontology:Collection rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/Consortium
 ontology:Consortium rdf:type owl:Class ;
+                    rdfs:subClassOf [ owl:intersectionOf ( ontology:Organization
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:BFO_0000051 ;
+                                                             owl:someValuesFrom ontology:ConsortiumMember
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
                     obo:IAO_0000115 "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en ;
                     rdfs:comment "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en ;
                     rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology> ;
@@ -3681,6 +3711,14 @@ ontology:NFDI_0000000 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001
 ontology:NFDI_0000001 rdf:type owl:Class ;
+                      rdfs:subClassOf [ owl:intersectionOf ( obo:OBI_0000011
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty obo:RO_0000057 ;
+                                                               owl:someValuesFrom ontology:Person
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
                       rdfs:label "creative process"@de .
 
 
@@ -3763,6 +3801,19 @@ ontology:NFDI_0000005 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006
 ontology:NFDI_0000006 rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( ontology:NFDI_0000003
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty obo:RO_0000056 ;
+                                                                   owl:someValuesFrom ontology:NFDI_0000101
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf ontology:NFDI_0000003 ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty obo:RO_0000056 ;
+                                        owl:someValuesFrom ontology:NFDI_0000101
+                                      ] ;
                       rdfs:label "service provider role"@de .
 
 
