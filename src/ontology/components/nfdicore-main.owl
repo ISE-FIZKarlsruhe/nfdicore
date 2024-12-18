@@ -86,9 +86,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000086>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))
 Declaration(ObjectProperty(:NFDI_0000100))
 Declaration(ObjectProperty(:contributorOf))
-Declaration(ObjectProperty(:part))
-Declaration(ObjectProperty(:participant))
-Declaration(ObjectProperty(:participantOf))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000232>))
@@ -237,7 +234,6 @@ AnnotationAssertion(rdfs:comment :Consortium "A consortium of autonomous organiz
 AnnotationAssertion(rdfs:isDefinedBy :Consortium <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Consortium "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Consortium "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
-SubClassOf(:Consortium ObjectIntersectionOf(:Organization ObjectSomeValuesFrom(:part :ConsortiumMember)))
 
 # Class: :ConsortiumMember (consortium member)
 
@@ -278,7 +274,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Contributing "
 AnnotationAssertion(rdfs:comment :Contributing "A planned process of contibuting or providing information to an endeavor."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Contributing <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Contributing "contributing"@en)
-EquivalentClasses(:Contributing ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(:ContributorRole ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :Agent))) ObjectSomeValuesFrom(:participant :Resource) ObjectSomeValuesFrom(:participant ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :ContributorRole)))))
 SubClassOf(:Contributing <http://purl.obolibrary.org/obo/OBI_0000011>)
 
 # Class: :ContributorRole (contributor role)
@@ -410,7 +405,6 @@ SubClassOf(:NFDI_0000000 <http://purl.obolibrary.org/obo/IAO_0000104>)
 # Class: :NFDI_0000001 (creative process)
 
 AnnotationAssertion(rdfs:label :NFDI_0000001 "creative process"@de)
-SubClassOf(:NFDI_0000001 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(:participant :Person)))
 
 # Class: :NFDI_0000002 (service product role)
 
@@ -438,7 +432,6 @@ SubClassOf(:NFDI_0000005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 # Class: :NFDI_0000006 (service provider role)
 
 AnnotationAssertion(rdfs:label :NFDI_0000006 "service provider role"@de)
-EquivalentClasses(:NFDI_0000006 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(:participantOf :NFDI_0000101)))
 
 # Class: :NFDI_0000007 (workflow specification)
 
@@ -500,7 +493,7 @@ SubClassOf(:NFDI_0000027 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IA
 AnnotationAssertion(rdfs:label :NFDI_0000028 "RDF file"@de)
 SubClassOf(:NFDI_0000028 ObjectIntersectionOf(:NFDI_0000027 ObjectSomeValuesFrom(:NFDI_0000100 <http://edamontology.org/format_2376>)))
 
-# Class: :NFDI_0000101 (service process)
+# Class: :NFDI_0000101 (service)
 
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@de)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
@@ -625,12 +618,12 @@ AnnotationAssertion(rdfs:comment :SupportAndConsultingService "Service with dire
 AnnotationAssertion(rdfs:label :SupportAndConsultingService "support service"@en)
 SubClassOf(:SupportAndConsultingService :NFDI_0000101)
 
-# Class: :TechnologicalMeans (technological means)
+# Class: :TechnologicalMeans (technological method specification)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :TechnologicalMeans "A plan specification that refers to technology employed for the creation, management, utilization, or control of a resource."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :TechnologicalMeans "A plan specification that refers to a technology method employed for the creation, management, utilization, or control of a digital resource."@en)
 AnnotationAssertion(rdfs:comment :TechnologicalMeans "A technology, e.g. a web application or a programming framework used in a resource."@en)
 AnnotationAssertion(rdfs:isDefinedBy :TechnologicalMeans <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :TechnologicalMeans "technological means"@en)
+AnnotationAssertion(rdfs:label :TechnologicalMeans "technological method specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :TechnologicalMeans "Groovy on Grails, Angular"@en)
 SubClassOf(:TechnologicalMeans <http://purl.obolibrary.org/obo/IAO_0000104>)
 

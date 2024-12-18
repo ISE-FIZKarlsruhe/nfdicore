@@ -22,8 +22,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001015>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001025>))
+Declaration(ObjectProperty(:NFDI_0000009))
+Declaration(ObjectProperty(:NFDI_0000010))
 Declaration(ObjectProperty(:NFDI_0000100))
 Declaration(ObjectProperty(:bestPractice))
 Declaration(ObjectProperty(:bestPracticeOf))
@@ -31,29 +31,18 @@ Declaration(ObjectProperty(:contactPoint))
 Declaration(ObjectProperty(:contactPointOf))
 Declaration(ObjectProperty(:contributor))
 Declaration(ObjectProperty(:contributorOf))
-Declaration(ObjectProperty(:country))
-Declaration(ObjectProperty(:countryOf))
 Declaration(ObjectProperty(:dataset))
 Declaration(ObjectProperty(:datasetOf))
 Declaration(ObjectProperty(:exportFormat))
 Declaration(ObjectProperty(:exportFormatOf))
-Declaration(ObjectProperty(:federalState))
-Declaration(ObjectProperty(:federalStateOf))
 Declaration(ObjectProperty(:fundingOrganization))
 Declaration(ObjectProperty(:fundingOrganizationOf))
 Declaration(ObjectProperty(:license))
 Declaration(ObjectProperty(:licenseOf))
 Declaration(ObjectProperty(:location))
-Declaration(ObjectProperty(:locationOf))
 Declaration(ObjectProperty(:mediaType))
 Declaration(ObjectProperty(:mediaTypeOf))
-Declaration(ObjectProperty(:member))
-Declaration(ObjectProperty(:memberOf))
 Declaration(ObjectProperty(:parentOrganization))
-Declaration(ObjectProperty(:part))
-Declaration(ObjectProperty(:partOf))
-Declaration(ObjectProperty(:participant))
-Declaration(ObjectProperty(:participantOf))
 Declaration(ObjectProperty(:partnerOrganization))
 Declaration(ObjectProperty(:programmingLanguage))
 Declaration(ObjectProperty(:programmingLanguageOf))
@@ -107,7 +96,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/RO_0001901>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000050> "part of"@en)
 AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BFO_0000050> "http://www.obofoundry.org/ro/#OBO_REL:part_of")
-EquivalentObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000050> :partOf)
 InverseObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000051>)
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>)
 
@@ -128,7 +116,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/iao.owl>)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0001901>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000051> "has part"@en)
-EquivalentObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000051> :part)
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0000056> (participates in)
@@ -140,7 +127,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000056> "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0000056> "participates_in"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000056> "participates in"@en)
-EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0000056> :participantOf)
 InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/RO_0000057>)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000002>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000003>)
@@ -156,52 +142,26 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0000057> "has_participant"@en)
 AnnotationAssertion(dce:source <http://purl.obolibrary.org/obo/RO_0000057> "http://www.obofoundry.org/ro/#OBO_REL:has_participant")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000057> "has participant"@en)
-EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0000057> :participant)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000003>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000002>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0001015> (location of)
+# Object Property: :NFDI_0000009 (has agent)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0001015> "is location of"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0001015> "my head is the location of my brain"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0001015> "this cage is the location of this rat"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0001015> "a relation between two independent continuants, the location and the target, in which the target is entirely within the location"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/RO_0001015> "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/RO_0001015> "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0001015> "location_of"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/RO_0001015> <http://purl.obolibrary.org/obo/RO_0001901>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0001015> "location of"@en)
-EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0001015> :locationOf)
-InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0001015> <http://purl.obolibrary.org/obo/RO_0001025>)
-TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0001015>)
+AnnotationAssertion(rdfs:label :NFDI_0000009 "has agent"@en)
+InverseObjectProperties(:NFDI_0000009 :NFDI_0000010)
+ObjectPropertyRange(:NFDI_0000009 :Agent)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0001025> (located in)
+# Object Property: :NFDI_0000010 (is agent of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0001025> "located in"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0001025> "my brain is located in my head"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0001025> "this rat is located in this cage"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0001025> "a relation between two independent continuants, the target and the location, in which the target is entirely within the location"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/RO_0001025> "Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/RO_0001025> "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/RO_0001025> "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0001025> "located_in"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/RO_0001901>)
-AnnotationAssertion(dce:source <http://purl.obolibrary.org/obo/RO_0001025> "http://www.obofoundry.org/ro/#OBO_REL:located_in")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0001025> "located in"@en)
-EquivalentObjectProperties(<http://purl.obolibrary.org/obo/RO_0001025> :location)
-TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0001025>)
-ObjectPropertyDomain(Annotation(<http://purl.obolibrary.org/obo/IAO_0000116> "This is redundant with the more specific 'independent and not spatial region' constraint. We leave in the redundant axiom for use with reasoners that do not use negation.") <http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/BFO_0000004>)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0001025> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)))
-ObjectPropertyRange(Annotation(<http://purl.obolibrary.org/obo/IAO_0000116> "This is redundant with the more specific 'independent and not spatial region' constraint. We leave in the redundant axiom for use with reasoners that do not use negation.") <http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/BFO_0000004>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0001025> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)))
+AnnotationAssertion(rdfs:label :NFDI_0000010 "is agent of"@en)
 
 # Object Property: :bestPractice (has best practice)
 
 AnnotationAssertion(rdfs:comment :bestPractice "The property is a relationship between a resource and the specified best practice."@en)
 AnnotationAssertion(rdfs:isDefinedBy :bestPractice <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :bestPractice "has best practice"@en)
+SubObjectPropertyOf(:bestPractice :NFDI_0000100)
 InverseObjectProperties(:bestPractice :bestPracticeOf)
-ObjectPropertyDomain(:bestPractice :Resource)
 ObjectPropertyRange(:bestPractice :Specification)
 
 # Object Property: :bestPracticeOf (best practice of)
@@ -209,12 +169,14 @@ ObjectPropertyRange(:bestPractice :Specification)
 AnnotationAssertion(rdfs:comment :bestPracticeOf "inverse of  property \"best practice\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :bestPracticeOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :bestPracticeOf "best practice of"@en)
+SubObjectPropertyOf(:bestPracticeOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :contactPoint (has contact point)
 
 AnnotationAssertion(rdfs:comment :contactPoint "The property is a relationship between a resource and a contact point."@en)
 AnnotationAssertion(rdfs:isDefinedBy :contactPoint <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :contactPoint "has contact point"@en)
+SubObjectPropertyOf(:contactPoint :NFDI_0000009)
 InverseObjectProperties(:contactPoint :contactPointOf)
 ObjectPropertyDomain(:contactPoint ObjectUnionOf(:Project :Resource))
 ObjectPropertyRange(:contactPoint :Agent)
@@ -224,12 +186,14 @@ ObjectPropertyRange(:contactPoint :Agent)
 AnnotationAssertion(rdfs:comment :contactPointOf "inverse of  property \"contact point\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :contactPointOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :contactPointOf "contact point of"@en)
+SubObjectPropertyOf(:contactPointOf :NFDI_0000010)
 
 # Object Property: :contributor (has contributor)
 
 AnnotationAssertion(rdfs:comment :contributor "The property related a resource to a person or an organization responsible for making contributions to a resource."@en)
 AnnotationAssertion(rdfs:isDefinedBy :contributor <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :contributor "has contributor"@en)
+SubObjectPropertyOf(:contributor :NFDI_0000009)
 InverseObjectProperties(:contributor :contributorOf)
 ObjectPropertyDomain(:contributor :Resource)
 ObjectPropertyRange(:contributor :Agent)
@@ -239,23 +203,7 @@ ObjectPropertyRange(:contributor :Agent)
 AnnotationAssertion(rdfs:comment :contributorOf "inverse of property \"contributor\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :contributorOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :contributorOf "contributor of"@en)
-
-# Object Property: :country (of country)
-
-AnnotationAssertion(rdfs:comment :country "The property relates a city or a state to a country where it is located."@en)
-AnnotationAssertion(rdfs:isDefinedBy :country <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :country "of country"@en)
-SubObjectPropertyOf(:country :partOf)
-InverseObjectProperties(:country :countryOf)
-ObjectPropertyDomain(:country ObjectUnionOf(:City :FederalState))
-ObjectPropertyRange(:country :Country)
-
-# Object Property: :countryOf (country of)
-
-AnnotationAssertion(rdfs:comment :countryOf "inverse of property \"country\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :countryOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :countryOf "country of"@en)
-SubObjectPropertyOf(:countryOf :part)
+SubObjectPropertyOf(:contributorOf :NFDI_0000010)
 
 # Object Property: :dataset (has data set)
 
@@ -264,7 +212,6 @@ AnnotationAssertion(rdfs:isDefinedBy :dataset <https://nfdi.fiz-karlsruhe.de/ont
 AnnotationAssertion(rdfs:label :dataset "has data set"@en)
 SubObjectPropertyOf(:dataset :NFDI_0000100)
 InverseObjectProperties(:dataset :datasetOf)
-ObjectPropertyDomain(:dataset :Resource)
 ObjectPropertyRange(:dataset :Dataset)
 
 # Object Property: :datasetOf (data set of)
@@ -274,43 +221,28 @@ AnnotationAssertion(rdfs:isDefinedBy :datasetOf <https://nfdi.fiz-karlsruhe.de/o
 AnnotationAssertion(rdfs:label :datasetOf "data set of"@en)
 SubObjectPropertyOf(:datasetOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: :exportFormat (has export format)
+# Object Property: :exportFormat (has file format)
 
 AnnotationAssertion(rdfs:comment :exportFormat "The property relates a resource to the format available for the export of a resource."@en)
 AnnotationAssertion(rdfs:isDefinedBy :exportFormat <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :exportFormat "has export format"@en)
+AnnotationAssertion(rdfs:label :exportFormat "has file format"@en)
+SubObjectPropertyOf(:exportFormat :NFDI_0000100)
 InverseObjectProperties(:exportFormat :exportFormatOf)
-ObjectPropertyDomain(:exportFormat :Resource)
-ObjectPropertyRange(:exportFormat :MediaType)
+ObjectPropertyRange(:exportFormat <http://purl.obolibrary.org/obo/IAO_0000098>)
 
-# Object Property: :exportFormatOf (export format of)
+# Object Property: :exportFormatOf (file format of)
 
-AnnotationAssertion(rdfs:comment :exportFormatOf "inverse of  property \"export format\""@en)
+AnnotationAssertion(rdfs:comment :exportFormatOf "inverse of  property \"file format\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :exportFormatOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :exportFormatOf "export format of"@en)
-
-# Object Property: :federalState (of federal state)
-
-AnnotationAssertion(rdfs:comment :federalState "The property relates a city to a federal state where it is located."@en)
-AnnotationAssertion(rdfs:isDefinedBy :federalState <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :federalState "of federal state"@en)
-SubObjectPropertyOf(:federalState :partOf)
-InverseObjectProperties(:federalState :federalStateOf)
-ObjectPropertyDomain(:federalState :City)
-ObjectPropertyRange(:federalState :FederalState)
-
-# Object Property: :federalStateOf (federal state of)
-
-AnnotationAssertion(rdfs:comment :federalStateOf "inverse of property \"federal state\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :federalStateOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :federalStateOf "federal state of"@en)
-SubObjectPropertyOf(:federalStateOf :part)
+AnnotationAssertion(rdfs:label :exportFormatOf "file format of"@en)
+SubObjectPropertyOf(:exportFormatOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :fundingOrganization (has funding organization)
 
 AnnotationAssertion(rdfs:comment :fundingOrganization "The property relates a project to the organization that provided funding for it."@en)
 AnnotationAssertion(rdfs:isDefinedBy :fundingOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :fundingOrganization "has funding organization"@en)
+SubObjectPropertyOf(:fundingOrganization :NFDI_0000009)
 InverseObjectProperties(:fundingOrganization :fundingOrganizationOf)
 ObjectPropertyDomain(:fundingOrganization :Project)
 ObjectPropertyRange(:fundingOrganization :Organization)
@@ -320,6 +252,7 @@ ObjectPropertyRange(:fundingOrganization :Organization)
 AnnotationAssertion(rdfs:comment :fundingOrganizationOf "inverse of property \"funding organization\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :fundingOrganizationOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :fundingOrganizationOf "funding organization of"@en)
+SubObjectPropertyOf(:fundingOrganizationOf :NFDI_0000010)
 ObjectPropertyDomain(:fundingOrganizationOf :Organization)
 ObjectPropertyRange(:fundingOrganizationOf :Project)
 
@@ -331,7 +264,6 @@ AnnotationAssertion(rdfs:isDefinedBy :license <https://nfdi.fiz-karlsruhe.de/ont
 AnnotationAssertion(rdfs:label :license "has license"@en)
 SubObjectPropertyOf(:license :NFDI_0000100)
 InverseObjectProperties(:license :licenseOf)
-ObjectPropertyDomain(:license :Resource)
 ObjectPropertyRange(:license :License)
 
 # Object Property: :licenseOf (license of)
@@ -346,13 +278,6 @@ SubObjectPropertyOf(:licenseOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 AnnotationAssertion(rdfs:comment :location "The property is a relationship between a thing and a place its located at. "@en)
 AnnotationAssertion(rdfs:isDefinedBy :location <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :location "has location"@en)
-InverseObjectProperties(:location :locationOf)
-
-# Object Property: :locationOf (location of)
-
-AnnotationAssertion(rdfs:comment :locationOf "inverse of property \"location\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :locationOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :locationOf "location of"@en)
 
 # Object Property: :mediaType (has media type)
 
@@ -361,7 +286,6 @@ AnnotationAssertion(rdfs:isDefinedBy :mediaType <https://nfdi.fiz-karlsruhe.de/o
 AnnotationAssertion(rdfs:label :mediaType "has media type"@en)
 SubObjectPropertyOf(:mediaType :NFDI_0000100)
 InverseObjectProperties(:mediaType :mediaTypeOf)
-ObjectPropertyDomain(:mediaType :Resource)
 ObjectPropertyRange(:mediaType :MediaType)
 
 # Object Property: :mediaTypeOf (media type of)
@@ -372,60 +296,20 @@ AnnotationAssertion(rdfs:isDefinedBy :mediaTypeOf <https://nfdi.fiz-karlsruhe.de
 AnnotationAssertion(rdfs:label :mediaTypeOf "media type of"@en)
 SubObjectPropertyOf(:mediaTypeOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: :member (member)
-
-AnnotationAssertion(rdfs:comment :member "The property is a relationship between a consortium and an organization that is a member of the consortium."@en)
-AnnotationAssertion(rdfs:isDefinedBy :member <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :member "member"@en)
-SubObjectPropertyOf(:member :part)
-InverseObjectProperties(:member :memberOf)
-
-# Object Property: :memberOf (member of)
-
-AnnotationAssertion(rdfs:comment :memberOf "The property is a relationship between an organization and a consortium it belongs to."@en)
-AnnotationAssertion(rdfs:comment :memberOf "inverse of property \"member\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :memberOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :memberOf "member of"@en)
-SubObjectPropertyOf(:memberOf :partOf)
-
 # Object Property: :parentOrganization (has parent organization)
 
 AnnotationAssertion(rdfs:comment :parentOrganization "The property is a parental relationship between organizations."@en)
 AnnotationAssertion(rdfs:isDefinedBy :parentOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :parentOrganization "has parent organization"@en)
+SubObjectPropertyOf(:parentOrganization :NFDI_0000009)
 InverseObjectProperties(:parentOrganization :subsidiaryOrganization)
-
-# Object Property: :part (has part)
-
-AnnotationAssertion(rdfs:comment :part "The generic property is a relationship between a thing and its part."@en)
-AnnotationAssertion(rdfs:isDefinedBy :part <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :part "has part"@en)
-InverseObjectProperties(:part :partOf)
-
-# Object Property: :partOf (part of)
-
-AnnotationAssertion(rdfs:comment :partOf "The generic property is a relationship between a thing and a thing in which it is physically or logically included."@en)
-AnnotationAssertion(rdfs:isDefinedBy :partOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :partOf "part of"@en)
-
-# Object Property: :participant (has participant)
-
-AnnotationAssertion(rdfs:comment :participant "The property is a relationship between a project and an agent that participates in the project."@en)
-AnnotationAssertion(rdfs:isDefinedBy :participant <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :participant "has participant"@en)
-InverseObjectProperties(:participant :participantOf)
-
-# Object Property: :participantOf (participant of)
-
-AnnotationAssertion(rdfs:comment :participantOf "inverse of  property \"participant\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :participantOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :participantOf "participant of"@en)
 
 # Object Property: :partnerOrganization (has partner organization)
 
 AnnotationAssertion(rdfs:comment :partnerOrganization "The property is a partner relationship between organizations. The property is symmetric."@en)
 AnnotationAssertion(rdfs:isDefinedBy :partnerOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :partnerOrganization "has partner organization"@en)
+SubObjectPropertyOf(:partnerOrganization :NFDI_0000009)
 SymmetricObjectProperty(:partnerOrganization)
 ObjectPropertyDomain(:partnerOrganization :Organization)
 ObjectPropertyRange(:partnerOrganization :Organization)
@@ -437,7 +321,6 @@ AnnotationAssertion(rdfs:isDefinedBy :programmingLanguage <https://nfdi.fiz-karl
 AnnotationAssertion(rdfs:label :programmingLanguage "has programming language"@en)
 SubObjectPropertyOf(:programmingLanguage :NFDI_0000100)
 InverseObjectProperties(:programmingLanguage :programmingLanguageOf)
-ObjectPropertyDomain(:programmingLanguage :Software)
 ObjectPropertyRange(:programmingLanguage :ProgrammingLanguage)
 
 # Object Property: :programmingLanguageOf (programming language of)
@@ -452,6 +335,7 @@ SubObjectPropertyOf(:programmingLanguageOf <http://purl.obolibrary.org/obo/IAO_0
 AnnotationAssertion(rdfs:comment :publisher "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en)
 AnnotationAssertion(rdfs:isDefinedBy :publisher <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :publisher "has publisher"@en)
+SubObjectPropertyOf(:publisher :NFDI_0000009)
 InverseObjectProperties(:publisher :publisherOf)
 ObjectPropertyDomain(:publisher :Resource)
 ObjectPropertyRange(:publisher :Agent)
@@ -461,6 +345,7 @@ ObjectPropertyRange(:publisher :Agent)
 AnnotationAssertion(rdfs:comment :publisherOf "inverse of  property \"publisher\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :publisherOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :publisherOf "publisher of"@en)
+SubObjectPropertyOf(:publisherOf :NFDI_0000010)
 
 # Object Property: :relatedProject (has related project)
 
@@ -495,7 +380,6 @@ AnnotationAssertion(rdfs:isDefinedBy :software <https://nfdi.fiz-karlsruhe.de/on
 AnnotationAssertion(rdfs:label :software "has software"@en)
 SubObjectPropertyOf(:software :NFDI_0000100)
 InverseObjectProperties(:software :softwareOf)
-ObjectPropertyDomain(:software :Resource)
 ObjectPropertyRange(:software :Software)
 
 # Object Property: :softwareOf (software of)
@@ -513,7 +397,6 @@ AnnotationAssertion(rdfs:isDefinedBy :sparqlEndpoint <https://nfdi.fiz-karlsruhe
 AnnotationAssertion(rdfs:label :sparqlEndpoint "has sparql endpoint"@en)
 SubObjectPropertyOf(:sparqlEndpoint :NFDI_0000100)
 InverseObjectProperties(:sparqlEndpoint :sparqlEndpointOf)
-ObjectPropertyDomain(:sparqlEndpoint :Resource)
 ObjectPropertyRange(:sparqlEndpoint :Resource)
 
 # Object Property: :sparqlEndpointOf (sparql endpoint of)
@@ -531,7 +414,6 @@ AnnotationAssertion(rdfs:isDefinedBy :specification <https://nfdi.fiz-karlsruhe.
 AnnotationAssertion(rdfs:label :specification "has specification"@en)
 SubObjectPropertyOf(:specification :NFDI_0000100)
 InverseObjectProperties(:specification :specificationOf)
-ObjectPropertyDomain(:specification :Resource)
 ObjectPropertyRange(:specification :Specification)
 
 # Object Property: :specificationOf (specification of)
@@ -549,7 +431,6 @@ AnnotationAssertion(rdfs:isDefinedBy :standard <https://nfdi.fiz-karlsruhe.de/on
 AnnotationAssertion(rdfs:label :standard "has standard"@en)
 SubObjectPropertyOf(:standard :NFDI_0000100)
 InverseObjectProperties(:standard :standardOf)
-ObjectPropertyDomain(:standard :Resource)
 ObjectPropertyRange(:standard :Standard)
 
 # Object Property: :standardOf (standard of)
@@ -566,6 +447,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> :subjectArea "t
 AnnotationAssertion(rdfs:comment :subjectArea "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en)
 AnnotationAssertion(rdfs:isDefinedBy :subjectArea <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :subjectArea "subject area"@en)
+SubObjectPropertyOf(:subjectArea :NFDI_0000100)
 InverseObjectProperties(:subjectArea :subjectAreaOf)
 ObjectPropertyDomain(:subjectArea ObjectUnionOf(:Agent :Project :Resource))
 ObjectPropertyRange(:subjectArea :AcademicDiscipline)
@@ -575,13 +457,14 @@ ObjectPropertyRange(:subjectArea :AcademicDiscipline)
 AnnotationAssertion(rdfs:comment :subjectAreaOf "inverse of  property \"subject area\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :subjectAreaOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :subjectAreaOf "subject area of"@en)
-SubObjectPropertyOf(:subjectAreaOf <http://purl.obolibrary.org/obo/RO_0000080>)
+SubObjectPropertyOf(:subjectAreaOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :subsidiaryOrganization (has subsidiary organization)
 
 AnnotationAssertion(rdfs:comment :subsidiaryOrganization "inverse of \"parent organization\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :subsidiaryOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :subsidiaryOrganization "has subsidiary organization"@en)
+SubObjectPropertyOf(:subsidiaryOrganization :NFDI_0000010)
 
 # Object Property: :technology (has technology)
 
@@ -590,7 +473,6 @@ AnnotationAssertion(rdfs:isDefinedBy :technology <https://nfdi.fiz-karlsruhe.de/
 AnnotationAssertion(rdfs:label :technology "has technology"@en)
 SubObjectPropertyOf(:technology :NFDI_0000100)
 InverseObjectProperties(:technology :technologyOf)
-ObjectPropertyDomain(:technology :Resource)
 ObjectPropertyRange(:technology :TechnologicalMeans)
 
 # Object Property: :technologyOf (technology of)
@@ -608,8 +490,6 @@ AnnotationAssertion(rdfs:isDefinedBy :url <https://nfdi.fiz-karlsruhe.de/ontolog
 AnnotationAssertion(rdfs:label :url "url"@en)
 SubObjectPropertyOf(:url <http://purl.obolibrary.org/obo/IAO_0000235>)
 InverseObjectProperties(:url :urlOf)
-ObjectPropertyDomain(:url owl:Thing)
-ObjectPropertyRange(:url owl:Thing)
 
 # Object Property: :urlOf (url of)
 
@@ -705,6 +585,10 @@ DataPropertyRange(:startDate rdfs:Literal)
 # Class: :CreativeWork (creative work)
 
 SubClassOf(:CreativeWork ObjectIntersectionOf(:Resource <https://schema.org/CreativeWork>))
+
+# Class: :NFDI_0000004 (contributor)
+
+EquivalentClasses(:NFDI_0000004 ObjectIntersectionOf(:Person ObjectSomeValuesFrom(ObjectInverseOf(:contributor) :Resource)))
 
 # Class: :NFDI_0000005 (service product)
 
