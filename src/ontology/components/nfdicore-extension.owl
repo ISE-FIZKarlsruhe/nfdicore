@@ -149,7 +149,6 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obo
 
 AnnotationAssertion(rdfs:label :NFDI_0000009 "has agent"@en)
 InverseObjectProperties(:NFDI_0000009 :NFDI_0000010)
-ObjectPropertyRange(:NFDI_0000009 :Agent)
 
 # Object Property: :NFDI_0000010 (is agent of)
 
@@ -186,7 +185,6 @@ ObjectPropertyRange(:contactPoint :Agent)
 AnnotationAssertion(rdfs:comment :contactPointOf "inverse of  property \"contact point\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :contactPointOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :contactPointOf "contact point of"@en)
-SubObjectPropertyOf(:contactPointOf :NFDI_0000010)
 
 # Object Property: :contributor (has contributor)
 
@@ -345,7 +343,6 @@ ObjectPropertyRange(:publisher :Agent)
 AnnotationAssertion(rdfs:comment :publisherOf "inverse of  property \"publisher\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :publisherOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :publisherOf "publisher of"@en)
-SubObjectPropertyOf(:publisherOf :NFDI_0000010)
 
 # Object Property: :relatedProject (has related project)
 
@@ -464,7 +461,7 @@ SubObjectPropertyOf(:subjectAreaOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 AnnotationAssertion(rdfs:comment :subsidiaryOrganization "inverse of \"parent organization\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :subsidiaryOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :subsidiaryOrganization "has subsidiary organization"@en)
-SubObjectPropertyOf(:subsidiaryOrganization :NFDI_0000010)
+SubObjectPropertyOf(:subsidiaryOrganization :NFDI_0000009)
 
 # Object Property: :technology (has technology)
 

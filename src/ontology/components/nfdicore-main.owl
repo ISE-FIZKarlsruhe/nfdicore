@@ -234,6 +234,7 @@ AnnotationAssertion(rdfs:comment :Consortium "A consortium of autonomous organiz
 AnnotationAssertion(rdfs:isDefinedBy :Consortium <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Consortium "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Consortium "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
+SubClassOf(:Consortium ObjectIntersectionOf(:Organization ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> :ConsortiumMember)))
 
 # Class: :ConsortiumMember (consortium member)
 
@@ -405,6 +406,7 @@ SubClassOf(:NFDI_0000000 <http://purl.obolibrary.org/obo/IAO_0000104>)
 # Class: :NFDI_0000001 (creative process)
 
 AnnotationAssertion(rdfs:label :NFDI_0000001 "creative process"@de)
+SubClassOf(:NFDI_0000001 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> :Person)))
 
 # Class: :NFDI_0000002 (service product role)
 
@@ -432,6 +434,7 @@ SubClassOf(:NFDI_0000005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 # Class: :NFDI_0000006 (service provider role)
 
 AnnotationAssertion(rdfs:label :NFDI_0000006 "service provider role"@de)
+EquivalentClasses(:NFDI_0000006 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> :NFDI_0000101)))
 
 # Class: :NFDI_0000007 (workflow specification)
 

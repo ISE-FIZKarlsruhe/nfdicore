@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-12-18/imports/edam_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2024-12-16/imports/edam_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://edamontology.org/1.25>)
-Annotation(owl:versionInfo "2024-12-18")
+Annotation(owl:versionInfo "2024-12-16")
 
 Declaration(Class(<http://edamontology.org/format_2197>))
 Declaration(Class(<http://edamontology.org/format_2376>))
@@ -86,15 +86,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition>
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://edamontology.org/media_type> "MIME type")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/media_type> "concept_properties")
 AnnotationAssertion(rdfs:label <http://edamontology.org/media_type> "Media type")
-
-# Annotation Property: <http://edamontology.org/repository> (Repository)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/is_metadata_tag> <http://edamontology.org/repository> "true")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/repository> "'Repository' trailing modifier (qualifier, 'repository') of 'xref' links of 'Format' concepts. When 'true', the link is pointing to the public source-code repository where the given data format is developed or maintained.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://edamontology.org/repository> "Public repository")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://edamontology.org/repository> "Source-code repository")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/repository> "concept_properties")
-AnnotationAssertion(rdfs:label <http://edamontology.org/repository> "Repository")
 
 # Annotation Property: <http://purl.obolibrary.org/obo/edam#edam> (<http://purl.obolibrary.org/obo/edam#edam>)
 
