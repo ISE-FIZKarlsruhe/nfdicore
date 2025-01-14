@@ -186,6 +186,7 @@ ObjectPropertyRange(:contactPoint :Agent)
 AnnotationAssertion(rdfs:comment :contactPointOf "inverse of  property \"contact point\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :contactPointOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :contactPointOf "contact point of"@en)
+SubObjectPropertyOf(:contactPointOf :NFDI_0000010)
 
 # Object Property: :contributor (has contributor)
 
@@ -481,19 +482,19 @@ AnnotationAssertion(rdfs:isDefinedBy :technologyOf <https://nfdi.fiz-karlsruhe.d
 AnnotationAssertion(rdfs:label :technologyOf "technology of"@en)
 SubObjectPropertyOf(:technologyOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: :url (url)
+# Object Property: :url (has url)
 
 AnnotationAssertion(rdfs:comment :url "The property is a relationship between a thing and a url associated with the thing."@en)
 AnnotationAssertion(rdfs:isDefinedBy :url <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :url "url"@en)
+AnnotationAssertion(rdfs:label :url "has url"@en)
 SubObjectPropertyOf(:url <http://purl.obolibrary.org/obo/IAO_0000235>)
 InverseObjectProperties(:url :urlOf)
 
-# Object Property: :urlOf (url of)
+# Object Property: :urlOf (is url of)
 
 AnnotationAssertion(rdfs:comment :urlOf "inverse of  property \"url\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :urlOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :urlOf "url of"@en)
+AnnotationAssertion(rdfs:label :urlOf "is url of"@en)
 SubObjectPropertyOf(:urlOf <http://purl.obolibrary.org/obo/IAO_0000219>)
 
 

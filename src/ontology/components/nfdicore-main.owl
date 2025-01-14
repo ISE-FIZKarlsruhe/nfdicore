@@ -106,6 +106,7 @@ Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.ow
 Declaration(AnnotationProperty(rdfs:label))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
+Declaration(AnnotationProperty(:NFDI_0000012))
 Declaration(AnnotationProperty(:acronym))
 Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0001032>))
 ############################
@@ -123,6 +124,11 @@ AnnotationAssertion(rdfs:label dcterms:license "license")
 # Annotation Property: dcterms:title (title)
 
 AnnotationAssertion(rdfs:label dcterms:title "title")
+
+# Annotation Property: :NFDI_0000012 (readable IRI label)
+
+AnnotationAssertion(rdfs:label :NFDI_0000012 "readable IRI label"@en)
+SubAnnotationPropertyOf(:NFDI_0000012 <http://purl.obolibrary.org/obo/IAO_0000118>)
 
 # Annotation Property: :acronym (nfdicore:acronym)
 
@@ -576,6 +582,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 AnnotationAssertion(rdfs:comment :Resource "The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Resource <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Resource "NFDI resource"@en)
+AnnotationAssertion(:NFDI_0000012 :Resource "Resource")
 EquivalentClasses(:Resource ObjectUnionOf(:CreativeWork :NFDI_0000005))
 SubClassOf(:Resource <http://purl.obolibrary.org/obo/BFO_0000002>)
 
