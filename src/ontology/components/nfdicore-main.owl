@@ -459,6 +459,7 @@ SubClassOf(:NFDI_0000017 :NFDI_0000003)
 
 # Class: :NFDI_0000018 (academic event)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000018 "An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000018 "academic event"@de)
 SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:Event ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> ObjectIntersectionOf(:Agent ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000019)))))
 
