@@ -119,6 +119,10 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obo
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000051> "has part"@en)
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>)
 
+# Object Property: <http://purl.obolibrary.org/obo/OBI_0000295> (is_specified_input_of)
+
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/OBI_0000295> <http://purl.obolibrary.org/obo/RO_0000056>)
+
 # Object Property: <http://purl.obolibrary.org/obo/RO_0000056> (participates in)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0000056> "participates in"@en)
@@ -148,12 +152,21 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obo
 
 # Object Property: :NFDI_0000009 (has agent)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000009 "The property is a relationship between a resource and an agent."@en)
+AnnotationAssertion(rdfs:isDefinedBy :NFDI_0000009 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0000009 "has agent"@en)
 InverseObjectProperties(:NFDI_0000009 :NFDI_0000010)
 
 # Object Property: :NFDI_0000010 (is agent of)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000010 "inverse of property 'has agent'")
+AnnotationAssertion(rdfs:isDefinedBy :NFDI_0000010 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0000010 "is agent of"@en)
+
+# Object Property: :NFDI_0000100 (isDescribedBy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000100 "inverse of property 'is about'"@en)
+AnnotationAssertion(rdfs:isDefinedBy :NFDI_0000100 "https://nfdi.fiz-karlsruhe.de/ontology")
 
 # Object Property: :bestPractice (has best practice)
 
@@ -162,7 +175,6 @@ AnnotationAssertion(rdfs:isDefinedBy :bestPractice <https://nfdi.fiz-karlsruhe.d
 AnnotationAssertion(rdfs:label :bestPractice "has best practice"@en)
 SubObjectPropertyOf(:bestPractice :NFDI_0000100)
 InverseObjectProperties(:bestPractice :bestPracticeOf)
-ObjectPropertyRange(:bestPractice :Specification)
 
 # Object Property: :bestPracticeOf (best practice of)
 
@@ -178,12 +190,11 @@ AnnotationAssertion(rdfs:isDefinedBy :contactPoint <https://nfdi.fiz-karlsruhe.d
 AnnotationAssertion(rdfs:label :contactPoint "has contact point"@en)
 SubObjectPropertyOf(:contactPoint :NFDI_0000009)
 InverseObjectProperties(:contactPoint :contactPointOf)
-ObjectPropertyDomain(:contactPoint ObjectUnionOf(:Project :Resource))
 ObjectPropertyRange(:contactPoint :Agent)
 
 # Object Property: :contactPointOf (contact point of)
 
-AnnotationAssertion(rdfs:comment :contactPointOf "inverse of  property \"contact point\""@en)
+AnnotationAssertion(rdfs:comment :contactPointOf "inverse of  property \"has contact point\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :contactPointOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :contactPointOf "contact point of"@en)
 SubObjectPropertyOf(:contactPointOf :NFDI_0000010)
@@ -195,12 +206,11 @@ AnnotationAssertion(rdfs:isDefinedBy :contributor <https://nfdi.fiz-karlsruhe.de
 AnnotationAssertion(rdfs:label :contributor "has contributor"@en)
 SubObjectPropertyOf(:contributor :NFDI_0000009)
 InverseObjectProperties(:contributor :contributorOf)
-ObjectPropertyDomain(:contributor :Resource)
 ObjectPropertyRange(:contributor :Agent)
 
 # Object Property: :contributorOf (contributor of)
 
-AnnotationAssertion(rdfs:comment :contributorOf "inverse of property \"contributor\""@en)
+AnnotationAssertion(rdfs:comment :contributorOf "inverse of property \"has contributor\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :contributorOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :contributorOf "contributor of"@en)
 SubObjectPropertyOf(:contributorOf :NFDI_0000010)
@@ -216,7 +226,7 @@ ObjectPropertyRange(:dataset :Dataset)
 
 # Object Property: :datasetOf (data set of)
 
-AnnotationAssertion(rdfs:comment :datasetOf "inverse of  property \"data set\""@en)
+AnnotationAssertion(rdfs:comment :datasetOf "inverse of  property \"has data set\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :datasetOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :datasetOf "data set of"@en)
 SubObjectPropertyOf(:datasetOf <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -232,7 +242,7 @@ ObjectPropertyRange(:exportFormat <http://purl.obolibrary.org/obo/IAO_0000098>)
 
 # Object Property: :exportFormatOf (file format of)
 
-AnnotationAssertion(rdfs:comment :exportFormatOf "inverse of  property \"file format\""@en)
+AnnotationAssertion(rdfs:comment :exportFormatOf "inverse of  property \"has file format\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :exportFormatOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :exportFormatOf "file format of"@en)
 SubObjectPropertyOf(:exportFormatOf <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -244,17 +254,15 @@ AnnotationAssertion(rdfs:isDefinedBy :fundingOrganization <https://nfdi.fiz-karl
 AnnotationAssertion(rdfs:label :fundingOrganization "has funding organization"@en)
 SubObjectPropertyOf(:fundingOrganization :NFDI_0000009)
 InverseObjectProperties(:fundingOrganization :fundingOrganizationOf)
-ObjectPropertyDomain(:fundingOrganization :Project)
 ObjectPropertyRange(:fundingOrganization :Organization)
 
 # Object Property: :fundingOrganizationOf (funding organization of)
 
-AnnotationAssertion(rdfs:comment :fundingOrganizationOf "inverse of property \"funding organization\""@en)
+AnnotationAssertion(rdfs:comment :fundingOrganizationOf "inverse of property \"has funding organization\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :fundingOrganizationOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :fundingOrganizationOf "funding organization of"@en)
 SubObjectPropertyOf(:fundingOrganizationOf :NFDI_0000010)
 ObjectPropertyDomain(:fundingOrganizationOf :Organization)
-ObjectPropertyRange(:fundingOrganizationOf :Project)
 
 # Object Property: :license (has license)
 
@@ -268,7 +276,7 @@ ObjectPropertyRange(:license :License)
 
 # Object Property: :licenseOf (license of)
 
-AnnotationAssertion(rdfs:comment :licenseOf "inverse of property \"license\""@en)
+AnnotationAssertion(rdfs:comment :licenseOf "inverse of property \"has license\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :licenseOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :licenseOf "license of"@en)
 SubObjectPropertyOf(:licenseOf <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -291,7 +299,7 @@ ObjectPropertyRange(:mediaType :MediaType)
 # Object Property: :mediaTypeOf (media type of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :mediaTypeOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :mediaTypeOf "inverse of  property \"media type\""@en)
+AnnotationAssertion(rdfs:comment :mediaTypeOf "inverse of  property \"has media type\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :mediaTypeOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :mediaTypeOf "media type of"@en)
 SubObjectPropertyOf(:mediaTypeOf <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -302,7 +310,7 @@ AnnotationAssertion(rdfs:comment :parentOrganization "The property is a parental
 AnnotationAssertion(rdfs:isDefinedBy :parentOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :parentOrganization "has parent organization"@en)
 SubObjectPropertyOf(:parentOrganization :NFDI_0000009)
-InverseObjectProperties(:parentOrganization :subsidiaryOrganization)
+ObjectPropertyRange(:parentOrganization :Organization)
 
 # Object Property: :partnerOrganization (has partner organization)
 
@@ -311,7 +319,6 @@ AnnotationAssertion(rdfs:isDefinedBy :partnerOrganization <https://nfdi.fiz-karl
 AnnotationAssertion(rdfs:label :partnerOrganization "has partner organization"@en)
 SubObjectPropertyOf(:partnerOrganization :NFDI_0000009)
 SymmetricObjectProperty(:partnerOrganization)
-ObjectPropertyDomain(:partnerOrganization :Organization)
 ObjectPropertyRange(:partnerOrganization :Organization)
 
 # Object Property: :programmingLanguage (has programming language)
@@ -325,7 +332,7 @@ ObjectPropertyRange(:programmingLanguage :ProgrammingLanguage)
 
 # Object Property: :programmingLanguageOf (programming language of)
 
-AnnotationAssertion(rdfs:comment :programmingLanguageOf "inverse of  property \"programming language\""@en)
+AnnotationAssertion(rdfs:comment :programmingLanguageOf "inverse of  property \"has programming language\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :programmingLanguageOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :programmingLanguageOf "programming language of"@en)
 SubObjectPropertyOf(:programmingLanguageOf <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -337,14 +344,14 @@ AnnotationAssertion(rdfs:isDefinedBy :publisher <https://nfdi.fiz-karlsruhe.de/o
 AnnotationAssertion(rdfs:label :publisher "has publisher"@en)
 SubObjectPropertyOf(:publisher :NFDI_0000009)
 InverseObjectProperties(:publisher :publisherOf)
-ObjectPropertyDomain(:publisher :Resource)
 ObjectPropertyRange(:publisher :Agent)
 
 # Object Property: :publisherOf (publisher of)
 
-AnnotationAssertion(rdfs:comment :publisherOf "inverse of  property \"publisher\""@en)
+AnnotationAssertion(rdfs:comment :publisherOf "inverse of  property \"has publisher\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :publisherOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :publisherOf "publisher of"@en)
+SubObjectPropertyOf(:publisherOf :NFDI_0000010)
 
 # Object Property: :relatedProject (has related project)
 
@@ -360,9 +367,8 @@ AnnotationAssertion(rdfs:comment :representedCollection "The property is a relat
 AnnotationAssertion(rdfs:isDefinedBy :representedCollection <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :representedCollection "has represented collection"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :representedCollection "a dataportal is about some collection of pieces of art")
-SubObjectPropertyOf(:representedCollection <http://purl.obolibrary.org/obo/IAO_0000219>)
+SubObjectPropertyOf(:representedCollection <http://purl.obolibrary.org/obo/IAO_0000235>)
 InverseObjectProperties(:representedCollection :representedCollectionOf)
-ObjectPropertyDomain(:representedCollection ObjectUnionOf(:DataPortal :Dataset))
 ObjectPropertyRange(:representedCollection :Collection)
 
 # Object Property: :representedCollectionOf (represented collection of)
@@ -370,7 +376,7 @@ ObjectPropertyRange(:representedCollection :Collection)
 AnnotationAssertion(rdfs:comment :representedCollectionOf "inverse of  property \"represented collection\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :representedCollectionOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :representedCollectionOf "represented collection of"@en)
-SubObjectPropertyOf(:representedCollectionOf <http://purl.obolibrary.org/obo/IAO_0000235>)
+SubObjectPropertyOf(:representedCollectionOf <http://purl.obolibrary.org/obo/IAO_0000219>)
 
 # Object Property: :software (has software)
 
@@ -384,7 +390,7 @@ ObjectPropertyRange(:software :Software)
 # Object Property: :softwareOf (software of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :softwareOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :softwareOf "inverse of  property \"sofware\""@en)
+AnnotationAssertion(rdfs:comment :softwareOf "inverse of  property \"has sofware\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :softwareOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :softwareOf "software of"@en)
 SubObjectPropertyOf(:softwareOf <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -396,12 +402,11 @@ AnnotationAssertion(rdfs:isDefinedBy :sparqlEndpoint <https://nfdi.fiz-karlsruhe
 AnnotationAssertion(rdfs:label :sparqlEndpoint "has sparql endpoint"@en)
 SubObjectPropertyOf(:sparqlEndpoint :NFDI_0000100)
 InverseObjectProperties(:sparqlEndpoint :sparqlEndpointOf)
-ObjectPropertyRange(:sparqlEndpoint :Resource)
 
 # Object Property: :sparqlEndpointOf (sparql endpoint of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :sparqlEndpointOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :sparqlEndpointOf "inverse of  property \"sparql endpoint\""@en)
+AnnotationAssertion(rdfs:comment :sparqlEndpointOf "inverse of  property \"has sparql endpoint\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :sparqlEndpointOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :sparqlEndpointOf "sparql endpoint of"@en)
 SubObjectPropertyOf(:sparqlEndpointOf <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -413,12 +418,12 @@ AnnotationAssertion(rdfs:isDefinedBy :specification <https://nfdi.fiz-karlsruhe.
 AnnotationAssertion(rdfs:label :specification "has specification"@en)
 SubObjectPropertyOf(:specification :NFDI_0000100)
 InverseObjectProperties(:specification :specificationOf)
-ObjectPropertyRange(:specification :Specification)
+ObjectPropertyRange(:specification <http://purl.obolibrary.org/obo/IAO_0000033>)
 
 # Object Property: :specificationOf (specification of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :specificationOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :specificationOf "inverse of  property \"specification\""@en)
+AnnotationAssertion(rdfs:comment :specificationOf "inverse of  property \"has specification\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :specificationOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :specificationOf "specification of"@en)
 SubObjectPropertyOf(:specificationOf <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -435,35 +440,35 @@ ObjectPropertyRange(:standard :Standard)
 # Object Property: :standardOf (standard of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :standardOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :standardOf "inverse of  property \"standard\""@en)
+AnnotationAssertion(rdfs:comment :standardOf "inverse of  property \"has standard\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :standardOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :standardOf "standard of"@en)
 SubObjectPropertyOf(:standardOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: :subjectArea (subject area)
+# Object Property: :subjectArea (has subject area)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> :subjectArea "to check for BFO superproperty")
 AnnotationAssertion(rdfs:comment :subjectArea "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en)
 AnnotationAssertion(rdfs:isDefinedBy :subjectArea <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :subjectArea "subject area"@en)
+AnnotationAssertion(rdfs:label :subjectArea "has subject area"@en)
 SubObjectPropertyOf(:subjectArea :NFDI_0000100)
 InverseObjectProperties(:subjectArea :subjectAreaOf)
-ObjectPropertyDomain(:subjectArea ObjectUnionOf(:Agent :Project :Resource))
 ObjectPropertyRange(:subjectArea :AcademicDiscipline)
 
 # Object Property: :subjectAreaOf (subject area of)
 
-AnnotationAssertion(rdfs:comment :subjectAreaOf "inverse of  property \"subject area\""@en)
+AnnotationAssertion(rdfs:comment :subjectAreaOf "inverse of  property \"has subject area\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :subjectAreaOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :subjectAreaOf "subject area of"@en)
 SubObjectPropertyOf(:subjectAreaOf <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :subsidiaryOrganization (has subsidiary organization)
 
-AnnotationAssertion(rdfs:comment :subsidiaryOrganization "inverse of \"parent organization\""@en)
+AnnotationAssertion(rdfs:comment :subsidiaryOrganization "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en)
 AnnotationAssertion(rdfs:isDefinedBy :subsidiaryOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :subsidiaryOrganization "has subsidiary organization"@en)
-SubObjectPropertyOf(:subsidiaryOrganization :NFDI_0000010)
+SubObjectPropertyOf(:subsidiaryOrganization :NFDI_0000009)
+ObjectPropertyRange(:subsidiaryOrganization :Organization)
 
 # Object Property: :technology (has technology)
 
@@ -477,7 +482,7 @@ ObjectPropertyRange(:technology :TechnologicalMeans)
 # Object Property: :technologyOf (technology of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :technologyOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :technologyOf "inverse of  property \"technology\""@en)
+AnnotationAssertion(rdfs:comment :technologyOf "inverse of  property \"has technology\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :technologyOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :technologyOf "technology of"@en)
 SubObjectPropertyOf(:technologyOf <http://purl.obolibrary.org/obo/IAO_0000136>)
