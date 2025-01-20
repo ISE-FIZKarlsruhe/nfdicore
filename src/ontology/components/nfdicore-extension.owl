@@ -311,7 +311,7 @@ AnnotationAssertion(rdfs:isDefinedBy :representedCollection <https://nfdi.fiz-ka
 AnnotationAssertion(rdfs:label :representedCollection "has represented collection"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :representedCollection "a dataportal is about some collection of pieces of art")
 AnnotationAssertion(:NFDI_0000012 :representedCollection "representedCollection")
-SubObjectPropertyOf(:representedCollection <http://purl.obolibrary.org/obo/IAO_0000235>)
+SubObjectPropertyOf(:representedCollection <http://purl.obolibrary.org/obo/IAO_0000219>)
 InverseObjectProperties(:representedCollection :representedCollectionOf)
 ObjectPropertyRange(:representedCollection :Collection)
 
@@ -320,7 +320,7 @@ ObjectPropertyRange(:representedCollection :Collection)
 AnnotationAssertion(rdfs:comment :representedCollectionOf "inverse of  property \"represented collection\""@en)
 AnnotationAssertion(rdfs:isDefinedBy :representedCollectionOf <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :representedCollectionOf "represented collection of"@en)
-SubObjectPropertyOf(:representedCollectionOf <http://purl.obolibrary.org/obo/IAO_0000219>)
+SubObjectPropertyOf(:representedCollectionOf <http://purl.obolibrary.org/obo/IAO_0000235>)
 
 # Object Property: :software (has software)
 
