@@ -1,1507 +1,779 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl#"
-     xml:base="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl"
-     xmlns:co="https://w3id.org/pmd/co/"
-     xmlns:dce="http://purl.org/dc/elements/1.1/"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:adms="http://www.w3.org/ns/adms#"
-     xmlns:bibo="http://purl.org/ontology/bibo/"
-     xmlns:doap="http://usefulinc.com/ns/doap#"
-     xmlns:edam="http://purl.obolibrary.org/obo/edam#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:void="http://rdfs.org/ns/void#"
-     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/"
-     xmlns:edamontology="http://edamontology.org/">
-    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl">
-        <owl:imports rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl"/>
-        <dcterms:title xml:lang="en">Main module of NFDIcore ontology</dcterms:title>
-    </owl:Ontology>
-    
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl#>)
+Prefix(co:=<https://w3id.org/pmd/co/>)
+Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(adms:=<http://www.w3.org/ns/adms#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(doap:=<http://usefulinc.com/ns/doap#>)
+Prefix(edam:=<http://purl.obolibrary.org/obo/edam#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(vann:=<http://purl.org/vocab/vann/>)
+Prefix(void:=<http://rdfs.org/ns/void#>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(ontology:=<https://nfdi.fiz-karlsruhe.de/ontology/>)
+Prefix(edamontology:=<http://edamontology.org/>)
+
+
+Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl>
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl>)
+Annotation(dcterms:title "Main module of NFDIcore ontology"@en)
+
+Declaration(Class(edamontology:format_2376))
+Declaration(Class(obo:IAO_0000098))
+Declaration(Class(ontology:NFDI_0000001))
+Declaration(Class(ontology:NFDI_0000002))
+Declaration(Class(ontology:NFDI_0000003))
+Declaration(Class(ontology:NFDI_0000004))
+Declaration(Class(ontology:NFDI_0000005))
+Declaration(Class(ontology:NFDI_0000006))
+Declaration(Class(ontology:NFDI_0000007))
+Declaration(Class(ontology:NFDI_0000008))
+Declaration(Class(ontology:NFDI_0000009))
+Declaration(Class(ontology:NFDI_0000100))
+Declaration(Class(ontology:NFDI_0000102))
+Declaration(Class(ontology:NFDI_0000106))
+Declaration(Class(ontology:NFDI_0000107))
+Declaration(Class(ontology:NFDI_0000110))
+Declaration(Class(ontology:NFDI_0000111))
+Declaration(Class(ontology:NFDI_0000114))
+Declaration(Class(ontology:NFDI_0000115))
+Declaration(Class(ontology:NFDI_0000118))
+Declaration(Class(ontology:NFDI_0000119))
+Declaration(Class(ontology:NFDI_0000121))
+Declaration(Class(ontology:NFDI_0000122))
+Declaration(Class(ontology:NFDI_0000123))
+Declaration(Class(ontology:NFDI_0000131))
+Declaration(Class(ontology:NFDI_0000134))
+Declaration(Class(ontology:NFDI_0000139))
+Declaration(Class(ontology:NFDI_0000140))
+Declaration(Class(ontology:NFDI_0000141))
+Declaration(Class(ontology:NFDI_0000145))
+Declaration(Class(ontology:NFDI_0000148))
+Declaration(Class(ontology:NFDI_0000149))
+Declaration(Class(ontology:NFDI_0000150))
+Declaration(Class(ontology:NFDI_0000151))
+Declaration(Class(ontology:NFDI_0000154))
+Declaration(Class(ontology:NFDI_0000155))
+Declaration(Class(ontology:NFDI_0000156))
+Declaration(Class(ontology:NFDI_0000157))
+Declaration(Class(ontology:NFDI_0000159))
+Declaration(Class(ontology:NFDI_0000160))
+Declaration(Class(ontology:NFDI_0000161))
+Declaration(Class(ontology:NFDI_0000162))
+Declaration(Class(ontology:NFDI_0000163))
+Declaration(Class(ontology:NFDI_0000164))
+Declaration(Class(ontology:NFDI_0000165))
+Declaration(Class(ontology:NFDI_0000166))
+Declaration(Class(ontology:NFDI_0000169))
+Declaration(Class(ontology:NFDI_0000172))
+Declaration(Class(ontology:NFDI_0000173))
+Declaration(Class(ontology:NFDI_0000174))
+Declaration(Class(ontology:NFDI_0000175))
+Declaration(Class(ontology:NFDI_0000176))
+Declaration(Class(ontology:NFDI_0000177))
+Declaration(Class(ontology:NFDI_0000178))
+Declaration(Class(ontology:NFDI_0000179))
+Declaration(Class(ontology:NFDI_0000186))
+Declaration(Class(ontology:NFDI_0000190))
+Declaration(Class(ontology:NFDI_0000193))
+Declaration(Class(ontology:NFDI_0000198))
+Declaration(Class(ontology:NFDI_0000203))
+Declaration(Class(ontology:NFDI_0000206))
+Declaration(Class(ontology:NFDI_0000210))
+Declaration(Class(ontology:NFDI_0000214))
+Declaration(Class(ontology:NFDI_0000215))
+Declaration(Class(ontology:NFDI_0000218))
+Declaration(Class(ontology:NFDI_0000219))
+Declaration(Class(ontology:NFDI_0000222))
+Declaration(Class(ontology:NFDI_0000223))
+Declaration(ObjectProperty(obo:BFO_0000054))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:IAO_0000219))
+Declaration(ObjectProperty(obo:IAO_0000235))
+Declaration(ObjectProperty(ontology:NFDI_0000117))
+Declaration(ObjectProperty(ontology:NFDI_0000152))
+Declaration(ObjectProperty(ontology:NFDI_0000153))
+Declaration(ObjectProperty(ontology:NFDI_0000158))
+Declaration(ObjectProperty(ontology:NFDI_0000171))
+Declaration(ObjectProperty(ontology:NFDI_0000180))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000116))
+Declaration(AnnotationProperty(obo:IAO_0000232))
+Declaration(AnnotationProperty(dcterms:abstract))
+Declaration(AnnotationProperty(dcterms:bibliographicCitation))
+Declaration(AnnotationProperty(dcterms:created))
+Declaration(AnnotationProperty(dcterms:creator))
+Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:format))
+Declaration(AnnotationProperty(dcterms:hasVersion))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(bibo:status))
+Declaration(AnnotationProperty(vann:preferredNamespacePrefix))
+Declaration(AnnotationProperty(vann:preferredNamespaceUri))
+Declaration(AnnotationProperty(void:feature))
+Declaration(AnnotationProperty(swrla:isRuleEnabled))
+Declaration(AnnotationProperty(rdfs:label))
+Declaration(AnnotationProperty(skos:definition))
+Declaration(AnnotationProperty(skos:example))
+Declaration(AnnotationProperty(ontology:NFDI_0000101))
+Declaration(AnnotationProperty(ontology:NFDI_0000170))
+Declaration(AnnotationProperty(co:PMD_0001032))
+############################
+#   Annotation Properties
+############################
 
+# Annotation Property: dcterms:description (description)
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+AnnotationAssertion(rdfs:label dcterms:description "description")
 
-    
+# Annotation Property: dcterms:license (license)
 
+AnnotationAssertion(rdfs:label dcterms:license "license")
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+# Annotation Property: dcterms:title (title)
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
+AnnotationAssertion(rdfs:label dcterms:title "title")
 
+# Annotation Property: ontology:NFDI_0000101 (nfdicore:acronym)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+AnnotationAssertion(rdfs:label ontology:NFDI_0000101 "nfdicore:acronym"@en)
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
-    
+# Annotation Property: ontology:NFDI_0000170 (readable IRI label)
 
+AnnotationAssertion(rdfs:label ontology:NFDI_0000170 "readable IRI label"@en)
+SubAnnotationPropertyOf(ontology:NFDI_0000170 obo:IAO_0000118)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+# Annotation Property: co:PMD_0001032 (term tracker annotation)
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
-    
+AnnotationAssertion(obo:IAO_0000116 co:PMD_0001032 "hijacked from http://openenergy-platform.org/ontology/oeo/OEO_00020426")
+AnnotationAssertion(rdfs:comment co:PMD_0001032 "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.")
+AnnotationAssertion(rdfs:label co:PMD_0001032 "term tracker annotation"@de)
 
 
-    <!-- http://purl.org/dc/terms/abstract -->
+############################
+#   Object Properties
+############################
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
-    
+# Object Property: obo:IAO_0000136 (is about)
 
+InverseObjectProperties(obo:IAO_0000136 ontology:NFDI_0000180)
 
-    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+# Object Property: obo:IAO_0000235 (denoted by)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
-    
+SubObjectPropertyOf(obo:IAO_0000235 ontology:NFDI_0000180)
 
+# Object Property: ontology:NFDI_0000152 (has input)
 
-    <!-- http://purl.org/dc/terms/created -->
+AnnotationAssertion(rdfs:label ontology:NFDI_0000152 "has input"@de)
+SubObjectPropertyOf(ontology:NFDI_0000152 obo:BFO_0000057)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
+# Object Property: ontology:NFDI_0000153 (has output)
 
+AnnotationAssertion(rdfs:label ontology:NFDI_0000153 "has output"@de)
+SubObjectPropertyOf(ontology:NFDI_0000153 obo:BFO_0000057)
 
-    <!-- http://purl.org/dc/terms/creator -->
+# Object Property: ontology:NFDI_0000158 (prescribed by)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
+AnnotationAssertion(rdfs:label ontology:NFDI_0000158 "prescribed by"@de)
+SubObjectPropertyOf(ontology:NFDI_0000158 ontology:NFDI_0000180)
+InverseObjectProperties(ontology:NFDI_0000158 ontology:NFDI_0000171)
+ObjectPropertyDomain(ontology:NFDI_0000158 obo:BFO_0000001)
+ObjectPropertyRange(ontology:NFDI_0000158 obo:IAO_0000030)
 
+# Object Property: ontology:NFDI_0000171 (prescibes)
 
-    <!-- http://purl.org/dc/terms/description -->
+AnnotationAssertion(rdfs:label ontology:NFDI_0000171 "prescibes"@de)
+SubObjectPropertyOf(ontology:NFDI_0000171 obo:IAO_0000136)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
-        <rdfs:label>description</rdfs:label>
-    </owl:AnnotationProperty>
-    
+# Object Property: ontology:NFDI_0000180 (is subject of)
 
+AnnotationAssertion(rdfs:label ontology:NFDI_0000180 "is subject of"@en)
+AnnotationAssertion(co:PMD_0001032 ontology:NFDI_0000180 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/79")
 
-    <!-- http://purl.org/dc/terms/format -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
-    
 
+############################
+#   Classes
+############################
 
-    <!-- http://purl.org/dc/terms/hasVersion -->
+# Class: obo:IAO_0000025 (programming language)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
-    
+EquivalentClasses(obo:IAO_0000025 ontology:NFDI_0000186)
 
+# Class: obo:IAO_0000578 (centrally registered identifier)
 
-    <!-- http://purl.org/dc/terms/license -->
+SubClassOf(obo:IAO_0000578 ontology:NFDI_0000159)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
-        <rdfs:label>license</rdfs:label>
-    </owl:AnnotationProperty>
-    
+# Class: obo:IAO_0020016 (given name)
 
+SubClassOf(obo:IAO_0020016 ontology:NFDI_0000159)
 
-    <!-- http://purl.org/dc/terms/title -->
+# Class: obo:IAO_0020017 (family name)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:label>title</rdfs:label>
-    </owl:AnnotationProperty>
-    
+SubClassOf(obo:IAO_0020017 ontology:NFDI_0000159)
 
+# Class: obo:IAO_8000001 (base ontology module)
 
-    <!-- http://purl.org/ontology/bibo/status -->
+SubClassOf(obo:IAO_8000001 ontology:NFDI_0000161)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
-    
+# Class: obo:IAO_8000003 (main release ontology module)
 
+SubClassOf(obo:IAO_8000003 ontology:NFDI_0000161)
 
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+# Class: obo:IAO_8000013 (reasoned ontology module)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
+SubClassOf(obo:IAO_8000013 ontology:NFDI_0000161)
 
+# Class: <http://www.ebi.ac.uk/swo/SWO_0000002> (software license)
 
-    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+EquivalentClasses(<http://www.ebi.ac.uk/swo/SWO_0000002> ontology:NFDI_0000141)
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
+# Class: ontology:NFDI_0000001 (NFDI resource)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000001 "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI."@en)
+AnnotationAssertion(obo:IAO_0000116 ontology:NFDI_0000001 "2024-03-25 - Sasha Bruns: 
+This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000001 "The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000001 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000001 "NFDI resource"@en)
+AnnotationAssertion(ontology:NFDI_0000170 ontology:NFDI_0000001 "Resource")
+EquivalentClasses(ontology:NFDI_0000001 ObjectUnionOf(ontology:NFDI_0000008 ontology:NFDI_0000150))
+SubClassOf(ontology:NFDI_0000001 obo:BFO_0000002)
 
-    <!-- http://rdfs.org/ns/void#feature -->
+# Class: ontology:NFDI_0000002 (project)
 
-    <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#feature"/>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000002 "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000002 "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000002 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000002 "project"@en)
+EquivalentClasses(ontology:NFDI_0000002 ObjectSomeValuesFrom(obo:BFO_0000055 ontology:NFDI_0000110))
+SubClassOf(ontology:NFDI_0000002 obo:BFO_0000015)
 
+# Class: ontology:NFDI_0000003 (organization)
 
-    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000003 "An agent that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000003 "An organization of some kind, e.g. research organization or business organization"@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000003 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000003 "organization"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000003 "University Library in Leipzig, Museums of City Cologne")
+EquivalentClasses(ontology:NFDI_0000003 ObjectIntersectionOf(obo:BFO_0000141 ObjectSomeValuesFrom(obo:BFO_0000196 ontology:NFDI_0000164)))
+SubClassOf(ontology:NFDI_0000003 obo:BFO_0000141)
 
-    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-    
+# Class: ontology:NFDI_0000004 (person)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000004 "An agent that represents a single human individual."@en)
+AnnotationAssertion(obo:IAO_0000116 ontology:NFDI_0000004 "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000004 "A resource that represents a single person."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000004 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000004 "person"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000004 "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus")
+EquivalentClasses(ontology:NFDI_0000004 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:BFO_0000196 ontology:NFDI_0000164)))
+SubClassOf(ontology:NFDI_0000004 obo:BFO_0000040)
 
-    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+# Class: ontology:NFDI_0000005 (place)
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000005 "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000005 "A spatial region, e.g. country, city or district."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000005 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000005 "place"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000005 "Hessen, Berlin, Schweiz")
+SubClassOf(ontology:NFDI_0000005 obo:BFO_0000029)
 
+# Class: ontology:NFDI_0000006 (consortium)
 
-    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000006 "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000006 "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000006 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000006 "consortium"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000006 "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
+SubClassOf(ontology:NFDI_0000006 ObjectIntersectionOf(ontology:NFDI_0000003 ObjectSomeValuesFrom(obo:BFO_0000051 ontology:NFDI_0000007)))
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
+# Class: ontology:NFDI_0000007 (consortium member)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000007 "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000007 "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000007 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000007 "consortium member"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000007 "Museums of City Cologne is a member of NFDI4Culture consortium."@en)
+EquivalentClasses(ontology:NFDI_0000007 ObjectIntersectionOf(ontology:NFDI_0000003 ObjectAllValuesFrom(obo:BFO_0000196 ontology:NFDI_0000110)))
 
-    <!-- http://www.w3.org/2004/02/skos/core#example -->
+# Class: ontology:NFDI_0000008 (creative work)
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000008 "An independent continuant or information content entity that refers to a manifestation of someone's creative effort."@en)
+AnnotationAssertion(obo:IAO_0000116 ontology:NFDI_0000008 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000008 "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000008 "creative work"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
+EquivalentClasses(ontology:NFDI_0000008 ObjectIntersectionOf(ObjectUnionOf(obo:BFO_0000004 obo:IAO_0000030) ObjectSomeValuesFrom(ObjectInverseOf(ontology:NFDI_0000153) ontology:NFDI_0000162)))
+SubClassOf(ontology:NFDI_0000008 obo:BFO_0000002)
 
+# Class: ontology:NFDI_0000009 (dataset)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000009 "An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference."@en)
+AnnotationAssertion(obo:IAO_0000116 ontology:NFDI_0000009 "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000009 "Structured information about a resource provided by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000009 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000009 "dataset"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000009 "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)")
+SubClassOf(ontology:NFDI_0000009 obo:IAO_0000030)
 
-    <owl:AnnotationProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101">
-        <rdfs:label xml:lang="en">nfdicore:acronym</rdfs:label>
-    </owl:AnnotationProperty>
-    
+# Class: ontology:NFDI_0000100 (academic discipline)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000100 "A quality of an entity that specifies the subject area, domain or academic discipline of an entity."@en)
+AnnotationAssertion(obo:IAO_0000116 ontology:NFDI_0000100 "2024-03-26: SB & JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)"@en)
+AnnotationAssertion(obo:IAO_0000116 ontology:NFDI_0000100 "2024-12-16: TT & JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information."@en)
+AnnotationAssertion(obo:IAO_0000233 ontology:NFDI_0000100 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80"@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000100 "An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000100 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000100 "academic discipline"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000100 <https://www.wikidata.org/entity/Q12271>)
+AnnotationAssertion(skos:example ontology:NFDI_0000100 "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en)
+SubClassOf(ontology:NFDI_0000100 obo:IAO_0000030)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000170 -->
+# Class: ontology:NFDI_0000102 (agent)
 
-    <owl:AnnotationProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000170">
-        <rdfs:label xml:lang="en">readable IRI label</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
-    </owl:AnnotationProperty>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000102 "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000102 "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000102 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000102 "agent"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000102 "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en)
+EquivalentClasses(ontology:NFDI_0000102 ObjectIntersectionOf(obo:BFO_0000004 ObjectSomeValuesFrom(obo:BFO_0000196 ontology:NFDI_0000164)))
+SubClassOf(ontology:NFDI_0000102 obo:BFO_0000004)
 
+# Class: ontology:NFDI_0000106 (city)
 
-    <!-- https://w3id.org/pmd/co/PMD_0001032 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000106 "A place that refers to a densely populated urban area."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000106 "A city or a town where the thing is located."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000106 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000106 "city"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000106 "Berlin, Hannover, Kyiv"@en)
+SubClassOf(ontology:NFDI_0000106 ontology:NFDI_0000005)
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0001032">
-        <obo:IAO_0000116>hijacked from http://openenergy-platform.org/ontology/oeo/OEO_00020426</obo:IAO_0000116>
-        <rdfs:comment>A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.</rdfs:comment>
-        <rdfs:label xml:lang="de">term tracker annotation</rdfs:label>
-    </owl:AnnotationProperty>
-    
+# Class: ontology:NFDI_0000107 (collection)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000107 "A material entity that represents a collection of material entities intended to be understood together as a whole."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000107 "A tangible collection of valuables published or curated by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000107 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000107 "collection"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000107 "A collection of arts displayed at the museum"@en)
+SubClassOf(ontology:NFDI_0000107 obo:BFO_0000040)
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+# Class: ontology:NFDI_0000110 (consortium member role)
 
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000110 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000110 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000110 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000110 "consortium member role"@en)
+EquivalentClasses(ontology:NFDI_0000110 ObjectIntersectionOf(ontology:NFDI_0000164 ObjectSomeValuesFrom(obo:BFO_0000054 ontology:NFDI_0000002)))
 
+# Class: ontology:NFDI_0000111 (contacting process)
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000111 "A process in which the contact information of an entity is provided."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000111 "A process in which the contact information of an entity is provided."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000111 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000111 "contacting process"@en)
+AnnotationAssertion(ontology:NFDI_0000170 ontology:NFDI_0000111 "Contacting")
+SubClassOf(ontology:NFDI_0000111 obo:BFO_0000015)
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054"/>
-    
+# Class: ontology:NFDI_0000114 (contact point role)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000114 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000114 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000114 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000114 "contact point role"@en)
+SubClassOf(ontology:NFDI_0000114 ontology:NFDI_0000164)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+# Class: ontology:NFDI_0000115 (contributing process)
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
-        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
-    </owl:ObjectProperty>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000115 "A process of contibuting or providing information to an endeavor."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000115 "A process of contibuting or providing information to an endeavor."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000115 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000115 "contributing process"@en)
+AnnotationAssertion(ontology:NFDI_0000170 ontology:NFDI_0000115 "Contributing")
+SubClassOf(ontology:NFDI_0000115 obo:BFO_0000015)
 
+# Class: ontology:NFDI_0000118 (contributor role)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000219 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000118 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000118 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000118 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000118 "contributor role"@en)
+EquivalentClasses(ontology:NFDI_0000118 ObjectIntersectionOf(ontology:NFDI_0000164 ObjectUnionOf(ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000054 ontology:NFDI_0000115) ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(ontology:NFDI_0000102 ObjectSomeValuesFrom(obo:BFO_0000056 ontology:NFDI_0000115)))) ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(ontology:NFDI_0000102 ObjectSomeValuesFrom(ontology:NFDI_0000117 ObjectIntersectionOf(ontology:NFDI_0000001 ObjectSomeValuesFrom(obo:BFO_0000056 ontology:NFDI_0000115))))))))
+SubClassOf(ontology:NFDI_0000118 ontology:NFDI_0000164)
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000219"/>
-    
+# Class: ontology:NFDI_0000119 (country)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000119 "A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000119 "A country where the thing is located."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000119 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000119 "country"@en)
+SubClassOf(ontology:NFDI_0000119 ontology:NFDI_0000005)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
+# Class: ontology:NFDI_0000121 (database software)
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235">
-        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
-    </owl:ObjectProperty>
-    
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000121 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000121 "Software that provides large amounts of structured data from repositories and archives to the user. Usually the data can be uploaded, accessed, searched and/or downloaded via a web browser."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000121 "database software"@en)
+SubClassOf(ontology:NFDI_0000121 ontology:NFDI_0000198)
 
+# Class: ontology:NFDI_0000122 (data curation service)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117 -->
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000122 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000122 "The activity of managing and promoting the use of data from their point of creation to ensure that they are fit for contemporary purpose and available for discovery and reuse. For dynamic datasets this may mean continuous enrichment or updating to keep them fit for purpose. Higher levels of curation will also involve links with annotation and with other published materials"@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000122 "data curation service"@en)
+SubClassOf(ontology:NFDI_0000122 ontology:NFDI_0000160)
 
-    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117"/>
-    
+# Class: ontology:NFDI_0000123 (data portal)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000123 "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000123 "An online platform that provides access to datasets."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000123 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000123 "data portal"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000123 "Bach digital, KultSam, MusiXplora"@en)
+SubClassOf(ontology:NFDI_0000123 ontology:NFDI_0000223)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152 -->
+# Class: ontology:NFDI_0000131 (event)
 
-    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-        <rdfs:label xml:lang="de">has input</rdfs:label>
-    </owl:ObjectProperty>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000131 "An process that represents an organized happening that unfolds in time."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000131 "A class that represents entities that occur or unfold in time, typically characterized by a specific organized happening or occurrence with temporal properties."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000131 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000131 "event"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000131 "conferences, celebrations, workshops, meetings, or any other specific incident or happening that has been planned somehow."@en)
+SubClassOf(ontology:NFDI_0000131 obo:BFO_0000015)
 
+# Class: ontology:NFDI_0000134 (federal state)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000134 "A place that refers to a geographical territory forming part of a country."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000134 "A federal state where the thing is located."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000134 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000134 "federal state"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000134 "Sachsen, Berlin"@de)
+SubClassOf(ontology:NFDI_0000134 ontology:NFDI_0000005)
 
-    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-        <rdfs:label xml:lang="de">has output</rdfs:label>
-    </owl:ObjectProperty>
-    
+# Class: ontology:NFDI_0000139 (funding organization role)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000139 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000139 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000139 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000139 "funding organization role"@en)
+SubClassOf(ontology:NFDI_0000139 ontology:NFDI_0000164)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000158 -->
+# Class: ontology:NFDI_0000140 (software library)
 
-    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000158">
-        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
-        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000171"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:label xml:lang="de">prescribed by</rdfs:label>
-    </owl:ObjectProperty>
-    
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000140 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000140 "Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000140 "software library"@en)
+SubClassOf(ontology:NFDI_0000140 ontology:NFDI_0000198)
 
+# Class: ontology:NFDI_0000141 (license)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000171 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000141 "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000141 "A document that provides legal guidelines for the use of a resource, e.g. a software."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000141 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000141 "license"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000141 "cc-by-3, Digital Peer Publishing Lizenz"@en)
+SubClassOf(ontology:NFDI_0000141 obo:IAO_0000030)
 
-    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000171">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <rdfs:label xml:lang="de">prescibes</rdfs:label>
-    </owl:ObjectProperty>
-    
+# Class: ontology:NFDI_0000145 (media type)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000145 "A directive information entity that describes a media type a bearer has."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000145 "A digital resource format or physical medium."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000145 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000145 "media type"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000145 "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book")
+SubClassOf(ontology:NFDI_0000145 obo:IAO_0000033)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180 -->
+# Class: ontology:NFDI_0000148 (MIME-type)
 
-    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180">
-        <rdfs:label xml:lang="en">is subject of</rdfs:label>
-        <co:PMD_0001032>Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/79</co:PMD_0001032>
-    </owl:ObjectProperty>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000148 "A media type that serves as a standardized identifier for specifying the nature and format of data."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000148 "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000148 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000148 "MIME-type"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000148 "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en)
+AnnotationAssertion(ontology:NFDI_0000170 ontology:NFDI_0000148 "MIMEType")
+SubClassOf(ontology:NFDI_0000148 ontology:NFDI_0000145)
 
+# Class: ontology:NFDI_0000149 (contributor)
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000149 "A person that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000149 "contributor"@en)
+EquivalentClasses(ontology:NFDI_0000149 ObjectIntersectionOf(ontology:NFDI_0000004 ObjectSomeValuesFrom(obo:BFO_0000196 ontology:NFDI_0000118)))
+SubClassOf(ontology:NFDI_0000149 ontology:NFDI_0000004)
 
-    
+# Class: ontology:NFDI_0000150 (service product)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000150 "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000150 "service product"@en)
+AnnotationAssertion(co:PMD_0001032 ontology:NFDI_0000150 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
+SubClassOf(ontology:NFDI_0000150 ObjectIntersectionOf(obo:BFO_0000141 ObjectSomeValuesFrom(obo:BFO_0000196 ontology:NFDI_0000163) ObjectSomeValuesFrom(ObjectInverseOf(obo:IAO_0000136) ontology:NFDI_0000157)))
 
-    <!-- http://edamontology.org/format_2376 -->
+# Class: ontology:NFDI_0000151 (workflow specification)
 
-    <owl:Class rdf:about="http://edamontology.org/format_2376"/>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000151 "A plan specification that outlines the sequence, tasks, roles, and processes involved in a workflow, defining how activities should be executed to achieve desired outcomes."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000151 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000151 "workflow specification"@en)
+SubClassOf(ontology:NFDI_0000151 obo:IAO_0000104)
 
+# Class: ontology:NFDI_0000154 (ontology)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000025 -->
+AnnotationAssertion(rdfs:label ontology:NFDI_0000154 "ontology"@en)
+AnnotationAssertion(skos:definition ontology:NFDI_0000154 "An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it."@en)
+SubClassOf(ontology:NFDI_0000154 obo:IAO_0000027)
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000025">
-        <owl:equivalentClass rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186"/>
-    </rdf:Description>
-    
+# Class: ontology:NFDI_0000155 (ontology release version)
 
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000155 "An (nfdi) ontology release version represents a particular release of an ontology."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000155 "ontology release version"@en)
+SubClassOf(ontology:NFDI_0000155 obo:IAO_0000027)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000098 -->
+# Class: ontology:NFDI_0000156 (file data item)
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000098"/>
-    
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000156 "A file data item is a data item that represents a file stored on a hard drive. It might also include essential attributes like its name, location, download URL, size, type, and timestamps for creation, modification, and access. It might also capture permissions and ownership details to control how the file can be accessed or modified."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000156 "file data item"@en)
+SubClassOf(ontology:NFDI_0000156 ObjectIntersectionOf(obo:IAO_0000027 ObjectSomeValuesFrom(ontology:NFDI_0000180 obo:IAO_0000098)))
 
+# Class: ontology:NFDI_0000157 (service specification)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000578 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000157 "A plan specification that defines the requirements, features, and parameters of a service, outlining its scope, performance, and delivery criteria."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000157 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000157 "service specification"@en)
+SubClassOf(ontology:NFDI_0000157 obo:IAO_0000104)
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000578">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000159"/>
-    </rdf:Description>
-    
+# Class: ontology:NFDI_0000159 (identifier)
 
+AnnotationAssertion(rdfs:label ontology:NFDI_0000159 "identifier"@en)
+SubClassOf(ontology:NFDI_0000159 obo:IAO_0000030)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0020016 -->
+# Class: ontology:NFDI_0000160 (service process)
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0020016">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000159"/>
-    </rdf:Description>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000160 "A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000160 "service process"@en)
+AnnotationAssertion(co:PMD_0001032 ontology:NFDI_0000160 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
+SubClassOf(ontology:NFDI_0000160 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(ontology:NFDI_0000153 ontology:NFDI_0000150)))
 
+# Class: ontology:NFDI_0000161 (ontology variant)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0020017 -->
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000161 "An ontology variant represents a self-contained, reusable subset of an ontology that provides a specific functionality while maintaining interoperability with the larger ontology. Typically, an ontology is released in different variants, which makes a variant a release artifact."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000161 "ontology variant"@en)
+SubClassOf(ontology:NFDI_0000161 obo:IAO_8000000)
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0020017">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000159"/>
-    </rdf:Description>
-    
+# Class: ontology:NFDI_0000162 (creative process)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000162 "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000162 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000162 "creative process"@en)
+SubClassOf(ontology:NFDI_0000162 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:BFO_0000057 ontology:NFDI_0000004)))
 
-    <!-- http://purl.obolibrary.org/obo/IAO_8000001 -->
+# Class: ontology:NFDI_0000163 (service product role)
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_8000001">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000161"/>
-    </rdf:Description>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000163 "Role of an immaterial entity that facilitates the delivery or support of a service product, ensuring its proper execution and value realization."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000163 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000163 "service product role"@en)
+EquivalentClasses(ontology:NFDI_0000163 ObjectIntersectionOf(obo:BFO_0000023 ObjectSomeValuesFrom(obo:BFO_0000054 ontology:NFDI_0000160)))
+SubClassOf(ontology:NFDI_0000163 obo:BFO_0000023)
 
+# Class: ontology:NFDI_0000164 (agent role)
 
-    <!-- http://purl.obolibrary.org/obo/IAO_8000003 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000164 "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000164 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000164 "agent role"@en)
+SubClassOf(ontology:NFDI_0000164 obo:BFO_0000023)
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_8000003">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000161"/>
-    </rdf:Description>
-    
+# Class: ontology:NFDI_0000165 (service provider role)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000165 "A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000165 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000165 "service provider role"@en)
+EquivalentClasses(ontology:NFDI_0000165 ObjectIntersectionOf(ontology:NFDI_0000164 ObjectSomeValuesFrom(obo:BFO_0000056 ontology:NFDI_0000160)))
 
-    <!-- http://purl.obolibrary.org/obo/IAO_8000013 -->
+# Class: ontology:NFDI_0000166 (workflow process)
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_8000013">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000161"/>
-    </rdf:Description>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000166 "A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000166 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000166 "workflow process"@en)
+SubClassOf(ontology:NFDI_0000166 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(ontology:NFDI_0000158 ontology:NFDI_0000151)))
 
+# Class: ontology:NFDI_0000169 (plan)
 
-    <!-- http://www.ebi.ac.uk/swo/SWO_0000002 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000169 "A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000169 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000169 "plan"@en)
+SubClassOf(ontology:NFDI_0000169 obo:BFO_0000017)
 
-    <rdf:Description rdf:about="http://www.ebi.ac.uk/swo/SWO_0000002">
-        <owl:equivalentClass rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141"/>
-    </rdf:Description>
-    
+# Class: ontology:NFDI_0000172 (publishing process)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000172 "A process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000172 "http://purl.obolibrary.org/obo/IAO_0000444")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000172 "publishing process"@en)
+SubClassOf(ontology:NFDI_0000172 obo:BFO_0000015)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001 -->
+# Class: ontology:NFDI_0000173 (software development)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008"/>
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000150"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">2024-03-25 - Sasha Bruns: 
-This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO.</obo:IAO_0000116>
-        <rdfs:comment xml:lang="en">The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">NFDI resource</rdfs:label>
-        <ontology:NFDI_0000170>Resource</ontology:NFDI_0000170>
-    </owl:Class>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000173 "A process that has specified output a software product and that involves the creation of source code."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000173 "http://purl.obolibrary.org/obo/APOLLO_SV_00000008")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000173 "software development"@en)
+SubClassOf(ontology:NFDI_0000173 obo:BFO_0000015)
 
+# Class: ontology:NFDI_0000174 (spokesperson role)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000174 "A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000174 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000174 "spokesperson role"@en)
+SubClassOf(ontology:NFDI_0000174 ontology:NFDI_0000164)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
-                <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A scientific or business endeavor that aims to conclude an investigation or to answer a research question.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">project</rdfs:label>
-    </owl:Class>
-    
+# Class: ontology:NFDI_0000175 (academic event)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000175 "An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000175 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000175 "academic event"@en)
+SubClassOf(ontology:NFDI_0000175 ObjectIntersectionOf(ontology:NFDI_0000131 ObjectSomeValuesFrom(obo:BFO_0000057 ObjectIntersectionOf(ontology:NFDI_0000102 ObjectSomeValuesFrom(obo:BFO_0000196 ontology:NFDI_0000176)))))
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003 -->
+# Class: ontology:NFDI_0000176 (academic organization role)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000141"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-        <obo:IAO_0000115 xml:lang="en">An agent that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">An organization of some kind, e.g. research organization or business organization</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">organization</rdfs:label>
-        <skos:example>University Library in Leipzig, Museums of City Cologne</skos:example>
-    </owl:Class>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000176 "A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000176 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000176 "academic organization role"@en)
+SubClassOf(ontology:NFDI_0000176 ObjectIntersectionOf(ontology:NFDI_0000164 ObjectSomeValuesFrom(obo:BFO_0000197 ontology:NFDI_0000003)))
 
+# Class: ontology:NFDI_0000177 (industry organization role)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000177 "A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000177 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000177 "industry organization role"@en)
+SubClassOf(ontology:NFDI_0000177 ObjectIntersectionOf(ontology:NFDI_0000164 ObjectSomeValuesFrom(obo:BFO_0000197 ontology:NFDI_0000003)))
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000115 xml:lang="en">An agent that represents a single human individual.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. &quot;Person&quot; in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics.</obo:IAO_0000116>
-        <rdfs:comment xml:lang="en">A resource that represents a single person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">person</rdfs:label>
-        <skos:example>Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus</skos:example>
-    </owl:Class>
-    
+# Class: ontology:NFDI_0000178 (workflow)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000178 "A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000178 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000178 "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000178 "workflow"@en)
+SubClassOf(ontology:NFDI_0000178 ontology:NFDI_0000169)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005 -->
+# Class: ontology:NFDI_0000179 (RDF file)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
-        <obo:IAO_0000115 xml:lang="en">A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A spatial region, e.g. country, city or district.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">place</rdfs:label>
-        <skos:example>Hessen, Berlin, Schweiz</skos:example>
-    </owl:Class>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000179 "A serialisation format conforming to the Resource Description Framework (RDF) model."@en)
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000179 "see http://edamontology.org/format_2376")
+AnnotationAssertion(rdfs:label ontology:NFDI_0000179 "RDF file"@en)
+SubClassOf(ontology:NFDI_0000179 ObjectIntersectionOf(ontology:NFDI_0000156 ObjectSomeValuesFrom(ontology:NFDI_0000180 edamontology:format_2376)))
 
+# Class: ontology:NFDI_0000186 (programming language)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000186 "A technological means that is used for implementing software."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000186 "A formal language used for implementing a software."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000186 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000186 "programming language"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000186 "Java, Ruby, C++, Perl, PHP")
+SubClassOf(ontology:NFDI_0000186 ontology:NFDI_0000215)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000007"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">consortium</rdfs:label>
-        <skos:example>NFDI4Culture, NFDI-MatWerk, DataPLANT.</skos:example>
-    </owl:Class>
-    
+# Class: ontology:NFDI_0000190 (publication)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000190 "A publication that is the output of a publishing process and a creative process."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000190 "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000190 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000190 "publication"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000190 "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten")
+SubClassOf(ontology:NFDI_0000190 obo:IAO_0000030)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000007 -->
+# Class: ontology:NFDI_0000193 (publisher role)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000007">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
-                        <owl:allValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 xml:lang="en">An organization that has a specific role, responsibilities or contributions within the consortium framework.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">consortium member</rdfs:label>
-        <skos:example xml:lang="en">Museums of City Cologne is a member of NFDI4Culture consortium.</skos:example>
-    </owl:Class>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000193 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000193 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000193 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000193 "publisher role"@en)
+SubClassOf(ontology:NFDI_0000193 ontology:NFDI_0000164)
 
+# Class: ontology:NFDI_0000198 (software)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000198 "A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000198 "A computer software provided by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000198 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000198 "software"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000198 "Edirom, Muscat")
+SubClassOf(ontology:NFDI_0000198 ObjectIntersectionOf(obo:IAO_0000104 ObjectSomeValuesFrom(ObjectInverseOf(ontology:NFDI_0000153) ontology:NFDI_0000162)))
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153"/>
-                            </rdf:Description>
-                        </owl:onProperty>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000162"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:IAO_0000115 xml:lang="en">An independent continuant or information content entity that refers to a manifestation of someone&apos;s creative effort.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to &quot;schema:CreativeWork and &apos;information content entity&apos;&quot;, we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork.</obo:IAO_0000116>
-        <rdfs:comment xml:lang="en">A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains.</rdfs:comment>
-        <rdfs:label xml:lang="en">creative work</rdfs:label>
-        <skos:example>TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools &amp; Services, RADAR4Culture service, etc.</skos:example>
-    </owl:Class>
-    
+# Class: ontology:NFDI_0000203 (specification)
 
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000203 "A directive information entity that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process."@en)
+AnnotationAssertion(obo:IAO_0000116 ontology:NFDI_0000203 "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000203 "A set of requirements, guidelines, standards contributed by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000203 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000203 "specification"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000203 "Guidelines, technical specifications, design specifications"@en)
+SubClassOf(ontology:NFDI_0000203 ObjectIntersectionOf(obo:IAO_0000033 ObjectSomeValuesFrom(ObjectInverseOf(ontology:NFDI_0000153) ontology:NFDI_0000162)))
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009 -->
+# Class: ontology:NFDI_0000206 (standard)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn&apos;t necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics.</obo:IAO_0000116>
-        <rdfs:comment xml:lang="en">Structured information about a resource provided by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">dataset</rdfs:label>
-        <skos:example>Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)</skos:example>
-    </owl:Class>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000206 "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000206 "An international standard and norm that can be used to evaluate or create a resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000206 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000206 "standard"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000206 "ISO 15511, DINI-Zertifikat")
+SubClassOf(ontology:NFDI_0000206 ontology:NFDI_0000203)
 
+# Class: ontology:NFDI_0000210 (storage service)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100 -->
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000210 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000210 "Provision of storage space for research data as a service to external users. Access is possible via web protocols."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000210 "storage service"@en)
+SubClassOf(ontology:NFDI_0000210 ontology:NFDI_0000160)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">A quality of an entity that specifies the subject area, domain or academic discipline of an entity.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">2024-03-26: SB &amp; JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">2024-12-16: TT &amp; JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information.</obo:IAO_0000116>
-        <obo:IAO_0000233 xml:lang="en">https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80</obo:IAO_0000233>
-        <rdfs:comment xml:lang="en">An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">academic discipline</rdfs:label>
-        <skos:example rdf:resource="https://www.wikidata.org/entity/Q12271"/>
-        <skos:example xml:lang="en">Architecture, Art History, Musicology, Media Studies, Performing Arts</skos:example>
-    </owl:Class>
-    
+# Class: ontology:NFDI_0000214 (support service)
 
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000214 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000214 "Service with direct user contact for topics going beyond the support for specific single services."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000214 "support service"@en)
+SubClassOf(ontology:NFDI_0000214 ontology:NFDI_0000160)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102 -->
+# Class: ontology:NFDI_0000215 (technological method specification)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <obo:IAO_0000115 xml:lang="en">An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">agent</rdfs:label>
-        <skos:example xml:lang="en">Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz</skos:example>
-    </owl:Class>
-    
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000215 "A plan specification that refers to a technology method employed for the creation, management, utilization, or control of a digital resource."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000215 "A technology, e.g. a web application or a programming framework used in a resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000215 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000215 "technological method specification"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000215 "Groovy on Grails, Angular"@en)
+AnnotationAssertion(ontology:NFDI_0000170 ontology:NFDI_0000215 "TechnologicalMeans")
+SubClassOf(ontology:NFDI_0000215 obo:IAO_0000104)
 
+# Class: ontology:NFDI_0000218 (software application)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106 -->
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000218 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000218 "Software that can be downloaded and executed locally on the users' hardware."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000218 "software application"@en)
+SubClassOf(ontology:NFDI_0000218 ontology:NFDI_0000198)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">A place that refers to a densely populated urban area.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A city or a town where the thing is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">city</rdfs:label>
-        <skos:example xml:lang="en">Berlin, Hannover, Kyiv</skos:example>
-    </owl:Class>
-    
+# Class: ontology:NFDI_0000219 (training service)
 
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000219 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000219 "Standalone training for self-study can be considered a technical service (usually a web application). Generally speaking, training materials often come in the form of specific measures or tutorials that are attached to a service and that are designed to improve the user’s service experience. Our joint understanding of training as a stand-alone service, however, is not limited to the above and includes materials designed for education in all fields of research data management."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000219 "training service"@en)
+SubClassOf(ontology:NFDI_0000219 ontology:NFDI_0000160)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107 -->
+# Class: ontology:NFDI_0000222 (web application software)
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000115 xml:lang="en">A material entity that represents a collection of material entities intended to be understood together as a whole.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A tangible collection of valuables published or curated by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">collection</rdfs:label>
-        <skos:example xml:lang="en">A collection of arts displayed at the museum</skos:example>
-    </owl:Class>
-    
+AnnotationAssertion(obo:IAO_0000119 ontology:NFDI_0000222 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000222 "Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS)."@en)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000222 "web application software"@en)
+SubClassOf(ontology:NFDI_0000222 ontology:NFDI_0000198)
 
+# Class: ontology:NFDI_0000223 (website)
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110 -->
+AnnotationAssertion(obo:IAO_0000115 ontology:NFDI_0000223 "A creative work that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en)
+AnnotationAssertion(rdfs:comment ontology:NFDI_0000223 "A collection of webpages contributed by an organization or a person."@en)
+AnnotationAssertion(rdfs:isDefinedBy ontology:NFDI_0000223 <https://nfdi.fiz-karlsruhe.de/ontology>)
+AnnotationAssertion(rdfs:label ontology:NFDI_0000223 "website"@en)
+AnnotationAssertion(skos:example ontology:NFDI_0000223 "https:\\/\\/opac.rism.info")
+SubClassOf(ontology:NFDI_0000223 ObjectIntersectionOf(obo:IAO_0000030 ObjectSomeValuesFrom(ObjectInverseOf(ontology:NFDI_0000153) ontology:NFDI_0000162)))
 
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">consortium member role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000111 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000111">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process in which the contact information of an entity is provided.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A process in which the contact information of an entity is provided.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">contacting process</rdfs:label>
-        <ontology:NFDI_0000170>Contacting</ontology:NFDI_0000170>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">contact point role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process of contibuting or providing information to an endeavor.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A process of contibuting or providing information to an endeavor.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">contributing process</rdfs:label>
-        <ontology:NFDI_0000170>Contributing</ontology:NFDI_0000170>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
-                                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115"/>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Class>
-                                                <owl:intersectionOf rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-                                                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115"/>
-                                                    </owl:Restriction>
-                                                </owl:intersectionOf>
-                                            </owl:Class>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Class>
-                                                        <owl:intersectionOf rdf:parseType="Collection">
-                                                            <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
-                                                            <owl:Restriction>
-                                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-                                                                <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115"/>
-                                                            </owl:Restriction>
-                                                        </owl:intersectionOf>
-                                                    </owl:Class>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">contributor role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000119 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000119">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A country where the thing is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">country</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
-        <rdfs:comment xml:lang="en">Software that provides large amounts of structured data from repositories and archives to the user. Usually the data can be uploaded, accessed, searched and/or downloaded via a web browser.</rdfs:comment>
-        <rdfs:label xml:lang="en">database software</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000122 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000122">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
-        <rdfs:comment xml:lang="en">The activity of managing and promoting the use of data from their point of creation to ensure that they are fit for contemporary purpose and available for discovery and reuse. For dynamic datasets this may mean continuous enrichment or updating to keep them fit for purpose. Higher levels of curation will also involve links with annotation and with other published materials</rdfs:comment>
-        <rdfs:label xml:lang="en">data curation service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <obo:IAO_0000115 xml:lang="en">A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">An online platform that provides access to datasets.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">data portal</rdfs:label>
-        <skos:example xml:lang="en">Bach digital, KultSam, MusiXplora</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">An process that represents an organized happening that unfolds in time.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A class that represents entities that occur or unfold in time, typically characterized by a specific organized happening or occurrence with temporal properties.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">event</rdfs:label>
-        <skos:example xml:lang="en">conferences, celebrations, workshops, meetings, or any other specific incident or happening that has been planned somehow.</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000134 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000134">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">A place that refers to a geographical territory forming part of a country.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A federal state where the thing is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">federal state</rdfs:label>
-        <skos:example xml:lang="de">Sachsen, Berlin</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000139 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000139">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">funding organization role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
-        <rdfs:comment xml:lang="en">Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface.</rdfs:comment>
-        <rdfs:label xml:lang="en">software library</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A document that provides legal guidelines for the use of a resource, e.g. a software.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">license</rdfs:label>
-        <skos:example xml:lang="en">cc-by-3, Digital Peer Publishing Lizenz</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <obo:IAO_0000115 xml:lang="en">A directive information entity that describes a media type a bearer has.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A digital resource format or physical medium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">media type</rdfs:label>
-        <skos:example>doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000148 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000148">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145"/>
-        <obo:IAO_0000115 xml:lang="en">A media type that serves as a standardized identifier for specifying the nature and format of data.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">MIME-type</rdfs:label>
-        <skos:example xml:lang="en">https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3</skos:example>
-        <ontology:NFDI_0000170>MIMEType</ontology:NFDI_0000170>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000149 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000149">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
-        <obo:IAO_0000115 xml:lang="en">A person that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">contributor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000150 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000150">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000141"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000163"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                            </rdf:Description>
-                        </owl:onProperty>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000157"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">service product</rdfs:label>
-        <co:PMD_0001032>Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75</co:PMD_0001032>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000151 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000151">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <obo:IAO_0000115 xml:lang="en">A plan specification that outlines the sequence, tasks, roles, and processes involved in a workflow, defining how activities should be executed to achieve desired outcomes.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">workflow specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000154 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000154">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <rdfs:label xml:lang="en">ontology</rdfs:label>
-        <skos:definition xml:lang="en">An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000155 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000155">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <rdfs:comment xml:lang="en">An (nfdi) ontology release version represents a particular release of an ontology.</rdfs:comment>
-        <rdfs:label xml:lang="en">ontology release version</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000156 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000156">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000098"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A file data item is a data item that represents a file stored on a hard drive. It might also include essential attributes like its name, location, download URL, size, type, and timestamps for creation, modification, and access. It might also capture permissions and ownership details to control how the file can be accessed or modified.</rdfs:comment>
-        <rdfs:label xml:lang="en">file data item</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000157 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000157">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <obo:IAO_0000115 xml:lang="en">A plan specification that defines the requirements, features, and parameters of a service, outlining its scope, performance, and delivery criteria.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">service specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000159 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000159">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:label xml:lang="en">identifier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000150"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">service process</rdfs:label>
-        <co:PMD_0001032>Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75</co:PMD_0001032>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000161 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000161">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000000"/>
-        <rdfs:comment xml:lang="en">An ontology variant represents a self-contained, reusable subset of an ontology that provides a specific functionality while maintaining interoperability with the larger ontology. Typically, an ontology is released in different variants, which makes a variant a release artifact.</rdfs:comment>
-        <rdfs:label xml:lang="en">ontology variant</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000162 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000162">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">creative process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000163 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000163">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000115 xml:lang="en">Role of an immaterial entity that facilitates the delivery or support of a service product, ensuring its proper execution and value realization.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">service product role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000115 xml:lang="en">Role of an independent continuant that is realized through an agent&apos;s actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">agent role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000165 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000165">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">service provider role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000166 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000166">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000158"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000151"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">workflow process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000169 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000169">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:IAO_0000115 xml:lang="en">A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">plan</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000172 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000172">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process of making information, such as literature, music, and software etc., available to the public for sale or for free.</obo:IAO_0000115>
-        <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0000444</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">publishing process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000173 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000173">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process that has specified output a software product and that involves the creation of source code.</obo:IAO_0000115>
-        <obo:IAO_0000119>http://purl.obolibrary.org/obo/APOLLO_SV_00000008</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">software development</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000174 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000174">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">spokesperson role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000175 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000175">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
-                                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000176"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">academic event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000176 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000176">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">academic organization role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000177 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000177">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">industry organization role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000178 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000178">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000169"/>
-        <obo:IAO_0000115 xml:lang="en">A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome.</obo:IAO_0000115>
-        <obo:IAO_0000119>https://nfdi.fiz-karlsruhe.de/ontology</obo:IAO_0000119>
-        <rdfs:comment>A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.</rdfs:comment>
-        <rdfs:label xml:lang="en">workflow</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000179 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000179">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000156"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
-                        <owl:someValuesFrom rdf:resource="http://edamontology.org/format_2376"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A serialisation format conforming to the Resource Description Framework (RDF) model.</obo:IAO_0000115>
-        <obo:IAO_0000119>see http://edamontology.org/format_2376</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">RDF file</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215"/>
-        <obo:IAO_0000115 xml:lang="en">A technological means that is used for implementing software.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A formal language used for implementing a software.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">programming language</rdfs:label>
-        <skos:example>Java, Ruby, C++, Perl, PHP</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">A publication that is the output of a publishing process and a creative process.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">publication</rdfs:label>
-        <skos:example>MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000164"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">publisher role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000104"/>
-                    <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153"/>
-                            </rdf:Description>
-                        </owl:onProperty>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000162"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A creative work that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A computer software provided by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">software</rdfs:label>
-        <skos:example>Edirom, Muscat</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000203 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000203">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000033"/>
-                    <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153"/>
-                            </rdf:Description>
-                        </owl:onProperty>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000162"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A directive information entity that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work).</obo:IAO_0000116>
-        <rdfs:comment xml:lang="en">A set of requirements, guidelines, standards contributed by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">specification</rdfs:label>
-        <skos:example xml:lang="en">Guidelines, technical specifications, design specifications</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000203"/>
-        <obo:IAO_0000115 xml:lang="en">A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">An international standard and norm that can be used to evaluate or create a resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">standard</rdfs:label>
-        <skos:example>ISO 15511, DINI-Zertifikat</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000210 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000210">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
-        <rdfs:comment xml:lang="en">Provision of storage space for research data as a service to external users. Access is possible via web protocols.</rdfs:comment>
-        <rdfs:label xml:lang="en">storage service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000214 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000214">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
-        <rdfs:comment xml:lang="en">Service with direct user contact for topics going beyond the support for specific single services.</rdfs:comment>
-        <rdfs:label xml:lang="en">support service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <obo:IAO_0000115 xml:lang="en">A plan specification that refers to a technology method employed for the creation, management, utilization, or control of a digital resource.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A technology, e.g. a web application or a programming framework used in a resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">technological method specification</rdfs:label>
-        <skos:example xml:lang="en">Groovy on Grails, Angular</skos:example>
-        <ontology:NFDI_0000170>TechnologicalMeans</ontology:NFDI_0000170>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
-        <rdfs:comment xml:lang="en">Software that can be downloaded and executed locally on the users&apos; hardware.</rdfs:comment>
-        <rdfs:label xml:lang="en">software application</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000219 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000219">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
-        <rdfs:comment xml:lang="en">Standalone training for self-study can be considered a technical service (usually a web application). Generally speaking, training materials often come in the form of specific measures or tutorials that are attached to a service and that are designed to improve the user’s service experience. Our joint understanding of training as a stand-alone service, however, is not limited to the above and includes materials designed for education in all fields of research data management.</rdfs:comment>
-        <rdfs:label xml:lang="en">training service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
-        <rdfs:comment xml:lang="en">Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS).</rdfs:comment>
-        <rdfs:label xml:lang="en">web application software</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223 -->
-
-    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
-                    <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153"/>
-                            </rdf:Description>
-                        </owl:onProperty>
-                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000162"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A creative work that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">A collection of webpages contributed by an organization or a person.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
-        <rdfs:label xml:lang="en">website</rdfs:label>
-        <skos:example>https:\/\/opac.rism.info</skos:example>
-    </owl:Class>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 
+)

@@ -1,11 +1,26 @@
-Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore>)
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology#>)
+Prefix(co:=<https://w3id.org/pmd/co/>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(adms:=<http://www.w3.org/ns/adms#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(doap:=<http://usefulinc.com/ns/doap#>)
+Prefix(edam:=<http://purl.obolibrary.org/obo/edam#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(vann:=<http://purl.org/vocab/vann/>)
+Prefix(void:=<http://rdfs.org/ns/void#>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(ontology:=<https://nfdi.fiz-karlsruhe.de/ontology/>)
+Prefix(edamontology:=<http://edamontology.org/>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology>
@@ -18,11 +33,10 @@ Annotation(dcterms:creator <https://orcid.org/0000-0001-7192-7143>)
 Annotation(dcterms:description "NFDIcore ontology"@en)
 Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "NFDIcore Ontology"@en)
-Annotation(<http://purl.org/ontology/bibo/status> "Ontology Specification"@en)
-Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-karlsruhe.de/ontology/>)
+Annotation(bibo:status "Ontology Specification"@en)
+Annotation(vann:preferredNamespaceUri <https://nfdi.fiz-karlsruhe.de/ontology/>)
 Annotation(rdfs:label "NFDIcore")
 Annotation(owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
-
 
 
 
