@@ -79,6 +79,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
+Declaration(ObjectProperty(:NFDI_0000013))
 Declaration(ObjectProperty(:NFDI_0000100))
 Declaration(ObjectProperty(:NFDI_0001010))
 Declaration(ObjectProperty(:NFDI_0001011))
@@ -150,6 +151,12 @@ InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_00001
 # Object Property: <http://purl.obolibrary.org/obo/IAO_0000235> (denoted by)
 
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000235> :NFDI_0000100)
+
+# Object Property: :NFDI_0000013 (prescibes)
+
+AnnotationAssertion(rdfs:label :NFDI_0000013 "prescibes"@de)
+SubObjectPropertyOf(:NFDI_0000013 <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(:NFDI_0000013 :NFDI_0010009)
 
 # Object Property: :NFDI_0000100 (is subject of)
 
