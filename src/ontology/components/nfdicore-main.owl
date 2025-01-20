@@ -47,7 +47,9 @@ Declaration(Class(:NFDI_0000005))
 Declaration(Class(:NFDI_0000006))
 Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000008))
+Declaration(Class(:NFDI_0000014))
 Declaration(Class(:NFDI_0000015))
+Declaration(Class(:NFDI_0000016))
 Declaration(Class(:NFDI_0000017))
 Declaration(Class(:NFDI_0000018))
 Declaration(Class(:NFDI_0000019))
@@ -497,10 +499,24 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000008 "
 AnnotationAssertion(rdfs:label :NFDI_0000008 "workflow process"@en)
 SubClassOf(:NFDI_0000008 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(:NFDI_0010009 :NFDI_0000007)))
 
+# Class: :NFDI_0000014 (publishing process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000014 "A process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000014 "http://purl.obolibrary.org/obo/IAO_0000444")
+AnnotationAssertion(rdfs:label :NFDI_0000014 "publishing process"@en)
+SubClassOf(:NFDI_0000014 <http://purl.obolibrary.org/obo/BFO_0000015>)
+
 # Class: :NFDI_0000015 (identifier)
 
 AnnotationAssertion(rdfs:label :NFDI_0000015 "identifier"@en)
 SubClassOf(:NFDI_0000015 <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: :NFDI_0000016 (software development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000016 "A process that has specified output a software product and that involves the creation of source code."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000016 "http://purl.obolibrary.org/obo/APOLLO_SV_00000008")
+AnnotationAssertion(rdfs:label :NFDI_0000016 "software development"@en)
+SubClassOf(:NFDI_0000016 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000017 (spokesperson role)
 
