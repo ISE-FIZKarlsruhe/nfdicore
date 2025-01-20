@@ -47,6 +47,7 @@ Declaration(Class(:NFDI_0000005))
 Declaration(Class(:NFDI_0000006))
 Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000008))
+Declaration(Class(:NFDI_0000011))
 Declaration(Class(:NFDI_0000014))
 Declaration(Class(:NFDI_0000015))
 Declaration(Class(:NFDI_0000016))
@@ -54,6 +55,7 @@ Declaration(Class(:NFDI_0000017))
 Declaration(Class(:NFDI_0000018))
 Declaration(Class(:NFDI_0000019))
 Declaration(Class(:NFDI_0000020))
+Declaration(Class(:NFDI_0000021))
 Declaration(Class(:NFDI_0000023))
 Declaration(Class(:NFDI_0000024))
 Declaration(Class(:NFDI_0000026))
@@ -499,6 +501,13 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000008 "
 AnnotationAssertion(rdfs:label :NFDI_0000008 "workflow process"@en)
 SubClassOf(:NFDI_0000008 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(:NFDI_0010009 :NFDI_0000007)))
 
+# Class: :NFDI_0000011 (plan)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000011 "A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000011 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0000011 "plan"@en)
+SubClassOf(:NFDI_0000011 <http://purl.obolibrary.org/obo/BFO_0000017>)
+
 # Class: :NFDI_0000014 (publishing process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000014 "A process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en)
@@ -545,6 +554,14 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000020 "
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000020 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0000020 "industry organization role"@en)
 SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :Organization)))
+
+# Class: :NFDI_0000021 (workflow)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000021 "A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000021 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:comment :NFDI_0000021 "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.")
+AnnotationAssertion(rdfs:label :NFDI_0000021 "workflow"@en)
+SubClassOf(:NFDI_0000021 :NFDI_0000011)
 
 # Class: :NFDI_0000023 (ontology)
 
