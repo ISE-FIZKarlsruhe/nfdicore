@@ -3,6 +3,8 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
+
+
 #################################################################
 ## import SWO terms
 #################################################################
@@ -58,6 +60,16 @@ $(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
+
+$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl 
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		remove --term http://purl.obolibrary.org/obo/IAO_0020000 \
+		extract -T $(IMPORTDIR)/iao_terms.txt --copy-ontology-annotations false --force true --individuals exclude --method STAR \
+		remove --select "RO:*" \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+
 #################################################################
 ## release base version (modification)
 #################################################################
@@ -92,6 +104,7 @@ $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILE
 		reduce -r ELK \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru \
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
+
 
 
 

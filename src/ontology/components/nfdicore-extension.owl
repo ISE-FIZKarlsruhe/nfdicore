@@ -18,10 +18,7 @@ Declaration(Class(:Collection))
 Declaration(Class(:NFDI_0000101))
 Declaration(Class(:ProgrammingLanguage))
 Declaration(Class(:TechnologicalMeans))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
 Declaration(ObjectProperty(:NFDI_0000009))
 Declaration(ObjectProperty(:NFDI_0000010))
 Declaration(ObjectProperty(:NFDI_0000100))
@@ -75,80 +72,12 @@ Declaration(DataProperty(:endDate))
 Declaration(DataProperty(:fileExtension))
 Declaration(DataProperty(:foundationDate))
 Declaration(DataProperty(:startDate))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/RO_0001900>))
 
 ############################
 #   Object Properties
 ############################
 
-# Object Property: <http://purl.obolibrary.org/obo/BFO_0000050> (part of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/BFO_0000050> "is part of"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/BFO_0000050> "my brain is part of my body (continuant parthood, two material entities)"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/BFO_0000050> "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/BFO_0000050> "this day is part of this year (occurrent parthood)"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000050> "a core relation that holds between a part and its whole"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000050> "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000050> "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000050> "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000050> "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
-
-A continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/BFO_0000050> "part_of"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/RO_0001901>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000050> "part of"@en)
-AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BFO_0000050> "http://www.obofoundry.org/ro/#OBO_REL:part_of")
-InverseObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000051>)
-TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>)
-
-# Object Property: <http://purl.obolibrary.org/obo/BFO_0000051> (has part)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/BFO_0000051> "has part"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/BFO_0000051> "my body has part my brain (continuant parthood, two material entities)"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/BFO_0000051> "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/BFO_0000051> "this year has part this day (occurrent parthood)"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000051> "a core relation that holds between a whole and its part"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000051> "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000051> "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000051> "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000051> "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
-
-A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/BFO_0000051> "has_part"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/iao.owl>)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0001901>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000051> "has part"@en)
-TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>)
-
-# Object Property: <http://purl.obolibrary.org/obo/OBI_0000295> (is_specified_input_of)
-
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/OBI_0000295> <http://purl.obolibrary.org/obo/RO_0000056>)
-
-# Object Property: <http://purl.obolibrary.org/obo/RO_0000056> (participates in)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0000056> "participates in"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000056> "this blood clot participates in this blood coagulation"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000056> "this input material (or this output material) participates in this process"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000056> "this investigator participates in this investigation"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000056> "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0000056> "participates_in"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000056> "participates in"@en)
-InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/RO_0000057>)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000002>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000003>)
-
-# Object Property: <http://purl.obolibrary.org/obo/RO_0000057> (has participant)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0000057> "has participant"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000057> "this blood coagulation has participant this blood clot"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000057> "this investigation has participant this investigator"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000057> "this process has participant this input material (or this output material)"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000057> "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/RO_0000057> "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0000057> "has_participant"@en)
-AnnotationAssertion(dce:source <http://purl.obolibrary.org/obo/RO_0000057> "http://www.obofoundry.org/ro/#OBO_REL:has_participant")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000057> "has participant"@en)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000003>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Object Property: :NFDI_0000009 (has agent)
 
@@ -163,7 +92,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000010 "
 AnnotationAssertion(rdfs:isDefinedBy :NFDI_0000010 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0000010 "is agent of"@en)
 
-# Object Property: :NFDI_0000100 (isDescribedBy)
+# Object Property: :NFDI_0000100 (is subject of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000100 "inverse of property 'is about'"@en)
 AnnotationAssertion(rdfs:isDefinedBy :NFDI_0000100 "https://nfdi.fiz-karlsruhe.de/ontology")
@@ -607,9 +536,4 @@ SubClassOf(:NFDI_0000005 <https://schema.org/Service>)
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service"@de)
 
 
-DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Publisher") Body(ClassAtom(:Agent Variable(:a)) ClassAtom(:Resource Variable(:r)) ClassAtom(<http://purl.obolibrary.org/obo/IAO_0000444> Variable(:p)) ClassAtom(:PublisherRole Variable(:pr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:a) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:r) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(:a) Variable(:pr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(:pr) Variable(:p)))Head(ObjectPropertyAtom(:publisherOf Variable(:a) Variable(:r))))
-DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Contact Point of Resource") Body(ClassAtom(:Agent Variable(:a)) ClassAtom(:Resource Variable(:r)) ClassAtom(:Contacting Variable(:p)) ClassAtom(:ContactPointRole Variable(:cr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(:a) Variable(:cr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:a) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:r) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(:cr) Variable(:p)))Head(ObjectPropertyAtom(:contactPointOf Variable(:a) Variable(:r))))
-DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Contact Point of Project") Body(ClassAtom(:Agent Variable(:a)) ClassAtom(:Project Variable(:p)) ClassAtom(:ContactPointRole Variable(:cr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(:a) Variable(:cr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:a) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(:cr) Variable(:p)))Head(ObjectPropertyAtom(:contactPointOf Variable(:a) Variable(:p))))
-DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Contributor") Body(ClassAtom(:Agent Variable(:a)) ClassAtom(:Resource Variable(:r)) ClassAtom(:Contributing Variable(:p)) ClassAtom(:ContributorRole Variable(:cr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:a) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:r) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(:a) Variable(:cr)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(:cr) Variable(:p)))Head(ObjectPropertyAtom(:contributorOf Variable(:a) Variable(:r))))
-DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "Funding Organization") Body(ClassAtom(:Organization Variable(:o)) ClassAtom(:Project Variable(:p)) ClassAtom(:FundingOrganizationRole Variable(:f)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(:o) Variable(:f)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000054> Variable(:f) Variable(:p)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000056> Variable(:o) Variable(:p)))Head(ObjectPropertyAtom(:fundingOrganization Variable(:p) Variable(:o))))
 )

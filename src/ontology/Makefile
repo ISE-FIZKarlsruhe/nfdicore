@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                d87c260a832829c9541765607f55145ea1bec4d6cde03008989bb7afee8d2c60
+CONFIG_HASH=                75d523458cd1a94bad428efe46a64a1dc77305e52a85a4f25139390abd395ef4
 
 
 # ----------------------------------------
@@ -375,6 +375,14 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 		$(ANNOTATE_CONVERT_FILE); fi
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
+
+## Module for ontology: iao
+
+$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/iao_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
 
 ## Module for ontology: schema
 

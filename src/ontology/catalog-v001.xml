@@ -2,9 +2,7 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
 <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
 
-  
- 
-  
+  <!-- uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/bfo_import.owl" uri="imports/bfo_import.owl"/ -->  
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl" uri="imports/iao_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl" uri="imports/schema_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl" uri="imports/swo_import.owl"/>
