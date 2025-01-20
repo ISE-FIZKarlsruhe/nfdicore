@@ -304,11 +304,11 @@ AnnotationAssertion(:NFDI_0000012 :relatedProject "relatedProject")
 ObjectPropertyDomain(:relatedProject ObjectUnionOf(:Project :Resource))
 ObjectPropertyRange(:relatedProject :Project)
 
-# Object Property: :representedCollection (has represented collection)
+# Object Property: :representedCollection (represents collection)
 
 AnnotationAssertion(rdfs:comment :representedCollection "The property is a relationship between a dataset and a collection it represents."@en)
 AnnotationAssertion(rdfs:isDefinedBy :representedCollection <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :representedCollection "has represented collection"@en)
+AnnotationAssertion(rdfs:label :representedCollection "represents collection"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :representedCollection "a dataportal is about some collection of pieces of art")
 AnnotationAssertion(:NFDI_0000012 :representedCollection "representedCollection")
 SubObjectPropertyOf(:representedCollection <http://purl.obolibrary.org/obo/IAO_0000219>)
