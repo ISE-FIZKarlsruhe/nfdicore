@@ -38,7 +38,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000577>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000579>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000708>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020015>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020017>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020020>))
@@ -734,7 +733,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0000578> "CRID")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000578> "Original proposal from Bjoern, discussions at IAO calls"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000578> "centrally registered identifier"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> <http://purl.obolibrary.org/obo/IAO_0000030>)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/IAO_0000577>))
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000579>)))
 
@@ -770,19 +768,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000708> "ORCID identifier"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000708> <http://purl.obolibrary.org/obo/IAO_0000578>)
 
-# Class: <http://purl.obolibrary.org/obo/IAO_0020015> (personal name)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020015> "An identifier referring to an individual entity that is ascribed personhood by the user of the identifier."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020015> "Justin Whorton"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020015> "Mathias Brochhausen"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020015> "http://en.wikipedia.org/wiki/Personal_name")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020015> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Personal names \"today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.\" (http://en.wikipedia.org/wiki/Personal_name)"@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Personal names to not include names of fictional characters, e.g. Sherlock Holmes."@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Sep 29, 2016: The comment that including the wikipedia definition of personal name is not to be interpreted in a way that restricts this class to only contain strings of letters. A numerical or alphanumerical identifier that denotes a human is being is a personal name, too. (MB)"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020015> "personal name"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020015> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
 # Class: <http://purl.obolibrary.org/obo/IAO_0020016> (given name)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020016> "A personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child's parents at or near birth, in contrast to an inherited one such as a family name"@en)
@@ -792,7 +777,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020016> "http://en.wikipedia.org/wiki/Given_name")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020016> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020016> "given name"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020016> <http://purl.obolibrary.org/obo/IAO_0020015>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020017> (family name)
 
@@ -804,7 +788,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020017> "http://en.wikipedia.org/wiki/Family_name")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020017> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020017> "family name"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020017> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020020> (code set)
 

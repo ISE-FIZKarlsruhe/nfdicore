@@ -63,7 +63,7 @@ $(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl
 
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl 
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		remove --term http://purl.obolibrary.org/obo/IAO_0020000 \
+		remove --term http://purl.obolibrary.org/obo/IAO_0020000 --preserve-structure false \
 		extract -T $(IMPORTDIR)/iao_terms.txt --copy-ontology-annotations false --force true --individuals exclude --method STAR \
 		remove --select "RO:*" \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
