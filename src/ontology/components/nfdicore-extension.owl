@@ -1,559 +1,830 @@
-Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/>)
-Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(dcterms:=<http://purl.org/dc/terms/>)
-
-
-Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl>
-Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl>)
-Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl>)
-Annotation(dcterms:description "This module extends nfdicore main module with axioms for simplification in data querying and ease of use. This module also contains SWRL rules."@en)
-Annotation(dcterms:title "Extension module of NFDIcore ontology"@en)
-
-Declaration(Class(:Collection))
-Declaration(Class(:NFDI_0010101))
-Declaration(Class(:ProgrammingLanguage))
-Declaration(Class(:TechnologicalMeans))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
-Declaration(ObjectProperty(:NFDI_1000009))
-Declaration(ObjectProperty(:NFDI_1000010))
-Declaration(ObjectProperty(:NFDI_1000100))
-Declaration(ObjectProperty(:bestPractice))
-Declaration(ObjectProperty(:bestPracticeOf))
-Declaration(ObjectProperty(:contactPoint))
-Declaration(ObjectProperty(:contactPointOf))
-Declaration(ObjectProperty(:contributor))
-Declaration(ObjectProperty(:contributorOf))
-Declaration(ObjectProperty(:dataset))
-Declaration(ObjectProperty(:datasetOf))
-Declaration(ObjectProperty(:exportFormat))
-Declaration(ObjectProperty(:exportFormatOf))
-Declaration(ObjectProperty(:fundingOrganization))
-Declaration(ObjectProperty(:fundingOrganizationOf))
-Declaration(ObjectProperty(:license))
-Declaration(ObjectProperty(:licenseOf))
-Declaration(ObjectProperty(:location))
-Declaration(ObjectProperty(:mediaType))
-Declaration(ObjectProperty(:mediaTypeOf))
-Declaration(ObjectProperty(:parentOrganization))
-Declaration(ObjectProperty(:partnerOrganization))
-Declaration(ObjectProperty(:programmingLanguage))
-Declaration(ObjectProperty(:programmingLanguageOf))
-Declaration(ObjectProperty(:publisher))
-Declaration(ObjectProperty(:publisherOf))
-Declaration(ObjectProperty(:relatedProject))
-Declaration(ObjectProperty(:representedCollection))
-Declaration(ObjectProperty(:representedCollectionOf))
-Declaration(ObjectProperty(:software))
-Declaration(ObjectProperty(:softwareOf))
-Declaration(ObjectProperty(:sparqlEndpoint))
-Declaration(ObjectProperty(:sparqlEndpointOf))
-Declaration(ObjectProperty(:specification))
-Declaration(ObjectProperty(:specificationOf))
-Declaration(ObjectProperty(:standard))
-Declaration(ObjectProperty(:standardOf))
-Declaration(ObjectProperty(:subjectArea))
-Declaration(ObjectProperty(:subjectAreaOf))
-Declaration(ObjectProperty(:subsidiaryOrganization))
-Declaration(ObjectProperty(:technology))
-Declaration(ObjectProperty(:technologyOf))
-Declaration(ObjectProperty(:url))
-Declaration(ObjectProperty(:urlOf))
-Declaration(DataProperty(:birthDate))
-Declaration(DataProperty(:deathDate))
-Declaration(DataProperty(:dissolutionDate))
-Declaration(DataProperty(:emailAddress))
-Declaration(DataProperty(:endDate))
-Declaration(DataProperty(:fileExtension))
-Declaration(DataProperty(:foundationDate))
-Declaration(DataProperty(:startDate))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/RO_0001900>))
-
-############################
-#   Object Properties
-############################
-
-# Object Property: :NFDI_1000009 (has agent)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_1000009 "The property is a relationship between a resource and an agent."@en)
-AnnotationAssertion(rdfs:isDefinedBy :NFDI_1000009 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_1000009 "has agent"@en)
-InverseObjectProperties(:NFDI_1000009 :NFDI_1000010)
-
-# Object Property: :NFDI_1000010 (is agent of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_1000010 "inverse of property 'has agent'")
-AnnotationAssertion(rdfs:isDefinedBy :NFDI_1000010 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_1000010 "is agent of"@en)
-
-# Object Property: :NFDI_1000100 (is subject of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_1000100 "inverse of property 'is about'"@en)
-AnnotationAssertion(rdfs:isDefinedBy :NFDI_1000100 "https://nfdi.fiz-karlsruhe.de/ontology")
-
-# Object Property: :bestPractice (has best practice)
-
-AnnotationAssertion(rdfs:comment :bestPractice "The property is a relationship between a resource and the specified best practice."@en)
-AnnotationAssertion(rdfs:isDefinedBy :bestPractice <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :bestPractice "has best practice"@en)
-AnnotationAssertion(:NFDI_1000012 :bestPractice "bestPractice")
-SubObjectPropertyOf(:bestPractice :NFDI_1000100)
-InverseObjectProperties(:bestPractice :bestPracticeOf)
-
-# Object Property: :bestPracticeOf (best practice of)
-
-AnnotationAssertion(rdfs:comment :bestPracticeOf "inverse of  property \"best practice\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :bestPracticeOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :bestPracticeOf "best practice of"@en)
-SubObjectPropertyOf(:bestPracticeOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :contactPoint (has contact point)
-
-AnnotationAssertion(rdfs:comment :contactPoint "The property is a relationship between a resource and a contact point."@en)
-AnnotationAssertion(rdfs:isDefinedBy :contactPoint <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :contactPoint "has contact point"@en)
-AnnotationAssertion(:NFDI_1000012 :contactPoint "contectPoint")
-SubObjectPropertyOf(:contactPoint :NFDI_1000009)
-InverseObjectProperties(:contactPoint :contactPointOf)
-ObjectPropertyRange(:contactPoint :Agent)
-
-# Object Property: :contactPointOf (contact point of)
-
-AnnotationAssertion(rdfs:comment :contactPointOf "inverse of  property \"has contact point\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :contactPointOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :contactPointOf "contact point of"@en)
-SubObjectPropertyOf(:contactPointOf :NFDI_1000010)
-
-# Object Property: :contributor (has contributor)
-
-AnnotationAssertion(rdfs:comment :contributor "The property related a resource to a person or an organization responsible for making contributions to a resource."@en)
-AnnotationAssertion(rdfs:isDefinedBy :contributor <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :contributor "has contributor"@en)
-AnnotationAssertion(:NFDI_1000012 :contributor "contributor")
-SubObjectPropertyOf(:contributor :NFDI_1000009)
-InverseObjectProperties(:contributor :contributorOf)
-ObjectPropertyRange(:contributor :Agent)
-
-# Object Property: :contributorOf (contributor of)
-
-AnnotationAssertion(rdfs:comment :contributorOf "inverse of property \"has contributor\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :contributorOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :contributorOf "contributor of"@en)
-SubObjectPropertyOf(:contributorOf :NFDI_1000010)
-
-# Object Property: :dataset (has data set)
-
-AnnotationAssertion(rdfs:comment :dataset "The property is a relation between a resource and a data set."@en)
-AnnotationAssertion(rdfs:isDefinedBy :dataset <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :dataset "has data set"@en)
-AnnotationAssertion(:NFDI_1000012 :dataset "dataset")
-SubObjectPropertyOf(:dataset :NFDI_1000100)
-InverseObjectProperties(:dataset :datasetOf)
-ObjectPropertyRange(:dataset :Dataset)
-
-# Object Property: :datasetOf (data set of)
-
-AnnotationAssertion(rdfs:comment :datasetOf "inverse of  property \"has data set\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :datasetOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :datasetOf "data set of"@en)
-AnnotationAssertion(:NFDI_1000012 :datasetOf "dataset")
-SubObjectPropertyOf(:datasetOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :exportFormat (has file format)
-
-AnnotationAssertion(rdfs:comment :exportFormat "The property relates a resource to the format available for the export of a resource."@en)
-AnnotationAssertion(rdfs:isDefinedBy :exportFormat <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :exportFormat "has file format"@en)
-AnnotationAssertion(:NFDI_1000012 :exportFormat "exportFormat")
-SubObjectPropertyOf(:exportFormat :NFDI_1000100)
-InverseObjectProperties(:exportFormat :exportFormatOf)
-ObjectPropertyRange(:exportFormat <http://purl.obolibrary.org/obo/IAO_0000098>)
-
-# Object Property: :exportFormatOf (file format of)
-
-AnnotationAssertion(rdfs:comment :exportFormatOf "inverse of  property \"has file format\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :exportFormatOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :exportFormatOf "file format of"@en)
-AnnotationAssertion(:NFDI_1000012 :exportFormatOf "exportFormatOf")
-SubObjectPropertyOf(:exportFormatOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :fundingOrganization (has funding organization)
-
-AnnotationAssertion(rdfs:comment :fundingOrganization "The property relates a project to the organization that provided funding for it."@en)
-AnnotationAssertion(rdfs:isDefinedBy :fundingOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :fundingOrganization "has funding organization"@en)
-AnnotationAssertion(:NFDI_1000012 :fundingOrganization "fundingOrganization")
-SubObjectPropertyOf(:fundingOrganization :NFDI_1000009)
-InverseObjectProperties(:fundingOrganization :fundingOrganizationOf)
-ObjectPropertyRange(:fundingOrganization :Organization)
-
-# Object Property: :fundingOrganizationOf (funding organization of)
-
-AnnotationAssertion(rdfs:comment :fundingOrganizationOf "inverse of property \"has funding organization\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :fundingOrganizationOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :fundingOrganizationOf "funding organization of"@en)
-SubObjectPropertyOf(:fundingOrganizationOf :NFDI_1000010)
-ObjectPropertyDomain(:fundingOrganizationOf :Organization)
-
-# Object Property: :license (has license)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :license "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).")
-AnnotationAssertion(rdfs:comment :license "The property is a relationship between a resource and a license file.")
-AnnotationAssertion(rdfs:isDefinedBy :license <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :license "has license"@en)
-AnnotationAssertion(:NFDI_1000012 :license "license")
-SubObjectPropertyOf(:license :NFDI_1000100)
-InverseObjectProperties(:license :licenseOf)
-ObjectPropertyRange(:license :License)
-
-# Object Property: :licenseOf (license of)
-
-AnnotationAssertion(rdfs:comment :licenseOf "inverse of property \"has license\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :licenseOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :licenseOf "license of"@en)
-SubObjectPropertyOf(:licenseOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :location (has location)
-
-AnnotationAssertion(rdfs:comment :location "The property is a relationship between a thing and a place its located at. "@en)
-AnnotationAssertion(rdfs:isDefinedBy :location <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :location "has location"@en)
-AnnotationAssertion(:NFDI_1000012 :location "location")
-
-# Object Property: :mediaType (has media type)
-
-AnnotationAssertion(rdfs:comment :mediaType "The property relates a resource to its data format."@en)
-AnnotationAssertion(rdfs:isDefinedBy :mediaType <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :mediaType "has media type"@en)
-AnnotationAssertion(:NFDI_1000012 :mediaType "mediaType")
-SubObjectPropertyOf(:mediaType :NFDI_1000100)
-InverseObjectProperties(:mediaType :mediaTypeOf)
-ObjectPropertyRange(:mediaType :MediaType)
-
-# Object Property: :mediaTypeOf (media type of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :mediaTypeOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :mediaTypeOf "inverse of  property \"has media type\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :mediaTypeOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :mediaTypeOf "media type of"@en)
-SubObjectPropertyOf(:mediaTypeOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :parentOrganization (has parent organization)
-
-AnnotationAssertion(rdfs:comment :parentOrganization "The property is a parental relationship between organizations."@en)
-AnnotationAssertion(rdfs:isDefinedBy :parentOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :parentOrganization "has parent organization"@en)
-AnnotationAssertion(:NFDI_1000012 :parentOrganization "parentOrganization")
-SubObjectPropertyOf(:parentOrganization :NFDI_1000009)
-ObjectPropertyRange(:parentOrganization :Organization)
-
-# Object Property: :partnerOrganization (has partner organization)
-
-AnnotationAssertion(rdfs:comment :partnerOrganization "The property is a partner relationship between organizations. The property is symmetric."@en)
-AnnotationAssertion(rdfs:isDefinedBy :partnerOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :partnerOrganization "has partner organization"@en)
-AnnotationAssertion(:NFDI_1000012 :partnerOrganization "partnerOrganization")
-SubObjectPropertyOf(:partnerOrganization :NFDI_1000009)
-SymmetricObjectProperty(:partnerOrganization)
-ObjectPropertyRange(:partnerOrganization :Organization)
-
-# Object Property: :programmingLanguage (has programming language)
-
-AnnotationAssertion(rdfs:comment :programmingLanguage "The property links software to a programming language its written in.")
-AnnotationAssertion(rdfs:isDefinedBy :programmingLanguage <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :programmingLanguage "has programming language"@en)
-AnnotationAssertion(:NFDI_1000012 :programmingLanguage "programmingLanguage")
-SubObjectPropertyOf(:programmingLanguage :NFDI_1000100)
-InverseObjectProperties(:programmingLanguage :programmingLanguageOf)
-ObjectPropertyRange(:programmingLanguage :ProgrammingLanguage)
-
-# Object Property: :programmingLanguageOf (programming language of)
-
-AnnotationAssertion(rdfs:comment :programmingLanguageOf "inverse of  property \"has programming language\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :programmingLanguageOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :programmingLanguageOf "programming language of"@en)
-SubObjectPropertyOf(:programmingLanguageOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :publisher (has publisher)
-
-AnnotationAssertion(rdfs:comment :publisher "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en)
-AnnotationAssertion(rdfs:isDefinedBy :publisher <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :publisher "has publisher"@en)
-AnnotationAssertion(:NFDI_1000012 :publisher "publisher")
-SubObjectPropertyOf(:publisher :NFDI_1000009)
-InverseObjectProperties(:publisher :publisherOf)
-ObjectPropertyRange(:publisher :Agent)
-
-# Object Property: :publisherOf (publisher of)
-
-AnnotationAssertion(rdfs:comment :publisherOf "inverse of  property \"has publisher\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :publisherOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :publisherOf "publisher of"@en)
-SubObjectPropertyOf(:publisherOf :NFDI_1000010)
-
-# Object Property: :relatedProject (has related project)
-
-AnnotationAssertion(rdfs:comment :relatedProject "The property is a relationship between a project or a resource and related projects."@en)
-AnnotationAssertion(rdfs:isDefinedBy :relatedProject <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :relatedProject "has related project"@en)
-AnnotationAssertion(:NFDI_1000012 :relatedProject "relatedProject")
-ObjectPropertyDomain(:relatedProject ObjectUnionOf(:Project :Resource))
-ObjectPropertyRange(:relatedProject :Project)
-
-# Object Property: :representedCollection (represents collection)
-
-AnnotationAssertion(rdfs:comment :representedCollection "The property is a relationship between a dataset and a collection it represents."@en)
-AnnotationAssertion(rdfs:isDefinedBy :representedCollection <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :representedCollection "represents collection"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :representedCollection "a dataportal is about some collection of pieces of art")
-AnnotationAssertion(:NFDI_1000012 :representedCollection "representedCollection")
-SubObjectPropertyOf(:representedCollection <http://purl.obolibrary.org/obo/IAO_0000219>)
-InverseObjectProperties(:representedCollection :representedCollectionOf)
-ObjectPropertyRange(:representedCollection :Collection)
-
-# Object Property: :representedCollectionOf (represented collection of)
-
-AnnotationAssertion(rdfs:comment :representedCollectionOf "inverse of  property \"represented collection\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :representedCollectionOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :representedCollectionOf "represented collection of"@en)
-SubObjectPropertyOf(:representedCollectionOf <http://purl.obolibrary.org/obo/IAO_0000235>)
-
-# Object Property: :software (has software)
-
-AnnotationAssertion(rdfs:comment :software "The property is a relationship between a resource and a software it uses."@en)
-AnnotationAssertion(rdfs:isDefinedBy :software <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :software "has software"@en)
-AnnotationAssertion(:NFDI_1000012 :software "software")
-SubObjectPropertyOf(:software :NFDI_1000100)
-InverseObjectProperties(:software :softwareOf)
-ObjectPropertyRange(:software :Software)
-
-# Object Property: :softwareOf (software of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :softwareOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :softwareOf "inverse of  property \"has sofware\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :softwareOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :softwareOf "software of"@en)
-SubObjectPropertyOf(:softwareOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :sparqlEndpoint (has sparql endpoint)
-
-AnnotationAssertion(rdfs:comment :sparqlEndpoint "The property relates a data resource to its SPARQL Endpoint. "@en)
-AnnotationAssertion(rdfs:isDefinedBy :sparqlEndpoint <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :sparqlEndpoint "has sparql endpoint"@en)
-AnnotationAssertion(:NFDI_1000012 :sparqlEndpoint "sparqlEndpoint")
-SubObjectPropertyOf(:sparqlEndpoint :NFDI_1000100)
-InverseObjectProperties(:sparqlEndpoint :sparqlEndpointOf)
-
-# Object Property: :sparqlEndpointOf (sparql endpoint of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :sparqlEndpointOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :sparqlEndpointOf "inverse of  property \"has sparql endpoint\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :sparqlEndpointOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :sparqlEndpointOf "sparql endpoint of"@en)
-SubObjectPropertyOf(:sparqlEndpointOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :specification (has specification)
-
-AnnotationAssertion(rdfs:comment :specification "The property is a relationship between a resource and the international standard or norm."@en)
-AnnotationAssertion(rdfs:isDefinedBy :specification <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :specification "has specification"@en)
-AnnotationAssertion(:NFDI_1000012 :specification "specification")
-SubObjectPropertyOf(:specification :NFDI_1000100)
-InverseObjectProperties(:specification :specificationOf)
-ObjectPropertyRange(:specification <http://purl.obolibrary.org/obo/IAO_0000033>)
-
-# Object Property: :specificationOf (specification of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :specificationOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :specificationOf "inverse of  property \"has specification\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :specificationOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :specificationOf "specification of"@en)
-SubObjectPropertyOf(:specificationOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :standard (has standard)
-
-AnnotationAssertion(rdfs:comment :standard "The property relates a resource to the standard it relies on."@en)
-AnnotationAssertion(rdfs:isDefinedBy :standard <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :standard "has standard"@en)
-AnnotationAssertion(:NFDI_1000012 :standard "standard")
-SubObjectPropertyOf(:standard :NFDI_1000100)
-InverseObjectProperties(:standard :standardOf)
-ObjectPropertyRange(:standard :Standard)
-
-# Object Property: :standardOf (standard of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :standardOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :standardOf "inverse of  property \"has standard\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :standardOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :standardOf "standard of"@en)
-SubObjectPropertyOf(:standardOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :subjectArea (has subject area)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> :subjectArea "to check for BFO superproperty")
-AnnotationAssertion(rdfs:comment :subjectArea "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en)
-AnnotationAssertion(rdfs:isDefinedBy :subjectArea <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :subjectArea "has subject area"@en)
-AnnotationAssertion(:NFDI_1000012 :subjectArea "subjectArea")
-SubObjectPropertyOf(:subjectArea :NFDI_1000100)
-InverseObjectProperties(:subjectArea :subjectAreaOf)
-ObjectPropertyRange(:subjectArea :AcademicDiscipline)
-
-# Object Property: :subjectAreaOf (subject area of)
-
-AnnotationAssertion(rdfs:comment :subjectAreaOf "inverse of  property \"has subject area\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :subjectAreaOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :subjectAreaOf "subject area of"@en)
-SubObjectPropertyOf(:subjectAreaOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :subsidiaryOrganization (has subsidiary organization)
-
-AnnotationAssertion(rdfs:comment :subsidiaryOrganization "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en)
-AnnotationAssertion(rdfs:isDefinedBy :subsidiaryOrganization <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :subsidiaryOrganization "has subsidiary organization"@en)
-AnnotationAssertion(:NFDI_1000012 :subsidiaryOrganization "subsidiaryOrganization")
-SubObjectPropertyOf(:subsidiaryOrganization :NFDI_1000009)
-ObjectPropertyRange(:subsidiaryOrganization :Organization)
-
-# Object Property: :technology (has technology)
-
-AnnotationAssertion(rdfs:comment :technology "The property is a relationship between a resource and a technology it uses. "@en)
-AnnotationAssertion(rdfs:isDefinedBy :technology <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :technology "has technology"@en)
-AnnotationAssertion(:NFDI_1000012 :technology "technology")
-SubObjectPropertyOf(:technology :NFDI_1000100)
-InverseObjectProperties(:technology :technologyOf)
-ObjectPropertyRange(:technology :TechnologicalMeans)
-
-# Object Property: :technologyOf (technology of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :technologyOf "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :technologyOf "inverse of  property \"has technology\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :technologyOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :technologyOf "technology of"@en)
-SubObjectPropertyOf(:technologyOf <http://purl.obolibrary.org/obo/IAO_0000136>)
-
-# Object Property: :url (has url)
-
-AnnotationAssertion(rdfs:comment :url "The property is a relationship between a thing and a url associated with the thing."@en)
-AnnotationAssertion(rdfs:isDefinedBy :url <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :url "has url"@en)
-AnnotationAssertion(:NFDI_1000012 :url "url")
-SubObjectPropertyOf(:url <http://purl.obolibrary.org/obo/IAO_0000235>)
-InverseObjectProperties(:url :urlOf)
-
-# Object Property: :urlOf (is url of)
-
-AnnotationAssertion(rdfs:comment :urlOf "inverse of  property \"url\""@en)
-AnnotationAssertion(rdfs:isDefinedBy :urlOf <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :urlOf "is url of"@en)
-AnnotationAssertion(:NFDI_1000012 :urlOf "urlOf")
-SubObjectPropertyOf(:urlOf <http://purl.obolibrary.org/obo/IAO_0000219>)
-
-
-############################
-#   Data Properties
-############################
-
-# Data Property: :birthDate (birth date)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :birthDate "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing."@en)
-AnnotationAssertion(rdfs:comment :birthDate "The property refers to the date on which a person was born."@en)
-AnnotationAssertion(rdfs:isDefinedBy :birthDate <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :birthDate "birth date"@en)
-DataPropertyDomain(:birthDate :Person)
-DataPropertyRange(:birthDate rdfs:Literal)
-
-# Data Property: :deathDate (death date)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :deathDate "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing.")
-AnnotationAssertion(rdfs:comment :deathDate "The property refers to the date on which a person passed away."@en)
-AnnotationAssertion(rdfs:isDefinedBy :deathDate <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :deathDate "death date"@en)
-DataPropertyDomain(:deathDate :Person)
-DataPropertyRange(:deathDate rdfs:Literal)
-
-# Data Property: :dissolutionDate (dissolution date)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :dissolutionDate "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing.")
-AnnotationAssertion(rdfs:comment :dissolutionDate "The property refers to the date on which the organization ceased to exist or was formally dissolved."@en)
-AnnotationAssertion(rdfs:isDefinedBy :dissolutionDate <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :dissolutionDate "dissolution date"@en)
-DataPropertyDomain(:dissolutionDate :Organization)
-DataPropertyRange(:dissolutionDate rdfs:Literal)
-
-# Data Property: :emailAddress (email address)
-
-AnnotationAssertion(rdfs:comment :emailAddress "The property relates an agent to their email address."@en)
-AnnotationAssertion(rdfs:isDefinedBy :emailAddress <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :emailAddress "email address"@en)
-DataPropertyDomain(:emailAddress :Agent)
-DataPropertyRange(:emailAddress rdfs:Literal)
-
-# Data Property: :endDate (end date)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :endDate "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing.")
-AnnotationAssertion(rdfs:comment :endDate "The property refers to the moment in time when an event ends."@en)
-AnnotationAssertion(rdfs:isDefinedBy :endDate <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :endDate "end date"@en)
-DataPropertyDomain(:endDate :Event)
-DataPropertyRange(:endDate rdfs:Literal)
-
-# Data Property: :fileExtension (file extension)
-
-AnnotationAssertion(rdfs:comment :fileExtension "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en)
-AnnotationAssertion(rdfs:isDefinedBy :fileExtension <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :fileExtension "file extension")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :fileExtension "mp4")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :fileExtension "ttl")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :fileExtension "txt")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :fileExtension "xml")
-DataPropertyDomain(:fileExtension :Resource)
-
-# Data Property: :foundationDate (foundation date)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :foundationDate "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing.")
-AnnotationAssertion(rdfs:comment :foundationDate "The property refers to the specific date on which the organization was officially established or founded."@en)
-AnnotationAssertion(rdfs:isDefinedBy :foundationDate <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :foundationDate "foundation date"@en)
-DataPropertyDomain(:foundationDate :Organization)
-DataPropertyRange(:foundationDate rdfs:Literal)
-
-# Data Property: :startDate (start date)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :startDate "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing.")
-AnnotationAssertion(rdfs:comment :startDate "The property refers to the moment in time when an event begins."@en)
-AnnotationAssertion(rdfs:isDefinedBy :startDate <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :startDate "start date"@en)
-DataPropertyDomain(:startDate :Event)
-DataPropertyRange(:startDate rdfs:Literal)
-
-
-
-############################
-#   Classes
-############################
-
-# Class: :CreativeWork (creative work)
-
-SubClassOf(:CreativeWork ObjectIntersectionOf(:Resource <https://schema.org/CreativeWork>))
-
-# Class: :NFDI_0001004 (contributor)
-
-EquivalentClasses(:NFDI_0001004 ObjectIntersectionOf(:Person ObjectSomeValuesFrom(ObjectInverseOf(:contributor) :Resource)))
-
-# Class: :NFDI_0001005 (service product)
-
-SubClassOf(:NFDI_0001005 <https://schema.org/Service>)
-
-# Class: :NFDI_0010101 (service)
-
-AnnotationAssertion(rdfs:label :NFDI_0010101 "service"@de)
-
-
-)
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl#"
+     xml:base="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl"
+     xmlns:co="https://w3id.org/pmd/co/"
+     xmlns:dce="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:edam="http://purl.obolibrary.org/obo/edam#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/"
+     xmlns:edamontology="http://edamontology.org/">
+    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl">
+        <owl:imports rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl"/>
+        <owl:imports rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl"/>
+        <dcterms:description xml:lang="en">This module extends nfdicore main module with axioms for simplification in data querying and ease of use. This module also contains SWRL rules.</dcterms:description>
+        <dcterms:title xml:lang="en">Extension module of NFDIcore ontology</dcterms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and the specified best practice.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has best practice</rdfs:label>
+        <ontology:NFDI_0000170>bestPractice</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;best practice&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">best practice of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and a contact point.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has contact point</rdfs:label>
+        <ontology:NFDI_0000170>contectPoint</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000168"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has contact point&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">contact point of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
+        <rdfs:comment xml:lang="en">The property related a resource to a person or an organization responsible for making contributions to a resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has contributor</rdfs:label>
+        <ontology:NFDI_0000170>contributor</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000168"/>
+        <rdfs:comment xml:lang="en">inverse of property &quot;has contributor&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">contributor of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000126"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
+        <rdfs:comment xml:lang="en">The property is a relation between a resource and a data set.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has data set</rdfs:label>
+        <ontology:NFDI_0000170>dataset</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000126 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000126">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has data set&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">data set of</rdfs:label>
+        <ontology:NFDI_0000170>dataset</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000133"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000098"/>
+        <rdfs:comment xml:lang="en">The property relates a resource to the format available for the export of a resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has file format</rdfs:label>
+        <ontology:NFDI_0000170>exportFormat</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000133 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000133">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has file format&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">file format of</rdfs:label>
+        <ontology:NFDI_0000170>exportFormatOf</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
+        <rdfs:comment xml:lang="en">The property relates a project to the organization that provided funding for it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has funding organization</rdfs:label>
+        <ontology:NFDI_0000170>fundingOrganization</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000168"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
+        <rdfs:comment xml:lang="en">inverse of property &quot;has funding organization&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">funding organization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000143"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141"/>
+        <obo:IAO_0000116>2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
+        <rdfs:comment>The property is a relationship between a resource and a license file.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has license</rdfs:label>
+        <ontology:NFDI_0000170>license</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000143 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000143">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:comment xml:lang="en">inverse of property &quot;has license&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">license of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144">
+        <rdfs:comment xml:lang="en">The property is a relationship between a thing and a place its located at. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has location</rdfs:label>
+        <ontology:NFDI_0000170>location</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000147"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145"/>
+        <rdfs:comment xml:lang="en">The property relates a resource to its data format.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has media type</rdfs:label>
+        <ontology:NFDI_0000170>mediaType</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000147 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000147">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has media type&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">media type of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000168"/>
+        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a resource and an agent.</obo:IAO_0000115>
+        <rdfs:isDefinedBy>https://nfdi.fiz-karlsruhe.de/ontology</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has agent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000168 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000168">
+        <obo:IAO_0000115>inverse of property &apos;has agent&apos;</obo:IAO_0000115>
+        <rdfs:isDefinedBy>https://nfdi.fiz-karlsruhe.de/ontology</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">is agent of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180">
+        <obo:IAO_0000115 xml:lang="en">inverse of property &apos;is about&apos;</obo:IAO_0000115>
+        <rdfs:isDefinedBy>https://nfdi.fiz-karlsruhe.de/ontology</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
+        <rdfs:comment xml:lang="en">The property is a parental relationship between organizations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has parent organization</rdfs:label>
+        <ontology:NFDI_0000170>parentOrganization</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
+        <rdfs:comment xml:lang="en">The property is a partner relationship between organizations. The property is symmetric.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has partner organization</rdfs:label>
+        <ontology:NFDI_0000170>partnerOrganization</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000188"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186"/>
+        <rdfs:comment>The property links software to a programming language its written in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has programming language</rdfs:label>
+        <ontology:NFDI_0000170>programmingLanguage</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000188 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000188">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has programming language&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">programming language of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and an organization or a person responsible for publishing it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has publisher</rdfs:label>
+        <ontology:NFDI_0000170>publisher</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000168"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has publisher&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">publisher of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a project or a resource and related projects.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has related project</rdfs:label>
+        <ontology:NFDI_0000170>relatedProject</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000195 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000195">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000196"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a dataset and a collection it represents.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">represents collection</rdfs:label>
+        <skos:example>a dataportal is about some collection of pieces of art</skos:example>
+        <ontology:NFDI_0000170>representedCollection</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000196 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000196">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;represented collection&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">represented collection of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000200"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and a software it uses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has software</rdfs:label>
+        <ontology:NFDI_0000170>software</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000200 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000200">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has sofware&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">software of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202"/>
+        <rdfs:comment xml:lang="en">The property relates a data resource to its SPARQL Endpoint. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has sparql endpoint</rdfs:label>
+        <ontology:NFDI_0000170>sparqlEndpoint</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has sparql endpoint&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">sparql endpoint of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000205"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and the international standard or norm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has specification</rdfs:label>
+        <ontology:NFDI_0000170>specification</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000205 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000205">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has specification&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">specification of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000208"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206"/>
+        <rdfs:comment xml:lang="en">The property relates a resource to the standard it relies on.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has standard</rdfs:label>
+        <ontology:NFDI_0000170>standard</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000208 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000208">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has standard&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">standard of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000212"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
+        <obo:IAO_0000232>to check for BFO superproperty</obo:IAO_0000232>
+        <rdfs:comment xml:lang="en">The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has subject area</rdfs:label>
+        <ontology:NFDI_0000170>subjectArea</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000212 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000212">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has subject area&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">subject area of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000167"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
+        <rdfs:comment xml:lang="en">The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has subsidiary organization</rdfs:label>
+        <ontology:NFDI_0000170>subsidiaryOrganization</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000180"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000217"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and a technology it uses. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has technology</rdfs:label>
+        <ontology:NFDI_0000170>technology</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000217 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000217">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <obo:IAO_0000116 xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has technology&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">technology of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000220 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000220">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000221"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a thing and a url associated with the thing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">has url</rdfs:label>
+        <ontology:NFDI_0000170>url</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000221 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000221">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;url&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">is url of</rdfs:label>
+        <ontology:NFDI_0000170>urlOf</ontology:NFDI_0000170>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000105 -->
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000105">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <obo:IAO_0000116 xml:lang="en">The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">The property refers to the date on which a person was born.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">birth date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000127 -->
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000127">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">The property refers to the date on which a person passed away.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">death date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000128 -->
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000128">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">The property refers to the date on which the organization ceased to exist or was formally dissolved.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">dissolution date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000129 -->
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000129">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The property relates an agent to their email address.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">email address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000130 -->
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000130">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">The property refers to the moment in time when an event ends.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">end date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000135 -->
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000135">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
+        <rdfs:comment xml:lang="en">An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don&apos;t use dot at start.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label>file extension</rdfs:label>
+        <skos:example>mp4</skos:example>
+        <skos:example>ttl</skos:example>
+        <skos:example>txt</skos:example>
+        <skos:example>xml</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000136 -->
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000136">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">The property refers to the specific date on which the organization was officially established or founded.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">foundation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000209 -->
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000209">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">The property refers to the moment in time when an event begins.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology"/>
+        <rdfs:label xml:lang="en">start date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008 -->
+
+    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
+                    <rdf:Description rdf:about="https://schema.org/CreativeWork"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000149 -->
+
+    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000149">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000150 -->
+
+    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000150">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Service"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000160">
+        <rdfs:label xml:lang="de">service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
