@@ -56,11 +56,15 @@ Declaration(Class(:NFDI_0000018))
 Declaration(Class(:NFDI_0000019))
 Declaration(Class(:NFDI_0000020))
 Declaration(Class(:NFDI_0000021))
+Declaration(Class(:NFDI_0000022))
 Declaration(Class(:NFDI_0000023))
 Declaration(Class(:NFDI_0000024))
+Declaration(Class(:NFDI_0000025))
 Declaration(Class(:NFDI_0000026))
 Declaration(Class(:NFDI_0000027))
 Declaration(Class(:NFDI_0000028))
+Declaration(Class(:NFDI_0000029))
+Declaration(Class(:NFDI_0000030))
 Declaration(Class(:NFDI_0000101))
 Declaration(Class(:Organization))
 Declaration(Class(:Person))
@@ -563,6 +567,14 @@ AnnotationAssertion(rdfs:comment :NFDI_0000021 "A workflow defines the logical o
 AnnotationAssertion(rdfs:label :NFDI_0000021 "workflow"@en)
 SubClassOf(:NFDI_0000021 :NFDI_0000011)
 
+# Class: :NFDI_0000022 (document)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> :NFDI_0000022 "A journal article, patent application, laboratory notebook, or a book")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000022 "A collection of information content entities intended to be understood together as a whole"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000022 "http://purl.obolibrary.org/obo/IAO_0000310")
+AnnotationAssertion(rdfs:label :NFDI_0000022 "document"@en)
+SubClassOf(:NFDI_0000022 <http://purl.obolibrary.org/obo/IAO_0000030>)
+
 # Class: :NFDI_0000023 (ontology)
 
 AnnotationAssertion(rdfs:label :NFDI_0000023 "ontology"@en)
@@ -574,6 +586,14 @@ SubClassOf(:NFDI_0000023 <http://purl.obolibrary.org/obo/IAO_0000027>)
 AnnotationAssertion(rdfs:comment :NFDI_0000024 "An ontology variant represents a self-contained, reusable subset of an ontology that provides a specific functionality while maintaining interoperability with the larger ontology. Typically, an ontology is released in different variants, which makes a variant a release artifact."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000024 "ontology variant"@en)
 SubClassOf(:NFDI_0000024 <http://purl.obolibrary.org/obo/IAO_8000000>)
+
+# Class: :NFDI_0000025 (patent)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> :NFDI_0000025 "US Patent 6,449,603")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000025 "A document that has been accepted by a patent authority"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000025 "http://purl.obolibrary.org/obo/IAO_0000313")
+AnnotationAssertion(rdfs:label :NFDI_0000025 "patent"@en)
+SubClassOf(:NFDI_0000025 :NFDI_0000022)
 
 # Class: :NFDI_0000026 (ontology release version)
 
@@ -593,6 +613,21 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000028 "
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000028 "see http://edamontology.org/format_2376")
 AnnotationAssertion(rdfs:label :NFDI_0000028 "RDF file"@en)
 SubClassOf(:NFDI_0000028 ObjectIntersectionOf(:NFDI_0000027 ObjectSomeValuesFrom(:NFDI_0000100 <http://edamontology.org/format_2376>)))
+
+# Class: :NFDI_0000029 (report)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000029 "A document that conveys information, data, or findings, typically structured in a formal or semi-formal manner, to communicate the results of an analysis, investigation, observation, or activity.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000029 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:comment :NFDI_0000029 "A report is created with the intent of informing specific audiences and may include textual descriptions, visualizations, metrics, or conclusions. It is a realizable entity that is produced and maintained as part of a process or workflow.")
+AnnotationAssertion(rdfs:label :NFDI_0000029 "report"@en)
+SubClassOf(:NFDI_0000029 :NFDI_0000022)
+
+# Class: :NFDI_0000030 (source code repository)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000030 "A document that organizes and stores source code files, associated metadata, and version history to facilitate the management, sharing, and collaborative development of software projects. It serves as a structured collection of information that tracks changes, maintains integrity, and supports workflows such as version control, branching, and merging.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000030 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0000030 "source code repository"@en)
+SubClassOf(:NFDI_0000030 :NFDI_0000022)
 
 # Class: :NFDI_0000101 (service)
 
@@ -656,7 +691,7 @@ AnnotationAssertion(rdfs:comment :Publication "A published scholarly work that r
 AnnotationAssertion(rdfs:isDefinedBy :Publication <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Publication "publication"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Publication "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten")
-SubClassOf(:Publication <http://purl.obolibrary.org/obo/IAO_0000030>)
+SubClassOf(:Publication :NFDI_0000022)
 
 # Class: :PublisherRole (publisher role)
 
