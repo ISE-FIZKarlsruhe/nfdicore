@@ -274,20 +274,22 @@ AnnotationAssertion(rdfs:isDefinedBy :ContactPointRole <https://nfdi.fiz-karlsru
 AnnotationAssertion(rdfs:label :ContactPointRole "contact point role"@en)
 SubClassOf(:ContactPointRole :NFDI_0000003)
 
-# Class: :Contacting (contacting)
+# Class: :Contacting (contacting process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Contacting "A planned process in which the contact information of an entity is provided."@en)
-AnnotationAssertion(rdfs:comment :Contacting "A planned process in which the contact information of an entity is provided."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Contacting "A process in which the contact information of an entity is provided."@en)
+AnnotationAssertion(rdfs:comment :Contacting "A process in which the contact information of an entity is provided."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Contacting <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :Contacting "contacting"@en)
+AnnotationAssertion(rdfs:label :Contacting "contacting process"@en)
+AnnotationAssertion(:NFDI_0000012 :Contacting "Contacting")
 SubClassOf(:Contacting <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: :Contributing (contributing)
+# Class: :Contributing (contributing process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Contributing "A planned process of contibuting or providing information to an endeavor."@en)
-AnnotationAssertion(rdfs:comment :Contributing "A planned process of contibuting or providing information to an endeavor."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Contributing "A process of contibuting or providing information to an endeavor."@en)
+AnnotationAssertion(rdfs:comment :Contributing "A process of contibuting or providing information to an endeavor."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Contributing <https://nfdi.fiz-karlsruhe.de/ontology>)
-AnnotationAssertion(rdfs:label :Contributing "contributing"@en)
+AnnotationAssertion(rdfs:label :Contributing "contributing process"@en)
+AnnotationAssertion(:NFDI_0000012 :Contributing "Contributing")
 SubClassOf(:Contributing <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :ContributorRole (contributor role)
@@ -352,7 +354,7 @@ SubClassOf(:Dataset <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :Event (event)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Event "An planned process that represents an organized happening that unfolds in time."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Event "An process that represents an organized happening that unfolds in time."@en)
 AnnotationAssertion(rdfs:comment :Event "A class that represents entities that occur or unfold in time, typically characterized by a specific organized happening or occurrence with temporal properties."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Event <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Event "event"@en)
@@ -399,6 +401,7 @@ AnnotationAssertion(rdfs:comment :MIME-Type "The MIME-type template of the resou
 AnnotationAssertion(rdfs:isDefinedBy :MIME-Type <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :MIME-Type "MIME-type"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :MIME-Type "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en)
+AnnotationAssertion(:NFDI_0000012 :MIME-Type "MIMEType")
 SubClassOf(:MIME-Type :MediaType)
 
 # Class: :MediaType (media type)
@@ -419,7 +422,7 @@ SubClassOf(:NFDI_0000000 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: :NFDI_0000001 (creative process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000001 "A planned process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000001 "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000001 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0000001 "creative process"@en)
 SubClassOf(:NFDI_0000001 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> :Person)))
@@ -469,7 +472,7 @@ SubClassOf(:NFDI_0000007 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: :NFDI_0000008 (workflow process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000008 "A planned process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000008 "A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000008 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0000008 "workflow process"@en)
 SubClassOf(:NFDI_0000008 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(:NFDI_0010009 :NFDI_0000007)))
@@ -533,9 +536,9 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000028 "
 AnnotationAssertion(rdfs:label :NFDI_0000028 "RDF file"@en)
 SubClassOf(:NFDI_0000028 ObjectIntersectionOf(:NFDI_0000027 ObjectSomeValuesFrom(:NFDI_0000100 <http://edamontology.org/format_2376>)))
 
-# Class: :NFDI_0000101 (service process)
+# Class: :NFDI_0000101 (service)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000101 "A planned process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000101 "A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 SubClassOf(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(:NFDI_0001011 :NFDI_0000005)))
@@ -581,7 +584,7 @@ SubClassOf(:ProgrammingLanguage :TechnologicalMeans)
 
 # Class: :Project (project)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Project "A planned process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :Project "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
 AnnotationAssertion(rdfs:comment :Project "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
 AnnotationAssertion(rdfs:isDefinedBy :Project <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Project "project"@en)
@@ -666,6 +669,7 @@ AnnotationAssertion(rdfs:comment :TechnologicalMeans "A technology, e.g. a web a
 AnnotationAssertion(rdfs:isDefinedBy :TechnologicalMeans <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :TechnologicalMeans "technological method specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :TechnologicalMeans "Groovy on Grails, Angular"@en)
+AnnotationAssertion(:NFDI_0000012 :TechnologicalMeans "TechnologicalMeans")
 SubClassOf(:TechnologicalMeans <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: :ToolsAndApplicationsService (software application)
