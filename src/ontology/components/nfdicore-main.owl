@@ -93,6 +93,17 @@ Declaration(Class(:NFDI_0010024))
 Declaration(Class(:NFDI_0010025))
 Declaration(Class(:NFDI_0010026))
 Declaration(Class(:NFDI_0010027))
+Declaration(Class(:NFDI_0010028))
+Declaration(Class(:NFDI_0010029))
+Declaration(Class(:NFDI_0010030))
+Declaration(Class(:NFDI_0010031))
+Declaration(Class(:NFDI_0010032))
+Declaration(Class(:NFDI_0010033))
+Declaration(Class(:NFDI_0010034))
+Declaration(Class(:NFDI_0010035))
+Declaration(Class(:NFDI_0010036))
+Declaration(Class(:NFDI_0010037))
+Declaration(Class(:NFDI_0010038))
 Declaration(Class(:Organization))
 Declaration(Class(:Person))
 Declaration(Class(:Place))
@@ -869,6 +880,83 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010027 "
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010027 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010027 "panel discussion"@en)
 SubClassOf(:NFDI_0010027 :NFDI_0000018)
+
+# Class: :NFDI_0010028 (data handling process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010028 "A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010028 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010028 "data handling process"@en)
+SubClassOf(:NFDI_0010028 <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Class: :NFDI_0010029 (data producing process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010029 "A data handling process where raw data is generated through experiments, observations, or data collection tools, often as the initial step in the data lifecycle.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010029 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010029 "data producing process"@en)
+SubClassOf(:NFDI_0010029 :NFDI_0010028)
+
+# Class: :NFDI_0010030 (data processing process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010030 "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010030 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010030 "data processing process"@en)
+SubClassOf(:NFDI_0010030 :NFDI_0010028)
+
+# Class: :NFDI_0010031 (dataset creation process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010031 "A data handling process involving the organization and structuring of data into datasets for easier access, analysis, and sharing.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010031 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010031 "dataset creation process"@en)
+SubClassOf(:NFDI_0010031 :NFDI_0010028)
+
+# Class: :NFDI_0010032 (dataset publishing process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010032 "A data handling process where datasets are made publicly or internally available, typically through repositories or platforms, for others to access and use.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010032 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010032 "dataset publishing process"@en)
+SubClassOf(:NFDI_0010032 :NFDI_0010028)
+
+# Class: :NFDI_0010033 (dataset documenting process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010033 "A data handling process where metadata, descriptions, and details about datasets are recorded to ensure clarity, context, and proper usage by others.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010033 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010033 "dataset documenting process"@en)
+SubClassOf(:NFDI_0010033 :NFDI_0010028)
+
+# Class: :NFDI_0010034 (data cleaning process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010034 "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010034 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010034 "data cleaning process"@en)
+SubClassOf(:NFDI_0010034 :NFDI_0010028)
+
+# Class: :NFDI_0010035 (data transformation process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010035 "A data handling process involving the conversion of data into a different format, structure, or scale to make it compatible with analysis tools or systems.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010035 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010035 "data transformation process"@en)
+SubClassOf(:NFDI_0010035 :NFDI_0010028)
+
+# Class: :NFDI_0010036 (data integration process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010036 "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010036 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010036 "data integration process"@en)
+SubClassOf(:NFDI_0010036 :NFDI_0010028)
+
+# Class: :NFDI_0010037 (data storage process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010037 "A data handling process where data is securely stored in databases or other systems, ensuring it can be retrieved and accessed as needed.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010037 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010037 "data storage process"@en)
+SubClassOf(:NFDI_0010037 :NFDI_0010028)
+
+# Class: :NFDI_0010038 (data visualization process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010038 "A data handling process where data is represented visually through charts, graphs, or other formats to aid in understanding and decision-making.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010038 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010038 "data visualization process"@en)
+SubClassOf(:NFDI_0010038 :NFDI_0010028)
 
 # Class: :Organization (organization)
 
