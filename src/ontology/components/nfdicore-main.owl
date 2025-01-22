@@ -84,6 +84,15 @@ Declaration(Class(:NFDI_0010015))
 Declaration(Class(:NFDI_0010016))
 Declaration(Class(:NFDI_0010017))
 Declaration(Class(:NFDI_0010018))
+Declaration(Class(:NFDI_0010019))
+Declaration(Class(:NFDI_0010020))
+Declaration(Class(:NFDI_0010021))
+Declaration(Class(:NFDI_0010022))
+Declaration(Class(:NFDI_0010023))
+Declaration(Class(:NFDI_0010024))
+Declaration(Class(:NFDI_0010025))
+Declaration(Class(:NFDI_0010026))
+Declaration(Class(:NFDI_0010027))
 Declaration(Class(:Organization))
 Declaration(Class(:Person))
 Declaration(Class(:Place))
@@ -797,6 +806,69 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010018 "
 AnnotationAssertion(rdfs:label :NFDI_0010018 "construction architectural engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010018 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010018 :NFDI_0010013)
+
+# Class: :NFDI_0010019 (workshop)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010019 "An event focused on interactive learning, where participants engage in hands-on activities or group work to develop specific skills or knowledge."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010019 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010019 "workshop"@en)
+SubClassOf(:NFDI_0010019 :NFDI_0000018)
+
+# Class: :NFDI_0010020 (conference)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010020 "An event where experts and scholars gather to present research, exchange ideas, and discuss advancements in a particular field."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010020 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010020 "conference"@en)
+SubClassOf(:NFDI_0010020 :NFDI_0000018)
+
+# Class: :NFDI_0010021 (hackathon)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010021 "An event where participants collaborate intensively over a short period to develop technological solutions, such as software or hardware projects."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010021 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010021 "hackathon"@en)
+SubClassOf(:NFDI_0010021 :NFDI_0000018)
+
+# Class: :NFDI_0010022 (lecture)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010022 "An event where a subject matter expert delivers a formal presentation to inform or educate an audience about a specific topic."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010022 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010022 "lecture"@en)
+SubClassOf(:NFDI_0010022 :NFDI_0000018)
+
+# Class: :NFDI_0010023 (course)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010023 "An event structured as a program of study, offering instruction on a particular subject, often leading to certification or academic credit."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010023 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010023 "course"@en)
+SubClassOf(:NFDI_0010023 :NFDI_0000018)
+
+# Class: :NFDI_0010024 (summer school)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010024 "An event held during the summer, providing specialized courses or workshops to supplement regular academic studies or offer additional learning opportunities."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010024 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010024 "summer school"@en)
+SubClassOf(:NFDI_0010024 :NFDI_0000018)
+
+# Class: :NFDI_0010025 (seminar)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010025 "An event where a small group of participants discuss a specific topic in depth, often involving presentations and interactive discussions."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010025 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010025 "seminar"@en)
+SubClassOf(:NFDI_0010025 :NFDI_0000018)
+
+# Class: :NFDI_0010026 (symposium)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010026 "An event where researchers and experts present and discuss their work, often centered around a specific theme or area of study."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010026 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010026 "symposium"@en)
+SubClassOf(:NFDI_0010026 :NFDI_0000018)
+
+# Class: :NFDI_0010027 (panel discussion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010027 "An event featuring a group of experts who share their insights and engage in a moderated discussion on a particular subject, followed by audience questions."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010027 "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label :NFDI_0010027 "panel discussion"@en)
+SubClassOf(:NFDI_0010027 :NFDI_0000018)
 
 # Class: :Organization (organization)
 
