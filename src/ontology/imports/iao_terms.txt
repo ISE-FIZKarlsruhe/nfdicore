@@ -21,6 +21,17 @@ http://purl.obolibrary.org/obo/IAO_0000129 # version number
 http://purl.obolibrary.org/obo/IAO_0000098 # data format specification
 
 http://purl.obolibrary.org/obo/IAO_0000300 # textual entity
+http://purl.obolibrary.org/obo/IAO_0000605 # abbreviation textual entity
+http://purl.obolibrary.org/obo/IAO_0000608 # author information textual entity
+http://purl.obolibrary.org/obo/IAO_0000304 # caption
+http://purl.obolibrary.org/obo/IAO_0000301 # citation
+http://purl.obolibrary.org/obo/IAO_0000305 # document title
+http://purl.obolibrary.org/obo/IAO_0000303 # institutional identification
+http://purl.obolibrary.org/obo/IAO_0000422 # postal address
+http://purl.obolibrary.org/obo/IAO_0000640 # related work textual entity
+http://purl.obolibrary.org/obo/IAO_0000590 # written name
+
+http://purl.obolibrary.org/obo/IAO_0000429 # email address
 
 # annotation props
 http://purl.obolibrary.org/obo/IAO_0000111
