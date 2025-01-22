@@ -62,7 +62,6 @@ Declaration(Class(:NFDI_0000024))
 Declaration(Class(:NFDI_0000025))
 Declaration(Class(:NFDI_0000026))
 Declaration(Class(:NFDI_0000027))
-Declaration(Class(:NFDI_0000028))
 Declaration(Class(:NFDI_0000029))
 Declaration(Class(:NFDI_0000030))
 Declaration(Class(:NFDI_0000101))
@@ -304,7 +303,7 @@ AnnotationAssertion(rdfs:comment :Collection "A tangible collection of valuables
 AnnotationAssertion(rdfs:isDefinedBy :Collection <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Collection "collection"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Collection "A collection of arts displayed at the museum"@en)
-SubClassOf(:Collection <http://purl.obolibrary.org/obo/BFO_0000040>)
+SubClassOf(:Collection <http://purl.obolibrary.org/obo/BFO_0000027>)
 
 # Class: :Consortium (consortium)
 
@@ -645,13 +644,6 @@ AnnotationAssertion(rdfs:comment :NFDI_0000027 "A file data item is a data item 
 AnnotationAssertion(rdfs:label :NFDI_0000027 "file data item"@en)
 SubClassOf(:NFDI_0000027 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000027> ObjectSomeValuesFrom(:NFDI_0000100 <http://purl.obolibrary.org/obo/IAO_0000098>)))
 
-# Class: :NFDI_0000028 (RDF file)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000028 "A serialisation format conforming to the Resource Description Framework (RDF) model."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000028 "see http://edamontology.org/format_2376")
-AnnotationAssertion(rdfs:label :NFDI_0000028 "RDF file"@en)
-SubClassOf(:NFDI_0000028 ObjectIntersectionOf(:NFDI_0000027 ObjectSomeValuesFrom(:NFDI_0000100 <http://edamontology.org/format_2376>)))
-
 # Class: :NFDI_0000029 (report)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000029 "A document that conveys information, data, or findings, typically structured in a formal or semi-formal manner, to communicate the results of an analysis, investigation, observation, or activity.")
@@ -805,9 +797,8 @@ SubClassOf(:NFDI_0010016 :NFDI_0010013)
 # Class: :NFDI_0010017 (computer science systems electrical engineering)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010017 "A subject area that integrates computer science, systems engineering, and electrical engineering to design, develop, and optimize complex systems and technologies. It focuses on software, hardware, and their interactions, covering areas like programming, circuit design, control systems, and data processing."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010017 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010017 "computer science systems electrical engineering"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010017 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0010017 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010017 :NFDI_0010013)
 
 # Class: :NFDI_0010018 (construction architectural engineering)
@@ -976,8 +967,7 @@ AnnotationAssertion(rdfs:comment :Person "A resource that represents a single pe
 AnnotationAssertion(rdfs:isDefinedBy :Person <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :Person "person"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Person "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus")
-EquivalentClasses(:Person ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000003)))
-SubClassOf(:Person <http://purl.obolibrary.org/obo/BFO_0000040>)
+EquivalentClasses(:Person ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000003)))
 
 # Class: :Place (place)
 
@@ -995,7 +985,6 @@ AnnotationAssertion(rdfs:comment :ProgrammingLanguage "A formal language used fo
 AnnotationAssertion(rdfs:isDefinedBy :ProgrammingLanguage <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :ProgrammingLanguage "programming language"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :ProgrammingLanguage "Java, Ruby, C++, Perl, PHP")
-SubClassOf(:ProgrammingLanguage :TechnologicalMeans)
 
 # Class: :Project (project)
 
