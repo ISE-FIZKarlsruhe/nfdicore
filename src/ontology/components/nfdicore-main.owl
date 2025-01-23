@@ -68,7 +68,6 @@ Declaration(Class(:NFDI_0000101))
 Declaration(Class(:NFDI_0010000))
 Declaration(Class(:NFDI_0010001))
 Declaration(Class(:NFDI_0010002))
-Declaration(Class(:NFDI_0010003))
 Declaration(Class(:NFDI_0010004))
 Declaration(Class(:NFDI_0010005))
 Declaration(Class(:NFDI_0010006))
@@ -77,7 +76,6 @@ Declaration(Class(:NFDI_0010008))
 Declaration(Class(:NFDI_0010010))
 Declaration(Class(:NFDI_0010011))
 Declaration(Class(:NFDI_0010012))
-Declaration(Class(:NFDI_0010013))
 Declaration(Class(:NFDI_0010014))
 Declaration(Class(:NFDI_0010015))
 Declaration(Class(:NFDI_0010016))
@@ -96,7 +94,6 @@ Declaration(Class(:NFDI_0010028))
 Declaration(Class(:NFDI_0010029))
 Declaration(Class(:NFDI_0010030))
 Declaration(Class(:NFDI_0010031))
-Declaration(Class(:NFDI_0010032))
 Declaration(Class(:NFDI_0010033))
 Declaration(Class(:NFDI_0010034))
 Declaration(Class(:NFDI_0010035))
@@ -666,66 +663,51 @@ AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0001032> :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 SubClassOf(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(:NFDI_0001011 :NFDI_0000005)))
 
-# Class: :NFDI_0010000 (humanity social science)
+# Class: :NFDI_0010000 (electrical engineering)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010000 "A subject area that explores human behavior, culture, society, and their interactions through disciplines like history, philosophy, linguistics, and sociology."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010000 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_0010000 "humanity social science"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010000 "A subject area that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation.")
+AnnotationAssertion(rdfs:label :NFDI_0010000 "electrical engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010000 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010000 :AcademicDiscipline)
 
 # Class: :NFDI_0010001 (humanity)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010001 "A subject area focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010001 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010001 "humanity"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010001 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010001 :NFDI_0010000)
+SubClassOf(:NFDI_0010001 :AcademicDiscipline)
 
 # Class: :NFDI_0010002 (social science)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010002 "A subject area that studies society and human behavior through disciplines like sociology, psychology, and economics."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010002 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010002 "social science"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010002 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010002 :NFDI_0010000)
-
-# Class: :NFDI_0010003 (life science)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010003 "A subject area that focuses on the study of living organisms and their interactions with each other and their environments. Life science encompasses fields such as biology, ecology, genetics, and microbiology, aiming to understand the processes of life, evolution, and the diversity of living organisms."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010003 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_0010003 "life science"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010003 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010003 :AcademicDiscipline)
+SubClassOf(:NFDI_0010002 :AcademicDiscipline)
 
 # Class: :NFDI_0010004 (biology)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010004 "A subject area that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010004 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010004 "biology"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010004 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010004 :NFDI_0010003)
+SubClassOf(:NFDI_0010004 :AcademicDiscipline)
 
 # Class: :NFDI_0010005 (medicine)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010005 "A subject area that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010005 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010005 "medicine"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010005 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010005 :NFDI_0010003)
+SubClassOf(:NFDI_0010005 :AcademicDiscipline)
 
 # Class: :NFDI_0010006 (agriculture)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010006 "A subject area that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010006 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010006 "agriculture"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010006 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010006 :NFDI_0010003)
+SubClassOf(:NFDI_0010006 :AcademicDiscipline)
 
 # Class: :NFDI_0010007 (natural science)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010007 "A subject area that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010007 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010007 "natural science"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010007 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010007 :AcademicDiscipline)
@@ -733,81 +715,65 @@ SubClassOf(:NFDI_0010007 :AcademicDiscipline)
 # Class: :NFDI_0010008 (chemistry)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010008 "A subject area that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010008 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010008 "chemistry"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010008 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010008 :NFDI_0010007)
+SubClassOf(:NFDI_0010008 :AcademicDiscipline)
 
 # Class: :NFDI_0010010 (physic)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010010 "A subject area that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010010 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010010 "physic"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010010 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010010 :NFDI_0010007)
+SubClassOf(:NFDI_0010010 :AcademicDiscipline)
 
 # Class: :NFDI_0010011 (mathematics)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010011 "A subject area that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010011 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010011 "mathematics"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010011 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010011 :NFDI_0010007)
+SubClassOf(:NFDI_0010011 :AcademicDiscipline)
 
 # Class: :NFDI_0010012 (geoscience)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010012 "A subject area that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010012 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010012 "geoscience"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010012 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010012 :NFDI_0010007)
+SubClassOf(:NFDI_0010012 :AcademicDiscipline)
 
-# Class: :NFDI_0010013 (engineering science)
+# Class: :NFDI_0010014 (mechanical engineering)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010013 "A subject area that used engineering methods to design, analyze, and develop technologies, systems, and processes for practical applications and problem-solving."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010013 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_0010013 "engineering science"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010013 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010013 :AcademicDiscipline)
-
-# Class: :NFDI_0010014 (mechanical industrial engineering)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010014 "A subject area that combines principles of mechanical engineering and industrial engineering to design, optimize, and manage systems and processes. It focuses on improving efficiency, productivity, and safety in manufacturing, operations, and product design through the integration of mechanical systems, automation, and process management."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010014 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_0010014 "mechanical industrial engineering"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010014 "A subject area that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010014 "mechanical engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010014 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010014 :NFDI_0010013)
+SubClassOf(:NFDI_0010014 :AcademicDiscipline)
 
-# Class: :NFDI_0010015 (thermal process engineering)
+# Class: :NFDI_0010015 (process engineering)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010015 "A subject area that focuses on the design and optimization of systems involving heat transfer, energy conversion, and industrial processes. Thermal and process engineering combines principles of thermodynamics, fluid mechanics, and chemical engineering to improve the efficiency and sustainability of processes in industries such as energy, manufacturing, and environmental management."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010015 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_0010015 "thermal process engineering"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010015 "A subject area that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010015 "process engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010015 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010015 :NFDI_0010013)
+SubClassOf(:NFDI_0010015 :AcademicDiscipline)
 
-# Class: :NFDI_0010016 (materials science engineering)
+# Class: :NFDI_0010016 (materials science)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010016 "A subject area that explores the properties, performance, and applications of materials, focusing on the relationship between a material's structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010016 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_0010016 "materials science engineering"@en)
+AnnotationAssertion(rdfs:label :NFDI_0010016 "materials science"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010016 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010016 :NFDI_0010013)
+SubClassOf(:NFDI_0010016 :AcademicDiscipline)
 
-# Class: :NFDI_0010017 (computer science systems electrical engineering)
+# Class: :NFDI_0010017 (computer science)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010017 "A subject area that integrates computer science, systems engineering, and electrical engineering to design, develop, and optimize complex systems and technologies. It focuses on software, hardware, and their interactions, covering areas like programming, circuit design, control systems, and data processing."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010017 "computer science systems electrical engineering"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0010017 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010017 :NFDI_0010013)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010017 "A subject area that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010017 "computer science"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010017 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+SubClassOf(:NFDI_0010017 :AcademicDiscipline)
 
-# Class: :NFDI_0010018 (construction architectural engineering)
+# Class: :NFDI_0010018 (construction engineering)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010018 "A subject area that combines engineering and architectural principles to design, plan, and manage construction projects. It focuses on ensuring structural integrity, functionality, aesthetics, and sustainability in buildings and infrastructure."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010018 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_0010018 "construction architectural engineering"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010018 "A subject area that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010018 "construction engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010018 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010018 :NFDI_0010013)
+SubClassOf(:NFDI_0010018 :AcademicDiscipline)
 
 # Class: :NFDI_0010019 (workshop)
 
@@ -900,13 +866,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010031 "
 AnnotationAssertion(rdfs:label :NFDI_0010031 "dataset creation process"@en)
 SubClassOf(:NFDI_0010031 :NFDI_0010028)
 
-# Class: :NFDI_0010032 (dataset publishing process)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010032 "A data handling process where datasets are made publicly or internally available, typically through repositories or platforms, for others to access and use.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010032 "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label :NFDI_0010032 "dataset publishing process"@en)
-SubClassOf(:NFDI_0010032 :NFDI_0010028)
-
 # Class: :NFDI_0010033 (dataset documenting process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010033 "A data handling process where metadata, descriptions, and details about datasets are recorded to ensure clarity, context, and proper usage by others.")
@@ -985,6 +944,7 @@ AnnotationAssertion(rdfs:comment :ProgrammingLanguage "A formal language used fo
 AnnotationAssertion(rdfs:isDefinedBy :ProgrammingLanguage <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label :ProgrammingLanguage "programming language"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :ProgrammingLanguage "Java, Ruby, C++, Perl, PHP")
+SubClassOf(:ProgrammingLanguage <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: :Project (project)
 
