@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                75d523458cd1a94bad428efe46a64a1dc77305e52a85a4f25139390abd395ef4
+CONFIG_HASH=                d5901ba480c91c906a08ad509dcc9fd73c84d60c3070548bfdfdab7defd5eaa7
 
 
 # ----------------------------------------
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao schema swo obi edam dcat
+IMPORTS =  iao schema swo edam dcat
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -378,48 +378,24 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 ## Module for ontology: iao
 
-$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/iao_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
+$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
 ## Module for ontology: schema
 
-$(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl $(IMPORTDIR)/schema_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/schema_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method STAR \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
+$(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
 ## Module for ontology: swo
 
 $(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
-## Module for ontology: obi
-
-$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/obi_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
 ## Module for ontology: edam
 
-$(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl $(IMPORTDIR)/edam_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/edam_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method STAR \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
+$(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
 ## Module for ontology: dcat
 
-$(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl $(IMPORTDIR)/dcat_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/dcat_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
+$(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -506,14 +482,6 @@ mirror-schema: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/swo.owl
 mirror-swo: | $(TMPDIR)
 	$(ROBOT) convert -I https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: obi
-.PHONY: mirror-obi
-.PRECIOUS: $(MIRRORDIR)/obi.owl
-mirror-obi: | $(TMPDIR)
-	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: edam

@@ -19,9 +19,6 @@ Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
-Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>))
-Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010>))
-Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112>))
@@ -63,6 +60,8 @@ Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216>
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000217>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000220>))
 Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000221>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233>))
+Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234>))
 Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000105>))
 Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000127>))
 Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000128>))
@@ -77,31 +76,13 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/RO_0001900>))
 #   Object Properties
 ############################
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> (has agent)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> "The property is a relationship between a resource and an agent."@en)
-AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> "has agent"@en)
-InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010>)
-
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010> (is agent of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010> "inverse of property 'has agent'")
-AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010> "https://nfdi.fiz-karlsruhe.de/ontology")
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010> "is agent of"@en)
-
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100> (is subject of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100> "inverse of property 'is about'"@en)
-AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100> "https://nfdi.fiz-karlsruhe.de/ontology")
-
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103> (has best practice)
 
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103> "The property is a relationship between a resource and the specified best practice."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103> "has best practice"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103> "bestPractice")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104> (best practice of)
@@ -117,7 +98,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112> "has contact point"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112> "contectPoint")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>)
 
@@ -126,7 +107,7 @@ ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112> <https
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113> "inverse of  property \"has contact point\""@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113> "contact point of"@en)
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> (has contributor)
 
@@ -134,7 +115,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> "has contributor"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> "contributor")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>)
 
@@ -143,7 +124,7 @@ ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> <https
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117> "inverse of property \"has contributor\""@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117> "contributor of"@en)
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125> (has data set)
 
@@ -151,7 +132,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125> "has data set"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125> "dataset")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000126>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>)
 
@@ -169,7 +150,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132> "has file format"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132> "exportFormat")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000133>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132> <http://purl.obolibrary.org/obo/IAO_0000098>)
 
@@ -187,7 +168,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137> "has funding organization"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137> "fundingOrganization")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
 
@@ -196,7 +177,7 @@ ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137> <https
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138> "inverse of property \"has funding organization\""@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138> "funding organization of"@en)
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234>)
 ObjectPropertyDomain(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> (has license)
@@ -206,7 +187,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> "has license"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> "license")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000143>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141>)
 
@@ -230,7 +211,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146> "has media type"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146> "mediaType")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000147>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145>)
 
@@ -248,7 +229,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182> "has parent organization"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182> "parentOrganization")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183> (has partner organization)
@@ -257,7 +238,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183> "has partner organization"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183> "partnerOrganization")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233>)
 SymmetricObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000183> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
 
@@ -267,7 +248,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> "has programming language"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> "programmingLanguage")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000188>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186>)
 
@@ -284,7 +265,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> "has publisher"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> "publisher")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>)
 
@@ -293,7 +274,7 @@ ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> <https
 AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192> "inverse of  property \"has publisher\""@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192> "publisher of"@en)
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000010>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194> (has related project)
 
@@ -328,7 +309,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199> "has software"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199> "software")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000200>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198>)
 
@@ -346,7 +327,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201> "has sparql endpoint"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201> "sparqlEndpoint")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202> (sparql endpoint of)
@@ -363,7 +344,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> "has specification"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> "specification")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000205>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> <http://purl.obolibrary.org/obo/IAO_0000033>)
 
@@ -381,7 +362,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207> "has standard"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207> "standard")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000208>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206>)
 
@@ -400,9 +381,8 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> "has subject area"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> "subjectArea")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000212>)
-ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000212> (subject area of)
 
@@ -417,7 +397,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213> "has subsidiary organization"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213> "subsidiaryOrganization")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
 
 # Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216> (has technology)
@@ -426,7 +406,7 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216> <https://nfdi.fiz-karlsruhe.de/ontology>)
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216> "has technology"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216> "technology")
-SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100>)
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>)
 InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000217>)
 ObjectPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215>)
 
@@ -454,6 +434,19 @@ AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFD
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000221> "is url of"@en)
 AnnotationAssertion(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000012> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000221> "urlOf")
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000221> <http://purl.obolibrary.org/obo/IAO_0000219>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233> (has agent)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233> "The property is a relationship between a resource and an agent."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233> "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233> "has agent"@en)
+InverseObjectProperties(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234> (is agent of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234> "inverse of property 'has agent'")
+AnnotationAssertion(rdfs:isDefinedBy <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234> "https://nfdi.fiz-karlsruhe.de/ontology")
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000234> "is agent of"@en)
 
 
 ############################
@@ -543,17 +536,13 @@ DataPropertyRange(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000209> rdfs:Lit
 
 EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
 
-# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005> (service product)
-
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005> <https://schema.org/Service>)
-
 # Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008> (creative work)
 
-SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001> <https://schema.org/CreativeWork>))
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008> <https://schema.org/CreativeWork>)
 
-# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101> (service)
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> (service product)
 
-AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101> "service"@de)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> <https://schema.org/Service>)
 
 
 )

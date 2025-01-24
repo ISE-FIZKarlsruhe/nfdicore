@@ -22,32 +22,36 @@ import_group:
   #  - id: bfo
   #    mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl
     - id: iao
-      module_type: slme
-      module_type_slme: SUBSET
-      slme_individuals: exclude
+      module_type: custom
+      #module_type: slme
+      #module_type_slme: SUBSET
+      #slme_individuals: exclude
     - id: schema
       mirror_from:  "https://raw.githubusercontent.com/schemaorg/schemaorg/refs/tags/v28.0-release/data/releases/28.0/schemaorg.owl"
-      module_type: slme
-      module_type_slme: STAR
-      slme_individuals: exclude
+      module_type: custom
+      #module_type: slme
+      #module_type_slme: STAR
+      #slme_individuals: exclude
     - id: swo
       mirror_from: "https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl"
       module_type: custom
-    - id: obi
-      module_type: slme
-      module_type_slme: BOT
-      slme_individuals: exclude
+#    - id: obi
+#      module_type: slme
+#      module_type_slme: BOT
+#      slme_individuals: exclude
       #use_base: true
     - id: edam
       mirror_from: "https://edamontology.org/EDAM_1.25.owl"
-      module_type: slme
-      module_type_slme: STAR
-      slme_individuals: exclude
+      module_type: custom
+      #module_type: slme
+      #module_type_slme: STAR
+      #slme_individuals: exclude
     - id: dcat
       mirror_from: "http://www.w3.org/ns/dcat3"
-      module_type: slme
-      module_type_slme: SUBSET
-      slme_individuals: exclude
+      module_type: custom
+      #module_type: slme
+      #module_type_slme: SUBSET
+      #slme_individuals: exclude
 
         
 components:
