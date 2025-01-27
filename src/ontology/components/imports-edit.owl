@@ -9,7 +9,7 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl>
-Import(<http://purl.obolibrary.org/obo/bfo/2020/bfo.owl>)
+Import(<http://purl.obolibrary.org/obo/bfo.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)

@@ -53,12 +53,12 @@ $(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl
 
 
 ## Module for ontology: schema
-$(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl 
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/schema_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method STAR \
-	    remove --term https://schema.org/additionalType \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
+#$(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl 
+#	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+#		extract -T $(IMPORTDIR)/schema_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method STAR \
+#	    remove --term https://schema.org/additionalType \
+#		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+#		$(ANNOTATE_CONVERT_FILE); fi
 
 
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl 
@@ -68,6 +68,12 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
 		remove --select "RO:*" \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
+
+
+## import bfo - we just copy the entire ontology 
+$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl 
+	if [ $(IMP) = true ]; then cp $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_import.owl; fi
+
 
 
 #################################################################
