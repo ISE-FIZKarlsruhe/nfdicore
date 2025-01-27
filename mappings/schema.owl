@@ -1,0 +1,34 @@
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl#>)
+Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/mappings/nfdicore-schema.owl>
+Annotation(dcterms:title "schema.org mapping module of NFDIcore ontology"@en)
+
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>))
+Declaration(Class(<https://schema.org/CreativeWork>))
+Declaration(Class(<https://schema.org/Service>))
+Declaration(AnnotationProperty(dcterms:title))
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008> (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008>)
+
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008> <https://schema.org/CreativeWork>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>)
+
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> <https://schema.org/Service>)
+
+
+)
