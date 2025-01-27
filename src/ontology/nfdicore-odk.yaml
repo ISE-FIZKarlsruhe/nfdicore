@@ -19,19 +19,17 @@ import_group:
 #    - <http://xmlns.com/foaf/*>
 #  use_base_merging: true
   products:
-  #  - id: bfo
-  #    mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl
+    - id: bfo
+      mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl
+      module_type: custom
     - id: iao
       module_type: custom
       #module_type: slme
       #module_type_slme: SUBSET
       #slme_individuals: exclude
-    - id: schema
-      mirror_from:  "https://raw.githubusercontent.com/schemaorg/schemaorg/refs/tags/v28.0-release/data/releases/28.0/schemaorg.owl"
-      module_type: custom
-      #module_type: slme
-      #module_type_slme: STAR
-      #slme_individuals: exclude
+#    - id: schema
+#      mirror_from:  "https://raw.githubusercontent.com/schemaorg/schemaorg/refs/tags/v28.0-release/data/releases/28.0/schemaorg.owl"
+#      module_type: custom
     - id: swo
       mirror_from: "https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl"
       module_type: custom
@@ -53,7 +51,6 @@ import_group:
       #module_type_slme: SUBSET
       #slme_individuals: exclude
 
-        
 components:
   products:
       - filename: imports-edit.owl

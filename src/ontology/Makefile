@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                d5901ba480c91c906a08ad509dcc9fd73c84d60c3070548bfdfdab7defd5eaa7
+CONFIG_HASH=                19ac6b30f45d8debb98f48804d363048ef9b75cf88035f9dcfb521dabdd698b6
 
 
 # ----------------------------------------
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao schema swo edam dcat
+IMPORTS =  bfo iao swo edam dcat
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -376,13 +376,13 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: bfo
+
+$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
 ## Module for ontology: iao
 
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
-## Module for ontology: schema
-
-$(IMPORTDIR)/schema_import.owl: $(MIRRORDIR)/schema.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
 ## Module for ontology: swo
 
@@ -462,19 +462,19 @@ IMP_LARGE=true # Global parameter to bypass handling of large imports
 ifeq ($(strip $(MIR)),true)
 
 
+## ONTOLOGY: bfo
+.PHONY: mirror-bfo
+.PRECIOUS: $(MIRRORDIR)/bfo.owl
+mirror-bfo: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: iao
 .PHONY: mirror-iao
 .PRECIOUS: $(MIRRORDIR)/iao.owl
 mirror-iao: | $(TMPDIR)
 	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: schema
-.PHONY: mirror-schema
-.PRECIOUS: $(MIRRORDIR)/schema.owl
-mirror-schema: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/schemaorg/schemaorg/refs/tags/v28.0-release/data/releases/28.0/schemaorg.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: swo
