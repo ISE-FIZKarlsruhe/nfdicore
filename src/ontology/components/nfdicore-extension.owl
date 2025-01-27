@@ -534,13 +534,5 @@ DataPropertyRange(:NFDI_0000209 rdfs:Literal)
 
 
 
-############################
-#   Classes
-############################
-
-# Class: :NFDI_0000004 (person)
-
-EquivalentClasses(:NFDI_0000004 ObjectIntersectionOf(:NFDI_0000004 ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000116) :NFDI_0000001)))
-
 
 )
