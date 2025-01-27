@@ -158,10 +158,6 @@ Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0001032>))
 #   Annotation Properties
 ############################
 
-
-EquivalentClasses(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)))
-
-
 # Annotation Property: dcterms:description (description)
 
 AnnotationAssertion(rdfs:label dcterms:description "description")
