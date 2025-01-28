@@ -87,6 +87,7 @@ Declaration(Class(:NFDI_0000244))
 Declaration(Class(:NFDI_0001000))
 Declaration(Class(:NFDI_0001001))
 Declaration(Class(:NFDI_0001002))
+Declaration(Class(:NFDI_0001005))
 Declaration(Class(:NFDI_0010001))
 Declaration(Class(:NFDI_0010002))
 Declaration(Class(:NFDI_0010004))
@@ -130,6 +131,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
 Declaration(ObjectProperty(:NFDI_0000152))
 Declaration(ObjectProperty(:NFDI_0000153))
 Declaration(ObjectProperty(:NFDI_0000226))
+Declaration(DataProperty(:NFDI_0001007))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000232>))
@@ -205,6 +207,16 @@ SubObjectPropertyOf(:NFDI_0000153 <http://purl.obolibrary.org/obo/BFO_0000057>)
 # Object Property: :NFDI_0000226 (is subject of)
 
 AnnotationAssertion(rdfs:label :NFDI_0000226 "is subject of"@en)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :NFDI_0001007 (has value)
+
+AnnotationAssertion(rdfs:label :NFDI_0001007 "has value"@de)
+SubDataPropertyOf(:NFDI_0001007 owl:topDataProperty)
 
 
 
@@ -383,7 +395,6 @@ SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom
 # Class: :NFDI_0000021 (workflow)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000021 "A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000021 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:comment :NFDI_0000021 "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.")
 AnnotationAssertion(rdfs:label :NFDI_0000021 "workflow"@en)
 SubClassOf(:NFDI_0000021 ObjectIntersectionOf(:NFDI_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000227) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000059> :NFDI_0001002)))
@@ -729,7 +740,6 @@ SubClassOf(:NFDI_0000223 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IA
 # Class: :NFDI_0000224 (creative process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000224 "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000224 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0000224 "creative process"@en)
 SubClassOf(:NFDI_0000224 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> :NFDI_0000004)))
 
@@ -792,6 +802,15 @@ SubClassOf(:NFDI_0001001 <http://purl.obolibrary.org/obo/IAO_0000300>)
 
 AnnotationAssertion(rdfs:label :NFDI_0001002 "workflow specification"@de)
 SubClassOf(:NFDI_0001002 <http://purl.obolibrary.org/obo/IAO_0000104>)
+
+# Class: :NFDI_0001005 (contact point)
+
+AnnotationAssertion(rdfs:label :NFDI_0001005 "contact point"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001005 ":ex_1  a \"nfdi:contact point\" .
+:ex_1  \"nfdi:is subject of\"  :email_1 .
+:email_1 a \"iao:email address\" .
+:email_1 \"nfdi:has value\" \"test@example.org\" .")
+SubClassOf(:NFDI_0001005 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000114)))
 
 # Class: :NFDI_0010001 (humanity)
 
@@ -957,21 +976,18 @@ SubClassOf(:NFDI_0010027 :NFDI_0000018)
 # Class: :NFDI_0010028 (data handling process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010028 "A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010028 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010028 "data handling process"@en)
 SubClassOf(:NFDI_0010028 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0010029 (data producing process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010029 "A data handling process where raw data is generated through experiments, observations, or data collection tools, often as the initial step in the data lifecycle.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010029 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010029 "data producing process"@en)
 SubClassOf(:NFDI_0010029 :NFDI_0010028)
 
 # Class: :NFDI_0010030 (data processing process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010030 "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010030 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010030 "data processing process"@en)
 SubClassOf(:NFDI_0010030 :NFDI_0010028)
 
@@ -992,7 +1008,6 @@ SubClassOf(:NFDI_0010033 :NFDI_0010028)
 # Class: :NFDI_0010034 (data cleaning process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010034 "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010034 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010034 "data cleaning process"@en)
 SubClassOf(:NFDI_0010034 :NFDI_0010028)
 
@@ -1006,7 +1021,6 @@ SubClassOf(:NFDI_0010035 :NFDI_0010028)
 # Class: :NFDI_0010036 (data integration process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010036 "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010036 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:label :NFDI_0010036 "data integration process"@en)
 SubClassOf(:NFDI_0010036 :NFDI_0010028)
 
