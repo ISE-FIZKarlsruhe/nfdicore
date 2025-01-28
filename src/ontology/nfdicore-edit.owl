@@ -15,6 +15,7 @@ Annotation(dcterms:creator <https://nfdi4culture.de/id/E2415>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E2416>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E3095>)
 Annotation(dcterms:creator <https://orcid.org/0000-0001-7192-7143>)
+Annotation(dcterms:creator <https://orcid.org/0000-0002-3092-0532>)
 Annotation(dcterms:description "NFDIcore ontology"@en)
 Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "NFDIcore Ontology"@en)
@@ -25,10 +26,11 @@ Annotation(owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
 
 
 
-
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2415> "Tabea Tietz")
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2416> "Oleksandra Bruns")
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E3095> "Etienne Posthumus")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-3092-0532> "Hossein Beygi Nasrabadi")
+
 )
