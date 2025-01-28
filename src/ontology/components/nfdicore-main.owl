@@ -127,10 +127,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
-Declaration(ObjectProperty(:NFDI_0000013))
 Declaration(ObjectProperty(:NFDI_0000152))
 Declaration(ObjectProperty(:NFDI_0000153))
-Declaration(ObjectProperty(:NFDI_0000158))
 Declaration(ObjectProperty(:NFDI_0000226))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
@@ -194,12 +192,6 @@ InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_00002
 
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000235> :NFDI_0000226)
 
-# Object Property: :NFDI_0000013 (prescibes)
-
-AnnotationAssertion(rdfs:label :NFDI_0000013 "prescibes"@de)
-SubObjectPropertyOf(:NFDI_0000013 <http://purl.obolibrary.org/obo/IAO_0000136>)
-InverseObjectProperties(:NFDI_0000013 :NFDI_0000158)
-
 # Object Property: :NFDI_0000152 (has input)
 
 AnnotationAssertion(rdfs:label :NFDI_0000152 "has input"@de)
@@ -209,13 +201,6 @@ SubObjectPropertyOf(:NFDI_0000152 <http://purl.obolibrary.org/obo/BFO_0000057>)
 
 AnnotationAssertion(rdfs:label :NFDI_0000153 "has output"@de)
 SubObjectPropertyOf(:NFDI_0000153 <http://purl.obolibrary.org/obo/BFO_0000057>)
-
-# Object Property: :NFDI_0000158 (prescribed by)
-
-AnnotationAssertion(rdfs:label :NFDI_0000158 "prescribed by"@de)
-SubObjectPropertyOf(:NFDI_0000158 :NFDI_0000226)
-ObjectPropertyDomain(:NFDI_0000158 <http://purl.obolibrary.org/obo/BFO_0000001>)
-ObjectPropertyRange(:NFDI_0000158 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Object Property: :NFDI_0000226 (is subject of)
 
@@ -309,7 +294,6 @@ SubClassOf(:NFDI_0000005 <http://purl.obolibrary.org/obo/BFO_0000029>)
 # Class: :NFDI_0000006 (consortium)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000006 "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000006 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:comment :NFDI_0000006 "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000006 "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000006 "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
@@ -327,7 +311,6 @@ EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(:NFDI_0000003 ObjectAllValu
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000008 "An independent continuant or information content entity that refers to a manifestation of someone's creative effort."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :NFDI_0000008 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000008 "https://nfdi.fiz-karlsruhe.de/ontology")
 AnnotationAssertion(rdfs:comment :NFDI_0000008 "A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000008 "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
