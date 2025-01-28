@@ -13,11 +13,11 @@ Import(<http://purl.obolibrary.org/obo/bfo.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
-#Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/obi_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
 Annotation(dce:description "This module contains ontology parts which extend the definitions of elements defined in imported ontologies. This is necessary to prevent manual edits on the automatically generated import modules."@en)
 Annotation(dcterms:title "Import edit module of NFDIcore ontology"@en)
 
+Declaration(AnnotationProperty(dce:description))
 
 
 ############################
@@ -29,4 +29,6 @@ Annotation(dcterms:title "Import edit module of NFDIcore ontology"@en)
 SubClassOf(<http://edamontology.org/format_2376> <http://purl.obolibrary.org/obo/IAO_0000098>)
 
 
+AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/BFO_0000050> "please use BFO2020 property 'is continuant part of' or 'is occurent part of'")
+AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/BFO_0000051> "please use the BFO2020 property 'has occurent part' or 'has continuant part'")
 )
