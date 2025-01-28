@@ -102,7 +102,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000112 "has contact point"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000112 "contectPoint")
 SubObjectPropertyOf(:NFDI_0000112 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000112 :NFDI_0000113)
-ObjectPropertyRange(:NFDI_0000112 :NFDI_0000102)
+ObjectPropertyRange(:NFDI_0000112 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000114)))
 
 # Object Property: :NFDI_0000113 (contact point of)
 
@@ -117,7 +117,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000116 "has contributor"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000116 "contributor")
 SubObjectPropertyOf(:NFDI_0000116 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000116 :NFDI_0000117)
-ObjectPropertyRange(:NFDI_0000116 :NFDI_0000102)
+ObjectPropertyRange(:NFDI_0000116 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
 
 # Object Property: :NFDI_0000117 (contributor of)
 
@@ -250,7 +250,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000191 "has publisher"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000191 "publisher")
 SubObjectPropertyOf(:NFDI_0000191 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000191 :NFDI_0000192)
-ObjectPropertyRange(:NFDI_0000191 :NFDI_0000102)
+ObjectPropertyRange(:NFDI_0000191 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000193)))
 
 # Object Property: :NFDI_0000192 (publisher of)
 

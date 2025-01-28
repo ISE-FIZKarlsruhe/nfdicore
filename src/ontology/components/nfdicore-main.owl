@@ -778,7 +778,7 @@ SubClassOf(:NFDI_0000230 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000231 "A person that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000231 "contributor"@en)
-SubClassOf(:NFDI_0000231 ObjectIntersectionOf(:NFDI_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
+SubClassOf(:NFDI_0000231 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
 
 # Class: :NFDI_0000232 (service product)
 
