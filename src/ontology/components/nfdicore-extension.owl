@@ -63,7 +63,6 @@ Declaration(ObjectProperty(:NFDI_0000241))
 Declaration(DataProperty(:NFDI_0000105))
 Declaration(DataProperty(:NFDI_0000127))
 Declaration(DataProperty(:NFDI_0000128))
-Declaration(DataProperty(:NFDI_0000129))
 Declaration(DataProperty(:NFDI_0000130))
 Declaration(DataProperty(:NFDI_0000135))
 Declaration(DataProperty(:NFDI_0000136))
@@ -442,13 +441,6 @@ AnnotationAssertion(rdfs:comment :NFDI_0000128 "The property refers to the date 
 AnnotationAssertion(rdfs:label :NFDI_0000128 "dissolution date"@en)
 DataPropertyDomain(:NFDI_0000128 :NFDI_0000003)
 DataPropertyRange(:NFDI_0000128 rdfs:Literal)
-
-# Data Property: :NFDI_0000129 (email address)
-
-AnnotationAssertion(rdfs:comment :NFDI_0000129 "The property relates an agent to their email address."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000129 "email address"@en)
-DataPropertyDomain(:NFDI_0000129 :NFDI_0000102)
-DataPropertyRange(:NFDI_0000129 rdfs:Literal)
 
 # Data Property: :NFDI_0000130 (end date)
 
