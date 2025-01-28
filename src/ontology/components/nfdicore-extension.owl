@@ -194,6 +194,8 @@ SubObjectPropertyOf(:NFDI_0000143 <http://purl.obolibrary.org/obo/IAO_0000136>)
 AnnotationAssertion(rdfs:comment :NFDI_0000144 "The property is a relationship between a thing and a place its located at. "@en)
 AnnotationAssertion(rdfs:label :NFDI_0000144 "has location"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000144 "location")
+SubObjectPropertyOf(:NFDI_0000144 <http://purl.obolibrary.org/obo/BFO_0000171>)
+ObjectPropertyRange(:NFDI_0000144 :NFDI_0000005)
 
 # Object Property: :NFDI_0000146 (has media type)
 
