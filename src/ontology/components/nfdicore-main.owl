@@ -155,7 +155,7 @@ Declaration(AnnotationProperty(rdfs:label))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(:NFDI_0000012))
-Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0001032>))
+Declaration(AnnotationProperty(:NFDI_0010013))
 ############################
 #   Annotation Properties
 ############################
@@ -177,11 +177,11 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 AnnotationAssertion(rdfs:label :NFDI_0000012 "readable IRI label"@en)
 SubAnnotationPropertyOf(:NFDI_0000012 <http://purl.obolibrary.org/obo/IAO_0000118>)
 
-# Annotation Property: <https://w3id.org/pmd/co/PMD_0001032> (term tracker annotation)
+# Annotation Property: :NFDI_0010013 (term tracker annotation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://w3id.org/pmd/co/PMD_0001032> "adapted from http://openenergy-platform.org/ontology/oeo/OEO_00020426")
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0001032> "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.")
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0001032> "term tracker annotation"@de)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010013 "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.")
+AnnotationAssertion(rdfs:label :NFDI_0010013 "term tracker annotation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0010013 "adapted from http://openenergy-platform.org/ontology/oeo/OEO_00020426")
 
 
 ############################
@@ -312,10 +312,10 @@ SubClassOf(:NFDI_0000004 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 # Class: :NFDI_0000005 (place)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000005 "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0000005 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 AnnotationAssertion(rdfs:label :NFDI_0000005 "place"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000005 "A spatial region, e.g. country, city or district."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000005 "Hessen, Berlin, Schweiz")
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000005 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 SubClassOf(:NFDI_0000005 <http://purl.obolibrary.org/obo/BFO_0000029>)
 
 # Class: :NFDI_0000006 (consortium)
@@ -465,19 +465,19 @@ SubClassOf(:NFDI_0000030 :NFDI_0000022)
 # Class: :NFDI_0000100 (academic discipline)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000100 "An information content entity that specifies the subject area, domain or academic discipline of an entity. An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0000100 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80"@en)
 AnnotationAssertion(rdfs:label :NFDI_0000100 "academic discipline"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000100 "2024-03-26: SB & JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000100 "2024-12-16: TT & JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000100 <https://www.wikidata.org/entity/Q12271>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000100 "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000100 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80"@en)
 SubClassOf(:NFDI_0000100 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000101 (service process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000101 "A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@en)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 SubClassOf(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(:NFDI_0000153 :NFDI_0000232)))
 
 # Class: :NFDI_0000102 (agent)
