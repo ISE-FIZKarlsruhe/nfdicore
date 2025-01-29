@@ -82,67 +82,62 @@ Declaration(AnnotationProperty(:NFDI_0000012))
 
 # Object Property: :NFDI_0000103 (has best practice)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000103 "The property is a relationship between a resource and the specified best practice."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000103 "The property is a relationship between a resource and the specified best practice."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000103 "has best practice"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000103 "bestPractice")
 SubObjectPropertyOf(:NFDI_0000103 :NFDI_0000226)
 InverseObjectProperties(:NFDI_0000103 :NFDI_0000104)
 
 # Object Property: :NFDI_0000104 (best practice of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000104 "inverse of  property \"best practice\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000104 "inverse of  property \"best practice\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000104 "best practice of"@en)
 SubObjectPropertyOf(:NFDI_0000104 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000112 (has contact point)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000112 "The property is a relationship between a resource and a contact point."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000112 "The property is a relationship between a resource and a contact point."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000112 "has contact point"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000112 "contectPoint")
 SubObjectPropertyOf(:NFDI_0000112 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000112 :NFDI_0000113)
 ObjectPropertyRange(:NFDI_0000112 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000114)))
 
 # Object Property: :NFDI_0000113 (contact point of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000113 "inverse of  property \"has contact point\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000113 "inverse of  property \"has contact point\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000113 "contact point of"@en)
 SubObjectPropertyOf(:NFDI_0000113 :NFDI_0000241)
 
 # Object Property: :NFDI_0000116 (has contributor)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000116 "The property related a resource to a person or an organization responsible for making contributions to a resource."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000116 "The property related a resource to a person or an organization responsible for making contributions to a resource."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000116 "has contributor"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000116 "contributor")
 SubObjectPropertyOf(:NFDI_0000116 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000116 :NFDI_0000117)
 ObjectPropertyRange(:NFDI_0000116 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
 
 # Object Property: :NFDI_0000117 (contributor of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000117 "inverse of property \"has contributor\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000117 "inverse of property \"has contributor\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000117 "contributor of"@en)
 SubObjectPropertyOf(:NFDI_0000117 :NFDI_0000241)
 
 # Object Property: :NFDI_0000125 (has data set)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000125 "The property is a relation between a resource and a data set."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000125 "The property is a relation between a resource and a data set."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000125 "has data set"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000125 "dataset")
 SubObjectPropertyOf(:NFDI_0000125 :NFDI_0000226)
 InverseObjectProperties(:NFDI_0000125 :NFDI_0000126)
 ObjectPropertyRange(:NFDI_0000125 :NFDI_0000009)
 
 # Object Property: :NFDI_0000126 (data set of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000126 "inverse of  property \"has data set\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000126 "inverse of  property \"has data set\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000126 "data set of"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000126 "dataset")
 SubObjectPropertyOf(:NFDI_0000126 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000132 (has file format)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000132 "The property relates a resource to the format available for the export of a resource."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000132 "The property relates a resource to the format available for the export of a resource."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000132 "has file format"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000132 "exportFormat")
 SubObjectPropertyOf(:NFDI_0000132 :NFDI_0000226)
@@ -151,32 +146,31 @@ ObjectPropertyRange(:NFDI_0000132 <http://purl.obolibrary.org/obo/IAO_0000098>)
 
 # Object Property: :NFDI_0000133 (file format of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000133 "inverse of  property \"has file format\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000133 "inverse of  property \"has file format\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000133 "file format of"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000133 "exportFormatOf")
 SubObjectPropertyOf(:NFDI_0000133 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000137 (has funding organization)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000137 "The property relates a project to the organization that provided funding for it."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000137 "The property relates a project to the organization that provided funding for it."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000137 "has funding organization"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000137 "fundingOrganization")
 SubObjectPropertyOf(:NFDI_0000137 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000137 :NFDI_0000138)
 ObjectPropertyRange(:NFDI_0000137 :NFDI_0000003)
 
 # Object Property: :NFDI_0000138 (funding organization of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000138 "inverse of property \"has funding organization\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000138 "inverse of property \"has funding organization\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000138 "funding organization of"@en)
 SubObjectPropertyOf(:NFDI_0000138 :NFDI_0000241)
 ObjectPropertyDomain(:NFDI_0000138 :NFDI_0000003)
 
 # Object Property: :NFDI_0000142 (has license)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :NFDI_0000142 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).")
-AnnotationAssertion(rdfs:comment :NFDI_0000142 "The property is a relationship between a resource and a license file.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000142 "The property is a relationship between a resource and a license file.")
 AnnotationAssertion(rdfs:label :NFDI_0000142 "has license"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000142 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).")
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000142 "license")
 SubObjectPropertyOf(:NFDI_0000142 :NFDI_0000226)
 InverseObjectProperties(:NFDI_0000142 :NFDI_0000143)
@@ -184,21 +178,20 @@ ObjectPropertyRange(:NFDI_0000142 :NFDI_0000141)
 
 # Object Property: :NFDI_0000143 (license of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000143 "inverse of property \"has license\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000143 "inverse of property \"has license\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000143 "license of"@en)
 SubObjectPropertyOf(:NFDI_0000143 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000144 (has location)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000144 "The property is a relationship between a thing and a place its located at. "@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000144 "The property is a relationship between a thing and a place its located at."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000144 "has location"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000144 "location")
 SubObjectPropertyOf(:NFDI_0000144 <http://purl.obolibrary.org/obo/BFO_0000171>)
 ObjectPropertyRange(:NFDI_0000144 :NFDI_0000005)
 
 # Object Property: :NFDI_0000146 (has media type)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000146 "The property relates a resource to its data format."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000146 "The property relates a resource to its data format."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000146 "has media type"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000146 "mediaType")
 SubObjectPropertyOf(:NFDI_0000146 :NFDI_0000226)
@@ -207,31 +200,29 @@ ObjectPropertyRange(:NFDI_0000146 :NFDI_0000145)
 
 # Object Property: :NFDI_0000147 (media type of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :NFDI_0000147 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :NFDI_0000147 "inverse of  property \"has media type\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000147 "inverse of  property \"has media type\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000147 "media type of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000147 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
 SubObjectPropertyOf(:NFDI_0000147 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000182 (has parent organization)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000182 "The property is a parental relationship between organizations."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000182 "The property is a parental relationship between organizations."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000182 "has parent organization"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000182 "parentOrganization")
 SubObjectPropertyOf(:NFDI_0000182 :NFDI_0000240)
 ObjectPropertyRange(:NFDI_0000182 :NFDI_0000003)
 
 # Object Property: :NFDI_0000183 (has partner organization)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000183 "The property is a partner relationship between organizations. The property is symmetric."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000183 "The property is a partner relationship between organizations. The property is symmetric."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000183 "has partner organization"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000183 "partnerOrganization")
 SubObjectPropertyOf(:NFDI_0000183 :NFDI_0000240)
 SymmetricObjectProperty(:NFDI_0000183)
 ObjectPropertyRange(:NFDI_0000183 :NFDI_0000003)
 
 # Object Property: :NFDI_0000187 (has programming language)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000187 "The property links software to a programming language its written in.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000187 "The property links software to a programming language its written in.")
 AnnotationAssertion(rdfs:label :NFDI_0000187 "has programming language"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000187 "programmingLanguage")
 SubObjectPropertyOf(:NFDI_0000187 :NFDI_0000226)
@@ -240,52 +231,49 @@ ObjectPropertyRange(:NFDI_0000187 :NFDI_0000186)
 
 # Object Property: :NFDI_0000188 (programming language of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000188 "inverse of  property \"has programming language\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000188 "inverse of  property \"has programming language\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000188 "programming language of"@en)
 SubObjectPropertyOf(:NFDI_0000188 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000191 (has publisher)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000191 "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000191 "The property is a relationship between a resource and an organization or a person responsible for publishing it."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000191 "has publisher"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000191 "publisher")
 SubObjectPropertyOf(:NFDI_0000191 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000191 :NFDI_0000192)
 ObjectPropertyRange(:NFDI_0000191 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000193)))
 
 # Object Property: :NFDI_0000192 (publisher of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000192 "inverse of  property \"has publisher\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000192 "inverse of  property \"has publisher\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000192 "publisher of"@en)
 SubObjectPropertyOf(:NFDI_0000192 :NFDI_0000241)
 
 # Object Property: :NFDI_0000194 (has related project)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000194 "The property is a relationship between a project or a resource and related projects."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000194 "The property is a relationship between a project or a resource and related projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000194 "has related project"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000194 "relatedProject")
 ObjectPropertyDomain(:NFDI_0000194 ObjectUnionOf(:NFDI_0000001 :NFDI_0000002))
 ObjectPropertyRange(:NFDI_0000194 :NFDI_0000002)
 
 # Object Property: :NFDI_0000195 (represents collection)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000195 "The property is a relationship between a dataset and a collection it represents."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000195 "The property is a relationship between a dataset and a collection it represents."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000195 "represents collection"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000195 "a dataportal is about some collection of pieces of art")
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000195 "representedCollection")
 SubObjectPropertyOf(:NFDI_0000195 <http://purl.obolibrary.org/obo/IAO_0000219>)
 InverseObjectProperties(:NFDI_0000195 :NFDI_0000196)
 ObjectPropertyRange(:NFDI_0000195 :NFDI_0000107)
 
 # Object Property: :NFDI_0000196 (represented collection of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000196 "inverse of  property \"represented collection\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000196 "inverse of  property \"represented collection\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000196 "represented collection of"@en)
 SubObjectPropertyOf(:NFDI_0000196 <http://purl.obolibrary.org/obo/IAO_0000235>)
 
 # Object Property: :NFDI_0000199 (has software)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000199 "The property is a relationship between a resource and a software it uses."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000199 "The property is a relationship between a resource and a software it uses."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000199 "has software"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000199 "software")
 SubObjectPropertyOf(:NFDI_0000199 :NFDI_0000226)
@@ -294,14 +282,14 @@ ObjectPropertyRange(:NFDI_0000199 :NFDI_0000198)
 
 # Object Property: :NFDI_0000200 (software of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :NFDI_0000200 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :NFDI_0000200 "inverse of  property \"has sofware\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000200 "inverse of  property \"has sofware\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000200 "software of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000200 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
 SubObjectPropertyOf(:NFDI_0000200 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000201 (has sparql endpoint)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000201 "The property relates a data resource to its SPARQL Endpoint. "@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000201 "The property relates a data resource to its SPARQL Endpoint."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000201 "has sparql endpoint"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000201 "sparqlEndpoint")
 SubObjectPropertyOf(:NFDI_0000201 :NFDI_0000226)
@@ -309,14 +297,14 @@ InverseObjectProperties(:NFDI_0000201 :NFDI_0000202)
 
 # Object Property: :NFDI_0000202 (sparql endpoint of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :NFDI_0000202 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :NFDI_0000202 "inverse of  property \"has sparql endpoint\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000202 "inverse of  property \"has sparql endpoint\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000202 "sparql endpoint of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000202 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
 SubObjectPropertyOf(:NFDI_0000202 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000204 (has specification)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000204 "The property is a relationship between a resource and the international standard or norm."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000204 "The property is a relationship between a resource and the international standard or norm."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000204 "has specification"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000204 "specification")
 SubObjectPropertyOf(:NFDI_0000204 :NFDI_0000226)
@@ -325,14 +313,14 @@ ObjectPropertyRange(:NFDI_0000204 <http://purl.obolibrary.org/obo/IAO_0000033>)
 
 # Object Property: :NFDI_0000205 (specification of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :NFDI_0000205 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :NFDI_0000205 "inverse of  property \"has specification\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000205 "inverse of  property \"has specification\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000205 "specification of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000205 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
 SubObjectPropertyOf(:NFDI_0000205 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000207 (has standard)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000207 "The property relates a resource to the standard it relies on."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000207 "The property relates a resource to the standard it relies on."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000207 "has standard"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000207 "standard")
 SubObjectPropertyOf(:NFDI_0000207 :NFDI_0000226)
@@ -341,15 +329,14 @@ ObjectPropertyRange(:NFDI_0000207 :NFDI_0000206)
 
 # Object Property: :NFDI_0000208 (standard of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :NFDI_0000208 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :NFDI_0000208 "inverse of  property \"has standard\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000208 "inverse of  property \"has standard\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000208 "standard of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000208 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
 SubObjectPropertyOf(:NFDI_0000208 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000211 (has subject area)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> :NFDI_0000211 "to check for BFO superproperty")
-AnnotationAssertion(rdfs:comment :NFDI_0000211 "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000211 "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000211 "has subject area"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000211 "subjectArea")
 SubObjectPropertyOf(:NFDI_0000211 :NFDI_0000226)
@@ -358,21 +345,20 @@ ObjectPropertyRange(:NFDI_0000211 :NFDI_0000100)
 
 # Object Property: :NFDI_0000212 (subject area of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000212 "inverse of  property \"has subject area\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000212 "inverse of  property \"has subject area\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000212 "subject area of"@en)
 SubObjectPropertyOf(:NFDI_0000212 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000213 (has subsidiary organization)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000213 "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000213 "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en)
 AnnotationAssertion(rdfs:label :NFDI_0000213 "has subsidiary organization"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000213 "subsidiaryOrganization")
 SubObjectPropertyOf(:NFDI_0000213 :NFDI_0000240)
 ObjectPropertyRange(:NFDI_0000213 :NFDI_0000003)
 
 # Object Property: :NFDI_0000216 (has technology)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000216 "The property is a relationship between a resource and a technology it uses. "@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000216 "The property is a relationship between a resource and a technology it uses."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000216 "has technology"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000216 "technology")
 SubObjectPropertyOf(:NFDI_0000216 :NFDI_0000226)
@@ -381,24 +367,22 @@ ObjectPropertyRange(:NFDI_0000216 :NFDI_0000215)
 
 # Object Property: :NFDI_0000217 (technology of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> :NFDI_0000217 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
-AnnotationAssertion(rdfs:comment :NFDI_0000217 "inverse of  property \"has technology\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000217 "inverse of  property \"has technology\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000217 "technology of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000217 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
 SubObjectPropertyOf(:NFDI_0000217 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000220 (has url)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000220 "The property is a relationship between a thing and a url associated with the thing."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000220 "The property is a relationship between a thing and a url associated with the thing."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000220 "has url"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000220 "url")
 SubObjectPropertyOf(:NFDI_0000220 <http://purl.obolibrary.org/obo/IAO_0000235>)
 InverseObjectProperties(:NFDI_0000220 :NFDI_0000221)
 
 # Object Property: :NFDI_0000221 (is url of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000221 "inverse of  property \"url\""@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000221 "inverse of  property \"url\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000221 "is url of"@en)
-AnnotationAssertion(:NFDI_0000012 :NFDI_0000221 "urlOf")
 SubObjectPropertyOf(:NFDI_0000221 <http://purl.obolibrary.org/obo/IAO_0000219>)
 
 # Object Property: :NFDI_0000240 (has agent)
