@@ -1,0 +1,17 @@
+FROM openjdk:jre AS widoco
+
+RUN wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar 
+
+COPY nfdicore.ttl .
+
+RUN java -jar widoco.jar -ontFile nfdicore.ttl -outFolder public -uniteSections -includeAnnotationProperties -lang en-de -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+
+FROM ghcr.io/epoz/shmarql:latest
+
+COPY nfdicore.ttl .
+COPY docs /src/docs
+COPY mkdocs.yaml a.yml
+RUN python -m shmarql docs_build -f a.yml
+
+COPY --from=widoco /public/doc /src/site/ontology
+RUN cp /src/site/ontology/index-en.html /src/site/ontology/index.html
