@@ -57,6 +57,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000013>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
@@ -995,6 +1001,59 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_8000013> "reasoned ontology module"@en)
 AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/IAO_8000013> <http://robot.obolibrary.org/reason>)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000013> <http://purl.obolibrary.org/obo/IAO_8000000>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003> (GND identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003> "The Integrated Authority File (GND) is a centrally registered identifier used to  represent and describe entities, i.e. persons, corporate bodies, conferences and events, geographic entities, topics and works relating to cultural and academic collections.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003> "GND")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003> "Integrated Authority File")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003> "https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003> "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003> <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> (ROR identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> "The Research Organization Registry (ROR) is a centrally registered identifier and a global, community-led registry of open persistent identifiers for research organizations.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> "ROR")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> "Research Organization Registry")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> "https://ror.org/")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> (ISIL identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> "The centrally registered identifier ISIL (International Standard Identifier for Libraries and Related Organizations) are standard identifiers for libraries, archives, museums and related institutions in Germany.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> "ISIL")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> "International Standard Identifier for Libraries and Related Organizations")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> "https://sigel.staatsbibliothek-berlin.de/")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> (Wikidata identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> "Wikidata is a free and open knowledge base that can be read and edited by both humans and machines. Wikidata acts as central storage for the structured data of its Wikimedia sister projects including Wikipedia, Wikivoyage, Wiktionary, Wikisource, and others.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> "Wikidata")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> "https://www.wikidata.org/")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> (VIAF identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> "The Virtual International Authority File (VIAF) is an international authority file that links and integrates authority records from multiple national libraries and other organizations. It provides a unique identifier for authors, creators, and entities, facilitating better data sharing and cataloging across institutions. It is managed by OCLC in collaboration with global library partners.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> "VIAF")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> "Virtual International Authority File")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> "https://viaf.org/en")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> (GeoNames identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> "GeoNames is a geographical database that provides information on places, including names, coordinates, and administrative divisions. It integrates data from multiple sources and used for geolocation, mapping, and geographic information systems (GIS).")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> "GeoNames")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> "Geonames")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> "https://www.geonames.org/")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 
 ############################
