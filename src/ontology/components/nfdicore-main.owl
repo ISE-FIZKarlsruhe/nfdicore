@@ -332,7 +332,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000006 "
 AnnotationAssertion(rdfs:label :NFDI_0000006 "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000006 "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000006 "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
-SubClassOf(:NFDI_0000006 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> :NFDI_0000007)))
+SubClassOf(:NFDI_0000006 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> :NFDI_0000007)))
 
 # Class: :NFDI_0000007 (consortium member)
 
