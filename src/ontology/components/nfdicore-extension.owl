@@ -158,7 +158,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000137 "has funding organization"@en)
 SubObjectPropertyOf(:NFDI_0000137 <http://purl.obolibrary.org/obo/BFO_0000057>)
 InverseObjectProperties(:NFDI_0000137 :NFDI_0000138)
 ObjectPropertyDomain(:NFDI_0000137 :NFDI_0000002)
-ObjectPropertyRange(:NFDI_0000137 :NFDI_0000003)
+ObjectPropertyRange(:NFDI_0000137 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000139)))
 
 # Object Property: :NFDI_0000138 (funding organization of)
 
@@ -384,12 +384,14 @@ AnnotationAssertion(rdfs:label :NFDI_0000241 "is agent of"@en)
 
 # Object Property: :NFDI_0001003 (is identified by)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001003 "inverse property of has external identifier"@en)
 AnnotationAssertion(rdfs:label :NFDI_0001003 "is identified by"@en)
 SubObjectPropertyOf(:NFDI_0001003 <http://purl.obolibrary.org/obo/IAO_0000219>)
 InverseObjectProperties(:NFDI_0001003 :NFDI_0001006)
 
 # Object Property: :NFDI_0001006 (has external identifier)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001006 "The property relates a thing to the corresponding entry or related concept of the item in a central register, e.g. GND, VIAF, RISM, Wikidata or ROR."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001006 "has external identifier"@en)
 SubObjectPropertyOf(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000235>)
 ObjectPropertyRange(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000578>)
