@@ -24,6 +24,27 @@ Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-
 Annotation(rdfs:label "NFDIcore")
 Annotation(owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
 
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194> (participates project)
+
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194> <http://purl.obolibrary.org/obo/BFO_0000056>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> (project proposal)
+
+AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> "A project proposal is a detailed document that outlines the objectives, scope, requirements, and deliverables of a project. It serves as a blueprint for all stakeholders, ensuring everyone understands what needs to be accomplished."@en)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> "project proposal"@de)
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>)))
 
 
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
@@ -32,5 +53,4 @@ AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2416> "Oleksandra Br
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E3095> "Etienne Posthumus")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-3092-0532> "Hossein Beygi Nasrabadi")
-
 )
