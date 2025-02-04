@@ -416,8 +416,8 @@ SubClassOf(:NFDI_0000022 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000023 (ontology)
 
+AnnotationAssertion(rdfs:comment :NFDI_0000023 "An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000023 "ontology"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0000023 "An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it."@en)
 SubClassOf(:NFDI_0000023 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 # Class: :NFDI_0000024 (ontology variant)
