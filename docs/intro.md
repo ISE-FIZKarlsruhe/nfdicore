@@ -13,14 +13,14 @@ Te key feratures of the NFDIcore ontology are:
 * **Standardization and Interoperability:** By adhering to data management standards, the ontology ensures that data from different sources can be interconnected, shared, and reused.
 
 
-Recognizing the diverse needs of consortia, NFDIcore establishes mappings to standards across domains, including the [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) and [schema.org](https://schema.org/), which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module [CTO](https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module [MWO](https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
+Recognizing the diverse needs of consortia, NFDIcore based on the [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/), which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module [CTO](https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module [MWO](https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
 
-Aligning with [IAO](https://github.com/information-artifact-ontology/IAO) and [SCHEMA](https://schema.org/), NFDIcore focuses on describing 3 main concepts:
+Aligning with [IAO](https://github.com/information-artifact-ontology/IAO), NFDIcore focuses on describing 3 main concepts:
 
 *  Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, 
 software, etc. 
 
 *  Independent Continuants that act autonomously, e.g. organizations, persons
 
-* Planned processes and events, e.g. projects, contribution and publication processes, events.
+* Processes and events, e.g. projects, contribution and publication processes, events, workflows .
 

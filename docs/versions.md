@@ -29,3 +29,11 @@ The ontology **"main"** file [nfdicore.ttl](https://github.com/ISE-FIZKarlsruhe/
 Editors of this ontology should use the edit version. From this version all release variants are derived by the build workflows.
 
 Editors version: [src/ontology/nfdicore-edit.owl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/src/ontology/nfdicore-edit.owl)
+
+## Mappings
+
+### Schema.org
+
+A mapping to selected concepts from Schema.org can be found in the file: 
+
+[mappings/schema.owl](https://github.com/ISE-FIZKarlsruhe/nfdicore/blob/main/mappings/schema.owl)
