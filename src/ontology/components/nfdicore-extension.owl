@@ -384,13 +384,13 @@ AnnotationAssertion(rdfs:label :NFDI_0000241 "is agent of"@en)
 
 # Object Property: :NFDI_0001003 (is identified by)
 
-AnnotationAssertion(rdfs:label :NFDI_0001003 "is identified by"@de)
+AnnotationAssertion(rdfs:label :NFDI_0001003 "is identified by"@en)
 SubObjectPropertyOf(:NFDI_0001003 <http://purl.obolibrary.org/obo/IAO_0000219>)
 InverseObjectProperties(:NFDI_0001003 :NFDI_0001006)
 
 # Object Property: :NFDI_0001006 (has external identifier)
 
-AnnotationAssertion(rdfs:label :NFDI_0001006 "has external identifier"@de)
+AnnotationAssertion(rdfs:label :NFDI_0001006 "has external identifier"@en)
 SubObjectPropertyOf(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000235>)
 ObjectPropertyRange(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000578>)
 

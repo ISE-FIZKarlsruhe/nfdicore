@@ -25,12 +25,20 @@ Annotation(rdfs:label "NFDIcore")
 Annotation(owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
 
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015>))
+Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016>))
 
 ############################
 #   Object Properties
 ############################
 
-# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194> (participates project)
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194> (resource of project)
 
 SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194> <http://purl.obolibrary.org/obo/BFO_0000056>)
 
@@ -46,7 +54,57 @@ AnnotationAssertion(rdfs:comment <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00
 AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> "project proposal"@de)
 SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>)))
 
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> (GND identifier)
 
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009> "GND identifier"@en)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010> (VIAF identifier)
+
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010> "VIAF identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010> "https://viaf.org/en/viaf/137346469")
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> (GeoNames identifier)
+
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> "GeoNames identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011> "https://www.geonames.org/2950159")
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012> (Wikidata identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012> "Wikidata is maintained by the Wikimedia Foundation and serves as a central repository for structured data used by Wikipedia, Wikimedia projects, and external applications."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012> "Wikidata"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012> "https://www.wikidata.org/")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012> "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012> "Wikidata identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012> "https://www.wikidata.org/wiki/Q1388737")
+SubClassOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012> <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013> (ROR identifier)
+
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013> "ROR identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013> "https://ror.org/01kdxra28")
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014> (ISIL identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014> "International Standard Identifier for Libraries and Related Organizations"@en)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014> "ISIL identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014> "https://ld.zdb-services.de/resource/organisations/DE-4153")
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015> (FactGrid identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015> "FactGrid"@en)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015> "FactGrid identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015> "https://database.factgrid.de/entity/Q595")
+
+# Class: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016> (RISM identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016> "RISM"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016> "Répertoire International des Sources Musicales"@fr)
+AnnotationAssertion(rdfs:label <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016> "RISM identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016> "https://rism.online/sources/201001959/")
+
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003> "inverse property of has external identifier"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> "The property relates a thing to the corresponding entry or related concept of the item in a central register, e.g. GND, VIAF, RISM, Wikidata or ROR."@en)
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2415> "Tabea Tietz")
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2416> "Oleksandra Bruns")
