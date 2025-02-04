@@ -87,6 +87,7 @@ Declaration(Class(:NFDI_0000244))
 Declaration(Class(:NFDI_0001000))
 Declaration(Class(:NFDI_0001001))
 Declaration(Class(:NFDI_0001002))
+Declaration(Class(:NFDI_0001004))
 Declaration(Class(:NFDI_0001005))
 Declaration(Class(:NFDI_0001009))
 Declaration(Class(:NFDI_0001010))
@@ -96,6 +97,10 @@ Declaration(Class(:NFDI_0001013))
 Declaration(Class(:NFDI_0001014))
 Declaration(Class(:NFDI_0001015))
 Declaration(Class(:NFDI_0001016))
+Declaration(Class(:NFDI_0001017))
+Declaration(Class(:NFDI_0001019))
+Declaration(Class(:NFDI_0001020))
+Declaration(Class(:NFDI_0001021))
 Declaration(Class(:NFDI_0010001))
 Declaration(Class(:NFDI_0010002))
 Declaration(Class(:NFDI_0010004))
@@ -824,6 +829,12 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001002 "
 AnnotationAssertion(rdfs:label :NFDI_0001002 "workflow specification"@en)
 SubClassOf(:NFDI_0001002 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
+# Class: :NFDI_0001004 (project proposal)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001004 "A project proposal is a detailed document that outlines the objectives, scope, requirements, and deliverables of a project. It serves as a blueprint for all stakeholders, ensuring everyone understands what needs to be accomplished."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001004 "project proposal"@de)
+SubClassOf(:NFDI_0001004 ObjectIntersectionOf(:NFDI_0000022 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0000002)))
+
 # Class: :NFDI_0001005 (contact point)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001005 "An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.")
@@ -918,6 +929,30 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001016 "
 AnnotationAssertion(rdfs:label :NFDI_0001016 "RISM identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001016 "https://rism.online/sources/201001959/")
 SubClassOf(:NFDI_0001016 <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: :NFDI_0001017 (export format specification)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001017 "A directive information entity that defines the structural, syntactic, and encoding rules for representing data when it is exported from a system."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001017 "export format specification"@en)
+SubClassOf(:NFDI_0001017 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> :NFDI_0000148)))
+
+# Class: :NFDI_0001019 (title)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001019 "A textual entity that denotes some resource."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001019 "title"@de)
+SubClassOf(:NFDI_0001019 <http://purl.obolibrary.org/obo/IAO_0000300>)
+
+# Class: :NFDI_0001020 (act of foundation)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001020 "The act of foundation refers to the formal establishment or creation of an institution, organization, or entity, typically through a legal, administrative, or ceremonial process."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001020 "act of foundation"@en)
+SubClassOf(:NFDI_0001020 :NFDI_0000131)
+
+# Class: :NFDI_0001021 (act of dissolution)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001021 "The act of dissolution refers to a formal legal or administrative event that officially terminates or dissolves an entity, relationship, or agreement."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001021 "act of dissolution"@en)
+SubClassOf(:NFDI_0001021 :NFDI_0000131)
 
 # Class: :NFDI_0010001 (humanity)
 
