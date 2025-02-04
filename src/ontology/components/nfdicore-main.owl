@@ -142,8 +142,8 @@ Declaration(Class(:NFDI_0010041))
 Declaration(ObjectProperty(:NFDI_0000152))
 Declaration(ObjectProperty(:NFDI_0000153))
 Declaration(ObjectProperty(:NFDI_0000226))
-Declaration(ObjectProperty(:NFDI_0010003))
-Declaration(ObjectProperty(:NFDI_00100042))
+Declaration(ObjectProperty(:NFDI_0001023))
+Declaration(ObjectProperty(:NFDI_0001024))
 Declaration(DataProperty(:NFDI_0001007))
 Declaration(DataProperty(:NFDI_0001008))
 Declaration(AnnotationProperty(:NFDI_0000012))
@@ -192,31 +192,31 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000235> :NFDI_0000226)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000152 "p has input x =Def x is used or consumed in the process of executing p.")
 AnnotationAssertion(rdfs:label :NFDI_0000152 "has input"@en)
 SubObjectPropertyOf(:NFDI_0000152 <http://purl.obolibrary.org/obo/BFO_0000057>)
-InverseObjectProperties(:NFDI_0000152 :NFDI_0010003)
+InverseObjectProperties(:NFDI_0000152 :NFDI_0001024)
 
 # Object Property: :NFDI_0000153 (has output)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000153 "p has output x =Def x is produced or generated as a result of executing p.")
 AnnotationAssertion(rdfs:label :NFDI_0000153 "has output"@en)
 SubObjectPropertyOf(:NFDI_0000153 <http://purl.obolibrary.org/obo/BFO_0000057>)
-InverseObjectProperties(:NFDI_0000153 :NFDI_00100042)
+InverseObjectProperties(:NFDI_0000153 :NFDI_0001023)
 
 # Object Property: :NFDI_0000226 (is subject of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000226 "inverse of the relation 'is about'")
 AnnotationAssertion(rdfs:label :NFDI_0000226 "is subject of"@en)
 
-# Object Property: :NFDI_0010003 (is input of)
+# Object Property: :NFDI_0001023 (is output of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010003 "inverse of the relation 'has input'")
-AnnotationAssertion(rdfs:label :NFDI_0010003 "is input of"@en)
-SubObjectPropertyOf(:NFDI_0010003 <http://purl.obolibrary.org/obo/BFO_0000056>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001023 "inverse of the relation 'has output'")
+AnnotationAssertion(rdfs:label :NFDI_0001023 "is output of"@en)
+SubObjectPropertyOf(:NFDI_0001023 <http://purl.obolibrary.org/obo/BFO_0000056>)
 
-# Object Property: :NFDI_00100042 (is output of)
+# Object Property: :NFDI_0001024 (is input of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_00100042 "inverse of the relation 'has output'")
-AnnotationAssertion(rdfs:label :NFDI_00100042 "is output of"@en)
-SubObjectPropertyOf(:NFDI_00100042 <http://purl.obolibrary.org/obo/BFO_0000056>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001024 "inverse of the relation 'has input'")
+AnnotationAssertion(rdfs:label :NFDI_0001024 "is input of"@en)
+SubObjectPropertyOf(:NFDI_0001024 <http://purl.obolibrary.org/obo/BFO_0000056>)
 
 
 ############################
