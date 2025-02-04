@@ -95,7 +95,7 @@ SubObjectPropertyOf(:NFDI_0000104 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000112 (has contact point)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000112 "The property is a relationship between a resource and a contact point."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000112 "The property is a relationship between an NFDI resource and a person as a contact point."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000112 "has contact point"@en)
 SubObjectPropertyOf(:NFDI_0000112 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000112 :NFDI_0000113)
@@ -109,7 +109,7 @@ SubObjectPropertyOf(:NFDI_0000113 :NFDI_0000241)
 
 # Object Property: :NFDI_0000116 (has contributor)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000116 "The property related a resource to a person or an organization responsible for making contributions to a resource."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000116 "The property related an NFDI resource to a person or an organization responsible for making contributions to a resource."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000116 "has contributor"@en)
 SubObjectPropertyOf(:NFDI_0000116 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000116 :NFDI_0000117)
