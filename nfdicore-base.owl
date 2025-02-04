@@ -54,18 +54,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
@@ -168,7 +156,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010013 -->
 
     <owl:AnnotationProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010013">
-        <obo:IAO_0000115>A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.</obo:IAO_0000115>
+        <rdfs:comment>A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.</rdfs:comment>
         <rdfs:label xml:lang="en">term tracker annotation</rdfs:label>
         <skos:editorialNote>adapted from http://openenergy-platform.org/ontology/oeo/OEO_00020426</skos:editorialNote>
     </owl:AnnotationProperty>
@@ -178,7 +166,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010015 -->
 
     <owl:AnnotationProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010015">
-        <obo:IAO_0000115>A relation between an entity and its abbreviated form, representing a shortened version of the original term or phrase.</obo:IAO_0000115>
+        <rdfs:comment>A relation between an entity and its abbreviated form, representing a shortened version of the original term or phrase.</rdfs:comment>
         <rdfs:label xml:lang="en">has acronym</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
     </owl:AnnotationProperty>
@@ -279,7 +267,7 @@
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a resource and the specified best practice.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and the specified best practice.</rdfs:comment>
         <rdfs:label xml:lang="en">has best practice</rdfs:label>
     </owl:ObjectProperty>
     
@@ -289,7 +277,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;best practice&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;best practice&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">best practice of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -311,7 +299,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between an NFDI resource and a person as a contact point.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between an NFDI resource and a person as a contact point.</rdfs:comment>
         <rdfs:label xml:lang="en">has contact point</rdfs:label>
     </owl:ObjectProperty>
     
@@ -321,7 +309,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has contact point&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has contact point&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">contact point of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -343,7 +331,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-        <obo:IAO_0000115 xml:lang="en">The property related an NFDI resource to a person or an organization responsible for making contributions to a resource.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property related an NFDI resource to a person or an organization responsible for making contributions to a resource.</rdfs:comment>
         <rdfs:label xml:lang="en">has contributor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -353,7 +341,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of property &quot;has contributor&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of property &quot;has contributor&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">contributor of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -365,7 +353,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000126"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relation between a resource and a data set.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relation between a resource and a data set.</rdfs:comment>
         <rdfs:label xml:lang="en">has data set</rdfs:label>
     </owl:ObjectProperty>
     
@@ -375,7 +363,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000126">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has data set&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has data set&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">data set of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -387,7 +375,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000133"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000098"/>
-        <obo:IAO_0000115 xml:lang="en">The property relates a resource to the format available for the export of a resource.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property relates a resource to the format available for the export of a resource.</rdfs:comment>
         <rdfs:label xml:lang="en">has file format</rdfs:label>
         <ontology:NFDI_0000012>exportFormat</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -398,7 +386,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000133">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has file format&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has file format&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">file format of</rdfs:label>
         <ontology:NFDI_0000012>exportFormatOf</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -422,7 +410,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-        <obo:IAO_0000115 xml:lang="en">The property relates a project to the organization that provided funding for it.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property relates a project to the organization that provided funding for it.</rdfs:comment>
         <rdfs:label xml:lang="en">has funding organization</rdfs:label>
     </owl:ObjectProperty>
     
@@ -433,7 +421,7 @@
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of property &quot;has funding organization&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of property &quot;has funding organization&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">funding organization of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -445,7 +433,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000143"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141"/>
-        <obo:IAO_0000115>The property is a relationship between a resource and a license file.</obo:IAO_0000115>
+        <rdfs:comment>The property is a relationship between a resource and a license file.</rdfs:comment>
         <rdfs:label xml:lang="en">has license</rdfs:label>
         <skos:editorialNote>2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</skos:editorialNote>
         <ontology:NFDI_0000012>license</ontology:NFDI_0000012>
@@ -457,7 +445,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000143">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of property &quot;has license&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of property &quot;has license&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">license of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -468,7 +456,7 @@
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000171"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a thing and a place its located at.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between a thing and a place its located at.</rdfs:comment>
         <rdfs:label xml:lang="en">has location</rdfs:label>
     </owl:ObjectProperty>
     
@@ -480,7 +468,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000147"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145"/>
-        <obo:IAO_0000115 xml:lang="en">The property relates a resource to its data format.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property relates a resource to its data format.</rdfs:comment>
         <rdfs:label xml:lang="en">has media type</rdfs:label>
         <ontology:NFDI_0000012>mediaType</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -491,7 +479,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000147">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has media type&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has media type&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">media type of</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</skos:editorialNote>
     </owl:ObjectProperty>
@@ -502,8 +490,8 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010003"/>
-        <obo:IAO_0000115>p has input x =Def x is used or consumed in the process of executing p.</obo:IAO_0000115>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024"/>
+        <rdfs:comment>p has input x =Def x is used or consumed in the process of executing p.</rdfs:comment>
         <rdfs:label xml:lang="en">has input</rdfs:label>
     </owl:ObjectProperty>
     
@@ -513,8 +501,8 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00100042"/>
-        <obo:IAO_0000115>p has output x =Def x is produced or generated as a result of executing p.</obo:IAO_0000115>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023"/>
+        <rdfs:comment>p has output x =Def x is produced or generated as a result of executing p.</rdfs:comment>
         <rdfs:label xml:lang="en">has output</rdfs:label>
     </owl:ObjectProperty>
     
@@ -526,7 +514,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a parental relationship between organizations.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a parental relationship between organizations.</rdfs:comment>
         <rdfs:label xml:lang="en">has parent organization</rdfs:label>
     </owl:ObjectProperty>
     
@@ -538,7 +526,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000188"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186"/>
-        <obo:IAO_0000115>The property links software to a programming language its written in.</obo:IAO_0000115>
+        <rdfs:comment>The property links software to a programming language its written in.</rdfs:comment>
         <rdfs:label xml:lang="en">has programming language</rdfs:label>
         <ontology:NFDI_0000012>programmingLanguage</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -549,7 +537,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000188">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has programming language&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has programming language&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">programming language of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -572,7 +560,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between an information content entity and an organization or a person responsible for publishing it.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between an information content entity and an organization or a person responsible for publishing it.</rdfs:comment>
         <rdfs:label xml:lang="en">published by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -582,7 +570,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has publisher&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has publisher&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">publisher of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -594,7 +582,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a project or a resource and related projects.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between a project or a resource and related projects.</rdfs:comment>
         <rdfs:label xml:lang="en">resource of project</rdfs:label>
     </owl:ObjectProperty>
     
@@ -606,7 +594,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000196"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a dataset and a collection it represents.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between a dataset and a collection it represents.</rdfs:comment>
         <rdfs:label xml:lang="en">represents collection</rdfs:label>
         <skos:example>a dataportal is about some collection of pieces of art</skos:example>
     </owl:ObjectProperty>
@@ -617,7 +605,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000196">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;represented collection&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;represented collection&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">represented collection of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -629,7 +617,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000200"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a resource and a software it uses.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and a software it uses.</rdfs:comment>
         <rdfs:label xml:lang="en">has software</rdfs:label>
         <ontology:NFDI_0000012>software</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -640,7 +628,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000200">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has sofware&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has sofware&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">software of</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</skos:editorialNote>
     </owl:ObjectProperty>
@@ -652,7 +640,7 @@
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202"/>
-        <obo:IAO_0000115 xml:lang="en">The property relates a data resource to its SPARQL Endpoint.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property relates a data resource to its SPARQL Endpoint.</rdfs:comment>
         <rdfs:label xml:lang="en">has sparql endpoint</rdfs:label>
         <ontology:NFDI_0000012>sparqlEndpoint</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -663,7 +651,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has sparql endpoint&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has sparql endpoint&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">sparql endpoint of</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</skos:editorialNote>
     </owl:ObjectProperty>
@@ -676,7 +664,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000205"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a resource and the international standard or norm.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and the international standard or norm.</rdfs:comment>
         <rdfs:label xml:lang="en">has specification</rdfs:label>
         <ontology:NFDI_0000012>specification</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -687,7 +675,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000205">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has specification&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has specification&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">specification of</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</skos:editorialNote>
     </owl:ObjectProperty>
@@ -700,7 +688,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000208"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206"/>
-        <obo:IAO_0000115 xml:lang="en">The property relates a resource to the standard it relies on.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property relates a resource to the standard it relies on.</rdfs:comment>
         <rdfs:label xml:lang="en">has standard</rdfs:label>
         <ontology:NFDI_0000012>standard</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -711,7 +699,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000208">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has standard&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has standard&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">standard of</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</skos:editorialNote>
     </owl:ObjectProperty>
@@ -724,7 +712,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000212"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate.</rdfs:comment>
         <rdfs:label xml:lang="en">has subject area</rdfs:label>
         <ontology:NFDI_0000012>subjectArea</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -735,7 +723,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000212">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has subject area&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has subject area&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">subject area of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -747,7 +735,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-        <obo:IAO_0000115 xml:lang="en">The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization</rdfs:comment>
         <rdfs:label xml:lang="en">has subsidiary organization</rdfs:label>
     </owl:ObjectProperty>
     
@@ -759,7 +747,7 @@
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000217"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a resource and a technology it uses.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and a technology it uses.</rdfs:comment>
         <rdfs:label xml:lang="en">has technology</rdfs:label>
         <ontology:NFDI_0000012>technology</ontology:NFDI_0000012>
     </owl:ObjectProperty>
@@ -770,7 +758,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000217">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <obo:IAO_0000115 xml:lang="en">inverse of  property &quot;has technology&quot;</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse of  property &quot;has technology&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">technology of</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property &quot;is about.&quot; Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license).</skos:editorialNote>
     </owl:ObjectProperty>
@@ -780,7 +768,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226">
-        <obo:IAO_0000115>inverse of the relation &apos;is about&apos;</obo:IAO_0000115>
+        <rdfs:comment>inverse of the relation &apos;is about&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">is subject of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -792,7 +780,7 @@
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
-        <obo:IAO_0000115 xml:lang="en">The property is a relationship between a resource and an agent.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and an agent.</rdfs:comment>
         <rdfs:label xml:lang="en">has agent</rdfs:label>
     </owl:ObjectProperty>
     
@@ -801,7 +789,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241">
-        <obo:IAO_0000115>inverse of property &apos;has agent&apos;</obo:IAO_0000115>
+        <rdfs:comment>inverse of property &apos;has agent&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">is agent of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -812,7 +800,7 @@
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006"/>
-        <obo:IAO_0000115 xml:lang="en">inverse property of has external identifier</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">inverse property of has external identifier</rdfs:comment>
         <rdfs:label xml:lang="en">is identified by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -823,28 +811,28 @@
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">The property relates a thing to the corresponding entry or related concept of the item in a central register, e.g. GND, VIAF, RISM, Wikidata or ROR.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The property relates a thing to the corresponding entry or related concept of the item in a central register, e.g. GND, VIAF, RISM, Wikidata or ROR.</rdfs:comment>
         <rdfs:label xml:lang="en">has external identifier</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010003 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023 -->
 
-    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010003">
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-        <obo:IAO_0000115>inverse of the relation &apos;has input&apos;</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">is input of</rdfs:label>
+        <rdfs:comment>inverse of the relation &apos;has output&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">is output of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00100042 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024 -->
 
-    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00100042">
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-        <obo:IAO_0000115>inverse of the relation &apos;has output&apos;</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">is output of</rdfs:label>
+        <rdfs:comment>inverse of the relation &apos;has input&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">is input of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -866,9 +854,9 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <obo:IAO_0000116 xml:lang="en">The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the date on which a person was born.</rdfs:comment>
         <rdfs:label xml:lang="en">birth date</rdfs:label>
+        <skos:editorialNote xml:lang="en">The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</skos:editorialNote>
     </owl:DatatypeProperty>
     
 
@@ -879,9 +867,9 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the date on which a person passed away.</rdfs:comment>
         <rdfs:label xml:lang="en">death date</rdfs:label>
+        <skos:editorialNote>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</skos:editorialNote>
     </owl:DatatypeProperty>
     
 
@@ -892,9 +880,9 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the date on which the organization ceased to exist or was formally dissolved.</rdfs:comment>
         <rdfs:label xml:lang="en">dissolution date</rdfs:label>
+        <skos:editorialNote>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</skos:editorialNote>
     </owl:DatatypeProperty>
     
 
@@ -918,9 +906,9 @@
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000136">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <obo:IAO_0000116>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">The property refers to the specific date on which the organization was officially established or founded.</rdfs:comment>
         <rdfs:label xml:lang="en">foundation date</rdfs:label>
+        <skos:editorialNote>The range has been set to &quot;Literal&quot; because we expect &quot;untidy&quot; data, i.e. for most datums a structured value cannot be obtained through parsing.</skos:editorialNote>
     </owl:DatatypeProperty>
     
 
@@ -928,8 +916,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007 -->
 
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <obo:IAO_0000115>A relation between an entity and its specific value.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A relation between an information content entity and its specific value.</rdfs:comment>
         <rdfs:label xml:lang="en">has value</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -939,7 +926,8 @@
 
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:label xml:lang="de">hasUrl</rdfs:label>
+        <rdfs:comment xml:lang="en">A relation between an information content entity and its specific url.</rdfs:comment>
+        <rdfs:label xml:lang="de">has url</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1085,7 +1073,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI. The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI. The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization.</rdfs:comment>
         <rdfs:label xml:lang="en">NFDI resource</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-03-25 - Sasha Bruns: 
 This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO.</skos:editorialNote>
@@ -1098,7 +1086,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question.</rdfs:comment>
         <rdfs:label xml:lang="en">project</rdfs:label>
         <skos:editorialNote xml:lang="en">A scientific or business endeavor that aims to conclude an investigation or to answer a research question.</skos:editorialNote>
     </owl:Class>
@@ -1121,7 +1109,7 @@ This class is useful in nfdicore to provide a unified and structured representat
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
-        <obo:IAO_0000115 xml:lang="en">An immaterial entity that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An immaterial entity that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework.</rdfs:comment>
         <rdfs:label xml:lang="en">organization</rdfs:label>
         <skos:editorialNote xml:lang="en">An organization of some kind, e.g. research organization or business organization</skos:editorialNote>
         <skos:example>University Library in Leipzig, Museums of City Cologne</skos:example>
@@ -1144,7 +1132,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An object that represents a single human individual.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An object that represents a single human individual.</rdfs:comment>
         <rdfs:label xml:lang="en">person</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. &quot;Person&quot; in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics.</skos:editorialNote>
         <skos:example>Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus</skos:example>
@@ -1156,7 +1144,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
-        <obo:IAO_0000115 xml:lang="en">A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments.</rdfs:comment>
         <rdfs:label xml:lang="en">place</rdfs:label>
         <skos:editorialNote xml:lang="en">A spatial region, e.g. country, city or district.</skos:editorialNote>
         <skos:example>Hessen, Berlin, Schweiz</skos:example>
@@ -1179,7 +1167,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal.</rdfs:comment>
         <rdfs:label xml:lang="en">consortium</rdfs:label>
         <skos:editorialNote xml:lang="en">A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement.</skos:editorialNote>
         <skos:example>NFDI4Culture, NFDI-MatWerk, DataPLANT.</skos:example>
@@ -1202,7 +1190,7 @@ This class is useful in nfdicore to provide a unified and structured representat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-        <obo:IAO_0000115 xml:lang="en">An organization that has a specific role, responsibilities or contributions within the consortium framework.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An organization that has a specific role, responsibilities or contributions within the consortium framework.</rdfs:comment>
         <rdfs:label xml:lang="en">consortium member</rdfs:label>
         <skos:editorialNote xml:lang="en">A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework.</skos:editorialNote>
         <skos:example xml:lang="en">Museums of City Cologne is a member of NFDI4Culture consortium.</skos:example>
@@ -1244,7 +1232,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An independent continuant or information content entity that refers to a manifestation of someone&apos;s creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An independent continuant or information content entity that refers to a manifestation of someone&apos;s creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains.</rdfs:comment>
         <rdfs:label xml:lang="en">creative work</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to &quot;schema:CreativeWork and &apos;information content entity&apos;&quot;, we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork.</skos:editorialNote>
         <skos:example>TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools &amp; Services, RADAR4Culture service, etc.</skos:example>
@@ -1256,7 +1244,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference. Dataset is structured information about a resource provided by an organization or a person.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference. Dataset is structured information about a resource provided by an organization or a person.</rdfs:comment>
         <rdfs:label xml:lang="en">dataset</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn&apos;t necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics.</skos:editorialNote>
         <skos:example>Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)</skos:example>
@@ -1268,7 +1256,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:IAO_0000115 xml:lang="en">A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes.</rdfs:comment>
         <rdfs:label xml:lang="en">plan</rdfs:label>
     </owl:Class>
     
@@ -1278,8 +1266,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process of making information, such as literature, music, and software etc., available to the public for sale or for free.</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0000444</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">A process of making information, such as literature, music, and software etc., available to the public for sale or for free.</rdfs:comment>
         <rdfs:label xml:lang="en">publishing process</rdfs:label>
     </owl:Class>
     
@@ -1289,8 +1277,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0020000</obo:IAO_0000119>
+        <rdfs:comment>An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.</rdfs:comment>
         <rdfs:label xml:lang="en">identifier</rdfs:label>
     </owl:Class>
     
@@ -1300,8 +1288,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process that has specified output a software product and that involves the creation of source code.</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/APOLLO_SV_00000008</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">A process that has specified output a software product and that involves the creation of source code.</rdfs:comment>
         <rdfs:label xml:lang="en">software development</rdfs:label>
     </owl:Class>
     
@@ -1321,7 +1309,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information.</rdfs:comment>
         <rdfs:label xml:lang="en">spokesperson role</rdfs:label>
     </owl:Class>
     
@@ -1351,7 +1339,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research.</rdfs:comment>
         <rdfs:label xml:lang="en">academic event</rdfs:label>
     </owl:Class>
     
@@ -1371,7 +1359,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement.</rdfs:comment>
         <rdfs:label xml:lang="en">academic organization role</rdfs:label>
     </owl:Class>
     
@@ -1391,7 +1379,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation.</rdfs:comment>
         <rdfs:label xml:lang="en">industry organization role</rdfs:label>
     </owl:Class>
     
@@ -1415,7 +1403,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome.</rdfs:comment>
         <rdfs:label xml:lang="en">workflow</rdfs:label>
         <skos:editorialNote>A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.</skos:editorialNote>
     </owl:Class>
@@ -1427,8 +1415,8 @@ This class is useful in nfdicore to provide a unified and structured representat
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000112>A journal article, patent application, laboratory notebook, or a book</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A collection of information content entities intended to be understood together as a whole</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0000310</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">A collection of information content entities intended to be understood together as a whole</rdfs:comment>
         <rdfs:label xml:lang="en">document</rdfs:label>
     </owl:Class>
     
@@ -1459,8 +1447,8 @@ This class is useful in nfdicore to provide a unified and structured representat
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000025">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
         <obo:IAO_0000112>US Patent 6,449,603</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A document that has been accepted by a patent authority</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0000313</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">A document that has been accepted by a patent authority</rdfs:comment>
         <rdfs:label xml:lang="en">patent</rdfs:label>
     </owl:Class>
     
@@ -1500,7 +1488,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000029">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
-        <obo:IAO_0000115>A document that conveys information, data, or findings, typically structured in a formal or semi-formal manner, to communicate the results of an analysis, investigation, observation, or activity.</obo:IAO_0000115>
+        <rdfs:comment>A document that conveys information, data, or findings, typically structured in a formal or semi-formal manner, to communicate the results of an analysis, investigation, observation, or activity.</rdfs:comment>
         <rdfs:label xml:lang="en">report</rdfs:label>
         <skos:editorialNote>A report is created with the intent of informing specific audiences and may include textual descriptions, visualizations, metrics, or conclusions. It is a realizable entity that is produced and maintained as part of a process or workflow.</skos:editorialNote>
     </owl:Class>
@@ -1511,7 +1499,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
-        <obo:IAO_0000115>A document that organizes and stores source code files, associated metadata, and version history to facilitate the management, sharing, and collaborative development of software projects. It serves as a structured collection of information that tracks changes, maintains integrity, and supports workflows such as version control, branching, and merging.</obo:IAO_0000115>
+        <rdfs:comment>A document that organizes and stores source code files, associated metadata, and version history to facilitate the management, sharing, and collaborative development of software projects. It serves as a structured collection of information that tracks changes, maintains integrity, and supports workflows such as version control, branching, and merging.</rdfs:comment>
         <rdfs:label xml:lang="en">source code repository</rdfs:label>
     </owl:Class>
     
@@ -1521,7 +1509,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the subject area, domain or academic discipline of an entity. An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An information content entity that specifies the subject area, domain or academic discipline of an entity. An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person.</rdfs:comment>
         <rdfs:label xml:lang="en">academic discipline</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-03-26: SB &amp; JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)</skos:editorialNote>
         <skos:editorialNote xml:lang="en">2024-12-16: TT &amp; JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information.</skos:editorialNote>
@@ -1546,7 +1534,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals.</rdfs:comment>
         <rdfs:label xml:lang="en">service process</rdfs:label>
         <ontology:NFDI_0010013>Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75</ontology:NFDI_0010013>
     </owl:Class>
@@ -1574,7 +1562,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent.</rdfs:comment>
         <rdfs:label xml:lang="en">agent</rdfs:label>
         <skos:editorialNote xml:lang="en">A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations.</skos:editorialNote>
         <skos:example xml:lang="en">Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz</skos:example>
@@ -1586,7 +1574,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">A place that refers to a densely populated urban area.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A place that refers to a densely populated urban area.</rdfs:comment>
         <rdfs:label xml:lang="en">city</rdfs:label>
         <skos:editorialNote xml:lang="en">A city or a town where the thing is located.</skos:editorialNote>
         <skos:example xml:lang="en">Berlin, Hannover, Kyiv</skos:example>
@@ -1598,7 +1586,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <obo:IAO_0000115 xml:lang="en">A material entity that represents a collection of material entities intended to be understood together as a whole.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A material entity that represents a collection of material entities intended to be understood together as a whole.</rdfs:comment>
         <rdfs:label xml:lang="en">collection</rdfs:label>
         <skos:editorialNote xml:lang="en">A tangible collection of valuables published or curated by an organization or a person.</skos:editorialNote>
         <skos:example xml:lang="en">A collection of arts displayed at the museum</skos:example>
@@ -1627,7 +1615,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</rdfs:comment>
         <rdfs:label xml:lang="en">consortium member role</rdfs:label>
         <skos:editorialNote xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</skos:editorialNote>
     </owl:Class>
@@ -1638,7 +1626,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000111">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process in which the contact information of an entity is provided.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A process in which the contact information of an entity is provided.</rdfs:comment>
         <rdfs:label xml:lang="en">contacting process</rdfs:label>
         <ontology:NFDI_0000012>Contacting</ontology:NFDI_0000012>
     </owl:Class>
@@ -1649,7 +1637,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</rdfs:comment>
         <rdfs:label xml:lang="en">contact point role</rdfs:label>
         <skos:editorialNote xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</skos:editorialNote>
     </owl:Class>
@@ -1660,7 +1648,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">A process of contibuting or providing information to an endeavor.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A process of contibuting or providing information to an endeavor.</rdfs:comment>
         <rdfs:label xml:lang="en">contributing process</rdfs:label>
         <ontology:NFDI_0000012>Contributing</ontology:NFDI_0000012>
     </owl:Class>
@@ -1718,7 +1706,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">contributor role</rdfs:label>
         <skos:editorialNote xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</skos:editorialNote>
     </owl:Class>
@@ -1729,7 +1717,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000119">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty.</rdfs:comment>
         <rdfs:label xml:lang="en">country</rdfs:label>
         <skos:editorialNote xml:lang="en">A country where the thing is located.</skos:editorialNote>
     </owl:Class>
@@ -1762,7 +1750,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <obo:IAO_0000115 xml:lang="en">A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain.</rdfs:comment>
         <rdfs:label xml:lang="en">data portal</rdfs:label>
         <skos:editorialNote xml:lang="en">An online platform that provides access to datasets.</skos:editorialNote>
         <skos:example xml:lang="en">Bach digital, KultSam, MusiXplora</skos:example>
@@ -1774,7 +1762,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">An process that represents an organized happening that unfolds in time.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An process that represents an organized happening that unfolds in time.</rdfs:comment>
         <rdfs:label xml:lang="en">event</rdfs:label>
         <skos:editorialNote xml:lang="en">A class that represents entities that occur or unfold in time, typically characterized by a specific organized happening or occurrence with temporal properties.</skos:editorialNote>
         <skos:example xml:lang="en">conferences, celebrations, workshops, meetings, or any other specific incident or happening that has been planned somehow.</skos:example>
@@ -1786,7 +1774,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000134">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">A place that refers to a geographical territory forming part of a country.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A place that refers to a geographical territory forming part of a country.</rdfs:comment>
         <rdfs:label xml:lang="en">federal state</rdfs:label>
         <skos:editorialNote xml:lang="en">A federal state where the thing is located.</skos:editorialNote>
         <skos:example xml:lang="de">Sachsen, Berlin</skos:example>
@@ -1808,7 +1796,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</rdfs:comment>
         <rdfs:label xml:lang="en">funding organization role</rdfs:label>
         <skos:editorialNote xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</skos:editorialNote>
     </owl:Class>
@@ -1819,8 +1807,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000115 xml:lang="en">Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface.</rdfs:comment>
         <rdfs:label xml:lang="en">software library</rdfs:label>
         <rdfs:seeAlso>http://purl.obolibrary.org/obo/IAO_0000593</rdfs:seeAlso>
     </owl:Class>
@@ -1831,7 +1819,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence.</rdfs:comment>
         <rdfs:label xml:lang="en">license</rdfs:label>
         <skos:editorialNote xml:lang="en">A document that provides legal guidelines for the use of a resource, e.g. a software.</skos:editorialNote>
         <skos:example xml:lang="en">cc-by-3, Digital Peer Publishing Lizenz</skos:example>
@@ -1843,7 +1831,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <obo:IAO_0000115 xml:lang="en">A directive information entity that describes a media type a bearer has.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A directive information entity that describes a media type a bearer has.</rdfs:comment>
         <rdfs:label xml:lang="en">media type</rdfs:label>
         <skos:editorialNote xml:lang="en">A digital resource format or physical medium.</skos:editorialNote>
         <skos:example>doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book</skos:example>
@@ -1855,7 +1843,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000148">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145"/>
-        <obo:IAO_0000115 xml:lang="en">A media type that serves as a standardized identifier for specifying the nature and format of data.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A media type that serves as a standardized identifier for specifying the nature and format of data.</rdfs:comment>
         <rdfs:label xml:lang="en">MIME-type</rdfs:label>
         <rdfs:seeAlso>https://www.iana.org/assignments/media-types/media-types.xhtml</rdfs:seeAlso>
         <skos:editorialNote xml:lang="en">The MIME-type template of the resource</skos:editorialNote>
@@ -1869,7 +1857,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000157">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115>An academic discipline that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation.</obo:IAO_0000115>
+        <rdfs:comment>An academic discipline that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation.</rdfs:comment>
         <rdfs:label xml:lang="en">electrical engineering</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -1880,7 +1868,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000159">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals.</rdfs:comment>
         <rdfs:label xml:lang="en">process engineering</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -1891,7 +1879,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <obo:IAO_0000115 xml:lang="en">A plan specification that is used for implementing software.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A plan specification that is used for implementing software.</rdfs:comment>
         <rdfs:label xml:lang="en">programming language</rdfs:label>
         <skos:editorialNote xml:lang="en">A formal language used for implementing a software.</skos:editorialNote>
         <skos:example>Java, Ruby, C++, Perl, PHP</skos:example>
@@ -1903,7 +1891,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
-        <obo:IAO_0000115 xml:lang="en">A publication that is the output of a publishing process and a creative process.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A publication that is the output of a publishing process and a creative process.</rdfs:comment>
         <rdfs:label xml:lang="en">publication</rdfs:label>
         <skos:editorialNote xml:lang="en">A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset.</skos:editorialNote>
         <skos:example>MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten</skos:example>
@@ -1915,7 +1903,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</rdfs:comment>
         <rdfs:label xml:lang="en">publisher role</rdfs:label>
         <skos:editorialNote xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</skos:editorialNote>
     </owl:Class>
@@ -1940,7 +1928,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A plan specification that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A plan specification that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices.</rdfs:comment>
         <rdfs:label xml:lang="en">software</rdfs:label>
         <skos:editorialNote xml:lang="en">A computer software provided by an organization or a person.</skos:editorialNote>
         <skos:example>Edirom, Muscat</skos:example>
@@ -1966,7 +1954,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A directive information entity that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process.Specification is a set of requirements, guidelines, standards contributed by an organization or a person.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A directive information entity that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process.Specification is a set of requirements, guidelines, standards contributed by an organization or a person.</rdfs:comment>
         <rdfs:label xml:lang="en">specification</rdfs:label>
         <skos:editorialNote xml:lang="en">2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work).</skos:editorialNote>
         <skos:example xml:lang="en">Guidelines, technical specifications, design specifications</skos:example>
@@ -1978,7 +1966,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000203"/>
-        <obo:IAO_0000115 xml:lang="en">A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community.</rdfs:comment>
         <rdfs:label xml:lang="en">standard</rdfs:label>
         <skos:editorialNote xml:lang="en">An international standard and norm that can be used to evaluate or create a resource.</skos:editorialNote>
         <skos:example>ISO 15511, DINI-Zertifikat</skos:example>
@@ -2012,7 +2000,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <obo:IAO_0000115 xml:lang="en">A plan specification that refers to a technology method employed for the creation, management, utilization, or control of a digital resource.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A plan specification that refers to a technology method employed for the creation, management, utilization, or control of a digital resource.</rdfs:comment>
         <rdfs:label xml:lang="en">technological method specification</rdfs:label>
         <skos:editorialNote xml:lang="en">A technology, e.g. a web application or a programming framework used in a resource.</skos:editorialNote>
         <skos:example xml:lang="en">Groovy on Grails, Angular</skos:example>
@@ -2025,8 +2013,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000115 xml:lang="en">Software that can be downloaded and executed locally on the users&apos; hardware.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Software that can be downloaded and executed locally on the users&apos; hardware.</rdfs:comment>
         <rdfs:label xml:lang="en">software application</rdfs:label>
         <rdfs:seeAlso>http://purl.obolibrary.org/obo/IAO_0000594</rdfs:seeAlso>
     </owl:Class>
@@ -2048,8 +2036,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000115 xml:lang="en">Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS).</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.5281/zenodo.10101412"/>
+        <rdfs:comment xml:lang="en">Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS).</rdfs:comment>
         <rdfs:label xml:lang="en">web application software</rdfs:label>
     </owl:Class>
     
@@ -2073,7 +2061,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An information content entity that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web.</rdfs:comment>
         <rdfs:label xml:lang="en">website</rdfs:label>
         <skos:editorialNote xml:lang="en">A collection of webpages contributed by an organization or a person.</skos:editorialNote>
         <skos:example>https:\/\/opac.rism.info</skos:example>
@@ -2095,7 +2083,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields.</rdfs:comment>
         <rdfs:label xml:lang="en">creative process</rdfs:label>
     </owl:Class>
     
@@ -2115,7 +2103,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system.</rdfs:comment>
         <rdfs:label xml:lang="en">workflow process</rdfs:label>
     </owl:Class>
     
@@ -2135,7 +2123,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">Role of an immaterial entity that facilitates the delivery or support of a service product, ensuring its proper execution and value realization.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Role of an immaterial entity that facilitates the delivery or support of a service product, ensuring its proper execution and value realization.</rdfs:comment>
         <rdfs:label xml:lang="en">service product role</rdfs:label>
     </owl:Class>
     
@@ -2155,7 +2143,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">Role of an independent continuant that is realized through an agent&apos;s actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Role of an independent continuant that is realized through an agent&apos;s actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context.</rdfs:comment>
         <rdfs:label xml:lang="en">agent role</rdfs:label>
     </owl:Class>
     
@@ -2175,7 +2163,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements.</rdfs:comment>
         <rdfs:label xml:lang="en">service provider role</rdfs:label>
     </owl:Class>
     
@@ -2195,7 +2183,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success.</rdfs:comment>
         <rdfs:label xml:lang="en">contributor</rdfs:label>
     </owl:Class>
     
@@ -2220,7 +2208,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process.</rdfs:comment>
         <rdfs:label xml:lang="en">service product</rdfs:label>
     </owl:Class>
     
@@ -2230,7 +2218,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <obo:IAO_0000115 xml:lang="en">A plan specification that defines the requirements, features, and parameters of a service, outlining its scope, performance, and delivery criteria.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">A plan specification that defines the requirements, features, and parameters of a service, outlining its scope, performance, and delivery criteria.</rdfs:comment>
         <rdfs:label xml:lang="en">service specification</rdfs:label>
     </owl:Class>
     
@@ -2250,7 +2238,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A textual entity that uniquely identifies a specific software application, program, or system, often used for branding, categorization, and reference in documentation, licensing, and distribution.</obo:IAO_0000115>
+        <rdfs:comment>A textual entity that uniquely identifies a specific software application, program, or system, often used for branding, categorization, and reference in documentation, licensing, and distribution.</rdfs:comment>
         <rdfs:label xml:lang="en">software title</rdfs:label>
     </owl:Class>
     
@@ -2260,8 +2248,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
-        <obo:IAO_0000115>A textual entity intended to identify a particular publication.</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0000301</obo:IAO_0000119>
+        <rdfs:comment>A textual entity intended to identify a particular publication.</rdfs:comment>
         <rdfs:label xml:lang="en">citation</rdfs:label>
     </owl:Class>
     
@@ -2271,7 +2259,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <obo:IAO_0000115>A plan specification that defines the sequence, dependencies, roles, and conditions governing the execution of tasks and processes within a workflow, ensuring structured and efficient task coordination, automation, and completion.</obo:IAO_0000115>
+        <rdfs:comment>A plan specification that defines the sequence, dependencies, roles, and conditions governing the execution of tasks and processes within a workflow, ensuring structured and efficient task coordination, automation, and completion.</rdfs:comment>
         <rdfs:label xml:lang="en">workflow specification</rdfs:label>
     </owl:Class>
     
@@ -2311,7 +2299,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.</obo:IAO_0000115>
+        <rdfs:comment>An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.</rdfs:comment>
         <rdfs:label xml:lang="en">contact point</rdfs:label>
         <skos:example>:ex_1  a &quot;nfdi:contact point&quot; .
 :ex_1  &quot;nfdi:is subject of&quot;  :email_1 .
@@ -2325,12 +2313,12 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">A centrally registered identifier that is issued by the German National Library. The Integrated Authority File (GND) is facilitates the collaborative use and administration of authority data. These authority data represent and describe entities, i.e. persons, corporate bodies, conferences and events, geographic entities, topics and works relating to cultural and academic collections.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">GND</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="de">Gemeinsame Normdatei</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">Integrated Authority File</obo:IAO_0000118>
         <obo:IAO_0000119>https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61</obo:IAO_0000233>
+        <rdfs:comment xml:lang="en">A centrally registered identifier that is issued by the German National Library. The Integrated Authority File (GND) is facilitates the collaborative use and administration of authority data. These authority data represent and describe entities, i.e. persons, corporate bodies, conferences and events, geographic entities, topics and works relating to cultural and academic collections.</rdfs:comment>
         <rdfs:label xml:lang="en">GND identifier</rdfs:label>
     </owl:Class>
     
@@ -2340,12 +2328,12 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">The centrally registered identifier VIAF (Virtual International Authority File) is an international authority file that links and integrates authority records from multiple national libraries and other organizations. It provides a unique identifier for authors, creators, and entities, facilitating better data sharing and cataloging across institutions.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Integrated Authority File</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">VIAF</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">Virtual International Authority File</obo:IAO_0000118>
         <obo:IAO_0000119>https://viaf.org/en</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61</obo:IAO_0000233>
+        <rdfs:comment xml:lang="en">The centrally registered identifier VIAF (Virtual International Authority File) is an international authority file that links and integrates authority records from multiple national libraries and other organizations. It provides a unique identifier for authors, creators, and entities, facilitating better data sharing and cataloging across institutions.</rdfs:comment>
         <rdfs:label xml:lang="en">VIAF identifier</rdfs:label>
         <skos:example>https://viaf.org/en/viaf/137346469</skos:example>
     </owl:Class>
@@ -2356,10 +2344,10 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">GeoNames is a geographical database that provides information on places, including names, coordinates, and administrative divisions. It integrates data from multiple sources and is widely used for geolocation, mapping, and geographic information systems (GIS).</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">GeoNames</obo:IAO_0000118>
         <obo:IAO_0000119>https://www.geonames.org/</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61</obo:IAO_0000233>
+        <rdfs:comment xml:lang="en">GeoNames is a geographical database that provides information on places, including names, coordinates, and administrative divisions. It integrates data from multiple sources and is widely used for geolocation, mapping, and geographic information systems (GIS).</rdfs:comment>
         <rdfs:label xml:lang="en">GeoNames identifier</rdfs:label>
         <skos:example>https://www.geonames.org/2950159</skos:example>
     </owl:Class>
@@ -2370,10 +2358,10 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">Wikidata is maintained by the Wikimedia Foundation and serves as a central repository for structured data used by Wikipedia, Wikimedia projects, and external applications.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Wikidata</obo:IAO_0000118>
         <obo:IAO_0000119>https://www.wikidata.org/</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61</obo:IAO_0000233>
+        <rdfs:comment xml:lang="en">Wikidata is maintained by the Wikimedia Foundation and serves as a central repository for structured data used by Wikipedia, Wikimedia projects, and external applications.</rdfs:comment>
         <rdfs:label xml:lang="en">Wikidata identifier</rdfs:label>
         <skos:example>https://www.wikidata.org/wiki/Q1388737</skos:example>
     </owl:Class>
@@ -2384,10 +2372,10 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">ROR</obo:IAO_0000118>
         <obo:IAO_0000119>https://ror.org/</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61</obo:IAO_0000233>
+        <rdfs:comment xml:lang="en">ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems.</rdfs:comment>
         <rdfs:label xml:lang="en">ROR identifier</rdfs:label>
         <skos:example>https://ror.org/01kdxra28</skos:example>
     </owl:Class>
@@ -2398,11 +2386,11 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">ISIL (International Standard Identifier for Libraries and Related Organizations) is a globally recognized identifier system used to uniquely identify libraries, archives, museums, and other cultural institutions. It facilitates resource sharing, cataloging, and data exchange across institutions and countries.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">ISIL</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">International Standard Identifier for Libraries and Related Organizations</obo:IAO_0000118>
         <obo:IAO_0000119>https://sigel.staatsbibliothek-berlin.de/</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61</obo:IAO_0000233>
+        <rdfs:comment xml:lang="en">ISIL (International Standard Identifier for Libraries and Related Organizations) is a globally recognized identifier system used to uniquely identify libraries, archives, museums, and other cultural institutions. It facilitates resource sharing, cataloging, and data exchange across institutions and countries.</rdfs:comment>
         <rdfs:label xml:lang="en">ISIL identifier</rdfs:label>
         <skos:example>https://ld.zdb-services.de/resource/organisations/DE-4153</skos:example>
     </owl:Class>
@@ -2413,10 +2401,10 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">FactGrid is a collaborative, structured knowledge database designed for historical research. It operates on Wikibase and focuses on documenting historical entities, events, and relationships.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">FactGrid</obo:IAO_0000118>
         <obo:IAO_0000119>https://database.factgrid.de/</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61</obo:IAO_0000233>
+        <rdfs:comment xml:lang="en">FactGrid is a collaborative, structured knowledge database designed for historical research. It operates on Wikibase and focuses on documenting historical entities, events, and relationships.</rdfs:comment>
         <rdfs:label xml:lang="en">FactGrid identifier</rdfs:label>
         <skos:example>https://database.factgrid.de/entity/Q595</skos:example>
     </owl:Class>
@@ -2427,11 +2415,11 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">RISM (Répertoire International des Sources Musicales) is an international catalog of historical music sources, including manuscripts, printed music, and treatises. It provides unique identifiers and bibliographic data to support music research and documentation.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">RISM</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="fr">Répertoire International des Sources Musicales</obo:IAO_0000118>
         <obo:IAO_0000119>https://rism.info/</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61</obo:IAO_0000233>
+        <rdfs:comment xml:lang="en">RISM (Répertoire International des Sources Musicales) is an international catalog of historical music sources, including manuscripts, printed music, and treatises. It provides unique identifiers and bibliographic data to support music research and documentation.</rdfs:comment>
         <rdfs:label xml:lang="en">RISM identifier</rdfs:label>
         <skos:example>https://rism.online/sources/201001959/</skos:example>
     </owl:Class>
@@ -2512,7 +2500,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010001">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts.</rdfs:comment>
         <rdfs:label xml:lang="en">humanity</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2523,7 +2511,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010002">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that studies society and human behavior through disciplines like sociology, psychology, and economics.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that studies society and human behavior through disciplines like sociology, psychology, and economics.</rdfs:comment>
         <rdfs:label xml:lang="en">social science</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2534,7 +2522,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010004">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity.</rdfs:comment>
         <rdfs:label xml:lang="en">biology</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2545,7 +2533,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010005">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life.</rdfs:comment>
         <rdfs:label xml:lang="en">medicine</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2556,7 +2544,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010006">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability.</rdfs:comment>
         <rdfs:label xml:lang="en">agriculture</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2567,7 +2555,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010007">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115>An academic discipline that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth.</obo:IAO_0000115>
+        <rdfs:comment>An academic discipline that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth.</rdfs:comment>
         <rdfs:label xml:lang="en">natural science</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2578,7 +2566,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010008">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science.</rdfs:comment>
         <rdfs:label xml:lang="en">chemistry</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2589,7 +2577,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010010">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling.</rdfs:comment>
         <rdfs:label xml:lang="en">physic</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2600,7 +2588,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010011">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115>An academic discipline that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling.</obo:IAO_0000115>
+        <rdfs:comment>An academic discipline that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling.</rdfs:comment>
         <rdfs:label xml:lang="en">mathematics</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2611,7 +2599,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010012">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards.</rdfs:comment>
         <rdfs:label xml:lang="en">geoscience</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2622,7 +2610,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010014">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics.</rdfs:comment>
         <rdfs:label xml:lang="en">mechanical engineering</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2633,7 +2621,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010016">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that explores the properties, performance, and applications of materials, focusing on the relationship between a material&apos;s structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that explores the properties, performance, and applications of materials, focusing on the relationship between a material&apos;s structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing.</rdfs:comment>
         <rdfs:label xml:lang="en">materials science</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2644,7 +2632,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010017">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology.</rdfs:comment>
         <rdfs:label xml:lang="en">computer science</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2655,7 +2643,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010018">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <obo:IAO_0000115 xml:lang="en">An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes.</rdfs:comment>
         <rdfs:label xml:lang="en">construction engineering</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:Class>
@@ -2666,7 +2654,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event focused on interactive learning, where participants engage in hands-on activities or group work to develop specific skills or knowledge.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event focused on interactive learning, where participants engage in hands-on activities or group work to develop specific skills or knowledge.</rdfs:comment>
         <rdfs:label xml:lang="en">workshop</rdfs:label>
     </owl:Class>
     
@@ -2676,7 +2664,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010020">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event where experts and scholars gather to present research, exchange ideas, and discuss advancements in a particular field.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event where experts and scholars gather to present research, exchange ideas, and discuss advancements in a particular field.</rdfs:comment>
         <rdfs:label xml:lang="en">conference</rdfs:label>
     </owl:Class>
     
@@ -2686,7 +2674,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010021">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event where participants collaborate intensively over a short period to develop technological solutions, such as software or hardware projects.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event where participants collaborate intensively over a short period to develop technological solutions, such as software or hardware projects.</rdfs:comment>
         <rdfs:label xml:lang="en">hackathon</rdfs:label>
     </owl:Class>
     
@@ -2696,7 +2684,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010022">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event where a subject matter expert delivers a formal presentation to inform or educate an audience about a specific topic.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event where a subject matter expert delivers a formal presentation to inform or educate an audience about a specific topic.</rdfs:comment>
         <rdfs:label xml:lang="en">lecture</rdfs:label>
     </owl:Class>
     
@@ -2706,7 +2694,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010023">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event structured as a program of study, offering instruction on a particular subject, often leading to certification or academic credit.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event structured as a program of study, offering instruction on a particular subject, often leading to certification or academic credit.</rdfs:comment>
         <rdfs:label xml:lang="en">course</rdfs:label>
     </owl:Class>
     
@@ -2716,7 +2704,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010024">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event held during the summer, providing specialized courses or workshops to supplement regular academic studies or offer additional learning opportunities.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event held during the summer, providing specialized courses or workshops to supplement regular academic studies or offer additional learning opportunities.</rdfs:comment>
         <rdfs:label xml:lang="en">summer school</rdfs:label>
     </owl:Class>
     
@@ -2726,7 +2714,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010025">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event where a small group of participants discuss a specific topic in depth, often involving presentations and interactive discussions.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event where a small group of participants discuss a specific topic in depth, often involving presentations and interactive discussions.</rdfs:comment>
         <rdfs:label xml:lang="en">seminar</rdfs:label>
     </owl:Class>
     
@@ -2736,7 +2724,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010026">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event where researchers and experts present and discuss their work, often centered around a specific theme or area of study.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event where researchers and experts present and discuss their work, often centered around a specific theme or area of study.</rdfs:comment>
         <rdfs:label xml:lang="en">symposium</rdfs:label>
     </owl:Class>
     
@@ -2746,7 +2734,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010027">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
-        <obo:IAO_0000115 xml:lang="en">An event featuring a group of experts who share their insights and engage in a moderated discussion on a particular subject, followed by audience questions.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An event featuring a group of experts who share their insights and engage in a moderated discussion on a particular subject, followed by audience questions.</rdfs:comment>
         <rdfs:label xml:lang="en">panel discussion</rdfs:label>
     </owl:Class>
     
@@ -2756,7 +2744,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115>A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.</obo:IAO_0000115>
+        <rdfs:comment>A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.</rdfs:comment>
         <rdfs:label xml:lang="en">data handling process</rdfs:label>
     </owl:Class>
     
@@ -2766,7 +2754,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010029">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process where raw data is generated through experiments, observations, or data collection tools, often as the initial step in the data lifecycle.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process where raw data is generated through experiments, observations, or data collection tools, often as the initial step in the data lifecycle.</rdfs:comment>
         <rdfs:label xml:lang="en">data producing process</rdfs:label>
     </owl:Class>
     
@@ -2776,7 +2764,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.</rdfs:comment>
         <rdfs:label xml:lang="en">data processing process</rdfs:label>
     </owl:Class>
     
@@ -2786,7 +2774,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010031">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process involving the organization and structuring of data into datasets for easier access, analysis, and sharing.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process involving the organization and structuring of data into datasets for easier access, analysis, and sharing.</rdfs:comment>
         <rdfs:label xml:lang="en">dataset creation process</rdfs:label>
     </owl:Class>
     
@@ -2796,7 +2784,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010033">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process where metadata, descriptions, and details about datasets are recorded to ensure clarity, context, and proper usage by others.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process where metadata, descriptions, and details about datasets are recorded to ensure clarity, context, and proper usage by others.</rdfs:comment>
         <rdfs:label xml:lang="en">dataset documenting process</rdfs:label>
     </owl:Class>
     
@@ -2806,7 +2794,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.</rdfs:comment>
         <rdfs:label xml:lang="en">data cleaning process</rdfs:label>
     </owl:Class>
     
@@ -2816,7 +2804,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010035">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process involving the conversion of data into a different format, structure, or scale to make it compatible with analysis tools or systems.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process involving the conversion of data into a different format, structure, or scale to make it compatible with analysis tools or systems.</rdfs:comment>
         <rdfs:label xml:lang="en">data transformation process</rdfs:label>
     </owl:Class>
     
@@ -2826,7 +2814,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.</rdfs:comment>
         <rdfs:label xml:lang="en">data integration process</rdfs:label>
     </owl:Class>
     
@@ -2836,7 +2824,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010037">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process where data is securely stored in databases or other systems, ensuring it can be retrieved and accessed as needed.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process where data is securely stored in databases or other systems, ensuring it can be retrieved and accessed as needed.</rdfs:comment>
         <rdfs:label xml:lang="en">data storage process</rdfs:label>
     </owl:Class>
     
@@ -2846,7 +2834,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010038">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <obo:IAO_0000115>A data handling process where data is represented visually through charts, graphs, or other formats to aid in understanding and decision-making.</obo:IAO_0000115>
+        <rdfs:comment>A data handling process where data is represented visually through charts, graphs, or other formats to aid in understanding and decision-making.</rdfs:comment>
         <rdfs:label xml:lang="en">data visualization process</rdfs:label>
     </owl:Class>
     
@@ -2856,8 +2844,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010039">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000115>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is software designed to execute a specific task.</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0000591</obo:IAO_0000119>
+        <rdfs:comment>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is software designed to execute a specific task.</rdfs:comment>
         <rdfs:label xml:lang="en">software method</rdfs:label>
     </owl:Class>
     
@@ -2867,8 +2855,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010040">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000115>A software module is software composed of a collection of software methods.</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0000592</obo:IAO_0000119>
+        <rdfs:comment>A software module is software composed of a collection of software methods.</rdfs:comment>
         <rdfs:label xml:lang="en">software module</rdfs:label>
     </owl:Class>
     
@@ -2878,8 +2866,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010041">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-        <obo:IAO_0000115>A software script is software whose instructions can be executed using a software interpreter.</obo:IAO_0000115>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0000595</obo:IAO_0000119>
+        <rdfs:comment>A software script is software whose instructions can be executed using a software interpreter.</rdfs:comment>
         <rdfs:label xml:lang="en">software script</rdfs:label>
     </owl:Class>
 </rdf:RDF>
