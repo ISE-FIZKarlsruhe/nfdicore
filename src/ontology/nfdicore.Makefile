@@ -118,10 +118,9 @@ $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILE
 # lets add some additional annotations to the release artefacts
 #############################################################################
 
-CITATION="'Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Harald Sack. NFDIcore Ontology. Revision: v$(VERSION). Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION)'"
+CITATION="'Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v$(VERSION). Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION)'"
 
-ALL_ANNOTATIONS=--annotate-defined-by true \
-	--ontology-iri https://nfdi.fiz-karlsruhe.de/ontology -V https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION) \
+ALL_ANNOTATIONS=--ontology-iri https://nfdi.fiz-karlsruhe.de/ontology -V https://nfdi.fiz-karlsruhe.de/ontology/$(VERSION) \
 	--annotation http://purl.org/dc/terms/created "$(TODAY)" \
 	--annotation http://purl.org/dc/terms/bibliographicCitation "$(CITATION)"  \
 	--link-annotation owl:priorVersion https://nfdi.fiz-karlsruhe.de/ontology/$(PRIOR_VERSION) \
