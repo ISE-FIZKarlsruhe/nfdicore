@@ -98,9 +98,11 @@ Declaration(Class(:NFDI_0001014))
 Declaration(Class(:NFDI_0001015))
 Declaration(Class(:NFDI_0001016))
 Declaration(Class(:NFDI_0001017))
+Declaration(Class(:NFDI_0001018))
 Declaration(Class(:NFDI_0001019))
 Declaration(Class(:NFDI_0001020))
 Declaration(Class(:NFDI_0001021))
+Declaration(Class(:NFDI_0001022))
 Declaration(Class(:NFDI_0010001))
 Declaration(Class(:NFDI_0010002))
 Declaration(Class(:NFDI_0010004))
@@ -910,6 +912,12 @@ AnnotationAssertion(rdfs:comment :NFDI_0001017 "A directive information entity t
 AnnotationAssertion(rdfs:label :NFDI_0001017 "export format specification"@en)
 SubClassOf(:NFDI_0001017 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> :NFDI_0000148)))
 
+# Class: :NFDI_0001018 (description)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001018 "A textual entity that describe some resource."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001018 "description"@de)
+SubClassOf(:NFDI_0001018 <http://purl.obolibrary.org/obo/IAO_0000300>)
+
 # Class: :NFDI_0001019 (title)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001019 "A textual entity that denotes some resource."@en)
@@ -927,6 +935,12 @@ SubClassOf(:NFDI_0001020 :NFDI_0000131)
 AnnotationAssertion(rdfs:comment :NFDI_0001021 "The act of dissolution refers to a formal legal or administrative event that officially terminates or dissolves an entity, relationship, or agreement."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001021 "act of dissolution"@en)
 SubClassOf(:NFDI_0001021 :NFDI_0000131)
+
+# Class: :NFDI_0001022 (ontology namespace)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001022 "A namespace refers to a distinct, unique identifier that is used to distinguish concepts and entities within an ontology from those in other ontologies or systems. It's typically represented as a URL or URI (Uniform Resource Identifier) and ensures that each element within the ontology has a globally unique reference."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001022 "ontology namespace"@de)
+SubClassOf(:NFDI_0001022 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 # Class: :NFDI_0010001 (humanity)
 
