@@ -37,8 +37,10 @@ http://purl.obolibrary.org/obo/IAO_0000429 # email address
 http://purl.obolibrary.org/obo/IAO_0000111
 http://purl.obolibrary.org/obo/IAO_0000112
 http://purl.obolibrary.org/obo/IAO_0000114
+http://purl.obolibrary.org/obo/IAO_0000116
 http://purl.obolibrary.org/obo/IAO_0000117
 http://purl.obolibrary.org/obo/IAO_0000118
+http://purl.obolibrary.org/obo/IAO_0000232
 http://purl.obolibrary.org/obo/IAO_0000233
 http://purl.obolibrary.org/obo/IAO_0000234
 http://purl.obolibrary.org/obo/IAO_0000412

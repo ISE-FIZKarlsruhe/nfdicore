@@ -164,13 +164,13 @@ SubAnnotationPropertyOf(:NFDI_0000012 <http://purl.obolibrary.org/obo/IAO_000011
 
 # Annotation Property: :NFDI_0010013 (term tracker annotation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010013 "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.")
+AnnotationAssertion(rdfs:comment :NFDI_0010013 "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.")
 AnnotationAssertion(rdfs:label :NFDI_0010013 "term tracker annotation"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0010013 "adapted from http://openenergy-platform.org/ontology/oeo/OEO_00020426")
 
 # Annotation Property: :NFDI_0010015 (has acronym)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010015 "A relation between an entity and its abbreviated form, representing a shortened version of the original term or phrase.")
+AnnotationAssertion(rdfs:comment :NFDI_0010015 "A relation between an entity and its abbreviated form, representing a shortened version of the original term or phrase.")
 AnnotationAssertion(rdfs:label :NFDI_0010015 "has acronym"@en)
 SubAnnotationPropertyOf(:NFDI_0010015 <http://purl.obolibrary.org/obo/IAO_0000118>)
 
@@ -189,32 +189,32 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000235> :NFDI_0000226)
 
 # Object Property: :NFDI_0000152 (has input)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000152 "p has input x =Def x is used or consumed in the process of executing p.")
+AnnotationAssertion(rdfs:comment :NFDI_0000152 "p has input x =Def x is used or consumed in the process of executing p.")
 AnnotationAssertion(rdfs:label :NFDI_0000152 "has input"@en)
 SubObjectPropertyOf(:NFDI_0000152 <http://purl.obolibrary.org/obo/BFO_0000057>)
 InverseObjectProperties(:NFDI_0000152 :NFDI_0001024)
 
 # Object Property: :NFDI_0000153 (has output)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000153 "p has output x =Def x is produced or generated as a result of executing p.")
+AnnotationAssertion(rdfs:comment :NFDI_0000153 "p has output x =Def x is produced or generated as a result of executing p.")
 AnnotationAssertion(rdfs:label :NFDI_0000153 "has output"@en)
 SubObjectPropertyOf(:NFDI_0000153 <http://purl.obolibrary.org/obo/BFO_0000057>)
 InverseObjectProperties(:NFDI_0000153 :NFDI_0001023)
 
 # Object Property: :NFDI_0000226 (is subject of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000226 "inverse of the relation 'is about'")
+AnnotationAssertion(rdfs:comment :NFDI_0000226 "inverse of the relation 'is about'")
 AnnotationAssertion(rdfs:label :NFDI_0000226 "is subject of"@en)
 
 # Object Property: :NFDI_0001023 (is output of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001023 "inverse of the relation 'has output'")
+AnnotationAssertion(rdfs:comment :NFDI_0001023 "inverse of the relation 'has output'")
 AnnotationAssertion(rdfs:label :NFDI_0001023 "is output of"@en)
 SubObjectPropertyOf(:NFDI_0001023 <http://purl.obolibrary.org/obo/BFO_0000056>)
 
 # Object Property: :NFDI_0001024 (is input of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001024 "inverse of the relation 'has input'")
+AnnotationAssertion(rdfs:comment :NFDI_0001024 "inverse of the relation 'has input'")
 AnnotationAssertion(rdfs:label :NFDI_0001024 "is input of"@en)
 SubObjectPropertyOf(:NFDI_0001024 <http://purl.obolibrary.org/obo/BFO_0000056>)
 
@@ -225,13 +225,13 @@ SubObjectPropertyOf(:NFDI_0001024 <http://purl.obolibrary.org/obo/BFO_0000056>)
 
 # Data Property: :NFDI_0001007 (has value)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001007 "A relation between an entity and its specific value.")
+AnnotationAssertion(rdfs:comment :NFDI_0001007 "A relation between an information content entity and its specific value."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001007 "has value"@en)
-SubDataPropertyOf(:NFDI_0001007 owl:topDataProperty)
 
-# Data Property: :NFDI_0001008 (hasUrl)
+# Data Property: :NFDI_0001008 (has url)
 
-AnnotationAssertion(rdfs:label :NFDI_0001008 "hasUrl"@de)
+AnnotationAssertion(rdfs:comment :NFDI_0001008 "A relation between an information content entity and its specific url."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001008 "has url"@de)
 DataPropertyRange(:NFDI_0001008 xsd:anyURI)
 
 
@@ -274,7 +274,7 @@ EquivalentClasses(<http://www.ebi.ac.uk/swo/SWO_0000002> :NFDI_0000141)
 
 # Class: :NFDI_0000001 (NFDI resource)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000001 "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI. The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000001 "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI. The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000001 "NFDI resource"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000001 "2024-03-25 - Sasha Bruns: 
 This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."@en)
@@ -284,14 +284,14 @@ SubClassOf(:NFDI_0000001 <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Class: :NFDI_0000002 (project)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000002 "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000002 "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000002 "project"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000002 "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
 SubClassOf(:NFDI_0000002 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000003 (organization)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000003 "An immaterial entity that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000003 "An immaterial entity that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000003 "organization"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000003 "An organization of some kind, e.g. research organization or business organization"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000003 "University Library in Leipzig, Museums of City Cologne")
@@ -300,7 +300,7 @@ SubClassOf(:NFDI_0000003 <http://purl.obolibrary.org/obo/BFO_0000141>)
 
 # Class: :NFDI_0000004 (person)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000004 "An object that represents a single human individual."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000004 "An object that represents a single human individual."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000004 "person"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000004 "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000004 "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus")
@@ -308,7 +308,7 @@ SubClassOf(:NFDI_0000004 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 
 # Class: :NFDI_0000005 (place)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000005 "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000005 "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000005 "place"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000005 "A spatial region, e.g. country, city or district."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000005 "Hessen, Berlin, Schweiz")
@@ -317,7 +317,7 @@ SubClassOf(:NFDI_0000005 <http://purl.obolibrary.org/obo/BFO_0000029>)
 
 # Class: :NFDI_0000006 (consortium)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000006 "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000006 "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000006 "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000006 "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000006 "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
@@ -325,7 +325,7 @@ SubClassOf(:NFDI_0000006 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom
 
 # Class: :NFDI_0000007 (consortium member)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000007 "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000007 "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000007 "consortium member"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000007 "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000007 "Museums of City Cologne is a member of NFDI4Culture consortium."@en)
@@ -333,7 +333,7 @@ EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(:NFDI_0000003 ObjectAllValu
 
 # Class: :NFDI_0000008 (creative work)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000008 "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000008 "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000008 "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000008 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
@@ -342,7 +342,7 @@ SubClassOf(:NFDI_0000008 <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Class: :NFDI_0000009 (dataset)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000009 "An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference. Dataset is structured information about a resource provided by an organization or a person."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000009 "An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference. Dataset is structured information about a resource provided by an organization or a person."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000009 "dataset"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000009 "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000009 "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)")
@@ -350,58 +350,58 @@ SubClassOf(:NFDI_0000009 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000011 (plan)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000011 "A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000011 "A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000011 "plan"@en)
 SubClassOf(:NFDI_0000011 <http://purl.obolibrary.org/obo/BFO_0000017>)
 
 # Class: :NFDI_0000014 (publishing process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000014 "A process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000014 "http://purl.obolibrary.org/obo/IAO_0000444")
+AnnotationAssertion(rdfs:comment :NFDI_0000014 "A process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000014 "publishing process"@en)
 SubClassOf(:NFDI_0000014 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000015 (identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000015 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000015 "http://purl.obolibrary.org/obo/IAO_0020000")
+AnnotationAssertion(rdfs:comment :NFDI_0000015 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.")
 AnnotationAssertion(rdfs:label :NFDI_0000015 "identifier"@en)
 SubClassOf(:NFDI_0000015 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000016 (software development)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000016 "A process that has specified output a software product and that involves the creation of source code."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000016 "http://purl.obolibrary.org/obo/APOLLO_SV_00000008")
+AnnotationAssertion(rdfs:comment :NFDI_0000016 "A process that has specified output a software product and that involves the creation of source code."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000016 "software development"@en)
 SubClassOf(:NFDI_0000016 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000017 (spokesperson role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000017 "A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000017 "A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000017 "spokesperson role"@en)
 SubClassOf(:NFDI_0000017 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000004)))
 
 # Class: :NFDI_0000018 (academic event)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000018 "An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000018 "An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000018 "academic event"@en)
 SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000019)))))
 
 # Class: :NFDI_0000019 (academic organization role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000019 "A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000019 "A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000019 "academic organization role"@en)
 SubClassOf(:NFDI_0000019 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
 
 # Class: :NFDI_0000020 (industry organization role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000020 "A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000020 "A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000020 "industry organization role"@en)
 SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
 
 # Class: :NFDI_0000021 (workflow)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000021 "A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000021 "A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000021 "workflow"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000021 "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.")
 SubClassOf(:NFDI_0000021 ObjectIntersectionOf(:NFDI_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000227) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000059> :NFDI_0001002)))
@@ -409,8 +409,8 @@ SubClassOf(:NFDI_0000021 ObjectIntersectionOf(:NFDI_0000011 ObjectSomeValuesFrom
 # Class: :NFDI_0000022 (document)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> :NFDI_0000022 "A journal article, patent application, laboratory notebook, or a book")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000022 "A collection of information content entities intended to be understood together as a whole"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000022 "http://purl.obolibrary.org/obo/IAO_0000310")
+AnnotationAssertion(rdfs:comment :NFDI_0000022 "A collection of information content entities intended to be understood together as a whole"@en)
 AnnotationAssertion(rdfs:label :NFDI_0000022 "document"@en)
 SubClassOf(:NFDI_0000022 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
@@ -429,8 +429,8 @@ SubClassOf(:NFDI_0000024 <http://purl.obolibrary.org/obo/IAO_8000000>)
 # Class: :NFDI_0000025 (patent)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> :NFDI_0000025 "US Patent 6,449,603")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000025 "A document that has been accepted by a patent authority"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000025 "http://purl.obolibrary.org/obo/IAO_0000313")
+AnnotationAssertion(rdfs:comment :NFDI_0000025 "A document that has been accepted by a patent authority"@en)
 AnnotationAssertion(rdfs:label :NFDI_0000025 "patent"@en)
 SubClassOf(:NFDI_0000025 :NFDI_0000022)
 
@@ -448,20 +448,20 @@ SubClassOf(:NFDI_0000027 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IA
 
 # Class: :NFDI_0000029 (report)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000029 "A document that conveys information, data, or findings, typically structured in a formal or semi-formal manner, to communicate the results of an analysis, investigation, observation, or activity.")
+AnnotationAssertion(rdfs:comment :NFDI_0000029 "A document that conveys information, data, or findings, typically structured in a formal or semi-formal manner, to communicate the results of an analysis, investigation, observation, or activity.")
 AnnotationAssertion(rdfs:label :NFDI_0000029 "report"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000029 "A report is created with the intent of informing specific audiences and may include textual descriptions, visualizations, metrics, or conclusions. It is a realizable entity that is produced and maintained as part of a process or workflow.")
 SubClassOf(:NFDI_0000029 :NFDI_0000022)
 
 # Class: :NFDI_0000030 (source code repository)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000030 "A document that organizes and stores source code files, associated metadata, and version history to facilitate the management, sharing, and collaborative development of software projects. It serves as a structured collection of information that tracks changes, maintains integrity, and supports workflows such as version control, branching, and merging.")
+AnnotationAssertion(rdfs:comment :NFDI_0000030 "A document that organizes and stores source code files, associated metadata, and version history to facilitate the management, sharing, and collaborative development of software projects. It serves as a structured collection of information that tracks changes, maintains integrity, and supports workflows such as version control, branching, and merging.")
 AnnotationAssertion(rdfs:label :NFDI_0000030 "source code repository"@en)
 SubClassOf(:NFDI_0000030 :NFDI_0000022)
 
 # Class: :NFDI_0000100 (academic discipline)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000100 "An information content entity that specifies the subject area, domain or academic discipline of an entity. An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000100 "An information content entity that specifies the subject area, domain or academic discipline of an entity. An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000100 "academic discipline"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000100 "2024-03-26: SB & JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000100 "2024-12-16: TT & JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information."@en)
@@ -472,14 +472,14 @@ SubClassOf(:NFDI_0000100 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000101 (service process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000101 "A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000101 "A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
 SubClassOf(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(:NFDI_0000153 :NFDI_0000232)))
 
 # Class: :NFDI_0000102 (agent)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000102 "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000102 "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000102 "agent"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000102 "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000102 "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en)
@@ -488,7 +488,7 @@ SubClassOf(:NFDI_0000102 <http://purl.obolibrary.org/obo/BFO_0000004>)
 
 # Class: :NFDI_0000106 (city)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000106 "A place that refers to a densely populated urban area."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000106 "A place that refers to a densely populated urban area."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000106 "city"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000106 "A city or a town where the thing is located."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000106 "Berlin, Hannover, Kyiv"@en)
@@ -496,7 +496,7 @@ SubClassOf(:NFDI_0000106 :NFDI_0000005)
 
 # Class: :NFDI_0000107 (collection)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000107 "A material entity that represents a collection of material entities intended to be understood together as a whole."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000107 "A material entity that represents a collection of material entities intended to be understood together as a whole."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000107 "collection"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000107 "A tangible collection of valuables published or curated by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000107 "A collection of arts displayed at the museum"@en)
@@ -504,35 +504,35 @@ SubClassOf(:NFDI_0000107 <http://purl.obolibrary.org/obo/BFO_0000027>)
 
 # Class: :NFDI_0000110 (consortium member role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000110 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000110 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000110 "consortium member role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000110 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
 EquivalentClasses(:NFDI_0000110 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000002)))
 
 # Class: :NFDI_0000111 (contacting process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000111 "A process in which the contact information of an entity is provided."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000111 "A process in which the contact information of an entity is provided."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000111 "contacting process"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000111 "Contacting")
 SubClassOf(:NFDI_0000111 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000114 (contact point role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000114 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000114 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000114 "contact point role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000114 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
 SubClassOf(:NFDI_0000114 :NFDI_0000229)
 
 # Class: :NFDI_0000115 (contributing process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000115 "A process of contibuting or providing information to an endeavor."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000115 "A process of contibuting or providing information to an endeavor."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000115 "contributing process"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000115 "Contributing")
 SubClassOf(:NFDI_0000115 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000118 (contributor role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000118 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000118 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000118 "contributor role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000118 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
 EquivalentClasses(:NFDI_0000118 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000115) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> :NFDI_0000115)))))
@@ -540,7 +540,7 @@ SubClassOf(:NFDI_0000118 :NFDI_0000229)
 
 # Class: :NFDI_0000119 (country)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000119 "A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000119 "A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000119 "country"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000119 "A country where the thing is located."@en)
 SubClassOf(:NFDI_0000119 :NFDI_0000005)
@@ -561,7 +561,7 @@ SubClassOf(:NFDI_0000122 :NFDI_0000101)
 
 # Class: :NFDI_0000123 (data portal)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000123 "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000123 "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000123 "data portal"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000123 "An online platform that provides access to datasets."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000123 "Bach digital, KultSam, MusiXplora"@en)
@@ -569,7 +569,7 @@ SubClassOf(:NFDI_0000123 :NFDI_0000223)
 
 # Class: :NFDI_0000131 (event)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000131 "An process that represents an organized happening that unfolds in time."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000131 "An process that represents an organized happening that unfolds in time."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000131 "event"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000131 "A class that represents entities that occur or unfold in time, typically characterized by a specific organized happening or occurrence with temporal properties."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000131 "conferences, celebrations, workshops, meetings, or any other specific incident or happening that has been planned somehow."@en)
@@ -577,7 +577,7 @@ SubClassOf(:NFDI_0000131 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000134 (federal state)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000134 "A place that refers to a geographical territory forming part of a country."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000134 "A place that refers to a geographical territory forming part of a country."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000134 "federal state"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000134 "A federal state where the thing is located."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000134 "Sachsen, Berlin"@de)
@@ -585,22 +585,22 @@ SubClassOf(:NFDI_0000134 :NFDI_0000005)
 
 # Class: :NFDI_0000139 (funding organization role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000139 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000139 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000139 "funding organization role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000139 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
 SubClassOf(:NFDI_0000139 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
 
 # Class: :NFDI_0000140 (software library)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000140 "Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000140 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment :NFDI_0000140 "Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000140 "software library"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0000140 "http://purl.obolibrary.org/obo/IAO_0000593")
 SubClassOf(:NFDI_0000140 :NFDI_0000198)
 
 # Class: :NFDI_0000141 (license)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000141 "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000141 "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000141 "license"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000141 "A document that provides legal guidelines for the use of a resource, e.g. a software."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000141 "cc-by-3, Digital Peer Publishing Lizenz"@en)
@@ -608,7 +608,7 @@ SubClassOf(:NFDI_0000141 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000145 (media type)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000145 "A directive information entity that describes a media type a bearer has."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000145 "A directive information entity that describes a media type a bearer has."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000145 "media type"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000145 "A digital resource format or physical medium."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000145 "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book")
@@ -616,7 +616,7 @@ SubClassOf(:NFDI_0000145 <http://purl.obolibrary.org/obo/IAO_0000033>)
 
 # Class: :NFDI_0000148 (MIME-type)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000148 "A media type that serves as a standardized identifier for specifying the nature and format of data."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000148 "A media type that serves as a standardized identifier for specifying the nature and format of data."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000148 "MIME-type"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0000148 "https://www.iana.org/assignments/media-types/media-types.xhtml")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000148 "The MIME-type template of the resource"@en)
@@ -626,21 +626,21 @@ SubClassOf(:NFDI_0000148 :NFDI_0000145)
 
 # Class: :NFDI_0000157 (electrical engineering)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000157 "An academic discipline that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation.")
+AnnotationAssertion(rdfs:comment :NFDI_0000157 "An academic discipline that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation.")
 AnnotationAssertion(rdfs:label :NFDI_0000157 "electrical engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0000157 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0000157 :NFDI_0000100)
 
 # Class: :NFDI_0000159 (process engineering)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000159 "An academic discipline that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000159 "An academic discipline that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000159 "process engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0000159 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0000159 :NFDI_0000100)
 
 # Class: :NFDI_0000186 (programming language)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000186 "A plan specification that is used for implementing software."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000186 "A plan specification that is used for implementing software."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000186 "programming language"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000186 "A formal language used for implementing a software."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000186 "Java, Ruby, C++, Perl, PHP")
@@ -648,7 +648,7 @@ SubClassOf(:NFDI_0000186 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: :NFDI_0000190 (publication)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000190 "A publication that is the output of a publishing process and a creative process."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000190 "A publication that is the output of a publishing process and a creative process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000190 "publication"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000190 "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000190 "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten")
@@ -656,14 +656,14 @@ SubClassOf(:NFDI_0000190 :NFDI_0000022)
 
 # Class: :NFDI_0000193 (publisher role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000193 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000193 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000193 "publisher role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000193 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
 SubClassOf(:NFDI_0000193 :NFDI_0000229)
 
 # Class: :NFDI_0000198 (software)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000198 "A plan specification that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000198 "A plan specification that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000198 "software"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000198 "A computer software provided by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000198 "Edirom, Muscat")
@@ -671,7 +671,7 @@ SubClassOf(:NFDI_0000198 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IA
 
 # Class: :NFDI_0000203 (specification)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000203 "A directive information entity that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process.Specification is a set of requirements, guidelines, standards contributed by an organization or a person."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000203 "A directive information entity that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process.Specification is a set of requirements, guidelines, standards contributed by an organization or a person."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000203 "specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000203 "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000203 "Guidelines, technical specifications, design specifications"@en)
@@ -679,7 +679,7 @@ SubClassOf(:NFDI_0000203 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IA
 
 # Class: :NFDI_0000206 (standard)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000206 "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000206 "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000206 "standard"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000206 "An international standard and norm that can be used to evaluate or create a resource."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000206 "ISO 15511, DINI-Zertifikat")
@@ -701,7 +701,7 @@ SubClassOf(:NFDI_0000214 :NFDI_0000101)
 
 # Class: :NFDI_0000215 (technological method specification)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000215 "A plan specification that refers to a technology method employed for the creation, management, utilization, or control of a digital resource."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000215 "A plan specification that refers to a technology method employed for the creation, management, utilization, or control of a digital resource."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000215 "technological method specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000215 "A technology, e.g. a web application or a programming framework used in a resource."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000215 "Groovy on Grails, Angular"@en)
@@ -710,8 +710,8 @@ SubClassOf(:NFDI_0000215 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: :NFDI_0000218 (software application)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000218 "Software that can be downloaded and executed locally on the users' hardware."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000218 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment :NFDI_0000218 "Software that can be downloaded and executed locally on the users' hardware."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000218 "software application"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0000218 "http://purl.obolibrary.org/obo/IAO_0000594")
 SubClassOf(:NFDI_0000218 :NFDI_0000198)
@@ -725,14 +725,14 @@ SubClassOf(:NFDI_0000219 :NFDI_0000101)
 
 # Class: :NFDI_0000222 (web application software)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000222 "Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS)."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000222 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(rdfs:comment :NFDI_0000222 "Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS)."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000222 "web application software"@en)
 SubClassOf(:NFDI_0000222 :NFDI_0000198)
 
 # Class: :NFDI_0000223 (website)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000223 "An information content entity that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000223 "An information content entity that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000223 "website"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000223 "A collection of webpages contributed by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000223 "https:\\/\\/opac.rism.info")
@@ -740,68 +740,68 @@ SubClassOf(:NFDI_0000223 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IA
 
 # Class: :NFDI_0000224 (creative process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000224 "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000224 "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000224 "creative process"@en)
 SubClassOf(:NFDI_0000224 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> :NFDI_0000004)))
 
 # Class: :NFDI_0000227 (workflow process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000227 "A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000227 "A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000227 "workflow process"@en)
 SubClassOf(:NFDI_0000227 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> :NFDI_0000021)))
 
 # Class: :NFDI_0000228 (service product role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000228 "Role of an immaterial entity that facilitates the delivery or support of a service product, ensuring its proper execution and value realization."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000228 "Role of an immaterial entity that facilitates the delivery or support of a service product, ensuring its proper execution and value realization."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000228 "service product role"@en)
 SubClassOf(:NFDI_0000228 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000101)))
 
 # Class: :NFDI_0000229 (agent role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000229 "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000229 "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000229 "agent role"@en)
 SubClassOf(:NFDI_0000229 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000102)))
 
 # Class: :NFDI_0000230 (service provider role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000230 "A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000230 "A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000230 "service provider role"@en)
 SubClassOf(:NFDI_0000230 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000101)))
 
 # Class: :NFDI_0000231 (contributor)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000231 "An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000231 "An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000231 "contributor"@en)
 SubClassOf(:NFDI_0000231 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
 
 # Class: :NFDI_0000232 (service product)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000232 "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000232 "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000232 "service product"@en)
 SubClassOf(:NFDI_0000232 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000152) :NFDI_0000101)))
 
 # Class: :NFDI_0000244 (service specification)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0000244 "A plan specification that defines the requirements, features, and parameters of a service, outlining its scope, performance, and delivery criteria."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000244 "A plan specification that defines the requirements, features, and parameters of a service, outlining its scope, performance, and delivery criteria."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000244 "service specification"@en)
 SubClassOf(:NFDI_0000244 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: :NFDI_0001000 (software title)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001000 "A textual entity that uniquely identifies a specific software application, program, or system, often used for branding, categorization, and reference in documentation, licensing, and distribution.")
+AnnotationAssertion(rdfs:comment :NFDI_0001000 "A textual entity that uniquely identifies a specific software application, program, or system, often used for branding, categorization, and reference in documentation, licensing, and distribution.")
 AnnotationAssertion(rdfs:label :NFDI_0001000 "software title"@en)
 SubClassOf(:NFDI_0001000 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000300> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> :NFDI_0000198)))
 
 # Class: :NFDI_0001001 (citation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001001 "A textual entity intended to identify a particular publication.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001001 "http://purl.obolibrary.org/obo/IAO_0000301")
+AnnotationAssertion(rdfs:comment :NFDI_0001001 "A textual entity intended to identify a particular publication.")
 AnnotationAssertion(rdfs:label :NFDI_0001001 "citation"@en)
 SubClassOf(:NFDI_0001001 <http://purl.obolibrary.org/obo/IAO_0000300>)
 
 # Class: :NFDI_0001002 (workflow specification)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001002 "A plan specification that defines the sequence, dependencies, roles, and conditions governing the execution of tasks and processes within a workflow, ensuring structured and efficient task coordination, automation, and completion.")
+AnnotationAssertion(rdfs:comment :NFDI_0001002 "A plan specification that defines the sequence, dependencies, roles, and conditions governing the execution of tasks and processes within a workflow, ensuring structured and efficient task coordination, automation, and completion.")
 AnnotationAssertion(rdfs:label :NFDI_0001002 "workflow specification"@en)
 SubClassOf(:NFDI_0001002 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
@@ -813,7 +813,7 @@ SubClassOf(:NFDI_0001004 ObjectIntersectionOf(:NFDI_0000022 ObjectSomeValuesFrom
 
 # Class: :NFDI_0001005 (contact point)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001005 "An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.")
+AnnotationAssertion(rdfs:comment :NFDI_0001005 "An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.")
 AnnotationAssertion(rdfs:label :NFDI_0001005 "contact point"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001005 ":ex_1  a \"nfdi:contact point\" .
 :ex_1  \"nfdi:is subject of\"  :email_1 .
@@ -823,85 +823,85 @@ SubClassOf(:NFDI_0001005 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom
 
 # Class: :NFDI_0001009 (GND identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001009 "A centrally registered identifier that is issued by the German National Library. The Integrated Authority File (GND) is facilitates the collaborative use and administration of authority data. These authority data represent and describe entities, i.e. persons, corporate bodies, conferences and events, geographic entities, topics and works relating to cultural and academic collections."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001009 "GND"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001009 "Gemeinsame Normdatei"@de)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001009 "Integrated Authority File"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001009 "https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001009 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:comment :NFDI_0001009 "A centrally registered identifier that is issued by the German National Library. The Integrated Authority File (GND) is facilitates the collaborative use and administration of authority data. These authority data represent and describe entities, i.e. persons, corporate bodies, conferences and events, geographic entities, topics and works relating to cultural and academic collections."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001009 "GND identifier"@en)
 SubClassOf(:NFDI_0001009 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001010 (VIAF identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001010 "The centrally registered identifier VIAF (Virtual International Authority File) is an international authority file that links and integrates authority records from multiple national libraries and other organizations. It provides a unique identifier for authors, creators, and entities, facilitating better data sharing and cataloging across institutions."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001010 "Integrated Authority File"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001010 "VIAF"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001010 "Virtual International Authority File"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001010 "https://viaf.org/en")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001010 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:comment :NFDI_0001010 "The centrally registered identifier VIAF (Virtual International Authority File) is an international authority file that links and integrates authority records from multiple national libraries and other organizations. It provides a unique identifier for authors, creators, and entities, facilitating better data sharing and cataloging across institutions."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001010 "VIAF identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001010 "https://viaf.org/en/viaf/137346469")
 SubClassOf(:NFDI_0001010 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001011 (GeoNames identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001011 "GeoNames is a geographical database that provides information on places, including names, coordinates, and administrative divisions. It integrates data from multiple sources and is widely used for geolocation, mapping, and geographic information systems (GIS)."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001011 "GeoNames"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001011 "https://www.geonames.org/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001011 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:comment :NFDI_0001011 "GeoNames is a geographical database that provides information on places, including names, coordinates, and administrative divisions. It integrates data from multiple sources and is widely used for geolocation, mapping, and geographic information systems (GIS)."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001011 "GeoNames identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001011 "https://www.geonames.org/2950159")
 SubClassOf(:NFDI_0001011 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001012 (Wikidata identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001012 "Wikidata is maintained by the Wikimedia Foundation and serves as a central repository for structured data used by Wikipedia, Wikimedia projects, and external applications."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001012 "Wikidata"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001012 "https://www.wikidata.org/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001012 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:comment :NFDI_0001012 "Wikidata is maintained by the Wikimedia Foundation and serves as a central repository for structured data used by Wikipedia, Wikimedia projects, and external applications."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001012 "Wikidata identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001012 "https://www.wikidata.org/wiki/Q1388737")
 SubClassOf(:NFDI_0001012 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001013 (ROR identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001013 "ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001013 "ROR"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001013 "https://ror.org/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:comment :NFDI_0001013 "ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001013 "ROR identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001013 "https://ror.org/01kdxra28")
 SubClassOf(:NFDI_0001013 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001014 (ISIL identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001014 "ISIL (International Standard Identifier for Libraries and Related Organizations) is a globally recognized identifier system used to uniquely identify libraries, archives, museums, and other cultural institutions. It facilitates resource sharing, cataloging, and data exchange across institutions and countries."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001014 "ISIL"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001014 "International Standard Identifier for Libraries and Related Organizations"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001014 "https://sigel.staatsbibliothek-berlin.de/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001014 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:comment :NFDI_0001014 "ISIL (International Standard Identifier for Libraries and Related Organizations) is a globally recognized identifier system used to uniquely identify libraries, archives, museums, and other cultural institutions. It facilitates resource sharing, cataloging, and data exchange across institutions and countries."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001014 "ISIL identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001014 "https://ld.zdb-services.de/resource/organisations/DE-4153")
 SubClassOf(:NFDI_0001014 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001015 (FactGrid identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001015 "FactGrid is a collaborative, structured knowledge database designed for historical research. It operates on Wikibase and focuses on documenting historical entities, events, and relationships."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001015 "FactGrid"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001015 "https://database.factgrid.de/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001015 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:comment :NFDI_0001015 "FactGrid is a collaborative, structured knowledge database designed for historical research. It operates on Wikibase and focuses on documenting historical entities, events, and relationships."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001015 "FactGrid identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001015 "https://database.factgrid.de/entity/Q595")
 SubClassOf(:NFDI_0001015 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001016 (RISM identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001016 "RISM (Répertoire International des Sources Musicales) is an international catalog of historical music sources, including manuscripts, printed music, and treatises. It provides unique identifiers and bibliographic data to support music research and documentation."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001016 "RISM"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001016 "Répertoire International des Sources Musicales"@fr)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001016 "https://rism.info/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001016 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
+AnnotationAssertion(rdfs:comment :NFDI_0001016 "RISM (Répertoire International des Sources Musicales) is an international catalog of historical music sources, including manuscripts, printed music, and treatises. It provides unique identifiers and bibliographic data to support music research and documentation."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001016 "RISM identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001016 "https://rism.online/sources/201001959/")
 SubClassOf(:NFDI_0001016 <http://purl.obolibrary.org/obo/IAO_0000578>)
@@ -944,234 +944,234 @@ SubClassOf(:NFDI_0001022 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 # Class: :NFDI_0010001 (humanity)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010001 "An academic discipline focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010001 "An academic discipline focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010001 "humanity"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010001 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010001 :NFDI_0000100)
 
 # Class: :NFDI_0010002 (social science)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010002 "An academic discipline that studies society and human behavior through disciplines like sociology, psychology, and economics."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010002 "An academic discipline that studies society and human behavior through disciplines like sociology, psychology, and economics."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010002 "social science"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010002 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010002 :NFDI_0000100)
 
 # Class: :NFDI_0010004 (biology)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010004 "An academic discipline that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010004 "An academic discipline that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010004 "biology"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010004 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010004 :NFDI_0000100)
 
 # Class: :NFDI_0010005 (medicine)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010005 "An academic discipline that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010005 "An academic discipline that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010005 "medicine"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010005 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010005 :NFDI_0000100)
 
 # Class: :NFDI_0010006 (agriculture)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010006 "An academic discipline that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010006 "An academic discipline that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010006 "agriculture"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010006 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010006 :NFDI_0000100)
 
 # Class: :NFDI_0010007 (natural science)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010007 "An academic discipline that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth.")
+AnnotationAssertion(rdfs:comment :NFDI_0010007 "An academic discipline that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth.")
 AnnotationAssertion(rdfs:label :NFDI_0010007 "natural science"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010007 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010007 :NFDI_0000100)
 
 # Class: :NFDI_0010008 (chemistry)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010008 "An academic discipline that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010008 "An academic discipline that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010008 "chemistry"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010008 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010008 :NFDI_0000100)
 
 # Class: :NFDI_0010010 (physic)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010010 "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010010 "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010010 "physic"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010010 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010010 :NFDI_0000100)
 
 # Class: :NFDI_0010011 (mathematics)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010011 "An academic discipline that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling.")
+AnnotationAssertion(rdfs:comment :NFDI_0010011 "An academic discipline that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling.")
 AnnotationAssertion(rdfs:label :NFDI_0010011 "mathematics"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010011 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010011 :NFDI_0000100)
 
 # Class: :NFDI_0010012 (geoscience)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010012 "An academic discipline that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010012 "An academic discipline that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010012 "geoscience"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010012 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010012 :NFDI_0000100)
 
 # Class: :NFDI_0010014 (mechanical engineering)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010014 "An academic discipline that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010014 "An academic discipline that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010014 "mechanical engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010014 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010014 :NFDI_0000100)
 
 # Class: :NFDI_0010016 (materials science)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010016 "An academic discipline that explores the properties, performance, and applications of materials, focusing on the relationship between a material's structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010016 "An academic discipline that explores the properties, performance, and applications of materials, focusing on the relationship between a material's structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010016 "materials science"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010016 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010016 :NFDI_0000100)
 
 # Class: :NFDI_0010017 (computer science)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010017 "An academic discipline that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010017 "An academic discipline that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010017 "computer science"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010017 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010017 :NFDI_0000100)
 
 # Class: :NFDI_0010018 (construction engineering)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010018 "An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010018 "An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010018 "construction engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010018 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 SubClassOf(:NFDI_0010018 :NFDI_0000100)
 
 # Class: :NFDI_0010019 (workshop)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010019 "An event focused on interactive learning, where participants engage in hands-on activities or group work to develop specific skills or knowledge."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010019 "An event focused on interactive learning, where participants engage in hands-on activities or group work to develop specific skills or knowledge."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010019 "workshop"@en)
 SubClassOf(:NFDI_0010019 :NFDI_0000018)
 
 # Class: :NFDI_0010020 (conference)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010020 "An event where experts and scholars gather to present research, exchange ideas, and discuss advancements in a particular field."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010020 "An event where experts and scholars gather to present research, exchange ideas, and discuss advancements in a particular field."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010020 "conference"@en)
 SubClassOf(:NFDI_0010020 :NFDI_0000018)
 
 # Class: :NFDI_0010021 (hackathon)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010021 "An event where participants collaborate intensively over a short period to develop technological solutions, such as software or hardware projects."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010021 "An event where participants collaborate intensively over a short period to develop technological solutions, such as software or hardware projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010021 "hackathon"@en)
 SubClassOf(:NFDI_0010021 :NFDI_0000018)
 
 # Class: :NFDI_0010022 (lecture)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010022 "An event where a subject matter expert delivers a formal presentation to inform or educate an audience about a specific topic."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010022 "An event where a subject matter expert delivers a formal presentation to inform or educate an audience about a specific topic."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010022 "lecture"@en)
 SubClassOf(:NFDI_0010022 :NFDI_0000018)
 
 # Class: :NFDI_0010023 (course)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010023 "An event structured as a program of study, offering instruction on a particular subject, often leading to certification or academic credit."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010023 "An event structured as a program of study, offering instruction on a particular subject, often leading to certification or academic credit."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010023 "course"@en)
 SubClassOf(:NFDI_0010023 :NFDI_0000018)
 
 # Class: :NFDI_0010024 (summer school)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010024 "An event held during the summer, providing specialized courses or workshops to supplement regular academic studies or offer additional learning opportunities."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010024 "An event held during the summer, providing specialized courses or workshops to supplement regular academic studies or offer additional learning opportunities."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010024 "summer school"@en)
 SubClassOf(:NFDI_0010024 :NFDI_0000018)
 
 # Class: :NFDI_0010025 (seminar)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010025 "An event where a small group of participants discuss a specific topic in depth, often involving presentations and interactive discussions."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010025 "An event where a small group of participants discuss a specific topic in depth, often involving presentations and interactive discussions."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010025 "seminar"@en)
 SubClassOf(:NFDI_0010025 :NFDI_0000018)
 
 # Class: :NFDI_0010026 (symposium)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010026 "An event where researchers and experts present and discuss their work, often centered around a specific theme or area of study."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010026 "An event where researchers and experts present and discuss their work, often centered around a specific theme or area of study."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010026 "symposium"@en)
 SubClassOf(:NFDI_0010026 :NFDI_0000018)
 
 # Class: :NFDI_0010027 (panel discussion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010027 "An event featuring a group of experts who share their insights and engage in a moderated discussion on a particular subject, followed by audience questions."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0010027 "An event featuring a group of experts who share their insights and engage in a moderated discussion on a particular subject, followed by audience questions."@en)
 AnnotationAssertion(rdfs:label :NFDI_0010027 "panel discussion"@en)
 SubClassOf(:NFDI_0010027 :NFDI_0000018)
 
 # Class: :NFDI_0010028 (data handling process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010028 "A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.")
+AnnotationAssertion(rdfs:comment :NFDI_0010028 "A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.")
 AnnotationAssertion(rdfs:label :NFDI_0010028 "data handling process"@en)
 SubClassOf(:NFDI_0010028 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0010029 (data producing process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010029 "A data handling process where raw data is generated through experiments, observations, or data collection tools, often as the initial step in the data lifecycle.")
+AnnotationAssertion(rdfs:comment :NFDI_0010029 "A data handling process where raw data is generated through experiments, observations, or data collection tools, often as the initial step in the data lifecycle.")
 AnnotationAssertion(rdfs:label :NFDI_0010029 "data producing process"@en)
 SubClassOf(:NFDI_0010029 :NFDI_0010028)
 
 # Class: :NFDI_0010030 (data processing process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010030 "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.")
+AnnotationAssertion(rdfs:comment :NFDI_0010030 "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.")
 AnnotationAssertion(rdfs:label :NFDI_0010030 "data processing process"@en)
 SubClassOf(:NFDI_0010030 :NFDI_0010028)
 
 # Class: :NFDI_0010031 (dataset creation process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010031 "A data handling process involving the organization and structuring of data into datasets for easier access, analysis, and sharing.")
+AnnotationAssertion(rdfs:comment :NFDI_0010031 "A data handling process involving the organization and structuring of data into datasets for easier access, analysis, and sharing.")
 AnnotationAssertion(rdfs:label :NFDI_0010031 "dataset creation process"@en)
 SubClassOf(:NFDI_0010031 :NFDI_0010028)
 
 # Class: :NFDI_0010033 (dataset documenting process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010033 "A data handling process where metadata, descriptions, and details about datasets are recorded to ensure clarity, context, and proper usage by others.")
+AnnotationAssertion(rdfs:comment :NFDI_0010033 "A data handling process where metadata, descriptions, and details about datasets are recorded to ensure clarity, context, and proper usage by others.")
 AnnotationAssertion(rdfs:label :NFDI_0010033 "dataset documenting process"@en)
 SubClassOf(:NFDI_0010033 :NFDI_0010028)
 
 # Class: :NFDI_0010034 (data cleaning process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010034 "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.")
+AnnotationAssertion(rdfs:comment :NFDI_0010034 "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.")
 AnnotationAssertion(rdfs:label :NFDI_0010034 "data cleaning process"@en)
 SubClassOf(:NFDI_0010034 :NFDI_0010028)
 
 # Class: :NFDI_0010035 (data transformation process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010035 "A data handling process involving the conversion of data into a different format, structure, or scale to make it compatible with analysis tools or systems.")
+AnnotationAssertion(rdfs:comment :NFDI_0010035 "A data handling process involving the conversion of data into a different format, structure, or scale to make it compatible with analysis tools or systems.")
 AnnotationAssertion(rdfs:label :NFDI_0010035 "data transformation process"@en)
 SubClassOf(:NFDI_0010035 :NFDI_0010028)
 
 # Class: :NFDI_0010036 (data integration process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010036 "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.")
+AnnotationAssertion(rdfs:comment :NFDI_0010036 "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.")
 AnnotationAssertion(rdfs:label :NFDI_0010036 "data integration process"@en)
 SubClassOf(:NFDI_0010036 :NFDI_0010028)
 
 # Class: :NFDI_0010037 (data storage process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010037 "A data handling process where data is securely stored in databases or other systems, ensuring it can be retrieved and accessed as needed.")
+AnnotationAssertion(rdfs:comment :NFDI_0010037 "A data handling process where data is securely stored in databases or other systems, ensuring it can be retrieved and accessed as needed.")
 AnnotationAssertion(rdfs:label :NFDI_0010037 "data storage process"@en)
 SubClassOf(:NFDI_0010037 :NFDI_0010028)
 
 # Class: :NFDI_0010038 (data visualization process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010038 "A data handling process where data is represented visually through charts, graphs, or other formats to aid in understanding and decision-making.")
+AnnotationAssertion(rdfs:comment :NFDI_0010038 "A data handling process where data is represented visually through charts, graphs, or other formats to aid in understanding and decision-making.")
 AnnotationAssertion(rdfs:label :NFDI_0010038 "data visualization process"@en)
 SubClassOf(:NFDI_0010038 :NFDI_0010028)
 
 # Class: :NFDI_0010039 (software method)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010039 "A software method (also called subroutine, subprogram, procedure, method, function, or routine) is software designed to execute a specific task.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010039 "http://purl.obolibrary.org/obo/IAO_0000591")
+AnnotationAssertion(rdfs:comment :NFDI_0010039 "A software method (also called subroutine, subprogram, procedure, method, function, or routine) is software designed to execute a specific task.")
 AnnotationAssertion(rdfs:label :NFDI_0010039 "software method"@en)
 SubClassOf(:NFDI_0010039 :NFDI_0000198)
 
 # Class: :NFDI_0010040 (software module)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010040 "A software module is software composed of a collection of software methods.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010040 "http://purl.obolibrary.org/obo/IAO_0000592")
+AnnotationAssertion(rdfs:comment :NFDI_0010040 "A software module is software composed of a collection of software methods.")
 AnnotationAssertion(rdfs:label :NFDI_0010040 "software module"@en)
 SubClassOf(:NFDI_0010040 :NFDI_0000198)
 
 # Class: :NFDI_0010041 (software script)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010041 "A software script is software whose instructions can be executed using a software interpreter.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010041 "http://purl.obolibrary.org/obo/IAO_0000595")
+AnnotationAssertion(rdfs:comment :NFDI_0010041 "A software script is software whose instructions can be executed using a software interpreter.")
 AnnotationAssertion(rdfs:label :NFDI_0010041 "software script"@en)
 SubClassOf(:NFDI_0010041 :NFDI_0000198)
 
