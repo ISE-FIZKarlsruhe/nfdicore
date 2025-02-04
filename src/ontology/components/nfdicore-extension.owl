@@ -64,14 +64,6 @@ Declaration(DataProperty(:NFDI_0000127))
 Declaration(DataProperty(:NFDI_0000128))
 Declaration(DataProperty(:NFDI_0000135))
 Declaration(DataProperty(:NFDI_0000136))
-Declaration(DataProperty(:NFDI_0001008))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000232>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/RO_0001900>))
-Declaration(AnnotationProperty(dcterms:description))
-Declaration(AnnotationProperty(dcterms:title))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(:NFDI_0000012))
 
 ############################
@@ -443,11 +435,6 @@ AnnotationAssertion(rdfs:comment :NFDI_0000136 "The property refers to the speci
 AnnotationAssertion(rdfs:label :NFDI_0000136 "foundation date"@en)
 DataPropertyDomain(:NFDI_0000136 :NFDI_0000003)
 DataPropertyRange(:NFDI_0000136 rdfs:Literal)
-
-# Data Property: :NFDI_0001008 (hasUrl)
-
-AnnotationAssertion(rdfs:label :NFDI_0001008 "hasUrl"@de)
-DataPropertyRange(:NFDI_0001008 xsd:anyURI)
 
 
 

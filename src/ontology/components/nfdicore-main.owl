@@ -137,50 +137,19 @@ Declaration(Class(:NFDI_0010038))
 Declaration(Class(:NFDI_0010039))
 Declaration(Class(:NFDI_0010040))
 Declaration(Class(:NFDI_0010041))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
 Declaration(ObjectProperty(:NFDI_0000152))
 Declaration(ObjectProperty(:NFDI_0000153))
 Declaration(ObjectProperty(:NFDI_0000226))
 Declaration(ObjectProperty(:NFDI_0010003))
 Declaration(ObjectProperty(:NFDI_00100042))
 Declaration(DataProperty(:NFDI_0001007))
-Declaration(DataProperty(:NFDI_0010015))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000232>))
-Declaration(AnnotationProperty(dcterms:abstract))
-Declaration(AnnotationProperty(dcterms:bibliographicCitation))
-Declaration(AnnotationProperty(dcterms:created))
-Declaration(AnnotationProperty(dcterms:creator))
-Declaration(AnnotationProperty(dcterms:description))
-Declaration(AnnotationProperty(dcterms:format))
-Declaration(AnnotationProperty(dcterms:hasVersion))
-Declaration(AnnotationProperty(dcterms:license))
-Declaration(AnnotationProperty(dcterms:title))
-Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/status>))
-Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespacePrefix>))
-Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri>))
-Declaration(AnnotationProperty(<http://rdfs.org/ns/void#feature>))
-Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
-Declaration(AnnotationProperty(rdfs:label))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
+Declaration(DataProperty(:NFDI_0001008))
 Declaration(AnnotationProperty(:NFDI_0000012))
 Declaration(AnnotationProperty(:NFDI_0010013))
+Declaration(AnnotationProperty(:NFDI_0010015))
 ############################
 #   Annotation Properties
 ############################
-
-# Annotation Property: dcterms:description (description)
-
-AnnotationAssertion(rdfs:label dcterms:description "description")
-
-# Annotation Property: dcterms:license (license)
-
-AnnotationAssertion(rdfs:label dcterms:license "license")
 
 # Annotation Property: dcterms:title (title)
 
@@ -196,6 +165,12 @@ SubAnnotationPropertyOf(:NFDI_0000012 <http://purl.obolibrary.org/obo/IAO_000011
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010013 "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request.")
 AnnotationAssertion(rdfs:label :NFDI_0010013 "term tracker annotation"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0010013 "adapted from http://openenergy-platform.org/ontology/oeo/OEO_00020426")
+
+# Annotation Property: :NFDI_0010015 (has acronym)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010015 "A relation between an entity and its abbreviated form, representing a shortened version of the original term or phrase.")
+AnnotationAssertion(rdfs:label :NFDI_0010015 "has acronym"@en)
+SubAnnotationPropertyOf(:NFDI_0010015 <http://purl.obolibrary.org/obo/IAO_0000118>)
 
 
 ############################
@@ -252,11 +227,10 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0001007 "
 AnnotationAssertion(rdfs:label :NFDI_0001007 "has value"@en)
 SubDataPropertyOf(:NFDI_0001007 owl:topDataProperty)
 
-# Data Property: :NFDI_0010015 (has acronym)
+# Data Property: :NFDI_0001008 (hasUrl)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> :NFDI_0010015 "A relation between an entity and its abbreviated form, representing a shortened version of the original term or phrase.")
-AnnotationAssertion(rdfs:label :NFDI_0010015 "has acronym"@en)
-SubDataPropertyOf(:NFDI_0010015 owl:topDataProperty)
+AnnotationAssertion(rdfs:label :NFDI_0001008 "hasUrl"@de)
+DataPropertyRange(:NFDI_0001008 xsd:anyURI)
 
 
 
@@ -1188,4 +1162,6 @@ AnnotationAssertion(rdfs:label :NFDI_0010041 "software script"@en)
 SubClassOf(:NFDI_0010041 :NFDI_0000198)
 
 
+AnnotationAssertion(rdfs:label dcterms:description "description")
+AnnotationAssertion(rdfs:label dcterms:license "license")
 )
