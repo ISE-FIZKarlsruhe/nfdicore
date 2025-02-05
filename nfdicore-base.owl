@@ -14,10 +14,10 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
     <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology">
-        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha"/>
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha1"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha</dcterms:bibliographicCitation>
-        <dcterms:created>2025-02-04</dcterms:created>
+        <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha1</dcterms:bibliographicCitation>
+        <dcterms:created>2025-02-05</dcterms:created>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
@@ -32,7 +32,7 @@
         <rdfs:label>NFDIcore</rdfs:label>
         <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
         <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.1.0"/>
-        <owl:versionInfo>3.0.0-alpha</owl:versionInfo>
+        <owl:versionInfo>3.0.0-alpha1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -123,12 +123,6 @@
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#definition -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
     
 
 
@@ -1426,8 +1420,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:comment xml:lang="en">An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it.</rdfs:comment>
         <rdfs:label xml:lang="en">ontology</rdfs:label>
-        <skos:definition xml:lang="en">An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it.</skos:definition>
     </owl:Class>
     
 

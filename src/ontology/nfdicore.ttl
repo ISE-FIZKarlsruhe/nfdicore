@@ -20,7 +20,7 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.ttl> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore.ttl> rdf:type owl:Ontology ;
-                                                       owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-02-04/nfdicore.ttl> ;
+                                                       owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-02-05/nfdicore.ttl> ;
                                                        dcterms:creator <https://nfdi4culture.de/id/E1925> ,
                                                                        <https://nfdi4culture.de/id/E2415> ,
                                                                        <https://nfdi4culture.de/id/E2416> ,
@@ -34,7 +34,7 @@
                                                        vann:preferredNamespaceUri ontology: ;
                                                        rdfs:label "NFDIcore" ;
                                                        owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ;
-                                                       owl:versionInfo "2025-02-04" .
+                                                       owl:versionInfo "2025-02-05" .
 
 #################################################################
 #    Annotation properties
@@ -171,7 +171,14 @@ We also have the outstanding issue of how to aim different definitions to differ
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000116
-obo:IAO_0000116 rdf:type owl:AnnotationProperty .
+obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "editor note"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obofoundry.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "editor note"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000117
@@ -212,7 +219,13 @@ obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000232
-obo:IAO_0000232 rdf:type owl:AnnotationProperty .
+obo:IAO_0000232 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "curator note"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "An administrative note of use for a curator but of no use for a user"@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "curator note"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000233
@@ -1194,8 +1207,8 @@ obo:IAO_0000235 rdf:type owl:ObjectProperty ;
                 rdfs:range obo:IAO_0000030 ;
                 obo:IAO_0000115 "inverse of the relation 'denotes'"@en ;
                 obo:IAO_0000117 "Person: Jie Zheng, Chris Stoeckert, Mike Conlon"@en ;
-                rdfs:label "denoted by"@en ;
-                ontology:NFDI_0010013 <https://github.com/information-artifact-ontology/IAO/issues/206> .
+                obo:IAO_0000233 <https://github.com/information-artifact-ontology/IAO/issues/206> ;
+                rdfs:label "denoted by"@en .
 
 
 ###  http://www.w3.org/ns/dcat#downloadURL
@@ -3262,8 +3275,8 @@ obo:IAO_0020016 rdf:type owl:Class ;
                                 "Mathias Brochhausen"@en ;
                 obo:IAO_0000118 "first name"@en ;
                 obo:IAO_0000119 "http://en.wikipedia.org/wiki/Given_name" ;
-                rdfs:label "given name"@en ;
-                ontology:NFDI_0010013 "https://github.com/information-artifact-ontology/IAO/issues/237"@en .
+                obo:IAO_0000233 "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
+                rdfs:label "given name"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0020017
@@ -3275,8 +3288,8 @@ obo:IAO_0020017 rdf:type owl:Class ;
                 obo:IAO_0000118 "last name"@en ,
                                 "surname"@en ;
                 obo:IAO_0000119 "http://en.wikipedia.org/wiki/Family_name" ;
-                rdfs:label "family name"@en ;
-                ontology:NFDI_0010013 "https://github.com/information-artifact-ontology/IAO/issues/237"@en .
+                obo:IAO_0000233 "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
+                rdfs:label "family name"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0020020
@@ -3629,8 +3642,8 @@ ontology:NFDI_0000022 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023
 ontology:NFDI_0000023 rdf:type owl:Class ;
                       rdfs:subClassOf obo:IAO_0000027 ;
-                      rdfs:label "ontology"@en ;
-                      skos:definition "An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it."@en .
+                      rdfs:comment "An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it."@en ;
+                      rdfs:label "ontology"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000024

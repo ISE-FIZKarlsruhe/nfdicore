@@ -14,10 +14,10 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha> ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha1> ;
                                           dce:type obo:IAO_8000001 ;
-                                          dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha" ;
-                                          dcterms:created "2025-02-04" ;
+                                          dcterms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha1" ;
+                                          dcterms:created "2025-02-05" ;
                                           dcterms:creator <https://nfdi4culture.de/id/E1925> ,
                                                           <https://nfdi4culture.de/id/E2415> ,
                                                           <https://nfdi4culture.de/id/E2416> ,
@@ -32,7 +32,7 @@
                                           rdfs:label "NFDIcore" ;
                                           owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ,
                                                            <https://nfdi.fiz-karlsruhe.de/ontology/2.1.0> ;
-                                          owl:versionInfo "3.0.0-alpha" .
+                                          owl:versionInfo "3.0.0-alpha1" .
 
 #################################################################
 #    Annotation properties
@@ -88,10 +88,6 @@ bibo:status rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#definition
-skos:definition rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#editorialNote
@@ -1011,8 +1007,8 @@ ontology:NFDI_0000022 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023
 ontology:NFDI_0000023 rdf:type owl:Class ;
                       rdfs:subClassOf obo:IAO_0000027 ;
-                      rdfs:label "ontology"@en ;
-                      skos:definition "An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it."@en .
+                      rdfs:comment "An (nfdi) ontology is a data item that coherently represents all components of an ontology, including its versions, variants, modules and other associated artifacts. It is typically denoted by a name and/or an acronym, which is the term we use to communicate about it."@en ;
+                      rdfs:label "ontology"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000024
