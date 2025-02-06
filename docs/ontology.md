@@ -66,12 +66,12 @@ Since BFO 2020 — the version currently adopted by NFDIcore — is not fully su
 
 The Basic Formal Ontology (BFO) is a **top-level ontology** that provides a structured framework for organizing entities based on their fundamental nature. It does not include domain-specific content but instead defines **high-level categories** that support the development of specialized ontologies like NFDIcore.  
 
-BFO distinguishes entities based on whether they persist through time or unfold over time, dividing them into **Continuants** and **Occurrents** (see image above).  
+BFO distinguishes entities based on whether they persist through time or unfold over time, dividing them into **continuants** and **occurrents** (see image above).  
 
 ### **Continuants (Endurants)**  
-Continuants are entities that **exist at any given moment in time** and maintain their identity over time. 
+Continuants are entities that **exist at any given moment in time** and maintain their identity over time. There are tree kinds of continuants: *independent* continuants, *generically dependent* continuants and *specifically dependent* continuants.
 
-#### **Independent Continuants**  
+#### **Independent Continuants (IC)**  
 These are entities that **exist independently** and do not require another entity to exist.  
 
 - **Material Entities** – Physical objects with spatial extension.  
@@ -79,7 +79,7 @@ These are entities that **exist independently** and do not require another entit
 - **Immaterial Entities** – Boundaries or parts of objects defined by human convention.  
   - *Examples*: The equator, the upper half of a sphere.  
 
-#### **Generically Dependent Continuants**  
+#### **Generically Dependent Continuants (GDC)**  
 These entities **depend on independent continuants** for their existence.  
 Generically dependent continuants can exist in multiple instances or be replicated across different locations. 
 
@@ -90,7 +90,7 @@ Generically dependent continuants can exist in multiple instances or be replicat
 	- A dataset and data items
 	- Entities with information content
 
-#### **Specifically Dependent Continuants**  
+#### **Specifically Dependent Continuants (SDC)**  
 Specifically dependent continuants are **qualities, roles, or dispositions** that **exist only in relation to a particular independent continuant**. They cannot exist independently and must always be **inherent in something else**.  
 
   
@@ -140,3 +140,4 @@ BFO defines formal **relationships** between entities to maintain consistency. S
 
 More information about BFO can be found at the [GitHub repo](https://github.com/bfo-ontology/BFO-2020) and the [documentation page](https://basic-formal-ontology.org/bfo-2020.html). 
  
+

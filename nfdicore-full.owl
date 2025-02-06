@@ -20,9 +20,9 @@
      xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/"
      xmlns:edamontology="http://edamontology.org/">
     <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology">
-        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha1"/>
-        <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha1</dcterms:bibliographicCitation>
-        <dcterms:created>2025-02-05</dcterms:created>
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha2"/>
+        <dcterms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha2</dcterms:bibliographicCitation>
+        <dcterms:created>2025-02-06</dcterms:created>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
@@ -37,7 +37,7 @@
         <rdfs:label>NFDIcore</rdfs:label>
         <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
         <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.1.0"/>
-        <owl:versionInfo>3.0.0-alpha1</owl:versionInfo>
+        <owl:versionInfo>3.0.0-alpha2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1713,7 +1713,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:comment xml:lang="en">The property is a relationship between an NFDI resource and a person as a contact point.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property is a relationship between an NFDI resource and a person or organization (agent) as a contact point.</rdfs:comment>
         <rdfs:label xml:lang="en">has contact point</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1745,7 +1745,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:comment xml:lang="en">The property related an NFDI resource to a person or an organization responsible for making contributions to a resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property related something to a person or an organization responsible for making contributions to that.</rdfs:comment>
         <rdfs:label xml:lang="en">has contributor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2251,6 +2251,37 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     
 
 
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000240"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001028"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                        <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The has creator property links something that was created (like a book, painting, or website) to the person or organization (agent) that made it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has creator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001028 -->
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001028">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241"/>
+        <rdfs:label xml:lang="de">creator of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2341,7 +2372,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">A relation between an information content entity and its specific url.</rdfs:comment>
-        <rdfs:label xml:lang="de">has url</rdfs:label>
+        <rdfs:label xml:lang="en">has url</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -4576,7 +4607,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information.</rdfs:comment>
         <rdfs:label xml:lang="en">spokesperson role</rdfs:label>
     </owl:Class>
     
@@ -4626,7 +4657,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement.</rdfs:comment>
         <rdfs:label xml:lang="en">academic organization role</rdfs:label>
     </owl:Class>
     
@@ -4646,7 +4677,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation.</rdfs:comment>
         <rdfs:label xml:lang="en">industry organization role</rdfs:label>
     </owl:Class>
     
@@ -4882,9 +4913,8 @@ This class is useful in nfdicore to provide a unified and structured representat
                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an organization that is realized when the organization is a member of a consortium.</rdfs:comment>
         <rdfs:label xml:lang="en">consortium member role</rdfs:label>
-        <skos:editorialNote xml:lang="en">A role inhering in an organization that is realized when the organsation is a member of a consortium.</skos:editorialNote>
     </owl:Class>
     
 
@@ -4904,9 +4934,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when the agent is a contact point of a resource or a project.</rdfs:comment>
         <rdfs:label xml:lang="en">contact point role</rdfs:label>
-        <skos:editorialNote xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of a resource or a project.</skos:editorialNote>
     </owl:Class>
     
 
@@ -4973,9 +5002,8 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that provides input, resources, or effort to support or enhance a project, work, or process.</rdfs:comment>
         <rdfs:label xml:lang="en">contributor role</rdfs:label>
-        <skos:editorialNote xml:lang="en">A role inhering in an agent that is realized when the agent is a contact point of an entity.</skos:editorialNote>
     </owl:Class>
     
 
@@ -5063,9 +5091,8 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</rdfs:comment>
         <rdfs:label xml:lang="en">funding organization role</rdfs:label>
-        <skos:editorialNote xml:lang="en">A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects.</skos:editorialNote>
     </owl:Class>
     
 
@@ -5170,9 +5197,8 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when the bearer participates in the publishing of the document.</rdfs:comment>
         <rdfs:label xml:lang="en">publisher role</rdfs:label>
-        <skos:editorialNote xml:lang="en">A role inhering in an agent that is realized when the bearer participates in the publishing of the document.</skos:editorialNote>
     </owl:Class>
     
 
@@ -5430,7 +5456,7 @@ This class is useful in nfdicore to provide a unified and structured representat
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements.</rdfs:comment>
         <rdfs:label xml:lang="en">service provider role</rdfs:label>
     </owl:Class>
     
@@ -5759,6 +5785,16 @@ This class is useful in nfdicore to provide a unified and structured representat
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:comment xml:lang="en">A namespace refers to a distinct, unique identifier that is used to distinguish concepts and entities within an ontology from those in other ontologies or systems. It&apos;s typically represented as a URL or URI (Uniform Resource Identifier) and ensures that each element within the ontology has a globally unique reference.</rdfs:comment>
         <rdfs:label xml:lang="de">ontology namespace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that originates, develops, or produces a work, product, or idea.</rdfs:comment>
+        <rdfs:label xml:lang="en">creator role</rdfs:label>
     </owl:Class>
     
 

@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-02-05/imports/swo_import.owl>
-Annotation(owl:versionInfo "2025-02-05")
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-02-06/imports/swo_import.owl>
+Annotation(owl:versionInfo "2025-02-06")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://www.ebi.ac.uk/swo/SWO_0000002>))

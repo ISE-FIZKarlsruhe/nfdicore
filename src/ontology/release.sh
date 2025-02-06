@@ -1,6 +1,6 @@
 
 
-VERSION=3.0.0-alpha1
+VERSION=3.0.0-alpha2
 PRIOR_VERSION=2.1.0
 ONTBASE=https://nfdi.fiz-karlsruhe.de/ontology 
 ANNOTATE_ONTOLOGY_VERSION="annotate -V $ONTBASE/$VERSION/\$@ --annotation owl:versionInfo $VERSION"

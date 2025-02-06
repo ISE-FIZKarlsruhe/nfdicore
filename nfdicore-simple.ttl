@@ -13,9 +13,9 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha1> ;
-                                          terms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha1" ;
-                                          terms:created "2025-02-05" ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha2> ;
+                                          terms:bibliographicCitation "Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha2" ;
+                                          terms:created "2025-02-06" ;
                                           terms:creator <https://nfdi4culture.de/id/E1925> ,
                                                         <https://nfdi4culture.de/id/E2415> ,
                                                         <https://nfdi4culture.de/id/E2416> ,
@@ -30,7 +30,7 @@
                                           rdfs:label "NFDIcore" ;
                                           owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ,
                                                            <https://nfdi.fiz-karlsruhe.de/ontology/2.1.0> ;
-                                          owl:versionInfo "3.0.0-alpha1" .
+                                          owl:versionInfo "3.0.0-alpha2" .
 
 #################################################################
 #    Annotation properties
@@ -132,7 +132,7 @@ ontology:NFDI_0000104 rdf:type owl:ObjectProperty ;
 ontology:NFDI_0000112 rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf ontology:NFDI_0000240 ;
                       owl:inverseOf ontology:NFDI_0000113 ;
-                      rdfs:comment "The property is a relationship between an NFDI resource and a person as a contact point."@en ;
+                      rdfs:comment "The property is a relationship between an NFDI resource and a person or organization (agent) as a contact point."@en ;
                       rdfs:label "has contact point"@en .
 
 
@@ -147,7 +147,7 @@ ontology:NFDI_0000113 rdf:type owl:ObjectProperty ;
 ontology:NFDI_0000116 rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf ontology:NFDI_0000240 ;
                       owl:inverseOf ontology:NFDI_0000117 ;
-                      rdfs:comment "The property related an NFDI resource to a person or an organization responsible for making contributions to a resource."@en ;
+                      rdfs:comment "The property related something to a person or an organization responsible for making contributions to that."@en ;
                       rdfs:label "has contributor"@en .
 
 
@@ -475,6 +475,20 @@ ontology:NFDI_0001024 rdf:type owl:ObjectProperty ;
                       rdfs:label "is input of"@en .
 
 
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027
+ontology:NFDI_0001027 rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf ontology:NFDI_0000240 ;
+                      owl:inverseOf ontology:NFDI_0001028 ;
+                      rdfs:comment "The has creator property links something that was created (like a book, painting, or website) to the person or organization (agent) that made it."@en ;
+                      rdfs:label "has creator"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001028
+ontology:NFDI_0001028 rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf ontology:NFDI_0000241 ;
+                      rdfs:label "creator of"@de .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -531,7 +545,7 @@ ontology:NFDI_0001007 rdf:type owl:DatatypeProperty ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008
 ontology:NFDI_0001008 rdf:type owl:DatatypeProperty ;
                       rdfs:comment "A relation between an information content entity and its specific url."@en ;
-                      rdfs:label "has url"@de .
+                      rdfs:label "has url"@en .
 
 
 #################################################################
@@ -651,7 +665,7 @@ ontology:NFDI_0000016 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000017
 ontology:NFDI_0000017 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en ;
+                      rdfs:comment "A role inherent in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en ;
                       rdfs:label "spokesperson role"@en .
 
 
@@ -665,14 +679,14 @@ ontology:NFDI_0000018 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000019
 ontology:NFDI_0000019 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en ;
+                      rdfs:comment "A role inherent in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en ;
                       rdfs:label "academic organization role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000020
 ontology:NFDI_0000020 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en ;
+                      rdfs:comment "A role inherent in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en ;
                       rdfs:label "industry organization role"@en .
 
 
@@ -786,9 +800,8 @@ ontology:NFDI_0000107 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110
 ontology:NFDI_0000110 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en ;
-                      rdfs:label "consortium member role"@en ;
-                      skos:editorialNote "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en .
+                      rdfs:comment "A role inherent in an organization that is realized when the organization is a member of a consortium."@en ;
+                      rdfs:label "consortium member role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000111
@@ -801,9 +814,8 @@ ontology:NFDI_0000111 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114
 ontology:NFDI_0000114 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en ;
-                      rdfs:label "contact point role"@en ;
-                      skos:editorialNote "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en .
+                      rdfs:comment "A role inherent in an agent that is realized when the agent is a contact point of a resource or a project."@en ;
+                      rdfs:label "contact point role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115
@@ -816,9 +828,8 @@ ontology:NFDI_0000115 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118
 ontology:NFDI_0000118 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en ;
-                      rdfs:label "contributor role"@en ;
-                      skos:editorialNote "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en .
+                      rdfs:comment "A role inherent in an agent that provides input, resources, or effort to support or enhance a project, work, or process."@en ;
+                      rdfs:label "contributor role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000119
@@ -874,9 +885,8 @@ ontology:NFDI_0000134 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000139
 ontology:NFDI_0000139 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en ;
-                      rdfs:label "funding organization role"@en ;
-                      skos:editorialNote "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en .
+                      rdfs:comment "A role inherent in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en ;
+                      rdfs:label "funding organization role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140
@@ -951,9 +961,8 @@ ontology:NFDI_0000190 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193
 ontology:NFDI_0000193 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en ;
-                      rdfs:label "publisher role"@en ;
-                      skos:editorialNote "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en .
+                      rdfs:comment "A role inherent in an agent that is realized when the bearer participates in the publishing of the document."@en ;
+                      rdfs:label "publisher role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198
@@ -1066,7 +1075,7 @@ ontology:NFDI_0000229 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000230
 ontology:NFDI_0000230 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements."@en ;
+                      rdfs:comment "A role inherent in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements."@en ;
                       rdfs:label "service provider role"@en .
 
 
@@ -1256,6 +1265,13 @@ ontology:NFDI_0001021 rdf:type owl:Class ;
 ontology:NFDI_0001022 rdf:type owl:Class ;
                       rdfs:comment "A namespace refers to a distinct, unique identifier that is used to distinguish concepts and entities within an ontology from those in other ontologies or systems. It's typically represented as a URL or URI (Uniform Resource Identifier) and ensures that each element within the ontology has a globally unique reference."@en ;
                       rdfs:label "ontology namespace"@de .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026
+ontology:NFDI_0001026 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:comment "A role inherent in an agent that originates, develops, or produces a work, product, or idea."@en ;
+                      rdfs:label "creator role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010001
