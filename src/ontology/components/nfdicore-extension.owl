@@ -97,7 +97,7 @@ ObjectPropertyRange(:NFDI_0000112 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeV
 
 # Object Property: :NFDI_0000113 (contact point of)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000113 "inverse of  property \"has contact point\""@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000113 "inverse of property \"has contact point\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000113 "contact point of"@en)
 SubObjectPropertyOf(:NFDI_0000113 :NFDI_0000241)
 
@@ -400,6 +400,7 @@ ObjectPropertyRange(:NFDI_0001027 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeV
 
 # Object Property: :NFDI_0001028 (creator of)
 
+AnnotationAssertion(rdfs:comment :NFDI_0001028 "inverse of property \"has creator\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0001028 "creator of"@de)
 SubObjectPropertyOf(:NFDI_0001028 :NFDI_0000241)
 
