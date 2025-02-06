@@ -378,7 +378,7 @@ SubClassOf(:NFDI_0000016 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000017 (spokesperson role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000017 "A role inhering in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000017 "A role inherent in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000017 "spokesperson role"@en)
 SubClassOf(:NFDI_0000017 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000004)))
 
@@ -390,13 +390,13 @@ SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom
 
 # Class: :NFDI_0000019 (academic organization role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000019 "A role inhering in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000019 "A role inherent in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000019 "academic organization role"@en)
 SubClassOf(:NFDI_0000019 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
 
 # Class: :NFDI_0000020 (industry organization role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000020 "A role inhering in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000020 "A role inherent in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000020 "industry organization role"@en)
 SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
 
@@ -505,7 +505,7 @@ SubClassOf(:NFDI_0000107 <http://purl.obolibrary.org/obo/BFO_0000027>)
 
 # Class: :NFDI_0000110 (consortium member role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000110 "A role inhering in an organization that is realized when the organization is a member of a consortium."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000110 "A role inherent in an organization that is realized when the organization is a member of a consortium."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000110 "consortium member role"@en)
 EquivalentClasses(:NFDI_0000110 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000002)))
 
@@ -518,7 +518,7 @@ SubClassOf(:NFDI_0000111 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000114 (contact point role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000114 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000114 "A role inherent in an agent that is realized when the agent is a contact point of a resource or a project."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000114 "contact point role"@en)
 SubClassOf(:NFDI_0000114 :NFDI_0000229)
 
@@ -531,7 +531,7 @@ SubClassOf(:NFDI_0000115 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000118 (contributor role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000118 "A role inhering in an agent that provides input, resources, or effort to support or enhance a project, work, or process."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000118 "A role inherent in an agent that provides input, resources, or effort to support or enhance a project, work, or process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000118 "contributor role"@en)
 EquivalentClasses(:NFDI_0000118 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000115) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> :NFDI_0000115)))))
 SubClassOf(:NFDI_0000118 :NFDI_0000229)
@@ -583,7 +583,7 @@ SubClassOf(:NFDI_0000134 :NFDI_0000005)
 
 # Class: :NFDI_0000139 (funding organization role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000139 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000139 "A role inherent in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000139 "funding organization role"@en)
 SubClassOf(:NFDI_0000139 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
 
@@ -653,7 +653,7 @@ SubClassOf(:NFDI_0000190 :NFDI_0000022)
 
 # Class: :NFDI_0000193 (publisher role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000193 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000193 "A role inherent in an agent that is realized when the bearer participates in the publishing of the document."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000193 "publisher role"@en)
 SubClassOf(:NFDI_0000193 :NFDI_0000229)
 
@@ -760,7 +760,7 @@ SubClassOf(:NFDI_0000229 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 
 # Class: :NFDI_0000230 (service provider role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000230 "A role inhering in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000230 "A role inherent in an agent that is realized when delivering services, managing processes, and ensuring the effective fulfillment of service product requirements."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000230 "service provider role"@en)
 SubClassOf(:NFDI_0000230 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000101)))
 
@@ -940,7 +940,7 @@ SubClassOf(:NFDI_0001022 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 # Class: :NFDI_0001026 (creator role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001026 "A role inhering in an agent that originates, develops, or produces a work, product, or idea."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0001026 "A role inherent in an agent that originates, develops, or produces a work, product, or idea."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001026 "creator role"@en)
 SubClassOf(:NFDI_0001026 :NFDI_0000229)
 
