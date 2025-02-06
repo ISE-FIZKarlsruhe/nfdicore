@@ -53,41 +53,90 @@ The ontology provides a shared vocabulary and a consistent framework that suppor
 - **MIME-Type**: Serves as a standardized identifier for specifying the nature and format of data.
 - **Export Format Specification**: Defines the structural, syntactic, and encoding rules for representing data when it is exported from a system.
 
+## Class Hierarchy
 
-## NFDI Resources
+The image below illustrates the top-level hierarchy of the ontology (Version 3.0.0). Most NFDIcore classes have been defined as subclasses of Basic Formal Ontology (BFO), Information Artifact Ontology (IAO), or the Software Ontology (SWO).
 
-Within NFDIcore, resources are continuants which encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization.  
+Since BFO 2020 — the version currently adopted by NFDIcore — is not fully supported by IAO, some relevant IAO concepts could not be reused. In such cases, NFDIcore-specific classes have been introduced, such as dataset, document and identifier.  
+
+![image](figures/nfdicore-classes.jpg)
+
+
+## BFO as top level ontology
+
+The Basic Formal Ontology (BFO) is a **top-level ontology** that provides a structured framework for organizing entities based on their fundamental nature. It does not include domain-specific content but instead defines **high-level categories** that support the development of specialized ontologies like NFDIcore.  
+
+BFO distinguishes entities based on whether they persist through time or unfold over time, dividing them into **Continuants** and **Occurrents** (see image above).  
+
+### **Continuants (Endurants)**  
+Continuants are entities that **exist at any given moment in time** and maintain their identity over time. 
+
+#### **Independent Continuants**  
+These are entities that **exist independently** and do not require another entity to exist.  
+
+- **Material Entities** – Physical objects with spatial extension.  
+  - *Examples*: Organisms, buildings, tools.  
+- **Immaterial Entities** – Boundaries or parts of objects defined by human convention.  
+  - *Examples*: The equator, the upper half of a sphere.  
+
+#### **Generically Dependent Continuants**  
+These entities **depend on independent continuants** for their existence.  
+Generically dependent continuants can exist in multiple instances or be replicated across different locations. 
+
+- *Examples*:
+	- A book’s content (as opposed to a single physical copy of the book)  
+	- A software program (which can be installed on multiple computers)  
+	- A musical composition (which can be played on different instruments)   
+	- A dataset and data items
+	- Entities with information content
+
+#### **Specifically Dependent Continuants**  
+Specifically dependent continuants are **qualities, roles, or dispositions** that **exist only in relation to a particular independent continuant**. They cannot exist independently and must always be **inherent in something else**.  
+
+  
+- **Qualities**  - Intrinsic properties of an independent continuant. They describe **how an entity is** at any moment in time.  
+
+	- *Examples*: The color of a leaf, the weight of a person, the temperature of a liquid.
+
+- **Roles** - Situational properties that an entity has **based on context or social convention**.  
+
+	- *Examples*: The role of a teacher, he status of a patient in a hospital, the role of a machine undergoing maintenance.
+
+- **Dispositions and functions** - Potential behaviors or tendencies that an entity has, even if they are not currently being realized. Functions are dispositions that represent the particular purpose of something.
+
+	- *Examples*: The fragility of glass (it might break if dropped), the solubility of salt (it dissolves in water), a person’s ability to speak multiple languages, the function of an oven to heat something up, the function of a screwdriver to turn screws in and out.
+
+
+### **Occurrents (Perdurants)**  
+An occurrents is an **entity that unfolds itself in time** or it is the start or end of such an entity.
+
+#### **Processes**  
+Processes are dynamic activities with temporal duration.  
+
+- *Examples*: A running event, a chemical reaction, cell division.  
+
+#### **Temporal Regions**  
+These represent divisions of time.  
+
+- *Examples*: A second, an hour, a historical period.  
+
+#### **Spatiotemporal Regions**  
+These combine space and time into a single entity.  
+
+- *Examples*: The path of a moving object, the trajectory of a planet.  
+
+
+
+### **Relations in BFO**  
+BFO defines formal **relationships** between entities to maintain consistency. Some key relations include:  
+
+
+- **continunat part of** – Indicates compositional relationships. (*Example: A wheel is part of a car.*) 
+- **occurent part of** - Some process has another process as part. (*Example: A conference event has multiple workshop events.*)
+- **located in** – Specifies spatial containment. (*Example: A book is located_in a library.*)  
+- **bearer of** – Assigns specifically dependent continuants to independent continuants. (*Example: A teacher is the bearer of the educator role.*)  
+- **has participant** - Assigns continuants to processes. (*Example: A student participates a lecture event.*)
+
+
+More information about BFO can be found at the [GitHub repo](https://github.com/bfo-ontology/BFO-2020) and the [documentation page](https://basic-formal-ontology.org/bfo-2020.html). 
  
-![image](figures/nfdicore-pattern-dataportal.png)
-
-
-NFDI resources can be associated with academic disciplines (nfdicore:academic discipline, NFDI_0000100) allowing for a more nuanced understanding of their context and relevance. 
- 
-![image](figures/nfdicore-pattern-discipline.png)
-
-## Agents
-
-Likewise, in NFDIcore, the concept of Agents extends to both organizations and persons, serving as independent continuants within the BFO ontology. Agents are essential for management of research data resources, and include entities such as research institutions, consortia, universities, companies, and individual researchers or data scientists. 
-
-Within NFDIcore, agents can be directly linked to resources via different relations; may participate in processes (BFO_0000015) and be associated with diverse roles (BFO_0000023), e.g. nfdicore:publisher role (NFDI_0000193), nfdicore:contributor role (NFDI_0000118), etc. within the processes. Moreover, agents engage in diverse relationships with other agents, e.g. nfdicore:parent organization (NFDI_0000182). 
-
-Resources within NFDIcore engage in diverse relationships with agents, facilitated by various properties such as nfdicore:contributor, nfdicore:creator, nfdicore:publisher, and nfdicore:contactPoint. While these properties enable direct connections between agents and resources, they may lack some expressivity. E.g. additional information about the relationship like a temporal context, ordering (e.g. for authors). In scenarios requiring more detailed semantics to describe the relationship between an agent and a resource, the modeling proposed by BFO 2020 with processes and roles can be employed.  
-
-## Processes
-
-A process (BFO_0000015) can encompass subordinate processes and partial processes. Within NFDIcore, a process often serves to establish connections between agents and information content entities (IAO_0000030), defining the roles (BFO_0000023) of agents with respect to the involved information content entities. 
-
-![image](figures/nfdicore-pattern-process.png)
-
-
-## Events and Time 
-
-The bfo:temporal region (BFO_0000008) is an occurrent and is used to represent the structure of time. Thereby, the bfo:zero-dimensional temporal region (BFO_0000148) represents a single instant in time, a precise point in time without any duration, e.g. the date when the NFDI Verein was founded (nfdicore:act of foundation, NFDI_0001020). In contrast, the one-dimensional temporal region (BFO_0000038) refers to a time interval which has a duration, can be finite as well as infinite and events can occur within it. 
-
-![image](figures/nfdicore-pattern-time.png)
-
-
-The nfdicore:event (NFDI_0000131) is associated with processes that represent an organized happening that unfolds in time. The nfdicore:event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, and workshops.
-
-![image](figures/nfdicore-pattern-agent.png)
-

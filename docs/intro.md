@@ -4,7 +4,7 @@ The **[National Research Data Infrastructure (NFDI) initiative](https://www.nfdi
 
 In line with the NFDI's goals, this ontology has been created to provide a structured framework that enables efficient management, organization, and interconnection of research data across various disciplines. By adhering to established data standards, the ontology facilitates the accessibility, sharing, and reuse of research data in a consistent and sustainable manner.
 
-Te key feratures of the NFDIcore ontology are:
+The key features of the NFDIcore ontology are:
 
 * **Representation of NFDI Structure:** The ontology models the organizational structure of NFDI, including its components, projects, services, and partnerships.
 

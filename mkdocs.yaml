@@ -4,9 +4,10 @@ theme: readthedocs
 nav:
   - Welcome: index.md
   - Introduction: intro.md
-  - Versions: versions.md
   - Ontology: ontology.md
-  - Competency Questions: questions.md
+  - Patterns: patterns.md
+  - Versions: versions.md
+  #- Competency Questions: questions.md
   - Contributing: contributing.md
 
 
