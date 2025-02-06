@@ -335,7 +335,6 @@ EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(:NFDI_0000003 ObjectAllValu
 
 AnnotationAssertion(rdfs:comment :NFDI_0000008 "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000008 "creative work"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000008 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
 EquivalentClasses(:NFDI_0000008 ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>) ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000153) :NFDI_0000224)))
 SubClassOf(:NFDI_0000008 <http://purl.obolibrary.org/obo/BFO_0000002>)
@@ -939,7 +938,7 @@ SubClassOf(:NFDI_0001021 :NFDI_0000131)
 # Class: :NFDI_0001022 (ontology namespace)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001022 "A namespace refers to a distinct, unique identifier that is used to distinguish concepts and entities within an ontology from those in other ontologies or systems. It's typically represented as a URL or URI (Uniform Resource Identifier) and ensures that each element within the ontology has a globally unique reference."@en)
-AnnotationAssertion(rdfs:label :NFDI_0001022 "ontology namespace"@de)
+AnnotationAssertion(rdfs:label :NFDI_0001022 "ontology namespace"@en)
 SubClassOf(:NFDI_0001022 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 # Class: :NFDI_0010001 (humanity)
