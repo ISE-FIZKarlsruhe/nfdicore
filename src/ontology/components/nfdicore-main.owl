@@ -103,6 +103,7 @@ Declaration(Class(:NFDI_0001019))
 Declaration(Class(:NFDI_0001020))
 Declaration(Class(:NFDI_0001021))
 Declaration(Class(:NFDI_0001022))
+Declaration(Class(:NFDI_0001026))
 Declaration(Class(:NFDI_0010001))
 Declaration(Class(:NFDI_0010002))
 Declaration(Class(:NFDI_0010004))
@@ -335,6 +336,7 @@ EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(:NFDI_0000003 ObjectAllValu
 
 AnnotationAssertion(rdfs:comment :NFDI_0000008 "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000008 "creative work"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000008 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
 EquivalentClasses(:NFDI_0000008 ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>) ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000153) :NFDI_0000224)))
 SubClassOf(:NFDI_0000008 <http://purl.obolibrary.org/obo/BFO_0000002>)
@@ -503,9 +505,8 @@ SubClassOf(:NFDI_0000107 <http://purl.obolibrary.org/obo/BFO_0000027>)
 
 # Class: :NFDI_0000110 (consortium member role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000110 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000110 "A role inhering in an organization that is realized when the organization is a member of a consortium."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000110 "consortium member role"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000110 "A role inhering in an organization that is realized when the organsation is a member of a consortium."@en)
 EquivalentClasses(:NFDI_0000110 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000002)))
 
 # Class: :NFDI_0000111 (contacting process)
@@ -519,7 +520,6 @@ SubClassOf(:NFDI_0000111 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000114 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000114 "contact point role"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000114 "A role inhering in an agent that is realized when the agent is a contact point of a resource or a project."@en)
 SubClassOf(:NFDI_0000114 :NFDI_0000229)
 
 # Class: :NFDI_0000115 (contributing process)
@@ -531,9 +531,8 @@ SubClassOf(:NFDI_0000115 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000118 (contributor role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000118 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000118 "A role inhering in an agent that provides input, resources, or effort to support or enhance a project, work, or process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000118 "contributor role"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000118 "A role inhering in an agent that is realized when the agent is a contact point of an entity."@en)
 EquivalentClasses(:NFDI_0000118 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000115) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> :NFDI_0000115)))))
 SubClassOf(:NFDI_0000118 :NFDI_0000229)
 
@@ -586,7 +585,6 @@ SubClassOf(:NFDI_0000134 :NFDI_0000005)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000139 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000139 "funding organization role"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000139 "A role inhering in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
 SubClassOf(:NFDI_0000139 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
 
 # Class: :NFDI_0000140 (software library)
@@ -657,7 +655,6 @@ SubClassOf(:NFDI_0000190 :NFDI_0000022)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000193 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000193 "publisher role"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000193 "A role inhering in an agent that is realized when the bearer participates in the publishing of the document."@en)
 SubClassOf(:NFDI_0000193 :NFDI_0000229)
 
 # Class: :NFDI_0000198 (software)
@@ -938,8 +935,14 @@ SubClassOf(:NFDI_0001021 :NFDI_0000131)
 # Class: :NFDI_0001022 (ontology namespace)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001022 "A namespace refers to a distinct, unique identifier that is used to distinguish concepts and entities within an ontology from those in other ontologies or systems. It's typically represented as a URL or URI (Uniform Resource Identifier) and ensures that each element within the ontology has a globally unique reference."@en)
-AnnotationAssertion(rdfs:label :NFDI_0001022 "ontology namespace"@en)
+AnnotationAssertion(rdfs:label :NFDI_0001022 "ontology namespace"@de)
 SubClassOf(:NFDI_0001022 <http://purl.obolibrary.org/obo/IAO_0000027>)
+
+# Class: :NFDI_0001026 (creator role)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001026 "A role inhering in an agent that originates, develops, or produces a work, product, or idea."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001026 "creator role"@en)
+SubClassOf(:NFDI_0001026 :NFDI_0000229)
 
 # Class: :NFDI_0010001 (humanity)
 

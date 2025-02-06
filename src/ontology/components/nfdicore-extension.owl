@@ -61,6 +61,8 @@ Declaration(ObjectProperty(:NFDI_0000240))
 Declaration(ObjectProperty(:NFDI_0000241))
 Declaration(ObjectProperty(:NFDI_0001003))
 Declaration(ObjectProperty(:NFDI_0001006))
+Declaration(ObjectProperty(:NFDI_0001027))
+Declaration(ObjectProperty(:NFDI_0001028))
 Declaration(DataProperty(:NFDI_0000105))
 Declaration(DataProperty(:NFDI_0000127))
 Declaration(DataProperty(:NFDI_0000128))
@@ -87,7 +89,7 @@ SubObjectPropertyOf(:NFDI_0000104 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000112 (has contact point)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000112 "The property is a relationship between an NFDI resource and a person as a contact point."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000112 "The property is a relationship between an NFDI resource and a person or organization (agent) as a contact point."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000112 "has contact point"@en)
 SubObjectPropertyOf(:NFDI_0000112 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000112 :NFDI_0000113)
@@ -101,7 +103,7 @@ SubObjectPropertyOf(:NFDI_0000113 :NFDI_0000241)
 
 # Object Property: :NFDI_0000116 (has contributor)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000116 "The property related an NFDI resource to a person or an organization responsible for making contributions to a resource."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000116 "The property related something to a person or an organization responsible for making contributions to that."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000116 "has contributor"@en)
 SubObjectPropertyOf(:NFDI_0000116 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000116 :NFDI_0000117)
@@ -387,6 +389,19 @@ AnnotationAssertion(rdfs:comment :NFDI_0001006 "The property relates a thing to 
 AnnotationAssertion(rdfs:label :NFDI_0001006 "has external identifier"@en)
 SubObjectPropertyOf(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000235>)
 ObjectPropertyRange(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Object Property: :NFDI_0001027 (has creator)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001027 "The has creator property links something that was created (like a book, painting, or website) to the person or organization (agent) that made it."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001027 "has creator"@en)
+SubObjectPropertyOf(:NFDI_0001027 :NFDI_0000240)
+InverseObjectProperties(:NFDI_0001027 :NFDI_0001028)
+ObjectPropertyRange(:NFDI_0001027 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0001026)))
+
+# Object Property: :NFDI_0001028 (creator of)
+
+AnnotationAssertion(rdfs:label :NFDI_0001028 "creator of"@de)
+SubObjectPropertyOf(:NFDI_0001028 :NFDI_0000241)
 
 
 ############################
