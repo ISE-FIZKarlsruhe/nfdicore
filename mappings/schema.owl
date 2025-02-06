@@ -15,7 +15,47 @@ Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008>))
 Declaration(Class(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>))
 Declaration(Class(<https://schema.org/CreativeWork>))
 Declaration(Class(<https://schema.org/Service>))
-Declaration(AnnotationProperty(dcterms:title))
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116>)
+
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116> <https://schema.org/contributor>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144> (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144>)
+
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144> <https://schema.org/location>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182> (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182>)
+
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182> <https://schema.org/parentOrganization>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191>)
+
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191> <https://schema.org/publishedBy>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192> (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192>)
+
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192> <https://schema.org/publisher>)
+
+# Object Property: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213> (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213>)
+
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213> <https://schema.org/subOrganization>)
+
+SubObjectPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027> <https://schema.org/creator>)
+
+
+############################
+#   Data Properties
+############################
+
+SubDataPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> <https://schema.org/value>)
+SubDataPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> <https://schema.org/url>)
+SubDataPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000105> <https://schema.org/birthDate>)
+SubDataPropertyOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000127> <https://schema.org/deathDate>)
 
 
 ############################
