@@ -30,60 +30,61 @@ The ontology provides a shared vocabulary and a consistent framework that suppor
 
 #### Data and Information
 - **Dataset**: Structured collections of data produced or managed by NFDI partners.
-- **DataPortal**: Digital platforms or repositories where datasets are stored and accessed.
+- **Data Portal**: Digital platforms or repositories where datasets are stored and accessed.
 - **Collection**: Represents grouped resources, such as datasets, publications, or software.
 - **CreativeWork**: Any intellectual output, including publications, datasets, software, or media.
 
 #### Technology and Standards
 - **Software**: Represents software tools or applications developed and used within the NFDI.
-- **ProgrammingLanguage**: Programming languages used in developing software or tools.
+- **Programming Language**: Programming languages used in developing software or tools.
 - **Specification**: Defines technical specifications related to datasets, software, or services.
 - **Standard**: Represents standards followed for data management, storage, and dissemination.
-- **TechnologicalMeans**: Technologies or tools employed within the NFDI system to facilitate data management.
+- **Technological Method Specification**: A technological method employed for the creation, management, utilization, or control of a digital resource.
 - **Ontology**: Formalized structures of knowledge representation, including the NFDI Ontology itself.
-- **SemanticExpressivity**: Represents the extent to which a dataset or ontology supports rich, detailed data descriptions.
 
-#### Resource and Service
-- **Resource**: General class for any entity utilized within the NFDI framework, such as datasets or software.
-- **Service**: Represents services provided within NFDI, including data storage, management, and preservation.
+#### NFDI Resource and Service
+- **NFDI Resource**: General class for any entity utilized within the NFDI framework, such as datasets or software.
+- **Service Process**: Organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals.
+- **Service Product**: Provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements in a structured process.
 - **License**: Represents the legal terms under which datasets, publications, or software are made available.
 - **Website**: Represents websites or web services associated with NFDI partners or projects.
-- **MIME-Type**: Standardized file formats used in datasets, defining how files should be interpreted.
-- **MediaType**: Represents the type of media used in datasets, such as images, text, or audio.
+
+#### Formats
+- **MIME-Type**: Serves as a standardized identifier for specifying the nature and format of data.
+- **Export Format Specification**: Defines the structural, syntactic, and encoding rules for representing data when it is exported from a system.
 
 
-## Resources
+## NFDI Resources
 
-Within NFDIcore, resources encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization. These resources are categorized as information content entities (IAO_0000030), derived from material entities (BFO_0000040). 
-
-Each information content entity may establish "is about" (IAO_0000136) object relations, linking it to other material entities or information content entities that define its subject matter. In NFDIcore, the "is about" property is expanded to offer more detailed semantics and a comprehensive overview of the relationships between resources and material entities.
+Within NFDIcore, resources are continuants which encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization.  
  
-![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources1.png)
+![image](figures/nfdicore-pattern-dataportal.png)
 
 
-Apart from relations to information content entities and material entities, resources within NFDIcore can also be described using specific qualities (BFO_0000019). For instance, resources can be associated with academic disciplines (nfdicore:AcademicDiscipline) they belong to or a degree of semantic expressivity the resources hold, allowing for a more nuanced understanding of their context and relevance. For this, property "has quality" (RO_0000086) is extended with more granular nfdicore properties.
+NFDI resources can be associated with academic disciplines (nfdicore:academic discipline, NFDI_0000100) allowing for a more nuanced understanding of their context and relevance. 
  
-![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources2.png)
-
-
-Resources within NFDIcore engage in diverse relationships with agents, facilitated by various properties such as nfdicore:contributor, nfdicore:publisher, and nfdicore:contactPoint. While these properties enable direct connections between agents and resources, they may lack some expressivity. In scenarios requiring more detailed semantics to describe the relationship between an agent and a resource, the modeling proposed by BFO can be employed. To maintain consistency, we establish nfdicore properties like nfdicore:publisher as shortcuts using SWRL rules.
- 
-![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/resources3.png)
-
+![image](figures/nfdicore-pattern-discipline.png)
 
 ## Agents
 
-Likewise, in NFDIcore, the concept of Agents extends to both organizations and persons, serving as independent continuants within BFO ontology. Agents are essential for management of research data resources, and include entities such as research institutions, consortia, universities, companies, and individual researchers or data scientists. 
+Likewise, in NFDIcore, the concept of Agents extends to both organizations and persons, serving as independent continuants within the BFO ontology. Agents are essential for management of research data resources, and include entities such as research institutions, consortia, universities, companies, and individual researchers or data scientists. 
 
-Within NFDIcore, agents can be directly linked to resources via different relations; may participate in different processes (BFO_0000015) and be associated with diverse roles (BFO_0000023), e.g. nfdicore:PublisherRole, nfdicore:ContributorRole, etc. within the processes. Moreover, agents engage in diverse relationships with other agents, e.g. nfdicore:member, nfdicore:partnerOrganization, etc. For consistency's sake, we streamline NFDIcore properties like nfdicore:contactPoint and nfdicore:fundingOrganization by creating shortcuts through SWRL rules.
- 
-![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/agents.png)
+Within NFDIcore, agents can be directly linked to resources via different relations; may participate in processes (BFO_0000015) and be associated with diverse roles (BFO_0000023), e.g. nfdicore:publisher role (NFDI_0000193), nfdicore:contributor role (NFDI_0000118), etc. within the processes. Moreover, agents engage in diverse relationships with other agents, e.g. nfdicore:partner organization (NFDI_0000182). 
+
+Resources within NFDIcore engage in diverse relationships with agents, facilitated by various properties such as nfdicore:contributor, nfdicore:publisher, and nfdicore:contactPoint. While these properties enable direct connections between agents and resources, they may lack some expressivity. In scenarios requiring more detailed semantics to describe the relationship between an agent and a resource, the modeling proposed by BFO 2020 can be employed.  
+
+## Processes, Events and Time
+
+A process (BFO_0000015) can encompass subordinate processes and partial processes. Within NFDIcore, a process often serves to establish connections between agents and information content entities (IAO_0000030), defining the roles (BFO_0000023) of agents with respect to the involved information content entities. 
+
+![image](figures/nfdicore-pattern-process.png)
+
+The bfo:temporal region (BFO_0000008) is an occurrent and is used to represent the structure of time. Thereby, the bfo:zero-dimensional temporal region (BFO_0000148) represents a single instant in time, a precise point in time without any duration, e.g. the date when the NFDI Verein was founded (nfdicore:act of foundation, NFDI_0001020). In contrast, the one-dimensional temporal region (BFO_0000038) refers to a time interval which has a duration, can be finite as well as infinite and events can occur within it. 
+
+![image](figures/nfdicore-pattern-time.png)
 
 
-## Processes and Events
+The nfdicore:event (NFDI_0000131) is associated with processes that represent an organized happening that unfolds in time. The nfdicore:event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, and workshops.
 
-In general, a process (BFO_0000015) can encompass subordinate processes and may involve instances marked by defined start and end times. Within NFDIcore, a planned process (OBI_0000011) commonly serves to establish connections between agents and information content entxities (IAO_0000030), defining the roles (BFO_0000023) of agents with respect to the involved information content entities.
+![image](figures/nfdicore-pattern-agent.png)
 
-The nfdicore:Event is associated with temporal entities that transpire over time, commonly marked by specific incidents or occurrences. The nfdicore:Event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, workshops, or activities like "the 37th German Congress for Art History" or "Workshop "Introduction to Iconclass"". Events are characterized by their start and end times and can be connected to agents involved in the events.
-
-![image](https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/v2.0.0/figures/events.png)
