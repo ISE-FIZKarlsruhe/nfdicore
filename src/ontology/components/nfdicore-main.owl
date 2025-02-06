@@ -232,7 +232,7 @@ AnnotationAssertion(rdfs:label :NFDI_0001007 "has value"@en)
 # Data Property: :NFDI_0001008 (has url)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001008 "A relation between an information content entity and its specific url."@en)
-AnnotationAssertion(rdfs:label :NFDI_0001008 "has url"@de)
+AnnotationAssertion(rdfs:label :NFDI_0001008 "has url"@en)
 DataPropertyRange(:NFDI_0001008 xsd:anyURI)
 
 

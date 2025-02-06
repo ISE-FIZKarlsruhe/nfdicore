@@ -17,7 +17,7 @@ Recognizing the diverse needs of consortia, NFDIcore based on the [Basic Formal 
 
 Aligning with [IAO](https://github.com/information-artifact-ontology/IAO), NFDIcore focuses on describing 3 main concepts:
 
-*  Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, 
+*  Digital Information Artifacts (nfdicore: NFDI resource), e.g. data sets, data portals, publications, services, 
 software, etc. 
 
 *  Independent Continuants that act autonomously, e.g. organizations, persons
