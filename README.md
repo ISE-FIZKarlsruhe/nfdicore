@@ -7,18 +7,21 @@
 
 ## Introduction
 
-The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) has seen the establishment of various consortia, each dedicated to developing a research data infrastructure tailored to its respective domain. To facilitate interoperability across these consortia, the NFDIcore ontology (prefix nfdicore) has been developed and serves as a mid level ontology for representing metadata about NFDI resources such as individuals, organizations, projects, data portals, etc.  
+The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) initiative has led to the formation of various consortia, each focused on developing a research data infrastructure tailored to its specific domain. To ensure interoperability across these consortia, the NFDIcore ontology has been developed as a mid-level ontology for representing metadata related to NFDI resources, including individuals, organizations, projects, data portals, and more.
 
-Recognizing the diverse needs of consortia, NFDIcore based on the [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/), which is crucial for advancing knowledge representation, data exchange, and collaboration across diverse domains. To answer domain-specific research questions, NFDIcore is extended following a modular approach, as e.g. with the culture ontology module [CTO](https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), matwerk ontology module [MWO](https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo), etc.
 
-NFDIcore focuses on describing 3 main concepts:
+Recognizing the diverse needs of consortia, NFDIcore is built upon the [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/), a foundational framework essential for enhancing knowledge representation, data exchange, and interdisciplinary collaboration. To address domain-specific research questions, NFDIcore serves as the basis for various application and domain ontologies, which extend its core structure in a modular fashion.
+Examples include the [NFDI4Culture Ontology (CTO)](https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/culture-ontology), [NFDI MatWerk Ontology (MWO)](https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mwo),  [NFDI4Memory Ontology (MEMO)](https://nfdi.fiz-karlsruhe.de/4memory/), and [NFDI4DataScience Ontology (DSO)](https://www.nfdi4datascience.de/services/4dsontology_d/), each tailored to specific research fields while ensuring semantic interoperability.
 
-*  Digital Information Artifacts (nfdicore:Resource), e.g. data sets, data portals, publications, services, 
-software, etc. 
+As a mid-level ontology, NFDIcore plays a central role in structuring and integrating research data across consortia. It provides a shared vocabulary that represents both the organizational structure of the Nationale Forschungsdateninfrastruktur (NFDI) and the diverse datasets contributed by project partners. The ontology encompasses key concepts such as organizations, consortia, projects, datasets, research outputs, geographical locations, and technical standards. These structured representations enable efficient data management, integration, and reuse across disciplines.
 
-*  Independent Continuants that act autonomously, e.g. organizations, persons
+NFDIcore focuses on describing the following main concepts:
 
-* Processes and events, e.g. projects, contribution and publication processes, events, workflows .
+- **Organizational & Research Structure** – Represents institutions, consortia, projects, researchers, and their roles within NFDI.  
+- **Data & Information Management** – Covers datasets, data portals, collections, publications, and intellectual outputs to support research.  
+- **Geographical & Contextual Information** – Includes cities, countries, and regions relevant to NFDI activities.  
+- **Technology & Standards** – Encompasses software, programming languages, specifications, standards, and ontologies for interoperability.  
+- **Services & Licensing** – Defines resources, service processes, licenses, and web-based platforms supporting data sharing and collaboration.  
 
 
 ## Versions
@@ -38,9 +41,27 @@ Editors of this ontology should use the edit version, [src/ontology/nfdicore-edi
 * Read the docs [documentation](https://ise-fizkarlsruhe.github.io/nfdicore/docs/)
 * Widoco generated [list of resources](https://ise-fizkarlsruhe.github.io/nfdicore/)
 
-## Contact
 
-Please use this GitHub repository's [Issue tracker](https://github.com/ISE-FIZKarlsruhe/nfdicore/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+## Contributing to the NFDI Ontology  
+
+Your input helps improve the NFDI Ontology! Here’s how you can contribute:  
+
+### 1. **Join the Discussion**  
+- Check the **Discussions** tab on GitHub.  
+- Share ideas, ask questions, and suggest improvements.  
+
+### 2. **Report Issues**  
+- Found an error or need a new concept?  
+- Go to **Issues** > **New Issue**, describe the problem, and suggest a solution.  
+
+### 3. **Suggest Changes**  
+- Discuss your idea first in **Discussions** or **Issues**.  
+- Maintainers will review and help implement improvements.  
+
+### 4. **Stay Involved**  
+- Follow updates and give feedback on new changes.  
+
+🚀 Every contribution helps make the NFDI Ontology better!
 
 ## Acknowledgements
 
