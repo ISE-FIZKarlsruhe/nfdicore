@@ -13,16 +13,17 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
     <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology">
-        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha2"/>
-        <terms:bibliographicCitation>Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Jörg Waitelonis, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0-alpha2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0-alpha2</terms:bibliographicCitation>
-        <terms:created>2025-02-06</terms:created>
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.0"/>
+        <terms:bibliographicCitation>Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0</terms:bibliographicCitation>
+        <terms:created>2025-02-07</terms:created>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E3095"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-3092-0532"/>
-        <terms:description xml:lang="en">NFDIcore ontology</terms:description>
+        <terms:description xml:lang="en">The National Research Data Infrastructure (NFDI) initiative has led to the formation of various consortia, each focused on developing a research data infrastructure tailored to its specific domain. To ensure interoperability across these consortia, the NFDIcore ontology has been developed as a mid-level ontology for representing metadata related to NFDI resources, including individuals, organizations, projects, data portals, and more.
+Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore/</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <terms:title xml:lang="en">NFDIcore Ontology</terms:title>
         <bibo:status xml:lang="en">Ontology Specification</bibo:status>
@@ -30,7 +31,7 @@
         <rdfs:label>NFDIcore</rdfs:label>
         <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.0.0"/>
         <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/2.1.0"/>
-        <owl:versionInfo>3.0.0-alpha2</owl:versionInfo>
+        <owl:versionInfo>3.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -203,7 +204,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241"/>
-        <rdfs:comment xml:lang="en">inverse of  property &quot;has contact point&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">inverse of property &quot;has contact point&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">contact point of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -406,6 +407,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000240"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192"/>
         <rdfs:comment xml:lang="en">The property is a relationship between an information content entity and an organization or a person responsible for publishing it.</rdfs:comment>
         <rdfs:label xml:lang="en">published by</rdfs:label>
@@ -416,7 +418,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192">
-        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226"/>
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241"/>
         <rdfs:comment xml:lang="en">inverse of  property &quot;has publisher&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">publisher of</rdfs:label>
     </owl:ObjectProperty>
@@ -685,6 +687,7 @@
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001028">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241"/>
+        <rdfs:comment xml:lang="en">inverse of property &quot;has creator&quot;</rdfs:comment>
         <rdfs:label xml:lang="de">creator of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1583,7 +1586,7 @@ This class is useful in nfdicore to provide a unified and structured representat
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001004">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
         <rdfs:comment xml:lang="en">A project proposal is a detailed document that outlines the objectives, scope, requirements, and deliverables of a project. It serves as a blueprint for all stakeholders, ensuring everyone understands what needs to be accomplished.</rdfs:comment>
-        <rdfs:label xml:lang="de">project proposal</rdfs:label>
+        <rdfs:label xml:lang="en">project proposal</rdfs:label>
     </owl:Class>
     
 
@@ -1732,7 +1735,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018">
         <rdfs:comment xml:lang="en">A textual entity that describe some resource.</rdfs:comment>
-        <rdfs:label xml:lang="de">description</rdfs:label>
+        <rdfs:label xml:lang="en">description</rdfs:label>
     </owl:Class>
     
 
@@ -1741,7 +1744,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019">
         <rdfs:comment xml:lang="en">A textual entity that denotes some resource.</rdfs:comment>
-        <rdfs:label xml:lang="de">title</rdfs:label>
+        <rdfs:label xml:lang="en">title</rdfs:label>
     </owl:Class>
     
 
@@ -1770,7 +1773,7 @@ This class is useful in nfdicore to provide a unified and structured representat
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001022">
         <rdfs:comment xml:lang="en">A namespace refers to a distinct, unique identifier that is used to distinguish concepts and entities within an ontology from those in other ontologies or systems. It&apos;s typically represented as a URL or URI (Uniform Resource Identifier) and ensures that each element within the ontology has a globally unique reference.</rdfs:comment>
-        <rdfs:label xml:lang="de">ontology namespace</rdfs:label>
+        <rdfs:label xml:lang="en">ontology namespace</rdfs:label>
     </owl:Class>
     
 
