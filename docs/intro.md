@@ -2,11 +2,11 @@
 
 The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) initiative has led to the formation of various consortia, each focused on developing a research data infrastructure tailored to its specific domain. To ensure interoperability across these consortia, the NFDIcore ontology has been developed as a mid-level ontology for representing metadata related to NFDI resources, including individuals, organizations, projects, data portals, and more. 
 
-In line with the NFDI's goals, this ontology has been created to provide a structured framework that enables efficient management, organization, and interconnection of research data across various disciplines. By adhering to established data standards, the ontology facilitates the accessibility, sharing, and reuse of research data in a consistent and sustainable manner.
+In line with NFDI's goals, this ontology has been created to provide a structured framework that enables efficient management, organization, and interconnection of research data across various disciplines. By adhering to established data standards, the ontology facilitates the accessibility, sharing, and reuse of research data in a consistent and sustainable manner.
 
 The key features of the NFDIcore ontology are:
 
-* **Representation of NFDI Structure:** The ontology models the organizational structure of NFDI, including its components, projects, services, and partnerships.
+* **Representation of the NFDI Structure:** The ontology models the organizational structure of NFDI, including its components, projects, services, and partnerships.
 
 * **Referencing Partner Data:** It enables the description and reference of data from various NFDI project partners, providing a unified framework for organizing and linking research data across disciplines.
 

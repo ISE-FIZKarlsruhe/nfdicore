@@ -17,5 +17,5 @@ Your input helps improve the NFDI Ontology! Here’s how you can contribute:
 ## 4. **Stay Involved**  
 - Follow updates and give feedback on new changes.  
 
-🚀 **Every contribution helps make NFDI Ontology better!**  
+🚀 **Every contribution helps make the NFDI Ontology better!**  
 
