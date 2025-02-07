@@ -7,7 +7,7 @@
 
 ## Introduction
 
-The [National Research Data Infrastructure (NFDI) initiative](https://www.nfdi.de/) initiative has led to the formation of various consortia, each focused on developing a research data infrastructure tailored to its specific domain. To ensure interoperability across these consortia, the NFDIcore ontology has been developed as a mid-level ontology for representing metadata related to NFDI resources, including individuals, organizations, projects, data portals, and more.
+The [National Research Data Infrastructure (NFDI)](https://www.nfdi.de/) initiative has led to the formation of various consortia, each focused on developing a research data infrastructure tailored to its specific domain. To ensure interoperability across these consortia, the NFDIcore ontology has been developed as a mid-level ontology for representing metadata related to NFDI resources, including individuals, organizations, projects, data portals, and more.
 
 
 Recognizing the diverse needs of consortia, NFDIcore is built upon the [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/), a foundational framework essential for enhancing knowledge representation, data exchange, and interdisciplinary collaboration. To address domain-specific research questions, NFDIcore serves as the basis for various application and domain ontologies, which extend its core structure in a modular fashion.
