@@ -44,7 +44,6 @@ $(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl
 		$(ANNOTATE_CONVERT_FILE); fi
 
 ## Module for ontology: dcat
-
 $(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl 
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		extract -T $(IMPORTDIR)/dcat_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
@@ -69,10 +68,6 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-
-## import bfo - we just copy the entire ontology 
-$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl 
-	if [ $(IMP) = true ]; then cp $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_import.owl; fi
 
 
 
