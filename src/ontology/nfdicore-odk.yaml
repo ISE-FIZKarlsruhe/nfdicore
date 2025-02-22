@@ -1,8 +1,7 @@
 id: nfdicore
 title: "NFDI Core Ontology"
 github_org: ISE-FIZKarlsruhe
-git_main_branch: odk
-git_user: joerg
+git_main_branch: main
 repo: nfdicore
 uribase: https://nfdi.fiz-karlsruhe.de/ontology
 release_artefacts:
@@ -21,7 +20,8 @@ import_group:
   products:
     - id: bfo
       mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl
-      module_type: custom
+#      module_type: custom
+      module_type: mirror
     - id: iao
       module_type: custom
       #module_type: slme
