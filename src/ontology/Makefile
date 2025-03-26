@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                19ac6b30f45d8debb98f48804d363048ef9b75cf88035f9dcfb521dabdd698b6
+CONFIG_HASH=                0d588bb4f1d74231b53f0245cd09d1345d738e18f35147b8f807785f3502ec82
 
 
 # ----------------------------------------
@@ -378,8 +378,10 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 ## Module for ontology: bfo
 
-$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
+$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) merge -i $< query --update ../sparql/preprocess-module.ru --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru  \
+    $(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: iao
 
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl

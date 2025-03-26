@@ -13,14 +13,9 @@ export_formats:
   - owl
   - ttl
 import_group:
-#  module_type: slme
-#  exclude_iri_patterns:
-#    - <http://xmlns.com/foaf/*>
-#  use_base_merging: true
-  products:
+   products:
     - id: bfo
       mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl
-#      module_type: custom
       module_type: mirror
     - id: iao
       module_type: custom
