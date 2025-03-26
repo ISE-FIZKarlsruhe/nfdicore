@@ -13,9 +13,9 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.0> ;
-                                          terms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.0. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.0" ;
-                                          terms:created "2025-02-07" ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.1> ;
+                                          terms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.1" ;
+                                          terms:created "2025-03-26" ;
                                           terms:creator <https://nfdi4culture.de/id/E1925> ,
                                                         <https://nfdi4culture.de/id/E2415> ,
                                                         <https://nfdi4culture.de/id/E2416> ,
@@ -30,8 +30,8 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
                                           vann:preferredNamespaceUri ontology: ;
                                           rdfs:label "NFDIcore" ;
                                           owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ,
-                                                           <https://nfdi.fiz-karlsruhe.de/ontology/2.1.0> ;
-                                          owl:versionInfo "3.0.0" .
+                                                           <https://nfdi.fiz-karlsruhe.de/ontology/3.0.0> ;
+                                          owl:versionInfo "3.0.1" .
 
 #################################################################
 #    Annotation properties
@@ -1275,6 +1275,291 @@ ontology:NFDI_0001026 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
                       rdfs:comment "A role inherent in an agent that originates, develops, or produces a work, product, or idea."@en ;
                       rdfs:label "creator role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001029
+ontology:NFDI_0001029 rdf:type owl:Class ;
+                      rdfs:comment "An information content entity that is part of a document." ;
+                      rdfs:isDefinedBy "http://purl.obolibrary.org/obo/IAO_0000314" ;
+                      rdfs:label "document part"@en ;
+                      skos:example "An abstract, introduction, method or results section." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001030
+ontology:NFDI_0001030 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0001029 ;
+                      rdfs:comment "A part of a document that enumerates the authors of the document" ;
+                      rdfs:isDefinedBy "http://purl.obolibrary.org/obo/IAO_0000321" ;
+                      rdfs:label "author list"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001031
+ontology:NFDI_0001031 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0001029 ;
+                      rdfs:comment "A part of a document that enumerates the contributors of the document" ;
+                      rdfs:label "contributor list"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032
+ontology:NFDI_0001032 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0001029 ;
+                      rdfs:comment "A part of a document that enumerates the creators of the document" ;
+                      rdfs:label "creator list"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033
+ontology:NFDI_0001033 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0001029 ;
+                      rdfs:comment "A part of a document that has parts that are institution identifications associated with the authors of the document" ;
+                      rdfs:isDefinedBy "http://purl.obolibrary.org/obo/IAO_0000322" ;
+                      rdfs:label "institution list"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001035
+ontology:NFDI_0001035 rdf:type owl:Class ;
+                      rdfs:comment "A work package textual entity is a textual entity that describes a structured unit of work within a project, outlining specific tasks, objectives, deliverables, and assigned responsibilities to achieve defined project outcomes." ;
+                      rdfs:label "work package textual entity"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001036
+ontology:NFDI_0001036 rdf:type owl:Class ;
+                      rdfs:comment "A comment textual entity is a textual entity that provides supplimentary information, feedback, opinions, clarifications, or annotations related to a specific subject." ;
+                      rdfs:label "comment textual entity"@en ;
+                      skos:example "peer review comments on journal articles, user feedback on digital repositories, inline annotations in collaborative documents, explanatory remarks in software code documentation" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037
+ontology:NFDI_0001037 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      obo:IAO_0000118 "DOI" ;
+                      rdfs:comment "A Digital Object Identifier (DOI) is a centrally registered identifier that provides a unique, persistent reference to digital objects such as publications, datasets, and software, ensuring reliable access and citation." ;
+                      rdfs:label "digital object identifier"@en ;
+                      skos:example "10.1016/j.compind.2023.104016" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001038
+ontology:NFDI_0001038 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000003 ;
+                      rdfs:comment "A Consortium Partner is an organization that actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals." ;
+                      rdfs:label "consortium partner"@en ;
+                      skos:example "universities, research institutions, industry partners, and funding agencies collaborating in NFDI MatWerk, Horizon Europe projects, and other large-scale research initiatives" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001039
+ontology:NFDI_0001039 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000006 ;
+                      obo:IAO_0000118 "National Research Data Infrastructure"@en ,
+                                      "Nationale Forschungsdateninfrastruktur"@de ;
+                      obo:IAO_0000119 "https://www.dfg.de/en/research-funding/funding-initiative/nfdi" ,
+                                      "https://www.nfdi.de/" ;
+                      rdfs:comment "An NFDI Consortium is a collaborative organizational entity within the German National Research Data Infrastructure (NFDI) initiative, responsible for the development, management, and coordination of research data infrastructures in specific scientific domains." ,
+                                   "The National Research Data Infrastructure (NFDI) is intended to sytematically manage scientifich and research data, provide long-term data storage, backup and accessibility, and network the data (inter-)nationally. The German Research Foundation (DFG) and the Joint Science Conference (GWK) are working together to establish and fund the NFDI, on the basis of the administrative agreement concluded by the Federal Government and the federal states on November 26, 2018. The NFDI is designed as a nationwide network, which is built gradually and cooperatively by the respective communities. The goal is to provide a reliable and sustainable service portfolio that covers generic and disciplinary requirements of research data management in Germany. The NFDI is developed step by step and science-oriented with services available to researchers from vaious disciplines, institutions, and federal states." ;
+                      rdfs:label "nfdi consortium"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040
+ontology:NFDI_0001040 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "An academic title is an identifier that denotes an individual’s academic rank, qualification, or honorary designation within educational and research institutions." ;
+                      rdfs:label "academic title"@en ;
+                      skos:example "Professor, Associate Professor, Dr., PhD, Dr. Ing." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001041
+ontology:NFDI_0001041 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "An identifier that denotes some postal delivery route, some aggregate of postal delivery routes or a geographical region and was created for the purpose of sorting and delivering mail." ;
+                      rdfs:isDefinedBy "http://purl.obolibrary.org/obo/IAO_0000646" ;
+                      rdfs:label "postal code"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001042
+ontology:NFDI_0001042 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0001041 ;
+                      rdfs:comment "A postal code that is used in the United States for the purpose of sorting and delivering mail, and that denotes some postal delivery route or some aggregate of postal delivery routes." ;
+                      rdfs:isDefinedBy "http://purl.obolibrary.org/obo/IAO_0000648" ;
+                      rdfs:label "zone improvement plan code"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001043
+ontology:NFDI_0001043 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000018 ;
+                      rdfs:comment "Av event that brings together individuals or groups for structured discussions, decision-making, planning, or coordination of research, educational, or institutional activities." ;
+                      rdfs:label "meeting"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044
+ontology:NFDI_0001044 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000198 ;
+                      rdfs:comment "Data Analysis Software is a subclass of Software designed to process, visualize, and interpret structured and unstructured data using statistical, machine learning, and computational techniques." ;
+                      rdfs:label "data analysis software"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045
+ontology:NFDI_0001045 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000198 ;
+                      rdfs:comment "An Electronic Lab Notebook (ELN) is a subclass of Software that provides a digital platform for recording, managing, and sharing experimental procedures, observations, and research data in scientific workflows." ;
+                      rdfs:label "electronic lab notebook"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046
+ontology:NFDI_0001046 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000198 ;
+                      rdfs:comment "Image Processing Software is a subclass of Software that enables the manipulation, enhancement, analysis, and visualization of images obtained from experimental, computational, or simulation-based sources." ;
+                      rdfs:label "image processing software"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001047
+ontology:NFDI_0001047 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000198 ;
+                      rdfs:comment "An Operating System (OS) is a software system that manages computer hardware and software resources and provides common services for computer programs. It acts as an intermediary between users and the computer hardware, enabling the execution of application programs." ;
+                      rdfs:label "operating system"@en ;
+                      skos:editorialNote "Concerning the content of ‘Software’ datasheet and its related knowledge graph, the ‘Operating System’ class wase created to respond to competency questions like what operating systems are compatible with a specific software." ;
+                      skos:example "Windows, Linux, MacOS" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048
+ontology:NFDI_0001048 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000198 ;
+                      rdfs:comment "Simulation Software is a subclass of Software that facilitates the modeling and numerical simulation of physical, chemical, or computational systems to study behaviors, interactions, and performance under different conditions" ;
+                      rdfs:label "simulation software"@en ;
+                      skos:example "Examples include COMSOL Multiphysics, LAMMPS, Quantum ESPRESSO, and ANSYS." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001049
+ontology:NFDI_0001049 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000198 ;
+                      rdfs:comment "Workflow Management Software is a subclass of Software that provides tools for designing, automating, executing, and monitoring scientific or computational workflows in research and engineering domains." ;
+                      rdfs:label "workflow management software"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001050
+ontology:NFDI_0001050 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000203 ;
+                      rdfs:comment "An event implementation specification is a type of Directive Information Entity that provides formal guidelines, constraints, and details on how an event should be executed. It specifies the mode of implementation, including logistical, technical, and procedural aspects required to carry out an event successfully." ;
+                      rdfs:label "event implementation specification"@en ;
+                      skos:editorialNote "HBN: Concerning the content of ‘Event’ datasheets and its related knowledge graph, the ‘Event Implementation Specification’ class and its instances were created to respond to competency questions like what are the implementation formats of a given event." ;
+                      skos:example "Specifications for organizing conferences, training workshops, and academic seminars in different formats such as virtual, in-person, or hybrid settings." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001051
+ontology:NFDI_0001051 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000203 ;
+                      rdfs:comment "A funding specification is a directive information entity that provides structured guidelines, policies, and requirements for securing, managing, and allocating financial resources for various activities, projects, or organizations." ;
+                      rdfs:label "funding specification"@en ;
+                      skos:editorialNote "HBN: Concerning the content of ‘Service’ datasheets and its related knowledge graph, the ‘Funding Specification’ class and its instances were created to respond to competency questions like what funding models exist for a given service." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001052
+ontology:NFDI_0001052 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000203 ;
+                      rdfs:comment "An information access specification is a directive information entity that defines the policies, conditions, and mechanisms governing the accessibility of digital or physical information resources for users or organizations." ;
+                      rdfs:label "information access specification"@en ;
+                      skos:editorialNote "HBN: Concerning the content of ‘Publication’ datasheet and its related knowledge graph, the ‘Information Access Specification’ class and its instances were created to respond to competency questions like: what access policies apply to a specific publication document, which resources are available under open access, etc." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054
+ontology:NFDI_0001054 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000203 ;
+                      rdfs:comment "A Metadata Specification is a detailed document that describes metadata structures, guidelines, and usage policies for standardization and adoption." ;
+                      rdfs:label "metadata specification"@en ;
+                      skos:example "metadata schema and standards" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001056
+ontology:NFDI_0001056 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000203 ;
+                      rdfs:comment "A status specification is a directive information entity that defines the current state, progress, or condition of an entity, process, or project based on predefined criteria and operational guidelines." ;
+                      rdfs:label "status specification"@en ;
+                      skos:editorialNote "HBN: Concerning the content of ‘Service’ and 'International collabrations' datasheets and their related knowledge graphs, the ‘Status Specification’ class and its instances were created to respond to competency questions like: what is the current status of a service or collaboration project, which collabrations are in an active state, etc." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001057
+ontology:NFDI_0001057 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:comment "A role inherent in an agent that is realized when collaborating in planning, managing, and executing an event, project, or initiative alongside one or more primary organizers." ;
+                      rdfs:label "co organizer role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001058
+ontology:NFDI_0001058 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:comment "A role inherent in an agent that is realized when shareing the role of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public." ;
+                      rdfs:label "co spokesperson role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001059
+ontology:NFDI_0001059 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:comment "A role inherent in an agent that is realized when engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives." ;
+                      rdfs:label "collaboration partner role"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001060
+ontology:NFDI_0001060 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:comment "A role inherent in an agent that is realized when being responsible for producing goods, components, or materials through industrial or commercial processes." ;
+                      rdfs:label "manufacturer role"@en ;
+                      skos:example "Siemens as a manufacturer of industrial automation equipment or Intel as a manufacturer of semiconductor chips" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001061
+ontology:NFDI_0001061 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:comment "A role inherent in an agent that is realized when being responsible for planning, managing, and executing an event, project, or structured activity." ;
+                      rdfs:label "organizer role"@en ;
+                      skos:example "event management firms organizing scientific symposiums or non-profit organizations coordinating community outreach programs" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001062
+ontology:NFDI_0001062 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:comment "A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings." ;
+                      rdfs:label "speaker role"@en ;
+                      skos:example "invited speakers at scientific symposiums, keynote presenters at technology expos, and guest lecturers at universities" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001063
+ontology:NFDI_0001063 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0010017 ;
+                      obo:IAO_0000119 "Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson." ;
+                      rdfs:comment "Artificial Intelligence (AI) is a sub-discipline of Computer Science that focuses on creating systems capable of performing tasks that require human-like intelligence, such as learning, reasoning, and problem-solving." ;
+                      rdfs:label "artificial intelligence"@en ;
+                      skos:example "Deep learning for image recognition, reinforcement learning in robotics, and natural language processing fall under Artificial Intelligence." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001064
+ontology:NFDI_0001064 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0010017 ;
+                      rdfs:comment "Theoretical Computer Science is a sub-discipline of Computer Science that focuses on mathematical models of computation, computational complexity, and algorithmic problem-solving" ;
+                      rdfs:label "theoretical computer science"@en ;
+                      skos:example "Studies on Turing machines, complexity classes (P vs NP), and formal languages belong to Theoretical Computer Science." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001065
+ontology:NFDI_0001065 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0010017 ;
+                      rdfs:comment "Software Engineering is a sub-discipline of Computer Science that applies engineering principles to the design, development, testing, and maintenance of software systems." ;
+                      rdfs:label "software engineering"@en ;
+                      skos:example "Agile software development, DevOps practices, and software architecture design fall under Software Engineering." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001066
+ontology:NFDI_0001066 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0010017 ;
+                      obo:IAO_0000119 "Provost, F., & Fawcett, T. (2013). Data Science for Business. O'Reilly Media." ;
+                      rdfs:comment "Data Science is a sub-discipline of Computer Science that integrates statistical methods, machine learning, and data processing techniques to extract insights and knowledge from structured and unstructured data." ;
+                      rdfs:label "data science"@en ;
+                      skos:example "Predictive analytics, big data visualization, and recommendation systems are part of Data Science." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001067
+ontology:NFDI_0001067 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0010017 ;
+                      obo:IAO_0000119 "Stallings, W. (2020). Network Security Essentials. Pearson." ;
+                      rdfs:comment "Cybersecurity is a sub-discipline of Computer Science that focuses on protecting computer systems, networks, and data from cyber threats, vulnerabilities, and unauthorized access." ;
+                      rdfs:label "cybersecurity"@en ;
+                      skos:example "Encryption techniques, intrusion detection systems, and ethical hacking studies belong to Cybersecurity." .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010001

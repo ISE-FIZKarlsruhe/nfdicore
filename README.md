@@ -34,7 +34,7 @@ The latest version of the ontology can always be found at:
 
 ### Editors' version
 
-Editors of this ontology should use the edit version, [src/ontology/nfdicore-edit.owl](src/ontology/nfdicore-edit.owl)
+Editors of this ontology should use the editing files in the [components folder](src/ontology/components).
 
 ## Documentation
 
