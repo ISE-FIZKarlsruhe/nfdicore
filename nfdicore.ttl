@@ -5162,6 +5162,181 @@ obo:OMO_0001000 rdf:type owl:NamedIndividual ;
                 rdfs:label "out of scope" .
 
 
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001070
+ontology:NFDI_0001070 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001056 ;
+                      rdfs:comment "Active Status is a status specification that indicates an entity, process, or project is currently operational, ongoing, or in execution." ;
+                      rdfs:label "active status"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001071
+ontology:NFDI_0001071 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001056 ;
+                      rdfs:comment "Cancelled Status is a status specification that indicates an entity, process, or project has been terminated before reaching completion due to internal or external factors." ;
+                      rdfs:label "cancelled status"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001072
+ontology:NFDI_0001072 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Doctor (PhD or equivalent academic doctorate)" ;
+                      rdfs:label "Dr."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001073
+ontology:NFDI_0001073 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Doctor of Engineering (German doctorate in engineering)." ;
+                      rdfs:label "Dr.-Ing."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001074
+ontology:NFDI_0001074 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001056 ;
+                      rdfs:comment "Finished Status is a status specification that indicates an entity, process, or project has successfully reached its intended goal and is considered complete." ;
+                      rdfs:label "finished status"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001075
+ontology:NFDI_0001075 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001050 ;
+                      rdfs:comment "Hybrid Implementation is an event implementation specification that defines the organization of an event that integrates both physical (on-site) and virtual (online) participation modes" ;
+                      rdfs:label "hybrid implementation"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001076
+ontology:NFDI_0001076 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001052 ;
+                      rdfs:comment "Internal Access is an information access specification that defines policies and mechanisms restricting access to information exclusively within an organization, institution, or research group." ;
+                      rdfs:label "internal access"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077
+ontology:NFDI_0001077 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Master of Science (graduate degree in science/engineering)." ;
+                      rdfs:label "M.Sc."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001078
+ontology:NFDI_0001078 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001050 ;
+                      rdfs:comment "On-Site Implementation is an event implementation specification that defines the organization of an event that occurs exclusively at a physical location with in-person attendance." ;
+                      rdfs:label "on site implementation"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001079
+ontology:NFDI_0001079 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001050 ;
+                      rdfs:comment "Online Implementation is an event implementation specification that defines the organization of an event conducted entirely through virtual platforms, enabling remote participation via digital communication technologies." ;
+                      rdfs:label "online implementation"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001080
+ontology:NFDI_0001080 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001052 ;
+                      rdfs:comment "Open Access is an information access specification that defines policies allowing unrestricted public access to information resources, ensuring free availability without subscription or payment barriers." ;
+                      rdfs:label "open access"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001081
+ontology:NFDI_0001081 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001051 ;
+                      rdfs:comment "Organizational Funding is a funding specification that defines the financial structures, budgets, and resource allocation strategies for sustaining the operations of an organization or institution." ;
+                      rdfs:label "organizational funding"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001082
+ontology:NFDI_0001082 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001056 ;
+                      rdfs:comment "Paused Status is a status specification that indicates an entity, process, or project is temporarily halted but may resume at a later stage." ;
+                      rdfs:label "paused status"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001083
+ontology:NFDI_0001083 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001052 ;
+                      rdfs:comment "Paywall Access is an information access specification that defines policies requiring users to purchase, subscribe, or obtain institutional licenses to access digital or physical information resources." ;
+                      rdfs:label "paywall access"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001084
+ontology:NFDI_0001084 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Privatdozent (Dr. with habilitation, qualified to teach at a university)" ;
+                      rdfs:label "PD. Dr."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001085
+ontology:NFDI_0001085 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Privatdozent with Habilitation (higher academic qualification in Germany)" ;
+                      rdfs:label "PD. Dr. habil."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001086
+ontology:NFDI_0001086 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001056 ;
+                      rdfs:comment "Planning Status is a status specification that indicates an entity, process, or project is in a preparatory or strategic development phase before execution." ;
+                      rdfs:label "planning status"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001087
+ontology:NFDI_0001087 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Professor (academic title for a senior faculty member)." ;
+                      rdfs:label "Prof."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001088
+ontology:NFDI_0001088 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Professor with a doctorate." ;
+                      rdfs:label "Prof. Dr."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001089
+ontology:NFDI_0001089 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Professor with a doctorate in engineering." ;
+                      rdfs:label "Prof. Dr.-Ing."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001090
+ontology:NFDI_0001090 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001051 ;
+                      rdfs:comment "Project Funding is a funding specification that defines the financial mechanisms, grants, and investment strategies used to support specific research, development, or innovation projects." ;
+                      rdfs:label "project funding"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001091
+ontology:NFDI_0001091 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001052 ;
+                      rdfs:comment "Restricted Access is an information access specification that defines policies limiting access to specific users, organizations, or groups based on predefined criteria such as confidentiality, security, or legal regulations." ;
+                      rdfs:label "restricted access"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001092
+ontology:NFDI_0001092 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001051 ;
+                      rdfs:comment "Self-Funding is a funding specification that defines the use of personal, internal, or independently generated financial resources to support activities, projects, or organizations without relying on external funding sources." ;
+                      rdfs:label "self funding"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001093
+ontology:NFDI_0001093 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001056 ;
+                      rdfs:comment "Test Phase Status is a status specification that indicates an entity, process, or project is undergoing testing, evaluation, or validation before finalization." ;
+                      rdfs:label "test phase status"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001094
+ontology:NFDI_0001094 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0001040 ;
+                      rdfs:comment "Two Doctor degrees (PhD or equivalent academic doctorate)"@en ;
+                      rdfs:label "Dr. Dr."@en .
+
+
 #################################################################
 #    Annotations
 #################################################################
