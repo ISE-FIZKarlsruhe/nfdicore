@@ -16,9 +16,11 @@ These are the current imports in NFDICORE
 
 | Import | URL | Type |
 | ------ | --- | ---- |
-| iao | http://purl.obolibrary.org/obo/iao.owl | None |
-| schema | https://raw.githubusercontent.com/schemaorg/schemaorg/refs/tags/v28.0-release/data/releases/28.0/schemaorg.owl | slme |
+| bfo | https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl | mirror |
+| iao | http://purl.obolibrary.org/obo/iao.owl | custom |
 | swo | https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl | custom |
+| edam | https://edamontology.org/EDAM_1.25.owl | custom |
+| dcat | http://www.w3.org/ns/dcat3 | custom |
 
 ## Components
 Components, in contrast to imports, are considered full members of the ontology. This means that any axiom in a component is also included in the ontology base - which means it is considered _native_ to the ontology. While this sounds complicated, consider this: conceptually, no component should be part of more than one ontology. If that seems to be the case, we are most likely talking about an import. Components are often not needed for ontologies, but there are some use cases:
@@ -27,4 +29,10 @@ Components, in contrast to imports, are considered full members of the ontology.
 2. A part of the ontology is managed in ROBOT templates
 3. The expressivity of the component is higher than the format of the edit file. For example, people still choose to manage their ontology in OBO format (they should not) missing out on a lot of owl features. They may choose to manage logic that is beyond OBO in a specific OWL component.
 
+These are the components in NFDICORE
 
+| Filename | URL |
+| -------- | --- |
+| imports-edit.owl | None |
+| nfdicore-main.owl | None |
+| nfdicore-extension.owl | None |
