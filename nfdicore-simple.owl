@@ -15,7 +15,7 @@
     <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology">
         <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.1"/>
         <terms:bibliographicCitation>Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.1</terms:bibliographicCitation>
-        <terms:created>2025-03-26</terms:created>
+        <terms:created>2025-03-28</terms:created>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>

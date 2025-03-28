@@ -15,7 +15,7 @@
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.1> ;
                                           terms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.1" ;
-                                          terms:created "2025-03-26" ;
+                                          terms:created "2025-03-28" ;
                                           terms:creator <https://nfdi4culture.de/id/E1925> ,
                                                         <https://nfdi4culture.de/id/E2415> ,
                                                         <https://nfdi4culture.de/id/E2416> ,

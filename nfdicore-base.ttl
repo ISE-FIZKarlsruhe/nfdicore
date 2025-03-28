@@ -17,7 +17,7 @@
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.1> ;
                                           dce:type obo:IAO_8000001 ;
                                           dcterms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.1" ;
-                                          dcterms:created "2025-03-26" ;
+                                          dcterms:created "2025-03-28" ;
                                           dcterms:creator <https://nfdi4culture.de/id/E1925> ,
                                                           <https://nfdi4culture.de/id/E2415> ,
                                                           <https://nfdi4culture.de/id/E2416> ,
@@ -794,16 +794,15 @@ ontology:NFDI_0000002 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003
 ontology:NFDI_0000003 rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000141
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty obo:BFO_0000196 ;
-                                                                   owl:someValuesFrom ontology:NFDI_0000229
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf obo:BFO_0000141 ,
-                                      ontology:NFDI_0000102 ;
+                      rdfs:subClassOf ontology:NFDI_0000102 ,
+                                      [ owl:intersectionOf ( obo:BFO_0000141
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty obo:BFO_0000196 ;
+                                                               owl:someValuesFrom ontology:NFDI_0000229
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
                       rdfs:comment "An immaterial entity that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en ;
                       rdfs:label "organization"@en ;
                       skos:editorialNote "An organization of some kind, e.g. research organization or business organization"@en ;
@@ -1375,7 +1374,14 @@ ontology:NFDI_0000190 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193
 ontology:NFDI_0000193 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty obo:BFO_0000054 ;
+                                                               owl:someValuesFrom ontology:NFDI_0000014
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
                       rdfs:comment "A role inherent in an agent that is realized when the bearer participates in the publishing of the document."@en ;
                       rdfs:label "publisher role"@en .
 
@@ -2030,7 +2036,14 @@ ontology:NFDI_0001057 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001058
 ontology:NFDI_0001058 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:someValuesFrom ontology:NFDI_0000004
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
                       rdfs:comment "A role inherent in an agent that is realized when shareing the role of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public." ;
                       rdfs:label "co spokesperson role"@en .
 
@@ -2060,7 +2073,14 @@ ontology:NFDI_0001061 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001062
 ontology:NFDI_0001062 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:someValuesFrom ontology:NFDI_0000004
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
                       rdfs:comment "A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings." ;
                       rdfs:label "speaker role"@en ;
                       skos:example "invited speakers at scientific symposiums, keynote presenters at technology expos, and guest lecturers at universities" .
