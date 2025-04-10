@@ -841,7 +841,7 @@ SubClassOf(:NFDI_0000231 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom
 
 AnnotationAssertion(rdfs:comment :NFDI_0000232 "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000232 "service product"@en)
-SubClassOf(:NFDI_0000232 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000152) :NFDI_0000101)))
+SubClassOf(:NFDI_0000232 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(:NFDI_0001023 :NFDI_0000101)))
 
 # Class: :NFDI_0000244 (service specification)
 
