@@ -364,7 +364,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000003 "An immaterial entity that refers
 AnnotationAssertion(rdfs:label :NFDI_0000003 "organization"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000003 "An organization of some kind, e.g. research organization or business organization"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000003 "University Library in Leipzig, Museums of City Cologne")
-SubClassOf(:NFDI_0000003 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000229)))
+SubClassOf(:NFDI_0000003 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000229)))
 
 # Class: :NFDI_0000004 (person)
 
