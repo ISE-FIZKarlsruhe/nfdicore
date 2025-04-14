@@ -105,12 +105,14 @@ Declaration(Class(:NFDI_0001019))
 Declaration(Class(:NFDI_0001020))
 Declaration(Class(:NFDI_0001021))
 Declaration(Class(:NFDI_0001022))
+Declaration(Class(:NFDI_0001025))
 Declaration(Class(:NFDI_0001026))
 Declaration(Class(:NFDI_0001029))
 Declaration(Class(:NFDI_0001030))
 Declaration(Class(:NFDI_0001031))
 Declaration(Class(:NFDI_0001032))
 Declaration(Class(:NFDI_0001033))
+Declaration(Class(:NFDI_0001034))
 Declaration(Class(:NFDI_0001035))
 Declaration(Class(:NFDI_0001036))
 Declaration(Class(:NFDI_0001037))
@@ -129,6 +131,7 @@ Declaration(Class(:NFDI_0001049))
 Declaration(Class(:NFDI_0001050))
 Declaration(Class(:NFDI_0001051))
 Declaration(Class(:NFDI_0001052))
+Declaration(Class(:NFDI_0001053))
 Declaration(Class(:NFDI_0001054))
 Declaration(Class(:NFDI_0001056))
 Declaration(Class(:NFDI_0001057))
@@ -1005,6 +1008,14 @@ AnnotationAssertion(rdfs:comment :NFDI_0001022 "A namespace refers to a distinct
 AnnotationAssertion(rdfs:label :NFDI_0001022 "ontology namespace"@en)
 SubClassOf(:NFDI_0001022 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
+# Class: :NFDI_0001025 (creation process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001025 <http://purl.obolibrary.org/obo/NCIT_C42620>)
+AnnotationAssertion(rdfs:comment :NFDI_0001025 "A process by which something is brought into existence; having been brought into existence."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001025 "creation process"@de)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001025 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95")
+SubClassOf(:NFDI_0001025 <http://purl.obolibrary.org/obo/BFO_0000015>)
+
 # Class: :NFDI_0001026 (creator role)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001026 "A role inherent in an agent that originates, develops, or produces a work, product, or idea."@en)
@@ -1044,6 +1055,14 @@ AnnotationAssertion(rdfs:comment :NFDI_0001033 "A part of a document that has pa
 AnnotationAssertion(rdfs:isDefinedBy :NFDI_0001033 "http://purl.obolibrary.org/obo/IAO_0000322")
 AnnotationAssertion(rdfs:label :NFDI_0001033 "institution list"@en)
 SubClassOf(:NFDI_0001033 :NFDI_0001029)
+
+# Class: :NFDI_0001034 (uniform resource locator)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001034 "A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]"@en)
+AnnotationAssertion(rdfs:label :NFDI_0001034 "uniform resource locator"@de)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0001034 "http://purl.allotrope.org/ontologies/result#AFR_0001068")
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001034 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95")
+SubClassOf(:NFDI_0001034 :NFDI_0000015)
 
 # Class: :NFDI_0001035 (work package textual entity)
 
@@ -1172,6 +1191,13 @@ AnnotationAssertion(rdfs:comment :NFDI_0001052 "An information access specificat
 AnnotationAssertion(rdfs:label :NFDI_0001052 "information access specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0001052 "HBN: Concerning the content of ‘Publication’ datasheet and its related knowledge graph, the ‘Information Access Specification’ class and its instances were created to respond to competency questions like: what access policies apply to a specific publication document, which resources are available under open access, etc.")
 SubClassOf(:NFDI_0001052 :NFDI_0000203)
+
+# Class: :NFDI_0001053 (ontology version IRI)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001053 "An ontology version IRI is a unique identifier that points to a specific version of an ontology. It helps distinguish between different updates or revisions of the same ontology. This ensures consistent referencing and compatibility across systems using the ontology."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001053 "ontology version IRI"@en)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001053 "issue: issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95")
+SubClassOf(:NFDI_0001053 :NFDI_0000015)
 
 # Class: :NFDI_0001054 (metadata specification)
 
