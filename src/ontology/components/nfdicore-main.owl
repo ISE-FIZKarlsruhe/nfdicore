@@ -528,6 +528,7 @@ SubClassOf(:NFDI_0000029 :NFDI_0000022)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000030 "A document that organizes and stores source code files, associated metadata, and version history to facilitate the management, sharing, and collaborative development of software projects. It serves as a structured collection of information that tracks changes, maintains integrity, and supports workflows such as version control, branching, and merging.")
 AnnotationAssertion(rdfs:label :NFDI_0000030 "source code repository"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000030 "The source code repository stands for the CONTENT of the repository, which, e.g., you can copy to your hard drive. This distinguishes it from the website class which e.g. is used to publish the content."@en)
 SubClassOf(:NFDI_0000030 :NFDI_0000022)
 
 # Class: :NFDI_0000100 (academic discipline)
