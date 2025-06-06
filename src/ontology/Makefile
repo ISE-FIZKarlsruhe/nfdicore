@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                0d588bb4f1d74231b53f0245cd09d1345d738e18f35147b8f807785f3502ec82
+CONFIG_HASH=                bce3c48aef785d557ce649a15e56f7e1567c3b26557ae836b0386649201739ed
 
 
 # ----------------------------------------
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo iao swo edam dcat
+IMPORTS =  bfo iao swo obi edam dcat
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -390,6 +390,14 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
 
 $(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in nfdicore.Makefile!" && false
+## Module for ontology: obi
+
+$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/obi_terms_combined.txt --copy-ontology-annotations true --force true --individuals exclude --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: edam
 
 $(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl
@@ -484,6 +492,14 @@ mirror-iao: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/swo.owl
 mirror-swo: | $(TMPDIR)
 	$(ROBOT) convert -I https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: obi
+.PHONY: mirror-obi
+.PRECIOUS: $(MIRRORDIR)/obi.owl
+mirror-obi: | $(TMPDIR)
+	curl -L $(OBOBASE)/obi/obi-base.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: edam
