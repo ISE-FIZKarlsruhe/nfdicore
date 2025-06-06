@@ -23,7 +23,6 @@ Annotation(dcterms:title "NFDIcore Ontology"@en)
 Annotation(<http://purl.org/ontology/bibo/status> "Ontology Specification"@en)
 Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-karlsruhe.de/ontology/>)
 Annotation(rdfs:label "NFDIcore")
-Annotation(owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0>)
 
 Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/status>))
 
