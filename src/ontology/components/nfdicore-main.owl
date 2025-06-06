@@ -363,7 +363,17 @@ SubClassOf(:NFDI_0000001 <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000002 "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000002 "project"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000002 "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000002 "Why \"project\" as an occurrent:
+- A project typically has a start and end time.
+- It involves a sequence of activities, such as planning, conducting experiments, analyzing data, and publishing results.
+- It has temporal parts (e.g., Phase 1, Phase 2, review stages).
+So, it aligns well with the occurrent category - more precisely, it can be considered a complex process made up of various subprocesses.
+
+But what about the organization or plan behind it?
+- The institution running or participating the project would be a continuant (consortium).
+- The project plan might be a generically dependent continuant (a kind of information content entity).
+- But the project as executed over time is an occurrent."@en)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000002 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/50")
 SubClassOf(:NFDI_0000002 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0000004 (person)
