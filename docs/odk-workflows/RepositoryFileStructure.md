@@ -19,6 +19,7 @@ These are the current imports in NFDICORE
 | bfo | https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl | mirror |
 | iao | http://purl.obolibrary.org/obo/iao.owl | custom |
 | swo | https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl | custom |
+| obi | http://purl.obolibrary.org/obo/obi.owl | slme |
 | edam | https://edamontology.org/EDAM_1.25.owl | custom |
 | dcat | http://www.w3.org/ns/dcat3 | custom |
 
