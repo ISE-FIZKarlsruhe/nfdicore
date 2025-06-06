@@ -7,5 +7,7 @@
 #http://purl.obolibrary.org/obo/OBI_0000260 # plan
 
 
-http://purl.obolibrary.org/obo/BFO_0000179 # BFO OWL specification label
-http://purl.obolibrary.org/obo/BFO_0000180 # BFO CLIF specification label
+#http://purl.obolibrary.org/obo/BFO_0000179 # BFO OWL specification label
+#http://purl.obolibrary.org/obo/BFO_0000180 # BFO CLIF specification label
+
+http://purl.obolibrary.org/obo/OBI_0000245
