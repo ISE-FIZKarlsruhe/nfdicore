@@ -15,6 +15,8 @@ Annotation(dcterms:title "Extension module of NFDIcore ontology"@en)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
+Declaration(Class(:NFDI_0000231))
+Declaration(Class(:NFDI_0001005))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
@@ -455,6 +457,26 @@ DataPropertyDomain(:NFDI_0000136 :NFDI_0000003)
 DataPropertyRange(:NFDI_0000136 rdfs:Literal)
 
 
+
+############################
+#   Classes
+############################
+
+# Class: :NFDI_0000231 (contributor)
+
+AnnotationAssertion(rdfs:comment :NFDI_0000231 "An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
+AnnotationAssertion(rdfs:label :NFDI_0000231 "contributor"@en)
+EquivalentClasses(:NFDI_0000231 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
+
+# Class: :NFDI_0001005 (contact point)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001005 "An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.")
+AnnotationAssertion(rdfs:label :NFDI_0001005 "contact point"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001005 ":ex_1  a \"nfdi:contact point\" .
+:ex_1  \"nfdi:is subject of\"  :email_1 .
+:email_1 a \"iao:email address\" .
+:email_1 \"nfdi:has value\" \"test@example.org\" .")
+EquivalentClasses(:NFDI_0001005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000114)))
 
 
 )

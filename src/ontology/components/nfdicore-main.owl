@@ -83,14 +83,12 @@ Declaration(Class(:NFDI_0000227))
 Declaration(Class(:NFDI_0000228))
 Declaration(Class(:NFDI_0000229))
 Declaration(Class(:NFDI_0000230))
-Declaration(Class(:NFDI_0000231))
 Declaration(Class(:NFDI_0000232))
 Declaration(Class(:NFDI_0000244))
 Declaration(Class(:NFDI_0001000))
 Declaration(Class(:NFDI_0001001))
 Declaration(Class(:NFDI_0001002))
 Declaration(Class(:NFDI_0001004))
-Declaration(Class(:NFDI_0001005))
 Declaration(Class(:NFDI_0001009))
 Declaration(Class(:NFDI_0001010))
 Declaration(Class(:NFDI_0001011))
@@ -133,6 +131,7 @@ Declaration(Class(:NFDI_0001051))
 Declaration(Class(:NFDI_0001052))
 Declaration(Class(:NFDI_0001053))
 Declaration(Class(:NFDI_0001054))
+Declaration(Class(:NFDI_0001055))
 Declaration(Class(:NFDI_0001056))
 Declaration(Class(:NFDI_0001057))
 Declaration(Class(:NFDI_0001058))
@@ -145,6 +144,8 @@ Declaration(Class(:NFDI_0001064))
 Declaration(Class(:NFDI_0001065))
 Declaration(Class(:NFDI_0001066))
 Declaration(Class(:NFDI_0001067))
+Declaration(Class(:NFDI_0001068))
+Declaration(Class(:NFDI_0001069))
 Declaration(Class(:NFDI_0010001))
 Declaration(Class(:NFDI_0010002))
 Declaration(Class(:NFDI_0010004))
@@ -556,7 +557,6 @@ AnnotationAssertion(rdfs:label :NFDI_0000102 "agent"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000102 "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000102 "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en)
 EquivalentClasses(:NFDI_0000102 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000229)))
-SubClassOf(:NFDI_0000102 <http://purl.obolibrary.org/obo/BFO_0000004>)
 
 # Class: :NFDI_0000106 (city)
 
@@ -835,12 +835,6 @@ AnnotationAssertion(rdfs:comment :NFDI_0000230 "A role inherent in an agent that
 AnnotationAssertion(rdfs:label :NFDI_0000230 "service provider role"@en)
 SubClassOf(:NFDI_0000230 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000101)))
 
-# Class: :NFDI_0000231 (contributor)
-
-AnnotationAssertion(rdfs:comment :NFDI_0000231 "An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000231 "contributor"@en)
-SubClassOf(:NFDI_0000231 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
-
 # Class: :NFDI_0000232 (service product)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000232 "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en)
@@ -878,37 +872,27 @@ AnnotationAssertion(rdfs:comment :NFDI_0001004 "A project proposal is a detailed
 AnnotationAssertion(rdfs:label :NFDI_0001004 "project proposal"@en)
 SubClassOf(:NFDI_0001004 ObjectIntersectionOf(:NFDI_0000022 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0000002)))
 
-# Class: :NFDI_0001005 (contact point)
-
-AnnotationAssertion(rdfs:comment :NFDI_0001005 "An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.")
-AnnotationAssertion(rdfs:label :NFDI_0001005 "contact point"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001005 ":ex_1  a \"nfdi:contact point\" .
-:ex_1  \"nfdi:is subject of\"  :email_1 .
-:email_1 a \"iao:email address\" .
-:email_1 \"nfdi:has value\" \"test@example.org\" .")
-SubClassOf(:NFDI_0001005 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000114)))
-
 # Class: :NFDI_0001009 (GND identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001009 "GND"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001009 "Gemeinsame Normdatei"@de)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001009 "Integrated Authority File"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001009 "https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001009 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
 AnnotationAssertion(rdfs:comment :NFDI_0001009 "A centrally registered identifier that is issued by the German National Library. The Integrated Authority File (GND) is facilitates the collaborative use and administration of authority data. These authority data represent and describe entities, i.e. persons, corporate bodies, conferences and events, geographic entities, topics and works relating to cultural and academic collections."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001009 "GND identifier"@en)
+AnnotationAssertion(:NFDI_0010015 :NFDI_0001009 "GND"@en)
 SubClassOf(:NFDI_0001009 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001010 (VIAF identifier)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001010 "Integrated Authority File"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001010 "VIAF"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001010 "Virtual International Authority File"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001010 "https://viaf.org/en")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001010 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
 AnnotationAssertion(rdfs:comment :NFDI_0001010 "The centrally registered identifier VIAF (Virtual International Authority File) is an international authority file that links and integrates authority records from multiple national libraries and other organizations. It provides a unique identifier for authors, creators, and entities, facilitating better data sharing and cataloging across institutions."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001010 "VIAF identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001010 "https://viaf.org/en/viaf/137346469")
+AnnotationAssertion(:NFDI_0010015 :NFDI_0001010 "VIAF"@en)
 SubClassOf(:NFDI_0001010 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001011 (GeoNames identifier)
@@ -933,23 +917,23 @@ SubClassOf(:NFDI_0001012 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001013 (ROR identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001013 "ROR"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001013 "https://ror.org/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
 AnnotationAssertion(rdfs:comment :NFDI_0001013 "ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001013 "ROR identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001013 "https://ror.org/01kdxra28")
+AnnotationAssertion(:NFDI_0010015 :NFDI_0001013 "ROR"@en)
 SubClassOf(:NFDI_0001013 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001014 (ISIL identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001014 "ISIL"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001014 "International Standard Identifier for Libraries and Related Organizations"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001014 "https://sigel.staatsbibliothek-berlin.de/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001014 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
 AnnotationAssertion(rdfs:comment :NFDI_0001014 "ISIL (International Standard Identifier for Libraries and Related Organizations) is a globally recognized identifier system used to uniquely identify libraries, archives, museums, and other cultural institutions. It facilitates resource sharing, cataloging, and data exchange across institutions and countries."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001014 "ISIL identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001014 "https://ld.zdb-services.de/resource/organisations/DE-4153")
+AnnotationAssertion(:NFDI_0010015 :NFDI_0001014 "ISIL"@en)
 SubClassOf(:NFDI_0001014 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001015 (FactGrid identifier)
@@ -964,13 +948,13 @@ SubClassOf(:NFDI_0001015 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001016 (RISM identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001016 "RISM"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001016 "Répertoire International des Sources Musicales"@fr)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001016 "https://rism.info/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0001016 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61")
 AnnotationAssertion(rdfs:comment :NFDI_0001016 "RISM (Répertoire International des Sources Musicales) is an international catalog of historical music sources, including manuscripts, printed music, and treatises. It provides unique identifiers and bibliographic data to support music research and documentation."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001016 "RISM identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001016 "https://rism.online/sources/201001959/")
+AnnotationAssertion(:NFDI_0010015 :NFDI_0001016 "RISM"@en)
 SubClassOf(:NFDI_0001016 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001017 (export format specification)
@@ -1207,6 +1191,15 @@ AnnotationAssertion(rdfs:label :NFDI_0001054 "metadata specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001054 "metadata schema and standards")
 SubClassOf(:NFDI_0001054 :NFDI_0000203)
 
+# Class: :NFDI_0001055 (TGN identifier)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001055 "The TGN Identifier refers to a unique ID within the Getty Thesaurus of Geographic Names (TGN), which is a controlled vocabulary developed to standardize geographic names for use in cultural heritage and library contexts. The TGN is part of the Getty Vocabulary Program by the Getty Research Institute."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001055 "TGN identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001055 "http://vocab.getty.edu/page/tgn/7003712")
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001055 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/100")
+AnnotationAssertion(:NFDI_0010015 :NFDI_0001055 "TGN")
+SubClassOf(:NFDI_0001055 <http://purl.obolibrary.org/obo/IAO_0000578>)
+
 # Class: :NFDI_0001056 (status specification)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001056 "A status specification is a directive information entity that defines the current state, progress, or condition of an entity, process, or project based on predefined criteria and operational guidelines.")
@@ -1290,6 +1283,24 @@ AnnotationAssertion(rdfs:comment :NFDI_0001067 "Cybersecurity is a sub-disciplin
 AnnotationAssertion(rdfs:label :NFDI_0001067 "cybersecurity"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001067 "Encryption techniques, intrusion detection systems, and ethical hacking studies belong to Cybersecurity.")
 SubClassOf(:NFDI_0001067 :NFDI_0010017)
+
+# Class: :NFDI_0001068 (LCNAF identifier)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001068 "The LCNAF Identifier refers to a unique identifier assigned to entries in the Library of Congress Name Authority File (LCNAF). This file is a standardized authority database maintained by the Library of Congress, used to establish and control the names of people, organizations, geographic places, and titles in bibliographic records."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001068 "LCNAF identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001068 "http://id.loc.gov/authorities/names/n78095332")
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001068 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/101")
+AnnotationAssertion(:NFDI_0010015 :NFDI_0001068 "LCNAF")
+SubClassOf(:NFDI_0001068 <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: :NFDI_0001069 (BnF identifier)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001069 "The BnF Identifier refers to a unique identifier assigned to an authority record in the Bibliothèque nationale de France (BnF) catalog. It is part of the BnF’s authority files, used to standardize names of people, organizations, titles, places, and subjects across bibliographic records."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001069 "BnF identifier"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001069 "https://catalogue.bnf.fr/ark:/12148/cb123735831")
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001069 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/102")
+AnnotationAssertion(:NFDI_0010015 :NFDI_0001069 "BnF")
+SubClassOf(:NFDI_0001069 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0010001 (humanity)
 
