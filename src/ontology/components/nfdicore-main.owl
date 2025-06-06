@@ -22,7 +22,6 @@ Declaration(Class(:NFDI_0000002))
 Declaration(Class(:NFDI_0000004))
 Declaration(Class(:NFDI_0000005))
 Declaration(Class(:NFDI_0000006))
-Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000008))
 Declaration(Class(:NFDI_0000009))
 Declaration(Class(:NFDI_0000011))
@@ -399,7 +398,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000006 "An organisation that consists of
 AnnotationAssertion(rdfs:label :NFDI_0000006 "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000006 "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000006 "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
-SubClassOf(:NFDI_0000006 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> :NFDI_0000007)))
+SubClassOf(:NFDI_0000006 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000115> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000110))))
 
 # Class: :NFDI_0000008 (creative work)
 
@@ -455,7 +454,7 @@ SubClassOf(:NFDI_0000017 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom
 
 AnnotationAssertion(rdfs:comment :NFDI_0000018 "An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000018 "academic event"@en)
-SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000019)))))
+SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000019))))
 
 # Class: :NFDI_0000019 (academic organization role)
 
@@ -576,7 +575,7 @@ SubClassOf(:NFDI_0000107 <http://purl.obolibrary.org/obo/BFO_0000027>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000110 "A role inherent in an organization that is realized when the organization is a member of a consortium."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000110 "consortium member role"@en)
-EquivalentClasses(:NFDI_0000110 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000002)))
+EquivalentClasses(:NFDI_0000110 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000002) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0000111 (contacting process)
 
@@ -977,13 +976,13 @@ SubClassOf(:NFDI_0001019 <http://purl.obolibrary.org/obo/IAO_0000300>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001020 "The act of foundation refers to the formal establishment or creation of an institution, organization, or entity, typically through a legal, administrative, or ceremonial process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001020 "act of foundation"@en)
-SubClassOf(:NFDI_0001020 :NFDI_0000131)
+SubClassOf(:NFDI_0001020 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0001021 (act of dissolution)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001021 "The act of dissolution refers to a formal legal or administrative event that officially terminates or dissolves an entity, relationship, or agreement."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001021 "act of dissolution"@en)
-SubClassOf(:NFDI_0001021 :NFDI_0000131)
+SubClassOf(:NFDI_0001021 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0001022 (ontology namespace)
 
@@ -1687,6 +1686,7 @@ AnnotationAssertion(rdfs:label :NFDI_0001094 "Dr. Dr."@en)
 ClassAssertion(:NFDI_0001040 :NFDI_0001094)
 
 
+EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000110) ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/BFO_0000115>) :NFDI_0000006))
 AnnotationAssertion(rdfs:label dcterms:description "description")
 AnnotationAssertion(rdfs:label dcterms:license "license")
 )
