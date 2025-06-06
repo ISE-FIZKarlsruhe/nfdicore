@@ -16,9 +16,9 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000098>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000300>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000245>))
 Declaration(Class(:NFDI_0000001))
 Declaration(Class(:NFDI_0000002))
-Declaration(Class(:NFDI_0000003))
 Declaration(Class(:NFDI_0000004))
 Declaration(Class(:NFDI_0000005))
 Declaration(Class(:NFDI_0000006))
@@ -114,7 +114,6 @@ Declaration(Class(:NFDI_0001034))
 Declaration(Class(:NFDI_0001035))
 Declaration(Class(:NFDI_0001036))
 Declaration(Class(:NFDI_0001037))
-Declaration(Class(:NFDI_0001038))
 Declaration(Class(:NFDI_0001039))
 Declaration(Class(:NFDI_0001040))
 Declaration(Class(:NFDI_0001041))
@@ -146,6 +145,7 @@ Declaration(Class(:NFDI_0001066))
 Declaration(Class(:NFDI_0001067))
 Declaration(Class(:NFDI_0001068))
 Declaration(Class(:NFDI_0001069))
+Declaration(Class(:NFDI_0001096))
 Declaration(Class(:NFDI_0010001))
 Declaration(Class(:NFDI_0010002))
 Declaration(Class(:NFDI_0010004))
@@ -341,6 +341,10 @@ SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000003> :NFDI_0000024)
 
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000013> :NFDI_0000024)
 
+# Class: <http://purl.obolibrary.org/obo/OBI_0000245> (organization)
+
+SubClassOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000229)))
+
 # Class: <http://www.ebi.ac.uk/swo/SWO_0000002> (software license)
 
 EquivalentClasses(<http://www.ebi.ac.uk/swo/SWO_0000002> :NFDI_0000141)
@@ -361,14 +365,6 @@ AnnotationAssertion(rdfs:comment :NFDI_0000002 "A process of a scientific or bus
 AnnotationAssertion(rdfs:label :NFDI_0000002 "project"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000002 "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en)
 SubClassOf(:NFDI_0000002 <http://purl.obolibrary.org/obo/BFO_0000015>)
-
-# Class: :NFDI_0000003 (organization)
-
-AnnotationAssertion(rdfs:comment :NFDI_0000003 "An immaterial entity that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000003 "organization"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000003 "An organization of some kind, e.g. research organization or business organization"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000003 "University Library in Leipzig, Museums of City Cologne")
-SubClassOf(:NFDI_0000003 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000229)))
 
 # Class: :NFDI_0000004 (person)
 
@@ -393,15 +389,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000006 "An organisation that consists of
 AnnotationAssertion(rdfs:label :NFDI_0000006 "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000006 "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000006 "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
-SubClassOf(:NFDI_0000006 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> :NFDI_0000007)))
-
-# Class: :NFDI_0000007 (consortium member)
-
-AnnotationAssertion(rdfs:comment :NFDI_0000007 "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000007 "consortium member"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000007 "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000007 "Museums of City Cologne is a member of NFDI4Culture consortium."@en)
-EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(:NFDI_0000003 ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000110)))
+SubClassOf(:NFDI_0000006 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> :NFDI_0000007)))
 
 # Class: :NFDI_0000008 (creative work)
 
@@ -463,13 +451,13 @@ SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom
 
 AnnotationAssertion(rdfs:comment :NFDI_0000019 "A role inherent in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000019 "academic organization role"@en)
-SubClassOf(:NFDI_0000019 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
+SubClassOf(:NFDI_0000019 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0000020 (industry organization role)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000020 "A role inherent in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000020 "industry organization role"@en)
-SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
+SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0000021 (workflow)
 
@@ -656,7 +644,7 @@ SubClassOf(:NFDI_0000134 :NFDI_0000005)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000139 "A role inherent in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000139 "funding organization role"@en)
-SubClassOf(:NFDI_0000139 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000003)))
+SubClassOf(:NFDI_0000139 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0000140 (software library)
 
@@ -1070,13 +1058,6 @@ AnnotationAssertion(rdfs:label :NFDI_0001037 "digital object identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001037 "10.1016/j.compind.2023.104016")
 SubClassOf(:NFDI_0001037 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
-# Class: :NFDI_0001038 (consortium partner)
-
-AnnotationAssertion(rdfs:comment :NFDI_0001038 "A Consortium Partner is an organization that actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals.")
-AnnotationAssertion(rdfs:label :NFDI_0001038 "consortium partner"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001038 "universities, research institutions, industry partners, and funding agencies collaborating in NFDI MatWerk, Horizon Europe projects, and other large-scale research initiatives")
-SubClassOf(:NFDI_0001038 :NFDI_0000003)
-
 # Class: :NFDI_0001039 (nfdi consortium)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001039 "National Research Data Infrastructure"@en)
@@ -1301,6 +1282,11 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001069 
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001069 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/102")
 AnnotationAssertion(:NFDI_0010015 :NFDI_0001069 "BnF")
 SubClassOf(:NFDI_0001069 <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: :NFDI_0001096 (consortium partner role)
+
+AnnotationAssertion(rdfs:label :NFDI_0001096 "consortium partner role"@en)
+SubClassOf(:NFDI_0001096 :NFDI_0000229)
 
 # Class: :NFDI_0010001 (humanity)
 

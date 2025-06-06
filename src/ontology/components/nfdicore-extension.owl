@@ -15,8 +15,10 @@ Annotation(dcterms:title "Extension module of NFDIcore ontology"@en)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
+Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000231))
 Declaration(Class(:NFDI_0001005))
+Declaration(Class(:NFDI_0001038))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
@@ -154,14 +156,14 @@ AnnotationAssertion(rdfs:label :NFDI_0000137 "has funding organization"@en)
 SubObjectPropertyOf(:NFDI_0000137 <http://purl.obolibrary.org/obo/BFO_0000057>)
 InverseObjectProperties(:NFDI_0000137 :NFDI_0000138)
 ObjectPropertyDomain(:NFDI_0000137 :NFDI_0000002)
-ObjectPropertyRange(:NFDI_0000137 ObjectIntersectionOf(:NFDI_0000003 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000139)))
+ObjectPropertyRange(:NFDI_0000137 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000139)))
 
 # Object Property: :NFDI_0000138 (funding organization of)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000138 "inverse of property \"has funding organization\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000138 "funding organization of"@en)
 SubObjectPropertyOf(:NFDI_0000138 <http://purl.obolibrary.org/obo/BFO_0000056>)
-ObjectPropertyDomain(:NFDI_0000138 :NFDI_0000003)
+ObjectPropertyDomain(:NFDI_0000138 <http://purl.obolibrary.org/obo/OBI_0000245>)
 
 # Object Property: :NFDI_0000142 (has license)
 
@@ -207,8 +209,8 @@ SubObjectPropertyOf(:NFDI_0000147 <http://purl.obolibrary.org/obo/IAO_0000136>)
 AnnotationAssertion(rdfs:comment :NFDI_0000182 "The property is a parental relationship between organizations."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000182 "has parent organization"@en)
 SubObjectPropertyOf(:NFDI_0000182 <http://purl.obolibrary.org/obo/BFO_0000176>)
-ObjectPropertyDomain(:NFDI_0000182 :NFDI_0000003)
-ObjectPropertyRange(:NFDI_0000182 :NFDI_0000003)
+ObjectPropertyDomain(:NFDI_0000182 <http://purl.obolibrary.org/obo/OBI_0000245>)
+ObjectPropertyRange(:NFDI_0000182 <http://purl.obolibrary.org/obo/OBI_0000245>)
 
 # Object Property: :NFDI_0000187 (has programming language)
 
@@ -346,8 +348,8 @@ SubObjectPropertyOf(:NFDI_0000212 <http://purl.obolibrary.org/obo/IAO_0000136>)
 AnnotationAssertion(rdfs:comment :NFDI_0000213 "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en)
 AnnotationAssertion(rdfs:label :NFDI_0000213 "has subsidiary organization"@en)
 SubObjectPropertyOf(:NFDI_0000213 <http://purl.obolibrary.org/obo/BFO_0000178>)
-ObjectPropertyDomain(:NFDI_0000213 :NFDI_0000003)
-ObjectPropertyRange(:NFDI_0000213 :NFDI_0000003)
+ObjectPropertyDomain(:NFDI_0000213 <http://purl.obolibrary.org/obo/OBI_0000245>)
+ObjectPropertyRange(:NFDI_0000213 <http://purl.obolibrary.org/obo/OBI_0000245>)
 
 # Object Property: :NFDI_0000216 (has technology)
 
@@ -435,7 +437,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000128 "The property refers to the date 
 AnnotationAssertion(rdfs:label :NFDI_0000128 "dissolution date"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000128 "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing.")
 SubDataPropertyOf(:NFDI_0000128 owl:topDataProperty)
-DataPropertyDomain(:NFDI_0000128 :NFDI_0000003)
+DataPropertyDomain(:NFDI_0000128 <http://purl.obolibrary.org/obo/OBI_0000245>)
 DataPropertyRange(:NFDI_0000128 rdfs:Literal)
 
 # Data Property: :NFDI_0000135 (file extension)
@@ -453,7 +455,7 @@ DataPropertyDomain(:NFDI_0000135 :NFDI_0000001)
 AnnotationAssertion(rdfs:comment :NFDI_0000136 "The property refers to the specific date on which the organization was officially established or founded."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000136 "foundation date"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000136 "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing.")
-DataPropertyDomain(:NFDI_0000136 :NFDI_0000003)
+DataPropertyDomain(:NFDI_0000136 <http://purl.obolibrary.org/obo/OBI_0000245>)
 DataPropertyRange(:NFDI_0000136 rdfs:Literal)
 
 
@@ -461,6 +463,14 @@ DataPropertyRange(:NFDI_0000136 rdfs:Literal)
 ############################
 #   Classes
 ############################
+
+# Class: :NFDI_0000007 (consortium member)
+
+AnnotationAssertion(rdfs:comment :NFDI_0000007 "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
+AnnotationAssertion(rdfs:label :NFDI_0000007 "consortium member"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000007 "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000007 "Museums of City Cologne is a member of NFDI4Culture consortium."@en)
+EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000110)))
 
 # Class: :NFDI_0000231 (contributor)
 
@@ -477,6 +487,13 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001005 
 :email_1 a \"iao:email address\" .
 :email_1 \"nfdi:has value\" \"test@example.org\" .")
 EquivalentClasses(:NFDI_0001005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000114)))
+
+# Class: :NFDI_0001038 (consortium partner)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001038 "A consortium partner is an organization inhering a consortium partner role. A consortium partner actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001038 "consortium partner"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001038 "universities, research institutions, industry partners, and funding agencies collaborating in NFDI MatWerk, Horizon Europe projects, and other large-scale research initiatives")
+EquivalentClasses(:NFDI_0001038 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0001096)))
 
 
 )
