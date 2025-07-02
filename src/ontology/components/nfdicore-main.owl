@@ -145,6 +145,8 @@ Declaration(Class(:NFDI_0001067))
 Declaration(Class(:NFDI_0001068))
 Declaration(Class(:NFDI_0001069))
 Declaration(Class(:NFDI_0001096))
+Declaration(Class(:NFDI_0001098))
+Declaration(Class(:NFDI_0001099))
 Declaration(Class(:NFDI_0010001))
 Declaration(Class(:NFDI_0010002))
 Declaration(Class(:NFDI_0010004))
@@ -1296,6 +1298,23 @@ SubClassOf(:NFDI_0001069 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 AnnotationAssertion(rdfs:label :NFDI_0001096 "consortium partner role"@en)
 SubClassOf(:NFDI_0001096 :NFDI_0000229)
+
+# Class: :NFDI_0001098 (DDB organization identifier)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001098 "Identifier for institutions registered with the German Digital Library (Deutsche Digitale Bibliothek)"@en)
+AnnotationAssertion(rdfs:comment :NFDI_0001098 "Identifikator für Institutionen, die bei der Deutschen Digitalen Bibliothek registriert sind"@de)
+AnnotationAssertion(rdfs:label :NFDI_0001098 "DDB organization identifier"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0001098 "https://www.wikidata.org/wiki/Property:P13081")
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001098 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/104")
+SubClassOf(:NFDI_0001098 <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: :NFDI_0001099 (re3data repository identifier)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001099 "identifier for a data repository in the re3data registry"@en)
+AnnotationAssertion(rdfs:label :NFDI_0001099 "re3data repository identifier"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0001099 "https://www.wikidata.org/wiki/Property:P5874")
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001099 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/106")
+SubClassOf(:NFDI_0001099 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0010001 (humanity)
 
