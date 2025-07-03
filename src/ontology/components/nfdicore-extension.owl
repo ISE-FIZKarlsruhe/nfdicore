@@ -293,7 +293,6 @@ InverseObjectProperties(:NFDI_0000201 :NFDI_0000202)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000202 "inverse of  property \"has sparql endpoint\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000202 "sparql endpoint of"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000202 "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en)
 SubObjectPropertyOf(:NFDI_0000202 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000204 (has specification)
@@ -405,7 +404,7 @@ ObjectPropertyRange(:NFDI_0001027 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeV
 # Object Property: :NFDI_0001028 (creator of)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001028 "inverse of property \"has creator\""@en)
-AnnotationAssertion(rdfs:label :NFDI_0001028 "creator of"@de)
+AnnotationAssertion(rdfs:label :NFDI_0001028 "creator of"@en)
 SubObjectPropertyOf(:NFDI_0001028 :NFDI_0000241)
 
 

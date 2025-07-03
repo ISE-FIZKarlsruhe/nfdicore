@@ -27,6 +27,7 @@ Annotation(rdfs:label "NFDIcore")
 Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/status>))
 
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202> "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/105")
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2415> "Tabea Tietz")
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2416> "Oleksandra Bruns")
