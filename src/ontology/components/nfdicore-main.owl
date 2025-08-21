@@ -62,8 +62,6 @@ Declaration(Class(:NFDI_0000140))
 Declaration(Class(:NFDI_0000141))
 Declaration(Class(:NFDI_0000145))
 Declaration(Class(:NFDI_0000148))
-Declaration(Class(:NFDI_0000157))
-Declaration(Class(:NFDI_0000159))
 Declaration(Class(:NFDI_0000186))
 Declaration(Class(:NFDI_0000190))
 Declaration(Class(:NFDI_0000193))
@@ -137,30 +135,11 @@ Declaration(Class(:NFDI_0001059))
 Declaration(Class(:NFDI_0001060))
 Declaration(Class(:NFDI_0001061))
 Declaration(Class(:NFDI_0001062))
-Declaration(Class(:NFDI_0001063))
-Declaration(Class(:NFDI_0001064))
-Declaration(Class(:NFDI_0001065))
-Declaration(Class(:NFDI_0001066))
-Declaration(Class(:NFDI_0001067))
 Declaration(Class(:NFDI_0001068))
 Declaration(Class(:NFDI_0001069))
 Declaration(Class(:NFDI_0001096))
 Declaration(Class(:NFDI_0001098))
 Declaration(Class(:NFDI_0001099))
-Declaration(Class(:NFDI_0010001))
-Declaration(Class(:NFDI_0010002))
-Declaration(Class(:NFDI_0010004))
-Declaration(Class(:NFDI_0010005))
-Declaration(Class(:NFDI_0010006))
-Declaration(Class(:NFDI_0010007))
-Declaration(Class(:NFDI_0010008))
-Declaration(Class(:NFDI_0010010))
-Declaration(Class(:NFDI_0010011))
-Declaration(Class(:NFDI_0010012))
-Declaration(Class(:NFDI_0010014))
-Declaration(Class(:NFDI_0010016))
-Declaration(Class(:NFDI_0010017))
-Declaration(Class(:NFDI_0010018))
 Declaration(Class(:NFDI_0010019))
 Declaration(Class(:NFDI_0010020))
 Declaration(Class(:NFDI_0010021))
@@ -191,6 +170,13 @@ Declaration(ObjectProperty(:NFDI_0001023))
 Declaration(ObjectProperty(:NFDI_0001024))
 Declaration(DataProperty(:NFDI_0001007))
 Declaration(DataProperty(:NFDI_0001008))
+Declaration(NamedIndividual(:NFDI_0000157))
+Declaration(NamedIndividual(:NFDI_0000159))
+Declaration(NamedIndividual(:NFDI_0001063))
+Declaration(NamedIndividual(:NFDI_0001064))
+Declaration(NamedIndividual(:NFDI_0001065))
+Declaration(NamedIndividual(:NFDI_0001066))
+Declaration(NamedIndividual(:NFDI_0001067))
 Declaration(NamedIndividual(:NFDI_0001070))
 Declaration(NamedIndividual(:NFDI_0001071))
 Declaration(NamedIndividual(:NFDI_0001072))
@@ -216,8 +202,23 @@ Declaration(NamedIndividual(:NFDI_0001091))
 Declaration(NamedIndividual(:NFDI_0001092))
 Declaration(NamedIndividual(:NFDI_0001093))
 Declaration(NamedIndividual(:NFDI_0001094))
+Declaration(NamedIndividual(:NFDI_0010001))
+Declaration(NamedIndividual(:NFDI_0010002))
+Declaration(NamedIndividual(:NFDI_0010004))
+Declaration(NamedIndividual(:NFDI_0010005))
+Declaration(NamedIndividual(:NFDI_0010006))
+Declaration(NamedIndividual(:NFDI_0010007))
+Declaration(NamedIndividual(:NFDI_0010008))
+Declaration(NamedIndividual(:NFDI_0010010))
+Declaration(NamedIndividual(:NFDI_0010011))
+Declaration(NamedIndividual(:NFDI_0010012))
+Declaration(NamedIndividual(:NFDI_0010014))
+Declaration(NamedIndividual(:NFDI_0010016))
+Declaration(NamedIndividual(:NFDI_0010017))
+Declaration(NamedIndividual(:NFDI_0010018))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000118>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000119>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#broader>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNote>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(:NFDI_0000012))
@@ -690,20 +691,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_00
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000148 "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000148 "MIMEType")
 SubClassOf(:NFDI_0000148 :NFDI_0000145)
-
-# Class: :NFDI_0000157 (electrical engineering)
-
-AnnotationAssertion(rdfs:comment :NFDI_0000157 "An academic discipline that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation.")
-AnnotationAssertion(rdfs:label :NFDI_0000157 "electrical engineering"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0000157 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0000157 :NFDI_0000100)
-
-# Class: :NFDI_0000159 (process engineering)
-
-AnnotationAssertion(rdfs:comment :NFDI_0000159 "An academic discipline that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000159 "process engineering"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0000159 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0000159 :NFDI_0000100)
 
 # Class: :NFDI_0000186 (programming language)
 
@@ -1238,44 +1225,6 @@ AnnotationAssertion(rdfs:label :NFDI_0001062 "speaker role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001062 "invited speakers at scientific symposiums, keynote presenters at technology expos, and guest lecturers at universities")
 SubClassOf(:NFDI_0001062 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000004)))
 
-# Class: :NFDI_0001063 (artificial intelligence)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001063 "Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson.")
-AnnotationAssertion(rdfs:comment :NFDI_0001063 "Artificial Intelligence (AI) is a sub-discipline of Computer Science that focuses on creating systems capable of performing tasks that require human-like intelligence, such as learning, reasoning, and problem-solving.")
-AnnotationAssertion(rdfs:label :NFDI_0001063 "artificial intelligence"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001063 "Deep learning for image recognition, reinforcement learning in robotics, and natural language processing fall under Artificial Intelligence.")
-SubClassOf(:NFDI_0001063 :NFDI_0010017)
-
-# Class: :NFDI_0001064 (theoretical computer science)
-
-AnnotationAssertion(rdfs:comment :NFDI_0001064 "Theoretical Computer Science is a sub-discipline of Computer Science that focuses on mathematical models of computation, computational complexity, and algorithmic problem-solving")
-AnnotationAssertion(rdfs:label :NFDI_0001064 "theoretical computer science"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001064 "Studies on Turing machines, complexity classes (P vs NP), and formal languages belong to Theoretical Computer Science.")
-SubClassOf(:NFDI_0001064 :NFDI_0010017)
-
-# Class: :NFDI_0001065 (software engineering)
-
-AnnotationAssertion(rdfs:comment :NFDI_0001065 "Software Engineering is a sub-discipline of Computer Science that applies engineering principles to the design, development, testing, and maintenance of software systems.")
-AnnotationAssertion(rdfs:label :NFDI_0001065 "software engineering"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001065 "Agile software development, DevOps practices, and software architecture design fall under Software Engineering.")
-SubClassOf(:NFDI_0001065 :NFDI_0010017)
-
-# Class: :NFDI_0001066 (data science)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001066 "Provost, F., & Fawcett, T. (2013). Data Science for Business. O'Reilly Media.")
-AnnotationAssertion(rdfs:comment :NFDI_0001066 "Data Science is a sub-discipline of Computer Science that integrates statistical methods, machine learning, and data processing techniques to extract insights and knowledge from structured and unstructured data.")
-AnnotationAssertion(rdfs:label :NFDI_0001066 "data science"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001066 "Predictive analytics, big data visualization, and recommendation systems are part of Data Science.")
-SubClassOf(:NFDI_0001066 :NFDI_0010017)
-
-# Class: :NFDI_0001067 (cybersecurity)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001067 "Stallings, W. (2020). Network Security Essentials. Pearson.")
-AnnotationAssertion(rdfs:comment :NFDI_0001067 "Cybersecurity is a sub-discipline of Computer Science that focuses on protecting computer systems, networks, and data from cyber threats, vulnerabilities, and unauthorized access.")
-AnnotationAssertion(rdfs:label :NFDI_0001067 "cybersecurity"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001067 "Encryption techniques, intrusion detection systems, and ethical hacking studies belong to Cybersecurity.")
-SubClassOf(:NFDI_0001067 :NFDI_0010017)
-
 # Class: :NFDI_0001068 (LCNAF identifier)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001068 "The LCNAF Identifier refers to a unique identifier assigned to entries in the Library of Congress Name Authority File (LCNAF). This file is a standardized authority database maintained by the Library of Congress, used to establish and control the names of people, organizations, geographic places, and titles in bibliographic records."@en)
@@ -1315,104 +1264,6 @@ AnnotationAssertion(rdfs:label :NFDI_0001099 "re3data repository identifier"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0001099 "https://www.wikidata.org/wiki/Property:P5874")
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001099 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/106")
 SubClassOf(:NFDI_0001099 <http://purl.obolibrary.org/obo/IAO_0000578>)
-
-# Class: :NFDI_0010001 (humanity)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010001 "An academic discipline focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010001 "humanity"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010001 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010001 :NFDI_0000100)
-
-# Class: :NFDI_0010002 (social science)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010002 "An academic discipline that studies society and human behavior through disciplines like sociology, psychology, and economics."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010002 "social science"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010002 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010002 :NFDI_0000100)
-
-# Class: :NFDI_0010004 (biology)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010004 "An academic discipline that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010004 "biology"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010004 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010004 :NFDI_0000100)
-
-# Class: :NFDI_0010005 (medicine)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010005 "An academic discipline that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010005 "medicine"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010005 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010005 :NFDI_0000100)
-
-# Class: :NFDI_0010006 (agriculture)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010006 "An academic discipline that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010006 "agriculture"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010006 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010006 :NFDI_0000100)
-
-# Class: :NFDI_0010007 (natural science)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010007 "An academic discipline that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth.")
-AnnotationAssertion(rdfs:label :NFDI_0010007 "natural science"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010007 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010007 :NFDI_0000100)
-
-# Class: :NFDI_0010008 (chemistry)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010008 "An academic discipline that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010008 "chemistry"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010008 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010008 :NFDI_0000100)
-
-# Class: :NFDI_0010010 (physic)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010010 "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010010 "physic"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010010 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010010 :NFDI_0000100)
-
-# Class: :NFDI_0010011 (mathematics)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010011 "An academic discipline that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling.")
-AnnotationAssertion(rdfs:label :NFDI_0010011 "mathematics"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010011 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010011 :NFDI_0000100)
-
-# Class: :NFDI_0010012 (geoscience)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010012 "An academic discipline that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010012 "geoscience"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010012 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010012 :NFDI_0000100)
-
-# Class: :NFDI_0010014 (mechanical engineering)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010014 "An academic discipline that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010014 "mechanical engineering"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010014 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010014 :NFDI_0000100)
-
-# Class: :NFDI_0010016 (materials science)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010016 "An academic discipline that explores the properties, performance, and applications of materials, focusing on the relationship between a material's structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010016 "materials science"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010016 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010016 :NFDI_0000100)
-
-# Class: :NFDI_0010017 (computer science)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010017 "An academic discipline that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010017 "computer science"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010017 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010017 :NFDI_0000100)
-
-# Class: :NFDI_0010018 (construction engineering)
-
-AnnotationAssertion(rdfs:comment :NFDI_0010018 "An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010018 "construction engineering"@en)
-AnnotationAssertion(rdfs:seeAlso :NFDI_0010018 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
-SubClassOf(:NFDI_0010018 :NFDI_0000100)
 
 # Class: :NFDI_0010019 (workshop)
 
@@ -1553,6 +1404,63 @@ SubClassOf(:NFDI_0010041 :NFDI_0000198)
 ############################
 #   Named Individuals
 ############################
+
+# Individual: :NFDI_0000157 (electrical engineering)
+
+AnnotationAssertion(rdfs:comment :NFDI_0000157 "An academic discipline that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation.")
+AnnotationAssertion(rdfs:label :NFDI_0000157 "electrical engineering"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0000157 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0000157)
+
+# Individual: :NFDI_0000159 (process engineering)
+
+AnnotationAssertion(rdfs:comment :NFDI_0000159 "An academic discipline that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals."@en)
+AnnotationAssertion(rdfs:label :NFDI_0000159 "process engineering"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0000159 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0000159)
+
+# Individual: :NFDI_0001063 (artificial intelligence)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001063 "Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson.")
+AnnotationAssertion(rdfs:comment :NFDI_0001063 "Artificial Intelligence (AI) is a sub-discipline of Computer Science that focuses on creating systems capable of performing tasks that require human-like intelligence, such as learning, reasoning, and problem-solving.")
+AnnotationAssertion(rdfs:label :NFDI_0001063 "artificial intelligence"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001063 "Deep learning for image recognition, reinforcement learning in robotics, and natural language processing fall under Artificial Intelligence.")
+ClassAssertion(:NFDI_0000100 :NFDI_0001063)
+ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001063 :NFDI_0010017)
+
+# Individual: :NFDI_0001064 (theoretical computer science)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001064 "Theoretical Computer Science is a sub-discipline of Computer Science that focuses on mathematical models of computation, computational complexity, and algorithmic problem-solving")
+AnnotationAssertion(rdfs:label :NFDI_0001064 "theoretical computer science"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001064 "Studies on Turing machines, complexity classes (P vs NP), and formal languages belong to Theoretical Computer Science.")
+ClassAssertion(:NFDI_0000100 :NFDI_0001064)
+ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001064 :NFDI_0010017)
+
+# Individual: :NFDI_0001065 (software engineering)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001065 "Software Engineering is a sub-discipline of Computer Science that applies engineering principles to the design, development, testing, and maintenance of software systems.")
+AnnotationAssertion(rdfs:label :NFDI_0001065 "software engineering"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001065 "Agile software development, DevOps practices, and software architecture design fall under Software Engineering.")
+ClassAssertion(:NFDI_0000100 :NFDI_0001065)
+ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001065 :NFDI_0010017)
+
+# Individual: :NFDI_0001066 (data science)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001066 "Provost, F., & Fawcett, T. (2013). Data Science for Business. O'Reilly Media.")
+AnnotationAssertion(rdfs:comment :NFDI_0001066 "Data Science is a sub-discipline of Computer Science that integrates statistical methods, machine learning, and data processing techniques to extract insights and knowledge from structured and unstructured data.")
+AnnotationAssertion(rdfs:label :NFDI_0001066 "data science"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001066 "Predictive analytics, big data visualization, and recommendation systems are part of Data Science.")
+ClassAssertion(:NFDI_0000100 :NFDI_0001066)
+ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001066 :NFDI_0010017)
+
+# Individual: :NFDI_0001067 (cybersecurity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001067 "Stallings, W. (2020). Network Security Essentials. Pearson.")
+AnnotationAssertion(rdfs:comment :NFDI_0001067 "Cybersecurity is a sub-discipline of Computer Science that focuses on protecting computer systems, networks, and data from cyber threats, vulnerabilities, and unauthorized access.")
+AnnotationAssertion(rdfs:label :NFDI_0001067 "cybersecurity"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001067 "Encryption techniques, intrusion detection systems, and ethical hacking studies belong to Cybersecurity.")
+ClassAssertion(:NFDI_0000100 :NFDI_0001067)
+ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001067 :NFDI_0010017)
 
 # Individual: :NFDI_0001070 (active status)
 
@@ -1704,8 +1612,107 @@ AnnotationAssertion(rdfs:comment :NFDI_0001094 "Two Doctor degrees (PhD or equiv
 AnnotationAssertion(rdfs:label :NFDI_0001094 "Dr. Dr."@en)
 ClassAssertion(:NFDI_0001040 :NFDI_0001094)
 
+# Individual: :NFDI_0010001 (humanity)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010001 "An academic discipline focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010001 "humanity"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010001 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010001)
+
+# Individual: :NFDI_0010002 (social science)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010002 "An academic discipline that studies society and human behavior through disciplines like sociology, psychology, and economics."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010002 "social science"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010002 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010002)
+
+# Individual: :NFDI_0010004 (biology)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010004 "An academic discipline that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010004 "biology"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010004 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010004)
+
+# Individual: :NFDI_0010005 (medicine)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010005 "An academic discipline that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010005 "medicine"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010005 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010005)
+
+# Individual: :NFDI_0010006 (agriculture)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010006 "An academic discipline that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010006 "agriculture"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010006 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010006)
+
+# Individual: :NFDI_0010007 (natural science)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010007 "An academic discipline that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth.")
+AnnotationAssertion(rdfs:label :NFDI_0010007 "natural science"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010007 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010007)
+
+# Individual: :NFDI_0010008 (chemistry)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010008 "An academic discipline that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010008 "chemistry"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010008 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010008)
+
+# Individual: :NFDI_0010010 (physic)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010010 "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010010 "physic"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010010 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010010)
+
+# Individual: :NFDI_0010011 (mathematics)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010011 "An academic discipline that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling.")
+AnnotationAssertion(rdfs:label :NFDI_0010011 "mathematics"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010011 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010011)
+
+# Individual: :NFDI_0010012 (geoscience)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010012 "An academic discipline that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010012 "geoscience"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010012 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010012)
+
+# Individual: :NFDI_0010014 (mechanical engineering)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010014 "An academic discipline that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010014 "mechanical engineering"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010014 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010014)
+
+# Individual: :NFDI_0010016 (materials science)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010016 "An academic discipline that explores the properties, performance, and applications of materials, focusing on the relationship between a material's structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010016 "materials science"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010016 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010016)
+
+# Individual: :NFDI_0010017 (computer science)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010017 "An academic discipline that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010017 "computer science"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010017 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010017)
+
+# Individual: :NFDI_0010018 (construction engineering)
+
+AnnotationAssertion(rdfs:comment :NFDI_0010018 "An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en)
+AnnotationAssertion(rdfs:label :NFDI_0010018 "construction engineering"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010018 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
+ClassAssertion(:NFDI_0000100 :NFDI_0010018)
+
 
 EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000110) ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/BFO_0000115>) :NFDI_0000006))
 AnnotationAssertion(rdfs:label dcterms:description "description")
 AnnotationAssertion(rdfs:label dcterms:license "license")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0000202 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/105")
 )
