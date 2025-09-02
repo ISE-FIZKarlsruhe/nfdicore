@@ -4,7 +4,7 @@ Every Thursday at 10:00 the NFDIcore team meets and discusses the development of
 
 ## Conferences and Events 
 
-The NFDIcore team can frequently be found at Semantic Web and AI conferences and Research Data Management Events. Feel free to find us there and talk to us. 
+The NFDIcore team can frequently be found at Semantic Web and AI conferences and Research Data Management events. Feel free to find us there and talk to us. 
 
 ### Upcoming Events
 
