@@ -26,7 +26,7 @@ To meet the specific needs of individual domains, NFDIcore is designed to be ext
 * [MemO documentation](https://nfdi.fiz-karlsruhe.de/4memory/ontology/)
 * Contact person: [Sarah Rebecca Ondraszek](mailto:sarah-rebecca.ondraszek@fiz-karlsruhe.de) 
 
-## NFDI4DataScience Ontology (DSO) 
+## NFDI4DataScience Ontology (DSAI) 
 
 * The vision of NFDI4DataScience (DSAI) is to support all steps of the complex and interdisciplinary research data lifecycle in Data Science and Artificial Intelligence. 
 * Current Version: [1.0](https://nfdi.fiz-karlsruhe.de/nfdi4dso/1.0.0) 
