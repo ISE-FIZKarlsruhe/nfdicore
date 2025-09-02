@@ -1,6 +1,6 @@
 # Modular Extensions
 
-To meet the specific needs of individual domains, NFDIcore is designed to be extended by domain and application ontologies. These ontologies build upon NFDIcore's shared structure while providing the expressivity required for their respective communities. In regular community exchanges, it is evaluated which concepts from domain-specific extensions are suitable to be represented as part of the shared mid-level layer and which elements remain domain and function specific. Any consortium and domain is welcome to provide their own extension to NFDIcore. To get in touch about the creation of a new extension, please contact [Tabea Tietz](mailto:tabea.tietz@fiz-karlsruhe.de). The currently published extensions are listed below.  
+To meet the specific needs of individual domains, NFDIcore is designed to be extended by domain and application ontologies. These ontologies build upon NFDIcore's shared structure while providing the expressivity required for their respective communities. In regular community exchanges, it is evaluated which concepts from domain-specific extensions are suitable to be represented as part of the shared mid-level layer and which elements remain domain and function specific. Any consortium and domain is welcome to provide their own extension to NFDIcore. The currently published extensions are listed below.  
 
 ![image](figures/extensions.jpg)
 

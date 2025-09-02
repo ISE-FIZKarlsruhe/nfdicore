@@ -16,5 +16,5 @@ Here you will find information about:
 - [introduction and scope of the ontology](intro.md)
 - [different versions of the ontology](versions.md)
 - [key aspects and modeling descisions](ontology.md)
-- [evaluation with competency questions](questions.md)
+- [information about modular extensions](extensions.md)
 - [how to contribute](contributing.md)
