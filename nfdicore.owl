@@ -6409,6 +6409,7 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001096">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
+        <rdfs:comment xml:lang="en">An agent role that exresses that an organization inhering that role actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals.</rdfs:comment>
         <rdfs:label xml:lang="en">consortium partner role</rdfs:label>
     </owl:Class>
     

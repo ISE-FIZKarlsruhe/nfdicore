@@ -1555,6 +1555,7 @@ ontology:NFDI_0001069 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001096
 ontology:NFDI_0001096 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:comment "An agent role that exresses that an organization inhering that role actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals."@en ;
                       rdfs:label "consortium partner role"@en .
 
 
