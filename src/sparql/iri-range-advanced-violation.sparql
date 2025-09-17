@@ -18,4 +18,3 @@ WHERE {
   FILTER(isIRI(?term) && (STRSTARTS(str(?term), "https://nfdi.fiz-karlsruhe.de/ontology/NFDICORE_")))
   FILTER (!isIRI(?value))
 }
-

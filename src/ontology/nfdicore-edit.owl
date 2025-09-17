@@ -1,4 +1,4 @@
-Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore>)
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology#>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -9,7 +9,15 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology>
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/bfo_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/obi_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E1925>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E2415>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E2416>)
@@ -25,7 +33,6 @@ Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-
 Annotation(rdfs:label "NFDIcore")
 
 Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/status>))
-
 
 
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
