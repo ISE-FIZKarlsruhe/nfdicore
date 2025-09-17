@@ -1245,6 +1245,7 @@ SubClassOf(:NFDI_0001069 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Class: :NFDI_0001096 (consortium partner role)
 
+AnnotationAssertion(rdfs:comment :NFDI_0001096 "An agent role that exresses that an organization inhering that role actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001096 "consortium partner role"@en)
 SubClassOf(:NFDI_0001096 :NFDI_0000229)
 
