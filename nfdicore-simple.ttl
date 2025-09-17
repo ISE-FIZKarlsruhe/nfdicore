@@ -13,9 +13,9 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.1> ;
-                                          terms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.1" ;
-                                          terms:created "2025-03-28" ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.2> ;
+                                          terms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.2" ;
+                                          terms:created "2025-09-17" ;
                                           terms:creator <https://nfdi4culture.de/id/E1925> ,
                                                         <https://nfdi4culture.de/id/E2415> ,
                                                         <https://nfdi4culture.de/id/E2416> ,
@@ -29,9 +29,8 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
                                           bibo:status "Ontology Specification"@en ;
                                           vann:preferredNamespaceUri ontology: ;
                                           rdfs:label "NFDIcore" ;
-                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/2.0.0> ,
-                                                           <https://nfdi.fiz-karlsruhe.de/ontology/3.0.0> ;
-                                          owl:versionInfo "3.0.1" .
+                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/3.0.1> ;
+                                          owl:versionInfo "3.0.2" .
 
 #################################################################
 #    Annotation properties
@@ -200,7 +199,6 @@ ontology:NFDI_0000137 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138
 ontology:NFDI_0000138 rdf:type owl:ObjectProperty ;
-                      rdfs:domain ontology:NFDI_0000003 ;
                       rdfs:comment "inverse of property \"has funding organization\""@en ;
                       rdfs:label "funding organization of"@en .
 
@@ -262,8 +260,6 @@ ontology:NFDI_0000153 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182
 ontology:NFDI_0000182 rdf:type owl:ObjectProperty ;
-                      rdfs:domain ontology:NFDI_0000003 ;
-                      rdfs:range ontology:NFDI_0000003 ;
                       rdfs:comment "The property is a parental relationship between organizations."@en ;
                       rdfs:label "has parent organization"@en .
 
@@ -351,9 +347,9 @@ ontology:NFDI_0000201 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202
 ontology:NFDI_0000202 rdf:type owl:ObjectProperty ;
+                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/105" ;
                       rdfs:comment "inverse of  property \"has sparql endpoint\""@en ;
-                      rdfs:label "sparql endpoint of"@en ;
-                      skos:editorialNote "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en .
+                      rdfs:label "sparql endpoint of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204
@@ -407,8 +403,6 @@ ontology:NFDI_0000212 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213
 ontology:NFDI_0000213 rdf:type owl:ObjectProperty ;
-                      rdfs:domain ontology:NFDI_0000003 ;
-                      rdfs:range ontology:NFDI_0000003 ;
                       rdfs:comment "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en ;
                       rdfs:label "has subsidiary organization"@en .
 
@@ -489,7 +483,7 @@ ontology:NFDI_0001027 rdf:type owl:ObjectProperty ;
 ontology:NFDI_0001028 rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf ontology:NFDI_0000241 ;
                       rdfs:comment "inverse of property \"has creator\""@en ;
-                      rdfs:label "creator of"@de .
+                      rdfs:label "creator of"@en .
 
 
 #################################################################
@@ -514,7 +508,6 @@ ontology:NFDI_0000127 rdf:type owl:DatatypeProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000128
 ontology:NFDI_0000128 rdf:type owl:DatatypeProperty ;
-                      rdfs:domain ontology:NFDI_0000003 ;
                       rdfs:comment "The property refers to the date on which the organization ceased to exist or was formally dissolved."@en ;
                       rdfs:label "dissolution date"@en ;
                       skos:editorialNote "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing." .
@@ -533,7 +526,6 @@ ontology:NFDI_0000135 rdf:type owl:DatatypeProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000136
 ontology:NFDI_0000136 rdf:type owl:DatatypeProperty ;
-                      rdfs:domain ontology:NFDI_0000003 ;
                       rdfs:comment "The property refers to the specific date on which the organization was officially established or founded."@en ;
                       rdfs:label "foundation date"@en ;
                       skos:editorialNote "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing." .
@@ -568,16 +560,17 @@ This class is useful in nfdicore to provide a unified and structured representat
 ontology:NFDI_0000002 rdf:type owl:Class ;
                       rdfs:comment "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
                       rdfs:label "project"@en ;
-                      skos:editorialNote "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en .
+                      skos:editorialNote """Why \"project\" as an occurrent:
+- A project typically has a start and end time.
+- It involves a sequence of activities, such as planning, conducting experiments, analyzing data, and publishing results.
+- It has temporal parts (e.g., Phase 1, Phase 2, review stages).
+So, it aligns well with the occurrent category - more precisely, it can be considered a complex process made up of various subprocesses.
 
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003
-ontology:NFDI_0000003 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000102 ;
-                      rdfs:comment "An immaterial entity that refers to a group of individuals, which structures and coordinates the activities of individuals or groups toward achieving common goal within a defined framework."@en ;
-                      rdfs:label "organization"@en ;
-                      skos:editorialNote "An organization of some kind, e.g. research organization or business organization"@en ;
-                      skos:example "University Library in Leipzig, Museums of City Cologne" .
+But what about the organization or plan behind it?
+- The institution running or participating the project would be a continuant (consortium).
+- The project plan might be a generically dependent continuant (a kind of information content entity).
+- But the project as executed over time is an occurrent."""@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/50" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004
@@ -600,7 +593,7 @@ ontology:NFDI_0000005 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006
 ontology:NFDI_0000006 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000003 ;
+                      rdfs:subClassOf ontology:NFDI_0000102 ;
                       rdfs:comment "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en ;
                       rdfs:label "consortium"@en ;
                       skos:editorialNote "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en ;
@@ -609,7 +602,7 @@ ontology:NFDI_0000006 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000007
 ontology:NFDI_0000007 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000003 ;
+                      rdfs:subClassOf ontology:NFDI_0000102 ;
                       rdfs:comment "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
                       rdfs:label "consortium member"@en ;
                       skos:editorialNote "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
@@ -754,7 +747,8 @@ ontology:NFDI_0000029 rdf:type owl:Class ;
 ontology:NFDI_0000030 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000022 ;
                       rdfs:comment "A document that organizes and stores source code files, associated metadata, and version history to facilitate the management, sharing, and collaborative development of software projects. It serves as a structured collection of information that tracks changes, maintains integrity, and supports workflows such as version control, branching, and merging." ;
-                      rdfs:label "source code repository"@en .
+                      rdfs:label "source code repository"@en ;
+                      skos:editorialNote "The source code repository stands for the CONTENT of the repository, which, e.g., you can copy to your hard drive. This distinguishes it from the website class which e.g. is used to publish the content."@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100
@@ -926,22 +920,6 @@ ontology:NFDI_0000148 rdf:type owl:Class ;
                       skos:editorialNote "The MIME-type template of the resource"@en ;
                       skos:example "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"@en ;
                       ontology:NFDI_0000012 "MIMEType" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000157
-ontology:NFDI_0000157 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation." ;
-                      rdfs:label "electrical engineering"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000159
-ontology:NFDI_0000159 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals."@en ;
-                      rdfs:label "process engineering"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186
@@ -1142,26 +1120,26 @@ ontology:NFDI_0001005 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009
 ontology:NFDI_0001009 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
-                      obo:IAO_0000118 "GND"@en ,
-                                      "Gemeinsame Normdatei"@de ,
+                      obo:IAO_0000118 "Gemeinsame Normdatei"@de ,
                                       "Integrated Authority File"@en ;
                       obo:IAO_0000119 "https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html" ;
                       obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "A centrally registered identifier that is issued by the German National Library. The Integrated Authority File (GND) is facilitates the collaborative use and administration of authority data. These authority data represent and describe entities, i.e. persons, corporate bodies, conferences and events, geographic entities, topics and works relating to cultural and academic collections."@en ;
-                      rdfs:label "GND identifier"@en .
+                      rdfs:label "GND identifier"@en ;
+                      ontology:NFDI_0010015 "GND"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010
 ontology:NFDI_0001010 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       obo:IAO_0000118 "Integrated Authority File"@en ,
-                                      "VIAF"@en ,
                                       "Virtual International Authority File"@en ;
                       obo:IAO_0000119 "https://viaf.org/en" ;
                       obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "The centrally registered identifier VIAF (Virtual International Authority File) is an international authority file that links and integrates authority records from multiple national libraries and other organizations. It provides a unique identifier for authors, creators, and entities, facilitating better data sharing and cataloging across institutions."@en ;
                       rdfs:label "VIAF identifier"@en ;
-                      skos:example "https://viaf.org/en/viaf/137346469" .
+                      skos:example "https://viaf.org/en/viaf/137346469" ;
+                      ontology:NFDI_0010015 "VIAF"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011
@@ -1189,24 +1167,24 @@ ontology:NFDI_0001012 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013
 ontology:NFDI_0001013 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
-                      obo:IAO_0000118 "ROR"@en ;
                       obo:IAO_0000119 "https://ror.org/" ;
                       obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems."@en ;
                       rdfs:label "ROR identifier"@en ;
-                      skos:example "https://ror.org/01kdxra28" .
+                      skos:example "https://ror.org/01kdxra28" ;
+                      ontology:NFDI_0010015 "ROR"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014
 ontology:NFDI_0001014 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
-                      obo:IAO_0000118 "ISIL"@en ,
-                                      "International Standard Identifier for Libraries and Related Organizations"@en ;
+                      obo:IAO_0000118 "International Standard Identifier for Libraries and Related Organizations"@en ;
                       obo:IAO_0000119 "https://sigel.staatsbibliothek-berlin.de/" ;
                       obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "ISIL (International Standard Identifier for Libraries and Related Organizations) is a globally recognized identifier system used to uniquely identify libraries, archives, museums, and other cultural institutions. It facilitates resource sharing, cataloging, and data exchange across institutions and countries."@en ;
                       rdfs:label "ISIL identifier"@en ;
-                      skos:example "https://ld.zdb-services.de/resource/organisations/DE-4153" .
+                      skos:example "https://ld.zdb-services.de/resource/organisations/DE-4153" ;
+                      ontology:NFDI_0010015 "ISIL"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015
@@ -1223,13 +1201,13 @@ ontology:NFDI_0001015 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016
 ontology:NFDI_0001016 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
-                      obo:IAO_0000118 "RISM"@en ,
-                                      "Répertoire International des Sources Musicales"@fr ;
+                      obo:IAO_0000118 "Répertoire International des Sources Musicales"@fr ;
                       obo:IAO_0000119 "https://rism.info/" ;
                       obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "RISM (Répertoire International des Sources Musicales) is an international catalog of historical music sources, including manuscripts, printed music, and treatises. It provides unique identifiers and bibliographic data to support music research and documentation."@en ;
                       rdfs:label "RISM identifier"@en ;
-                      skos:example "https://rism.online/sources/201001959/" .
+                      skos:example "https://rism.online/sources/201001959/" ;
+                      ontology:NFDI_0010015 "RISM"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001017
@@ -1268,6 +1246,14 @@ ontology:NFDI_0001021 rdf:type owl:Class ;
 ontology:NFDI_0001022 rdf:type owl:Class ;
                       rdfs:comment "A namespace refers to a distinct, unique identifier that is used to distinguish concepts and entities within an ontology from those in other ontologies or systems. It's typically represented as a URL or URI (Uniform Resource Identifier) and ensures that each element within the ontology has a globally unique reference."@en ;
                       rdfs:label "ontology namespace"@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001025
+ontology:NFDI_0001025 rdf:type owl:Class ;
+                      obo:IAO_0000119 obo:NCIT_C42620 ;
+                      rdfs:comment "A process by which something is brought into existence; having been brought into existence."@en ;
+                      rdfs:label "creation process"@de ;
+                      ontology:NFDI_0010013 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026
@@ -1315,6 +1301,15 @@ ontology:NFDI_0001033 rdf:type owl:Class ;
                       rdfs:label "institution list"@en .
 
 
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001034
+ontology:NFDI_0001034 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]"@en ;
+                      rdfs:label "uniform resource locator"@de ;
+                      rdfs:seeAlso "http://purl.allotrope.org/ontologies/result#AFR_0001068" ;
+                      ontology:NFDI_0010013 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95" .
+
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001035
 ontology:NFDI_0001035 rdf:type owl:Class ;
                       rdfs:comment "A work package textual entity is a textual entity that describes a structured unit of work within a project, outlining specific tasks, objectives, deliverables, and assigned responsibilities to achieve defined project outcomes." ;
@@ -1339,8 +1334,8 @@ ontology:NFDI_0001037 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001038
 ontology:NFDI_0001038 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000003 ;
-                      rdfs:comment "A Consortium Partner is an organization that actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals." ;
+                      rdfs:subClassOf ontology:NFDI_0000102 ;
+                      rdfs:comment "A consortium partner is an organization inhering a consortium partner role. A consortium partner actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals."@en ;
                       rdfs:label "consortium partner"@en ;
                       skos:example "universities, research institutions, industry partners, and funding agencies collaborating in NFDI MatWerk, Horizon Europe projects, and other large-scale research initiatives" .
 
@@ -1458,12 +1453,30 @@ ontology:NFDI_0001052 rdf:type owl:Class ;
                       skos:editorialNote "HBN: Concerning the content of ‘Publication’ datasheet and its related knowledge graph, the ‘Information Access Specification’ class and its instances were created to respond to competency questions like: what access policies apply to a specific publication document, which resources are available under open access, etc." .
 
 
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001053
+ontology:NFDI_0001053 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "An ontology version IRI is a unique identifier that points to a specific version of an ontology. It helps distinguish between different updates or revisions of the same ontology. This ensures consistent referencing and compatibility across systems using the ontology."@en ;
+                      rdfs:label "ontology version IRI"@en ;
+                      ontology:NFDI_0010013 "issue: issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95" .
+
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054
 ontology:NFDI_0001054 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000203 ;
                       rdfs:comment "A Metadata Specification is a detailed document that describes metadata structures, guidelines, and usage policies for standardization and adoption." ;
                       rdfs:label "metadata specification"@en ;
                       skos:example "metadata schema and standards" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001055
+ontology:NFDI_0001055 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "The TGN Identifier refers to a unique ID within the Getty Thesaurus of Geographic Names (TGN), which is a controlled vocabulary developed to standardize geographic names for use in cultural heritage and library contexts. The TGN is part of the Getty Vocabulary Program by the Getty Research Institute."@en ;
+                      rdfs:label "TGN identifier"@en ;
+                      skos:example "http://vocab.getty.edu/page/tgn/7003712" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/100" ;
+                      ontology:NFDI_0010015 "TGN" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001056
@@ -1519,159 +1532,49 @@ ontology:NFDI_0001062 rdf:type owl:Class ;
                       skos:example "invited speakers at scientific symposiums, keynote presenters at technology expos, and guest lecturers at universities" .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001063
-ontology:NFDI_0001063 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010017 ;
-                      obo:IAO_0000119 "Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson." ;
-                      rdfs:comment "Artificial Intelligence (AI) is a sub-discipline of Computer Science that focuses on creating systems capable of performing tasks that require human-like intelligence, such as learning, reasoning, and problem-solving." ;
-                      rdfs:label "artificial intelligence"@en ;
-                      skos:example "Deep learning for image recognition, reinforcement learning in robotics, and natural language processing fall under Artificial Intelligence." .
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001068
+ontology:NFDI_0001068 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "The LCNAF Identifier refers to a unique identifier assigned to entries in the Library of Congress Name Authority File (LCNAF). This file is a standardized authority database maintained by the Library of Congress, used to establish and control the names of people, organizations, geographic places, and titles in bibliographic records."@en ;
+                      rdfs:label "LCNAF identifier"@en ;
+                      skos:example "http://id.loc.gov/authorities/names/n78095332" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/101" ;
+                      ontology:NFDI_0010015 "LCNAF" .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001064
-ontology:NFDI_0001064 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010017 ;
-                      rdfs:comment "Theoretical Computer Science is a sub-discipline of Computer Science that focuses on mathematical models of computation, computational complexity, and algorithmic problem-solving" ;
-                      rdfs:label "theoretical computer science"@en ;
-                      skos:example "Studies on Turing machines, complexity classes (P vs NP), and formal languages belong to Theoretical Computer Science." .
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001069
+ontology:NFDI_0001069 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "The BnF Identifier refers to a unique identifier assigned to an authority record in the Bibliothèque nationale de France (BnF) catalog. It is part of the BnF’s authority files, used to standardize names of people, organizations, titles, places, and subjects across bibliographic records."@en ;
+                      rdfs:label "BnF identifier"@en ;
+                      skos:example "https://catalogue.bnf.fr/ark:/12148/cb123735831" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/102" ;
+                      ontology:NFDI_0010015 "BnF" .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001065
-ontology:NFDI_0001065 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010017 ;
-                      rdfs:comment "Software Engineering is a sub-discipline of Computer Science that applies engineering principles to the design, development, testing, and maintenance of software systems." ;
-                      rdfs:label "software engineering"@en ;
-                      skos:example "Agile software development, DevOps practices, and software architecture design fall under Software Engineering." .
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001096
+ontology:NFDI_0001096 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000229 ;
+                      rdfs:label "consortium partner role"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001066
-ontology:NFDI_0001066 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010017 ;
-                      obo:IAO_0000119 "Provost, F., & Fawcett, T. (2013). Data Science for Business. O'Reilly Media." ;
-                      rdfs:comment "Data Science is a sub-discipline of Computer Science that integrates statistical methods, machine learning, and data processing techniques to extract insights and knowledge from structured and unstructured data." ;
-                      rdfs:label "data science"@en ;
-                      skos:example "Predictive analytics, big data visualization, and recommendation systems are part of Data Science." .
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001098
+ontology:NFDI_0001098 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "Identifier for institutions registered with the German Digital Library (Deutsche Digitale Bibliothek)"@en ,
+                                   "Identifikator für Institutionen, die bei der Deutschen Digitalen Bibliothek registriert sind"@de ;
+                      rdfs:label "DDB organization identifier"@en ;
+                      rdfs:seeAlso "https://www.wikidata.org/wiki/Property:P13081" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/104" .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001067
-ontology:NFDI_0001067 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010017 ;
-                      obo:IAO_0000119 "Stallings, W. (2020). Network Security Essentials. Pearson." ;
-                      rdfs:comment "Cybersecurity is a sub-discipline of Computer Science that focuses on protecting computer systems, networks, and data from cyber threats, vulnerabilities, and unauthorized access." ;
-                      rdfs:label "cybersecurity"@en ;
-                      skos:example "Encryption techniques, intrusion detection systems, and ethical hacking studies belong to Cybersecurity." .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010001
-ontology:NFDI_0010001 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts."@en ;
-                      rdfs:label "humanity"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010002
-ontology:NFDI_0010002 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that studies society and human behavior through disciplines like sociology, psychology, and economics."@en ;
-                      rdfs:label "social science"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010004
-ontology:NFDI_0010004 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity."@en ;
-                      rdfs:label "biology"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010005
-ontology:NFDI_0010005 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life."@en ;
-                      rdfs:label "medicine"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010006
-ontology:NFDI_0010006 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability."@en ;
-                      rdfs:label "agriculture"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010007
-ontology:NFDI_0010007 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth." ;
-                      rdfs:label "natural science"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010008
-ontology:NFDI_0010008 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science."@en ;
-                      rdfs:label "chemistry"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010010
-ontology:NFDI_0010010 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en ;
-                      rdfs:label "physic"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010011
-ontology:NFDI_0010011 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling." ;
-                      rdfs:label "mathematics"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010012
-ontology:NFDI_0010012 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards."@en ;
-                      rdfs:label "geoscience"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010014
-ontology:NFDI_0010014 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics."@en ;
-                      rdfs:label "mechanical engineering"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010016
-ontology:NFDI_0010016 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that explores the properties, performance, and applications of materials, focusing on the relationship between a material's structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing."@en ;
-                      rdfs:label "materials science"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010017
-ontology:NFDI_0010017 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology."@en ;
-                      rdfs:label "computer science"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010018
-ontology:NFDI_0010018 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000100 ;
-                      rdfs:comment "An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en ;
-                      rdfs:label "construction engineering"@en ;
-                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001099
+ontology:NFDI_0001099 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:comment "identifier for a data repository in the re3data registry"@en ;
+                      rdfs:label "re3data repository identifier"@en ;
+                      rdfs:seeAlso "https://www.wikidata.org/wiki/Property:P5874" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/106" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019
@@ -1833,6 +1736,65 @@ ontology:NFDI_0010041 rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000157
+ontology:NFDI_0000157 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that focuses on the study, design, and application of electrical systems and technologies. Electrical engineering involves the development of devices, circuits, and systems for power generation, communication, electronics, and automation." ;
+                      rdfs:label "electrical engineering"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000159
+ontology:NFDI_0000159 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that focuses on the design, optimization, and operation of industrial processes to transform raw materials into valuable products. Process engineering applies principles of chemistry, physics, and engineering to improve efficiency, sustainability, and safety in industries such as manufacturing, energy, and pharmaceuticals."@en ;
+                      rdfs:label "process engineering"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001063
+ontology:NFDI_0001063 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      obo:IAO_0000119 "Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson." ;
+                      rdfs:comment "Artificial Intelligence (AI) is a sub-discipline of Computer Science that focuses on creating systems capable of performing tasks that require human-like intelligence, such as learning, reasoning, and problem-solving." ;
+                      rdfs:label "artificial intelligence"@en ;
+                      skos:example "Deep learning for image recognition, reinforcement learning in robotics, and natural language processing fall under Artificial Intelligence." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001064
+ontology:NFDI_0001064 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "Theoretical Computer Science is a sub-discipline of Computer Science that focuses on mathematical models of computation, computational complexity, and algorithmic problem-solving" ;
+                      rdfs:label "theoretical computer science"@en ;
+                      skos:example "Studies on Turing machines, complexity classes (P vs NP), and formal languages belong to Theoretical Computer Science." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001065
+ontology:NFDI_0001065 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "Software Engineering is a sub-discipline of Computer Science that applies engineering principles to the design, development, testing, and maintenance of software systems." ;
+                      rdfs:label "software engineering"@en ;
+                      skos:example "Agile software development, DevOps practices, and software architecture design fall under Software Engineering." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001066
+ontology:NFDI_0001066 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      obo:IAO_0000119 "Provost, F., & Fawcett, T. (2013). Data Science for Business. O'Reilly Media." ;
+                      rdfs:comment "Data Science is a sub-discipline of Computer Science that integrates statistical methods, machine learning, and data processing techniques to extract insights and knowledge from structured and unstructured data." ;
+                      rdfs:label "data science"@en ;
+                      skos:example "Predictive analytics, big data visualization, and recommendation systems are part of Data Science." .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001067
+ontology:NFDI_0001067 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      obo:IAO_0000119 "Stallings, W. (2020). Network Security Essentials. Pearson." ;
+                      rdfs:comment "Cybersecurity is a sub-discipline of Computer Science that focuses on protecting computer systems, networks, and data from cyber threats, vulnerabilities, and unauthorized access." ;
+                      rdfs:label "cybersecurity"@en ;
+                      skos:example "Encryption techniques, intrusion detection systems, and ethical hacking studies belong to Cybersecurity." .
+
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001070
 ontology:NFDI_0001070 rdf:type owl:NamedIndividual ,
@@ -2007,6 +1969,118 @@ ontology:NFDI_0001094 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0001040 ;
                       rdfs:comment "Two Doctor degrees (PhD or equivalent academic doctorate)"@en ;
                       rdfs:label "Dr. Dr."@en .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010001
+ontology:NFDI_0010001 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline focused on human culture, thought, and creativity, encompassing disciplines like literature, philosophy, and the arts."@en ;
+                      rdfs:label "humanity"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010002
+ontology:NFDI_0010002 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that studies society and human behavior through disciplines like sociology, psychology, and economics."@en ;
+                      rdfs:label "social science"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010004
+ontology:NFDI_0010004 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that studies living organisms, their structures, functions, growth, and interactions with their environment. Biology explores the diversity of life, from microscopic organisms to complex ecosystems, and seeks to understand the underlying processes of life, evolution, and heredity."@en ;
+                      rdfs:label "biology"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010005
+ontology:NFDI_0010005 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that focuses on the science and practice of diagnosing, treating, and preventing illnesses and injuries. Medicine involves the study of human health, medical technologies, pharmaceuticals, and patient care to improve well-being and extend life."@en ;
+                      rdfs:label "medicine"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010006
+ontology:NFDI_0010006 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that focuses on the science, practice, and business of cultivating plants, raising animals, and producing food, fiber, and other products. Agriculture involves the study of soil management, crop production, livestock care, and sustainable farming practices to ensure food security and environmental sustainability."@en ;
+                      rdfs:label "agriculture"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010007
+ontology:NFDI_0010007 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that studies the natural world through observation, experimentation, and analysis. Natural science includes fields such as physics, chemistry, biology, and earth sciences, aiming to understand the laws and processes governing the universe and life on Earth." ;
+                      rdfs:label "natural science"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010008
+ontology:NFDI_0010008 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that studies the composition, structure, properties, and reactions of matter. Chemistry focuses on understanding how substances interact, transform, and combine to form new materials, playing a crucial role in fields such as medicine, energy, and environmental science."@en ;
+                      rdfs:label "chemistry"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010010
+ontology:NFDI_0010010 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en ;
+                      rdfs:label "physic"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010011
+ontology:NFDI_0010011 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that involves the study of numbers, quantities, shapes, and patterns, using abstract concepts and logical reasoning. Mathematics is fundamental to various fields, including science, engineering, economics, and technology, providing tools for problem-solving, analysis, and modeling." ;
+                      rdfs:label "mathematics"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010012
+ontology:NFDI_0010012 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that focuses on the study of the Earth’s structure, processes, and materials, including the atmosphere, oceans, and landforms. Geoscience encompasses fields such as geology, meteorology, and environmental science to understand Earth’s history, natural resources, and natural hazards."@en ;
+                      rdfs:label "geoscience"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010014
+ontology:NFDI_0010014 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that focuses on the design, analysis, manufacturing, and maintenance of mechanical systems. Mechanical engineering applies principles of physics, materials science, and mathematics to develop machines, tools, and devices used in industries such as transportation, energy, and robotics."@en ;
+                      rdfs:label "mechanical engineering"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010016
+ontology:NFDI_0010016 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that explores the properties, performance, and applications of materials, focusing on the relationship between a material's structure and its characteristics. Materials science and engineering involves the design, development, and testing of materials for use in a wide range of industries, including aerospace, electronics, and manufacturing."@en ;
+                      rdfs:label "materials science"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010017
+ontology:NFDI_0010017 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that focuses on the study of algorithms, data structures, programming, and computational systems. Computer science explores how to design, develop, and analyze software and hardware solutions to solve complex problems and advance technology."@en ;
+                      rdfs:label "computer science"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010018
+ontology:NFDI_0010018 rdf:type owl:NamedIndividual ,
+                               ontology:NFDI_0000100 ;
+                      rdfs:comment "An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en ;
+                      rdfs:label "construction engineering"@en ;
+                      rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
