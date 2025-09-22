@@ -15,8 +15,11 @@ export_formats:
 import_group:
    products:
     - id: bfo
-      mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl
+      #mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl
+      mirror_from: http://purl.obolibrary.org/obo/bfo/2020/notime/bfo.owl
       module_type: mirror
+    - id: ro
+      mirror_from: http://purl.obolibrary.org/obo/ro/core.owl
     - id: iao
       module_type: custom
       #module_type: slme
