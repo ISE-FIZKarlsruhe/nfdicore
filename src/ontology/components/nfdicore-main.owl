@@ -250,6 +250,15 @@ AnnotationAssertion(rdfs:label :NFDI_0010015 "has acronym"@en)
 SubAnnotationPropertyOf(:NFDI_0010015 <http://purl.obolibrary.org/obo/IAO_0000118>)
 
 
+
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
+
+
+AnnotationAssertion(rdfs:seeAlso <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028> <http://purl.obolibrary.org/obo/T4FS_0000012>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030> <http://purl.obolibrary.org/obo/T4FS_0000044>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034> <http://purl.obolibrary.org/obo/T4FS_0000384>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036> <http://purl.obolibrary.org/obo/T4FS_0000487>)
+
 ############################
 #   Object Properties
 ############################
