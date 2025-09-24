@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                bce3c48aef785d557ce649a15e56f7e1567c3b26557ae836b0386649201739ed
+CONFIG_HASH=                076b6e5e425f653bb75e65a4966b32ebc0df6c1aaf36115e24b6c7c20b1e677d
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo iao swo obi edam dcat
+IMPORTS =  bfo ro iao swo obi edam dcat
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -534,7 +534,14 @@ ifeq ($(MIR),true)
 .PHONY: mirror-bfo
 .PRECIOUS: $(MIRRORDIR)/bfo.owl
 mirror-bfo: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I http://purl.obolibrary.org/obo/bfo/2020/notime/bfo.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ro
+.PHONY: mirror-ro
+.PRECIOUS: $(MIRRORDIR)/ro.owl
+mirror-ro: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.obolibrary.org/obo/ro/core.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: iao

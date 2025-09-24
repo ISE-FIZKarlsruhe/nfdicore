@@ -153,7 +153,7 @@ SubObjectPropertyOf(:NFDI_0000133 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000137 "The property relates a project to the organization that provided funding for it."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000137 "has funding organization"@en)
-SubObjectPropertyOf(:NFDI_0000137 <http://purl.obolibrary.org/obo/BFO_0000057>)
+SubObjectPropertyOf(:NFDI_0000137 <http://purl.obolibrary.org/obo/RO_0000057>)
 InverseObjectProperties(:NFDI_0000137 :NFDI_0000138)
 ObjectPropertyDomain(:NFDI_0000137 :NFDI_0000002)
 ObjectPropertyRange(:NFDI_0000137 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000139)))
@@ -162,7 +162,7 @@ ObjectPropertyRange(:NFDI_0000137 ObjectIntersectionOf(<http://purl.obolibrary.o
 
 AnnotationAssertion(rdfs:comment :NFDI_0000138 "inverse of property \"has funding organization\""@en)
 AnnotationAssertion(rdfs:label :NFDI_0000138 "funding organization of"@en)
-SubObjectPropertyOf(:NFDI_0000138 <http://purl.obolibrary.org/obo/BFO_0000056>)
+SubObjectPropertyOf(:NFDI_0000138 <http://purl.obolibrary.org/obo/RO_0000056>)
 ObjectPropertyDomain(:NFDI_0000138 <http://purl.obolibrary.org/obo/OBI_0000245>)
 
 # Object Property: :NFDI_0000142 (has license)
@@ -185,7 +185,7 @@ SubObjectPropertyOf(:NFDI_0000143 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000144 "The property is a relationship between a thing and a place its located at."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000144 "has location"@en)
-SubObjectPropertyOf(:NFDI_0000144 <http://purl.obolibrary.org/obo/BFO_0000171>)
+SubObjectPropertyOf(:NFDI_0000144 <http://purl.obolibrary.org/obo/RO_0001025>)
 ObjectPropertyRange(:NFDI_0000144 :NFDI_0000005)
 
 # Object Property: :NFDI_0000146 (has media type)
@@ -208,7 +208,7 @@ SubObjectPropertyOf(:NFDI_0000147 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000182 "The property is a parental relationship between organizations."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000182 "has parent organization"@en)
-SubObjectPropertyOf(:NFDI_0000182 <http://purl.obolibrary.org/obo/BFO_0000176>)
+SubObjectPropertyOf(:NFDI_0000182 <http://purl.obolibrary.org/obo/BFO_0000050>)
 ObjectPropertyDomain(:NFDI_0000182 <http://purl.obolibrary.org/obo/OBI_0000245>)
 ObjectPropertyRange(:NFDI_0000182 <http://purl.obolibrary.org/obo/OBI_0000245>)
 
@@ -246,7 +246,7 @@ SubObjectPropertyOf(:NFDI_0000192 :NFDI_0000241)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000194 "The property is a relationship between a project or a resource and related projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000194 "resource of project"@en)
-SubObjectPropertyOf(:NFDI_0000194 <http://purl.obolibrary.org/obo/BFO_0000056>)
+SubObjectPropertyOf(:NFDI_0000194 <http://purl.obolibrary.org/obo/RO_0000056>)
 ObjectPropertyDomain(:NFDI_0000194 :NFDI_0000001)
 ObjectPropertyRange(:NFDI_0000194 :NFDI_0000002)
 
@@ -346,7 +346,7 @@ SubObjectPropertyOf(:NFDI_0000212 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000213 "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en)
 AnnotationAssertion(rdfs:label :NFDI_0000213 "has subsidiary organization"@en)
-SubObjectPropertyOf(:NFDI_0000213 <http://purl.obolibrary.org/obo/BFO_0000178>)
+SubObjectPropertyOf(:NFDI_0000213 <http://purl.obolibrary.org/obo/BFO_0000051>)
 ObjectPropertyDomain(:NFDI_0000213 <http://purl.obolibrary.org/obo/OBI_0000245>)
 ObjectPropertyRange(:NFDI_0000213 <http://purl.obolibrary.org/obo/OBI_0000245>)
 

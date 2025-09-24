@@ -266,14 +266,14 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000235> :NFDI_0000226)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000152 "p has input x =Def x is used or consumed in the process of executing p.")
 AnnotationAssertion(rdfs:label :NFDI_0000152 "has input"@en)
-SubObjectPropertyOf(:NFDI_0000152 <http://purl.obolibrary.org/obo/BFO_0000057>)
+SubObjectPropertyOf(:NFDI_0000152 <http://purl.obolibrary.org/obo/RO_0000057>)
 InverseObjectProperties(:NFDI_0000152 :NFDI_0001024)
 
 # Object Property: :NFDI_0000153 (has output)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000153 "p has output x =Def x is produced or generated as a result of executing p.")
 AnnotationAssertion(rdfs:label :NFDI_0000153 "has output"@en)
-SubObjectPropertyOf(:NFDI_0000153 <http://purl.obolibrary.org/obo/BFO_0000057>)
+SubObjectPropertyOf(:NFDI_0000153 <http://purl.obolibrary.org/obo/RO_0000057>)
 InverseObjectProperties(:NFDI_0000153 :NFDI_0001023)
 
 # Object Property: :NFDI_0000226 (is subject of)
@@ -285,13 +285,13 @@ AnnotationAssertion(rdfs:label :NFDI_0000226 "is subject of"@en)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001023 "inverse of the relation 'has output'")
 AnnotationAssertion(rdfs:label :NFDI_0001023 "is output of"@en)
-SubObjectPropertyOf(:NFDI_0001023 <http://purl.obolibrary.org/obo/BFO_0000056>)
+SubObjectPropertyOf(:NFDI_0001023 <http://purl.obolibrary.org/obo/RO_0000056>)
 
 # Object Property: :NFDI_0001024 (is input of)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001024 "inverse of the relation 'has input'")
 AnnotationAssertion(rdfs:label :NFDI_0001024 "is input of"@en)
-SubObjectPropertyOf(:NFDI_0001024 <http://purl.obolibrary.org/obo/BFO_0000056>)
+SubObjectPropertyOf(:NFDI_0001024 <http://purl.obolibrary.org/obo/RO_0000056>)
 
 
 ############################
@@ -345,7 +345,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000013> :NFDI_0000024)
 
 # Class: <http://purl.obolibrary.org/obo/OBI_0000245> (organization)
 
-SubClassOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000229)))
+SubClassOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000229)))
 
 # Class: <http://www.ebi.ac.uk/swo/SWO_0000002> (software license)
 
@@ -384,7 +384,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000004 "An object that represents a sing
 AnnotationAssertion(rdfs:label :NFDI_0000004 "person"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000004 "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000004 "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus")
-SubClassOf(:NFDI_0000004 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000229)))
+SubClassOf(:NFDI_0000004 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000229)))
 
 # Class: :NFDI_0000005 (place)
 
@@ -401,7 +401,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000006 "An organisation that consists of
 AnnotationAssertion(rdfs:label :NFDI_0000006 "consortium"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000006 "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000006 "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
-SubClassOf(:NFDI_0000006 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000115> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000110))))
+SubClassOf(:NFDI_0000006 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110))))
 
 # Class: :NFDI_0000008 (creative work)
 
@@ -409,7 +409,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000008 "An independent continuant or inf
 AnnotationAssertion(rdfs:label :NFDI_0000008 "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000008 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
-EquivalentClasses(:NFDI_0000008 ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>) ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000153) :NFDI_0000224)))
+EquivalentClasses(:NFDI_0000008 ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>) ObjectSomeValuesFrom(:NFDI_0001024 :NFDI_0000224)))
 SubClassOf(:NFDI_0000008 <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Class: :NFDI_0000009 (dataset)
@@ -451,32 +451,32 @@ SubClassOf(:NFDI_0000016 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000017 "A role inherent in an agent that is realized when representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000017 "spokesperson role"@en)
-SubClassOf(:NFDI_0000017 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000004)))
+SubClassOf(:NFDI_0000017 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :NFDI_0000004)))
 
 # Class: :NFDI_0000018 (academic event)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000018 "An event that focuses on scholarly activities and the exchange of knowledge, typically involving presentations, discussions, or collaborations among researchers, academics, and students, often in the context of conferences, workshops, seminars, symposia, or colloquia, to advance a specific field of study or interdisciplinary research."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000018 "academic event"@en)
-SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000019))))
+SubClassOf(:NFDI_0000018 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000019))))
 
 # Class: :NFDI_0000019 (academic organization role)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000019 "A role inherent in an organization that is realized when coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000019 "academic organization role"@en)
-SubClassOf(:NFDI_0000019 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.obolibrary.org/obo/OBI_0000245>)))
+SubClassOf(:NFDI_0000019 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0000020 (industry organization role)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000020 "A role inherent in an organization that is realized when promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000020 "industry organization role"@en)
-SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.obolibrary.org/obo/OBI_0000245>)))
+SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0000021 (workflow)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000021 "A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000021 "workflow"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000021 "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.")
-SubClassOf(:NFDI_0000021 ObjectIntersectionOf(:NFDI_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000227) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000059> :NFDI_0001002)))
+SubClassOf(:NFDI_0000021 ObjectIntersectionOf(:NFDI_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000227) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> :NFDI_0001002)))
 
 # Class: :NFDI_0000022 (document)
 
@@ -556,7 +556,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000102 "An independent continuant that a
 AnnotationAssertion(rdfs:label :NFDI_0000102 "agent"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000102 "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000102 "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en)
-EquivalentClasses(:NFDI_0000102 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000229)))
+EquivalentClasses(:NFDI_0000102 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000229)))
 
 # Class: :NFDI_0000106 (city)
 
@@ -578,7 +578,7 @@ SubClassOf(:NFDI_0000107 <http://purl.obolibrary.org/obo/BFO_0000027>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000110 "A role inherent in an organization that is realized when the organization is a member of a consortium."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000110 "consortium member role"@en)
-EquivalentClasses(:NFDI_0000110 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000002) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.obolibrary.org/obo/OBI_0000245>)))
+EquivalentClasses(:NFDI_0000110 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000002) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0000111 (contacting process)
 
@@ -604,7 +604,7 @@ SubClassOf(:NFDI_0000115 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000118 "A role inherent in an agent that provides input, resources, or effort to support or enhance a project, work, or process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000118 "contributor role"@en)
-EquivalentClasses(:NFDI_0000118 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000115) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> :NFDI_0000115)))))
+EquivalentClasses(:NFDI_0000118 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000115) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> :NFDI_0000115)))))
 SubClassOf(:NFDI_0000118 :NFDI_0000229)
 
 # Class: :NFDI_0000119 (country)
@@ -656,7 +656,7 @@ SubClassOf(:NFDI_0000134 :NFDI_0000005)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000139 "A role inherent in an organization that is realized when the organization serves as a funder to endevaours, e.g. projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000139 "funding organization role"@en)
-SubClassOf(:NFDI_0000139 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.obolibrary.org/obo/OBI_0000245>)))
+SubClassOf(:NFDI_0000139 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0000140 (software library)
 
@@ -795,7 +795,7 @@ SubClassOf(:NFDI_0000223 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IA
 
 AnnotationAssertion(rdfs:comment :NFDI_0000224 "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000224 "creative process"@en)
-SubClassOf(:NFDI_0000224 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> :NFDI_0000004)))
+SubClassOf(:NFDI_0000224 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> :NFDI_0000004)))
 
 # Class: :NFDI_0000227 (workflow process)
 
@@ -813,7 +813,7 @@ SubClassOf(:NFDI_0000228 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 
 AnnotationAssertion(rdfs:comment :NFDI_0000229 "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000229 "agent role"@en)
-SubClassOf(:NFDI_0000229 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000102)))
+SubClassOf(:NFDI_0000229 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :NFDI_0000102)))
 
 # Class: :NFDI_0000230 (service provider role)
 
@@ -947,7 +947,7 @@ SubClassOf(:NFDI_0001016 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001017 "A directive information entity that defines the structural, syntactic, and encoding rules for representing data when it is exported from a system."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001017 "export format specification"@en)
-SubClassOf(:NFDI_0001017 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> :NFDI_0000148)))
+SubClassOf(:NFDI_0001017 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> :NFDI_0000148)))
 
 # Class: :NFDI_0001018 (description)
 
@@ -965,13 +965,13 @@ SubClassOf(:NFDI_0001019 <http://purl.obolibrary.org/obo/IAO_0000300>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001020 "The act of foundation refers to the formal establishment or creation of an institution, organization, or entity, typically through a legal, administrative, or ceremonial process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001020 "act of foundation"@en)
-SubClassOf(:NFDI_0001020 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/OBI_0000245>)))
+SubClassOf(:NFDI_0001020 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0001021 (act of dissolution)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001021 "The act of dissolution refers to a formal legal or administrative event that officially terminates or dissolves an entity, relationship, or agreement."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001021 "act of dissolution"@en)
-SubClassOf(:NFDI_0001021 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/OBI_0000245>)))
+SubClassOf(:NFDI_0001021 ObjectIntersectionOf(:NFDI_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
 # Class: :NFDI_0001022 (ontology namespace)
 
@@ -1196,7 +1196,7 @@ SubClassOf(:NFDI_0001057 :NFDI_0000229)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001058 "A role inherent in an agent that is realized when shareing the role of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public.")
 AnnotationAssertion(rdfs:label :NFDI_0001058 "co spokesperson role"@en)
-SubClassOf(:NFDI_0001058 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000004)))
+SubClassOf(:NFDI_0001058 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :NFDI_0000004)))
 
 # Class: :NFDI_0001059 (collaboration partner role)
 
@@ -1223,7 +1223,7 @@ SubClassOf(:NFDI_0001061 :NFDI_0000229)
 AnnotationAssertion(rdfs:comment :NFDI_0001062 "A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings.")
 AnnotationAssertion(rdfs:label :NFDI_0001062 "speaker role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001062 "invited speakers at scientific symposiums, keynote presenters at technology expos, and guest lecturers at universities")
-SubClassOf(:NFDI_0001062 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> :NFDI_0000004)))
+SubClassOf(:NFDI_0001062 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :NFDI_0000004)))
 
 # Class: :NFDI_0001068 (LCNAF identifier)
 
@@ -1712,7 +1712,7 @@ AnnotationAssertion(rdfs:seeAlso :NFDI_0010018 "https://www.dfg.de/en/research-f
 ClassAssertion(:NFDI_0000100 :NFDI_0010018)
 
 
-EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000110) ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/BFO_0000115>) :NFDI_0000006))
+EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002350> :NFDI_0000006))
 AnnotationAssertion(rdfs:label dcterms:description "description")
 AnnotationAssertion(rdfs:label dcterms:license "license")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> :NFDI_0000202 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/105")
