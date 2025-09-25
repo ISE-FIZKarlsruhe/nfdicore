@@ -442,7 +442,7 @@ DataPropertyRange(:NFDI_0000128 rdfs:Literal)
 # Data Property: :NFDI_0000135 (file extension)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000135 "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000135 "file extension")
+AnnotationAssertion(rdfs:label :NFDI_0000135 "file extension"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000135 "mp4")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000135 "ttl")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000135 "txt")

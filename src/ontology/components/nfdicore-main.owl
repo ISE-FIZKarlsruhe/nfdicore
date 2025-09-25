@@ -220,6 +220,7 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000118>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000119>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#broader>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNote>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(:NFDI_0000012))
 Declaration(AnnotationProperty(:NFDI_0010013))
@@ -249,15 +250,6 @@ AnnotationAssertion(rdfs:comment :NFDI_0010015 "A relation between an entity and
 AnnotationAssertion(rdfs:label :NFDI_0010015 "has acronym"@en)
 SubAnnotationPropertyOf(:NFDI_0010015 <http://purl.obolibrary.org/obo/IAO_0000118>)
 
-
-
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
-
-
-AnnotationAssertion(rdfs:seeAlso <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028> <http://purl.obolibrary.org/obo/T4FS_0000012>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030> <http://purl.obolibrary.org/obo/T4FS_0000044>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034> <http://purl.obolibrary.org/obo/T4FS_0000384>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036> <http://purl.obolibrary.org/obo/T4FS_0000487>)
 
 ############################
 #   Object Properties
@@ -992,7 +984,7 @@ SubClassOf(:NFDI_0001022 <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001025 <http://purl.obolibrary.org/obo/NCIT_C42620>)
 AnnotationAssertion(rdfs:comment :NFDI_0001025 "A process by which something is brought into existence; having been brought into existence."@en)
-AnnotationAssertion(rdfs:label :NFDI_0001025 "creation process"@de)
+AnnotationAssertion(rdfs:label :NFDI_0001025 "creation process"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001025 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95")
 SubClassOf(:NFDI_0001025 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
@@ -1039,7 +1031,7 @@ SubClassOf(:NFDI_0001033 :NFDI_0001029)
 # Class: :NFDI_0001034 (uniform resource locator)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001034 "A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]"@en)
-AnnotationAssertion(rdfs:label :NFDI_0001034 "uniform resource locator"@de)
+AnnotationAssertion(rdfs:label :NFDI_0001034 "uniform resource locator"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0001034 "http://purl.allotrope.org/ontologies/result#AFR_0001068")
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001034 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95")
 SubClassOf(:NFDI_0001034 :NFDI_0000015)
@@ -1065,7 +1057,7 @@ AnnotationAssertion(rdfs:label :NFDI_0001037 "digital object identifier"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001037 "10.1016/j.compind.2023.104016")
 SubClassOf(:NFDI_0001037 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
-# Class: :NFDI_0001039 (nfdi consortium)
+# Class: :NFDI_0001039 (NFDI consortium)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001039 "National Research Data Infrastructure"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0001039 "Nationale Forschungsdateninfrastruktur"@de)
@@ -1073,7 +1065,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001039 "
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0001039 "https://www.nfdi.de/")
 AnnotationAssertion(rdfs:comment :NFDI_0001039 "An NFDI Consortium is a collaborative organizational entity within the German National Research Data Infrastructure (NFDI) initiative, responsible for the development, management, and coordination of research data infrastructures in specific scientific domains.")
 AnnotationAssertion(rdfs:comment :NFDI_0001039 "The National Research Data Infrastructure (NFDI) is intended to sytematically manage scientifich and research data, provide long-term data storage, backup and accessibility, and network the data (inter-)nationally. The German Research Foundation (DFG) and the Joint Science Conference (GWK) are working together to establish and fund the NFDI, on the basis of the administrative agreement concluded by the Federal Government and the federal states on November 26, 2018. The NFDI is designed as a nationwide network, which is built gradually and cooperatively by the respective communities. The goal is to provide a reliable and sustainable service portfolio that covers generic and disciplinary requirements of research data management in Germany. The NFDI is developed step by step and science-oriented with services available to researchers from vaious disciplines, institutions, and federal states.")
-AnnotationAssertion(rdfs:label :NFDI_0001039 "nfdi consortium"@en)
+AnnotationAssertion(rdfs:label :NFDI_0001039 "NFDI consortium"@en)
 SubClassOf(:NFDI_0001039 :NFDI_0000006)
 
 # Class: :NFDI_0001040 (academic title)
@@ -1333,6 +1325,7 @@ SubClassOf(:NFDI_0010027 :NFDI_0000018)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010028 "A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.")
 AnnotationAssertion(rdfs:label :NFDI_0010028 "data handling process"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010028 <http://purl.obolibrary.org/obo/T4FS_0000012>)
 SubClassOf(:NFDI_0010028 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: :NFDI_0010029 (data producing process)
@@ -1345,6 +1338,7 @@ SubClassOf(:NFDI_0010029 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010030 "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.")
 AnnotationAssertion(rdfs:label :NFDI_0010030 "data processing process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010030 <http://purl.obolibrary.org/obo/T4FS_0000044>)
 SubClassOf(:NFDI_0010030 :NFDI_0010028)
 
 # Class: :NFDI_0010031 (dataset creation process)
@@ -1363,6 +1357,7 @@ SubClassOf(:NFDI_0010033 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010034 "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.")
 AnnotationAssertion(rdfs:label :NFDI_0010034 "data cleaning process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010034 <http://purl.obolibrary.org/obo/T4FS_0000384>)
 SubClassOf(:NFDI_0010034 :NFDI_0010028)
 
 # Class: :NFDI_0010035 (data transformation process)
@@ -1375,6 +1370,7 @@ SubClassOf(:NFDI_0010035 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010036 "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.")
 AnnotationAssertion(rdfs:label :NFDI_0010036 "data integration process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010036 <http://purl.obolibrary.org/obo/T4FS_0000487>)
 SubClassOf(:NFDI_0010036 :NFDI_0010028)
 
 # Class: :NFDI_0010037 (data storage process)
@@ -1671,10 +1667,10 @@ AnnotationAssertion(rdfs:label :NFDI_0010008 "chemistry"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010008 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 ClassAssertion(:NFDI_0000100 :NFDI_0010008)
 
-# Individual: :NFDI_0010010 (physic)
+# Individual: :NFDI_0010010 (physics)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010010 "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en)
-AnnotationAssertion(rdfs:label :NFDI_0010010 "physic"@en)
+AnnotationAssertion(rdfs:label :NFDI_0010010 "physics"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010010 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 ClassAssertion(:NFDI_0000100 :NFDI_0010010)
 
