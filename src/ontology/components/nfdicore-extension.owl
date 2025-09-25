@@ -97,7 +97,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000112 "The property is a relationship b
 AnnotationAssertion(rdfs:label :NFDI_0000112 "has contact point"@en)
 SubObjectPropertyOf(:NFDI_0000112 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000112 :NFDI_0000113)
-ObjectPropertyRange(:NFDI_0000112 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000114)))
+ObjectPropertyRange(:NFDI_0000112 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000114)))
 
 # Object Property: :NFDI_0000113 (contact point of)
 
@@ -111,7 +111,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000116 "The property related something t
 AnnotationAssertion(rdfs:label :NFDI_0000116 "has contributor"@en)
 SubObjectPropertyOf(:NFDI_0000116 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000116 :NFDI_0000117)
-ObjectPropertyRange(:NFDI_0000116 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
+ObjectPropertyRange(:NFDI_0000116 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000118)))
 
 # Object Property: :NFDI_0000117 (contributor of)
 
@@ -234,7 +234,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000191 "published by"@en)
 SubObjectPropertyOf(:NFDI_0000191 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000191 :NFDI_0000192)
 ObjectPropertyDomain(:NFDI_0000191 <http://purl.obolibrary.org/obo/IAO_0000030>)
-ObjectPropertyRange(:NFDI_0000191 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000193)))
+ObjectPropertyRange(:NFDI_0000191 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000193)))
 
 # Object Property: :NFDI_0000192 (publisher of)
 
@@ -399,7 +399,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001027 "The has creator property links s
 AnnotationAssertion(rdfs:label :NFDI_0001027 "has creator"@en)
 SubObjectPropertyOf(:NFDI_0001027 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0001027 :NFDI_0001028)
-ObjectPropertyRange(:NFDI_0001027 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0001026)))
+ObjectPropertyRange(:NFDI_0001027 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001026)))
 
 # Object Property: :NFDI_0001028 (creator of)
 
@@ -469,13 +469,13 @@ AnnotationAssertion(rdfs:comment :NFDI_0000007 "An organization that has a speci
 AnnotationAssertion(rdfs:label :NFDI_0000007 "consortium member"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000007 "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000007 "Museums of City Cologne is a member of NFDI4Culture consortium."@en)
-EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000110)))
+EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110)))
 
 # Class: :NFDI_0000231 (contributor)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000231 "An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000231 "contributor"@en)
-EquivalentClasses(:NFDI_0000231 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000118)))
+EquivalentClasses(:NFDI_0000231 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000118)))
 
 # Class: :NFDI_0001005 (contact point)
 
@@ -485,14 +485,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001005 
 :ex_1  \"nfdi:is subject of\"  :email_1 .
 :email_1 a \"iao:email address\" .
 :email_1 \"nfdi:has value\" \"test@example.org\" .")
-EquivalentClasses(:NFDI_0001005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000114)))
+EquivalentClasses(:NFDI_0001005 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000114)))
 
 # Class: :NFDI_0001038 (consortium partner)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001038 "A consortium partner is an organization inhering a consortium partner role. A consortium partner actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001038 "consortium partner"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001038 "universities, research institutions, industry partners, and funding agencies collaborating in NFDI MatWerk, Horizon Europe projects, and other large-scale research initiatives")
-EquivalentClasses(:NFDI_0001038 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0001096)))
+EquivalentClasses(:NFDI_0001038 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001096)))
 
 
 )
