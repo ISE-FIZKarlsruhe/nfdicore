@@ -36,6 +36,20 @@ $(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
+
+$(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt \
+			   $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 extract --term-file $(IMPORTDIR)/ro_terms.txt  \
+		         --force true --copy-ontology-annotations true \
+		         --individuals exclude \
+		         --method SUBSET \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/ro_terms.txt  \
+		        --select complement --select annotation-properties \
+		 $(ANNOTATE_CONVERT_FILE)
+
+
 #### special handling for EDAM
 $(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl 
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \

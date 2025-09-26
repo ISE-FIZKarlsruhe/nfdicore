@@ -163,8 +163,8 @@ Declaration(Class(:NFDI_0010039))
 Declaration(Class(:NFDI_0010040))
 Declaration(Class(:NFDI_0010041))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
-Declaration(ObjectProperty(:NFDI_0000152))
-Declaration(ObjectProperty(:NFDI_0000153))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002234>))
 Declaration(ObjectProperty(:NFDI_0000226))
 Declaration(ObjectProperty(:NFDI_0001023))
 Declaration(ObjectProperty(:NFDI_0001024))
@@ -263,24 +263,21 @@ InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_00002
 
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000235> :NFDI_0000226)
 
-# Object Property: :NFDI_0000152 (has input)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002233> (has input)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000152 "p has input x =Def x is used or consumed in the process of executing p.")
-AnnotationAssertion(rdfs:label :NFDI_0000152 "has input"@en)
-SubObjectPropertyOf(:NFDI_0000152 <http://purl.obolibrary.org/obo/RO_0000057>)
-InverseObjectProperties(:NFDI_0000152 :NFDI_0001024)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/RO_0000057>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002233> :NFDI_0001024)
 
-# Object Property: :NFDI_0000153 (has output)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002234> (has output)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000153 "p has output x =Def x is produced or generated as a result of executing p.")
-AnnotationAssertion(rdfs:label :NFDI_0000153 "has output"@en)
-SubObjectPropertyOf(:NFDI_0000153 <http://purl.obolibrary.org/obo/RO_0000057>)
-InverseObjectProperties(:NFDI_0000153 :NFDI_0001023)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0000057>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002234> :NFDI_0001023)
 
 # Object Property: :NFDI_0000226 (is subject of)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000226 "inverse of the relation 'is about'")
 AnnotationAssertion(rdfs:label :NFDI_0000226 "is subject of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :NFDI_0000226 "is described by")
 
 # Object Property: :NFDI_0001023 (is output of)
 
@@ -549,7 +546,7 @@ SubClassOf(:NFDI_0000100 <http://purl.obolibrary.org/obo/IAO_0000030>)
 AnnotationAssertion(rdfs:comment :NFDI_0000101 "A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000101 "service process"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0000101 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75")
-SubClassOf(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(:NFDI_0000153 :NFDI_0000232)))
+SubClassOf(:NFDI_0000101 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002234> :NFDI_0000232)))
 
 # Class: :NFDI_0000102 (agent)
 
@@ -721,7 +718,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000198 "A plan specification that compri
 AnnotationAssertion(rdfs:label :NFDI_0000198 "software"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000198 "A computer software provided by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000198 "Edirom, Muscat")
-SubClassOf(:NFDI_0000198 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000104> ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000153) :NFDI_0000224)))
+SubClassOf(:NFDI_0000198 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000104> ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/RO_0002234>) :NFDI_0000224)))
 
 # Class: :NFDI_0000203 (specification)
 
@@ -729,7 +726,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000203 "A directive information entity t
 AnnotationAssertion(rdfs:label :NFDI_0000203 "specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000203 "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000203 "Guidelines, technical specifications, design specifications"@en)
-SubClassOf(:NFDI_0000203 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000033> ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000153) :NFDI_0000224)))
+SubClassOf(:NFDI_0000203 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000033> ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/RO_0002234>) :NFDI_0000224)))
 
 # Class: :NFDI_0000206 (standard)
 
@@ -790,7 +787,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000223 "An information content entity th
 AnnotationAssertion(rdfs:label :NFDI_0000223 "website"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000223 "A collection of webpages contributed by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000223 "https:\\/\\/opac.rism.info")
-SubClassOf(:NFDI_0000223 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(ObjectInverseOf(:NFDI_0000153) :NFDI_0000224)))
+SubClassOf(:NFDI_0000223 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/RO_0002234>) :NFDI_0000224)))
 
 # Class: :NFDI_0000224 (creative process)
 
