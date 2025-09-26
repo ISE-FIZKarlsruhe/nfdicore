@@ -165,9 +165,9 @@ Declaration(Class(:NFDI_0010041))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002234>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002352>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002353>))
 Declaration(ObjectProperty(:NFDI_0000226))
-Declaration(ObjectProperty(:NFDI_0001023))
-Declaration(ObjectProperty(:NFDI_0001024))
 Declaration(DataProperty(:NFDI_0001007))
 Declaration(DataProperty(:NFDI_0001008))
 Declaration(NamedIndividual(:NFDI_0000157))
@@ -266,30 +266,26 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000235> :NFDI_0000226)
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002233> (has input)
 
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/RO_0000057>)
-InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002233> :NFDI_0001024)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/RO_0002352>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002234> (has output)
 
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0000057>)
-InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002234> :NFDI_0001023)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0002353>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002352> (input of)
+
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002352> <http://purl.obolibrary.org/obo/RO_0000056>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002353> (output of)
+
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002353> <http://purl.obolibrary.org/obo/RO_0000056>)
 
 # Object Property: :NFDI_0000226 (is subject of)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000226 "inverse of the relation 'is about'")
 AnnotationAssertion(rdfs:label :NFDI_0000226 "is subject of"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :NFDI_0000226 "is described by")
-
-# Object Property: :NFDI_0001023 (is output of)
-
-AnnotationAssertion(rdfs:comment :NFDI_0001023 "inverse of the relation 'has output'")
-AnnotationAssertion(rdfs:label :NFDI_0001023 "is output of"@en)
-SubObjectPropertyOf(:NFDI_0001023 <http://purl.obolibrary.org/obo/RO_0000056>)
-
-# Object Property: :NFDI_0001024 (is input of)
-
-AnnotationAssertion(rdfs:comment :NFDI_0001024 "inverse of the relation 'has input'")
-AnnotationAssertion(rdfs:label :NFDI_0001024 "is input of"@en)
-SubObjectPropertyOf(:NFDI_0001024 <http://purl.obolibrary.org/obo/RO_0000056>)
 
 
 ############################
@@ -407,7 +403,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000008 "An independent continuant or inf
 AnnotationAssertion(rdfs:label :NFDI_0000008 "creative work"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000008 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
-EquivalentClasses(:NFDI_0000008 ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>) ObjectSomeValuesFrom(:NFDI_0001024 :NFDI_0000224)))
+EquivalentClasses(:NFDI_0000008 ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002352> :NFDI_0000224)))
 SubClassOf(:NFDI_0000008 <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Class: :NFDI_0000009 (dataset)
@@ -823,7 +819,7 @@ SubClassOf(:NFDI_0000230 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom
 
 AnnotationAssertion(rdfs:comment :NFDI_0000232 "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000232 "service product"@en)
-SubClassOf(:NFDI_0000232 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(:NFDI_0001023 :NFDI_0000101)))
+SubClassOf(:NFDI_0000232 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002353> :NFDI_0000101)))
 
 # Class: :NFDI_0000244 (service specification)
 

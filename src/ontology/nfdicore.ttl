@@ -1187,8 +1187,7 @@ obo:RO_0001025 rdf:type owl:ObjectProperty ,
 ###  http://purl.obolibrary.org/obo/RO_0002233
 obo:RO_0002233 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000057 ;
-               owl:inverseOf obo:RO_0002352 ,
-                             ontology:NFDI_0001024 ;
+               owl:inverseOf obo:RO_0002352 ;
                rdfs:domain obo:BFO_0000015 ;
                obo:IAO_0000115 "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p." ;
                rdfs:label "has input"@en .
@@ -1197,8 +1196,7 @@ obo:RO_0002233 rdf:type owl:ObjectProperty ;
 ###  http://purl.obolibrary.org/obo/RO_0002234
 obo:RO_0002234 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000057 ;
-               owl:inverseOf obo:RO_0002353 ,
-                             ontology:NFDI_0001023 ;
+               owl:inverseOf obo:RO_0002353 ;
                obo:IAO_0000115 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p." ;
                rdfs:label "has output"@en .
 
@@ -1665,20 +1663,6 @@ ontology:NFDI_0001006 rdf:type owl:ObjectProperty ;
                       rdfs:range obo:IAO_0000578 ;
                       rdfs:comment "The property relates a thing to the corresponding entry or related concept of the item in a central register, e.g. GND, VIAF, RISM, Wikidata or ROR."@en ;
                       rdfs:label "has external identifier"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023
-ontology:NFDI_0001023 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:RO_0000056 ;
-                      rdfs:comment "inverse of the relation 'has output'" ;
-                      rdfs:label "is output of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024
-ontology:NFDI_0001024 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:RO_0000056 ;
-                      rdfs:comment "inverse of the relation 'has input'" ;
-                      rdfs:label "is input of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027
@@ -3513,7 +3497,7 @@ ontology:NFDI_0000008 rdf:type owl:Class ;
                                                                                )
                                                                  ]
                                                                  [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty ontology:NFDI_0001024 ;
+                                                                   owl:onProperty obo:RO_0002352 ;
                                                                    owl:someValuesFrom ontology:NFDI_0000224
                                                                  ]
                                                                ) ;
@@ -3521,7 +3505,7 @@ ontology:NFDI_0000008 rdf:type owl:Class ;
                                           ] ;
                       rdfs:subClassOf ontology:NFDI_0000001 ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty ontology:NFDI_0001024 ;
+                                        owl:onProperty obo:RO_0002352 ;
                                         owl:someValuesFrom ontology:NFDI_0000224
                                       ] ;
                       rdfs:comment "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
@@ -4228,7 +4212,7 @@ ontology:NFDI_0000232 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000001 ,
                                       [ owl:intersectionOf ( obo:BFO_0000141
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty ontology:NFDI_0001023 ;
+                                                               owl:onProperty obo:RO_0002353 ;
                                                                owl:someValuesFrom ontology:NFDI_0000101
                                                              ]
                                                            ) ;
