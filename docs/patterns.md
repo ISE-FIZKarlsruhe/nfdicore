@@ -9,6 +9,28 @@ Within NFDIcore, resources are continuants which encompass a wide range of digit
 ![image](figures/nfdicore-pattern-dataportal.png)
 
 
+```mermaid
+
+stateDiagram
+
+
+  direction BT
+
+  classDef clazz fill:lightgrey,color:white
+  classDef ind font-size:small
+  
+  bfo_occurrent --> bfo_entity: subClassOf 
+  bfo_continuant --> bfo_entity: subClassOf 
+  bfo_process --> bfo_occurrent: subClassOf 
+  bfo_temporal_region --> bfo_occurrent: subClassOf 
+  bfo_one_dimensional --> bfo_temporal_region: subClassOf 
+  bfo_two_dimensional --> bfo_temporal_region: subClassOf 
+
+  class bfo_occurrent clazz  
+  class bfo_entity clazz
+  class bfo_continuant clazz
+```
+
 NFDI resources can be associated with academic disciplines (nfdicore:academic discipline, NFDI_0000100) allowing for a more nuanced understanding of their context and relevance. 
  
 ![image](figures/nfdicore-pattern-discipline.png)
