@@ -1,0 +1,1399 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>NFDIcore Competency Questions (CQs) and SPARQL Queries - NFDIcore Ontology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nfdicore-competency-questions-cqs-and-sparql-queries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NFDIcore Ontology" class="md-header__button md-logo" aria-label="NFDIcore Ontology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NFDIcore Ontology
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NFDIcore Competency Questions (CQs) and SPARQL Queries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NFDIcore Ontology" class="md-nav__button md-logo" aria-label="NFDIcore Ontology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    NFDIcore Ontology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modular Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nfdi-matwerk" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFDI-MatWerk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NFDI-MatWerk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 03
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 04
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 05
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 06
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 08
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 09
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 12
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 17
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfdi4datascience" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFDI4DataScience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NFDI4DataScience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-alex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Alex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-ben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Ben
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-cassie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Cassie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-david" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case David
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-emma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Emma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-finn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Finn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-gina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Gina
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-hassan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Hassan
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfdi4culture" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFDI4Culture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NFDI4Culture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-10_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-10_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-12_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 12
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 14
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-15_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-16_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-17_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 17
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 21
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 22
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 23
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 25
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 26
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 27
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 28
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfdi4memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFDI4Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NFDI4Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-7_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-8_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-9_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-13_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-14_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 14
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-15_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-16_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-17_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 17
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-23_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 23
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 42
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nfdicore-competency-questions-cqs-and-sparql-queries">NFDIcore Competency Questions (CQs) and SPARQL Queries</h1>
+<p>For the design and evaluation different projects contributed competecy questions the ontology should be able to answer.</p>
+<h2 id="nfdi-matwerk">NFDI-MatWerk</h2>
+<p>All NFDI-MatWerk Use Cases are available <a href="https://nfdi-matwerk.de/infrastructure-use-cases">at the MatWerk Consortium Webpage</a></p>
+<h3 id="use-case-1">Use Case 1</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What are the specific services (in digitalization) that are used in a specific academic discipline? (data science) (need to be transferred to the new generation of scientists and professionals)</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What are the resources and events related to specific processes (demonstration and teaching)?</p>
+</li>
+<li>
+<p><strong>CQ 3:</strong> What process are organisations involved in? and what are their roles in the processes? (PP participant universities).</p>
+</li>
+</ul>
+<h3 id="use-case-2">Use Case 2</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What metadata schemas and ontologies are utilized in datasets that describe collections ? (materials used in Ni-based superalloys)</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What are the standard processes material data sets involved in? (the definition, identification and curation)</p>
+</li>
+<li>
+<p><strong>CQ 3:</strong> How and which resources are data sets be connected to? ( detailed meta-data and context concerning materials history, data collection )</p>
+</li>
+</ul>
+<h3 id="use-case-03">Use Case 03</h3>
+<ul>
+<li>
+<p><strong>CQ 2:</strong> What specific types of resources exist within a particular subject area, and what technological methods are employed in their storage?(Tomographic data from different techniques)</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What ontologies are used for resources in a specific subject area?</p>
+</li>
+<li>
+<p><strong>SPARQL:</strong></p>
+</li>
+<li>
+<p><strong>CQ 3:</strong> What services are there for linkage and enrichment (data integration and access)? What software are they using?</p>
+</li>
+</ul>
+<h3 id="use-case-04">Use Case 04</h3>
+<ul>
+<li><strong>CQ 1:</strong> What standards and specifications are used for data in a specific subject area?</li>
+</ul>
+<h3 id="use-case-05">Use Case 05</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What tools and services are used for storing and evaluation of a specific data type?</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What standards and specifications are used in a certain process? (data analysis)</p>
+</li>
+</ul>
+<h3 id="use-case-06">Use Case 06</h3>
+<ul>
+<li><strong>CQ 1:</strong> What ontologies are used in a specific subject area?</li>
+</ul>
+<h3 id="use-case-08">Use Case 08</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What standards are used for resources in a specific process (standardization)?</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What guidelines are there for describing specific processes? (data analysis/visualization)</p>
+</li>
+</ul>
+<h3 id="use-case-09">Use Case 09</h3>
+<ul>
+<li><strong>CQ 1:</strong> What data portals, services and software are contributed to a specific consortia? What are the subject area of these resources?</li>
+</ul>
+<h3 id="use-case-10">Use Case 10</h3>
+<ul>
+<li><strong>CQ 1:</strong> What is the funding organisation of a specific project?</li>
+</ul>
+<h3 id="use-case-12">Use Case 12</h3>
+<ul>
+<li><strong>CQ 1:</strong> What ontologies are used in resources contributed to specific consortia? What is their subject area?</li>
+</ul>
+<h3 id="use-case-13">Use Case 13</h3>
+<ul>
+<li><strong>CQ 1:</strong> What specific services (expert knowledge) are there and who is the contact point of these services?</li>
+</ul>
+<h3 id="use-case-15">Use Case 15</h3>
+<ul>
+<li><strong>CQ 1:</strong> Who is the contact point of a specific service? (ontology development)</li>
+</ul>
+<h3 id="use-case-16">Use Case 16</h3>
+<ul>
+<li><strong>CQ 1:</strong> What ontologies are used in resources and what is their subject area?</li>
+</ul>
+<h3 id="use-case-17">Use Case 17</h3>
+<ul>
+<li><strong>CQ 1:</strong> What ontologies are used in resources and what is their subject area?</li>
+</ul>
+<h2 id="nfdi4datascience">NFDI4DataScience</h2>
+<p>All NFDI4DataScience Use Cases (Personas) are available <a href="https://www.nfdi4datascience.de/community/requirements-elicitation/personas/">at the NFDI4DataScience Consortium Webpage</a></p>
+<h3 id="use-case-alex">Use Case Alex</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What data participates in a specific task (event)? (data cleaning task)</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What services participate in a specific task (event)? ( (data cleaning services)</p>
+</li>
+</ul>
+<h3 id="use-case-ben">Use Case Ben</h3>
+<ul>
+<li><strong>CQ 1:</strong> What documenting resources are related to a specific event (task)? Who is a contact point of the documentation process?</li>
+</ul>
+<h3 id="use-case-cassie">Use Case Cassie</h3>
+<ul>
+<li><strong>CQ 1:</strong> What (training) services and events are available for specific data task (event)?</li>
+</ul>
+<h3 id="use-case-david">Use Case David</h3>
+<ul>
+<li><strong>CQ 1:</strong> Who is a contact point of specific data (experimental)? What is their expertise?</li>
+</ul>
+<h3 id="use-case-emma">Use Case Emma</h3>
+<ul>
+<li><strong>CQ 1:</strong> List the events in the community, their description and their dates.</li>
+</ul>
+<h3 id="use-case-finn">Use Case Finn</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the (legal) guidelines for a specific process? (store sensitive data)</li>
+</ul>
+<h3 id="use-case-gina">Use Case Gina</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the relevant publications for a specific subject area or event (task)?</li>
+</ul>
+<h3 id="use-case-hassan">Use Case Hassan</h3>
+<ul>
+<li><strong>CQ 1:</strong> What services are used in specific projects, which technological means and software are used in the services? If available, list guidelines/publications about these services.</li>
+</ul>
+<h2 id="nfdi4culture">NFDI4Culture</h2>
+<p>All NFDI4Culture Use Cases are available <a href="https://nfdi4culture.de/resources/user-stories.html">at the NFDI4Culture Consortium Webpage</a></p>
+<h3 id="use-case-1_1">Use Case 1</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What guidelines are available for a process (storing data) in a specific academic discipline (on musical performances)?</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What are the services and events related to specific processes ( structured filing and the handling of standard data)?</p>
+</li>
+</ul>
+<h3 id="use-case-2_1">Use Case 2</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What standards are there for specific resource type (musical data)?
+Who is a contact point of the standards?</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What services are available for specific data task (event)? (keep different versions accessible)</p>
+</li>
+</ul>
+<h3 id="use-case-3">Use Case 3</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What best practices are used in resources in a specific academic discipline?</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What are the best practices to publish a resource using in a certain academic discipline?  </p>
+</li>
+<li>
+<p><strong>CQ 3:</strong> What (training) events are available for specific ask (adequate handling of research data)? What is their timeframe? </p>
+</li>
+</ul>
+<h3 id="use-case-4">Use Case 4</h3>
+<ul>
+<li><strong>CQ 1:</strong> What information about resource is used during the publication process?</li>
+</ul>
+<h3 id="use-case-5">Use Case 5</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What specific services are available for  a certain task? (creating digital inventories of art collections)</p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What licenses are used in the consortia for datasets with images?</p>
+</li>
+<li>
+<p><strong>CQ 3:</strong> Who is a contact point of a specific service?</p>
+</li>
+<li>
+<p><strong>CQ 4:</strong> What training events are available for a certain task (publishing and maintaining image data)</p>
+</li>
+</ul>
+<h3 id="use-case-6">Use Case 6</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the best practices to publish a software in a certain academic discipline (digital humanities)?</li>
+</ul>
+<h3 id="use-case-7">Use Case 7</h3>
+<ul>
+<li>
+<p><strong>CQ 1:</strong> What media types are available for resources in a certain academic discipline (music ethnology) and what are their licenses? </p>
+</li>
+<li>
+<p><strong>CQ 2:</strong> What teaching and learning services are available in a certain academic discipline (music ethnology)? </p>
+</li>
+<li>
+<p><strong>CQ 3:</strong> What guidelines are available (for an organization) to complete a process (publishing research data) for data in a specific academic discipline (performing arts)?</p>
+</li>
+</ul>
+<h3 id="use-case-8">Use Case 8</h3>
+<ul>
+<li><strong>CQ 1:</strong> What processes (data publication, quality assurance, analyses) are certain resource types (e.g. questionnairs)  in a certain academic discipline (e.g. musicology) involved in?</li>
+</ul>
+<h3 id="use-case-9">Use Case 9</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the best practices for publishing research data (resources)? </li>
+</ul>
+<h3 id="use-case-10_1">Use Case 10</h3>
+<ul>
+<li><strong>CQ:</strong> 
+What organizations and persons are participating in processes related to creative works?</li>
+</ul>
+<h3 id="use-case-10_2">Use Case 10</h3>
+<ul>
+<li><strong>CQ 1:</strong> What organizations and persons are participating in processes related to creative works?</li>
+</ul>
+<h3 id="use-case-11">Use Case 11</h3>
+<ul>
+<li><strong>CQ 1:</strong> What resources that belong to a certain academic discipline (e.g. Art History) are available, what controlled vocabularies are associated with them?</li>
+</ul>
+<h3 id="use-case-12_1">Use Case 12</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the services and events related to specific processes (analysis, structured filing and the handling of standard data)?</li>
+</ul>
+<h3 id="use-case-14">Use Case 14</h3>
+<ul>
+<li><strong>CQ 1:</strong> What resources that belong to a certain academic discipline (e.g. Musicology) are available, what media types do they have and what qualities (e.g. semantic expressivity) are associated with them?</li>
+</ul>
+<h3 id="use-case-15_1">Use Case 15</h3>
+<ul>
+<li><strong>CQ 1:</strong> What resources that belong to a certain academic discipline (e.g. Archaeology) are available and represented by means of a certain semantic expressivity?</li>
+<li><strong>CQ 2:</strong> What services for teaching and learning are available in a certain academic discipline?</li>
+</ul>
+<h3 id="use-case-16_1">Use Case 16</h3>
+<ul>
+<li><strong>CQ 1:</strong> What services for linking and enriching as well as publishing and disseminating research data are available in a certain academic discipline (eg. Architecture)?</li>
+<li><strong>CQ 2:</strong> What collections are available in a certain geographical region (e.g. Germany)?</li>
+</ul>
+<h3 id="use-case-17_1">Use Case 17</h3>
+<ul>
+<li><strong>CQ 1:</strong> What services are available for linkage and enrichment as well as storage and preservation of research data?</li>
+</ul>
+<h3 id="use-case-18">Use Case 18</h3>
+<ul>
+<li><strong>CQ 1:</strong> Who has certain areas of expertise (computer science) and is a contact of a certain service (training and learning)?</li>
+</ul>
+<h3 id="use-case-20">Use Case 20</h3>
+<ul>
+<li><strong>CQ 1:</strong> What resource types are available in certain geographical locations?</li>
+</ul>
+<h3 id="use-case-21">Use Case 21</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the specifications and best practices utilized in the publishing process of a resource in a certain academic discipline (e.g. media science)?</li>
+</ul>
+<h3 id="use-case-22">Use Case 22</h3>
+<ul>
+<li><strong>CQ 1:</strong> What software or services are available for a certain task (event)? (versioning)</li>
+</ul>
+<h3 id="use-case-23">Use Case 23</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which software is available in a certain academic discipline (music)?</li>
+<li><strong>CQ 2:</strong> What learning and teaching services are available for resources of a certain discipline?</li>
+</ul>
+<h3 id="use-case-24">Use Case 24</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which resources are related to a specific subject area (ex:Architecture)?</li>
+</ul>
+<h3 id="use-case-25">Use Case 25</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which resources are related to an event that occurred in a specific time frame and which media type and, if available, semantic expressivity are they available in?</li>
+</ul>
+<h3 id="use-case-26">Use Case 26</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which software was provided by an agent that participates in a project?</li>
+<li><strong>CQ 2:</strong> Which resources and resource types were contributed by an agent that participates in a project?</li>
+<li><strong>CQ 3:</strong> What persons participate in a project and belong to a certain academic discipline (computer science or digital humanities)?</li>
+<li><strong>CQ 4:</strong> What learning and training services are contributed by an agent that participates in a project?</li>
+</ul>
+<h3 id="use-case-27">Use Case 27</h3>
+<ul>
+<li><strong>CQ 1:</strong> What specifications are there for certain types of resources and media types of resources?</li>
+</ul>
+<h3 id="use-case-28">Use Case 28</h3>
+<ul>
+<li><strong>CQ 1:</strong> What controlled vocabularies are available for certain resource types?</li>
+</ul>
+<h2 id="nfdi4memory">NFDI4Memory</h2>
+<p>All NFDI4Memory Use Cases are available <a href="https://4memory.de/problem-stories-overview/">at the NFDI4Memory Consortium Webpage</a></p>
+<h3 id="use-case-1_2">Use Case 1</h3>
+<ul>
+<li><strong>CQ 1:</strong> Who has certain areas of expertise (e.g. IT) and is involved in a certain service (training and education)?</li>
+</ul>
+<h3 id="use-case-3_1">Use Case 3</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the best practices for a certain resource?</li>
+</ul>
+<h3 id="use-case-5_1">Use Case 5</h3>
+<ul>
+<li><strong>CQ 1:</strong> What software is frequently used and who are their contact points?</li>
+</ul>
+<h3 id="use-case-6_1">Use Case 6</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the controlled vocabularies used in the consortium?</li>
+<li><strong>CQ 2:</strong> What tools and services for a certain purpose are used in the consortium?</li>
+</ul>
+<h3 id="use-case-7_1">Use Case 7</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which licences are used in certain data resources types?</li>
+</ul>
+<h3 id="use-case-8_1">Use Case 8</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the guidelines for a specific task? (publishing research data)</li>
+</ul>
+<h3 id="use-case-9_1">Use Case 9</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which organizations (archives) located in Germany contribute certain resources and what licences do they use?</li>
+<li><strong>CQ 2:</strong> What guidelines for data provenance for certain data type (archival) exist?</li>
+</ul>
+<h3 id="use-case-11_1">Use Case 11</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which organization has members with expertise in computer science or information technology?</li>
+</ul>
+<h3 id="use-case-13_1">Use Case 13</h3>
+<ul>
+<li><strong>CQ 1:</strong> What data formats are used for resources in a certain academic discipline?</li>
+</ul>
+<h3 id="use-case-14_1">Use Case 14</h3>
+<ul>
+<li><strong>CQ 1:</strong> What licences given for resources in a certain media type?</li>
+</ul>
+<h3 id="use-case-15_2">Use Case 15</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which services are available for a certain task?</li>
+<li><strong>CQ 2:</strong> Which software is available in a certain discipline?</li>
+</ul>
+<h3 id="use-case-16_2">Use Case 16</h3>
+<ul>
+<li><strong>CQ 1:</strong> Which organization offers a certain area of expertise? (IT) (including people in the organizations and their expertise)</li>
+<li><strong>CQ 2:</strong> Which organization is a contact point for a certain service?</li>
+</ul>
+<h3 id="use-case-17_2">Use Case 17</h3>
+<ul>
+<li><strong>CQ 1:</strong> What services in a certain academic discipline (computer science) are there?</li>
+</ul>
+<h3 id="use-case-23_1">Use Case 23</h3>
+<ul>
+<li><strong>CQ 1:</strong> What are the best practices to publish a resource using a certain (open) licence?</li>
+</ul>
+<h3 id="use-case-42">Use Case 42</h3>
+<ul>
+<li><strong>CQ 1:</strong> What controlled vocabularies can be utilized (in the publishing process) of a resource?</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
+      
+        <script src="../extra-loader.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>

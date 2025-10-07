@@ -1,0 +1,1006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../intro/">
+      
+      
+        <link rel="next" href="../patterns/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Ontology - NFDIcore Ontology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ontology" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NFDIcore Ontology" class="md-header__button md-logo" aria-label="NFDIcore Ontology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NFDIcore Ontology
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ontology
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NFDIcore Ontology" class="md-nav__button md-logo" aria-label="NFDIcore Ontology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    NFDIcore Ontology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organizational" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizational
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research-and-academic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research and Academic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geographical" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geographical
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-and-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data and Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-and-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology and Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nfdi-resource-and-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFDI Resource and Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Hierarchy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfo-as-top-level-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      BFO as top level ontology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BFO as top level ontology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuants-endurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuants (Endurants)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuants (Endurants)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#independent-continuants-ic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Independent Continuants (IC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generically-dependent-continuants-gdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generically Dependent Continuants (GDC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifically-dependent-continuants-sdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifically Dependent Continuants (SDC)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#occurrents-perdurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Occurrents (Perdurants)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Occurrents (Perdurants)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporal-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporal Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatiotemporal-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatiotemporal Regions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relations-in-bfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relations in BFO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modular Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organizational" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizational
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research-and-academic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research and Academic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geographical" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geographical
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-and-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data and Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-and-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology and Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nfdi-resource-and-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFDI Resource and Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Hierarchy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfo-as-top-level-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      BFO as top level ontology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BFO as top level ontology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuants-endurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuants (Endurants)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuants (Endurants)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#independent-continuants-ic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Independent Continuants (IC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generically-dependent-continuants-gdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generically Dependent Continuants (GDC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifically-dependent-continuants-sdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifically Dependent Continuants (SDC)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#occurrents-perdurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Occurrents (Perdurants)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Occurrents (Perdurants)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporal-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporal Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatiotemporal-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatiotemporal Regions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relations-in-bfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relations in BFO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ontology">Ontology</h1>
+<p>The NFDI Ontology is a mid-level ontology designed to represent both the organizational structure of the Nationale Forschungsdateninfrastruktur (NFDI) and the diverse datasets provided by NFDI project partners.</p>
+<h2 id="overview">Overview</h2>
+<p>The ontology provides a shared vocabulary and a consistent framework that supports data management, integration, and interoperability across a wide range of disciplines. Below is an overview of key concepts within the ontology. The complete list of concepts can be found in the generated ontology description: <a href="https://nfdi.fiz-karlsruhe.de/ontology/">https://nfdi.fiz-karlsruhe.de/ontology/</a>.</p>
+<h3 id="key-concepts">Key Concepts</h3>
+<h4 id="organizational">Organizational</h4>
+<ul>
+<li><strong>Organization</strong>: Represents institutions, research groups, or companies involved in NFDI activities.</li>
+<li><strong>Person</strong>: An individual, such as a researcher or contributor, participating in NFDI projects.</li>
+<li><strong>Consortium</strong>: Represents collaborative groups formed by multiple organizations within the NFDI.</li>
+<li><strong>ConsortiumMember</strong>: A participant within a consortium, whether an organization or person.</li>
+<li><strong>ConsortiumMemberRole</strong>: Defines the roles played by members within a consortium, such as "lead partner" or "contributor"</li>
+<li><strong>Project</strong>: Represents individual research projects or initiatives within the NFDI ecosystem.</li>
+</ul>
+<h4 id="research-and-academic">Research and Academic</h4>
+<ul>
+<li><strong>AcademicDiscipline</strong>: Categories representing different fields of study or research disciplines.</li>
+<li><strong>Publication</strong>: Scholarly works or research reports published as a result of NFDI projects.</li>
+<li><strong>Contributing</strong>: Represents contributions made by people or organizations to a project or dataset.</li>
+<li><strong>Event</strong>: Represents events such as conferences, workshops, or meetings organized by NFDI or related entities.</li>
+</ul>
+<h4 id="geographical">Geographical</h4>
+<ul>
+<li><strong>City</strong>: Represents cities related to projects, events, or organizational locations.</li>
+<li><strong>Country</strong>: Countries where NFDI organizations or research activities are based.</li>
+<li><strong>FederalState</strong>: States or provinces within a country, relevant to the localization of activities or organizations.</li>
+<li><strong>Place</strong>: A more general class representing any location such as cities, countries, or regions.</li>
+</ul>
+<h4 id="data-and-information">Data and Information</h4>
+<ul>
+<li><strong>Dataset</strong>: Structured collections of data produced or managed by NFDI partners.</li>
+<li><strong>Data Portal</strong>: Digital platforms or repositories where datasets are stored and accessed.</li>
+<li><strong>Collection</strong>: Represents grouped resources, such as datasets, publications, or software.</li>
+<li><strong>CreativeWork</strong>: Any intellectual output, including publications, datasets, software, or media.</li>
+</ul>
+<h4 id="technology-and-standards">Technology and Standards</h4>
+<ul>
+<li><strong>Software</strong>: Represents software tools or applications developed and used within the NFDI.</li>
+<li><strong>Programming Language</strong>: Programming languages used in developing software or tools.</li>
+<li><strong>Specification</strong>: Defines technical specifications related to datasets, software, or services.</li>
+<li><strong>Standard</strong>: Represents standards followed for data management, storage, and dissemination.</li>
+<li><strong>Technological Method Specification</strong>: A technological method employed for the creation, management, utilization, or control of a digital resource.</li>
+<li><strong>Ontology</strong>: Formalized structures of knowledge representation, including the NFDI Ontology itself.</li>
+</ul>
+<h4 id="nfdi-resource-and-service">NFDI Resource and Service</h4>
+<ul>
+<li><strong>NFDI Resource</strong>: General class for any entity utilized within the NFDI framework, such as datasets or software.</li>
+<li><strong>Service Process</strong>: Organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals.</li>
+<li><strong>Service Product</strong>: Provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements in a structured process.</li>
+<li><strong>License</strong>: Represents the legal terms under which datasets, publications, or software are made available.</li>
+<li><strong>Website</strong>: Represents websites or web services associated with NFDI partners or projects.</li>
+</ul>
+<h4 id="formats">Formats</h4>
+<ul>
+<li><strong>MIME-Type</strong>: Serves as a standardized identifier for specifying the nature and format of data.</li>
+<li><strong>Export Format Specification</strong>: Defines the structural, syntactic, and encoding rules for representing data when it is exported from a system.</li>
+</ul>
+<h2 id="class-hierarchy">Class Hierarchy</h2>
+<p>The image below illustrates the top-level hierarchy of the ontology (Version 3.0.0). Most NFDIcore classes have been defined as subclasses of Basic Formal Ontology (BFO), Information Artifact Ontology (IAO), or the Software Ontology (SWO).</p>
+<p>Since BFO 2020 — the version currently adopted by NFDIcore — is not fully supported by IAO, some relevant IAO concepts could not be reused. In such cases, NFDIcore-specific classes have been introduced, such as dataset, document and identifier.  </p>
+<p><img alt="image" src="../figures/nfdicore-classes.jpg" /></p>
+<h2 id="bfo-as-top-level-ontology">BFO as top level ontology</h2>
+<p>The Basic Formal Ontology (BFO) is a <strong>top-level ontology</strong> that provides a structured framework for organizing entities based on their fundamental nature. It does not include domain-specific content but instead defines <strong>high-level categories</strong> that support the development of specialized ontologies like NFDIcore.  </p>
+<p>BFO distinguishes entities based on whether they persist through time or unfold over time, dividing them into <strong>continuants</strong> and <strong>occurrents</strong> (see image above).  </p>
+<h3 id="continuants-endurants"><strong>Continuants (Endurants)</strong></h3>
+<p>Continuants are entities that <strong>exist at any given moment in time</strong> and maintain their identity over time. There are tree kinds of continuants: <em>independent</em> continuants, <em>generically dependent</em> continuants and <em>specifically dependent</em> continuants.</p>
+<h4 id="independent-continuants-ic"><strong>Independent Continuants (IC)</strong></h4>
+<p>These are entities that <strong>exist independently</strong> and do not require another entity to exist.  </p>
+<ul>
+<li><strong>Material Entities</strong> – Physical objects with spatial extension.  </li>
+<li><em>Examples</em>: Organisms, buildings, tools.  </li>
+<li><strong>Immaterial Entities</strong> – Boundaries or parts of objects defined by human convention.  </li>
+<li><em>Examples</em>: The equator, the upper half of a sphere.  </li>
+</ul>
+<h4 id="generically-dependent-continuants-gdc"><strong>Generically Dependent Continuants (GDC)</strong></h4>
+<p>These entities <strong>depend on independent continuants</strong> for their existence.<br />
+Generically dependent continuants can exist in multiple instances or be replicated across different locations. </p>
+<ul>
+<li><em>Examples</em>:<ul>
+<li>A book’s content (as opposed to a single physical copy of the book)  </li>
+<li>A software program (which can be installed on multiple computers)  </li>
+<li>A musical composition (which can be played on different instruments)   </li>
+<li>A dataset and data items</li>
+<li>Entities with information content</li>
+</ul>
+</li>
+</ul>
+<h4 id="specifically-dependent-continuants-sdc"><strong>Specifically Dependent Continuants (SDC)</strong></h4>
+<p>Specifically dependent continuants are <strong>qualities, roles, or dispositions</strong> that <strong>exist only in relation to a particular independent continuant</strong>. They cannot exist independently and must always be <strong>inherent in something else</strong>.  </p>
+<ul>
+<li>
+<p><strong>Qualities</strong>  - Intrinsic properties of an independent continuant. They describe <strong>how an entity is</strong> at any moment in time.  </p>
+<ul>
+<li><em>Examples</em>: The color of a leaf, the weight of a person, the temperature of a liquid.</li>
+</ul>
+</li>
+<li>
+<p><strong>Roles</strong> - Situational properties that an entity has <strong>based on context or social convention</strong>.  </p>
+<ul>
+<li><em>Examples</em>: The role of a teacher, he status of a patient in a hospital, the role of a machine undergoing maintenance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dispositions and functions</strong> - Potential behaviors or tendencies that an entity has, even if they are not currently being realized. Functions are dispositions that represent the particular purpose of something.</p>
+<ul>
+<li><em>Examples</em>: The fragility of glass (it might break if dropped), the solubility of salt (it dissolves in water), a person’s ability to speak multiple languages, the function of an oven to heat something up, the function of a screwdriver to turn screws in and out.</li>
+</ul>
+</li>
+</ul>
+<h3 id="occurrents-perdurants"><strong>Occurrents (Perdurants)</strong></h3>
+<p>An occurrents is an <strong>entity that unfolds itself in time</strong> or it is the start or end of such an entity.</p>
+<h4 id="processes"><strong>Processes</strong></h4>
+<p>Processes are dynamic activities with temporal duration.  </p>
+<ul>
+<li><em>Examples</em>: A running event, a chemical reaction, cell division.  </li>
+</ul>
+<h4 id="temporal-regions"><strong>Temporal Regions</strong></h4>
+<p>These represent divisions of time.  </p>
+<ul>
+<li><em>Examples</em>: A second, an hour, a historical period.  </li>
+</ul>
+<h4 id="spatiotemporal-regions"><strong>Spatiotemporal Regions</strong></h4>
+<p>These combine space and time into a single entity.  </p>
+<ul>
+<li><em>Examples</em>: The path of a moving object, the trajectory of a planet.  </li>
+</ul>
+<h3 id="relations-in-bfo"><strong>Relations in BFO</strong></h3>
+<p>BFO defines formal <strong>relationships</strong> between entities to maintain consistency. Some key relations include:  </p>
+<ul>
+<li><strong>continunat part of</strong> – Indicates compositional relationships. (<em>Example: A wheel is part of a car.</em>) </li>
+<li><strong>occurent part of</strong> - Some process has another process as part. (<em>Example: A conference event has multiple workshop events.</em>)</li>
+<li><strong>located in</strong> – Specifies spatial containment. (<em>Example: A book is located_in a library.</em>)  </li>
+<li><strong>bearer of</strong> – Assigns specifically dependent continuants to independent continuants. (<em>Example: A teacher is the bearer of the educator role.</em>)  </li>
+<li><strong>has participant</strong> - Assigns continuants to processes. (<em>Example: A student participates a lecture event.</em>)</li>
+</ul>
+<p>More information about BFO can be found at the <a href="https://github.com/bfo-ontology/BFO-2020">GitHub repo</a> and the <a href="https://basic-formal-ontology.org/bfo-2020.html">documentation page</a>. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
+      
+        <script src="../extra-loader.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>
