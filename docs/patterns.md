@@ -35,6 +35,25 @@ stateDiagram
 #  bfo_two_dimensional --> bfo_temporal_region: subClassOf 
 
 ```
+<script>
+  var mermaidConfig = {
+    startOnLoad: false,
+    theme: "base",
+    fontFamily: "Inter, system-ui, sans-serif",
+    themeVariables: {
+      background: "#f3f7f8",
+      primaryColor: "#e6eef2",
+      primaryBorderColor: "#134f5c",
+      primaryTextColor: "#0b1320",
+      lineColor: "#134f5c",
+      tertiaryColor: "#ec941c",
+      edgeLabelBackground: "#ffffff",
+      fontSize: "14px"
+    }
+  };
+  // optional, but harmless
+  window.mermaidConfig = mermaidConfig;
+</script>
 
 ```mermaid
 stateDiagram
