@@ -1,0 +1,17 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?x  max(?iri) WHERE {
+    VALUES ?class { owl:Class owl:NamedIndividual owl:ObjectProperty owl:DatatypeProperty }
+	?x rdf:type ?class .
+	OPTIONAL {?x rdfs:label ?lab}
+	FILTER (!isBlank(?x))
+	FILTER (lang(?lab)="en")
+	BIND(CONCAT( "https://nfdi.fiz-karlsruhe.de/ontology/", REPLACE(  REPLACE(  ?lab   , "\\.","")   , " ", "_", "i")) AS ?iri)
+}
+GROUP BY ?x ORDER BY ?x 
+
+
+# robot query --input nfdicore.ttl --query src/sparql/all-labels.sparql output.csv
+# robot rename --input nfdicore.ttl --mappings output.csv --allow-duplicates true --output nfdicore-readable-iris.ttl
