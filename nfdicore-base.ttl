@@ -17,7 +17,7 @@
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.2> ;
                                           dce:type obo:IAO_8000001 ;
                                           dcterms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.2" ;
-                                          dcterms:created "2025-09-17" ;
+                                          dcterms:created "2025-09-25" ;
                                           dcterms:creator <https://nfdi4culture.de/id/E1925> ,
                                                           <https://nfdi4culture.de/id/E2415> ,
                                                           <https://nfdi4culture.de/id/E2416> ,
@@ -94,6 +94,10 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 skos:editorialNote rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#example
 skos:example rdf:type owl:AnnotationProperty .
 
@@ -122,6 +126,14 @@ ontology:NFDI_0010015 rdf:type owl:AnnotationProperty ;
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/BFO_0000050
+obo:BFO_0000050 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000054
 obo:BFO_0000054 rdf:type owl:ObjectProperty .
 
@@ -130,40 +142,8 @@ obo:BFO_0000054 rdf:type owl:ObjectProperty .
 obo:BFO_0000055 rdf:type owl:ObjectProperty .
 
 
-###  http://purl.obolibrary.org/obo/BFO_0000056
-obo:BFO_0000056 rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000057
-obo:BFO_0000057 rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000059
-obo:BFO_0000059 rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000115
-obo:BFO_0000115 rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000171
-obo:BFO_0000171 rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000176
-obo:BFO_0000176 rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000178
-obo:BFO_0000178 rdf:type owl:ObjectProperty .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000196
 obo:BFO_0000196 rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000197
-obo:BFO_0000197 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000136
@@ -176,6 +156,34 @@ obo:IAO_0000219 rdf:type owl:ObjectProperty .
 
 ###  http://purl.obolibrary.org/obo/IAO_0000235
 obo:IAO_0000235 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000059
+obo:RO_0000059 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000081
+obo:RO_0000081 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+obo:RO_0000087 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001025
+obo:RO_0001025 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002351
+obo:RO_0002351 rdf:type owl:ObjectProperty .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103
@@ -275,7 +283,7 @@ ontology:NFDI_0000133 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137
 ontology:NFDI_0000137 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000057 ;
+                      rdfs:subPropertyOf obo:RO_0000057 ;
                       owl:inverseOf ontology:NFDI_0000138 ;
                       rdfs:domain ontology:NFDI_0000002 ;
                       rdfs:range [ owl:intersectionOf ( obo:OBI_0000245
@@ -292,7 +300,7 @@ ontology:NFDI_0000137 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138
 ontology:NFDI_0000138 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000056 ;
+                      rdfs:subPropertyOf obo:RO_0000056 ;
                       rdfs:domain obo:OBI_0000245 ;
                       rdfs:comment "inverse of property \"has funding organization\""@en ;
                       rdfs:label "funding organization of"@en .
@@ -318,7 +326,7 @@ ontology:NFDI_0000143 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144
 ontology:NFDI_0000144 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000171 ;
+                      rdfs:subPropertyOf obo:RO_0001025 ;
                       rdfs:range ontology:NFDI_0000005 ;
                       rdfs:comment "The property is a relationship between a thing and a place its located at."@en ;
                       rdfs:label "has location"@en .
@@ -344,7 +352,7 @@ ontology:NFDI_0000147 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152
 ontology:NFDI_0000152 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000057 ;
+                      rdfs:subPropertyOf obo:RO_0000057 ;
                       owl:inverseOf ontology:NFDI_0001024 ;
                       rdfs:comment "p has input x =Def x is used or consumed in the process of executing p." ;
                       rdfs:label "has input"@en .
@@ -352,7 +360,7 @@ ontology:NFDI_0000152 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153
 ontology:NFDI_0000153 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000057 ;
+                      rdfs:subPropertyOf obo:RO_0000057 ;
                       owl:inverseOf ontology:NFDI_0001023 ;
                       rdfs:comment "p has output x =Def x is produced or generated as a result of executing p." ;
                       rdfs:label "has output"@en .
@@ -360,7 +368,7 @@ ontology:NFDI_0000153 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182
 ontology:NFDI_0000182 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000176 ;
+                      rdfs:subPropertyOf obo:BFO_0000050 ;
                       rdfs:domain obo:OBI_0000245 ;
                       rdfs:range obo:OBI_0000245 ;
                       rdfs:comment "The property is a parental relationship between organizations."@en ;
@@ -410,7 +418,7 @@ ontology:NFDI_0000192 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194
 ontology:NFDI_0000194 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000056 ;
+                      rdfs:subPropertyOf obo:RO_0000056 ;
                       rdfs:domain ontology:NFDI_0000001 ;
                       rdfs:range ontology:NFDI_0000002 ;
                       rdfs:comment "The property is a relationship between a project or a resource and related projects."@en ;
@@ -524,7 +532,7 @@ ontology:NFDI_0000212 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213
 ontology:NFDI_0000213 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000178 ;
+                      rdfs:subPropertyOf obo:BFO_0000051 ;
                       rdfs:domain obo:OBI_0000245 ;
                       rdfs:range obo:OBI_0000245 ;
                       rdfs:comment "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en ;
@@ -588,14 +596,14 @@ ontology:NFDI_0001006 rdf:type owl:ObjectProperty ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023
 ontology:NFDI_0001023 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000056 ;
+                      rdfs:subPropertyOf obo:RO_0000056 ;
                       rdfs:comment "inverse of the relation 'has output'" ;
                       rdfs:label "is output of"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024
 ontology:NFDI_0001024 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf obo:BFO_0000056 ;
+                      rdfs:subPropertyOf obo:RO_0000056 ;
                       rdfs:comment "inverse of the relation 'has input'" ;
                       rdfs:label "is input of"@en .
 
@@ -661,7 +669,7 @@ ontology:NFDI_0000128 rdf:type owl:DatatypeProperty ;
 ontology:NFDI_0000135 rdf:type owl:DatatypeProperty ;
                       rdfs:domain ontology:NFDI_0000001 ;
                       rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
-                      rdfs:label "file extension" ;
+                      rdfs:label "file extension"@en ;
                       skos:example "mp4" ,
                                    "ttl" ,
                                    "txt" ,
@@ -814,7 +822,7 @@ ontology:NFDI_0000004 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000102 ,
                                       [ owl:intersectionOf ( obo:BFO_0000030
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000196 ;
+                                                               owl:onProperty obo:RO_0000087 ;
                                                                owl:someValuesFrom ontology:NFDI_0000229
                                                              ]
                                                            ) ;
@@ -840,9 +848,9 @@ ontology:NFDI_0000005 rdf:type owl:Class ;
 ontology:NFDI_0000006 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( obo:OBI_0000245
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000115 ;
+                                                               owl:onProperty obo:RO_0002351 ;
                                                                owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty obo:BFO_0000196 ;
+                                                                                    owl:onProperty obo:RO_0000087 ;
                                                                                     owl:someValuesFrom ontology:NFDI_0000110
                                                                                   ]
                                                              ]
@@ -884,8 +892,7 @@ ontology:NFDI_0000008 rdf:type owl:Class ;
                                                                                )
                                                                  ]
                                                                  [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty [ owl:inverseOf ontology:NFDI_0000153
-                                                                                  ] ;
+                                                                   owl:onProperty ontology:NFDI_0001024 ;
                                                                    owl:someValuesFrom ontology:NFDI_0000224
                                                                  ]
                                                                ) ;
@@ -893,8 +900,7 @@ ontology:NFDI_0000008 rdf:type owl:Class ;
                                           ] ;
                       rdfs:subClassOf ontology:NFDI_0000001 ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty [ owl:inverseOf ontology:NFDI_0000153
-                                                       ] ;
+                                        owl:onProperty ontology:NFDI_0001024 ;
                                         owl:someValuesFrom ontology:NFDI_0000224
                                       ] ;
                       rdfs:comment "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
@@ -947,7 +953,7 @@ ontology:NFDI_0000016 rdf:type owl:Class ;
 ontology:NFDI_0000017 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:onProperty obo:RO_0000081 ;
                                                                owl:someValuesFrom ontology:NFDI_0000004
                                                              ]
                                                            ) ;
@@ -961,9 +967,9 @@ ontology:NFDI_0000017 rdf:type owl:Class ;
 ontology:NFDI_0000018 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000131
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000057 ;
+                                                               owl:onProperty obo:RO_0000057 ;
                                                                owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty obo:BFO_0000196 ;
+                                                                                    owl:onProperty obo:RO_0000087 ;
                                                                                     owl:someValuesFrom ontology:NFDI_0000019
                                                                                   ]
                                                              ]
@@ -978,7 +984,7 @@ ontology:NFDI_0000018 rdf:type owl:Class ;
 ontology:NFDI_0000019 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:onProperty obo:RO_0000081 ;
                                                                owl:someValuesFrom obo:OBI_0000245
                                                              ]
                                                            ) ;
@@ -992,7 +998,7 @@ ontology:NFDI_0000019 rdf:type owl:Class ;
 ontology:NFDI_0000020 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:onProperty obo:RO_0000081 ;
                                                                owl:someValuesFrom obo:OBI_0000245
                                                              ]
                                                            ) ;
@@ -1010,7 +1016,7 @@ ontology:NFDI_0000021 rdf:type owl:Class ;
                                                                owl:someValuesFrom ontology:NFDI_0000227
                                                              ]
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000059 ;
+                                                               owl:onProperty obo:RO_0000059 ;
                                                                owl:someValuesFrom ontology:NFDI_0001002
                                                              ]
                                                            ) ;
@@ -1121,7 +1127,7 @@ ontology:NFDI_0000101 rdf:type owl:Class ;
 ontology:NFDI_0000102 rdf:type owl:Class ;
                       owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000004
                                                                  [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty obo:BFO_0000196 ;
+                                                                   owl:onProperty obo:RO_0000087 ;
                                                                    owl:someValuesFrom ontology:NFDI_0000229
                                                                  ]
                                                                ) ;
@@ -1129,7 +1135,7 @@ ontology:NFDI_0000102 rdf:type owl:Class ;
                                           ] ;
                       rdfs:subClassOf obo:BFO_0000004 ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty obo:BFO_0000196 ;
+                                        owl:onProperty obo:RO_0000087 ;
                                         owl:someValuesFrom ontology:NFDI_0000229
                                       ] ;
                       rdfs:comment "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
@@ -1164,7 +1170,7 @@ ontology:NFDI_0000110 rdf:type owl:Class ;
                                                                    owl:someValuesFrom ontology:NFDI_0000002
                                                                  ]
                                                                  [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty obo:BFO_0000197 ;
+                                                                   owl:onProperty obo:RO_0000081 ;
                                                                    owl:allValuesFrom obo:OBI_0000245
                                                                  ]
                                                                ) ;
@@ -1210,10 +1216,10 @@ ontology:NFDI_0000118 rdf:type owl:Class ;
                                                                    owl:someValuesFrom ontology:NFDI_0000115
                                                                  ]
                                                                  [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty obo:BFO_0000197 ;
+                                                                   owl:onProperty obo:RO_0000081 ;
                                                                    owl:someValuesFrom [ owl:intersectionOf ( ontology:NFDI_0000102
                                                                                                              [ rdf:type owl:Restriction ;
-                                                                                                               owl:onProperty obo:BFO_0000056 ;
+                                                                                                               owl:onProperty obo:RO_0000056 ;
                                                                                                                owl:someValuesFrom ontology:NFDI_0000115
                                                                                                              ]
                                                                                                            ) ;
@@ -1229,10 +1235,10 @@ ontology:NFDI_0000118 rdf:type owl:Class ;
                                         owl:someValuesFrom ontology:NFDI_0000115
                                       ] ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty obo:BFO_0000197 ;
+                                        owl:onProperty obo:RO_0000081 ;
                                         owl:someValuesFrom [ owl:intersectionOf ( ontology:NFDI_0000102
                                                                                   [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty obo:BFO_0000056 ;
+                                                                                    owl:onProperty obo:RO_0000056 ;
                                                                                     owl:someValuesFrom ontology:NFDI_0000115
                                                                                   ]
                                                                                 ) ;
@@ -1298,7 +1304,7 @@ ontology:NFDI_0000134 rdf:type owl:Class ;
 ontology:NFDI_0000139 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:onProperty obo:RO_0000081 ;
                                                                owl:someValuesFrom obo:OBI_0000245
                                                              ]
                                                            ) ;
@@ -1493,7 +1499,7 @@ ontology:NFDI_0000223 rdf:type owl:Class ;
 ontology:NFDI_0000224 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( obo:BFO_0000015
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000057 ;
+                                                               owl:onProperty obo:RO_0000057 ;
                                                                owl:someValuesFrom ontology:NFDI_0000004
                                                              ]
                                                            ) ;
@@ -1535,7 +1541,7 @@ ontology:NFDI_0000228 rdf:type owl:Class ;
 ontology:NFDI_0000229 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( obo:BFO_0000023
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:onProperty obo:RO_0000081 ;
                                                                owl:someValuesFrom ontology:NFDI_0000102
                                                              ]
                                                            ) ;
@@ -1569,7 +1575,7 @@ ontology:NFDI_0000231 rdf:type owl:Class ;
                                                                ) ;
                                             rdf:type owl:Class
                                           ] ;
-                      rdfs:subClassOf ontology:NFDI_0000102 ,
+                      rdfs:subClassOf obo:BFO_0000004 ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty obo:BFO_0000196 ;
                                         owl:someValuesFrom ontology:NFDI_0000118
@@ -1653,7 +1659,7 @@ ontology:NFDI_0001005 rdf:type owl:Class ;
                                                                ) ;
                                             rdf:type owl:Class
                                           ] ;
-                      rdfs:subClassOf ontology:NFDI_0000102 ,
+                      rdfs:subClassOf obo:BFO_0000004 ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty obo:BFO_0000196 ;
                                         owl:someValuesFrom ontology:NFDI_0000114
@@ -1763,7 +1769,7 @@ ontology:NFDI_0001016 rdf:type owl:Class ;
 ontology:NFDI_0001017 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000033
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000178 ;
+                                                               owl:onProperty obo:BFO_0000051 ;
                                                                owl:someValuesFrom ontology:NFDI_0000148
                                                              ]
                                                            ) ;
@@ -1791,7 +1797,7 @@ ontology:NFDI_0001019 rdf:type owl:Class ;
 ontology:NFDI_0001020 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000131
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000057 ;
+                                                               owl:onProperty obo:RO_0000057 ;
                                                                owl:someValuesFrom obo:OBI_0000245
                                                              ]
                                                            ) ;
@@ -1805,7 +1811,7 @@ ontology:NFDI_0001020 rdf:type owl:Class ;
 ontology:NFDI_0001021 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000131
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000057 ;
+                                                               owl:onProperty obo:RO_0000057 ;
                                                                owl:someValuesFrom obo:OBI_0000245
                                                              ]
                                                            ) ;
@@ -1827,7 +1833,7 @@ ontology:NFDI_0001025 rdf:type owl:Class ;
                       rdfs:subClassOf obo:BFO_0000015 ;
                       obo:IAO_0000119 obo:NCIT_C42620 ;
                       rdfs:comment "A process by which something is brought into existence; having been brought into existence."@en ;
-                      rdfs:label "creation process"@de ;
+                      rdfs:label "creation process"@en ;
                       ontology:NFDI_0010013 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95" .
 
 
@@ -1881,7 +1887,7 @@ ontology:NFDI_0001033 rdf:type owl:Class ;
 ontology:NFDI_0001034 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       rdfs:comment "A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]"@en ;
-                      rdfs:label "uniform resource locator"@de ;
+                      rdfs:label "uniform resource locator"@en ;
                       rdfs:seeAlso "http://purl.allotrope.org/ontologies/result#AFR_0001068" ;
                       ontology:NFDI_0010013 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95" .
 
@@ -1939,7 +1945,7 @@ ontology:NFDI_0001039 rdf:type owl:Class ;
                                       "https://www.nfdi.de/" ;
                       rdfs:comment "An NFDI Consortium is a collaborative organizational entity within the German National Research Data Infrastructure (NFDI) initiative, responsible for the development, management, and coordination of research data infrastructures in specific scientific domains." ,
                                    "The National Research Data Infrastructure (NFDI) is intended to sytematically manage scientifich and research data, provide long-term data storage, backup and accessibility, and network the data (inter-)nationally. The German Research Foundation (DFG) and the Joint Science Conference (GWK) are working together to establish and fund the NFDI, on the basis of the administrative agreement concluded by the Federal Government and the federal states on November 26, 2018. The NFDI is designed as a nationwide network, which is built gradually and cooperatively by the respective communities. The goal is to provide a reliable and sustainable service portfolio that covers generic and disciplinary requirements of research data management in Germany. The NFDI is developed step by step and science-oriented with services available to researchers from vaious disciplines, institutions, and federal states." ;
-                      rdfs:label "nfdi consortium"@en .
+                      rdfs:label "NFDI consortium"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040
@@ -2101,7 +2107,7 @@ ontology:NFDI_0001057 rdf:type owl:Class ;
 ontology:NFDI_0001058 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:onProperty obo:RO_0000081 ;
                                                                owl:someValuesFrom ontology:NFDI_0000004
                                                              ]
                                                            ) ;
@@ -2138,7 +2144,7 @@ ontology:NFDI_0001061 rdf:type owl:Class ;
 ontology:NFDI_0001062 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000229
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000197 ;
+                                                               owl:onProperty obo:RO_0000081 ;
                                                                owl:someValuesFrom ontology:NFDI_0000004
                                                              ]
                                                            ) ;
@@ -2262,7 +2268,8 @@ ontology:NFDI_0010027 rdf:type owl:Class ;
 ontology:NFDI_0010028 rdf:type owl:Class ;
                       rdfs:subClassOf obo:BFO_0000015 ;
                       rdfs:comment "A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication." ;
-                      rdfs:label "data handling process"@en .
+                      rdfs:label "data handling process"@en ;
+                      rdfs:seeAlso obo:T4FS_0000012 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010029
@@ -2276,7 +2283,8 @@ ontology:NFDI_0010029 rdf:type owl:Class ;
 ontology:NFDI_0010030 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0010028 ;
                       rdfs:comment "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends." ;
-                      rdfs:label "data processing process"@en .
+                      rdfs:label "data processing process"@en ;
+                      skos:exactMatch obo:T4FS_0000044 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010031
@@ -2297,7 +2305,8 @@ ontology:NFDI_0010033 rdf:type owl:Class ;
 ontology:NFDI_0010034 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0010028 ;
                       rdfs:comment "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset." ;
-                      rdfs:label "data cleaning process"@en .
+                      rdfs:label "data cleaning process"@en ;
+                      skos:exactMatch obo:T4FS_0000384 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010035
@@ -2311,7 +2320,8 @@ ontology:NFDI_0010035 rdf:type owl:Class ;
 ontology:NFDI_0010036 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0010028 ;
                       rdfs:comment "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis." ;
-                      rdfs:label "data integration process"@en .
+                      rdfs:label "data integration process"@en ;
+                      skos:exactMatch obo:T4FS_0000487 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010037
@@ -2655,7 +2665,7 @@ ontology:NFDI_0010008 rdf:type owl:NamedIndividual ,
 ontology:NFDI_0010010 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0000100 ;
                       rdfs:comment "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en ;
-                      rdfs:label "physic"@en ;
+                      rdfs:label "physics"@en ;
                       rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
 
 

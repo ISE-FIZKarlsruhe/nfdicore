@@ -15,7 +15,7 @@
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
                                           owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.2> ;
                                           terms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.2" ;
-                                          terms:created "2025-09-17" ;
+                                          terms:created "2025-09-25" ;
                                           terms:creator <https://nfdi4culture.de/id/E1925> ,
                                                         <https://nfdi4culture.de/id/E2415> ,
                                                         <https://nfdi4culture.de/id/E2416> ,
@@ -86,6 +86,10 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#editorialNote
 skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#example
@@ -517,7 +521,7 @@ ontology:NFDI_0000128 rdf:type owl:DatatypeProperty ;
 ontology:NFDI_0000135 rdf:type owl:DatatypeProperty ;
                       rdfs:domain ontology:NFDI_0000001 ;
                       rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
-                      rdfs:label "file extension" ;
+                      rdfs:label "file extension"@en ;
                       skos:example "mp4" ,
                                    "ttl" ,
                                    "txt" ,
@@ -613,8 +617,7 @@ ontology:NFDI_0000007 rdf:type owl:Class ;
 ontology:NFDI_0000008 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000001 ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty [ owl:inverseOf ontology:NFDI_0000153
-                                                       ] ;
+                                        owl:onProperty ontology:NFDI_0001024 ;
                                         owl:someValuesFrom ontology:NFDI_0000224
                                       ] ;
                       rdfs:comment "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
@@ -1062,7 +1065,6 @@ ontology:NFDI_0000230 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000231
 ontology:NFDI_0000231 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000102 ;
                       rdfs:comment "An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en ;
                       rdfs:label "contributor"@en .
 
@@ -1108,7 +1110,6 @@ ontology:NFDI_0001004 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001005
 ontology:NFDI_0001005 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000102 ;
                       rdfs:comment "An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems." ;
                       rdfs:label "contact point"@en ;
                       skos:example """:ex_1  a \"nfdi:contact point\" .
@@ -1252,7 +1253,7 @@ ontology:NFDI_0001022 rdf:type owl:Class ;
 ontology:NFDI_0001025 rdf:type owl:Class ;
                       obo:IAO_0000119 obo:NCIT_C42620 ;
                       rdfs:comment "A process by which something is brought into existence; having been brought into existence."@en ;
-                      rdfs:label "creation process"@de ;
+                      rdfs:label "creation process"@en ;
                       ontology:NFDI_0010013 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95" .
 
 
@@ -1305,7 +1306,7 @@ ontology:NFDI_0001033 rdf:type owl:Class ;
 ontology:NFDI_0001034 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       rdfs:comment "A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]"@en ;
-                      rdfs:label "uniform resource locator"@de ;
+                      rdfs:label "uniform resource locator"@en ;
                       rdfs:seeAlso "http://purl.allotrope.org/ontologies/result#AFR_0001068" ;
                       ontology:NFDI_0010013 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95" .
 
@@ -1349,7 +1350,7 @@ ontology:NFDI_0001039 rdf:type owl:Class ;
                                       "https://www.nfdi.de/" ;
                       rdfs:comment "An NFDI Consortium is a collaborative organizational entity within the German National Research Data Infrastructure (NFDI) initiative, responsible for the development, management, and coordination of research data infrastructures in specific scientific domains." ,
                                    "The National Research Data Infrastructure (NFDI) is intended to sytematically manage scientifich and research data, provide long-term data storage, backup and accessibility, and network the data (inter-)nationally. The German Research Foundation (DFG) and the Joint Science Conference (GWK) are working together to establish and fund the NFDI, on the basis of the administrative agreement concluded by the Federal Government and the federal states on November 26, 2018. The NFDI is designed as a nationwide network, which is built gradually and cooperatively by the respective communities. The goal is to provide a reliable and sustainable service portfolio that covers generic and disciplinary requirements of research data management in Germany. The NFDI is developed step by step and science-oriented with services available to researchers from vaious disciplines, institutions, and federal states." ;
-                      rdfs:label "nfdi consortium"@en .
+                      rdfs:label "NFDI consortium"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040
@@ -1644,7 +1645,8 @@ ontology:NFDI_0010027 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028
 ontology:NFDI_0010028 rdf:type owl:Class ;
                       rdfs:comment "A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication." ;
-                      rdfs:label "data handling process"@en .
+                      rdfs:label "data handling process"@en ;
+                      rdfs:seeAlso obo:T4FS_0000012 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010029
@@ -1658,7 +1660,8 @@ ontology:NFDI_0010029 rdf:type owl:Class ;
 ontology:NFDI_0010030 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0010028 ;
                       rdfs:comment "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends." ;
-                      rdfs:label "data processing process"@en .
+                      rdfs:label "data processing process"@en ;
+                      skos:exactMatch obo:T4FS_0000044 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010031
@@ -1679,7 +1682,8 @@ ontology:NFDI_0010033 rdf:type owl:Class ;
 ontology:NFDI_0010034 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0010028 ;
                       rdfs:comment "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset." ;
-                      rdfs:label "data cleaning process"@en .
+                      rdfs:label "data cleaning process"@en ;
+                      skos:exactMatch obo:T4FS_0000384 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010035
@@ -1693,7 +1697,8 @@ ontology:NFDI_0010035 rdf:type owl:Class ;
 ontology:NFDI_0010036 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0010028 ;
                       rdfs:comment "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis." ;
-                      rdfs:label "data integration process"@en .
+                      rdfs:label "data integration process"@en ;
+                      skos:exactMatch obo:T4FS_0000487 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010037
@@ -2032,7 +2037,7 @@ ontology:NFDI_0010008 rdf:type owl:NamedIndividual ,
 ontology:NFDI_0010010 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0000100 ;
                       rdfs:comment "An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling."@en ;
-                      rdfs:label "physic"@en ;
+                      rdfs:label "physics"@en ;
                       rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
 
 

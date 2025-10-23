@@ -13,6 +13,7 @@ export_formats:
   - owl
   - ttl
 import_group:
+   annotation_properties: ['rdfs:label', 'IAO:0000119','IAO:0000115', 'IAO:0000116', 'IAO:0000112', 'skos:definition', 'skos:example', 'skos:comment', 'OMO:0002000' ]
    products:
     - id: bfo
       #mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/release-2024-01-29/src/owl/bfo-core.ttl

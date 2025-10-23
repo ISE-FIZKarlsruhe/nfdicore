@@ -7,47 +7,21 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-09-25/imports/dcat_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-10-23/imports/dcat_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/ns/dcat3>)
-Annotation(owl:versionInfo "2025-09-25")
+Annotation(owl:versionInfo "2025-10-23")
 
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#downloadURL>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/created>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/modified>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/publisher>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
-Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/editor>))
-Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/translator>))
-Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespacePrefix>))
-Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNote>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#scopeNote>))
-Declaration(AnnotationProperty(<http://www.w3.org/ns/adms#versionNotes>))
-Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/depiction>))
 Declaration(Datatype(xsd:date))
 
 ############################
 #   Object Properties
 ############################
 
-# Object Property: <http://www.w3.org/ns/dcat#downloadURL> (رابط تحميل)
+# Object Property: <http://www.w3.org/ns/dcat#downloadURL> (URL souboru ke stažení)
 
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "Ceci est un lien direct à un fichier téléchargeable en un format donnée. Exple fichier CSV ou RDF. Le format est décrit par les propriétés de distribution dcterms:format et/ou dcat:mediaType."@fr)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "La URL de un archivo descargable en el formato dato. Por ejemplo, archivo CSV o archivo RDF. El formato se describe con las propiedades de la distribución dcterms:format y/o dcat:mediaType."@es)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "Questo è un link diretto al file scaricabile in un dato formato. E.g. un file CSV o un file RDF. Il formato è descritto dal dcterms:format e/o dal dcat:mediaType della distribuzione."@it)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType."@en)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "URL souboru ke stažení v daném formátu, například CSV nebo RDF soubor. Formát je popsán vlastností distribuce dcterms:format a/nebo dcat:mediaType."@cs)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "URL til fil der kan downloades i et bestemt format. Fx en CSV-fil eller en RDF-fil. Formatet for distributionen angives ved hjælp af egenskaberne dcterms:format og/eller dcat:mediaType."@da)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "dcat:downloadURLはdcat:accessURLの特定の形式です。しかし、DCATプロファイルが非ダウンロード・ロケーションに対してのみaccessURLを用いる場合には、より強い分離を課すことを望む可能性があるため、この含意を強化しないように、DCATは、dcat:downloadURLをdcat:accessURLのサブプロパティーであると定義しません。"@ja)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "Είναι ένας σύνδεσμος άμεσης μεταφόρτωσης ενός αρχείου σε μια δεδομένη μορφή. Π.χ. ένα αρχείο CSV ή RDF. Η μορφη αρχείου περιγράφεται από τις ιδιότητες dcterms:format ή/και dcat:mediaType της διανομής."@el)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dcat#downloadURL> "رابط مباشر لملف يمكن تحميله. نوع الملف يتم توصيفه باستخدام الخاصية dcterms:format dcat:mediaType "@ar)
-AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/dcat#downloadURL> <http://www.w3.org/TR/vocab-dcat/>)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL de descarga"@es)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL de téléchargement"@fr)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL di scarico"@it)
@@ -66,15 +40,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/ns/dcat#downloadURL> "dcat:downloadURLはdcat:accessURLの特定の形式です。しかし、DCATプロファイルが非ダウンロード・ロケーションに対してのみaccessURLを用いる場合には、より強い分離を課すことを望む可能性があるため、この含意を強化しないように、DCATは、dcat:downloadURLをdcat:accessURLのサブプロパティーであると定義しません。"@ja)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/ns/dcat#downloadURL> "Είναι ένας σύνδεσμος άμεσης μεταφόρτωσης ενός αρχείου σε μια δεδομένη μορφή. Π.χ. ένα αρχείο CSV ή RDF. Η μορφη αρχείου περιγράφεται από τις ιδιότητες dcterms:format ή/και dcat:mediaType της διανομής."@el)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/ns/dcat#downloadURL> "رابط مباشر لملف يمكن تحميله. نوع الملف يتم توصيفه باستخدام الخاصية dcterms:format dcat:mediaType "@ar)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/ns/dcat#downloadURL> "Status: English  Definition text modified by DCAT revision team, Italian, Spanish and Czech translation updated, other translations pending."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/ns/dcat#downloadURL> "rdfs:label, rdfs:comment and/or skos:scopeNote have been modified. Non-english versions must be updated."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/ns/dcat#downloadURL> "El valor es una URL."@es)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/ns/dcat#downloadURL> "La valeur est une URL."@fr)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/ns/dcat#downloadURL> "dcat:downloadURL BY MĚLA být použita pro adresu, ze které je distribuce přímo přístupná, typicky skrze požadavek HTTP Get."@cs)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/ns/dcat#downloadURL> "dcat:downloadURL BØR anvendes til angivelse af den adresse hvor distributionen er tilgængelig direkte, typisk gennem et HTTP Get request."@da)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/ns/dcat#downloadURL> "dcat:downloadURL DOVREBBE essere utilizzato per l'indirizzo a cui questa distribuzione è disponibile direttamente, in genere attraverso una richiesta Get HTTP."@it)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/ns/dcat#downloadURL> "dcat:downloadURL SHOULD be used for the address at which this distribution is available directly, typically through a HTTP Get request."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/ns/dcat#downloadURL> "Η τιμή είναι ένα URL."@el)
 
 
 

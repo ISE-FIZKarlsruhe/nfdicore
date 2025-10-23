@@ -17,7 +17,7 @@
         <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.2"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:bibliographicCitation>Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.2</dcterms:bibliographicCitation>
-        <dcterms:created>2025-09-17</dcterms:created>
+        <dcterms:created>2025-09-25</dcterms:created>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
@@ -132,6 +132,12 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#example -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
@@ -178,6 +184,18 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054"/>
@@ -190,57 +208,9 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000056 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000056"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000057 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000057"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000059 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000059"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000115 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000115"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000171 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000171"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000176 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000176"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000178 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000178"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000196 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000196"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197"/>
     
 
 
@@ -259,6 +229,48 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000059"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000081 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000081"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001025 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001025"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351"/>
     
 
 
@@ -396,7 +408,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:range>
@@ -419,7 +431,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
         <rdfs:comment xml:lang="en">inverse of property &quot;has funding organization&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">funding organization of</rdfs:label>
@@ -454,7 +466,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000171"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a thing and a place its located at.</rdfs:comment>
         <rdfs:label xml:lang="en">has location</rdfs:label>
@@ -489,7 +501,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024"/>
         <rdfs:comment>p has input x =Def x is used or consumed in the process of executing p.</rdfs:comment>
         <rdfs:label xml:lang="en">has input</rdfs:label>
@@ -500,7 +512,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023"/>
         <rdfs:comment>p has output x =Def x is produced or generated as a result of executing p.</rdfs:comment>
         <rdfs:label xml:lang="en">has output</rdfs:label>
@@ -511,7 +523,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
         <rdfs:comment xml:lang="en">The property is a parental relationship between organizations.</rdfs:comment>
@@ -579,7 +591,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:comment xml:lang="en">The property is a relationship between a project or a resource and related projects.</rdfs:comment>
@@ -732,7 +744,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
         <rdfs:comment xml:lang="en">The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization</rdfs:comment>
@@ -820,7 +832,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:comment>inverse of the relation &apos;has output&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">is output of</rdfs:label>
     </owl:ObjectProperty>
@@ -830,7 +842,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024 -->
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:comment>inverse of the relation &apos;has input&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">is input of</rdfs:label>
     </owl:ObjectProperty>
@@ -924,7 +936,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000135">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:comment xml:lang="en">An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don&apos;t use dot at start.</rdfs:comment>
-        <rdfs:label>file extension</rdfs:label>
+        <rdfs:label xml:lang="en">file extension</rdfs:label>
         <skos:example>mp4</skos:example>
         <skos:example>ttl</skos:example>
         <skos:example>txt</skos:example>
@@ -1150,7 +1162,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000030"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1185,10 +1197,10 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000245"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000115"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
@@ -1246,11 +1258,7 @@ But what about the organization or plan behind it?
                         </owl:unionOf>
                     </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153"/>
-                            </rdf:Description>
-                        </owl:onProperty>
+                        <owl:onProperty rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1259,11 +1267,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153"/>
-                    </rdf:Description>
-                </owl:onProperty>
+                <owl:onProperty rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024"/>
                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1338,7 +1342,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1358,10 +1362,10 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000019"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
@@ -1383,7 +1387,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1403,7 +1407,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1427,7 +1431,7 @@ But what about the organization or plan behind it?
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000227"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000059"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001002"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1580,7 +1584,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1589,7 +1593,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1637,7 +1641,7 @@ But what about the organization or plan behind it?
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1700,13 +1704,13 @@ But what about the organization or plan behind it?
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
                                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
@@ -1725,13 +1729,13 @@ But what about the organization or plan behind it?
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
                                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -1822,7 +1826,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -2095,7 +2099,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -2155,7 +2159,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -2201,7 +2205,7 @@ But what about the organization or plan behind it?
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
@@ -2320,7 +2324,7 @@ But what about the organization or plan behind it?
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
@@ -2462,7 +2466,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000033"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000148"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -2502,7 +2506,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -2522,7 +2526,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -2550,7 +2554,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C42620"/>
         <rdfs:comment xml:lang="en">A process by which something is brought into existence; having been brought into existence.</rdfs:comment>
-        <rdfs:label xml:lang="de">creation process</rdfs:label>
+        <rdfs:label xml:lang="en">creation process</rdfs:label>
         <ontology:NFDI_0010013>issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95</ontology:NFDI_0010013>
     </owl:Class>
     
@@ -2625,7 +2629,7 @@ But what about the organization or plan behind it?
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001034">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]</rdfs:comment>
-        <rdfs:label xml:lang="de">uniform resource locator</rdfs:label>
+        <rdfs:label xml:lang="en">uniform resource locator</rdfs:label>
         <rdfs:seeAlso>http://purl.allotrope.org/ontologies/result#AFR_0001068</rdfs:seeAlso>
         <ontology:NFDI_0010013>issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95</ontology:NFDI_0010013>
     </owl:Class>
@@ -2703,7 +2707,7 @@ But what about the organization or plan behind it?
         <obo:IAO_0000119>https://www.nfdi.de/</obo:IAO_0000119>
         <rdfs:comment>An NFDI Consortium is a collaborative organizational entity within the German National Research Data Infrastructure (NFDI) initiative, responsible for the development, management, and coordination of research data infrastructures in specific scientific domains.</rdfs:comment>
         <rdfs:comment>The National Research Data Infrastructure (NFDI) is intended to sytematically manage scientifich and research data, provide long-term data storage, backup and accessibility, and network the data (inter-)nationally. The German Research Foundation (DFG) and the Joint Science Conference (GWK) are working together to establish and fund the NFDI, on the basis of the administrative agreement concluded by the Federal Government and the federal states on November 26, 2018. The NFDI is designed as a nationwide network, which is built gradually and cooperatively by the respective communities. The goal is to provide a reliable and sustainable service portfolio that covers generic and disciplinary requirements of research data management in Germany. The NFDI is developed step by step and science-oriented with services available to researchers from vaious disciplines, institutions, and federal states.</rdfs:comment>
-        <rdfs:label xml:lang="en">nfdi consortium</rdfs:label>
+        <rdfs:label xml:lang="en">NFDI consortium</rdfs:label>
     </owl:Class>
     
 
@@ -2930,7 +2934,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -2982,7 +2986,7 @@ But what about the organization or plan behind it?
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
                         <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3152,6 +3156,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:comment>A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.</rdfs:comment>
         <rdfs:label xml:lang="en">data handling process</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000012"/>
     </owl:Class>
     
 
@@ -3172,6 +3177,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
         <rdfs:comment>A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.</rdfs:comment>
         <rdfs:label xml:lang="en">data processing process</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000044"/>
     </owl:Class>
     
 
@@ -3202,6 +3208,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
         <rdfs:comment>A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.</rdfs:comment>
         <rdfs:label xml:lang="en">data cleaning process</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000384"/>
     </owl:Class>
     
 
@@ -3222,6 +3229,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
         <rdfs:comment>A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.</rdfs:comment>
         <rdfs:label xml:lang="en">data integration process</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000487"/>
     </owl:Class>
     
 
@@ -3707,7 +3715,7 @@ But what about the organization or plan behind it?
     <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010010">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
         <rdfs:comment xml:lang="en">An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling.</rdfs:comment>
-        <rdfs:label xml:lang="en">physic</rdfs:label>
+        <rdfs:label xml:lang="en">physics</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:NamedIndividual>
     

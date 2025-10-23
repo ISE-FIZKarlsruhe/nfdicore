@@ -1,5 +1,5 @@
 
-## we do noooot import these anymore
+
 #http://purl.obolibrary.org/obo/OBI_0000011  # planned process
 #http://purl.obolibrary.org/obo/OBI_0200000  # data transformation
 #http://purl.obolibrary.org/obo/OBI_0000379  # mechanical function 
@@ -11,3 +11,4 @@
 #http://purl.obolibrary.org/obo/BFO_0000180 # BFO CLIF specification label
 
 http://purl.obolibrary.org/obo/OBI_0000245
+

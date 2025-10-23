@@ -15,7 +15,7 @@
     <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology">
         <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.2"/>
         <terms:bibliographicCitation>Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.2</terms:bibliographicCitation>
-        <terms:created>2025-09-17</terms:created>
+        <terms:created>2025-09-25</terms:created>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
@@ -121,6 +121,12 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
     
 
 
@@ -735,7 +741,7 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000135">
         <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:comment xml:lang="en">An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don&apos;t use dot at start.</rdfs:comment>
-        <rdfs:label>file extension</rdfs:label>
+        <rdfs:label xml:lang="en">file extension</rdfs:label>
         <skos:example>mp4</skos:example>
         <skos:example>ttl</skos:example>
         <skos:example>txt</skos:example>
@@ -869,11 +875,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153"/>
-                    </rdf:Description>
-                </owl:onProperty>
+                <owl:onProperty rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024"/>
                 <owl:someValuesFrom rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1496,7 +1498,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000231 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000231">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
         <rdfs:comment xml:lang="en">An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success.</rdfs:comment>
         <rdfs:label xml:lang="en">contributor</rdfs:label>
     </owl:Class>
@@ -1563,7 +1564,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001005 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001005">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
         <rdfs:comment>An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.</rdfs:comment>
         <rdfs:label xml:lang="en">contact point</rdfs:label>
         <skos:example>:ex_1  a &quot;nfdi:contact point&quot; .
@@ -1752,7 +1752,7 @@ But what about the organization or plan behind it?
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001025">
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C42620"/>
         <rdfs:comment xml:lang="en">A process by which something is brought into existence; having been brought into existence.</rdfs:comment>
-        <rdfs:label xml:lang="de">creation process</rdfs:label>
+        <rdfs:label xml:lang="en">creation process</rdfs:label>
         <ontology:NFDI_0010013>issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95</ontology:NFDI_0010013>
     </owl:Class>
     
@@ -1826,7 +1826,7 @@ But what about the organization or plan behind it?
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001034">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]</rdfs:comment>
-        <rdfs:label xml:lang="de">uniform resource locator</rdfs:label>
+        <rdfs:label xml:lang="en">uniform resource locator</rdfs:label>
         <rdfs:seeAlso>http://purl.allotrope.org/ontologies/result#AFR_0001068</rdfs:seeAlso>
         <ontology:NFDI_0010013>issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95</ontology:NFDI_0010013>
     </owl:Class>
@@ -1885,7 +1885,7 @@ But what about the organization or plan behind it?
         <obo:IAO_0000119>https://www.nfdi.de/</obo:IAO_0000119>
         <rdfs:comment>An NFDI Consortium is a collaborative organizational entity within the German National Research Data Infrastructure (NFDI) initiative, responsible for the development, management, and coordination of research data infrastructures in specific scientific domains.</rdfs:comment>
         <rdfs:comment>The National Research Data Infrastructure (NFDI) is intended to sytematically manage scientifich and research data, provide long-term data storage, backup and accessibility, and network the data (inter-)nationally. The German Research Foundation (DFG) and the Joint Science Conference (GWK) are working together to establish and fund the NFDI, on the basis of the administrative agreement concluded by the Federal Government and the federal states on November 26, 2018. The NFDI is designed as a nationwide network, which is built gradually and cooperatively by the respective communities. The goal is to provide a reliable and sustainable service portfolio that covers generic and disciplinary requirements of research data management in Germany. The NFDI is developed step by step and science-oriented with services available to researchers from vaious disciplines, institutions, and federal states.</rdfs:comment>
-        <rdfs:label xml:lang="en">nfdi consortium</rdfs:label>
+        <rdfs:label xml:lang="en">NFDI consortium</rdfs:label>
     </owl:Class>
     
 
@@ -2295,6 +2295,7 @@ But what about the organization or plan behind it?
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028">
         <rdfs:comment>A process that involves the collection, organization, cleaning, analysis, storage, and sharing of data to ensure its accuracy, accessibility, and usefulness for decision-making, research, or other applications. Data handling encompasses all stages from raw data generation to its final visualization or publication.</rdfs:comment>
         <rdfs:label xml:lang="en">data handling process</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000012"/>
     </owl:Class>
     
 
@@ -2315,6 +2316,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
         <rdfs:comment>A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.</rdfs:comment>
         <rdfs:label xml:lang="en">data processing process</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000044"/>
     </owl:Class>
     
 
@@ -2345,6 +2347,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
         <rdfs:comment>A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.</rdfs:comment>
         <rdfs:label xml:lang="en">data cleaning process</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000384"/>
     </owl:Class>
     
 
@@ -2365,6 +2368,7 @@ But what about the organization or plan behind it?
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
         <rdfs:comment>A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.</rdfs:comment>
         <rdfs:label xml:lang="en">data integration process</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000487"/>
     </owl:Class>
     
 
@@ -2845,7 +2849,7 @@ But what about the organization or plan behind it?
     <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010010">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
         <rdfs:comment xml:lang="en">An academic discipline that explores the fundamental principles governing the behavior of matter, energy, and the forces of nature. Physics seeks to understand the laws of the universe, from subatomic particles to cosmic phenomena, through experimentation, observation, and mathematical modeling.</rdfs:comment>
-        <rdfs:label xml:lang="en">physic</rdfs:label>
+        <rdfs:label xml:lang="en">physics</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:NamedIndividual>
     

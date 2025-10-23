@@ -34,23 +34,22 @@ http://purl.obolibrary.org/obo/IAO_0000590 # written name
 http://purl.obolibrary.org/obo/IAO_0000429 # email address
 
 # annotation props
-http://purl.obolibrary.org/obo/IAO_0000111
+#http://purl.obolibrary.org/obo/IAO_0000111
 http://purl.obolibrary.org/obo/IAO_0000112
-http://purl.obolibrary.org/obo/IAO_0000114
-http://purl.obolibrary.org/obo/IAO_0000116
-http://purl.obolibrary.org/obo/IAO_0000117
+#http://purl.obolibrary.org/obo/IAO_0000114
+#http://purl.obolibrary.org/obo/IAO_0000117
 http://purl.obolibrary.org/obo/IAO_0000118
-http://purl.obolibrary.org/obo/IAO_0000232
-http://purl.obolibrary.org/obo/IAO_0000233
-http://purl.obolibrary.org/obo/IAO_0000234
-http://purl.obolibrary.org/obo/IAO_0000412
-http://purl.obolibrary.org/obo/IAO_0000589
-http://purl.obolibrary.org/obo/IAO_0000600
-http://purl.obolibrary.org/obo/IAO_0000601
-http://purl.obolibrary.org/obo/IAO_0000602
-http://purl.obolibrary.org/obo/IAO_0010000
+#http://purl.obolibrary.org/obo/IAO_0000232
+#http://purl.obolibrary.org/obo/IAO_0000233
+#http://purl.obolibrary.org/obo/IAO_0000234
+#http://purl.obolibrary.org/obo/IAO_0000412
+#http://purl.obolibrary.org/obo/IAO_0000589
+#http://purl.obolibrary.org/obo/IAO_0000600
+#http://purl.obolibrary.org/obo/IAO_0000601
+#http://purl.obolibrary.org/obo/IAO_0000602
+#http://purl.obolibrary.org/obo/IAO_0010000
 http://purl.obolibrary.org/obo/IAO_0000119
-http://purl.obolibrary.org/obo/IAO_0000114
+#http://purl.obolibrary.org/obo/IAO_0000114
 http://purl.obolibrary.org/obo/IAO_0000115
 http://purl.obolibrary.org/obo/IAO_0000116
 
@@ -59,4 +58,5 @@ http://purl.obolibrary.org/obo/IAO_0000116
 # http://purl.obolibrary.org/obo/APOLLO_SV_00000522 # source code repo  
 
 
+http://purl.obolibrary.org/obo/OMO_0002000 # 'defined by construct'
 

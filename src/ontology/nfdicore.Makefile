@@ -16,9 +16,12 @@
 
 $(IMPORTDIR)/swo_import.owl: $(MIRRORDIR)/swo.owl $(IMPORTDIR)/swo_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-	extract --method MIREOT  --upper-terms $(IMPORTDIR)/swo_terms_upper.txt  --lower-terms $(IMPORTDIR)/swo_terms.txt --copy-ontology-annotations false --force true --individuals exclude \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru \
+		extract --method MIREOT  --upper-terms $(IMPORTDIR)/swo_terms_upper.txt  --lower-terms $(IMPORTDIR)/swo_terms.txt --copy-ontology-annotations false --force true --individuals exclude \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		remove --term http://purl.obolibrary.org/obo/IAO_0000589 \
+		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/swo_terms.txt  \
+		        --select complement --select annotation-properties \
 		$(ANNOTATE_CONVERT_FILE); sed -i "s/obofoundry/obolibrary/g" $(IMPORTDIR)/swo_import.owl ;  sed -i "s/Declaration(AnnotationProperty(rdf:type))//g" $(IMPORTDIR)/swo_import.owl ; fi		
 
 ######
@@ -32,8 +35,11 @@ $(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl
 		remove --term http://purl.obolibrary.org/obo/OBI_0002076 \
 		remove --term http://purl.obolibrary.org/obo/OBI_0100051 \
 		remove --term http://purl.obolibrary.org/obo/OBI_0000112 \
-		extract -T $(IMPORTDIR)/obi_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method BOT \
+		extract -T $(IMPORTDIR)/obi_terms.txt --copy-ontology-annotations false --force true --individuals exclude --method BOT \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/obi_terms.txt  \
+		        --select complement --select annotation-properties \
 		$(ANNOTATE_CONVERT_FILE); fi
 
 
@@ -55,6 +61,9 @@ $(IMPORTDIR)/edam_import.owl: $(MIRRORDIR)/edam.owl
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		extract -T $(IMPORTDIR)/edam_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/edam_terms.txt  \
+		        --select complement --select annotation-properties \
 		$(ANNOTATE_CONVERT_FILE); fi
 
 ## Module for ontology: dcat
@@ -62,6 +71,9 @@ $(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		extract -T $(IMPORTDIR)/dcat_terms.txt --copy-ontology-annotations true --force true --individuals exclude --method SUBSET \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/dcat_terms.txt  \
+		        --select complement --select annotation-properties \
 		$(ANNOTATE_CONVERT_FILE); fi
 
 
@@ -74,15 +86,42 @@ $(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl
 #		$(ANNOTATE_CONVERT_FILE); fi
 
 
+#$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl 
+#	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+#		remove --term http://purl.obolibrary.org/obo/IAO_0020000 --preserve-structure false \
+#		extract -T $(IMPORTDIR)/iao_terms.txt --copy-ontology-annotations false --force true --individuals exclude --method STAR \
+#		remove --select "RO:*" \
+#		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+#		        --term-file $(IMPORTDIR)/iao_terms.txt  \
+#		        --select complement --select annotation-properties \
+#		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+#		$(ANNOTATE_CONVERT_FILE); fi
+
+
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl 
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		remove --term http://purl.obolibrary.org/obo/IAO_0020000 --preserve-structure false \
 		extract -T $(IMPORTDIR)/iao_terms.txt --copy-ontology-annotations false --force true --individuals exclude --method STAR \
-		remove --select "RO:*" \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		remove --select "RO:*" \
+		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/iao_terms.txt  \
+		        --select complement --select annotation-properties \
 		$(ANNOTATE_CONVERT_FILE); fi
 
 
+
+#$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt
+#	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+#		extract -T $(IMPORTDIR)/iao_terms.txt --force true --copy-ontology-annotations true --individuals exclude --method STAR \
+#		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+ #		remove --term http://www.w3.org/2002/07/owl#Nothing  --term http://purl.obolibrary.org/obo/PATO_0000001  \
+ #		remove --select "RO:*"  \
+ #		remove --term IAO:0000032 --select "self" --axioms logical  \
+# 		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+#			  --term-file $(IMPORTDIR)/ro_terms.txt \
+#		      --select complement --select annotation-properties \
+#		$(ANNOTATE_CONVERT_FILE); fi
 
 
 #################################################################

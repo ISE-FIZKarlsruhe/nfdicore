@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-09-25/imports/edam_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-10-23/imports/edam_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://edamontology.org/1.25>)
-Annotation(owl:versionInfo "2025-09-25")
+Annotation(owl:versionInfo "2025-10-23")
 
 Declaration(Class(<http://edamontology.org/format_2197>))
 Declaration(Class(<http://edamontology.org/format_2376>))
@@ -22,79 +22,7 @@ Declaration(Class(<http://edamontology.org/format_3261>))
 Declaration(Class(<http://edamontology.org/format_3262>))
 Declaration(Class(<http://edamontology.org/format_3749>))
 Declaration(Class(<http://edamontology.org/format_3956>))
-Declaration(AnnotationProperty(<http://edamontology.org/created_in>))
-Declaration(AnnotationProperty(<http://edamontology.org/documentation>))
-Declaration(AnnotationProperty(<http://edamontology.org/file_extension>))
-Declaration(AnnotationProperty(<http://edamontology.org/media_type>))
-Declaration(AnnotationProperty(<http://edamontology.org/next_id>))
-Declaration(AnnotationProperty(<http://edamontology.org/repository>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/date>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/idspace>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/is_metadata_tag>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/remark>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/edam#edam>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/edam#formats>))
-Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
-Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
-Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/format>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
-Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
-Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#Version>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDefinition>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSubset>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#inSubset>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#savedBy>))
-Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/logo>))
-Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/page>))
-############################
-#   Annotation Properties
-############################
-
-# Annotation Property: <http://edamontology.org/created_in> (Created in)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/is_metadata_tag> <http://edamontology.org/created_in> "true")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/created_in> "Version in which a concept was created.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/created_in> "concept_properties")
-AnnotationAssertion(rdfs:label <http://edamontology.org/created_in> "Created in")
-
-# Annotation Property: <http://edamontology.org/documentation> (Documentation)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/is_metadata_tag> <http://edamontology.org/documentation> "true")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/documentation> "'Documentation' trailing modifier (qualifier, 'documentation') of 'xref' links of 'Format' concepts. When 'true', the link is pointing to a page with explanation, description, documentation, or specification of the given data format.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://edamontology.org/documentation> "Specification")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/documentation> "concept_properties")
-AnnotationAssertion(rdfs:label <http://edamontology.org/documentation> "Documentation")
-
-# Annotation Property: <http://edamontology.org/file_extension> (File extension)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/is_metadata_tag> <http://edamontology.org/file_extension> "true")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/file_extension> "'File extension' concept property ('file_extension' metadata tag) lists examples of usual file extensions of formats.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/file_extension> "concept_properties")
-AnnotationAssertion(rdfs:comment <http://edamontology.org/file_extension> "N.B.: File extensions that are not correspondigly defined at http://filext.com are recorded in EDAM only if not in conflict with http://filext.com, and/or unique and usual within life-science computing.")
-AnnotationAssertion(rdfs:comment <http://edamontology.org/file_extension> "Separated by bar ('|'), without a dot ('.') prefix, preferrably not all capital characters.")
-AnnotationAssertion(rdfs:label <http://edamontology.org/file_extension> "File extension")
-
-# Annotation Property: <http://edamontology.org/media_type> (Media type)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/is_metadata_tag> <http://edamontology.org/media_type> "true")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/media_type> "'Media type' trailing modifier (qualifier, 'media_type') of 'xref' links of 'Format' concepts. When 'true', the link is pointing to a page specifying a media type of the given data format.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://edamontology.org/media_type> "MIME type")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/media_type> "concept_properties")
-AnnotationAssertion(rdfs:label <http://edamontology.org/media_type> "Media type")
-
-# Annotation Property: <http://purl.obolibrary.org/obo/edam#edam> (<http://purl.obolibrary.org/obo/edam#edam>)
-
-SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/edam#edam> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
-
-# Annotation Property: <http://purl.obolibrary.org/obo/edam#formats> (<http://purl.obolibrary.org/obo/edam#formats>)
-
-SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/edam#formats> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
-
 
 
 ############################
@@ -103,122 +31,55 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/edam#formats> <http://ww
 
 # Class: <http://edamontology.org/format_2197> (OWL format)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_2197> "beta12orEarlier")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_2197> "A serialisation format conforming to the Web Ontology Language (OWL) model.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_2197> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_2197> <http://purl.obolibrary.org/obo/edam#formats>)
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_2197> "OWL format")
 SubClassOf(<http://edamontology.org/format_2197> <http://edamontology.org/format_2376>)
 
 # Class: <http://edamontology.org/format_2376> (RDF format)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_2376> "beta12orEarlier")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://edamontology.org/format_2376> <https://en.wikipedia.org/wiki/Resource_Description_Framework>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_2376> "A serialisation format conforming to the Resource Description Framework (RDF) model.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://edamontology.org/format_2376> "Resource Description Framework format")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://edamontology.org/format_2376> "RDF")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://edamontology.org/format_2376> "Resource Description Framework")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_2376> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_2376> <http://purl.obolibrary.org/obo/edam#formats>)
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_2376> "RDF format")
 
 # Class: <http://edamontology.org/format_3252> (OWL Functional Syntax)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3252> "1.2")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3252> "A human-readable encoding for the Web Ontology Language (OWL).")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3252> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3252> <http://purl.obolibrary.org/obo/edam#formats>)
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3252> "OWL Functional Syntax")
 SubClassOf(<http://edamontology.org/format_3252> <http://edamontology.org/format_2197>)
 
 # Class: <http://edamontology.org/format_3253> (Manchester OWL Syntax)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3253> "1.2")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3253> "A syntax for writing OWL class expressions.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3253> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3253> <http://purl.obolibrary.org/obo/edam#formats>)
-AnnotationAssertion(rdfs:comment <http://edamontology.org/format_3253> "This format was influenced by the OWL Abstract Syntax and the DL style syntax.")
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3253> "Manchester OWL Syntax")
 SubClassOf(<http://edamontology.org/format_3253> <http://edamontology.org/format_2197>)
 
 # Class: <http://edamontology.org/format_3255> (Turtle)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3255> "1.2")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3255> "The Terse RDF Triple Language (Turtle) is a human-friendly serialisation format for RDF (Resource Description Framework) graphs.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3255> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3255> <http://purl.obolibrary.org/obo/edam#formats>)
-AnnotationAssertion(rdfs:comment <http://edamontology.org/format_3255> "The SPARQL Query Language incorporates a very similar syntax.")
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3255> "Turtle")
 SubClassOf(<http://edamontology.org/format_3255> <http://edamontology.org/format_2376>)
 
 # Class: <http://edamontology.org/format_3256> (N-Triples)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3256> "1.2")
-AnnotationAssertion(<http://edamontology.org/file_extension> <http://edamontology.org/format_3256> "nt")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3256> "A plain text serialisation format for RDF (Resource Description Framework) graphs, and a subset of the Turtle (Terse RDF Triple Language) format.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3256> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3256> <http://purl.obolibrary.org/obo/edam#formats>)
-AnnotationAssertion(rdfs:comment <http://edamontology.org/format_3256> "N-Triples should not be confused with Notation 3 which is a superset of Turtle.")
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3256> "N-Triples")
 SubClassOf(<http://edamontology.org/format_3256> <http://edamontology.org/format_2376>)
 
 # Class: <http://edamontology.org/format_3257> (Notation3)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3257> "1.2")
-AnnotationAssertion(<http://edamontology.org/file_extension> <http://edamontology.org/format_3257> "n3")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3257> "A shorthand non-XML serialisation of Resource Description Framework model, designed with human-readability in mind.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://edamontology.org/format_3257> "N3")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3257> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3257> <http://purl.obolibrary.org/obo/edam#formats>)
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3257> "Notation3")
 SubClassOf(<http://edamontology.org/format_3257> <http://edamontology.org/format_2376>)
 
 # Class: <http://edamontology.org/format_3261> (RDF/XML)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3261> "1.2")
-AnnotationAssertion(<http://edamontology.org/file_extension> <http://edamontology.org/format_3261> "rdf")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3261> "Resource Description Framework (RDF) XML format.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3261> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3261> <http://purl.obolibrary.org/obo/edam#formats>)
-AnnotationAssertion(rdfs:comment <http://edamontology.org/format_3261> "RDF/XML is a serialisation syntax for OWL DL, but not for OWL Full.")
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3261> "RDF/XML")
-AnnotationAssertion(rdfs:seeAlso <http://edamontology.org/format_3261> "http://www.ebi.ac.uk/SWO/data/SWO_3000006")
 SubClassOf(<http://edamontology.org/format_3261> <http://edamontology.org/format_2376>)
 
 # Class: <http://edamontology.org/format_3262> (OWL/XML)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3262> "1.2")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3262> "OWL ontology XML serialisation format.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://edamontology.org/format_3262> "OWL")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3262> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3262> <http://purl.obolibrary.org/obo/edam#formats>)
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3262> "OWL/XML")
 SubClassOf(<http://edamontology.org/format_3262> <http://edamontology.org/format_2197>)
 
 # Class: <http://edamontology.org/format_3749> (JSON-LD)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3749> "1.15")
-AnnotationAssertion(<http://edamontology.org/documentation> <http://edamontology.org/format_3749> <http://www.w3.org/TR/json-ld>)
-AnnotationAssertion(<http://edamontology.org/file_extension> <http://edamontology.org/format_3749> "jsonld")
-AnnotationAssertion(<http://edamontology.org/media_type> <http://edamontology.org/format_3749> <http://www.iana.org/assignments/media-types/application/ld+json>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://edamontology.org/format_3749> <http://www.iana.org/assignments/media-types/application/ld+json>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://edamontology.org/format_3749> <https://en.wikipedia.org/wiki/JSON-LD>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3749> "JSON-LD, or JavaScript Object Notation for Linked Data, is a method of encoding Linked Data using JSON.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://edamontology.org/format_3749> "JavaScript Object Notation for Linked Data")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3749> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3749> <http://purl.obolibrary.org/obo/edam#formats>)
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3749> "JSON-LD")
 SubClassOf(<http://edamontology.org/format_3749> <http://edamontology.org/format_2376>)
 
 # Class: <http://edamontology.org/format_3956> (N-Quads)
 
-AnnotationAssertion(<http://edamontology.org/created_in> <http://edamontology.org/format_3956> "1.24")
-AnnotationAssertion(<http://edamontology.org/documentation> <http://edamontology.org/format_3956> <https://www.w3.org/TR/n-quads>)
-AnnotationAssertion(<http://edamontology.org/file_extension> <http://edamontology.org/format_3956> "nq")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://edamontology.org/format_3956> "N-Quads is a line-based, plain text format for encoding an RDF dataset. It includes information about the graph each triple belongs to.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3956> <http://purl.obolibrary.org/obo/edam#edam>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://edamontology.org/format_3956> <http://purl.obolibrary.org/obo/edam#formats>)
-AnnotationAssertion(rdfs:comment <http://edamontology.org/format_3956> "N-Quads should not be confused with N-Triples which does not contain graph information.")
 AnnotationAssertion(rdfs:label <http://edamontology.org/format_3956> "N-Quads")
 SubClassOf(<http://edamontology.org/format_3956> <http://edamontology.org/format_2376>)
 
