@@ -1,0 +1,2981 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>NFDIcore Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://nfdi.fiz-karlsruhe.de/ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://nfdi.fiz-karlsruhe.de/ontology/","name":"NFDIcore Ontology", "headline":"The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file.                                           Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues.", "dateReleased":"2024-03-08", "version":"v1.1.1-alpha1", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Harald Sack","url":"https://nfdi4culture.de/id/E1925"},{"@type":"Person","name":"Tabea Tietz","url":"https://nfdi4culture.de/id/E2415"},{"@type":"Person","name":"Oleksandra Bruns","url":"https://nfdi4culture.de/id/E2416"},{"@type":"Person","name":"Etienne Posthumus","url":"https://nfdi4culture.de/id/E3095"},{"@type":"Person","name":"Jörg Waitelonis","url":"https://orcid.org/0000-0001-7192-7143"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Inhaltsverzeichnis</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>NFDIcore Ontology</h1>
+<h2>Release 2024-03-08</h2>
+
+
+<dl>
+<dt>Diese Version:</dt>
+<dd><a href="https://nfdi.fiz-karlsruhe.de/ontology/1.1.1">https://nfdi.fiz-karlsruhe.de/ontology/1.1.1</a></dd>
+<dt>Revision:</dt>
+<dd>v1.1.1-alpha1</dd>
+<dt>Autoren:</dt>
+<dd><a href="https://nfdi4culture.de/id/E1925">Harald Sack</a></dd><dd><a href="https://nfdi4culture.de/id/E2415">Tabea Tietz</a></dd><dd><a href="https://nfdi4culture.de/id/E2416">Oleksandra Bruns</a></dd><dd><a href="https://nfdi4culture.de/id/E3095">Etienne Posthumus</a></dd><dd><a href="https://orcid.org/0000-0001-7192-7143">Jörg Waitelonis</a></dd>
+
+<dt>Download Serialisierung:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Lizenz:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/publicdomain/zero/1.0/-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+</dd><dt>Visualisierung:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Zitieren als:</dt>
+<dd>Harald Sack, Tabea Tietz, Oleksandra Bruns, Etienne Posthumus, Jörg Waitelonis. NFDIcore Ontology. Revision: v1.1.1-alpha1. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/1.1.1</dd>
+</dl>
+
+<a href="provenance/provenance-de.html" target="_blank">Ursprung dieser Seite</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Zusammenfassung</h2><span class="markdown">
+The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file. 
+                                          Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues.
+                                          </span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">NFDIcore: &uuml;berblick <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<span class="markdown">
+Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
+<h4>Klassen</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AcademicDiscipline"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline">academic discipline</a>
+   </li>
+   <li>
+      <a href="#City" title="https://nfdi.fiz-karlsruhe.de/ontology/City">city</a>
+   </li>
+   <li>
+      <a href="#Collection"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/Collection">collection</a>
+   </li>
+   <li>
+      <a href="#Consortium"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/Consortium">consortium</a>
+   </li>
+   <li>
+      <a href="#Country" title="https://nfdi.fiz-karlsruhe.de/ontology/Country">country</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">
+         <span>Creative Work</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DataPortal"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/DataPortal">data portal</a>
+   </li>
+   <li>
+      <a href="#Dataset" title="https://nfdi.fiz-karlsruhe.de/ontology/Dataset">dataset</a>
+   </li>
+   <li>
+      <a href="#DevelopmentWork"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork">development work</a>
+   </li>
+   <li>
+      <a href="#FederalState"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/FederalState">federal state</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Intangible" title="http://schema.org/Intangible">
+         <span>Intangible</span>
+      </a>
+   </li>
+   <li>
+      <a href="#License" title="https://nfdi.fiz-karlsruhe.de/ontology/License">license</a>
+   </li>
+   <li>
+      <a href="#MediaType"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/MediaType">media type</a>
+   </li>
+   <li>
+      <a href="#MIME-Type"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type">MIME-type</a>
+   </li>
+   <li>
+      <a href="#ObjectType"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/ObjectType">object type</a>
+   </li>
+   <li>
+      <a href="#Organization"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a>
+   </li>
+   <li>
+      <a href="#Person" title="https://nfdi.fiz-karlsruhe.de/ontology/Person">person</a>
+   </li>
+   <li>
+      <a href="#Place" title="https://nfdi.fiz-karlsruhe.de/ontology/Place">place</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Product" title="http://schema.org/Product">
+         <span>Product</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ProgrammingLanguage"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage">programming language</a>
+   </li>
+   <li>
+      <a href="#Project" title="https://nfdi.fiz-karlsruhe.de/ontology/Project">project</a>
+   </li>
+   <li>
+      <a href="#ProvidedResource"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource">provided resource</a>
+   </li>
+   <li>
+      <a href="#Publication"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/Publication">publication</a>
+   </li>
+   <li>
+      <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a>
+   </li>
+   <li>
+      <a href="#SemanticExpressivity"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">semantic expressivity</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Service" title="http://schema.org/Service">
+         <span>Service</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Service" title="https://nfdi.fiz-karlsruhe.de/ontology/Service">service</a>
+   </li>
+   <li>
+      <a href="#ServiceType"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/ServiceType">service type</a>
+   </li>
+   <li>
+      <a href="#Software" title="https://nfdi.fiz-karlsruhe.de/ontology/Software">software</a>
+   </li>
+   <li>
+      <a href="#Specification"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/Specification">specification</a>
+   </li>
+   <li>
+      <a href="#Standard" title="https://nfdi.fiz-karlsruhe.de/ontology/Standard">standard</a>
+   </li>
+   <li>
+      <a href="#TechnologicalMeans"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans">technological means</a>
+   </li>
+   <li>
+      <a href="#Website" title="https://nfdi.fiz-karlsruhe.de/ontology/Website">website</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#bestPractice"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/bestPractice">best practice</a>
+   </li>
+   <li>
+      <a href="#bestPracticeOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf">best practice of</a>
+   </li>
+   <li>
+      <a href="#contactPoint"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/contactPoint">contact point</a>
+   </li>
+   <li>
+      <a href="#contactPointOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf">contact point of</a>
+   </li>
+   <li>
+      <a href="#contributor"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/contributor">contributor</a>
+   </li>
+   <li>
+      <a href="#country" title="https://nfdi.fiz-karlsruhe.de/ontology/country">country</a>
+   </li>
+   <li>
+      <a href="#countryOf" title="https://nfdi.fiz-karlsruhe.de/ontology/countryOf">country of</a>
+   </li>
+   <li>
+      <a href="#exportFormat"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/exportFormat">export format</a>
+   </li>
+   <li>
+      <a href="#exportFormatOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf">export format of</a>
+   </li>
+   <li>
+      <a href="#federalState"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/federalState">federal state</a>
+   </li>
+   <li>
+      <a href="#federalStateOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf">federal state of</a>
+   </li>
+   <li>
+      <a href="#funder" title="https://nfdi.fiz-karlsruhe.de/ontology/funder">funder</a>
+   </li>
+   <li>
+      <a href="#funderOf" title="https://nfdi.fiz-karlsruhe.de/ontology/funderOf">funder of</a>
+   </li>
+   <li>
+      <a href="#fundingOrganization"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization">funding organization</a>
+   </li>
+   <li>
+      <a href="#fundingOrganizationOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf">funding organization of</a>
+   </li>
+   <li>
+      <a href="#fundingProject"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProject">funding project</a>
+   </li>
+   <li>
+      <a href="#fundingProjectOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf">funding project of</a>
+   </li>
+   <li>
+      <a href="#instance" title="https://nfdi.fiz-karlsruhe.de/ontology/instance">instance</a>
+   </li>
+   <li>
+      <a href="#instanceOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/instanceOf">instance of</a>
+   </li>
+   <li>
+      <a href="#license" title="https://nfdi.fiz-karlsruhe.de/ontology/license">license</a>
+   </li>
+   <li>
+      <a href="#licenseOf" title="https://nfdi.fiz-karlsruhe.de/ontology/licenseOf">license of</a>
+   </li>
+   <li>
+      <a href="#location" title="https://nfdi.fiz-karlsruhe.de/ontology/location">location</a>
+   </li>
+   <li>
+      <a href="#locationOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/locationOf">location of</a>
+   </li>
+   <li>
+      <a href="#mediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/mediaType">media type</a>
+   </li>
+   <li>
+      <a href="#mediaTypeOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf">media type of</a>
+   </li>
+   <li>
+      <a href="#objectType"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/objectType">object type</a>
+   </li>
+   <li>
+      <a href="#objectTypeOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf">object type of</a>
+   </li>
+   <li>
+      <a href="#parentOrganization"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization">parent organization</a>
+   </li>
+   <li>
+      <a href="#partnerOrganization"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization">partner organization</a>
+   </li>
+   <li>
+      <a href="#programmingLanguage"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage">programming language</a>
+   </li>
+   <li>
+      <a href="#programmingLanguageOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf">programming language of</a>
+   </li>
+   <li>
+      <a href="#publisher" title="https://nfdi.fiz-karlsruhe.de/ontology/publisher">publisher</a>
+   </li>
+   <li>
+      <a href="#publisherOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/publisherOf">publisher of</a>
+   </li>
+   <li>
+      <a href="#relatedProject"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/relatedProject">related project</a>
+   </li>
+   <li>
+      <a href="#representedCollection"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollection">represented collection</a>
+   </li>
+   <li>
+      <a href="#representedCollectionOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf">represented collection of</a>
+   </li>
+   <li>
+      <a href="#semanticExpressivity"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity">semantic expressivity</a>
+   </li>
+   <li>
+      <a href="#semanticExpressivityOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf">semantic expressivity of</a>
+   </li>
+   <li>
+      <a href="#serviceType"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/serviceType">service type</a>
+   </li>
+   <li>
+      <a href="#serviceTypeOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf">service type of</a>
+   </li>
+   <li>
+      <a href="#software" title="https://nfdi.fiz-karlsruhe.de/ontology/software">software</a>
+   </li>
+   <li>
+      <a href="#softwareOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/softwareOf">software of</a>
+   </li>
+   <li>
+      <a href="#sparqlEndpoint"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint">sparql endpoint</a>
+   </li>
+   <li>
+      <a href="#sparqlEndpointOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf">sparql endpoint of</a>
+   </li>
+   <li>
+      <a href="#specification"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/specification">specification</a>
+   </li>
+   <li>
+      <a href="#specificationOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/specificationOf">specification of</a>
+   </li>
+   <li>
+      <a href="#standard" title="https://nfdi.fiz-karlsruhe.de/ontology/standard">standard</a>
+   </li>
+   <li>
+      <a href="#standardOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/standardOf">standard of</a>
+   </li>
+   <li>
+      <a href="#subjectArea"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/subjectArea">subject area</a>
+   </li>
+   <li>
+      <a href="#subjectAreaOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf">subject area of</a>
+   </li>
+   <li>
+      <a href="#subsidiaryOrganization"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization">subsidiary organization</a>
+   </li>
+   <li>
+      <a href="#technology"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/technology">technology</a>
+   </li>
+   <li>
+      <a href="#technologyOf"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/technologyOf">technology of</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#areaCode" title="https://nfdi.fiz-karlsruhe.de/ontology/areaCode">area code</a>
+   </li>
+   <li>
+      <a href="#emailAddress"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/emailAddress">email address</a>
+   </li>
+   <li>
+      <a href="#fileExtension"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/fileExtension">file extension</a>
+   </li>
+   <li>
+      <a href="#url" title="https://nfdi.fiz-karlsruhe.de/ontology/url">url</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
+         <span>abstract</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example">
+         <span>example</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/ns/void#feature" title="http://rdfs.org/ns/void#feature">
+         <span>feature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/format" title="http://purl.org/dc/terms/format">
+         <span>format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/hasVersion" title="http://purl.org/dc/terms/hasVersion">
+         <span>has Version</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#acronym" title="https://nfdi.fiz-karlsruhe.de/ontology/acronym">nfdicore:acronym</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#ControlledVocabulary"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary">controlled vocabulary</a>
+   </li>
+   <li>
+      <a href="#Glossary" title="https://nfdi.fiz-karlsruhe.de/ontology/Glossary">glossary</a>
+   </li>
+   <li>
+      <a href="#Ontology" title="https://nfdi.fiz-karlsruhe.de/ontology/Ontology">ontology</a>
+   </li>
+   <li>
+      <a href="#Taxonomy" title="https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy">taxonomy</a>
+   </li>
+   <li>
+      <a href="#Thesaurus"
+         title="https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus">thesaurus</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Querverweis f&uuml;r... NFDIcore Klassen, Object Properties und Data Properties<span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte Property, die definiert wurden durch NFDIcore.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Klassen</h3>
+ <ul class="hlist">
+  <li><a href="#AcademicDiscipline" title="https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline">academic discipline</a></li>
+  <li><a href="#City" title="https://nfdi.fiz-karlsruhe.de/ontology/City">city</a></li>
+  <li><a href="#Collection" title="https://nfdi.fiz-karlsruhe.de/ontology/Collection">collection</a></li>
+  <li><a href="#Consortium" title="https://nfdi.fiz-karlsruhe.de/ontology/Consortium">consortium</a></li>
+  <li><a href="#Country" title="https://nfdi.fiz-karlsruhe.de/ontology/Country">country</a></li>
+  <li><a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork"> <span>Creative Work</span> </a></li>
+  <li><a href="#DataPortal" title="https://nfdi.fiz-karlsruhe.de/ontology/DataPortal">data portal</a></li>
+  <li><a href="#Dataset" title="https://nfdi.fiz-karlsruhe.de/ontology/Dataset">dataset</a></li>
+  <li><a href="#DevelopmentWork" title="https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork">development work</a></li>
+  <li><a href="#FederalState" title="https://nfdi.fiz-karlsruhe.de/ontology/FederalState">federal state</a></li>
+  <li><a href="#http://schema.org/Intangible" title="http://schema.org/Intangible"> <span>Intangible</span> </a></li>
+  <li><a href="#License" title="https://nfdi.fiz-karlsruhe.de/ontology/License">license</a></li>
+  <li><a href="#MediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/MediaType">media type</a></li>
+  <li><a href="#MIME-Type" title="https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type">MIME-type</a></li>
+  <li><a href="#ObjectType" title="https://nfdi.fiz-karlsruhe.de/ontology/ObjectType">object type</a></li>
+  <li><a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a></li>
+  <li><a href="#Person" title="https://nfdi.fiz-karlsruhe.de/ontology/Person">person</a></li>
+  <li><a href="#Place" title="https://nfdi.fiz-karlsruhe.de/ontology/Place">place</a></li>
+  <li><a href="#http://schema.org/Product" title="http://schema.org/Product"> <span>Product</span> </a></li>
+  <li><a href="#ProgrammingLanguage" title="https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage">programming language</a></li>
+  <li><a href="#Project" title="https://nfdi.fiz-karlsruhe.de/ontology/Project">project</a></li>
+  <li><a href="#ProvidedResource" title="https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource">provided resource</a></li>
+  <li><a href="#Publication" title="https://nfdi.fiz-karlsruhe.de/ontology/Publication">publication</a></li>
+  <li><a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a></li>
+  <li><a href="#SemanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">semantic expressivity</a></li>
+  <li><a href="#http://schema.org/Service" title="http://schema.org/Service"> <span>Service</span> </a></li>
+  <li><a href="#Service" title="https://nfdi.fiz-karlsruhe.de/ontology/Service">service</a></li>
+  <li><a href="#ServiceType" title="https://nfdi.fiz-karlsruhe.de/ontology/ServiceType">service type</a></li>
+  <li><a href="#Software" title="https://nfdi.fiz-karlsruhe.de/ontology/Software">software</a></li>
+  <li><a href="#Specification" title="https://nfdi.fiz-karlsruhe.de/ontology/Specification">specification</a></li>
+  <li><a href="#Standard" title="https://nfdi.fiz-karlsruhe.de/ontology/Standard">standard</a></li>
+  <li><a href="#TechnologicalMeans" title="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans">technological means</a></li>
+  <li><a href="#Website" title="https://nfdi.fiz-karlsruhe.de/ontology/Website">website</a></li>
+ </ul>
+ <div class="entity" id="AcademicDiscipline">
+  <h3>academic discipline<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline</p>
+  <div class="comment">
+   <span class="markdown">An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <a href="https://www.wikidata.org/entity/Q12271">https://www.wikidata.org/entity/Q12271</a>
+   </dd>
+   <dd>
+    <pre>Architecture, Art History, Musicology, Media Studies, Performing Arts</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#subjectArea" title="https://nfdi.fiz-karlsruhe.de/ontology/subjectArea">subject area</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="City">
+  <h3>city<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/City</p>
+  <div class="comment">
+   <span class="markdown">A city or a town where the thing is located.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Berlin, Hannover, Kyiv</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Place" title="https://nfdi.fiz-karlsruhe.de/ontology/Place">place</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#country" title="https://nfdi.fiz-karlsruhe.de/ontology/country">country</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#federalState" title="https://nfdi.fiz-karlsruhe.de/ontology/federalState">federal state</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Collection">
+  <h3>collection<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Collection</p>
+  <div class="comment">
+   <span class="markdown">A tangible collection of valuables published or curated by an organization or a person.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>RISM catalogue of musical sources</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#objectType" title="https://nfdi.fiz-karlsruhe.de/ontology/objectType">object type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#representedCollection" title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollection">represented collection</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Consortium">
+  <h3>consortium<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Consortium</p>
+  <div class="comment">
+   <span class="markdown">NFDI consortia grouped by a discipline based in a science-led process managed by the German Research Foundation (DFG).</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>NFDI4Culture, NFDI-MatWerk, DataPLANT.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Country">
+  <h3>country<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Country</p>
+  <div class="comment">
+   <span class="markdown">A country where the thing is located.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Place" title="https://nfdi.fiz-karlsruhe.de/ontology/Place">place</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#country" title="https://nfdi.fiz-karlsruhe.de/ontology/country">country</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://schema.org/CreativeWork">
+  <h3>Creative Work<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/CreativeWork</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#Dataset" title="https://nfdi.fiz-karlsruhe.de/ontology/Dataset">dataset</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Publication" title="https://nfdi.fiz-karlsruhe.de/ontology/Publication">publication</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataPortal">
+  <h3>data portal<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/DataPortal</p>
+  <div class="comment">
+   <span class="markdown">An online platform that provides access to datasets.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Bach digital, KultSam, MusiXplora</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#http://schema.org/Service" title="http://schema.org/Service">Service</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#representedCollection" title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollection">represented collection</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Dataset">
+  <h3>dataset<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Dataset</p>
+  <div class="comment">
+   <span class="markdown">A dataset is associated with a structured information about a resource.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">Creative Work</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#objectType" title="https://nfdi.fiz-karlsruhe.de/ontology/objectType">object type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#representedCollection" title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollection">represented collection</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DevelopmentWork">
+  <h3>development work<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork</p>
+  <div class="comment">
+   <span class="markdown">A resource that identifies an ongoing development of standards, services, data models, vocabularies, ontologies, etc.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Development of a controlled vocabulary for audivisual material in publication and research data; Extension of the AAT vocabulary for the history of architecture</pre>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FederalState">
+  <h3>federal state<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/FederalState</p>
+  <div class="comment">
+   <span class="markdown">A federal state where the thing is located.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Sachsen, Berlin</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Place" title="https://nfdi.fiz-karlsruhe.de/ontology/Place">place</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#country" title="https://nfdi.fiz-karlsruhe.de/ontology/country">country</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#federalState" title="https://nfdi.fiz-karlsruhe.de/ontology/federalState">federal state</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://schema.org/Intangible">
+  <h3>Intangible<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/Intangible</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#http://schema.org/Service" title="http://schema.org/Service">Service</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="License">
+  <h3>license<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/License</p>
+  <div class="comment">
+   <span class="markdown">A document that provides legal guidelines for the use of a resource, e.g. a software.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>cc-by-3, Digital Peer Publishing Lizenz</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#license" title="https://nfdi.fiz-karlsruhe.de/ontology/license">license</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MediaType">
+  <h3>media type<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/MediaType</p>
+  <div class="comment">
+   <span class="markdown">A digital resource format or physical medium.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#MIME-Type" title="https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type">MIME-type</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#exportFormat" title="https://nfdi.fiz-karlsruhe.de/ontology/exportFormat">export format</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#mediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/mediaType">media type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MIME-Type">
+  <h3>MIME-type<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type</p>
+  <div class="comment">
+   <span class="markdown">The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#MediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/MediaType">media type</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ObjectType">
+  <h3>object type<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/ObjectType</p>
+  <div class="comment">
+   <span class="markdown">A resource that identifies the type of object in a data set or collection.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>book, photograph, music sheet</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#objectType" title="https://nfdi.fiz-karlsruhe.de/ontology/objectType">object type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Organization">
+  <h3>organization<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Organization</p>
+  <div class="comment">
+   <span class="markdown">An organization of some kind, e.g. research organization or business organization</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Univerity Library in Leipzig, Museums of City Cologne</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#Consortium" title="https://nfdi.fiz-karlsruhe.de/ontology/Consortium">consortium</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#areaCode" title="https://nfdi.fiz-karlsruhe.de/ontology/areaCode">area code</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#emailAddress" title="https://nfdi.fiz-karlsruhe.de/ontology/emailAddress">email address</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#parentOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization">parent organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#partnerOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization">partner organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#contactPoint" title="https://nfdi.fiz-karlsruhe.de/ontology/contactPoint">contact point</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#contributor" title="https://nfdi.fiz-karlsruhe.de/ontology/contributor">contributor</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#funder" title="https://nfdi.fiz-karlsruhe.de/ontology/funder">funder</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#fundingOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization">funding organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#parentOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization">parent organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#partnerOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization">partner organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#publisher" title="https://nfdi.fiz-karlsruhe.de/ontology/publisher">publisher</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Person">
+  <h3>person<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Person</p>
+  <div class="comment">
+   <span class="markdown">A resource that represents a single person.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#emailAddress" title="https://nfdi.fiz-karlsruhe.de/ontology/emailAddress">email address</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#subjectArea" title="https://nfdi.fiz-karlsruhe.de/ontology/subjectArea">subject area</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#contactPoint" title="https://nfdi.fiz-karlsruhe.de/ontology/contactPoint">contact point</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#contributor" title="https://nfdi.fiz-karlsruhe.de/ontology/contributor">contributor</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#publisher" title="https://nfdi.fiz-karlsruhe.de/ontology/publisher">publisher</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Place">
+  <h3>place<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Place</p>
+  <div class="comment">
+   <span class="markdown">A spatial region, e.g. country, city or district.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Hessen, Berlin, Schweiz</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#City" title="https://nfdi.fiz-karlsruhe.de/ontology/City">city</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Country" title="https://nfdi.fiz-karlsruhe.de/ontology/Country">country</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#FederalState" title="https://nfdi.fiz-karlsruhe.de/ontology/FederalState">federal state</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#location" title="https://nfdi.fiz-karlsruhe.de/ontology/location">location</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://schema.org/Product">
+  <h3>Product<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/Product</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#Specification" title="https://nfdi.fiz-karlsruhe.de/ontology/Specification">specification</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProgrammingLanguage">
+  <h3>programming language<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage</p>
+  <div class="comment">
+   <span class="markdown">A formal language used for implementing a software.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Java, Ruby, C++, Perl, PHP</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#TechnologicalMeans" title="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans">technological means</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#programmingLanguage" title="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage">programming language</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Project">
+  <h3>project<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Project</p>
+  <div class="comment">
+   <span class="markdown">A scientific or business endeavor that aims to conclude an investigation or to answer a research question.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Freischütz digital, Corpus Vitrearum Medii Aevi</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#fundingOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization">funding organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#relatedProject" title="https://nfdi.fiz-karlsruhe.de/ontology/relatedProject">related project</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#funder" title="https://nfdi.fiz-karlsruhe.de/ontology/funder">funder</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#fundingProject" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProject">funding project</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#relatedProject" title="https://nfdi.fiz-karlsruhe.de/ontology/relatedProject">related project</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProvidedResource">
+  <h3>provided resource<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource</p>
+  <div class="comment">
+   <span class="markdown">A resource that identifies a resource provided to the NFDI.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Publication">
+  <h3>publication<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Publication</p>
+  <div class="comment">
+   <span class="markdown">A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">Creative Work</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Resource">
+  <h3>resource<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Resource</p>
+  <div class="comment">
+   <span class="markdown">The most generic kind of a resource and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">Creative Work</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#http://schema.org/Intangible" title="http://schema.org/Intangible">Intangible</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#http://schema.org/Product" title="http://schema.org/Product">Product</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Collection" title="https://nfdi.fiz-karlsruhe.de/ontology/Collection">collection</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#ProvidedResource" title="https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource">provided resource</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Software" title="https://nfdi.fiz-karlsruhe.de/ontology/Software">software</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Website" title="https://nfdi.fiz-karlsruhe.de/ontology/Website">website</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#bestPractice" title="https://nfdi.fiz-karlsruhe.de/ontology/bestPractice">best practice</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#contactPoint" title="https://nfdi.fiz-karlsruhe.de/ontology/contactPoint">contact point</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#contributor" title="https://nfdi.fiz-karlsruhe.de/ontology/contributor">contributor</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#exportFormat" title="https://nfdi.fiz-karlsruhe.de/ontology/exportFormat">export format</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#fileExtension" title="https://nfdi.fiz-karlsruhe.de/ontology/fileExtension">file extension</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#fundingOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization">funding organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#fundingProject" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProject">funding project</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#license" title="https://nfdi.fiz-karlsruhe.de/ontology/license">license</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#mediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/mediaType">media type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#publisher" title="https://nfdi.fiz-karlsruhe.de/ontology/publisher">publisher</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#relatedProject" title="https://nfdi.fiz-karlsruhe.de/ontology/relatedProject">related project</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#semanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity">semantic expressivity</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#software" title="https://nfdi.fiz-karlsruhe.de/ontology/software">software</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#sparqlEndpoint" title="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint">sparql endpoint</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#specification" title="https://nfdi.fiz-karlsruhe.de/ontology/specification">specification</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#standard" title="https://nfdi.fiz-karlsruhe.de/ontology/standard">standard</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#subjectArea" title="https://nfdi.fiz-karlsruhe.de/ontology/subjectArea">subject area</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#technology" title="https://nfdi.fiz-karlsruhe.de/ontology/technology">technology</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#sparqlEndpoint" title="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint">sparql endpoint</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SemanticExpressivity">
+  <h3>semantic expressivity<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity</p>
+  <div class="comment">
+   <span class="markdown">An entity that identifies the level of the semantic expressivity of a resource. Five instances are now included in nfdicore.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>controlled vocabulary, ontology, taxonomy</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#semanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity">semantic expressivity</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    hat Member
+   </dt>
+   <dd>
+    <a href="#ControlledVocabulary" title="https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary">controlled vocabulary</a> <sup class="type-ni" title="benanntes Individuum">ni</sup>, <a href="#Glossary" title="https://nfdi.fiz-karlsruhe.de/ontology/Glossary">glossary</a> <sup class="type-ni" title="benanntes Individuum">ni</sup>, <a href="#Ontology" title="https://nfdi.fiz-karlsruhe.de/ontology/Ontology">ontology</a> <sup class="type-ni" title="benanntes Individuum">ni</sup>, <a href="#Taxonomy" title="https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy">taxonomy</a> <sup class="type-ni" title="benanntes Individuum">ni</sup>, <a href="#Thesaurus" title="https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus">thesaurus</a> <sup class="type-ni" title="benanntes Individuum">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://schema.org/Service">
+  <h3>Service<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/Service</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#http://schema.org/Intangible" title="http://schema.org/Intangible">Intangible</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#DataPortal" title="https://nfdi.fiz-karlsruhe.de/ontology/DataPortal">data portal</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Service" title="https://nfdi.fiz-karlsruhe.de/ontology/Service">service</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Service">
+  <h3>service<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Service</p>
+  <div class="comment">
+   <span class="markdown">A service, expertise or skill provided by an organization or a person.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Data curation for HeiDATA, Expertise for the development and application of LIDO</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#http://schema.org/Service" title="http://schema.org/Service">Service</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#instance" title="https://nfdi.fiz-karlsruhe.de/ontology/instance">instance</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#serviceType" title="https://nfdi.fiz-karlsruhe.de/ontology/serviceType">service type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#instance" title="https://nfdi.fiz-karlsruhe.de/ontology/instance">instance</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceType">
+  <h3>service type<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/ServiceType</p>
+  <div class="comment">
+   <span class="markdown">A resource that identifies the type of a service.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Expertise, advertisement, curation</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#serviceType" title="https://nfdi.fiz-karlsruhe.de/ontology/serviceType">service type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Software">
+  <h3>software<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Software</p>
+  <div class="comment">
+   <span class="markdown">A computer software provided by an organization or a person.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Edirom, Muscat</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#programmingLanguage" title="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage">programming language</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#software" title="https://nfdi.fiz-karlsruhe.de/ontology/software">software</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Specification">
+  <h3>specification<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Specification</p>
+  <div class="comment">
+   <span class="markdown">A set of requirements, guidelines, standards contributed by an organization or a person.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>RDF, SPARQL, Federation</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#http://schema.org/Product" title="http://schema.org/Product">Product</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#Standard" title="https://nfdi.fiz-karlsruhe.de/ontology/Standard">standard</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#bestPractice" title="https://nfdi.fiz-karlsruhe.de/ontology/bestPractice">best practice</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#specification" title="https://nfdi.fiz-karlsruhe.de/ontology/specification">specification</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Standard">
+  <h3>standard<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Standard</p>
+  <div class="comment">
+   <span class="markdown">An international standard and norm that can be used to evaluate or create a resource.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>ISO 15511, DINI-Zertifikat</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Specification" title="https://nfdi.fiz-karlsruhe.de/ontology/Specification">specification</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#standard" title="https://nfdi.fiz-karlsruhe.de/ontology/standard">standard</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TechnologicalMeans">
+  <h3>technological means<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans</p>
+  <div class="comment">
+   <span class="markdown">A technology, e.g. a web application or a programming framework used in a resource.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Groovy on Grails, Angular</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#ProgrammingLanguage" title="https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage">programming language</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#technology" title="https://nfdi.fiz-karlsruhe.de/ontology/technology">technology</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Website">
+  <h3>website<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Website</p>
+  <div class="comment">
+   <span class="markdown">A collection of webpages contributed by an organization or a person.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>https:\/\/opac.rism.info</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h2>Objekt Eigenschaften</h2>
+ <ul class="hlist">
+  <li><a href="#bestPractice" title="https://nfdi.fiz-karlsruhe.de/ontology/bestPractice">best practice</a></li>
+  <li><a href="#bestPracticeOf" title="https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf">best practice of</a></li>
+  <li><a href="#contactPoint" title="https://nfdi.fiz-karlsruhe.de/ontology/contactPoint">contact point</a></li>
+  <li><a href="#contactPointOf" title="https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf">contact point of</a></li>
+  <li><a href="#contributor" title="https://nfdi.fiz-karlsruhe.de/ontology/contributor">contributor</a></li>
+  <li><a href="#country" title="https://nfdi.fiz-karlsruhe.de/ontology/country">country</a></li>
+  <li><a href="#countryOf" title="https://nfdi.fiz-karlsruhe.de/ontology/countryOf">country of</a></li>
+  <li><a href="#exportFormat" title="https://nfdi.fiz-karlsruhe.de/ontology/exportFormat">export format</a></li>
+  <li><a href="#exportFormatOf" title="https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf">export format of</a></li>
+  <li><a href="#federalState" title="https://nfdi.fiz-karlsruhe.de/ontology/federalState">federal state</a></li>
+  <li><a href="#federalStateOf" title="https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf">federal state of</a></li>
+  <li><a href="#funder" title="https://nfdi.fiz-karlsruhe.de/ontology/funder">funder</a></li>
+  <li><a href="#funderOf" title="https://nfdi.fiz-karlsruhe.de/ontology/funderOf">funder of</a></li>
+  <li><a href="#fundingOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization">funding organization</a></li>
+  <li><a href="#fundingOrganizationOf" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf">funding organization of</a></li>
+  <li><a href="#fundingProject" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProject">funding project</a></li>
+  <li><a href="#fundingProjectOf" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf">funding project of</a></li>
+  <li><a href="#instance" title="https://nfdi.fiz-karlsruhe.de/ontology/instance">instance</a></li>
+  <li><a href="#instanceOf" title="https://nfdi.fiz-karlsruhe.de/ontology/instanceOf">instance of</a></li>
+  <li><a href="#license" title="https://nfdi.fiz-karlsruhe.de/ontology/license">license</a></li>
+  <li><a href="#licenseOf" title="https://nfdi.fiz-karlsruhe.de/ontology/licenseOf">license of</a></li>
+  <li><a href="#location" title="https://nfdi.fiz-karlsruhe.de/ontology/location">location</a></li>
+  <li><a href="#locationOf" title="https://nfdi.fiz-karlsruhe.de/ontology/locationOf">location of</a></li>
+  <li><a href="#mediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/mediaType">media type</a></li>
+  <li><a href="#mediaTypeOf" title="https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf">media type of</a></li>
+  <li><a href="#objectType" title="https://nfdi.fiz-karlsruhe.de/ontology/objectType">object type</a></li>
+  <li><a href="#objectTypeOf" title="https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf">object type of</a></li>
+  <li><a href="#parentOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization">parent organization</a></li>
+  <li><a href="#partnerOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization">partner organization</a></li>
+  <li><a href="#programmingLanguage" title="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage">programming language</a></li>
+  <li><a href="#programmingLanguageOf" title="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf">programming language of</a></li>
+  <li><a href="#publisher" title="https://nfdi.fiz-karlsruhe.de/ontology/publisher">publisher</a></li>
+  <li><a href="#publisherOf" title="https://nfdi.fiz-karlsruhe.de/ontology/publisherOf">publisher of</a></li>
+  <li><a href="#relatedProject" title="https://nfdi.fiz-karlsruhe.de/ontology/relatedProject">related project</a></li>
+  <li><a href="#representedCollection" title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollection">represented collection</a></li>
+  <li><a href="#representedCollectionOf" title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf">represented collection of</a></li>
+  <li><a href="#semanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity">semantic expressivity</a></li>
+  <li><a href="#semanticExpressivityOf" title="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf">semantic expressivity of</a></li>
+  <li><a href="#serviceType" title="https://nfdi.fiz-karlsruhe.de/ontology/serviceType">service type</a></li>
+  <li><a href="#serviceTypeOf" title="https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf">service type of</a></li>
+  <li><a href="#software" title="https://nfdi.fiz-karlsruhe.de/ontology/software">software</a></li>
+  <li><a href="#softwareOf" title="https://nfdi.fiz-karlsruhe.de/ontology/softwareOf">software of</a></li>
+  <li><a href="#sparqlEndpoint" title="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint">sparql endpoint</a></li>
+  <li><a href="#sparqlEndpointOf" title="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf">sparql endpoint of</a></li>
+  <li><a href="#specification" title="https://nfdi.fiz-karlsruhe.de/ontology/specification">specification</a></li>
+  <li><a href="#specificationOf" title="https://nfdi.fiz-karlsruhe.de/ontology/specificationOf">specification of</a></li>
+  <li><a href="#standard" title="https://nfdi.fiz-karlsruhe.de/ontology/standard">standard</a></li>
+  <li><a href="#standardOf" title="https://nfdi.fiz-karlsruhe.de/ontology/standardOf">standard of</a></li>
+  <li><a href="#subjectArea" title="https://nfdi.fiz-karlsruhe.de/ontology/subjectArea">subject area</a></li>
+  <li><a href="#subjectAreaOf" title="https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf">subject area of</a></li>
+  <li><a href="#subsidiaryOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization">subsidiary organization</a></li>
+  <li><a href="#technology" title="https://nfdi.fiz-karlsruhe.de/ontology/technology">technology</a></li>
+  <li><a href="#technologyOf" title="https://nfdi.fiz-karlsruhe.de/ontology/technologyOf">technology of</a></li>
+ </ul>
+ <div class="entity" id="bestPractice">
+  <h3>best practice<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/bestPractice</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a resource and the best practice.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Specification" title="https://nfdi.fiz-karlsruhe.de/ontology/Specification">specification</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#bestPracticeOf" title="https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf">best practice of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="bestPracticeOf">
+  <h3>best practice of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#bestPractice" title="https://nfdi.fiz-karlsruhe.de/ontology/bestPractice">best practice</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="contactPoint">
+  <h3>contact point<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/contactPoint</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a resource and a contact point.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Person" title="https://nfdi.fiz-karlsruhe.de/ontology/Person">person</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#contactPointOf" title="https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf">contact point of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="contactPointOf">
+  <h3>contact point of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#contactPoint" title="https://nfdi.fiz-karlsruhe.de/ontology/contactPoint">contact point</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="contributor">
+  <h3>contributor<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/contributor</p>
+  <div class="comment">
+   <span class="markdown">The property related a resource to a person or an organization responsible for making contributions to a resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Person" title="https://nfdi.fiz-karlsruhe.de/ontology/Person">person</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="https://nfdi.fiz-karlsruhe.de/ontology/contributorOf" target="_blank" title="https://nfdi.fiz-karlsruhe.de/ontology/contributorOf">contributor Of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="country">
+  <h3>country<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/country</p>
+  <div class="comment">
+   <span class="markdown">The property relates a city or a state to a country where it is located.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#City" title="https://nfdi.fiz-karlsruhe.de/ontology/City">city</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#FederalState" title="https://nfdi.fiz-karlsruhe.de/ontology/FederalState">federal state</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Country" title="https://nfdi.fiz-karlsruhe.de/ontology/Country">country</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#countryOf" title="https://nfdi.fiz-karlsruhe.de/ontology/countryOf">country of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="countryOf">
+  <h3>country of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/countryOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#country" title="https://nfdi.fiz-karlsruhe.de/ontology/country">country</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="exportFormat">
+  <h3>export format<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/exportFormat</p>
+  <div class="comment">
+   <span class="markdown">The property relates a resource to the format available for the export of a resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#MediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/MediaType">media type</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#exportFormatOf" title="https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf">export format of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="exportFormatOf">
+  <h3>export format of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#exportFormat" title="https://nfdi.fiz-karlsruhe.de/ontology/exportFormat">export format</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="federalState">
+  <h3>federal state<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/federalState</p>
+  <div class="comment">
+   <span class="markdown">The property relates a city to a federal state where it is located.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#City" title="https://nfdi.fiz-karlsruhe.de/ontology/City">city</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#FederalState" title="https://nfdi.fiz-karlsruhe.de/ontology/FederalState">federal state</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#federalStateOf" title="https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf">federal state of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="federalStateOf">
+  <h3>federal state of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#federalState" title="https://nfdi.fiz-karlsruhe.de/ontology/federalState">federal state</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="funder">
+  <h3>funder<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/funder</p>
+  <div class="comment">
+   <span class="markdown">The property relates thing to an organization or a project that provided funding for it. The subproperties are used to specify more specific funding relationships. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Sub-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#fundingOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization">funding organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#fundingProject" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProject">funding project</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Project" title="https://nfdi.fiz-karlsruhe.de/ontology/Project">project</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#funderOf" title="https://nfdi.fiz-karlsruhe.de/ontology/funderOf">funder of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="funderOf">
+  <h3>funder of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/funderOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Sub-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#fundingOrganizationOf" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf">funding organization of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#fundingProjectOf" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf">funding project of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#funder" title="https://nfdi.fiz-karlsruhe.de/ontology/funder">funder</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="fundingOrganization">
+  <h3>funding organization<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization</p>
+  <div class="comment">
+   <span class="markdown">The property relates a resource or a project to the organization that provided funding for it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#funder" title="https://nfdi.fiz-karlsruhe.de/ontology/funder">funder</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Project" title="https://nfdi.fiz-karlsruhe.de/ontology/Project">project</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#fundingOrganizationOf" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf">funding organization of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="fundingOrganizationOf">
+  <h3>funding organization of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#funderOf" title="https://nfdi.fiz-karlsruhe.de/ontology/funderOf">funder of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#fundingOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization">funding organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="fundingProject">
+  <h3>funding project<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/fundingProject</p>
+  <div class="comment">
+   <span class="markdown">The property relateds a resource to the project that provided funding for it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#funder" title="https://nfdi.fiz-karlsruhe.de/ontology/funder">funder</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Project" title="https://nfdi.fiz-karlsruhe.de/ontology/Project">project</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#fundingProjectOf" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf">funding project of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="fundingProjectOf">
+  <h3>funding project of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#funderOf" title="https://nfdi.fiz-karlsruhe.de/ontology/funderOf">funder of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#fundingProject" title="https://nfdi.fiz-karlsruhe.de/ontology/fundingProject">funding project</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="instance">
+  <h3>instance<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/instance</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a service and its running instance.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Service" title="https://nfdi.fiz-karlsruhe.de/ontology/Service">service</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Service" title="https://nfdi.fiz-karlsruhe.de/ontology/Service">service</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#instanceOf" title="https://nfdi.fiz-karlsruhe.de/ontology/instanceOf">instance of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="instanceOf">
+  <h3>instance of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/instanceOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#instance" title="https://nfdi.fiz-karlsruhe.de/ontology/instance">instance</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="license">
+  <h3>license<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/license</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a resource and a license file.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#License" title="https://nfdi.fiz-karlsruhe.de/ontology/License">license</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#licenseOf" title="https://nfdi.fiz-karlsruhe.de/ontology/licenseOf">license of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="licenseOf">
+  <h3>license of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/licenseOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#license" title="https://nfdi.fiz-karlsruhe.de/ontology/license">license</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="location">
+  <h3>location<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/location</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a thing and a place its located at. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Place" title="https://nfdi.fiz-karlsruhe.de/ontology/Place">place</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#locationOf" title="https://nfdi.fiz-karlsruhe.de/ontology/locationOf">location of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="locationOf">
+  <h3>location of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/locationOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#location" title="https://nfdi.fiz-karlsruhe.de/ontology/location">location</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="mediaType">
+  <h3>media type<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/mediaType</p>
+  <div class="comment">
+   <span class="markdown">The property relates a resource to its data format.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#MediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/MediaType">media type</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#mediaTypeOf" title="https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf">media type of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="mediaTypeOf">
+  <h3>media type of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#mediaType" title="https://nfdi.fiz-karlsruhe.de/ontology/mediaType">media type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="objectType">
+  <h3>object type<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/objectType</p>
+  <div class="comment">
+   <span class="markdown">The property relates a collection or a data set to the type of object it contains. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Collection" title="https://nfdi.fiz-karlsruhe.de/ontology/Collection">collection</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Dataset" title="https://nfdi.fiz-karlsruhe.de/ontology/Dataset">dataset</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#ObjectType" title="https://nfdi.fiz-karlsruhe.de/ontology/ObjectType">object type</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#objectTypeOf" title="https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf">object type of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="objectTypeOf">
+  <h3>object type of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#objectType" title="https://nfdi.fiz-karlsruhe.de/ontology/objectType">object type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="parentOrganization">
+  <h3>parent organization<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization</p>
+  <div class="comment">
+   <span class="markdown">The property is a parental relationship between organizations.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#subsidiaryOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization">subsidiary organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="partnerOrganization">
+  <h3>partner organization<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization</p>
+  <div class="comment">
+   <span class="markdown">The property is a partner relationship between organizations. The property is symmetric.</span>
+  </div>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> symmetrisch</p>
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="programmingLanguage">
+  <h3>programming language<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage</p>
+  <div class="comment">
+   <span class="markdown">The property links software to a programming language its written in.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Software" title="https://nfdi.fiz-karlsruhe.de/ontology/Software">software</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#ProgrammingLanguage" title="https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage">programming language</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#programmingLanguageOf" title="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf">programming language of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="programmingLanguageOf">
+  <h3>programming language of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#programmingLanguage" title="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage">programming language</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="publisher">
+  <h3>publisher<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/publisher</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a resource and an organization or a person responsible for publishing it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Person" title="https://nfdi.fiz-karlsruhe.de/ontology/Person">person</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#publisherOf" title="https://nfdi.fiz-karlsruhe.de/ontology/publisherOf">publisher of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="publisherOf">
+  <h3>publisher of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/publisherOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#publisher" title="https://nfdi.fiz-karlsruhe.de/ontology/publisher">publisher</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="relatedProject">
+  <h3>related project<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/relatedProject</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a project or a resource and related projects.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Project" title="https://nfdi.fiz-karlsruhe.de/ontology/Project">project</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Project" title="https://nfdi.fiz-karlsruhe.de/ontology/Project">project</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="representedCollection">
+  <h3>represented collection<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/representedCollection</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a dataset and a collection it represents.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#DataPortal" title="https://nfdi.fiz-karlsruhe.de/ontology/DataPortal">data portal</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Dataset" title="https://nfdi.fiz-karlsruhe.de/ontology/Dataset">dataset</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Collection" title="https://nfdi.fiz-karlsruhe.de/ontology/Collection">collection</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#representedCollectionOf" title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf">represented collection of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="representedCollectionOf">
+  <h3>represented collection of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#representedCollection" title="https://nfdi.fiz-karlsruhe.de/ontology/representedCollection">represented collection</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="semanticExpressivity">
+  <h3>semantic expressivity<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity</p>
+  <div class="comment">
+   <span class="markdown">The property relates a resource to its semantic expressivity spectrum.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#SemanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">semantic expressivity</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#semanticExpressivityOf" title="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf">semantic expressivity of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="semanticExpressivityOf">
+  <h3>semantic expressivity of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#semanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity">semantic expressivity</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="serviceType">
+  <h3>service type<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/serviceType</p>
+  <div class="comment">
+   <span class="markdown">The property relates a service to its type.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Service" title="https://nfdi.fiz-karlsruhe.de/ontology/Service">service</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#ServiceType" title="https://nfdi.fiz-karlsruhe.de/ontology/ServiceType">service type</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#serviceTypeOf" title="https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf">service type of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="serviceTypeOf">
+  <h3>service type of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#serviceType" title="https://nfdi.fiz-karlsruhe.de/ontology/serviceType">service type</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="software">
+  <h3>software<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/software</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a resource and a software it uses.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Software" title="https://nfdi.fiz-karlsruhe.de/ontology/Software">software</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#softwareOf" title="https://nfdi.fiz-karlsruhe.de/ontology/softwareOf">software of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="softwareOf">
+  <h3>software of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/softwareOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#software" title="https://nfdi.fiz-karlsruhe.de/ontology/software">software</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sparqlEndpoint">
+  <h3>sparql endpoint<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint</p>
+  <div class="comment">
+   <span class="markdown">The property relates a data resource to its SPARQL Endpoint. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#sparqlEndpointOf" title="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf">sparql endpoint of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sparqlEndpointOf">
+  <h3>sparql endpoint of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#sparqlEndpoint" title="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint">sparql endpoint</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="specification">
+  <h3>specification<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/specification</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a resource and the international standard or norm.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Specification" title="https://nfdi.fiz-karlsruhe.de/ontology/Specification">specification</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#specificationOf" title="https://nfdi.fiz-karlsruhe.de/ontology/specificationOf">specification of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="specificationOf">
+  <h3>specification of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/specificationOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#specification" title="https://nfdi.fiz-karlsruhe.de/ontology/specification">specification</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="standard">
+  <h3>standard<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/standard</p>
+  <div class="comment">
+   <span class="markdown">The property relates a resource to the standard it relies on.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#Standard" title="https://nfdi.fiz-karlsruhe.de/ontology/Standard">standard</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#standardOf" title="https://nfdi.fiz-karlsruhe.de/ontology/standardOf">standard of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="standardOf">
+  <h3>standard of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/standardOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#standard" title="https://nfdi.fiz-karlsruhe.de/ontology/standard">standard</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="subjectArea">
+  <h3>subject area<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/subjectArea</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a resource and its academic discipline, subject area or domain.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Person" title="https://nfdi.fiz-karlsruhe.de/ontology/Person">person</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#AcademicDiscipline" title="https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline">academic discipline</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#subjectAreaOf" title="https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf">subject area of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="subjectAreaOf">
+  <h3>subject area of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#subjectArea" title="https://nfdi.fiz-karlsruhe.de/ontology/subjectArea">subject area</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="subsidiaryOrganization">
+  <h3>subsidiary organization<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#parentOrganization" title="https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization">parent organization</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="technology">
+  <h3>technology<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/technology</p>
+  <div class="comment">
+   <span class="markdown">The property is a relationship between a resource and a technology it uses. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#TechnologicalMeans" title="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans">technological means</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#technologyOf" title="https://nfdi.fiz-karlsruhe.de/ontology/technologyOf">technology of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="technologyOf">
+  <h3>technology of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/technologyOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#technology" title="https://nfdi.fiz-karlsruhe.de/ontology/technology">technology</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h2>Daten Eigenschaften</h2>
+ <ul class="hlist">
+  <li><a href="#areaCode" title="https://nfdi.fiz-karlsruhe.de/ontology/areaCode">area code</a></li>
+  <li><a href="#emailAddress" title="https://nfdi.fiz-karlsruhe.de/ontology/emailAddress">email address</a></li>
+  <li><a href="#fileExtension" title="https://nfdi.fiz-karlsruhe.de/ontology/fileExtension">file extension</a></li>
+  <li><a href="#url" title="https://nfdi.fiz-karlsruhe.de/ontology/url">url</a></li>
+ </ul>
+ <div class="entity" id="areaCode">
+  <h3>area code<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/areaCode</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="emailAddress">
+  <h3>email address<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/emailAddress</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Organization" title="https://nfdi.fiz-karlsruhe.de/ontology/Organization">organization</a> <sup class="type-c" title="Klasse">c</sup> <span class="logic">or</span> <a href="#Person" title="https://nfdi.fiz-karlsruhe.de/ontology/Person">person</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="fileExtension">
+  <h3>file extension<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/fileExtension</p>
+  <div class="comment">
+   <span class="markdown">An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>mp4</pre>
+   </dd>
+   <dd>
+    <pre>ttl</pre>
+   </dd>
+   <dd>
+    <pre>txt</pre>
+   </dd>
+   <dd>
+    <pre>xml</pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#Resource" title="https://nfdi.fiz-karlsruhe.de/ontology/Resource">resource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="url">
+  <h3>url<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/url</p>
+  <div class="comment">
+   <span class="markdown">URL of a thing</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h2>Anmerkungseigenschaften</h2>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract"> <span>abstract</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation"> <span>bibliographic Citation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition"> <span>definition</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example"> <span>example</span> </a></li>
+  <li><a href="#http://rdfs.org/ns/void#feature" title="http://rdfs.org/ns/void#feature"> <span>feature</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/format" title="http://purl.org/dc/terms/format"> <span>format</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/hasVersion" title="http://purl.org/dc/terms/hasVersion"> <span>has Version</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#acronym" title="https://nfdi.fiz-karlsruhe.de/ontology/acronym">nfdicore:acronym</a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/abstract">
+  <h3>abstract<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/bibliographicCitation">
+  <h3>bibliographic Citation<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
+  <h3>definition<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#example">
+  <h3>example<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#example</p>
+ </div>
+ <div class="entity" id="http://rdfs.org/ns/void#feature">
+  <h3>feature<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://rdfs.org/ns/void#feature</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/format">
+  <h3>format<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/format</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/hasVersion">
+  <h3>has Version<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/hasVersion</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="acronym">
+  <h3>nfdicore:acronym<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/acronym</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h2>benannte Individuen</h2>
+ <ul class="hlist">
+  <li><a href="#ControlledVocabulary" title="https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary">controlled vocabulary</a></li>
+  <li><a href="#Glossary" title="https://nfdi.fiz-karlsruhe.de/ontology/Glossary">glossary</a></li>
+  <li><a href="#Ontology" title="https://nfdi.fiz-karlsruhe.de/ontology/Ontology">ontology</a></li>
+  <li><a href="#Taxonomy" title="https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy">taxonomy</a></li>
+  <li><a href="#Thesaurus" title="https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus">thesaurus</a></li>
+ </ul>
+ <div class="entity" id="ControlledVocabulary">
+  <h3>controlled vocabulary<sup class="type-ni" title="benanntes Individuum">ni</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#namedindividuals">Übersicht der benannten Individuen</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary</p>
+  <div class="comment">
+   <span class="markdown">A list of terms, natural language definitions and naming conventions. In comparisson to a glossary, there is a dedicated curation mechanism for new terms in a controlled vocabulary.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    gehört zu
+   </dt>
+   <dd>
+    <a href="#SemanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">semantic expressivity</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Glossary">
+  <h3>glossary<sup class="type-ni" title="benanntes Individuum">ni</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#namedindividuals">Übersicht der benannten Individuen</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Glossary</p>
+  <div class="comment">
+   <span class="markdown">A list of terms and their with natural language definitions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    gehört zu
+   </dt>
+   <dd>
+    <a href="#SemanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">semantic expressivity</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Ontology">
+  <h3>ontology<sup class="type-ni" title="benanntes Individuum">ni</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#namedindividuals">Übersicht der benannten Individuen</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Ontology</p>
+  <div class="comment">
+   <span class="markdown">A complete, machine-readable specification of a conceptualization using URIs (and then IRIs) for all elements, properties and relationship types.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    gehört zu
+   </dt>
+   <dd>
+    <a href="#SemanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">semantic expressivity</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Taxonomy">
+  <h3>taxonomy<sup class="type-ni" title="benanntes Individuum">ni</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#namedindividuals">Übersicht der benannten Individuen</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy</p>
+  <div class="comment">
+   <span class="markdown">A data model in a class hierarchy, where all concepts inherit their behaviour from the super-class concept. Taxonomies can be strict or non strict and can contain instances.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    gehört zu
+   </dt>
+   <dd>
+    <a href="#SemanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">semantic expressivity</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Thesaurus">
+  <h3>thesaurus<sup class="type-ni" title="benanntes Individuum">ni</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#namedindividuals">Übersicht der benannten Individuen</a> </span></h3>
+  <p><strong>IRI:</strong> https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus</p>
+  <div class="comment">
+   <span class="markdown">A structured list of terms and relations between the terms, as e.g. broader/narrower.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    gehört zu
+   </dt>
+   <dd>
+    <a href="#SemanticExpressivity" title="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">semantic expressivity</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legende <span class="backlink"> zur&uuml;ck zu <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Danksagung <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<p>
+Die Autoren bedanken sich bei<a href="http://www.essepuntato.it/">Silvio Peroni</a> f&uuml;r die Entwicklung von <a href="http://www.essepuntato.it/lode">LODE</a>, einer Umgebung zur Live-OWL-Dokumentation, die im Abschnitt Querverweise f&uuml;r die Darstellung verwendet wird, bei <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> f&uuml;r die Entwicklung von <a href="https://github.com/dgarijo/Widoco">Widoco</a>, welches f&uuml;r die Templates in dieser Anwendung verwendet wird.</p>
+</div>
+
+
+</div>
+</body>
+</html>
