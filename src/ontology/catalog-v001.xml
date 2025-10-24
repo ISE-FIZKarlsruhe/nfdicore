@@ -10,9 +10,8 @@
     <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl" uri="imports/dcat_import.owl" />
     <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl" uri="components/imports-edit.owl" />
     <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl" uri="components/nfdicore-main.owl" />
-    <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl" uri="components/nfdicore-extension.owl" />
   </group>
   <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public">
-
+    <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl" uri="components/nfdicore-extension.owl" />
   </group>
 </catalog>

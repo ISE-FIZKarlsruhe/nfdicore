@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                d6ed2cb3dbdbf0f27fe4516a3d555e87100930a30062281d360488b3e9d683b3
+CONFIG_HASH=                f993736540cdd191cd393087eee11acd877d66cb5bde451ef768ff42ba5bec47
 
 
 # ----------------------------------------
@@ -58,7 +58,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(COMPONENTSDIR)/imports-edit.owl $(COMPONENTSDIR)/nfdicore-main.owl $(COMPONENTSDIR)/nfdicore-extension.owl 
+OTHER_SRC =                 $(COMPONENTSDIR)/imports-edit.owl $(COMPONENTSDIR)/nfdicore-main.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -203,7 +203,7 @@ all_imports: $(IMPORT_FILES)
 # ----------------------------------------
 
 
-SUBSETS = 
+SUBSETS =  nfdicore-plus
 
 SUBSET_ROOTS = $(patsubst %, $(SUBSETDIR)/%, $(SUBSETS))
 SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(FORMATS_INCL_TSV), $(n).$(f)))
@@ -500,14 +500,12 @@ all_components: $(OTHER_SRC)
 recreate-components:
 	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-imports-edit.owl \
 		--assume-new=$(TMPDIR)/stamp-component-nfdicore-main.owl \
-		--assume-new=$(TMPDIR)/stamp-component-nfdicore-extension.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
 
 .PHONY: no-mirror-recreate-components
 no-mirror-recreate-components:
 	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-imports-edit.owl \
 		--assume-new=$(TMPDIR)/stamp-component-nfdicore-main.owl \
-		--assume-new=$(TMPDIR)/stamp-component-nfdicore-extension.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
 
 .PHONY: recreate-%

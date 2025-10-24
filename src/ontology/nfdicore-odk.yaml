@@ -56,7 +56,7 @@ components:
   products:
       - filename: imports-edit.owl
       - filename: nfdicore-main.owl
-      - filename: nfdicore-extension.owl
+#      - filename: nfdicore-extension.owl
 
 documentation:
   documentation_system: mkdocs
