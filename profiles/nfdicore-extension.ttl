@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-extension.ttl#"
-     xml:base="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-extension.ttl"
+<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-extension.ttl#"
+     xml:base="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-extension.ttl"
      xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -15,8 +15,8 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
-    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/nfdicore-extension.ttl">
-        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2025-10-24/nfdicore-extension.ttl"/>
+    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-extension.ttl">
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.3/nfdicore-extension.ttl"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <dcterms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
@@ -29,7 +29,7 @@
         <bibo:status xml:lang="en">Ontology Specification</bibo:status>
         <vann:preferredNamespaceUri rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/"/>
         <rdfs:label>NFDIcore Extension</rdfs:label>
-        <owl:versionInfo>2025-10-24</owl:versionInfo>
+        <owl:versionInfo>3.0.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -48,12 +48,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112">
-        <obo:IAO_0000115 xml:lang="en">A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold.</obo:IAO_0000115>
         <obo:IAO_0000115>A phrase describing how a class name should be used. May also include other kinds of examples that facilitate immediate understanding of a class semantics, such as widely known prototypical subclasses or instances of the class. Although essential for high level terms, examples for low level terms (e.g., Affymetrix HU133 array) are not.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
         <obo:IAO_0000119>IAO</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">example of usage</rdfs:label>
         <rdfs:label>example of usage</rdfs:label>
+        <rdfs:label xml:lang="en">example of usage</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -104,8 +104,8 @@ Personally, I am more comfortable weakening definition to documentation, with in
 
 We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  </obo:IAO_0000116>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">definition</rdfs:label>
         <rdfs:label>definition</rdfs:label>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
         <rdfs:label>textual definition</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -137,8 +137,8 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">definition source</rdfs:label>
         <rdfs:label>definition source</rdfs:label>
+        <rdfs:label xml:lang="en">definition source</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -1334,6 +1334,33 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
+        <obo:OMO_0002000>prefix has_contributor: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116&gt;
+prefix participates_in: &lt;http://purl.obolibrary.org/obo/RO_0000056&gt; 
+prefix process: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115&gt;   # contribution process
+prefix has_role: &lt;http://purl.obolibrary.org/obo/RO_0000087&gt; 
+prefix role: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118&gt;  # contributor role
+prefix has_realization: &lt;http://purl.obolibrary.org/obo/BFO_0000054&gt; 
+
+construct {
+?s participates_in: _:proc .
+_:proc a process: .
+?s has_role: _:role .  
+_:role a role: .
+_:role has_realization: _:proc . 
+?o participates_in: _:proc . 
+}
+where 
+{
+?s has_contributor: ?o .
+FILTER NOT EXISTS {
+ ?s participates_in: ?some_p . 
+ ?some_p a process: .
+ ?s has_role: ?some_r .  
+  ?some_r a role: .
+ ?some_r has_realization: ?some_p . 
+ ?o participates_in: ?some_p .
+}
+}</obo:OMO_0002000>
         <rdfs:comment xml:lang="en">The property related something to a person or an organization responsible for making contributions to that.</rdfs:comment>
         <rdfs:label xml:lang="en">has contributor</rdfs:label>
     </owl:ObjectProperty>
@@ -1541,6 +1568,34 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
+        <obo:IAO_0000118>has publisher</obo:IAO_0000118>
+        <obo:OMO_0002000>prefix has_publisher: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191&gt;
+prefix participates_in: &lt;http://purl.obolibrary.org/obo/RO_0000056&gt; 
+prefix process: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014&gt;   # publishing process
+prefix has_role: &lt;http://purl.obolibrary.org/obo/RO_0000087&gt; 
+prefix role: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193&gt;  # publisher role
+prefix has_realization: &lt;http://purl.obolibrary.org/obo/BFO_0000054&gt; 
+
+construct {
+?s participates_in: _:proc .
+_:proc a process: .
+?s has_role: _:role .  
+_:role a role: .
+_:role has_realization: _:proc . 
+?o participates_in: _:proc . 
+}
+where 
+{
+?s has_publisher: ?o .
+FILTER NOT EXISTS {
+ ?s participates_in: ?some_p . 
+ ?some_p a process: .
+ ?s has_role: ?some_r .  
+  ?some_r a role: .
+ ?some_r has_realization: ?some_p . 
+ ?o participates_in: ?some_p .
+}
+}</obo:OMO_0002000>
         <rdfs:comment xml:lang="en">The property is a relationship between an information content entity and an organization or a person responsible for publishing it.</rdfs:comment>
         <rdfs:label xml:lang="en">published by</rdfs:label>
     </owl:ObjectProperty>
@@ -1634,7 +1689,6 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:comment xml:lang="en">inverse of  property &quot;has sparql endpoint&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">sparql endpoint of</rdfs:label>
-        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/105</ontology:NFDI_0010013>
     </owl:ObjectProperty>
     
 
@@ -1815,6 +1869,33 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
+        <obo:OMO_0002000>prefix has_creator: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027&gt;
+prefix participates_in: &lt;http://purl.obolibrary.org/obo/RO_0000056&gt; 
+prefix process: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001025&gt;   # creation process
+prefix has_role: &lt;http://purl.obolibrary.org/obo/RO_0000087&gt; # creator role
+prefix role: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026&gt; 
+prefix has_realization: &lt;http://purl.obolibrary.org/obo/BFO_0000054&gt; 
+
+construct {
+?s participates_in: _:proc .
+_:proc a process: .
+?s has_role: _:role .  
+_:role a role: .
+_:role has_realization: _:proc . 
+?o participates_in: _:proc . 
+}
+where 
+{
+?s has_creator: ?o .
+FILTER NOT EXISTS {
+ ?s participates_in: ?some_p . 
+ ?some_p a process: .
+ ?s has_role: ?some_r .  
+  ?some_r a role: .
+ ?some_r has_realization: ?some_p . 
+ ?o participates_in: ?some_p .
+}
+}</obo:OMO_0002000>
         <rdfs:comment xml:lang="en">The has creator property links something that was created (like a book, painting, or website) to the person or organization (agent) that made it.</rdfs:comment>
         <rdfs:label xml:lang="en">has creator</rdfs:label>
     </owl:ObjectProperty>
@@ -1825,22 +1906,6 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001028">
         <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241"/>
-        <obo:OMO_0002000>prefix has_creator: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027&gt;
-prefix participates_in: &lt;http://purl.obolibrary.org/obo/RO_0000056&gt; 
-prefix creation_process: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001025&gt;
-prefix has_role: &lt;http://purl.obolibrary.org/obo/RO_0000087&gt;
-prefix creator_role: &lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026&gt; 
-prefix has_realization: &lt;http://purl.obolibrary.org/obo/BFO_0000054&gt; 
-
-construct {
-?s participates_in: _:proc .
-_:proc a creation_process: .
-?s has_role: _:role .  
-_:role a creator_role: .
-_:role has_realization: _:proc .
-}
-where 
-{?s has_creator: ?o}</obo:OMO_0002000>
         <rdfs:comment xml:lang="en">inverse of property &quot;has creator&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">creator of</rdfs:label>
     </owl:ObjectProperty>
@@ -2787,6 +2852,7 @@ where
         <obo:IAO_0000116 xml:lang="en">2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym.</obo:IAO_0000116>
+        <obo:IAO_0000116>2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">JAR: datum     -- well, this will be very tricky to define, but maybe some 
 information-like stuff that might be put into a computer and that is 
 meant, by someone, to denote and/or to be interpreted by some 
@@ -2794,7 +2860,6 @@ process... I would include lists, tables, sentences... I think I might
 defer to Barry, or to Brian Cantwell Smith
 
 JAR: A data item is an approximately justified approximately true approximate belief</obo:IAO_0000116>
-        <obo:IAO_0000116>2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">data</obo:IAO_0000118>
         <rdfs:label xml:lang="en">data item</rdfs:label>
     </owl:Class>
@@ -2827,18 +2892,18 @@ JAR: A data item is an approximately justified approximately true approximate be
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000112 xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
         <obo:IAO_0000112>Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is about some thing.</obo:IAO_0000115>
         <obo:IAO_0000115>An information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2014-03-10: The use of &quot;thing&quot; is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ).</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">information_content_entity &apos;is_encoded_in&apos; some digital_entity in obi before split (040907). information_content_entity &apos;is_encoded_in&apos; some physical_document in obi before split (040907).
 
 Previous. An information content entity is a non-realizable information entity that &apos;is encoded in&apos; some digital or physical entity.</obo:IAO_0000116>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
         <obo:IAO_0000119>IAO</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">information content entity</rdfs:label>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
         <rdfs:label>information content entity</rdfs:label>
+        <rdfs:label xml:lang="en">information content entity</rdfs:label>
     </owl:Class>
     
 
