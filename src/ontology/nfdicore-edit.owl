@@ -10,7 +10,6 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl>)
-Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/bfo_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl>)

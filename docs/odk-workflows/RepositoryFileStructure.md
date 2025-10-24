@@ -36,4 +36,3 @@ These are the components in NFDICORE
 | -------- | --- |
 | imports-edit.owl | None |
 | nfdicore-main.owl | None |
-| nfdicore-extension.owl | None |

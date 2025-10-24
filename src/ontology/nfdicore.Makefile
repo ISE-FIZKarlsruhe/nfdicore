@@ -86,18 +86,6 @@ $(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl
 #		$(ANNOTATE_CONVERT_FILE); fi
 
 
-#$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl 
-#	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-#		remove --term http://purl.obolibrary.org/obo/IAO_0020000 --preserve-structure false \
-#		extract -T $(IMPORTDIR)/iao_terms.txt --copy-ontology-annotations false --force true --individuals exclude --method STAR \
-#		remove --select "RO:*" \
-#		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
-#		        --term-file $(IMPORTDIR)/iao_terms.txt  \
-#		        --select complement --select annotation-properties \
-#		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-#		$(ANNOTATE_CONVERT_FILE); fi
-
-
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl 
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		remove --term http://purl.obolibrary.org/obo/IAO_0020000 --preserve-structure false \
@@ -109,19 +97,6 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
 		        --select complement --select annotation-properties \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-
-
-#$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt
-#	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-#		extract -T $(IMPORTDIR)/iao_terms.txt --force true --copy-ontology-annotations true --individuals exclude --method STAR \
-#		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
- #		remove --term http://www.w3.org/2002/07/owl#Nothing  --term http://purl.obolibrary.org/obo/PATO_0000001  \
- #		remove --select "RO:*"  \
- #		remove --term IAO:0000032 --select "self" --axioms logical  \
-# 		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
-#			  --term-file $(IMPORTDIR)/ro_terms.txt \
-#		      --select complement --select annotation-properties \
-#		$(ANNOTATE_CONVERT_FILE); fi
 
 
 #################################################################
@@ -159,7 +134,17 @@ $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILE
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru \
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 
+#############################################################################
 
+
+$(ONT)-extension.ttl: 
+	$(ROBOT) annotate --input $(ONT).ttl --remove-annotations  \
+		merge --input $(COMPONENTSDIR)/nfdicore-extension.owl --include-annotations true \
+		reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		relax $(RELAX_OPTIONS) \
+		reduce -r $(REASONER) $(REDUCE_OPTIONS) \
+		annotate --annotation rdfs:label "NFDIcore Extension" \
+		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 
 
 #############################################################################
@@ -182,6 +167,7 @@ update-ontology-annotations:
 	$(ROBOT) annotate --input ../../nfdicore-full.ttl $(ALL_ANNOTATIONS) --output ../../nfdicore-full.ttl && \
 	$(ROBOT) annotate --input ../../nfdicore-base.owl $(ALL_ANNOTATIONS) --output ../../nfdicore-base.owl && \
 	$(ROBOT) annotate --input ../../nfdicore-base.ttl $(ALL_ANNOTATIONS) --output ../../nfdicore-base.ttl 
+	$(ROBOT) annotate --input ../../mappings/nfdicore-extension.ttl $(ALL_ANNOTATIONS) --output ../../mappings/nfdicore-extension.ttl 
 
 
 

@@ -3,13 +3,13 @@
 <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
 
   
-  <uri name="http://purl.obolibrary.org/obo/bfo.owl" uri="../imports/bfo_import.owl"/>
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/bfo_import.owl" uri="../imports/bfo_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl" uri="../imports/iao_import.owl"/>
-  <!-- uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/schema_import.owl" uri="../imports/schema_import.owl"/ -->
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl" uri="../imports/swo_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/obi_import.owl" uri="../imports/obi_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl" uri="../imports/edam_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl" uri="../imports/dcat_import.owl"/>
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/ro_import.owl" uri="../imports/ro_import.owl"/>
 
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl" uri="imports-edit.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl" uri="nfdicore-main.owl"/>
