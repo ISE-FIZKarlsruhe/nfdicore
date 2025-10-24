@@ -1710,5 +1710,5 @@ ClassAssertion(:NFDI_0000100 :NFDI_0010018)
 EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002350> :NFDI_0000006))
 AnnotationAssertion(rdfs:label dcterms:description "description")
 AnnotationAssertion(rdfs:label dcterms:license "license")
-AnnotationAssertion(:NFDI_0010013 :NFDI_0000202 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/105")
+
 )
