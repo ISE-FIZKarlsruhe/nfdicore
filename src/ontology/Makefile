@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                f993736540cdd191cd393087eee11acd877d66cb5bde451ef768ff42ba5bec47
+CONFIG_HASH=                df62ea6301fb91d1e8ee6da54e20992b08d6edf26a517cb7e27b912c230e20a8
 
 
 # ----------------------------------------
@@ -203,7 +203,7 @@ all_imports: $(IMPORT_FILES)
 # ----------------------------------------
 
 
-SUBSETS =  nfdicore-plus
+SUBSETS = 
 
 SUBSET_ROOTS = $(patsubst %, $(SUBSETDIR)/%, $(SUBSETS))
 SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(FORMATS_INCL_TSV), $(n).$(f)))

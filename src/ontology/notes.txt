@@ -1,0 +1,10 @@
+## What's Changed
+
+* Removed/replace the BFO2020 temporalized relations. by @joergwa in https://github.com/ISE-FIZKarlsruhe/nfdicore/pull/110
+* Reorganized extension by @joergwa in https://github.com/ISE-FIZKarlsruhe/nfdicore/pull/116
+
+* Add mappings to T4FS for data handling processes by @cthoyt in https://github.com/ISE-FIZKarlsruhe/nfdicore/pull/111
+
+And many marginal changes. 
+
+**Full Changelog**: https://github.com/ISE-FIZKarlsruhe/nfdicore/compare/v3.0.2...v3.0.3

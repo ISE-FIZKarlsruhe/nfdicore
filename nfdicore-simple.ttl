@@ -13,9 +13,9 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.2> ;
-                                          terms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.2. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.2" ;
-                                          terms:created "2025-09-25" ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.3> ;
+                                          terms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.3. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.3" ;
+                                          terms:created "2025-10-24" ;
                                           terms:creator <https://nfdi4culture.de/id/E1925> ,
                                                         <https://nfdi4culture.de/id/E2415> ,
                                                         <https://nfdi4culture.de/id/E2416> ,
@@ -29,8 +29,8 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
                                           bibo:status "Ontology Specification"@en ;
                                           vann:preferredNamespaceUri ontology: ;
                                           rdfs:label "NFDIcore" ;
-                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/3.0.1> ;
-                                          owl:versionInfo "3.0.2" .
+                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/3.0.2> ;
+                                          owl:versionInfo "3.0.3" .
 
 #################################################################
 #    Annotation properties
@@ -46,10 +46,6 @@ obo:IAO_0000118 rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/IAO_0000119
 obo:IAO_0000119 rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000233
-obo:IAO_0000233 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/bibliographicCitation
@@ -82,6 +78,10 @@ bibo:status rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#editorialNote
@@ -118,422 +118,16 @@ ontology:NFDI_0010015 rdf:type owl:AnnotationProperty ;
 #    Object Properties
 #################################################################
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000103
-ontology:NFDI_0000103 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000104 ;
-                      rdfs:comment "The property is a relationship between a resource and the specified best practice."@en ;
-                      rdfs:label "has best practice"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000104
-ontology:NFDI_0000104 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"best practice\""@en ;
-                      rdfs:label "best practice of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112
-ontology:NFDI_0000112 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000240 ;
-                      owl:inverseOf ontology:NFDI_0000113 ;
-                      rdfs:comment "The property is a relationship between an NFDI resource and a person or organization (agent) as a contact point."@en ;
-                      rdfs:label "has contact point"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113
-ontology:NFDI_0000113 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000241 ;
-                      rdfs:comment "inverse of property \"has contact point\""@en ;
-                      rdfs:label "contact point of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116
-ontology:NFDI_0000116 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000240 ;
-                      owl:inverseOf ontology:NFDI_0000117 ;
-                      rdfs:comment "The property related something to a person or an organization responsible for making contributions to that."@en ;
-                      rdfs:label "has contributor"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117
-ontology:NFDI_0000117 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000241 ;
-                      rdfs:comment "inverse of property \"has contributor\""@en ;
-                      rdfs:label "contributor of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125
-ontology:NFDI_0000125 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000126 ;
-                      rdfs:range ontology:NFDI_0000009 ;
-                      rdfs:comment "The property is a relation between a resource and a data set."@en ;
-                      rdfs:label "has data set"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000126
-ontology:NFDI_0000126 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has data set\""@en ;
-                      rdfs:label "data set of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132
-ontology:NFDI_0000132 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000133 ;
-                      rdfs:comment "The property relates a resource to the format available for the export of a resource."@en ;
-                      rdfs:label "has file format"@en ;
-                      ontology:NFDI_0000012 "exportFormat" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000133
-ontology:NFDI_0000133 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has file format\""@en ;
-                      rdfs:label "file format of"@en ;
-                      ontology:NFDI_0000012 "exportFormatOf" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137
-ontology:NFDI_0000137 rdf:type owl:ObjectProperty ;
-                      owl:inverseOf ontology:NFDI_0000138 ;
-                      rdfs:domain ontology:NFDI_0000002 ;
-                      rdfs:comment "The property relates a project to the organization that provided funding for it."@en ;
-                      rdfs:label "has funding organization"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000138
-ontology:NFDI_0000138 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of property \"has funding organization\""@en ;
-                      rdfs:label "funding organization of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142
-ontology:NFDI_0000142 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000143 ;
-                      rdfs:range ontology:NFDI_0000141 ;
-                      rdfs:comment "The property is a relationship between a resource and a license file." ;
-                      rdfs:label "has license"@en ;
-                      skos:editorialNote "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)." ;
-                      ontology:NFDI_0000012 "license" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000143
-ontology:NFDI_0000143 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of property \"has license\""@en ;
-                      rdfs:label "license of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000144
-ontology:NFDI_0000144 rdf:type owl:ObjectProperty ;
-                      rdfs:range ontology:NFDI_0000005 ;
-                      rdfs:comment "The property is a relationship between a thing and a place its located at."@en ;
-                      rdfs:label "has location"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146
-ontology:NFDI_0000146 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000147 ;
-                      rdfs:range ontology:NFDI_0000145 ;
-                      rdfs:comment "The property relates a resource to its data format."@en ;
-                      rdfs:label "has media type"@en ;
-                      ontology:NFDI_0000012 "mediaType" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000147
-ontology:NFDI_0000147 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has media type\""@en ;
-                      rdfs:label "media type of"@en ;
-                      skos:editorialNote "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152
-ontology:NFDI_0000152 rdf:type owl:ObjectProperty ;
-                      owl:inverseOf ontology:NFDI_0001024 ;
-                      rdfs:comment "p has input x =Def x is used or consumed in the process of executing p." ;
-                      rdfs:label "has input"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153
-ontology:NFDI_0000153 rdf:type owl:ObjectProperty ;
-                      owl:inverseOf ontology:NFDI_0001023 ;
-                      rdfs:comment "p has output x =Def x is produced or generated as a result of executing p." ;
-                      rdfs:label "has output"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182
-ontology:NFDI_0000182 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "The property is a parental relationship between organizations."@en ;
-                      rdfs:label "has parent organization"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187
-ontology:NFDI_0000187 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000188 ;
-                      rdfs:range ontology:NFDI_0000186 ;
-                      rdfs:comment "The property links software to a programming language its written in." ;
-                      rdfs:label "has programming language"@en ;
-                      ontology:NFDI_0000012 "programmingLanguage" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000188
-ontology:NFDI_0000188 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has programming language\""@en ;
-                      rdfs:label "programming language of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191
-ontology:NFDI_0000191 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000240 ;
-                      owl:inverseOf ontology:NFDI_0000192 ;
-                      rdfs:comment "The property is a relationship between an information content entity and an organization or a person responsible for publishing it."@en ;
-                      rdfs:label "published by"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192
-ontology:NFDI_0000192 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000241 ;
-                      rdfs:comment "inverse of  property \"has publisher\""@en ;
-                      rdfs:label "publisher of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194
-ontology:NFDI_0000194 rdf:type owl:ObjectProperty ;
-                      rdfs:domain ontology:NFDI_0000001 ;
-                      rdfs:range ontology:NFDI_0000002 ;
-                      rdfs:comment "The property is a relationship between a project or a resource and related projects."@en ;
-                      rdfs:label "resource of project"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000195
-ontology:NFDI_0000195 rdf:type owl:ObjectProperty ;
-                      owl:inverseOf ontology:NFDI_0000196 ;
-                      rdfs:range ontology:NFDI_0000107 ;
-                      rdfs:comment "The property is a relationship between a dataset and a collection it represents."@en ;
-                      rdfs:label "represents collection"@en ;
-                      skos:example "a dataportal is about some collection of pieces of art" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000196
-ontology:NFDI_0000196 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      rdfs:comment "inverse of  property \"represented collection\""@en ;
-                      rdfs:label "represented collection of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000199
-ontology:NFDI_0000199 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000200 ;
-                      rdfs:range ontology:NFDI_0000198 ;
-                      rdfs:comment "The property is a relationship between a resource and a software it uses."@en ;
-                      rdfs:label "has software"@en ;
-                      ontology:NFDI_0000012 "software" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000200
-ontology:NFDI_0000200 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has sofware\""@en ;
-                      rdfs:label "software of"@en ;
-                      skos:editorialNote "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000201
-ontology:NFDI_0000201 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000202 ;
-                      rdfs:comment "The property relates a data resource to its SPARQL Endpoint."@en ;
-                      rdfs:label "has sparql endpoint"@en ;
-                      ontology:NFDI_0000012 "sparqlEndpoint" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000202
-ontology:NFDI_0000202 rdf:type owl:ObjectProperty ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/105" ;
-                      rdfs:comment "inverse of  property \"has sparql endpoint\""@en ;
-                      rdfs:label "sparql endpoint of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204
-ontology:NFDI_0000204 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000205 ;
-                      rdfs:comment "The property is a relationship between a resource and the international standard or norm."@en ;
-                      rdfs:label "has specification"@en ;
-                      ontology:NFDI_0000012 "specification" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000205
-ontology:NFDI_0000205 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has specification\""@en ;
-                      rdfs:label "specification of"@en ;
-                      skos:editorialNote "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207
-ontology:NFDI_0000207 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000208 ;
-                      rdfs:range ontology:NFDI_0000206 ;
-                      rdfs:comment "The property relates a resource to the standard it relies on."@en ;
-                      rdfs:label "has standard"@en ;
-                      ontology:NFDI_0000012 "standard" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000208
-ontology:NFDI_0000208 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has standard\""@en ;
-                      rdfs:label "standard of"@en ;
-                      skos:editorialNote "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211
-ontology:NFDI_0000211 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000212 ;
-                      rdfs:range ontology:NFDI_0000100 ;
-                      rdfs:comment "The property establishes a connection between a resource, an agent, or a project, and the academic discipline, subject area, or domain within which they operate."@en ;
-                      rdfs:label "has subject area"@en ;
-                      ontology:NFDI_0000012 "subjectArea" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000212
-ontology:NFDI_0000212 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has subject area\""@en ;
-                      rdfs:label "subject area of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213
-ontology:NFDI_0000213 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "The property represents a subsidiary relationship between organizations, where the subject organization owns, controls, or otherwise has a significant influence over the object organization"@en ;
-                      rdfs:label "has subsidiary organization"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216
-ontology:NFDI_0000216 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      owl:inverseOf ontology:NFDI_0000217 ;
-                      rdfs:range ontology:NFDI_0000215 ;
-                      rdfs:comment "The property is a relationship between a resource and a technology it uses."@en ;
-                      rdfs:label "has technology"@en ;
-                      ontology:NFDI_0000012 "technology" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000217
-ontology:NFDI_0000217 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of  property \"has technology\""@en ;
-                      rdfs:label "technology of"@en ;
-                      skos:editorialNote "2024-04-09. Sasha Bruns: Following e.g. the Software Ontology (SWO), relations between two ICE are categorized under the overarching property \"is about.\" Consequently, inverse properties become subproperties of a single superproperty (see e.g. swo:is_license_for and swo:has_license)."@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226
 ontology:NFDI_0000226 rdf:type owl:ObjectProperty ;
                       rdfs:comment "inverse of the relation 'is about'" ;
-                      rdfs:label "is subject of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000240
-ontology:NFDI_0000240 rdf:type owl:ObjectProperty ;
-                      owl:inverseOf ontology:NFDI_0000241 ;
-                      rdfs:domain ontology:NFDI_0000001 ;
-                      rdfs:range ontology:NFDI_0000102 ;
-                      rdfs:comment "The property is a relationship between a resource and an agent."@en ;
-                      rdfs:label "has agent"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000241
-ontology:NFDI_0000241 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of property 'has agent'" ;
-                      rdfs:label "is agent of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001003
-ontology:NFDI_0001003 rdf:type owl:ObjectProperty ;
-                      owl:inverseOf ontology:NFDI_0001006 ;
-                      rdfs:comment "inverse property of has external identifier"@en ;
-                      rdfs:label "is identified by"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006
-ontology:NFDI_0001006 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000226 ;
-                      rdfs:comment "The property relates a thing to the corresponding entry or related concept of the item in a central register, e.g. GND, VIAF, RISM, Wikidata or ROR."@en ;
-                      rdfs:label "has external identifier"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023
-ontology:NFDI_0001023 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of the relation 'has output'" ;
-                      rdfs:label "is output of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001024
-ontology:NFDI_0001024 rdf:type owl:ObjectProperty ;
-                      rdfs:comment "inverse of the relation 'has input'" ;
-                      rdfs:label "is input of"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027
-ontology:NFDI_0001027 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000240 ;
-                      owl:inverseOf ontology:NFDI_0001028 ;
-                      rdfs:comment "The has creator property links something that was created (like a book, painting, or website) to the person or organization (agent) that made it."@en ;
-                      rdfs:label "has creator"@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001028
-ontology:NFDI_0001028 rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf ontology:NFDI_0000241 ;
-                      rdfs:comment "inverse of property \"has creator\""@en ;
-                      rdfs:label "creator of"@en .
+                      rdfs:label "is subject of"@en ;
+                      skos:altLabel "is described by" .
 
 
 #################################################################
 #    Data properties
 #################################################################
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000105
-ontology:NFDI_0000105 rdf:type owl:DatatypeProperty ;
-                      rdfs:domain ontology:NFDI_0000004 ;
-                      rdfs:comment "The property refers to the date on which a person was born."@en ;
-                      rdfs:label "birth date"@en ;
-                      skos:editorialNote "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing."@en .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000127
-ontology:NFDI_0000127 rdf:type owl:DatatypeProperty ;
-                      rdfs:domain ontology:NFDI_0000004 ;
-                      rdfs:comment "The property refers to the date on which a person passed away."@en ;
-                      rdfs:label "death date"@en ;
-                      skos:editorialNote "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing." .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000128
-ontology:NFDI_0000128 rdf:type owl:DatatypeProperty ;
-                      rdfs:comment "The property refers to the date on which the organization ceased to exist or was formally dissolved."@en ;
-                      rdfs:label "dissolution date"@en ;
-                      skos:editorialNote "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing." .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000135
-ontology:NFDI_0000135 rdf:type owl:DatatypeProperty ;
-                      rdfs:domain ontology:NFDI_0000001 ;
-                      rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
-                      rdfs:label "file extension"@en ;
-                      skos:example "mp4" ,
-                                   "ttl" ,
-                                   "txt" ,
-                                   "xml" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000136
-ontology:NFDI_0000136 rdf:type owl:DatatypeProperty ;
-                      rdfs:comment "The property refers to the specific date on which the organization was officially established or founded."@en ;
-                      rdfs:label "foundation date"@en ;
-                      skos:editorialNote "The range has been set to \"Literal\" because we expect \"untidy\" data, i.e. for most datums a structured value cannot be obtained through parsing." .
-
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007
 ontology:NFDI_0001007 rdf:type owl:DatatypeProperty ;
@@ -604,22 +198,9 @@ ontology:NFDI_0000006 rdf:type owl:Class ;
                       skos:example "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000007
-ontology:NFDI_0000007 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000102 ;
-                      rdfs:comment "An organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
-                      rdfs:label "consortium member"@en ;
-                      skos:editorialNote "A consortium member refers to an individual organization that has a specific role, responsibilities or contributions within the consortium framework."@en ;
-                      skos:example "Museums of City Cologne is a member of NFDI4Culture consortium."@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008
 ontology:NFDI_0000008 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000001 ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty ontology:NFDI_0001024 ;
-                                        owl:someValuesFrom ontology:NFDI_0000224
-                                      ] ;
+                      rdfs:subClassOf ontology:NFDI_0000001 ;
                       rdfs:comment "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
                       rdfs:label "creative work"@en ;
                       skos:editorialNote "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en ;
@@ -1063,12 +644,6 @@ ontology:NFDI_0000230 rdf:type owl:Class ;
                       rdfs:label "service provider role"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000231
-ontology:NFDI_0000231 rdf:type owl:Class ;
-                      rdfs:comment "An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en ;
-                      rdfs:label "contributor"@en .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232
 ontology:NFDI_0000232 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000001 ;
@@ -1108,25 +683,15 @@ ontology:NFDI_0001004 rdf:type owl:Class ;
                       rdfs:label "project proposal"@en .
 
 
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001005
-ontology:NFDI_0001005 rdf:type owl:Class ;
-                      rdfs:comment "An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems." ;
-                      rdfs:label "contact point"@en ;
-                      skos:example """:ex_1  a \"nfdi:contact point\" .
-:ex_1  \"nfdi:is subject of\"  :email_1 .
-:email_1 a \"iao:email address\" .
-:email_1 \"nfdi:has value\" \"test@example.org\" .""" .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009
 ontology:NFDI_0001009 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       obo:IAO_0000118 "Gemeinsame Normdatei"@de ,
                                       "Integrated Authority File"@en ;
                       obo:IAO_0000119 "https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html" ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "A centrally registered identifier that is issued by the German National Library. The Integrated Authority File (GND) is facilitates the collaborative use and administration of authority data. These authority data represent and describe entities, i.e. persons, corporate bodies, conferences and events, geographic entities, topics and works relating to cultural and academic collections."@en ;
                       rdfs:label "GND identifier"@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       ontology:NFDI_0010015 "GND"@en .
 
 
@@ -1136,10 +701,10 @@ ontology:NFDI_0001010 rdf:type owl:Class ;
                       obo:IAO_0000118 "Integrated Authority File"@en ,
                                       "Virtual International Authority File"@en ;
                       obo:IAO_0000119 "https://viaf.org/en" ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "The centrally registered identifier VIAF (Virtual International Authority File) is an international authority file that links and integrates authority records from multiple national libraries and other organizations. It provides a unique identifier for authors, creators, and entities, facilitating better data sharing and cataloging across institutions."@en ;
                       rdfs:label "VIAF identifier"@en ;
                       skos:example "https://viaf.org/en/viaf/137346469" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       ontology:NFDI_0010015 "VIAF"@en .
 
 
@@ -1148,10 +713,10 @@ ontology:NFDI_0001011 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       obo:IAO_0000118 "GeoNames"@en ;
                       obo:IAO_0000119 "https://www.geonames.org/" ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "GeoNames is a geographical database that provides information on places, including names, coordinates, and administrative divisions. It integrates data from multiple sources and is widely used for geolocation, mapping, and geographic information systems (GIS)."@en ;
                       rdfs:label "GeoNames identifier"@en ;
-                      skos:example "https://www.geonames.org/2950159" .
+                      skos:example "https://www.geonames.org/2950159" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012
@@ -1159,20 +724,20 @@ ontology:NFDI_0001012 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       obo:IAO_0000118 "Wikidata"@en ;
                       obo:IAO_0000119 "https://www.wikidata.org/" ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "Wikidata is maintained by the Wikimedia Foundation and serves as a central repository for structured data used by Wikipedia, Wikimedia projects, and external applications."@en ;
                       rdfs:label "Wikidata identifier"@en ;
-                      skos:example "https://www.wikidata.org/wiki/Q1388737" .
+                      skos:example "https://www.wikidata.org/wiki/Q1388737" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013
 ontology:NFDI_0001013 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       obo:IAO_0000119 "https://ror.org/" ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems."@en ;
                       rdfs:label "ROR identifier"@en ;
                       skos:example "https://ror.org/01kdxra28" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       ontology:NFDI_0010015 "ROR"@en .
 
 
@@ -1181,10 +746,10 @@ ontology:NFDI_0001014 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       obo:IAO_0000118 "International Standard Identifier for Libraries and Related Organizations"@en ;
                       obo:IAO_0000119 "https://sigel.staatsbibliothek-berlin.de/" ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "ISIL (International Standard Identifier for Libraries and Related Organizations) is a globally recognized identifier system used to uniquely identify libraries, archives, museums, and other cultural institutions. It facilitates resource sharing, cataloging, and data exchange across institutions and countries."@en ;
                       rdfs:label "ISIL identifier"@en ;
                       skos:example "https://ld.zdb-services.de/resource/organisations/DE-4153" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       ontology:NFDI_0010015 "ISIL"@en .
 
 
@@ -1193,10 +758,10 @@ ontology:NFDI_0001015 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       obo:IAO_0000118 "FactGrid"@en ;
                       obo:IAO_0000119 "https://database.factgrid.de/" ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "FactGrid is a collaborative, structured knowledge database designed for historical research. It operates on Wikibase and focuses on documenting historical entities, events, and relationships."@en ;
                       rdfs:label "FactGrid identifier"@en ;
-                      skos:example "https://database.factgrid.de/entity/Q595" .
+                      skos:example "https://database.factgrid.de/entity/Q595" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016
@@ -1204,10 +769,10 @@ ontology:NFDI_0001016 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000015 ;
                       obo:IAO_0000118 "Répertoire International des Sources Musicales"@fr ;
                       obo:IAO_0000119 "https://rism.info/" ;
-                      obo:IAO_0000233 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       rdfs:comment "RISM (Répertoire International des Sources Musicales) is an international catalog of historical music sources, including manuscripts, printed music, and treatises. It provides unique identifiers and bibliographic data to support music research and documentation."@en ;
                       rdfs:label "RISM identifier"@en ;
                       skos:example "https://rism.online/sources/201001959/" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
                       ontology:NFDI_0010015 "RISM"@en .
 
 
@@ -1331,14 +896,6 @@ ontology:NFDI_0001037 rdf:type owl:Class ;
                       rdfs:comment "A Digital Object Identifier (DOI) is a centrally registered identifier that provides a unique, persistent reference to digital objects such as publications, datasets, and software, ensuring reliable access and citation." ;
                       rdfs:label "digital object identifier"@en ;
                       skos:example "10.1016/j.compind.2023.104016" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001038
-ontology:NFDI_0001038 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000102 ;
-                      rdfs:comment "A consortium partner is an organization inhering a consortium partner role. A consortium partner actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals."@en ;
-                      rdfs:label "consortium partner"@en ;
-                      skos:example "universities, research institutions, industry partners, and funding agencies collaborating in NFDI MatWerk, Horizon Europe projects, and other large-scale research initiatives" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001039

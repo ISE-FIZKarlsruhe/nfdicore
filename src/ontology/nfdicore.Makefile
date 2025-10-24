@@ -3,6 +3,7 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
+CLEANFILES=$(MAIN_FILES) $(SRCMERGED) $(EDIT_PREPROCESSED) nfdicore-extension.ttl 
 
 
 #################################################################
@@ -138,7 +139,7 @@ $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILE
 
 
 $(ONT)-extension.ttl: 
-	$(ROBOT) annotate --input $(ONT).ttl --remove-annotations  \
+	$(ROBOT) annotate --input $(ONT)-edit.owl --remove-annotations  \
 		merge --input $(COMPONENTSDIR)/nfdicore-extension.owl --include-annotations true \
 		reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 		relax $(RELAX_OPTIONS) \
@@ -167,7 +168,7 @@ update-ontology-annotations:
 	$(ROBOT) annotate --input ../../nfdicore-full.ttl $(ALL_ANNOTATIONS) --output ../../nfdicore-full.ttl && \
 	$(ROBOT) annotate --input ../../nfdicore-base.owl $(ALL_ANNOTATIONS) --output ../../nfdicore-base.owl && \
 	$(ROBOT) annotate --input ../../nfdicore-base.ttl $(ALL_ANNOTATIONS) --output ../../nfdicore-base.ttl 
-	$(ROBOT) annotate --input ../../mappings/nfdicore-extension.ttl $(ALL_ANNOTATIONS) --output ../../mappings/nfdicore-extension.ttl 
+	$(ROBOT) annotate --input ../../profiles/nfdicore-extension.ttl $(ALL_ANNOTATIONS) --output ../../profiles/nfdicore-extension.ttl 
 
 
 
