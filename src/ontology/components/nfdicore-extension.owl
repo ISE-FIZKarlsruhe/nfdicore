@@ -10,8 +10,17 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl>)
+Annotation(dcterms:creator <https://nfdi4culture.de/id/E1925>)
+Annotation(dcterms:creator <https://nfdi4culture.de/id/E2415>)
+Annotation(dcterms:creator <https://nfdi4culture.de/id/E2416>)
+Annotation(dcterms:creator <https://nfdi4culture.de/id/E3095>)
+Annotation(dcterms:creator <https://orcid.org/0000-0001-7192-7143>)
+Annotation(dcterms:creator <https://orcid.org/0000-0002-3092-0532>)
 Annotation(dcterms:description "This module extends nfdicore main module with axioms for simplification in data querying and ease of use."@en)
+Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "Extension module of NFDIcore ontology"@en)
+Annotation(<http://purl.org/ontology/bibo/status> "Ontology Specification"@en)
+Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-karlsruhe.de/ontology/>)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
@@ -72,6 +81,12 @@ Declaration(DataProperty(:NFDI_0000127))
 Declaration(DataProperty(:NFDI_0000128))
 Declaration(DataProperty(:NFDI_0000135))
 Declaration(DataProperty(:NFDI_0000136))
+Declaration(AnnotationProperty(dcterms:creator))
+Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/status>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri>))
 Declaration(AnnotationProperty(:NFDI_0000012))
 
 ############################
@@ -107,6 +122,33 @@ SubObjectPropertyOf(:NFDI_0000113 :NFDI_0000241)
 
 # Object Property: :NFDI_0000116 (has contributor)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0000116 "prefix has_contributor: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116>
+prefix participates_in: <http://purl.obolibrary.org/obo/RO_0000056> 
+prefix process: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>   # contribution process
+prefix has_role: <http://purl.obolibrary.org/obo/RO_0000087> 
+prefix role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118>  # contributor role
+prefix has_realization: <http://purl.obolibrary.org/obo/BFO_0000054> 
+
+construct {
+?s participates_in: _:proc .
+_:proc a process: .
+?s has_role: _:role .  
+_:role a role: .
+_:role has_realization: _:proc . 
+?o participates_in: _:proc . 
+}
+where 
+{
+?s has_contributor: ?o .
+FILTER NOT EXISTS {
+ ?s participates_in: ?some_p . 
+ ?some_p a process: .
+ ?s has_role: ?some_r .  
+  ?some_r a role: .
+ ?some_r has_realization: ?some_p . 
+ ?o participates_in: ?some_p .
+}
+}")
 AnnotationAssertion(rdfs:comment :NFDI_0000116 "The property related something to a person or an organization responsible for making contributions to that."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000116 "has contributor"@en)
 SubObjectPropertyOf(:NFDI_0000116 :NFDI_0000240)
@@ -229,6 +271,34 @@ SubObjectPropertyOf(:NFDI_0000188 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000191 (published by)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> :NFDI_0000191 "has publisher")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0000191 "prefix has_publisher: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191>
+prefix participates_in: <http://purl.obolibrary.org/obo/RO_0000056> 
+prefix process: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014>   # publishing process
+prefix has_role: <http://purl.obolibrary.org/obo/RO_0000087> 
+prefix role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193>  # publisher role
+prefix has_realization: <http://purl.obolibrary.org/obo/BFO_0000054> 
+
+construct {
+?s participates_in: _:proc .
+_:proc a process: .
+?s has_role: _:role .  
+_:role a role: .
+_:role has_realization: _:proc . 
+?o participates_in: _:proc . 
+}
+where 
+{
+?s has_publisher: ?o .
+FILTER NOT EXISTS {
+ ?s participates_in: ?some_p . 
+ ?some_p a process: .
+ ?s has_role: ?some_r .  
+  ?some_r a role: .
+ ?some_r has_realization: ?some_p . 
+ ?o participates_in: ?some_p .
+}
+}")
 AnnotationAssertion(rdfs:comment :NFDI_0000191 "The property is a relationship between an information content entity and an organization or a person responsible for publishing it."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000191 "published by"@en)
 SubObjectPropertyOf(:NFDI_0000191 :NFDI_0000240)
@@ -395,6 +465,33 @@ ObjectPropertyRange(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000578>)
 
 # Object Property: :NFDI_0001027 (has creator)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0001027 "prefix has_creator: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027>
+prefix participates_in: <http://purl.obolibrary.org/obo/RO_0000056> 
+prefix process: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001025>   # creation process
+prefix has_role: <http://purl.obolibrary.org/obo/RO_0000087> # creator role
+prefix role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026> 
+prefix has_realization: <http://purl.obolibrary.org/obo/BFO_0000054> 
+
+construct {
+?s participates_in: _:proc .
+_:proc a process: .
+?s has_role: _:role .  
+_:role a role: .
+_:role has_realization: _:proc . 
+?o participates_in: _:proc . 
+}
+where 
+{
+?s has_creator: ?o .
+FILTER NOT EXISTS {
+ ?s participates_in: ?some_p . 
+ ?some_p a process: .
+ ?s has_role: ?some_r .  
+  ?some_r a role: .
+ ?some_r has_realization: ?some_p . 
+ ?o participates_in: ?some_p .
+}
+}")
 AnnotationAssertion(rdfs:comment :NFDI_0001027 "The has creator property links something that was created (like a book, painting, or website) to the person or organization (agent) that made it."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001027 "has creator"@en)
 SubObjectPropertyOf(:NFDI_0001027 :NFDI_0000240)
@@ -495,4 +592,10 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001038 
 EquivalentClasses(:NFDI_0001038 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001096)))
 
 
+AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
+AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2415> "Tabea Tietz")
+AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2416> "Oleksandra Bruns")
+AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E3095> "Etienne Posthumus")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-3092-0532> "Hossein Beygi Nasrabadi")
 )
