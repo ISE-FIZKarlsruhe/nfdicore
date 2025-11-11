@@ -816,7 +816,6 @@ SubClassOf(:NFDI_0000230 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom
 
 AnnotationAssertion(rdfs:comment :NFDI_0000232 "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000232 "service product"@en)
-SubClassOf(:NFDI_0000232 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002353> :NFDI_0000101)))
 
 # Class: :NFDI_0000244 (service specification)
 
@@ -1179,39 +1178,39 @@ SubClassOf(:NFDI_0001056 :NFDI_0000203)
 
 # Class: :NFDI_0001057 (co organizer role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001057 "A role inherent in an agent that is realized when collaborating in planning, managing, and executing an event, project, or initiative alongside one or more primary organizers.")
+AnnotationAssertion(rdfs:comment :NFDI_0001057 "A role inherent in an agent that is realized when collaborating in planning, managing, and executing an event, project, or initiative alongside one or more primary organizers."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001057 "co organizer role"@en)
 SubClassOf(:NFDI_0001057 :NFDI_0000229)
 
 # Class: :NFDI_0001058 (co spokesperson role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001058 "A role inherent in an agent that is realized when shareing the role of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public.")
+AnnotationAssertion(rdfs:comment :NFDI_0001058 "A role inherent in an agent that is realized when shareing the responsibilities of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001058 "co spokesperson role"@en)
 SubClassOf(:NFDI_0001058 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :NFDI_0000004)))
 
 # Class: :NFDI_0001059 (collaboration partner role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001059 "A role inherent in an agent that is realized when engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives.")
+AnnotationAssertion(rdfs:comment :NFDI_0001059 "A role inherent in an agent that is realized when engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001059 "collaboration partner role"@en)
 SubClassOf(:NFDI_0001059 :NFDI_0000229)
 
 # Class: :NFDI_0001060 (manufacturer role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001060 "A role inherent in an agent that is realized when being responsible for producing goods, components, or materials through industrial or commercial processes.")
+AnnotationAssertion(rdfs:comment :NFDI_0001060 "A role inherent in an agent that is realized when being responsible for producing goods, components, or materials through industrial or commercial processes."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001060 "manufacturer role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001060 "Siemens as a manufacturer of industrial automation equipment or Intel as a manufacturer of semiconductor chips")
 SubClassOf(:NFDI_0001060 :NFDI_0000229)
 
 # Class: :NFDI_0001061 (organizer role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001061 "A role inherent in an agent that is realized when being responsible for planning, managing, and executing an event, project, or structured activity.")
+AnnotationAssertion(rdfs:comment :NFDI_0001061 "A role inherent in an agent that is realized when being responsible for planning, managing, and executing an event, project, or structured activity."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001061 "organizer role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001061 "event management firms organizing scientific symposiums or non-profit organizations coordinating community outreach programs")
 SubClassOf(:NFDI_0001061 :NFDI_0000229)
 
 # Class: :NFDI_0001062 (speaker role)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001062 "A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings.")
+AnnotationAssertion(rdfs:comment :NFDI_0001062 "A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001062 "speaker role"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001062 "invited speakers at scientific symposiums, keynote presenters at technology expos, and guest lecturers at universities")
 SubClassOf(:NFDI_0001062 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> :NFDI_0000004)))
@@ -1710,5 +1709,4 @@ ClassAssertion(:NFDI_0000100 :NFDI_0010018)
 EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002350> :NFDI_0000006))
 AnnotationAssertion(rdfs:label dcterms:description "description")
 AnnotationAssertion(rdfs:label dcterms:license "license")
-
 )

@@ -28,6 +28,19 @@ Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000231))
 Declaration(Class(:NFDI_0001005))
 Declaration(Class(:NFDI_0001038))
+Declaration(Class(:NFDI_0001107))
+Declaration(Class(:NFDI_0001108))
+Declaration(Class(:NFDI_0001109))
+Declaration(Class(:NFDI_0001110))
+Declaration(Class(:NFDI_0001111))
+Declaration(Class(:NFDI_0001112))
+Declaration(Class(:NFDI_0001113))
+Declaration(Class(:NFDI_0001114))
+Declaration(Class(:NFDI_0001115))
+Declaration(Class(:NFDI_0001116))
+Declaration(Class(:NFDI_0001117))
+Declaration(Class(:NFDI_0001118))
+Declaration(Class(:NFDI_0001119))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
@@ -570,13 +583,18 @@ EquivalentClasses(:NFDI_0000007 ObjectIntersectionOf(<http://purl.obolibrary.org
 
 # Class: :NFDI_0000231 (contributor)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000231 "An agent that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000231 "An independent continuant that contributes knowledge, skills, or resources to a project, task, or initiative, actively aiding in its completion or success."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000231 "contributor"@en)
 EquivalentClasses(:NFDI_0000231 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000118)))
 
+# Class: :NFDI_0000232 (service product)
+
+EquivalentClasses(:NFDI_0000232 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000228)))
+EquivalentClasses(:NFDI_0000232 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000141> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002353> :NFDI_0000101)))
+
 # Class: :NFDI_0001005 (contact point)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001005 "An agent that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems.")
+AnnotationAssertion(rdfs:comment :NFDI_0001005 "An independent continuant that serves as a designated interface for communication, facilitating the exchange of information, support, or services between individuals, organizations, or systems."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001005 "contact point"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001005 ":ex_1  a \"nfdi:contact point\" .
 :ex_1  \"nfdi:is subject of\"  :email_1 .
@@ -586,10 +604,91 @@ EquivalentClasses(:NFDI_0001005 ObjectIntersectionOf(<http://purl.obolibrary.org
 
 # Class: :NFDI_0001038 (consortium partner)
 
-AnnotationAssertion(rdfs:comment :NFDI_0001038 "A consortium partner is an organization inhering a consortium partner role. A consortium partner actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0001038 "An organization inhering a consortium partner role. A consortium partner actively collaborates within a consortium, contributing expertise, resources, or infrastructure to support shared research, development, or innovation goals."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001038 "consortium partner"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001038 "universities, research institutions, industry partners, and funding agencies collaborating in NFDI MatWerk, Horizon Europe projects, and other large-scale research initiatives")
 EquivalentClasses(:NFDI_0001038 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001096)))
+
+# Class: :NFDI_0001107 (co-spokesperson)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001107 "A spokesperson that is shareing the responsibilities of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001107 "co-spokesperson"@en)
+EquivalentClasses(:NFDI_0001107 ObjectIntersectionOf(:NFDI_0001119 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001058)))
+
+# Class: :NFDI_0001108 (co-organizer)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001108 "An independent continuant that is collaborating in planning, managing, and executing an event, project, or initiative alongside one or more primary organizers."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001108 "co-organizer"@en)
+EquivalentClasses(:NFDI_0001108 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001057)))
+
+# Class: :NFDI_0001109 (academic organization)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001109 "An organization that is coordinating, managing, or supporting academic activities, programs, or research to promote education and knowledge advancement."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001109 "academic organization"@en)
+EquivalentClasses(:NFDI_0001109 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000019)))
+
+# Class: :NFDI_0001110 (collaboration partner)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001110 "An indendent continunat that is engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001110 "collaboration partner"@en)
+EquivalentClasses(:NFDI_0001110 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001059)))
+SubClassOf(:NFDI_0001110 <http://purl.obolibrary.org/obo/BFO_0000004>)
+
+# Class: :NFDI_0001111 (creator)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001111 "An independent continuant that originates, develops, or produces a work, product, or idea."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001111 "creator"@en)
+EquivalentClasses(:NFDI_0001111 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001026)))
+SubClassOf(:NFDI_0001111 <http://purl.obolibrary.org/obo/BFO_0000004>)
+
+# Class: :NFDI_0001112 (funding organization)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001112 "An organization that serves as a funder to endevaours, e.g. projects."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001112 "funding organization"@en)
+EquivalentClasses(:NFDI_0001112 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000139)))
+
+# Class: :NFDI_0001113 (industry organization)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001113 "An organization that is promoting, regulating, or supporting industry-specific standards, practices, and collaboration to advance sector development and innovation."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001113 "industry organization"@en)
+EquivalentClasses(:NFDI_0001113 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000020)))
+SubClassOf(:NFDI_0001113 <http://purl.obolibrary.org/obo/OBI_0000245>)
+
+# Class: :NFDI_0001114 (manufacturer)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001114 "An independent continunat that is responsible for producing goods, components, or materials through industrial or commercial processes."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001114 "manufacturer"@en)
+EquivalentClasses(:NFDI_0001114 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001060)))
+
+# Class: :NFDI_0001115 (organizer)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001115 "An independent continuant that is responsible for planning, managing, and executing an event, project, or structured activity."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001115 "organizer"@en)
+EquivalentClasses(:NFDI_0001115 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001061)))
+
+# Class: :NFDI_0001116 (publisher)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001116 "An independent continuant that is publishing a document."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001116 "publisher"@en)
+EquivalentClasses(:NFDI_0001116 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000193)))
+
+# Class: :NFDI_0001117 (service provider)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001117 "An independent continuant that is delivering services, managing processes, and ensuring the effective fulfillment of service product requirements."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001117 "service provider"@en)
+EquivalentClasses(:NFDI_0001117 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000230)))
+
+# Class: :NFDI_0001118 (speaker)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001118 "A person that delivers presentations, lectures, or speeches at events, conferences, or public gatherings."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001118 "speaker"@en)
+EquivalentClasses(:NFDI_0001118 ObjectIntersectionOf(:NFDI_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001062)))
+
+# Class: :NFDI_0001119 (spokesperson)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001119 "A person that is representing, advocating, or communicating on behalf of an organization or group to convey messages or information."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001119 "spokesperson"@en)
+EquivalentClasses(:NFDI_0001119 ObjectIntersectionOf(:NFDI_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000017)))
 
 
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
