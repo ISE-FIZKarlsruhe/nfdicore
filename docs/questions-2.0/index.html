@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>NFDIcore Competency Questions (CQs) and SPARQL Queries - NFDIcore Ontology</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "NFDIcore Competency Questions (CQs) and SPARQL Queries";
+        var mkdocs_page_input_path = "questions-2.0.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> NFDIcore Ontology
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ontology/">Ontology</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../patterns/">Patterns</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../versions/">Versions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../extensions/">Modular Extensions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">NFDIcore Ontology</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">NFDIcore Competency Questions (CQs) and SPARQL Queries</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nfdicore-competency-questions-cqs-and-sparql-queries">NFDIcore Competency Questions (CQs) and SPARQL Queries</h1>
+<p>For the design and evaluation different projects contributed competecy questions the ontology should be able to answer.</p>
+<h2 id="nfdi-matwerk">NFDI-MatWerk</h2>
+<p>All NFDI-MatWerk Use Cases are available <a href="https://nfdi-matwerk.de/infrastructure-use-cases">at the MatWerk Consortium Webpage</a></p>
+<h3 id="use-case-1">Use Case 1</h3>
+<ul>
+<li><strong>CQ:</strong> What are the specific services (in digitalization) that are used in a specific academic discipline? (data science) (need to be transferred to the new generation of scientists and professionals)
+&lt;!-- 
+<strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?serviceType</span> 
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?serviceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">MaterialScience</span> <span class="p">.</span>
+<span class="nv">?serviceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span> 
+<span class="p">}</span>
+<span class="err">```</span><span class="o">--&gt;</span>
+
+<span class="o">-</span> <span class="o">**</span><span class="nn">CQ</span><span class="p">:</span><span class="o">**</span> <span class="err">What</span> <span class="err">are</span> <span class="err">the</span> <span class="err">resources</span> <span class="err">and</span> <span class="err">events</span> <span class="err">related</span> <span class="k">to</span> <span class="err">specific</span> <span class="err">processes</span> <span class="p">(</span><span class="err">demonstration</span> <span class="err">and</span> <span class="err">teaching</span><span class="p">)</span><span class="err">?</span>
+<span class="o">&lt;!---</span> <span class="o">**</span><span class="nn">SPARQL</span><span class="p">:</span><span class="o">**</span>
+<span class="err">```sparql</span>
+<span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?event</span> <span class="nv">?process</span>
+<span class="k">WHERE</span>
+<span class="p">{</span>  <span class="p">{</span> <span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">}</span> <span class="k">UNION</span> <span class="p">{</span> <span class="nv">?event</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?process</span> <span class="p">.</span> <span class="p">}</span> 
+
+ <span class="k">FILTER</span> <span class="p">(</span><span class="nv">?process</span> <span class="o">=</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Demonstration</span> <span class="o">||</span> <span class="nv">?p</span> <span class="o">=</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Teaching</span> <span class="p">)</span>
+<span class="p">}</span>
+<span class="err">```</span><span class="o">--&gt;</span>
+
+<span class="o">-</span> <span class="o">**</span><span class="nn">CQ</span><span class="p">:</span><span class="o">**</span> <span class="err">What</span> <span class="err">process</span> <span class="err">are</span> <span class="err">organisations</span> <span class="err">involved</span> <span class="k">in</span><span class="err">?</span> <span class="err">and</span> <span class="err">what</span> <span class="err">are</span> <span class="err">their</span> <span class="err">roles</span> <span class="k">in</span> <span class="err">the</span> <span class="err">processes?</span> <span class="p">(</span><span class="err">PP</span> <span class="err">participant</span> <span class="err">universities</span><span class="p">)</span>
+<span class="o">-</span> <span class="o">**</span><span class="nn">SPARQL</span><span class="p">:</span><span class="o">**</span>
+<span class="err">```sparql</span>
+<span class="k">SELECT</span> <span class="nv">?organisation</span> <span class="nv">?role</span> <span class="nv">?process</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?organisation</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Organization</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nv">?role</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">.</span> 
+<span class="nv">?role</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-2">Use Case 2</h3>
+<ul>
+<li><strong>CQ:</strong> What metadata schemas and ontologies are utilized in datasets that describe collections ? (materials used in Ni-based superalloys)</li>
+<li>
+<p><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?dataset</span> <span class="nv">?standard</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?dataset</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Dataset</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">representedCollection</span> <span class="nv">?collection</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?ontology</span> <span class="p">.</span>
+<span class="nv">?ontology</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Ontology</span> <span class="p">.}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>CQ:</strong> What are the standard processes material data sets involved in? (the definition, identification and curation)</p>
+</li>
+<li>
+<p><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?dataset</span> <span class="nv">?processType</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?dataset</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Dataset</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">MaterialScience</span>  <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">.</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?processType</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>CQ:</strong> How and which resources are data sets be connected to? ( detailed meta-data and context concerning materials history, data collection )</p>
+</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?dataset</span> <span class="nv">?property</span> <span class="nv">?resource</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?dataset</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Dataset</span> <span class="p">;</span>
+<span class="nv">?property</span> <span class="nv">?resource</span>  <span class="p">.</span>
+<span class="nv">?property</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subPropertyOf</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000136</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-03">Use Case 03</h3>
+<ul>
+<li><strong>CQ:</strong> What specific types of resources exist within a particular subject area, and what technological methods are employed in their storage?(Tomographic data from different techniques)</li>
+<li>
+<p><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?resourceType</span> <span class="nv">?technologicalMeans</span> 
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">MaterialScience</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">technology</span> <span class="nv">?technologicalMeans</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>CQ:</strong> What ontologies are used for resources in a specific subject area?</p>
+</li>
+<li>
+<p><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?resourceType</span> <span class="nv">?standard</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">MaterialScience</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?ontology</span> <span class="p">.</span>
+<span class="nv">?ontology</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Ontology</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>CQ:</strong> What services are there for linkage and enrichment (data integration and access)? What software are they using?</p>
+</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?software</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Linkage\&amp;Enrichment</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">software</span> <span class="nv">?software</span> <span class="p">.}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-04">Use Case 04</h3>
+<ul>
+<li><strong>CQ:</strong> What standards and specifications are used for data in a specific subject area?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?standards</span> 
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span><span class="err">|</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">specification</span> <span class="nv">?standards</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">MaterialScience</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-05">Use Case 05</h3>
+<ul>
+<li><strong>CQ:</strong> What tools and services are used for storing and evaluation of a specific data type?</li>
+<li>
+<p><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="err">No</span> <span class="err">SPARQL</span> <span class="err">query</span> <span class="err">provided</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>CQ:</strong> What standards and specifications are used in a certain process? (data analysis)</p>
+</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span>  
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="k">VALUES</span> <span class="nv">?type</span> <span class="p">{</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Specification</span> <span class="p">}</span>
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-06">Use Case 06</h3>
+<ul>
+<li><strong>CQ:</strong> What ontologies are used in a specific subject area?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?ontology</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">MaterialScience</span> <span class="p">.</span>
+<span class="nv">?ontology</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Ontology</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-08">Use Case 08</h3>
+<ul>
+<li><strong>CQ:</strong> What standards are used for resources in a specific process (standardization)?</li>
+<li>
+<p><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span>  
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Standard</span><span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>CQ:</strong> What guidelines are there for describing specific processes? (data analysis/visualization)</p>
+</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000572</span> <span class="p">;</span> <span class="err">%documenting</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">DataAnalysis</span> <span class="p">;</span> <span class="err">%partOf</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>   <span class="err">%has_specified_output</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">.</span>
+ <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-09">Use Case 09</h3>
+<ul>
+<li><strong>CQ:</strong> What data portals, services and software are contributed to a specific consortia? What are the subject area of these resources?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?acDisc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="k">VALUES</span> <span class="nv">?type</span> <span class="p">{</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Software</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">DataPortal</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">}</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDisc</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">.</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">NFDIMatWerk</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Repository</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span> 
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Contributing</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-10">Use Case 10</h3>
+<ul>
+<li><strong>CQ:</strong> What is the funding organisation of a specific project?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?funder</span> 
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?funder</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">NFDI4Culture</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">funderRole</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">NFDI4Culture</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-12">Use Case 12</h3>
+<ul>
+<li><strong>CQ:</strong> What ontologies are used in resources contributed to specific consortia? What is their subject area?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?standard</span> <span class="nv">?acDisc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">NFDIMatWerk</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Repository</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span> 
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Contributing</span> <span class="p">.</span>
+
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?ontology</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDisc</span> <span class="p">.</span>
+<span class="nv">?ontology</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Ontology</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-13">Use Case 13</h3>
+<ul>
+<li><strong>CQ:</strong> What specific services (expert knowledge) are there and who is the contact point of these services?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?contactPoint</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Learning\&amp;Teaching</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?contactPoint</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-15">Use Case 15</h3>
+<ul>
+<li><strong>CQ:</strong> Who is the contact point of a specific service? (ontology development)</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?contactPoint</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Linkage</span><span class="err">&amp;Enrichment</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?contactPoint</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-16">Use Case 16</h3>
+<ul>
+<li><strong>CQ:</strong> What ontologies are used in resources and what is their subject area?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?standard</span> <span class="nv">?acDisc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?ontology</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDisc</span> <span class="p">.</span>
+<span class="nv">?ontology</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Ontology</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-17">Use Case 17</h3>
+<ul>
+<li><strong>CQ:</strong> What ontologies are used in resources and what is their subject area?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?standard</span> <span class="nv">?acDisc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?ontology</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDisc</span> <span class="p">.</span>
+<span class="nv">?ontology</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Ontology</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h2 id="nfdi4datascience">NFDI4DataScience</h2>
+<p>All NFDI4DataScience Use Cases (Personas) are available <a href="https://www.nfdi4datascience.de/community/requirements-elicitation/personas/">at the NFDI4DataScience Consortium Webpage</a></p>
+<h3 id="use-case-alex">Use Case Alex</h3>
+<ul>
+<li><strong>CQ:</strong> What data participates in a specific task (event)? (data cleaning task)</li>
+<li>
+<p><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?event</span>
+<span class="k">WHERE</span>
+<span class="p">{</span>  
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?event</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">.</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?eventType</span> <span class="p">;</span>
+<span class="nv">?eventType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>CQ:</strong> What services participate in a specific task (event)? ( (data cleaning services)</p>
+</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?event</span>
+<span class="k">WHERE</span>
+<span class="p">{</span>  
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?event</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?eventType</span> <span class="p">;</span>
+<span class="nv">?eventType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-ben">Use Case Ben</h3>
+<ul>
+<li><strong>CQ:</strong> What documenting resources are related to a specific event (task)? Who is a contact point of the documentation process?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?agent</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000572</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?event</span> <span class="p">;</span> 
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ContactPointRole</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span>
+<span class="nv">?agent</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nv">?role</span> <span class="p">.</span>
+ <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-cassie">Use Case Cassie</h3>
+<ul>
+<li><strong>CQ:</strong> What (training) services and events are available for specific data task (event)?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">distinct</span> <span class="nv">?r</span> <span class="nv">?type</span> <span class="nv">?task</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> <span class="p">{</span><span class="nv">?r</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?task</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Learning\&amp;Teaching</span> <span class="p">;}</span>
+
+<span class="k">UNION</span> 
+<span class="p">{</span> <span class="nv">?r</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?task</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">}</span>
+
+<span class="nv">?r</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> 
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-david">Use Case David</h3>
+<ul>
+<li><strong>CQ:</strong> Who is a contact point of specific data (experimental)? What is their expertise?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?resourceType</span> <span class="nv">?contactPoint</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?contactPoint</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-emma">Use Case Emma</h3>
+<ul>
+<li><strong>CQ:</strong> List the events in the community, their description and their dates.</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?event</span> <span class="nv">?description</span> <span class="nv">?start</span> <span class="nv">?end</span> 
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">;</span>
+<span class="nn">dc</span><span class="p">:</span><span class="nt">description</span> <span class="nv">?description</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">startDate</span> <span class="nv">?start</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">endDate</span> <span class="nv">?end</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-finn">Use Case Finn</h3>
+<ul>
+<li><strong>CQ:</strong> What are the (legal) guidelines for a specific process? (store sensitive data)</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000572</span> <span class="p">;</span> <span class="err">%documenting</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">DataAnalysis</span> <span class="p">;</span> <span class="err">%partOf</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>   <span class="err">%has_specified_output</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">.</span>
+ <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-gina">Use Case Gina</h3>
+<ul>
+<li><strong>CQ:</strong> What are the relevant publications for a specific subject area or event (task)?</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?event</span> <span class="nv">?ac_disc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">.</span>
+<span class="p">{</span><span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?ac_disc</span> <span class="p">.}</span>
+<span class="k">UNION</span>
+<span class="p">{</span><span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?event</span> <span class="p">.</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?eventType</span> <span class="p">.</span>
+<span class="nv">?eventType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">.}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="use-case-hassan">Use Case Hassan</h3>
+<ul>
+<li><strong>CQ:</strong> What services are used in specific projects, which technological means and software are used in the services? If available, list guidelines/publications about these services</li>
+<li><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?project</span> <span class="nv">?publication</span> <span class="nv">?tech</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?serviceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">software</span><span class="err">|</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">technology</span> <span class="nv">?tech</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?project</span> <span class="p">.</span>
+<span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?publication</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000136</span> <span class="nv">?service</span> <span class="p">.</span> <span class="p">}</span>
+<span class="nv">?project</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Project</span> <span class="p">.</span>
+<span class="nv">?serviceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h2 id="nfdi4culture">NFDI4Culture</h2>
+<p>All NFDI4Culture Use Cases are available <a href="https://nfdi4culture.de/resources/user-stories.html">at the NFDI4Culture Consortium Webpage</a></p>
+<h3 id="use-case-1_1">Use Case 1</h3>
+<ul>
+<li><strong>CQ:</strong> What guidelines are available for a process (storing data) in a specific academic discipline (on musical performances)?</li>
+<li>
+<p><strong>SPARQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?documenting</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000572</span> <span class="p">;</span> 
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?process</span> <span class="p">;</span> 
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>   
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">.</span>
+ <span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>CQ:</strong> What are the services and events related to specific processes ( structured filing and the handling of standard data)?</p>
+</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?event</span> <span class="nv">?process</span>
+<span class="k">WHERE</span>
+<span class="p">{</span>  <span class="p">{</span> <span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">}</span> <span class="k">UNION</span> <span class="p">{</span> <span class="nv">?event</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?process</span> <span class="p">.</span> <span class="p">}</span> 
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-2_1">Use Case 2</h3>
+<ul>
+<li>
+<p><strong>CQ:</strong> What standards are there for specific resource type (musical data)?
+Who is a contact point of the standards?</p>
+</li>
+<li>
+<p><strong>SPARQL:</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resourceType</span> <span class="nv">?standard</span> <span class="nv">?contactPoint</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?contactPoint</span><span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What services are available for specific data task (event)? (keep different versions accessible)</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?event</span>
+<span class="k">WHERE</span>
+<span class="p">{</span>  
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?event</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">.</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?eventType</span> <span class="p">;</span>
+<span class="nv">?eventType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-3">Use Case 3</h3>
+<ul>
+<li><strong>CQ:</strong> What best practices are used in resources in a specific academic discipline?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?bestpractice</span> <span class="nv">?acDisc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">bestPractice</span> <span class="nv">?bestpractice</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDisc</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What are the best practices to publish a resource using in a certain academic discipline?  </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?bestPractice</span> <span class="nv">?acDisc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000444</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDisc</span> <span class="p">.</span>
+<span class="nv">?bestPractice</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">.</span>
+<span class="k">VALUES</span> <span class="nv">?type</span> <span class="p">{</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Specification</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Standard</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What (training) events are available for specific ask (adequate handling of research data)? What is their timeframe? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?task</span> <span class="nv">?event</span> <span class="nv">?start</span> <span class="nv">?end</span> 
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">startDate</span> <span class="nv">?start</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">endDate</span> <span class="nv">?end</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?task</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-4">Use Case 4</h3>
+<ul>
+<li><strong>CQ:</strong> What information about resource is used during the publication process?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?context</span> <span class="nv">?domain</span> <span class="nv">?range</span>
+<span class="k">WHERE</span> 
+<span class="p">{</span>
+<span class="nv">?publProcess</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000444</span> <span class="p">.</span>
+<span class="p">{</span><span class="nv">?publProcess</span> <span class="nv">?context</span> <span class="nv">?object</span><span class="p">}</span> <span class="k">UNION</span> <span class="p">{</span><span class="nv">?subject</span> <span class="nv">?context</span> <span class="nv">?publProcess</span><span class="p">}</span>
+<span class="k">OPTIONAL</span> <span class="p">{</span><span class="nv">?context</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nv">?domain</span> <span class="p">;</span>
+<span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nv">?range</span> <span class="p">.}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-5">Use Case 5</h3>
+<ul>
+<li><strong>CQ:</strong> What specific services are available for  a certain task? (creating digital inventories of art collections)</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?event</span>
+<span class="k">WHERE</span>
+<span class="p">{</span>  
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?event</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">.</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?eventType</span> <span class="p">;</span>
+<span class="nv">?eventType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What licenses are used in the consortia for datasets with images?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?license</span> <span class="nv">?mediaType</span> 
+<span class="k">WHERE</span> 
+<span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Dataset</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">mediaType</span> <span class="nv">?mediaType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">license</span> <span class="nv">?license</span><span class="p">.</span> 
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> Who is a contact point of a specific service?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?contactPoint</span>
+<span class="k">WHERE</span> 
+<span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span><span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?contactPoint</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What training events are available for a certain task (publishing and maintaining image data)</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?event</span> <span class="nv">?task</span>
+<span class="k">WHERE</span>
+<span class="p">{</span><span class="nv">?event</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?task</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-6">Use Case 6</h3>
+<ul>
+<li><strong>CQ:</strong> What are the best practices to publish a software in a certain academic discipline (digital humanities)?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?bestPractice</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000444</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Software</span> <span class="p">.</span>
+<span class="nv">?bestPractice</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">.</span>
+<span class="k">VALUES</span> <span class="nv">?type</span> <span class="p">{</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Specification</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Standard</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-7">Use Case 7</h3>
+<ul>
+<li><strong>CQ:</strong> What media types are available for resources in a certain academic discipline (music ethnology) and what are their licenses? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?academicDisc</span> <span class="nv">?mediaType</span> <span class="nv">?license</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">mediaType</span> <span class="nv">?mediaType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?academicDisc</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">license</span> <span class="nv">?license</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What teaching and learning services are available in a certain academic discipline (music ethnology)? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Learning\&amp;Teaching</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What guidelines are available (for an organization) to complete a process (publishing research data) for data in a specific academic discipline (performing arts)?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?guideline</span> <span class="nv">?resource</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000572</span> <span class="p">;</span> 
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?dataPublProcess</span> <span class="p">;</span> 
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000293</span> <span class="nv">?resource</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?guideline</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">.</span>
+<span class="nv">?guideline</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+ <span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-8">Use Case 8</h3>
+<ul>
+<li><strong>CQ:</strong> What processes (data publication, quality assurance, analyses) are certain resource types (e.g. questionnairs)  in a certain academic discipline (e.g. musicology) involved in?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">distinct</span> <span class="nv">?process</span> <span class="nv">?resourceType</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?processType</span> <span class="p">.</span>
+<span class="nv">?processType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000011</span> <span class="p">.</span>
+<span class="p">{</span><span class="nv">?process</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000293</span><span class="err">|</span><span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span><span class="err">|</span><span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000057</span> <span class="nv">?resource</span><span class="p">.}</span> <span class="k">UNION</span> <span class="p">{</span><span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">}</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+ <span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-9">Use Case 9</h3>
+<ul>
+<li><strong>CQ:</strong> What are the best practices for publishing research data (resources)? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?bestPractice</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000444</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>
+<span class="nv">?bestPractice</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">.</span>
+<span class="k">VALUES</span> <span class="nv">?type</span> <span class="p">{</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Specification</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Standard</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-10_1">Use Case 10</h3>
+<ul>
+<li><strong>CQ:</strong> 
+What organizations and persons are participating in processes related to creative works?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?agent</span> <span class="nv">?process</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?agent</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?agentType</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">.</span> 
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">.</span>
+<span class="nv">?type</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">CreativeWork</span> <span class="p">.</span>
+<span class="nv">?agentType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Agent</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-11">Use Case 11</h3>
+<ul>
+<li><strong>CQ:</strong> What resources that belong to a certain academic discipline (e.g. Art History) are available, what controlled vocabularies are associated with them?  </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?acDis</span> <span class="nv">?standard</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?conVoc</span> <span class="p">.</span>
+<span class="nv">?conVoc</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ControlledVocabulary</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.}</span>
+</code></pre></div>
+<h3 id="use-case-12_1">Use Case 12</h3>
+<ul>
+<li><strong>CQ:</strong> What are the services and events related to specific processes (analysis, structured filing and the handling of standard data)?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">distinct</span> <span class="nv">?r</span> <span class="nv">?type</span> <span class="nv">?process</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> <span class="p">{</span><span class="nv">?r</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Learning\&amp;Teaching</span> <span class="p">;}</span>
+<span class="k">UNION</span> 
+<span class="p">{</span> <span class="nv">?r</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">}</span>
+<span class="nv">?r</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> 
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-14">Use Case 14</h3>
+<ul>
+<li><strong>CQ:</strong> What resources that belong to a certain academic discipline (e.g. Musicology) are available, what media types do they have and what qualities (e.g. semantic expressivity) are associated with them?  </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?acDis</span> <span class="nv">?mediaType</span> <span class="nv">?quality</span> 
+<span class="k">WHERE</span><span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourcetype</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">mediaType</span> <span class="nv">?mediaType</span> <span class="p">;</span>
+<span class="nv">?p</span> <span class="nv">?quality</span> <span class="p">.</span>
+<span class="nv">?p</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subPropertyOf</span><span class="o">*</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000086</span> <span class="p">.</span>
+<span class="nv">?resourcetype</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-15_1">Use Case 15</h3>
+<ul>
+<li><strong>CQ:</strong> What resources that belong to a certain academic discipline (e.g. Archaeology) are available and respresented by means of a certain semantic expressivity? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">distinct</span> <span class="nv">?resource</span> <span class="nv">?acDis</span> <span class="nv">?semExpressivityType</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourcetype</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?semExpressivity</span> <span class="p">.</span>
+<span class="nv">?semExpressivity</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?semExpressivityType</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What services for teaching and learning are available in a certain academic discipline?  </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Learning\&amp;Teaching</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-16_1">Use Case 16</h3>
+<ul>
+<li><strong>CQ:</strong> What services for linking and enriching as well as publishing and disseminating research data are available in a certain academic discipline (eg. Architecture)? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?serviceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">.</span>
+<span class="k">VALUES</span> <span class="nv">?serviceType</span> <span class="p">{</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Linkage\&amp;Enrichment</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication\&amp;Dissemination</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What collections are available in a certain geographical region (e.g. Germany)?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?collection</span> <span class="nv">?place</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?collection</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Collection</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">location</span> <span class="nv">?place</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-17_1">Use Case 17</h3>
+<ul>
+<li><strong>CQ:</strong> What services are available for linkage and enrichment as well as storage and preservation of research data?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?serviceType</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?serviceType</span> <span class="p">;</span>
+<span class="k">VALUES</span> <span class="nv">?serviceType</span> <span class="p">{</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Linkage\&amp;Enrichment</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Storage\&amp;Preservation</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-18">Use Case 18</h3>
+<ul>
+<li><strong>CQ:</strong> Who has certain areas of expertise (computer science) and is a contact of a certain service (training and learning)? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?agent</span> <span class="nv">?expertise</span> <span class="nv">?service</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+        <span class="nv">?agent</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?agentType</span> <span class="p">.</span>
+        <span class="nv">?agentType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Agent</span> <span class="p">.</span>
+<span class="k">OPTIONAL</span> <span class="p">{</span><span class="nv">?agent</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">member</span> <span class="nv">?organisation</span> <span class="p">.}</span>
+         <span class="nv">?agent</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?expertise</span> <span class="p">.</span>
+         <span class="nv">?service</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?agent</span> <span class="p">;</span>
+         <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?serviceType</span> <span class="p">.</span>
+         <span class="nv">?serviceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.}</span>
+</code></pre></div>
+<h3 id="use-case-20">Use Case 20</h3>
+<ul>
+<li><strong>CQ:</strong> What resource types are available in certain geographical locations? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resourceType</span> <span class="nv">?location</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">location</span> <span class="nv">?location</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-21">Use Case 21</h3>
+<ul>
+<li><strong>CQ:</strong> What are the specifications and best practices utilized in the publishing process of a resource in a certain academic discipline (e.g. media science)?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?bestPractice</span> <span class="nv">?acDisc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000444</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDisc</span> <span class="p">.</span>
+<span class="nv">?bestPractice</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">.</span>
+<span class="k">VALUES</span> <span class="nv">?type</span> <span class="p">{</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Specification</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Standard</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-22">Use Case 22</h3>
+<ul>
+<li><strong>CQ:</strong> What software or services are available for a certain task (event)? (versioning)</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?event</span>
+<span class="k">WHERE</span>
+<span class="p">{</span>  
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?event</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">.</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?eventType</span> <span class="p">.</span>
+<span class="nv">?eventType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">.</span>
+<span class="p">{</span><span class="nv">?type</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span><span class="p">}</span> <span class="k">UNION</span> <span class="p">{</span><span class="nv">?type</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Software</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-23">Use Case 23</h3>
+<ul>
+<li><strong>CQ:</strong> Which software is available in a certain academic discipline (music)? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?academicDisc</span> <span class="nv">?resource</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span><span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?academicDisc</span> <span class="p">.</span>
+<span class="nv">?type</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Software</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What learning and teaching services are available for resources of a certain discipline? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Learning\&amp;Teaching</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-24">Use Case 24</h3>
+<ul>
+<li><strong>CQ:</strong> Which resources are related to a specific subject area (ex:Architecture)?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?academicDisc</span> <span class="nv">?resource</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span><span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?academicDisc</span> <span class="p">.</span>
+<span class="nv">?type</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-25">Use Case 25</h3>
+<ul>
+<li><strong>CQ:</strong> Which resources are related to an event that occured in a specific time frame and which mediatype and, if available, semantic expressivity are they available in?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">distinct</span> <span class="nv">?resource</span> <span class="nv">?event</span> <span class="nv">?mediaType</span> <span class="nv">?semExpType</span>
+<span class="k">WHERE</span>
+<span class="p">{</span>  
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?event</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">mediaType</span> <span class="nv">?mediaType</span> <span class="p">.</span>
+<span class="nv">?event</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?eventType</span> <span class="p">.</span>
+<span class="nv">?eventType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Event</span> <span class="p">.</span>
+<span class="nv">?type</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="k">OPTIONAL</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?semExp</span><span class="p">.</span>
+<span class="nv">?semExp</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?semExpType</span> <span class="p">.</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-26">Use Case 26</h3>
+<ul>
+<li><strong>CQ:</strong> Which software was provided by an agent that participates in a project? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?project</span> <span class="nv">?agent</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">.</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Contributing</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?project</span> <span class="p">.</span>
+<span class="nv">?project</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Project</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span> 
+<span class="nv">?type</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Software</span> <span class="p">.</span>
+<span class="nv">?agent</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nv">?role</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ContributorRole</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> 
+Which resources and resource types were contributed by an agent that participates in a project? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?type</span> <span class="nv">?project</span> <span class="nv">?agent</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">.</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Contributing</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?project</span> <span class="p">.</span>
+<span class="nv">?project</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Project</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span> 
+<span class="nv">?type</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="nv">?agent</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nv">?role</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ContributorRole</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What persons participate in a project and belong to a certain academic discipline (computer science or digital humanities)? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?agent</span> <span class="nv">?project</span> <span class="nv">?acDis</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="p">{</span><span class="nv">?agent</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?project</span><span class="p">.</span> <span class="p">}</span> <span class="k">UNION</span>
+<span class="p">{</span><span class="nv">?agent</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?project</span><span class="p">.}</span>
+<span class="nv">?project</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Project</span> <span class="p">.</span>
+<span class="nv">?agent</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?acDis</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?agentType</span> <span class="p">.</span>
+<span class="nv">?agentType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Agent</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What are lerning and training services are contributed by an agent that participates in a project? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?project</span> <span class="nv">?agent</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Learning\&amp;Teaching</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">.</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Contributing</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?project</span> <span class="p">.</span>
+<span class="nv">?project</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Project</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span> 
+<span class="nv">?agent</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span><span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nv">?role</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ContributorRole</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-27">Use Case 27</h3>
+<ul>
+<li><strong>CQ:</strong> What specifications are there for certain types of resources and mediatypes of resources?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resourcetype</span> <span class="nv">?specification</span> <span class="nv">?mediatype</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+  <span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourcetype</span> <span class="p">.</span>
+  <span class="nv">?resourcetype</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">specification</span> <span class="nv">?specification</span> <span class="p">.</span> <span class="p">}</span>
+  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">mediaType</span> <span class="nv">?mediatype</span> <span class="p">.</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-28">Use Case 28</h3>
+<ul>
+<li><strong>CQ:</strong> What controlled vocabularies are available for certain resource types? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resourceType</span> <span class="nv">?standard</span>
+<span class="k">WHERE</span>
+<span class="p">{</span> 
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?conVoc</span> <span class="p">.</span>
+<span class="nv">?conVoc</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ControlledVocabulary</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.}</span>
+</code></pre></div>
+<h2 id="nfdi4memory">NFDI4Memory</h2>
+<p>All NFDI4Memory Use Cases are available <a href="https://4memory.de/problem-stories-overview/">at the NFDI4Memory Consortium Webpage</a></p>
+<h3 id="use-case-1_2">Use Case 1</h3>
+<ul>
+<li><strong>CQ:</strong> Who has certain areas of expertise (e.g. IT) and is involved in a certain service (training and education)? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?contactPoint</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Learning\&amp;Teaching</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?contactPoint</span> <span class="p">.</span>
+<span class="nv">?contactPoint</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Person</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">IT</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-3_1">Use Case 3</h3>
+<ul>
+<li><strong>CQ:</strong> What are the best practices for a certain resource?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?bestpractice</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">bestPractice</span> <span class="nv">?bestpractice</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-5_1">Use Case 5</h3>
+<ul>
+<li><strong>CQ:</strong> What software is frequently used and who are their contact points?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?software</span> <span class="p">(</span><span class="nf">count</span><span class="p">(</span><span class="nv">?software</span><span class="p">)</span> <span class="k">as</span> <span class="nv">?count</span><span class="p">)</span> <span class="nv">?contactPoint</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+    <span class="nv">?software</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?contactPoint</span> <span class="p">.</span>
+    <span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">software</span> <span class="nv">?software</span> <span class="p">.</span>
+<span class="p">}</span>
+<span class="k">GROUP BY</span> <span class="nv">?software</span> <span class="nv">?contactPoint</span>
+<span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?count</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="use-case-6_1">Use Case 6</h3>
+<ul>
+<li><strong>CQ:</strong> What are the controlled vocabularies used in the consortium? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?standard</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">NFDI4Memory</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Repository</span> <span class="p">.</span>
+<span class="nv">?role</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span> 
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Contributing</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?controlledVoc</span> <span class="p">.</span>
+<span class="nv">?controlledVoc</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ControlledVocabulary</span> <span class="p">.</span> <span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What tools and services for a certain purpose are used in the consortium?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?task</span>
+<span class="k">WHERE</span> <span class="p">{</span> 
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?serviceType</span> <span class="p">.</span>
+<span class="nv">?serviceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">;</span>
+<span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?task</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-7_1">Use Case 7</h3>
+<ul>
+<li><strong>CQ:</strong> Which licences are used in certain data resources types? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?license</span> <span class="p">(</span><span class="nf">count</span> <span class="p">(</span><span class="k">distinct</span> <span class="nv">?license</span><span class="p">)</span> <span class="k">as</span> <span class="nv">?count</span><span class="p">)</span> <span class="nv">?resourceType</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">license</span> <span class="nv">?license</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+<span class="k">GROUP BY</span> <span class="nv">?license</span> <span class="nv">?resourceType</span>
+</code></pre></div>
+<h3 id="use-case-8_1">Use Case 8</h3>
+<ul>
+<li><strong>CQ:</strong> What are the guidlines for a specific task? (publishing research data) </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000572</span> <span class="p">;</span> <span class="err">%documenting</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">ResearchDataPublication</span> <span class="p">;</span> <span class="err">%partOf</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>   <span class="err">%has_specified_output</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">.</span>
+ <span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-9_1">Use Case 9</h3>
+<ul>
+<li><strong>CQ:</strong> Which organizations (archives) located in Germany contribute certain resources and what licences do they use?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?organization</span> <span class="nv">?resource</span> <span class="nv">?license</span> 
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?organization</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Organization</span> <span class="p">;</span> 
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">location</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Germany</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000087</span> <span class="nv">?role</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">license</span> <span class="nv">?license</span> <span class="p">.</span> 
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> What guidelines for data provenance for certain data type (archival) exist?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?guideline</span> <span class="nv">?resourceType</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000572</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?dataprovenance</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000293</span> <span class="nv">?resource</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?guideline</span> <span class="p">.</span>   
+<span class="nv">?guideline</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Publication</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+ <span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-11_1">Use Case 11</h3>
+<ul>
+<li><strong>CQ:</strong> Which organization has members with expertise in computer science or information technology? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?organization</span> <span class="nv">?member</span> 
+<span class="k">WHERE</span> <span class="p">{</span>
+        <span class="nv">?organization</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Organisation</span> <span class="p">.</span>
+        <span class="nv">?person</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Person</span> <span class="p">;</span>
+         <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">member</span> <span class="nv">?organization</span> <span class="p">.</span>
+        <span class="p">{</span> <span class="nv">?person</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">ComputerScience</span> <span class="p">.</span> <span class="p">}</span> 
+<span class="k">UNION</span> <span class="p">{</span> <span class="nv">?person</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">InformationTechnology</span> <span class="p">.</span> 
+<span class="p">}</span> 
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-13_1">Use Case 13</h3>
+<ul>
+<li><strong>CQ:</strong> What data formats are used for resources in a certain academic discipline? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?academicDisc</span> <span class="nv">?mediaType</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">mediaType</span> <span class="nv">?mediaType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?academicDisc</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-14_1">Use Case 14</h3>
+<ul>
+<li><strong>CQ:</strong> What licences given for resources in a certain media type? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?license</span> <span class="nv">?mediaType</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">mediaType</span> <span class="nv">?mediaType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">license</span> <span class="nv">?license</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Resource</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-15_2">Use Case 15</h3>
+<ul>
+<li><strong>CQ:</strong> Which services are available for a certain task? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?service</span> <span class="nv">?task</span>
+<span class="k">WHERE</span> <span class="p">{</span> 
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?serviceType</span> <span class="p">.</span>
+<span class="nv">?serviceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">;</span>
+<span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?task</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> Which softwares are available in a certain discipline? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span> <span class="nv">?academicDisc</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Software</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nv">?academicDisc</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-16_2">Use Case 16</h3>
+<ul>
+<li><strong>CQ:</strong> Which organization offers a certain area of expertise? (IT) (including people in the organizations and their expertise)</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?orga</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?orga</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Organization</span> <span class="p">.</span>
+<span class="nv">?person</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">member</span> <span class="nv">?orga</span> <span class="p">.</span>
+<span class="p">{</span><span class="nv">?orga</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">IT</span> <span class="p">}</span> <span class="k">UNION</span> <span class="p">{</span><span class="nv">?person</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">IT</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>CQ:</strong> Which organization is a contact point for a certain service?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">distinct</span> <span class="nv">?service</span> <span class="nv">?agent</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?orga</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Organization</span> <span class="p">.</span>
+<span class="nv">?service</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?serviceType</span> <span class="p">.</span>
+<span class="nv">?service</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">contactPoint</span> <span class="nv">?agent</span> <span class="p">.</span>
+<span class="nv">?serviceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span> 
+<span class="p">{</span><span class="nv">?agent</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Organization</span><span class="p">}</span> <span class="k">UNION</span> <span class="p">{</span><span class="nv">?person</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">member</span> <span class="nv">?agent</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-17_2">Use Case 17</h3>
+<ul>
+<li><strong>CQ:</strong> What services in a certain academic discipline (computer science) are there? </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?resource</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?resource</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?resourceType</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">subjectArea</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">ComputerScience</span> <span class="p">.</span>
+<span class="nv">?resourceType</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span><span class="o">*</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Service</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-23_1">Use Case 23</h3>
+<ul>
+<li><strong>CQ:</strong> What are the best practices to publish a resource using a certain (open) licence?  </li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?bestPractice</span> <span class="nv">?license</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000444</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">license</span> <span class="nv">?license</span> <span class="p">.</span>
+<span class="nv">?bestPractice</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">.</span>
+<span class="k">VALUES</span> <span class="nv">?type</span> <span class="p">{</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Specification</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Standard</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="use-case-42">Use Case 42</h3>
+<ul>
+<li><strong>CQ:</strong> What controlled vocabularies can be utizlized (in the publishing process) of a resource?</li>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?standard</span> 
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000444</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>
+<span class="nv">?resource</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">standard</span> <span class="nv">?standard</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?conVoc</span> <span class="p">.</span>
+<span class="nv">?conVoc</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ControlledVocabulary</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>SPARQL:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?standard</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+<span class="nv">?process</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">IAO_0000444</span> <span class="p">;</span>
+<span class="nn">bfo</span><span class="p">:</span><span class="nt">OBI_0000299</span> <span class="nv">?resource</span> <span class="p">.</span>
+<span class="nv">?standard</span> <span class="nn">bfo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">;</span>
+<span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?type</span> <span class="p">;</span>
+<span class="nn">nfdicore</span><span class="p">:</span><span class="nt">semanticExpressivity</span> <span class="nv">?conVoc</span> <span class="p">.</span>
+<span class="nv">?conVoc</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">ControlledVocabulary</span> <span class="p">.</span>
+<span class="k">VALUES</span> <span class="nv">?type</span> <span class="p">{</span><span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Specification</span> <span class="nn">nfdicore</span><span class="p">:</span><span class="nt">Standard</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
+      <script src="../extra-loader.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
