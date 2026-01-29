@@ -491,12 +491,13 @@ AnnotationAssertion(rdfs:comment :NFDI_0000020 "A role inherent in an organizati
 AnnotationAssertion(rdfs:label :NFDI_0000020 "industry organization role"@en)
 SubClassOf(:NFDI_0000020 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
-# Class: :NFDI_0000021 (workflow)
+# Class: :NFDI_0000021 (obsolete workflow)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000021 "A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000021 "workflow"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000021 "obsolete workflow"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000021 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000021 "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.")
-SubClassOf(:NFDI_0000021 ObjectIntersectionOf(:NFDI_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000227) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> :NFDI_0001002)))
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000021 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/125")
 
 # Class: :NFDI_0000022 (document)
 
@@ -819,9 +820,9 @@ SubClassOf(:NFDI_0000224 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 
 # Class: :NFDI_0000227 (workflow process)
 
-AnnotationAssertion(rdfs:comment :NFDI_0000227 "A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en)
+AnnotationAssertion(rdfs:comment :NFDI_0000227 "A process that processes tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000227 "workflow process"@en)
-SubClassOf(:NFDI_0000227 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> :NFDI_0000021)))
+SubClassOf(:NFDI_0000227 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(:NFDI_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> :NFDI_0001002)))))
 
 # Class: :NFDI_0000228 (service product role)
 
