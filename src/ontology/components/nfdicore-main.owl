@@ -423,14 +423,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_00
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000006 "NFDI4Culture, NFDI-MatWerk, DataPLANT.")
 SubClassOf(:NFDI_0000006 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110))))
 
-# Class: :NFDI_0000008 (creative work)
+# Class: :NFDI_0000008 (obsolete creative work)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000008 "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000008 "creative work"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000008 "obsolete creative work"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000008 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000008 "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
-EquivalentClasses(:NFDI_0000008 ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002352> :NFDI_0000224)))
-SubClassOf(:NFDI_0000008 <http://purl.obolibrary.org/obo/BFO_0000002>)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000008 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/122")
 
 # Class: :NFDI_0000009 (dataset)
 
