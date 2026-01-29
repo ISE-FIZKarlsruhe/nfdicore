@@ -371,15 +371,15 @@ SubClassOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectIntersectionOf(<ht
 
 EquivalentClasses(<http://www.ebi.ac.uk/swo/SWO_0000002> :NFDI_0000141)
 
-# Class: :NFDI_0000001 (NFDI resource)
+# Class: :NFDI_0000001 (obsolete NFDI resource)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000001 "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI. The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000001 "NFDI resource"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000001 "obsolete NFDI resource"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000001 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000001 "2024-03-25 - Sasha Bruns: 
 This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000001 "Resource")
-EquivalentClasses(:NFDI_0000001 ObjectUnionOf(:NFDI_0000008 :NFDI_0000232))
-SubClassOf(:NFDI_0000001 <http://purl.obolibrary.org/obo/BFO_0000002>)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000001 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/118")
 
 # Class: :NFDI_0000002 (project)
 
