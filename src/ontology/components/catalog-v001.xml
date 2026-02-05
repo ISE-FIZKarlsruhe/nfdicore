@@ -10,6 +10,7 @@
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl" uri="../imports/edam_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl" uri="../imports/dcat_import.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/ro_import.owl" uri="../imports/ro_import.owl"/>
+  <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/skos_import.owl" uri="../imports/skos_import.owl"/>
 
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl" uri="imports-edit.owl"/>
   <uri name="https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl" uri="nfdicore-main.owl"/>

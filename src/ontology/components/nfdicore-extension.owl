@@ -9,7 +9,16 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-extension.owl>
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/imports-edit.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/components/nfdicore-main.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/bfo_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/obi_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/ro_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/skos_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E1925>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E2415>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E2416>)
@@ -28,6 +37,7 @@ Declaration(Class(:NFDI_0000007))
 Declaration(Class(:NFDI_0000231))
 Declaration(Class(:NFDI_0001005))
 Declaration(Class(:NFDI_0001038))
+Declaration(Class(:NFDI_0001095))
 Declaration(Class(:NFDI_0001107))
 Declaration(Class(:NFDI_0001108))
 Declaration(Class(:NFDI_0001109))
@@ -87,6 +97,8 @@ Declaration(ObjectProperty(:NFDI_0000240))
 Declaration(ObjectProperty(:NFDI_0000241))
 Declaration(ObjectProperty(:NFDI_0001003))
 Declaration(ObjectProperty(:NFDI_0001006))
+Declaration(ObjectProperty(:NFDI_0001023))
+Declaration(ObjectProperty(:NFDI_0001024))
 Declaration(ObjectProperty(:NFDI_0001027))
 Declaration(ObjectProperty(:NFDI_0001028))
 Declaration(DataProperty(:NFDI_0000105))
@@ -121,11 +133,38 @@ SubObjectPropertyOf(:NFDI_0000104 <http://purl.obolibrary.org/obo/IAO_0000136>)
 
 # Object Property: :NFDI_0000112 (has contact point)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0000112 "prefix has_contactpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112>
+prefix participates_in: <http://purl.obolibrary.org/obo/RO_0000056> 
+prefix process: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000111>   # contacting process
+prefix has_role: <http://purl.obolibrary.org/obo/RO_0000087> 
+prefix role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114>  # contact point role
+prefix has_realization: <http://purl.obolibrary.org/obo/BFO_0000054> 
+
+construct {
+?s participates_in: _:proc .
+_:proc a process: .
+?s has_role: _:role .  
+_:role a role: .
+_:role has_realization: _:proc . 
+?o participates_in: _:proc . 
+}
+where 
+{
+?s has_contact_point: ?o .
+FILTER NOT EXISTS {
+ ?s participates_in: ?some_p . 
+ ?some_p a process: .
+ ?s has_role: ?some_r .  
+  ?some_r a role: .
+ ?some_r has_realization: ?some_p . 
+ ?o participates_in: ?some_p .
+}
+}")
 AnnotationAssertion(rdfs:comment :NFDI_0000112 "The property is a relationship between an NFDI resource and a person or organization (agent) as a contact point."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000112 "has contact point"@en)
 SubObjectPropertyOf(:NFDI_0000112 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000112 :NFDI_0000113)
-ObjectPropertyRange(:NFDI_0000112 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000114)))
+ObjectPropertyRange(:NFDI_0000112 :NFDI_0001005)
 
 # Object Property: :NFDI_0000113 (contact point of)
 
@@ -166,7 +205,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000116 "The property related something t
 AnnotationAssertion(rdfs:label :NFDI_0000116 "has contributor"@en)
 SubObjectPropertyOf(:NFDI_0000116 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000116 :NFDI_0000117)
-ObjectPropertyRange(:NFDI_0000116 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000118)))
+ObjectPropertyRange(:NFDI_0000116 :NFDI_0000231)
 
 # Object Property: :NFDI_0000117 (contributor of)
 
@@ -211,7 +250,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000137 "has funding organization"@en)
 SubObjectPropertyOf(:NFDI_0000137 <http://purl.obolibrary.org/obo/RO_0000057>)
 InverseObjectProperties(:NFDI_0000137 :NFDI_0000138)
 ObjectPropertyDomain(:NFDI_0000137 :NFDI_0000002)
-ObjectPropertyRange(:NFDI_0000137 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :NFDI_0000139)))
+ObjectPropertyRange(:NFDI_0000137 :NFDI_0001112)
 
 # Object Property: :NFDI_0000138 (funding organization of)
 
@@ -228,7 +267,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_00
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000142 "license")
 SubObjectPropertyOf(:NFDI_0000142 :NFDI_0000226)
 InverseObjectProperties(:NFDI_0000142 :NFDI_0000143)
-ObjectPropertyRange(:NFDI_0000142 :NFDI_0000141)
+ObjectPropertyRange(:NFDI_0000142 <http://www.ebi.ac.uk/swo/SWO_0000002>)
 
 # Object Property: :NFDI_0000143 (license of)
 
@@ -274,7 +313,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000187 "has programming language"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000187 "programmingLanguage")
 SubObjectPropertyOf(:NFDI_0000187 :NFDI_0000226)
 InverseObjectProperties(:NFDI_0000187 :NFDI_0000188)
-ObjectPropertyRange(:NFDI_0000187 :NFDI_0000186)
+ObjectPropertyRange(:NFDI_0000187 <http://purl.obolibrary.org/obo/IAO_0000025>)
 
 # Object Property: :NFDI_0000188 (programming language of)
 
@@ -317,7 +356,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000191 "published by"@en)
 SubObjectPropertyOf(:NFDI_0000191 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0000191 :NFDI_0000192)
 ObjectPropertyDomain(:NFDI_0000191 <http://purl.obolibrary.org/obo/IAO_0000030>)
-ObjectPropertyRange(:NFDI_0000191 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000193)))
+ObjectPropertyRange(:NFDI_0000191 :NFDI_0001116)
 
 # Object Property: :NFDI_0000192 (publisher of)
 
@@ -330,7 +369,6 @@ SubObjectPropertyOf(:NFDI_0000192 :NFDI_0000241)
 AnnotationAssertion(rdfs:comment :NFDI_0000194 "The property is a relationship between a project or a resource and related projects."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000194 "resource of project"@en)
 SubObjectPropertyOf(:NFDI_0000194 <http://purl.obolibrary.org/obo/RO_0000056>)
-ObjectPropertyDomain(:NFDI_0000194 :NFDI_0000001)
 ObjectPropertyRange(:NFDI_0000194 :NFDI_0000002)
 
 # Object Property: :NFDI_0000195 (represents collection)
@@ -371,6 +409,7 @@ AnnotationAssertion(rdfs:label :NFDI_0000201 "has sparql endpoint"@en)
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000201 "sparqlEndpoint")
 SubObjectPropertyOf(:NFDI_0000201 :NFDI_0000226)
 InverseObjectProperties(:NFDI_0000201 :NFDI_0000202)
+ObjectPropertyDomain(:NFDI_0000201 :NFDI_0001095)
 
 # Object Property: :NFDI_0000202 (sparql endpoint of)
 
@@ -454,7 +493,6 @@ SubObjectPropertyOf(:NFDI_0000217 <http://purl.obolibrary.org/obo/IAO_0000136>)
 AnnotationAssertion(rdfs:comment :NFDI_0000240 "The property is a relationship between a resource and an agent."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000240 "has agent"@en)
 InverseObjectProperties(:NFDI_0000240 :NFDI_0000241)
-ObjectPropertyDomain(:NFDI_0000240 :NFDI_0000001)
 ObjectPropertyRange(:NFDI_0000240 :NFDI_0000102)
 
 # Object Property: :NFDI_0000241 (is agent of)
@@ -475,6 +513,18 @@ AnnotationAssertion(rdfs:comment :NFDI_0001006 "The property relates a thing to 
 AnnotationAssertion(rdfs:label :NFDI_0001006 "has external identifier"@en)
 SubObjectPropertyOf(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000235>)
 ObjectPropertyRange(:NFDI_0001006 <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Object Property: :NFDI_0001023 (about academic discipline)
+
+AnnotationAssertion(rdfs:label :NFDI_0001023 "about academic discipline"@de)
+SubObjectPropertyOf(:NFDI_0001023 <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(:NFDI_0001023 :NFDI_0001024)
+ObjectPropertyRange(:NFDI_0001023 :NFDI_0000100)
+
+# Object Property: :NFDI_0001024 (academic discipline of)
+
+AnnotationAssertion(rdfs:label :NFDI_0001024 "academic discipline of"@de)
+SubObjectPropertyOf(:NFDI_0001024 :NFDI_0000226)
 
 # Object Property: :NFDI_0001027 (has creator)
 
@@ -509,7 +559,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001027 "The has creator property links s
 AnnotationAssertion(rdfs:label :NFDI_0001027 "has creator"@en)
 SubObjectPropertyOf(:NFDI_0001027 :NFDI_0000240)
 InverseObjectProperties(:NFDI_0001027 :NFDI_0001028)
-ObjectPropertyRange(:NFDI_0001027 ObjectIntersectionOf(:NFDI_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001026)))
+ObjectPropertyRange(:NFDI_0001027 :NFDI_0001111)
 
 # Object Property: :NFDI_0001028 (creator of)
 
@@ -632,14 +682,12 @@ EquivalentClasses(:NFDI_0001109 ObjectIntersectionOf(<http://purl.obolibrary.org
 AnnotationAssertion(rdfs:comment :NFDI_0001110 "An indendent continunat that is engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001110 "collaboration partner"@en)
 EquivalentClasses(:NFDI_0001110 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001059)))
-SubClassOf(:NFDI_0001110 <http://purl.obolibrary.org/obo/BFO_0000004>)
 
 # Class: :NFDI_0001111 (creator)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001111 "An independent continuant that originates, develops, or produces a work, product, or idea."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001111 "creator"@en)
 EquivalentClasses(:NFDI_0001111 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0001026)))
-SubClassOf(:NFDI_0001111 <http://purl.obolibrary.org/obo/BFO_0000004>)
 
 # Class: :NFDI_0001112 (funding organization)
 

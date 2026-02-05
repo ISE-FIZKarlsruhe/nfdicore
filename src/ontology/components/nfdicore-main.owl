@@ -155,6 +155,7 @@ Declaration(Class(:NFDI_0001061))
 Declaration(Class(:NFDI_0001062))
 Declaration(Class(:NFDI_0001068))
 Declaration(Class(:NFDI_0001069))
+Declaration(Class(:NFDI_0001095))
 Declaration(Class(:NFDI_0001096))
 Declaration(Class(:NFDI_0001098))
 Declaration(Class(:NFDI_0001099))
@@ -365,10 +366,6 @@ DataPropertyRange(:NFDI_0001008 xsd:anyURI)
 ############################
 #   Classes
 ############################
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0000025> (programming language)
-
-EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000025> :NFDI_0000186)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000300> (textual entity)
 
@@ -744,13 +741,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000148 
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000148 "MIMEType")
 SubClassOf(:NFDI_0000148 :NFDI_0000145)
 
-# Class: :NFDI_0000186 (programming language)
+# Class: :NFDI_0000186 (obsolete programming language)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0000186 <http://purl.obolibrary.org/obo/IAO_0000025>)
 AnnotationAssertion(rdfs:comment :NFDI_0000186 "A plan specification that is used for implementing software."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000186 "programming language"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000186 "obsolete programming language"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000186 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000186 "A formal language used for implementing a software."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000186 "Java, Ruby, C++, Perl, PHP")
-SubClassOf(:NFDI_0000186 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 # Class: :NFDI_0000190 (publication)
 
@@ -772,7 +770,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000198 "A plan specification that compri
 AnnotationAssertion(rdfs:label :NFDI_0000198 "software"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000198 "A computer software provided by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000198 "Edirom, Muscat")
-SubClassOf(:NFDI_0000198 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000104> ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/RO_0002234>) :NFDI_0000224)))
+SubClassOf(:NFDI_0000198 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000104> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002353> :NFDI_0000224)))
 
 # Class: :NFDI_0000203 (specification)
 
@@ -1294,6 +1292,13 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001069 
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001069 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/102")
 AnnotationAssertion(:NFDI_0010015 :NFDI_0001069 "BnF")
 SubClassOf(:NFDI_0001069 <http://purl.obolibrary.org/obo/IAO_0000578>)
+
+# Class: :NFDI_0001095 (sparql endpoint)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001095 "A SPARQL Endpoint is a web application software that provides a queryable interface for accessing and retrieving structured data from RDF-based knowledge graphs using the SPARQL query language."@en)
+AnnotationAssertion(rdfs:label :NFDI_0001095 "sparql endpoint"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001095 "Wikidata Query Service, DBpedia SPARQL Endpoint, Linked Data Fragments")
+SubClassOf(:NFDI_0001095 :NFDI_0000222)
 
 # Class: :NFDI_0001096 (consortium partner role)
 
