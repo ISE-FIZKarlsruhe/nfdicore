@@ -41,7 +41,7 @@ jobs:
         path: v3.0.3
     - name: Build HTML for 3.0.3
       run: |
-           mkdir public/3.0.1 
+           mkdir public/3.0.3
            java -jar widoco.jar -ontFile v3.0.3/nfdicore.ttl -outFolder public/3.0.3  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            ls public/3.0.3/
            mv public/3.0.3/doc/* public/3.0.3/
@@ -54,7 +54,7 @@ jobs:
         path: v3.0.2
     - name: Build HTML for 3.0.2
       run: |
-           mkdir public/3.0.1 
+           mkdir public/3.0.2
            java -jar widoco.jar -ontFile v3.0.2/nfdicore.ttl -outFolder public/3.0.2  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            ls public/3.0.2/
            mv public/3.0.2/doc/* public/3.0.2/
