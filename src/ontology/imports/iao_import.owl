@@ -49,6 +49,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000605>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000608>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000640>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000708>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020015>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020017>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020020>))
@@ -85,6 +87,7 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000118>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000119>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0002000>))
 ############################
 #   Annotation Properties
@@ -140,6 +143,12 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000119> "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000119> "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000119> "definition source"@en)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0100001> (term replaced by)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0100001> "Use on obsolete terms, relating the term to another term that can be used as a substitute"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0100001> "Person:Alan Ruttenberg"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0100001> "term replaced by"@en)
 
 # Annotation Property: <http://purl.obolibrary.org/obo/OMO_0002000> (defined by construct)
 
@@ -581,6 +590,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0000578> "CRID")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000578> "Original proposal from Bjoern, discussions at IAO calls"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000578> "centrally registered identifier"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> <http://purl.obolibrary.org/obo/IAO_0020000>)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/IAO_0000577>))
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000579>)))
 
@@ -645,12 +655,27 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000708> "ORCID identifier"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000708> <http://purl.obolibrary.org/obo/IAO_0000578>)
 
+# Class: <http://purl.obolibrary.org/obo/IAO_0020000> (identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020000> "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020000> "proper name"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020000> "identifier"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020000> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0020015> (personal name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020015> "An identifier referring to an individual entity that is ascribed personhood by the user of the identifier."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020015> "http://en.wikipedia.org/wiki/Personal_name")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020015> "personal name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020015> <http://purl.obolibrary.org/obo/IAO_0020000>)
+
 # Class: <http://purl.obolibrary.org/obo/IAO_0020016> (given name)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020016> "A personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child's parents at or near birth, in contrast to an inherited one such as a family name"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020016> "first name"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020016> "http://en.wikipedia.org/wiki/Given_name")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020016> "given name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020016> <http://purl.obolibrary.org/obo/IAO_0020015>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020017> (family name)
 
@@ -659,6 +684,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020017> "surname"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020017> "http://en.wikipedia.org/wiki/Family_name")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020017> "family name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020017> <http://purl.obolibrary.org/obo/IAO_0020000>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020020> (code set)
 
@@ -670,6 +696,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020020> "controlled vocabulary"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020020> "code set"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020020> <http://purl.obolibrary.org/obo/IAO_0000030>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020020> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/IAO_0020000>))
 
 # Class: <http://purl.obolibrary.org/obo/IAO_8000000> (ontology module)
 

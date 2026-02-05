@@ -53,10 +53,9 @@ http://purl.obolibrary.org/obo/IAO_0000119
 http://purl.obolibrary.org/obo/IAO_0000115
 http://purl.obolibrary.org/obo/IAO_0000116
 
-
 ## create that new for NFDI, otherwise we import planned process
 # http://purl.obolibrary.org/obo/APOLLO_SV_00000522 # source code repo  
 
-
 http://purl.obolibrary.org/obo/OMO_0002000 # 'defined by construct'
-
+http://purl.obolibrary.org/obo/IAO_0100001 # term replaced by
+http://purl.obolibrary.org/obo/IAO_0020000 # identifier

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                df62ea6301fb91d1e8ee6da54e20992b08d6edf26a517cb7e27b912c230e20a8
+CONFIG_HASH=                ead9352553cf5cf2bc8f738276939a24708482dddc138684d03bc9c2b9168857
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo ro iao swo obi edam dcat
+IMPORTS =  bfo ro iao swo obi edam dcat skos
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -461,6 +461,25 @@ $(IMPORTDIR)/dcat_import.owl: $(MIRRORDIR)/dcat.owl
 	@echo "       This rule needs to be overwritten in nfdicore.Makefile!"
 	@false
 
+## Module for ontology: skos (slme)
+$(IMPORTDIR)/skos_import.owl: $(MIRRORDIR)/skos.owl $(IMPORTDIR)/skos_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/skos_terms.txt $(T_IMPORTSEED) \
+		         --copy-ontology-annotations true --force true \
+		         --individuals include \
+		         --method SUBSET \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term rdfs:label \
+		        --term IAO:0000115 \
+		        --term OMO:0002000 \
+		        --term-file $(IMPORTDIR)/skos_terms.txt $(T_IMPORTSEED) \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri https://nfdi.fiz-karlsruhe.de/ontology \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -583,6 +602,13 @@ mirror-edam: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/dcat.owl
 mirror-dcat: | $(TMPDIR)
 	$(ROBOT) convert -I http://www.w3.org/ns/dcat3 -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: skos
+.PHONY: mirror-skos
+.PRECIOUS: $(MIRRORDIR)/skos.owl
+mirror-skos: | $(TMPDIR)
+	$(ROBOT) convert -I http://www.w3.org/TR/skos-reference/skos.rdf -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
