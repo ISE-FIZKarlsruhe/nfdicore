@@ -1,4 +1,4 @@
-Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl#>)
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/imports/dcat_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,10 +6,10 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/dcat_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2026-02-05/imports/dcat_import.owl>
+Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/imports/dcat_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/3.0.4/imports/dcat_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/ns/dcat3>)
-Annotation(owl:versionInfo "2026-02-05")
+Annotation(owl:versionInfo "3.0.4")
 
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#downloadURL>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))

@@ -6,6 +6,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -14,10 +15,10 @@
 @base <https://nfdi.fiz-karlsruhe.de/ontology> .
 
 <https://nfdi.fiz-karlsruhe.de/ontology> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.3> ;
+                                          owl:versionIRI <https://nfdi.fiz-karlsruhe.de/ontology/3.0.4> ;
                                           dce:type obo:IAO_8000001 ;
-                                          dcterms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.3. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.3" ;
-                                          dcterms:created "2025-10-24" ;
+                                          dcterms:bibliographicCitation "Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.4. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.4" ;
+                                          dcterms:created "2026-02-05" ;
                                           dcterms:creator <https://nfdi4culture.de/id/E1925> ,
                                                           <https://nfdi4culture.de/id/E2415> ,
                                                           <https://nfdi4culture.de/id/E2416> ,
@@ -30,9 +31,10 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
                                           dcterms:title "NFDIcore Ontology"@en ;
                                           bibo:status "Ontology Specification"@en ;
                                           vann:preferredNamespaceUri ontology: ;
+                                          doap:repository <https://github.com/ISE-FIZKarlsruhe/nfdicore/> ;
                                           rdfs:label "NFDIcore" ;
-                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/3.0.2> ;
-                                          owl:versionInfo "3.0.3" .
+                                          owl:priorVersion <https://nfdi.fiz-karlsruhe.de/ontology/3.0.3> ;
+                                          owl:versionInfo "3.0.4" .
 
 #################################################################
 #    Annotation properties
@@ -48,6 +50,10 @@ obo:IAO_0000118 rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/IAO_0000119
 obo:IAO_0000119 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0100001
+obo:IAO_0100001 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/type
@@ -86,16 +92,16 @@ bibo:status rdf:type owl:AnnotationProperty .
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
+###  http://usefulinc.com/ns/doap#repository
+doap:repository rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#editorialNote
 skos:editorialNote rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#exactMatch
-skos:exactMatch rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#example
@@ -174,12 +180,16 @@ obo:RO_0002234 rdf:type owl:ObjectProperty .
 obo:RO_0002351 rdf:type owl:ObjectProperty .
 
 
-###  http://purl.obolibrary.org/obo/RO_0002352
-obo:RO_0002352 rdf:type owl:ObjectProperty .
-
-
 ###  http://purl.obolibrary.org/obo/RO_0002353
 obo:RO_0002353 rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:ObjectProperty .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226
@@ -210,20 +220,12 @@ ontology:NFDI_0001008 rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://purl.obolibrary.org/obo/BFO_0000002
-obo:BFO_0000002 rdf:type owl:Class .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000004
 obo:BFO_0000004 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000015
 obo:BFO_0000015 rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000017
-obo:BFO_0000017 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000023
@@ -244,11 +246,6 @@ obo:BFO_0000030 rdf:type owl:Class .
 
 ###  http://purl.obolibrary.org/obo/BFO_0000141
 obo:BFO_0000141 rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000025
-obo:IAO_0000025 rdf:type owl:Class ;
-                owl:equivalentClass ontology:NFDI_0000186 .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000027
@@ -279,6 +276,10 @@ obo:IAO_0000300 rdf:type owl:Class .
 obo:IAO_0000578 rdf:type owl:Class .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0020000
+obo:IAO_0020000 rdf:type owl:Class .
+
+
 ###  http://purl.obolibrary.org/obo/IAO_8000000
 obo:IAO_8000000 rdf:type owl:Class .
 
@@ -287,24 +288,19 @@ obo:IAO_8000000 rdf:type owl:Class .
 obo:OBI_0000245 rdf:type owl:Class .
 
 
-###  http://www.ebi.ac.uk/swo/SWO_0000002
-<http://www.ebi.ac.uk/swo/SWO_0000002> rdf:type owl:Class ;
-                                       owl:equivalentClass ontology:NFDI_0000141 .
+###  http://purl.obolibrary.org/obo/OBI_0000260
+obo:OBI_0000260 rdf:type owl:Class .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001
 ontology:NFDI_0000001 rdf:type owl:Class ;
-                      owl:equivalentClass [ rdf:type owl:Class ;
-                                            owl:unionOf ( ontology:NFDI_0000008
-                                                          ontology:NFDI_0000232
-                                                        )
-                                          ] ;
-                      rdfs:subClassOf obo:BFO_0000002 ;
                       rdfs:comment "An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI. The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization."@en ;
-                      rdfs:label "NFDI resource"@en ;
+                      rdfs:label "obsolete NFDI resource"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
                       skos:editorialNote """2024-03-25 - Sasha Bruns: 
 This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO."""@en ;
-                      ontology:NFDI_0000012 "Resource" .
+                      ontology:NFDI_0000012 "Resource" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/118" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002
@@ -373,27 +369,12 @@ ontology:NFDI_0000006 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008
 ontology:NFDI_0000008 rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                   owl:unionOf ( obo:BFO_0000004
-                                                                                 obo:IAO_0000030
-                                                                               )
-                                                                 ]
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty obo:RO_0002352 ;
-                                                                   owl:someValuesFrom ontology:NFDI_0000224
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf ontology:NFDI_0000001 ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty obo:RO_0002352 ;
-                                        owl:someValuesFrom ontology:NFDI_0000224
-                                      ] ;
                       rdfs:comment "An independent continuant or information content entity that refers to a manifestation of someone's creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains."@en ;
-                      rdfs:label "creative work"@en ;
+                      rdfs:label "obsolete creative work"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
                       skos:editorialNote "2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to \"schema:CreativeWork and 'information content entity'\", we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork."@en ;
-                      skos:example "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc." .
+                      skos:example "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc." ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/122" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009
@@ -407,9 +388,10 @@ ontology:NFDI_0000009 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011
 ontology:NFDI_0000011 rdf:type owl:Class ;
-                      rdfs:subClassOf obo:BFO_0000017 ;
+                      obo:IAO_0100001 obo:OBI_0000260 ;
                       rdfs:comment "A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes."@en ;
-                      rdfs:label "plan"@en .
+                      rdfs:label "obsolete plan"@en ;
+                      owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014
@@ -422,10 +404,10 @@ ontology:NFDI_0000014 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015
 ontology:NFDI_0000015 rdf:type owl:Class ;
-                      rdfs:subClassOf obo:IAO_0000030 ;
-                      obo:IAO_0000119 "http://purl.obolibrary.org/obo/IAO_0020000" ;
+                      obo:IAO_0100001 "http://purl.obolibrary.org/obo/IAO_0020000" ;
                       rdfs:comment "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity." ;
-                      rdfs:label "identifier"@en .
+                      rdfs:label "obsolete identifier"@en ;
+                      owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000016
@@ -497,21 +479,11 @@ ontology:NFDI_0000020 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000021
 ontology:NFDI_0000021 rdf:type owl:Class ;
-                      rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0000011
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:BFO_0000054 ;
-                                                               owl:someValuesFrom ontology:NFDI_0000227
-                                                             ]
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:RO_0000059 ;
-                                                               owl:someValuesFrom ontology:NFDI_0001002
-                                                             ]
-                                                           ) ;
-                                        rdf:type owl:Class
-                                      ] ;
                       rdfs:comment "A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome."@en ;
-                      rdfs:label "workflow"@en ;
-                      skos:editorialNote "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure." .
+                      rdfs:label "obsolete workflow"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
+                      skos:editorialNote "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure." ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/125" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022
@@ -812,9 +784,10 @@ ontology:NFDI_0000140 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141
 ontology:NFDI_0000141 rdf:type owl:Class ;
-                      rdfs:subClassOf obo:IAO_0000030 ;
+                      obo:IAO_0100001 <http://www.ebi.ac.uk/swo/SWO_0000002> ;
                       rdfs:comment "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en ;
-                      rdfs:label "license"@en ;
+                      rdfs:label "obsolete license"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
                       skos:editorialNote "A document that provides legal guidelines for the use of a resource, e.g. a software."@en ;
                       skos:example "cc-by-3, Digital Peer Publishing Lizenz"@en .
 
@@ -841,9 +814,10 @@ ontology:NFDI_0000148 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186
 ontology:NFDI_0000186 rdf:type owl:Class ;
-                      rdfs:subClassOf obo:IAO_0000104 ;
+                      obo:IAO_0100001 obo:IAO_0000025 ;
                       rdfs:comment "A plan specification that is used for implementing software."@en ;
-                      rdfs:label "programming language"@en ;
+                      rdfs:label "obsolete programming language"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
                       skos:editorialNote "A formal language used for implementing a software."@en ;
                       skos:example "Java, Ruby, C++, Perl, PHP" .
 
@@ -875,8 +849,7 @@ ontology:NFDI_0000193 rdf:type owl:Class ;
 ontology:NFDI_0000198 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000104
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty [ owl:inverseOf obo:RO_0002234
-                                                                              ] ;
+                                                               owl:onProperty obo:RO_0002353 ;
                                                                owl:someValuesFrom ontology:NFDI_0000224
                                                              ]
                                                            ) ;
@@ -1001,12 +974,19 @@ ontology:NFDI_0000227 rdf:type owl:Class ;
                       rdfs:subClassOf [ owl:intersectionOf ( obo:BFO_0000015
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty obo:BFO_0000055 ;
-                                                               owl:someValuesFrom ontology:NFDI_0000021
+                                                               owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0000260
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty obo:RO_0000059 ;
+                                                                                                           owl:someValuesFrom ontology:NFDI_0001002
+                                                                                                         ]
+                                                                                                       ) ;
+                                                                                    rdf:type owl:Class
+                                                                                  ]
                                                              ]
                                                            ) ;
                                         rdf:type owl:Class
                                       ] ;
-                      rdfs:comment "A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en ;
+                      rdfs:comment "A process that processes tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en ;
                       rdfs:label "workflow process"@en .
 
 
@@ -1054,15 +1034,7 @@ ontology:NFDI_0000230 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232
 ontology:NFDI_0000232 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000001 ,
-                                      [ owl:intersectionOf ( obo:BFO_0000141
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty obo:RO_0002353 ;
-                                                               owl:someValuesFrom ontology:NFDI_0000101
-                                                             ]
-                                                           ) ;
-                                        rdf:type owl:Class
-                                      ] ;
+                      rdfs:subClassOf obo:BFO_0000141 ;
                       rdfs:comment "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en ;
                       rdfs:label "service product"@en .
 
@@ -1076,7 +1048,7 @@ ontology:NFDI_0000244 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000
 ontology:NFDI_0001000 rdf:type owl:Class ;
-                      rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000300
+                      rdfs:subClassOf [ owl:intersectionOf ( ontology:NFDI_0001019
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty obo:IAO_0000219 ;
                                                                owl:someValuesFrom ontology:NFDI_0000198
@@ -1228,7 +1200,7 @@ ontology:NFDI_0001017 rdf:type owl:Class ;
 ontology:NFDI_0001018 rdf:type owl:Class ;
                       rdfs:subClassOf obo:IAO_0000300 ;
                       rdfs:comment "A textual entity that describe some resource."@en ;
-                      rdfs:label "description"@en .
+                      rdfs:label "textual description"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019
@@ -1330,7 +1302,7 @@ ontology:NFDI_0001033 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001034
 ontology:NFDI_0001034 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:subClassOf obo:IAO_0020000 ;
                       rdfs:comment "A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]"@en ;
                       rdfs:label "uniform resource locator"@en ;
                       rdfs:seeAlso "http://purl.allotrope.org/ontologies/result#AFR_0001068" ;
@@ -1375,7 +1347,7 @@ ontology:NFDI_0001039 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040
 ontology:NFDI_0001040 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:subClassOf obo:IAO_0020000 ;
                       rdfs:comment "An academic title is an identifier that denotes an individual’s academic rank, qualification, or honorary designation within educational and research institutions." ;
                       rdfs:label "academic title"@en ;
                       skos:example "Professor, Associate Professor, Dr., PhD, Dr. Ing." .
@@ -1383,7 +1355,7 @@ ontology:NFDI_0001040 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001041
 ontology:NFDI_0001041 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:subClassOf obo:IAO_0020000 ;
                       rdfs:comment "An identifier that denotes some postal delivery route, some aggregate of postal delivery routes or a geographical region and was created for the purpose of sorting and delivering mail." ;
                       rdfs:isDefinedBy "http://purl.obolibrary.org/obo/IAO_0000646" ;
                       rdfs:label "postal code"@en .
@@ -1489,7 +1461,7 @@ ontology:NFDI_0001052 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001053
 ontology:NFDI_0001053 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0000015 ;
+                      rdfs:subClassOf obo:IAO_0020000 ;
                       rdfs:comment "An ontology version IRI is a unique identifier that points to a specific version of an ontology. It helps distinguish between different updates or revisions of the same ontology. This ensures consistent referencing and compatibility across systems using the ontology."@en ;
                       rdfs:label "ontology version IRI"@en ;
                       ontology:NFDI_0010013 "issue: issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95" .
@@ -1524,7 +1496,7 @@ ontology:NFDI_0001056 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001057
 ontology:NFDI_0001057 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inherent in an agent that is realized when collaborating in planning, managing, and executing an event, project, or initiative alongside one or more primary organizers." ;
+                      rdfs:comment "A role inherent in an agent that is realized when collaborating in planning, managing, and executing an event, project, or initiative alongside one or more primary organizers."@en ;
                       rdfs:label "co organizer role"@en .
 
 
@@ -1538,21 +1510,21 @@ ontology:NFDI_0001058 rdf:type owl:Class ;
                                                            ) ;
                                         rdf:type owl:Class
                                       ] ;
-                      rdfs:comment "A role inherent in an agent that is realized when shareing the role of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public." ;
+                      rdfs:comment "A role inherent in an agent that is realized when shareing the responsibilities of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public."@en ;
                       rdfs:label "co spokesperson role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001059
 ontology:NFDI_0001059 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inherent in an agent that is realized when engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives." ;
+                      rdfs:comment "A role inherent in an agent that is realized when engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives."@en ;
                       rdfs:label "collaboration partner role"@en .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001060
 ontology:NFDI_0001060 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inherent in an agent that is realized when being responsible for producing goods, components, or materials through industrial or commercial processes." ;
+                      rdfs:comment "A role inherent in an agent that is realized when being responsible for producing goods, components, or materials through industrial or commercial processes."@en ;
                       rdfs:label "manufacturer role"@en ;
                       skos:example "Siemens as a manufacturer of industrial automation equipment or Intel as a manufacturer of semiconductor chips" .
 
@@ -1560,7 +1532,7 @@ ontology:NFDI_0001060 rdf:type owl:Class ;
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001061
 ontology:NFDI_0001061 rdf:type owl:Class ;
                       rdfs:subClassOf ontology:NFDI_0000229 ;
-                      rdfs:comment "A role inherent in an agent that is realized when being responsible for planning, managing, and executing an event, project, or structured activity." ;
+                      rdfs:comment "A role inherent in an agent that is realized when being responsible for planning, managing, and executing an event, project, or structured activity."@en ;
                       rdfs:label "organizer role"@en ;
                       skos:example "event management firms organizing scientific symposiums or non-profit organizations coordinating community outreach programs" .
 
@@ -1575,7 +1547,7 @@ ontology:NFDI_0001062 rdf:type owl:Class ;
                                                            ) ;
                                         rdf:type owl:Class
                                       ] ;
-                      rdfs:comment "A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings." ;
+                      rdfs:comment "A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings."@en ;
                       rdfs:label "speaker role"@en ;
                       skos:example "invited speakers at scientific symposiums, keynote presenters at technology expos, and guest lecturers at universities" .
 
@@ -1598,6 +1570,14 @@ ontology:NFDI_0001069 rdf:type owl:Class ;
                       skos:example "https://catalogue.bnf.fr/ark:/12148/cb123735831" ;
                       ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/102" ;
                       ontology:NFDI_0010015 "BnF" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095
+ontology:NFDI_0001095 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000222 ;
+                      rdfs:comment "A SPARQL Endpoint is a web application software that provides a queryable interface for accessing and retrieving structured data from RDF-based knowledge graphs using the SPARQL query language."@en ;
+                      rdfs:label "sparql endpoint"@de ;
+                      skos:example "Wikidata Query Service, DBpedia SPARQL Endpoint, Linked Data Fragments" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001096
@@ -1624,6 +1604,187 @@ ontology:NFDI_0001099 rdf:type owl:Class ;
                       rdfs:label "re3data repository identifier"@en ;
                       rdfs:seeAlso "https://www.wikidata.org/wiki/Property:P5874" ;
                       ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/106" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001101
+ontology:NFDI_0001101 rdf:type owl:Class ;
+                      rdfs:subClassOf obo:IAO_0000300 ;
+                      rdfs:comment "An added value textual entity is a textual entity that describes the achievements, benefits, or additional value generated by a project, service, or initiative, highlighting its impact, improvements, or contributions." ;
+                      rdfs:label "added value textual entity"@en ;
+                      skos:editorialNote "In responce to competency questions like what are the added values of project X1 or service X2." ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001102
+ontology:NFDI_0001102 rdf:type owl:Class ;
+                      rdfs:subClassOf obo:IAO_0000300 ;
+                      rdfs:comment "An affiliation is a textual entity that specifies the organizational or institutional association of an individual, group, or entity, typically used in academic, professional, or research contexts." ;
+                      rdfs:label "affiliation"@en ;
+                      skos:example """FIZ Karlsruhe – Leibniz-Institute for Information Infrastructure
+Karlsruhe Institute of Technology, Institute of Applied Informatics and Formal Description Methods""" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001103
+ontology:NFDI_0001103 rdf:type owl:Class ;
+                      rdfs:subClassOf obo:IAO_0000300 ;
+                      rdfs:comment "A goal textual entity is a textual entity that describes the intended objectives, aims, or targets of a project, initiative, organization, or research effort, providing a clear statement of purpose and expected outcomes." ;
+                      rdfs:label "goal textual entity"@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001104
+ontology:NFDI_0001104 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000190 ;
+                      rdfs:comment "A Conference Abstract is a brief summary of research findings or scholarly work submitted for presentation at an academic or professional conference, often serving as a precursor to a full paper or presentation." ;
+                      rdfs:label "conference abstract"@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001105
+ontology:NFDI_0001105 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000190 ;
+                      rdfs:comment "A Conference Paper is a scholarly publication that presents research findings at an academic or professional conference, typically published in conference proceedings." ;
+                      rdfs:label "conference paper"@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001106
+ontology:NFDI_0001106 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000190 ;
+                      rdfs:comment "A Conference Poster is a visual presentation of research findings, displayed at an academic or professional conference to facilitate discussion and knowledge exchange." ;
+                      rdfs:label "conference poster"@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001200
+ontology:NFDI_0001200 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000029 ;
+                      rdfs:comment "An Interim Report is a report that provides a temporary or progress-based assessment of an ongoing project, research, or operational activity, documenting current findings, challenges, and future directions before the final report is completed." ;
+                      rdfs:label "interim report"@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001201
+ontology:NFDI_0001201 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000123 ;
+                      rdfs:comment "A Research Data Repository is a data portal designed for the preservation, management, and sharing of research datasets, ensuring long-term accessibility and compliance with open science principles." ;
+                      rdfs:label "research data repository"@en ;
+                      skos:example "Open Science Framework (OSF), Harvard Dataverse" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001202
+ontology:NFDI_0001202 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000123 ;
+                      rdfs:comment "A Repository Hosting Data Portal is a data portal that provides infrastructure and tools for hosting datasets, code, and publications in a structured and accessible format." ;
+                      rdfs:label "repository hosting data portal"@en ;
+                      skos:example "Zenodo, Figshare, Dataverse" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001203
+ontology:NFDI_0001203 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000009 ;
+                      rdfs:comment "An Experimental Dataset is a dataset that contains measured or observed data collected from laboratory experiments, physical tests, or scientific investigations." ;
+                      rdfs:label "experimental dataset"@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001204
+ontology:NFDI_0001204 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000009 ;
+                      obo:IAO_0000119 "https://doi.org/10.1016/j.actamat.2025.120735" ;
+                      rdfs:comment "A Reference Dataset is a dataset that serves as a benchmark or standardized collection of data used for validation, comparison, and reproducibility in scientific research and engineering applications." ,
+                                   """Reference data of materials
+- are documented according to certain standards as well as
+- are curated (i.e., generated, maintained, preserved, validated) according to certain standards
+- are quantitative data sets (i.e., data + their corresponding metadata)
+- have been measured or simulated to a particularly high standard, and
+- are generated for a material that has either experienced a well-documented process or is reference material
+or its composition and structure has been completely characterized.
+Reference data of materials can also be derived data from reference data.
+These data are distributed with a license (e.g., GPL).
+The here addressed standards for documentation, curation and measurement need to be defined for specific
+materials characteristics (e.g., creep tests) in terms of domain standards. These domain standards are the
+result of a steered community process.
+Standards should integrate as much as possible existing standards (e.g., the individual MatWerk domain
+standards should be as much as possible consistent).""" ;
+                      rdfs:label "reference dataset"@en ;
+                      skos:example "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy (https://doi.org/10.5281/zenodo.7764161)" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001205
+ontology:NFDI_0001205 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000009 ;
+                      rdfs:comment "A Simulation Dataset is a dataset that contains data generated from computational models, numerical simulations, or digital twin environments to predict material behaviors, properties, and interactions." ;
+                      rdfs:label "simulation dataset"@en ;
+                      skos:example "Examples include DFT simulation datasets, molecular dynamics (MD) trajectory files, and phase-field modeling results." ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001206
+ontology:NFDI_0001206 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000232 ;
+                      rdfs:comment "A Large-Scale Facility is a service product that provides specialized, high-capacity infrastructure for scientific research, engineering, or computational purposes, supporting large-scale experiments, simulations, and data analysis in various domains." ;
+                      rdfs:label "large scale facility"@en ;
+                      skos:editorialNote "HBN: Concerning the content of ‘Large-Scale Facility’ datasheet and its related knowledge graph, the ‘Large-Scale Facility’ class and its subclasses were created to define the types of used facilituies and respond to competency questions like: what large-scale facilities support research in field X, which organization provide facility Y, what is the contact point with facility Z, etc." ;
+                      skos:example "European Synchrotron Radiation Facility (ESRF), the Leibniz Supercomputing Centre (LRZ), CERN's Large Hadron Collider (LHC)" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001207
+ontology:NFDI_0001207 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000022 ;
+                      rdfs:comment "A Presentation Document is a document that consists of structured visual and textual content designed for conveying information to an audience, typically used in meetings, conferences, and educational settings." ;
+                      rdfs:label "presentation document"@en ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001208
+ontology:NFDI_0001208 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000005 ;
+                      rdfs:comment "A place that provides a controlled environment equipped with specialized instruments and facilities for conducting scientific research, experiments, measurements, and testing across various disciplines." ;
+                      rdfs:label "laboratory"@en ;
+                      skos:example "materials characterization laboratories, chemical analysis labs, high-energy physics laboratories" ;
+                      ontology:NFDI_0010013 """https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119
+https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/120""" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001209
+ontology:NFDI_0001209 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000190 ;
+                      rdfs:comment "A Journal Article is a peer-reviewed scholarly publication that presents original research, review studies, or theoretical discussions, typically published in academic journals." ;
+                      rdfs:label "journal article"@en ;
+                      rdfs:seeAlso "http://purl.obolibrary.org/obo/IAO_0000013" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001210
+ontology:NFDI_0001210 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000123 ;
+                      rdfs:comment "A Software Repository is a data portal designed to store, manage, and distribute software packages, source code, and related documentation for research, development, and deployment purposes." ;
+                      rdfs:label "software repository"@en ;
+                      skos:example "GitHub, GitLab, Apache Software Foundation repositories" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001211
+ontology:NFDI_0001211 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000123 ;
+                      rdfs:comment "A Linked Data Portal is a data portal that supports the publication, access, and exploration of linked datasets using semantic web technologies and standardized data formats." ;
+                      rdfs:label "linked data portal"@en ;
+                      skos:example "Wikidata Query Service, DBpedia, Europeana Linked Open Data portal" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001212
+ontology:NFDI_0001212 rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:NFDI_0000123 ;
+                      rdfs:comment "A data analysis portal is a data portal that provides tools, services, and computational resources for performing data analysis, visualization, and interpretation." ;
+                      rdfs:label "data analysis portal"@en ;
+                      skos:example "JupyterHub platforms, KNIME analytics portals, R Shiny-based analysis environments" ;
+                      ontology:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019
@@ -1706,10 +1867,7 @@ ontology:NFDI_0010029 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030
 ontology:NFDI_0010030 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010028 ;
-                      rdfs:comment "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends." ;
-                      rdfs:label "data processing process"@en ;
-                      skos:exactMatch obo:T4FS_0000044 .
+                      rdfs:subClassOf ontology:NFDI_0010028 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010031
@@ -1728,10 +1886,7 @@ ontology:NFDI_0010033 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034
 ontology:NFDI_0010034 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010028 ;
-                      rdfs:comment "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset." ;
-                      rdfs:label "data cleaning process"@en ;
-                      skos:exactMatch obo:T4FS_0000384 .
+                      rdfs:subClassOf ontology:NFDI_0010028 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010035
@@ -1743,10 +1898,7 @@ ontology:NFDI_0010035 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036
 ontology:NFDI_0010036 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010028 ;
-                      rdfs:comment "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis." ;
-                      rdfs:label "data integration process"@en ;
-                      skos:exactMatch obo:T4FS_0000487 .
+                      rdfs:subClassOf ontology:NFDI_0010028 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010037
@@ -1791,6 +1943,18 @@ ontology:NFDI_0010041 rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  http://purl.obolibrary.org/obo/T4FS_0000044
+obo:T4FS_0000044 rdf:type owl:NamedIndividual .
+
+
+###  http://purl.obolibrary.org/obo/T4FS_0000384
+obo:T4FS_0000384 rdf:type owl:NamedIndividual .
+
+
+###  http://purl.obolibrary.org/obo/T4FS_0000487
+obo:T4FS_0000487 rdf:type owl:NamedIndividual .
+
+
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000157
 ontology:NFDI_0000157 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0000100 ;
@@ -1810,7 +1974,7 @@ ontology:NFDI_0000159 rdf:type owl:NamedIndividual ,
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001063
 ontology:NFDI_0001063 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0000100 ;
-                      obo:IAO_0000136 ontology:NFDI_0010017 ;
+                      skos:broader ontology:NFDI_0010017 ;
                       obo:IAO_0000119 "Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson." ;
                       rdfs:comment "Artificial Intelligence (AI) is a sub-discipline of Computer Science that focuses on creating systems capable of performing tasks that require human-like intelligence, such as learning, reasoning, and problem-solving." ;
                       rdfs:label "artificial intelligence"@en ;
@@ -1820,7 +1984,7 @@ ontology:NFDI_0001063 rdf:type owl:NamedIndividual ,
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001064
 ontology:NFDI_0001064 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0000100 ;
-                      obo:IAO_0000136 ontology:NFDI_0010017 ;
+                      skos:broader ontology:NFDI_0010017 ;
                       rdfs:comment "Theoretical Computer Science is a sub-discipline of Computer Science that focuses on mathematical models of computation, computational complexity, and algorithmic problem-solving" ;
                       rdfs:label "theoretical computer science"@en ;
                       skos:example "Studies on Turing machines, complexity classes (P vs NP), and formal languages belong to Theoretical Computer Science." .
@@ -1829,7 +1993,7 @@ ontology:NFDI_0001064 rdf:type owl:NamedIndividual ,
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001065
 ontology:NFDI_0001065 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0000100 ;
-                      obo:IAO_0000136 ontology:NFDI_0010017 ;
+                      skos:broader ontology:NFDI_0010017 ;
                       rdfs:comment "Software Engineering is a sub-discipline of Computer Science that applies engineering principles to the design, development, testing, and maintenance of software systems." ;
                       rdfs:label "software engineering"@en ;
                       skos:example "Agile software development, DevOps practices, and software architecture design fall under Software Engineering." .
@@ -1838,7 +2002,7 @@ ontology:NFDI_0001065 rdf:type owl:NamedIndividual ,
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001066
 ontology:NFDI_0001066 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0000100 ;
-                      obo:IAO_0000136 ontology:NFDI_0010017 ;
+                      skos:broader ontology:NFDI_0010017 ;
                       obo:IAO_0000119 "Provost, F., & Fawcett, T. (2013). Data Science for Business. O'Reilly Media." ;
                       rdfs:comment "Data Science is a sub-discipline of Computer Science that integrates statistical methods, machine learning, and data processing techniques to extract insights and knowledge from structured and unstructured data." ;
                       rdfs:label "data science"@en ;
@@ -1848,7 +2012,7 @@ ontology:NFDI_0001066 rdf:type owl:NamedIndividual ,
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001067
 ontology:NFDI_0001067 rdf:type owl:NamedIndividual ,
                                ontology:NFDI_0000100 ;
-                      obo:IAO_0000136 ontology:NFDI_0010017 ;
+                      skos:broader ontology:NFDI_0010017 ;
                       obo:IAO_0000119 "Stallings, W. (2020). Network Security Essentials. Pearson." ;
                       rdfs:comment "Cybersecurity is a sub-discipline of Computer Science that focuses on protecting computer systems, networks, and data from cyber threats, vulnerabilities, and unauthorized access." ;
                       rdfs:label "cybersecurity"@en ;
@@ -2140,6 +2304,37 @@ ontology:NFDI_0010018 rdf:type owl:NamedIndividual ,
                       rdfs:comment "An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en ;
                       rdfs:label "construction engineering"@en ;
                       rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030
+ontology:NFDI_0010030 rdf:type owl:NamedIndividual ;
+                      skos:exactMatch obo:T4FS_0000044 .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034
+ontology:NFDI_0010034 rdf:type owl:NamedIndividual ;
+                      skos:exactMatch obo:T4FS_0000384 .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036
+ontology:NFDI_0010036 rdf:type owl:NamedIndividual ;
+                      skos:exactMatch obo:T4FS_0000487 .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+ontology:NFDI_0010030 rdfs:comment "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends." ;
+                      rdfs:label "data processing process"@en .
+
+
+ontology:NFDI_0010034 rdfs:comment "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset." ;
+                      rdfs:label "data cleaning process"@en .
+
+
+ontology:NFDI_0010036 rdfs:comment "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis." ;
+                      rdfs:label "data integration process"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

@@ -1,4 +1,4 @@
-Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/bfo_import.owl#>)
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/imports/bfo_import.owl#>)
 Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -9,10 +9,10 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
 
 
-Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/bfo_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2026-02-05/imports/bfo_import.owl>
+Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/imports/bfo_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/3.0.4/imports/bfo_import.owl>
 Annotation(dc11:source <http://purl.obolibrary.org/obo/bfo/2020/notime/bfo.owl>)
-Annotation(owl:versionInfo "2026-02-05")
+Annotation(owl:versionInfo "3.0.4")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))

@@ -7,15 +7,16 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
     <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology">
-        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.3"/>
-        <terms:bibliographicCitation>Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.3. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.3</terms:bibliographicCitation>
-        <terms:created>2025-10-24</terms:created>
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.4"/>
+        <terms:bibliographicCitation>Jörg Waitelonis, Oleksandra Bruns, Tabea Tietz, Etienne Posthumus, Hossein Beygi Nasrabadi, Harald Sack. NFDIcore Ontology. Revision: v3.0.4. Retrieved from: https://nfdi.fiz-karlsruhe.de/ontology/3.0.4</terms:bibliographicCitation>
+        <terms:created>2026-02-05</terms:created>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
         <terms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
@@ -28,9 +29,10 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
         <terms:title xml:lang="en">NFDIcore Ontology</terms:title>
         <bibo:status xml:lang="en">Ontology Specification</bibo:status>
         <vann:preferredNamespaceUri rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/"/>
+        <doap:repository rdf:resource="https://github.com/ISE-FIZKarlsruhe/nfdicore/"/>
         <rdfs:label>NFDIcore</rdfs:label>
-        <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.2"/>
-        <owl:versionInfo>3.0.3</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/3.0.3"/>
+        <owl:versionInfo>3.0.4</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -61,6 +63,12 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
     
 
 
@@ -112,6 +120,12 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     
 
 
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
@@ -121,12 +135,6 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
     
 
 
@@ -228,10 +236,12 @@ Further infomration can be found at GitHub: https://github.com/ISE-FIZKarlsruhe/
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001">
         <rdfs:comment xml:lang="en">An information content entity that refers to digital creative works and services, and is utilized to organize the resources of NFDI. The most generic kind of a resource and may be associated with any kind of digital creative work, e.g. datasets, collections, metadata; offered products and services, e.g. data portals, data curation, data digitization.</rdfs:comment>
-        <rdfs:label xml:lang="en">NFDI resource</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete NFDI resource</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:editorialNote xml:lang="en">2024-03-25 - Sasha Bruns: 
 This class is useful in nfdicore to provide a unified and structured representation of the diverse range of resources that contribute to the NFDI infrastructure. IMO,  it helps to emphasize the scope of resources that can be contributed to the NFDI compared to all information content entites in IAO.</skos:editorialNote>
         <ontology:NFDI_0000012>Resource</ontology:NFDI_0000012>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/118</ontology:NFDI_0010013>
     </owl:Class>
     
 
@@ -295,11 +305,12 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:comment xml:lang="en">An independent continuant or information content entity that refers to a manifestation of someone&apos;s creative effort. A creative work refers to a digital intellectual or artistic resource, e.g. a dataset, metadata, a guideline, a software and other materials offering relevant information or instructions within their specific domains.</rdfs:comment>
-        <rdfs:label xml:lang="en">creative work</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete creative work</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:editorialNote xml:lang="en">2024-03-22. Sasha Bruns - Unlike schema:CreativeWork, nfdicore:CreativeWork is specialized to cover digital creative works only. Through the mapping to &quot;schema:CreativeWork and &apos;information content entity&apos;&quot;, we exclude material creative works such as real paintings, architectural objects, and other physical artifacts, which fall outside the scope of nfdicore:CreativeWork.</skos:editorialNote>
         <skos:example>TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools &amp; Services, RADAR4Culture service, etc.</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/122</ontology:NFDI_0010013>
     </owl:Class>
     
 
@@ -318,8 +329,10 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011">
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/OBI_0000260"/>
         <rdfs:comment xml:lang="en">A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes.</rdfs:comment>
-        <rdfs:label xml:lang="en">plan</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete plan</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -337,9 +350,10 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015">
-        <obo:IAO_0000119>http://purl.obolibrary.org/obo/IAO_0020000</obo:IAO_0000119>
+        <obo:IAO_0100001>http://purl.obolibrary.org/obo/IAO_0020000</obo:IAO_0100001>
         <rdfs:comment>An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.</rdfs:comment>
-        <rdfs:label xml:lang="en">identifier</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -397,10 +411,11 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000021 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000021">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011"/>
         <rdfs:comment xml:lang="en">A plan that specifies a sequence of tasks, processes, or operations, often involving multiple agents, tools, or systems, to achieve a specific goal or produce a desired outcome.</rdfs:comment>
-        <rdfs:label xml:lang="en">workflow</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete workflow</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:editorialNote>A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.</skos:editorialNote>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/125</ontology:NFDI_0010013>
     </owl:Class>
     
 
@@ -687,8 +702,10 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141">
+        <obo:IAO_0100001 rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000002"/>
         <rdfs:comment xml:lang="en">An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence.</rdfs:comment>
-        <rdfs:label xml:lang="en">license</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete license</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:editorialNote xml:lang="en">A document that provides legal guidelines for the use of a resource, e.g. a software.</skos:editorialNote>
         <skos:example xml:lang="en">cc-by-3, Digital Peer Publishing Lizenz</skos:example>
     </owl:Class>
@@ -723,8 +740,10 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000186">
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000025"/>
         <rdfs:comment xml:lang="en">A plan specification that is used for implementing software.</rdfs:comment>
-        <rdfs:label xml:lang="en">programming language</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete programming language</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:editorialNote xml:lang="en">A formal language used for implementing a software.</skos:editorialNote>
         <skos:example>Java, Ruby, C++, Perl, PHP</skos:example>
     </owl:Class>
@@ -878,7 +897,7 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000227 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000227">
-        <rdfs:comment xml:lang="en">A process that defines and coordinates sequential tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A process that processes tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system.</rdfs:comment>
         <rdfs:label xml:lang="en">workflow process</rdfs:label>
     </owl:Class>
     
@@ -915,7 +934,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001"/>
         <rdfs:comment xml:lang="en">An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process.</rdfs:comment>
         <rdfs:label xml:lang="en">service product</rdfs:label>
     </owl:Class>
@@ -934,6 +952,7 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
         <rdfs:comment>A textual entity that uniquely identifies a specific software application, program, or system, often used for branding, categorization, and reference in documentation, licensing, and distribution.</rdfs:comment>
         <rdfs:label xml:lang="en">software title</rdfs:label>
     </owl:Class>
@@ -972,7 +991,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000118 xml:lang="de">Gemeinsame Normdatei</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">Integrated Authority File</obo:IAO_0000118>
         <obo:IAO_0000119>https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html</obo:IAO_0000119>
@@ -987,7 +1005,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000118 xml:lang="en">Integrated Authority File</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">Virtual International Authority File</obo:IAO_0000118>
         <obo:IAO_0000119>https://viaf.org/en</obo:IAO_0000119>
@@ -1003,7 +1020,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000118 xml:lang="en">GeoNames</obo:IAO_0000118>
         <obo:IAO_0000119>https://www.geonames.org/</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">GeoNames is a geographical database that provides information on places, including names, coordinates, and administrative divisions. It integrates data from multiple sources and is widely used for geolocation, mapping, and geographic information systems (GIS).</rdfs:comment>
@@ -1017,7 +1033,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000118 xml:lang="en">Wikidata</obo:IAO_0000118>
         <obo:IAO_0000119>https://www.wikidata.org/</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">Wikidata is maintained by the Wikimedia Foundation and serves as a central repository for structured data used by Wikipedia, Wikimedia projects, and external applications.</rdfs:comment>
@@ -1031,7 +1046,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000119>https://ror.org/</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems.</rdfs:comment>
         <rdfs:label xml:lang="en">ROR identifier</rdfs:label>
@@ -1045,7 +1059,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000118 xml:lang="en">International Standard Identifier for Libraries and Related Organizations</obo:IAO_0000118>
         <obo:IAO_0000119>https://sigel.staatsbibliothek-berlin.de/</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">ISIL (International Standard Identifier for Libraries and Related Organizations) is a globally recognized identifier system used to uniquely identify libraries, archives, museums, and other cultural institutions. It facilitates resource sharing, cataloging, and data exchange across institutions and countries.</rdfs:comment>
@@ -1060,7 +1073,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001015">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000118 xml:lang="en">FactGrid</obo:IAO_0000118>
         <obo:IAO_0000119>https://database.factgrid.de/</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">FactGrid is a collaborative, structured knowledge database designed for historical research. It operates on Wikibase and focuses on documenting historical entities, events, and relationships.</rdfs:comment>
@@ -1074,7 +1086,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000118 xml:lang="fr">Répertoire International des Sources Musicales</obo:IAO_0000118>
         <obo:IAO_0000119>https://rism.info/</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">RISM (Répertoire International des Sources Musicales) is an international catalog of historical music sources, including manuscripts, printed music, and treatises. It provides unique identifiers and bibliographic data to support music research and documentation.</rdfs:comment>
@@ -1099,7 +1110,7 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018">
         <rdfs:comment xml:lang="en">A textual entity that describe some resource.</rdfs:comment>
-        <rdfs:label xml:lang="en">description</rdfs:label>
+        <rdfs:label xml:lang="en">textual description</rdfs:label>
     </owl:Class>
     
 
@@ -1219,7 +1230,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001034 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001034">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]</rdfs:comment>
         <rdfs:label xml:lang="en">uniform resource locator</rdfs:label>
         <rdfs:seeAlso>http://purl.allotrope.org/ontologies/result#AFR_0001068</rdfs:seeAlso>
@@ -1250,7 +1260,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <obo:IAO_0000118>DOI</obo:IAO_0000118>
         <rdfs:comment>A Digital Object Identifier (DOI) is a centrally registered identifier that provides a unique, persistent reference to digital objects such as publications, datasets, and software, ensuring reliable access and citation.</rdfs:comment>
         <rdfs:label xml:lang="en">digital object identifier</rdfs:label>
@@ -1277,7 +1286,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment>An academic title is an identifier that denotes an individual’s academic rank, qualification, or honorary designation within educational and research institutions.</rdfs:comment>
         <rdfs:label xml:lang="en">academic title</rdfs:label>
         <skos:example>Professor, Associate Professor, Dr., PhD, Dr. Ing.</skos:example>
@@ -1288,7 +1296,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001041 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001041">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment>An identifier that denotes some postal delivery route, some aggregate of postal delivery routes or a geographical region and was created for the purpose of sorting and delivering mail.</rdfs:comment>
         <rdfs:isDefinedBy>http://purl.obolibrary.org/obo/IAO_0000646</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">postal code</rdfs:label>
@@ -1417,7 +1424,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001053 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001053">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">An ontology version IRI is a unique identifier that points to a specific version of an ontology. It helps distinguish between different updates or revisions of the same ontology. This ensures consistent referencing and compatibility across systems using the ontology.</rdfs:comment>
         <rdfs:label xml:lang="en">ontology version IRI</rdfs:label>
         <ontology:NFDI_0010013>issue: issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95</ontology:NFDI_0010013>
@@ -1439,7 +1445,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001055 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001055">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">The TGN Identifier refers to a unique ID within the Getty Thesaurus of Geographic Names (TGN), which is a controlled vocabulary developed to standardize geographic names for use in cultural heritage and library contexts. The TGN is part of the Getty Vocabulary Program by the Getty Research Institute.</rdfs:comment>
         <rdfs:label xml:lang="en">TGN identifier</rdfs:label>
         <skos:example>http://vocab.getty.edu/page/tgn/7003712</skos:example>
@@ -1464,7 +1469,7 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001057">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <rdfs:comment>A role inherent in an agent that is realized when collaborating in planning, managing, and executing an event, project, or initiative alongside one or more primary organizers.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when collaborating in planning, managing, and executing an event, project, or initiative alongside one or more primary organizers.</rdfs:comment>
         <rdfs:label xml:lang="en">co organizer role</rdfs:label>
     </owl:Class>
     
@@ -1474,7 +1479,7 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001058">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <rdfs:comment>A role inherent in an agent that is realized when shareing the role of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when shareing the responsibilities of representing an organization, group, or initiative, typically communicating its views, policies, or findings to the public.</rdfs:comment>
         <rdfs:label xml:lang="en">co spokesperson role</rdfs:label>
     </owl:Class>
     
@@ -1484,7 +1489,7 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001059">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <rdfs:comment>A role inherent in an agent that is realized when engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when engageing in cooperative work with another individual or organization toward a shared goal, such as research, development, or business initiatives.</rdfs:comment>
         <rdfs:label xml:lang="en">collaboration partner role</rdfs:label>
     </owl:Class>
     
@@ -1494,7 +1499,7 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001060">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <rdfs:comment>A role inherent in an agent that is realized when being responsible for producing goods, components, or materials through industrial or commercial processes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when being responsible for producing goods, components, or materials through industrial or commercial processes.</rdfs:comment>
         <rdfs:label xml:lang="en">manufacturer role</rdfs:label>
         <skos:example>Siemens as a manufacturer of industrial automation equipment or Intel as a manufacturer of semiconductor chips</skos:example>
     </owl:Class>
@@ -1505,7 +1510,7 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001061">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <rdfs:comment>A role inherent in an agent that is realized when being responsible for planning, managing, and executing an event, project, or structured activity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when being responsible for planning, managing, and executing an event, project, or structured activity.</rdfs:comment>
         <rdfs:label xml:lang="en">organizer role</rdfs:label>
         <skos:example>event management firms organizing scientific symposiums or non-profit organizations coordinating community outreach programs</skos:example>
     </owl:Class>
@@ -1516,7 +1521,7 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001062">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229"/>
-        <rdfs:comment>A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A role inherent in an agent that is realized when delivers presentations, lectures, or speeches at events, conferences, or public gatherings.</rdfs:comment>
         <rdfs:label xml:lang="en">speaker role</rdfs:label>
         <skos:example>invited speakers at scientific symposiums, keynote presenters at technology expos, and guest lecturers at universities</skos:example>
     </owl:Class>
@@ -1526,7 +1531,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001068 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001068">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">The LCNAF Identifier refers to a unique identifier assigned to entries in the Library of Congress Name Authority File (LCNAF). This file is a standardized authority database maintained by the Library of Congress, used to establish and control the names of people, organizations, geographic places, and titles in bibliographic records.</rdfs:comment>
         <rdfs:label xml:lang="en">LCNAF identifier</rdfs:label>
         <skos:example>http://id.loc.gov/authorities/names/n78095332</skos:example>
@@ -1539,12 +1543,22 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001069 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001069">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">The BnF Identifier refers to a unique identifier assigned to an authority record in the Bibliothèque nationale de France (BnF) catalog. It is part of the BnF’s authority files, used to standardize names of people, organizations, titles, places, and subjects across bibliographic records.</rdfs:comment>
         <rdfs:label xml:lang="en">BnF identifier</rdfs:label>
         <skos:example>https://catalogue.bnf.fr/ark:/12148/cb123735831</skos:example>
         <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/102</ontology:NFDI_0010013>
         <ontology:NFDI_0010015>BnF</ontology:NFDI_0010015>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222"/>
+        <rdfs:comment xml:lang="en">A SPARQL Endpoint is a web application software that provides a queryable interface for accessing and retrieving structured data from RDF-based knowledge graphs using the SPARQL query language.</rdfs:comment>
+        <rdfs:label xml:lang="de">sparql endpoint</rdfs:label>
+        <skos:example>Wikidata Query Service, DBpedia SPARQL Endpoint, Linked Data Fragments</skos:example>
     </owl:Class>
     
 
@@ -1562,7 +1576,6 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001098 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001098">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">Identifier for institutions registered with the German Digital Library (Deutsche Digitale Bibliothek)</rdfs:comment>
         <rdfs:comment xml:lang="de">Identifikator für Institutionen, die bei der Deutschen Digitalen Bibliothek registriert sind</rdfs:comment>
         <rdfs:label xml:lang="en">DDB organization identifier</rdfs:label>
@@ -1575,11 +1588,245 @@ But what about the organization or plan behind it?
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001099 -->
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001099">
-        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015"/>
         <rdfs:comment xml:lang="en">identifier for a data repository in the re3data registry</rdfs:comment>
         <rdfs:label xml:lang="en">re3data repository identifier</rdfs:label>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Property:P5874</rdfs:seeAlso>
         <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/106</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001101 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001101">
+        <rdfs:comment>An added value textual entity is a textual entity that describes the achievements, benefits, or additional value generated by a project, service, or initiative, highlighting its impact, improvements, or contributions.</rdfs:comment>
+        <rdfs:label xml:lang="en">added value textual entity</rdfs:label>
+        <skos:editorialNote>In responce to competency questions like what are the added values of project X1 or service X2.</skos:editorialNote>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001102 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001102">
+        <rdfs:comment>An affiliation is a textual entity that specifies the organizational or institutional association of an individual, group, or entity, typically used in academic, professional, or research contexts.</rdfs:comment>
+        <rdfs:label xml:lang="en">affiliation</rdfs:label>
+        <skos:example>FIZ Karlsruhe – Leibniz-Institute for Information Infrastructure
+Karlsruhe Institute of Technology, Institute of Applied Informatics and Formal Description Methods</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001103 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001103">
+        <rdfs:comment>A goal textual entity is a textual entity that describes the intended objectives, aims, or targets of a project, initiative, organization, or research effort, providing a clear statement of purpose and expected outcomes.</rdfs:comment>
+        <rdfs:label xml:lang="en">goal textual entity</rdfs:label>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001104 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001104">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
+        <rdfs:comment>A Conference Abstract is a brief summary of research findings or scholarly work submitted for presentation at an academic or professional conference, often serving as a precursor to a full paper or presentation.</rdfs:comment>
+        <rdfs:label xml:lang="en">conference abstract</rdfs:label>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001105 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001105">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
+        <rdfs:comment>A Conference Paper is a scholarly publication that presents research findings at an academic or professional conference, typically published in conference proceedings.</rdfs:comment>
+        <rdfs:label xml:lang="en">conference paper</rdfs:label>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001106 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001106">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
+        <rdfs:comment>A Conference Poster is a visual presentation of research findings, displayed at an academic or professional conference to facilitate discussion and knowledge exchange.</rdfs:comment>
+        <rdfs:label xml:lang="en">conference poster</rdfs:label>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001200 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001200">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000029"/>
+        <rdfs:comment>An Interim Report is a report that provides a temporary or progress-based assessment of an ongoing project, research, or operational activity, documenting current findings, challenges, and future directions before the final report is completed.</rdfs:comment>
+        <rdfs:label xml:lang="en">interim report</rdfs:label>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001201 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001201">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123"/>
+        <rdfs:comment>A Research Data Repository is a data portal designed for the preservation, management, and sharing of research datasets, ensuring long-term accessibility and compliance with open science principles.</rdfs:comment>
+        <rdfs:label xml:lang="en">research data repository</rdfs:label>
+        <skos:example>Open Science Framework (OSF), Harvard Dataverse</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001202 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001202">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123"/>
+        <rdfs:comment>A Repository Hosting Data Portal is a data portal that provides infrastructure and tools for hosting datasets, code, and publications in a structured and accessible format.</rdfs:comment>
+        <rdfs:label xml:lang="en">repository hosting data portal</rdfs:label>
+        <skos:example>Zenodo, Figshare, Dataverse</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001203 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001203">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
+        <rdfs:comment>An Experimental Dataset is a dataset that contains measured or observed data collected from laboratory experiments, physical tests, or scientific investigations.</rdfs:comment>
+        <rdfs:label xml:lang="en">experimental dataset</rdfs:label>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001204 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001204">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
+        <obo:IAO_0000119>https://doi.org/10.1016/j.actamat.2025.120735</obo:IAO_0000119>
+        <rdfs:comment>A Reference Dataset is a dataset that serves as a benchmark or standardized collection of data used for validation, comparison, and reproducibility in scientific research and engineering applications.</rdfs:comment>
+        <rdfs:comment>Reference data of materials
+- are documented according to certain standards as well as
+- are curated (i.e., generated, maintained, preserved, validated) according to certain standards
+- are quantitative data sets (i.e., data + their corresponding metadata)
+- have been measured or simulated to a particularly high standard, and
+- are generated for a material that has either experienced a well-documented process or is reference material
+or its composition and structure has been completely characterized.
+Reference data of materials can also be derived data from reference data.
+These data are distributed with a license (e.g., GPL).
+The here addressed standards for documentation, curation and measurement need to be defined for specific
+materials characteristics (e.g., creep tests) in terms of domain standards. These domain standards are the
+result of a steered community process.
+Standards should integrate as much as possible existing standards (e.g., the individual MatWerk domain
+standards should be as much as possible consistent).</rdfs:comment>
+        <rdfs:label xml:lang="en">reference dataset</rdfs:label>
+        <skos:example>BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy (https://doi.org/10.5281/zenodo.7764161)</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001205 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001205">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
+        <rdfs:comment>A Simulation Dataset is a dataset that contains data generated from computational models, numerical simulations, or digital twin environments to predict material behaviors, properties, and interactions.</rdfs:comment>
+        <rdfs:label xml:lang="en">simulation dataset</rdfs:label>
+        <skos:example>Examples include DFT simulation datasets, molecular dynamics (MD) trajectory files, and phase-field modeling results.</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001206 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001206">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232"/>
+        <rdfs:comment>A Large-Scale Facility is a service product that provides specialized, high-capacity infrastructure for scientific research, engineering, or computational purposes, supporting large-scale experiments, simulations, and data analysis in various domains.</rdfs:comment>
+        <rdfs:label xml:lang="en">large scale facility</rdfs:label>
+        <skos:editorialNote>HBN: Concerning the content of ‘Large-Scale Facility’ datasheet and its related knowledge graph, the ‘Large-Scale Facility’ class and its subclasses were created to define the types of used facilituies and respond to competency questions like: what large-scale facilities support research in field X, which organization provide facility Y, what is the contact point with facility Z, etc.</skos:editorialNote>
+        <skos:example>European Synchrotron Radiation Facility (ESRF), the Leibniz Supercomputing Centre (LRZ), CERN&apos;s Large Hadron Collider (LHC)</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001207 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001207">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
+        <rdfs:comment>A Presentation Document is a document that consists of structured visual and textual content designed for conveying information to an audience, typically used in meetings, conferences, and educational settings.</rdfs:comment>
+        <rdfs:label xml:lang="en">presentation document</rdfs:label>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001208 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001208">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005"/>
+        <rdfs:comment>A place that provides a controlled environment equipped with specialized instruments and facilities for conducting scientific research, experiments, measurements, and testing across various disciplines.</rdfs:comment>
+        <rdfs:label xml:lang="en">laboratory</rdfs:label>
+        <skos:example>materials characterization laboratories, chemical analysis labs, high-energy physics laboratories</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119
+https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/120</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001209 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001209">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
+        <rdfs:comment>A Journal Article is a peer-reviewed scholarly publication that presents original research, review studies, or theoretical discussions, typically published in academic journals.</rdfs:comment>
+        <rdfs:label xml:lang="en">journal article</rdfs:label>
+        <rdfs:seeAlso>http://purl.obolibrary.org/obo/IAO_0000013</rdfs:seeAlso>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001210 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001210">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123"/>
+        <rdfs:comment>A Software Repository is a data portal designed to store, manage, and distribute software packages, source code, and related documentation for research, development, and deployment purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">software repository</rdfs:label>
+        <skos:example>GitHub, GitLab, Apache Software Foundation repositories</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001211 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001211">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123"/>
+        <rdfs:comment>A Linked Data Portal is a data portal that supports the publication, access, and exploration of linked datasets using semantic web technologies and standardized data formats.</rdfs:comment>
+        <rdfs:label xml:lang="en">linked data portal</rdfs:label>
+        <skos:example>Wikidata Query Service, DBpedia, Europeana Linked Open Data portal</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001212 -->
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001212">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123"/>
+        <rdfs:comment>A data analysis portal is a data portal that provides tools, services, and computational resources for performing data analysis, visualization, and interpretation.</rdfs:comment>
+        <rdfs:label xml:lang="en">data analysis portal</rdfs:label>
+        <skos:example>JupyterHub platforms, KNIME analytics portals, R Shiny-based analysis environments</skos:example>
+        <ontology:NFDI_0010013>https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119</ontology:NFDI_0010013>
     </owl:Class>
     
 
@@ -1698,9 +1945,6 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <rdfs:comment>A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.</rdfs:comment>
-        <rdfs:label xml:lang="en">data processing process</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000044"/>
     </owl:Class>
     
 
@@ -1729,9 +1973,6 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <rdfs:comment>A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.</rdfs:comment>
-        <rdfs:label xml:lang="en">data cleaning process</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000384"/>
     </owl:Class>
     
 
@@ -1750,9 +1991,6 @@ But what about the organization or plan behind it?
 
     <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036">
         <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010028"/>
-        <rdfs:comment>A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.</rdfs:comment>
-        <rdfs:label xml:lang="en">data integration process</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/T4FS_0000487"/>
     </owl:Class>
     
 
@@ -2302,6 +2540,47 @@ But what about the organization or plan behind it?
         <rdfs:label xml:lang="en">construction engineering</rdfs:label>
         <rdfs:seeAlso>https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure</rdfs:seeAlso>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030 -->
+
+    <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034 -->
+
+    <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036 -->
+
+    <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030">
+        <rdfs:comment>A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.</rdfs:comment>
+        <rdfs:label xml:lang="en">data processing process</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034">
+        <rdfs:comment>A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">data cleaning process</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036">
+        <rdfs:comment>A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.</rdfs:comment>
+        <rdfs:label xml:lang="en">data integration process</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
