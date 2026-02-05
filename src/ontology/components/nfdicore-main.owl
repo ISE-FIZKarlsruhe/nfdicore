@@ -222,9 +222,6 @@ Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
 Declaration(ObjectProperty(:NFDI_0000226))
 Declaration(DataProperty(:NFDI_0001007))
 Declaration(DataProperty(:NFDI_0001008))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/T4FS_0000044>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/T4FS_0000384>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/T4FS_0000487>))
 Declaration(NamedIndividual(:NFDI_0000157))
 Declaration(NamedIndividual(:NFDI_0000159))
 Declaration(NamedIndividual(:NFDI_0001063))
@@ -271,9 +268,9 @@ Declaration(NamedIndividual(:NFDI_0010014))
 Declaration(NamedIndividual(:NFDI_0010016))
 Declaration(NamedIndividual(:NFDI_0010017))
 Declaration(NamedIndividual(:NFDI_0010018))
-Declaration(NamedIndividual(:NFDI_0010030))
-Declaration(NamedIndividual(:NFDI_0010034))
-Declaration(NamedIndividual(:NFDI_0010036))
+
+
+
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000112>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
@@ -1933,15 +1930,15 @@ ClassAssertion(:NFDI_0000100 :NFDI_0010018)
 
 # Individual: :NFDI_0010030 (data processing process)
 
-ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010030 <http://purl.obolibrary.org/obo/T4FS_0000044>)
+AnnotationAssertion(<http://www.w3.org/2000/01/rdf-schema#seeAlso> :NFDI_0010030 <http://purl.obolibrary.org/obo/T4FS_0000044>)
 
 # Individual: :NFDI_0010034 (data cleaning process)
 
-ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010034 <http://purl.obolibrary.org/obo/T4FS_0000384>)
+AnnotationAssertion(<http://www.w3.org/2000/01/rdf-schema#seeAlso> :NFDI_0010034 <http://purl.obolibrary.org/obo/T4FS_0000384>)
 
 # Individual: :NFDI_0010036 (data integration process)
 
-ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010036 <http://purl.obolibrary.org/obo/T4FS_0000487>)
+AnnotationAssertion(<http://www.w3.org/2000/01/rdf-schema#seeAlso> :NFDI_0010036 <http://purl.obolibrary.org/obo/T4FS_0000487>)
 
 
 EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002350> :NFDI_0000006))

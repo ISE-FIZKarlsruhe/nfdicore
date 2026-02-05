@@ -188,10 +188,6 @@ obo:RO_0002353 rdf:type owl:ObjectProperty .
 skos:broader rdf:type owl:ObjectProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#exactMatch
-skos:exactMatch rdf:type owl:ObjectProperty .
-
-
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226
 ontology:NFDI_0000226 rdf:type owl:ObjectProperty ;
                       rdfs:comment "inverse of the relation 'is about'" ;
@@ -1867,7 +1863,10 @@ ontology:NFDI_0010029 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030
 ontology:NFDI_0010030 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010028 .
+                      rdfs:subClassOf ontology:NFDI_0010028 ;
+                      rdfs:comment "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends." ;
+                      rdfs:label "data processing process"@en ;
+                      rdfs:seeAlso obo:T4FS_0000044 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010031
@@ -1886,7 +1885,10 @@ ontology:NFDI_0010033 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034
 ontology:NFDI_0010034 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010028 .
+                      rdfs:subClassOf ontology:NFDI_0010028 ;
+                      rdfs:comment "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset." ;
+                      rdfs:label "data cleaning process"@en ;
+                      rdfs:seeAlso obo:T4FS_0000384 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010035
@@ -1898,7 +1900,10 @@ ontology:NFDI_0010035 rdf:type owl:Class ;
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036
 ontology:NFDI_0010036 rdf:type owl:Class ;
-                      rdfs:subClassOf ontology:NFDI_0010028 .
+                      rdfs:subClassOf ontology:NFDI_0010028 ;
+                      rdfs:comment "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis." ;
+                      rdfs:label "data integration process"@en ;
+                      rdfs:seeAlso obo:T4FS_0000487 .
 
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010037
@@ -1942,18 +1947,6 @@ ontology:NFDI_0010041 rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://purl.obolibrary.org/obo/T4FS_0000044
-obo:T4FS_0000044 rdf:type owl:NamedIndividual .
-
-
-###  http://purl.obolibrary.org/obo/T4FS_0000384
-obo:T4FS_0000384 rdf:type owl:NamedIndividual .
-
-
-###  http://purl.obolibrary.org/obo/T4FS_0000487
-obo:T4FS_0000487 rdf:type owl:NamedIndividual .
-
 
 ###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000157
 ontology:NFDI_0000157 rdf:type owl:NamedIndividual ,
@@ -2304,37 +2297,6 @@ ontology:NFDI_0010018 rdf:type owl:NamedIndividual ,
                       rdfs:comment "An academic discipline that focuses on the planning, design, and management of construction projects, including buildings, infrastructure, and other structures. Construction engineering integrates principles of civil engineering, project management, and materials science to ensure safety, efficiency, and sustainability in construction processes."@en ;
                       rdfs:label "construction engineering"@en ;
                       rdfs:seeAlso "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure" .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010030
-ontology:NFDI_0010030 rdf:type owl:NamedIndividual ;
-                      skos:exactMatch obo:T4FS_0000044 .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010034
-ontology:NFDI_0010034 rdf:type owl:NamedIndividual ;
-                      skos:exactMatch obo:T4FS_0000384 .
-
-
-###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010036
-ontology:NFDI_0010036 rdf:type owl:NamedIndividual ;
-                      skos:exactMatch obo:T4FS_0000487 .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-ontology:NFDI_0010030 rdfs:comment "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends." ;
-                      rdfs:label "data processing process"@en .
-
-
-ontology:NFDI_0010034 rdfs:comment "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset." ;
-                      rdfs:label "data cleaning process"@en .
-
-
-ontology:NFDI_0010036 rdfs:comment "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis." ;
-                      rdfs:label "data integration process"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
