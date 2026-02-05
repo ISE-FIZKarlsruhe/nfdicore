@@ -30,6 +30,7 @@ Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "NFDIcore Ontology"@en)
 Annotation(<http://purl.org/ontology/bibo/status> "Ontology Specification"@en)
 Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> <https://nfdi.fiz-karlsruhe.de/ontology/>)
+Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/ISE-FIZKarlsruhe/nfdicore/>)
 Annotation(rdfs:label "NFDIcore")
 
 Declaration(AnnotationProperty(dcterms:creator))
@@ -38,6 +39,7 @@ Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
 Declaration(AnnotationProperty(<http://purl.org/ontology/bibo/status>))
 Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri>))
+Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#repository>))
 
 
 AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")

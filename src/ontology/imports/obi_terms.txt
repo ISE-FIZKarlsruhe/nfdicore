@@ -4,7 +4,8 @@
 #http://purl.obolibrary.org/obo/OBI_0200000  # data transformation
 #http://purl.obolibrary.org/obo/OBI_0000379  # mechanical function 
 #http://purl.obolibrary.org/obo/OBI_0000293 
-#http://purl.obolibrary.org/obo/OBI_0000260 # plan
+
+http://purl.obolibrary.org/obo/OBI_0000260 # plan
 
 
 #http://purl.obolibrary.org/obo/BFO_0000179 # BFO OWL specification label

@@ -440,11 +440,12 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_00
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000009 "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)")
 SubClassOf(:NFDI_0000009 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: :NFDI_0000011 (plan)
+# Class: :NFDI_0000011 (obsolete plan)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000011 "A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000011 "plan"@en)
-SubClassOf(:NFDI_0000011 <http://purl.obolibrary.org/obo/BFO_0000017>)
+AnnotationAssertion(rdfs:label :NFDI_0000011 "obsolete plan"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000011 "true"^^xsd:boolean)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000011 "use OBI plan: http://purl.obolibrary.org/obo/OBI_0000260")
 
 # Class: :NFDI_0000014 (publishing process)
 
@@ -822,7 +823,7 @@ SubClassOf(:NFDI_0000224 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BF
 
 AnnotationAssertion(rdfs:comment :NFDI_0000227 "A process that processes tasks, activities, or steps to achieve specific objectives efficiently within an organized workflow system."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000227 "workflow process"@en)
-SubClassOf(:NFDI_0000227 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(:NFDI_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> :NFDI_0001002)))))
+SubClassOf(:NFDI_0000227 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000260> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> :NFDI_0001002)))))
 
 # Class: :NFDI_0000228 (service product role)
 
