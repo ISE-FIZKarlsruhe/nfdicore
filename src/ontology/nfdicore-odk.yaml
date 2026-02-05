@@ -51,6 +51,10 @@ import_group:
       #module_type: slme
       #module_type_slme: SUBSET
       #slme_individuals: exclude
+    - id: skos
+      mirror_from: http://www.w3.org/TR/skos-reference/skos.rdf
+      module_type: slme
+      module_type_slme: SUBSET
 
 components:
   products:

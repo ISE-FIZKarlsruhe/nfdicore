@@ -186,9 +186,14 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002234>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002352>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002353>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#broader>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
 Declaration(ObjectProperty(:NFDI_0000226))
 Declaration(DataProperty(:NFDI_0001007))
 Declaration(DataProperty(:NFDI_0001008))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/T4FS_0000044>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/T4FS_0000384>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/T4FS_0000487>))
 Declaration(NamedIndividual(:NFDI_0000157))
 Declaration(NamedIndividual(:NFDI_0000159))
 Declaration(NamedIndividual(:NFDI_0001063))
@@ -235,13 +240,11 @@ Declaration(NamedIndividual(:NFDI_0010014))
 Declaration(NamedIndividual(:NFDI_0010016))
 Declaration(NamedIndividual(:NFDI_0010017))
 Declaration(NamedIndividual(:NFDI_0010018))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000118>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000119>))
+Declaration(NamedIndividual(:NFDI_0010030))
+Declaration(NamedIndividual(:NFDI_0010034))
+Declaration(NamedIndividual(:NFDI_0010036))
 Declaration(AnnotationProperty(dcterms:title))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#broader>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNote>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(:NFDI_0000012))
 Declaration(AnnotationProperty(:NFDI_0010013))
 Declaration(AnnotationProperty(:NFDI_0010015))
@@ -339,17 +342,9 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000300> "textual entity"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000300> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <http://purl.obolibrary.org/obo/IAO_0000578> (centrally registered identifier)
-
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> :NFDI_0000015)
-
 # Class: <http://purl.obolibrary.org/obo/IAO_0020016> (given name)
 
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020016> :NFDI_0000015)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020017> (family name)
-
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020017> :NFDI_0000015)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020016> <http://purl.obolibrary.org/obo/IAO_0020000>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_8000001> (base ontology module)
 
@@ -366,10 +361,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000013> :NFDI_0000024)
 # Class: <http://purl.obolibrary.org/obo/OBI_0000245> (organization)
 
 SubClassOf(<http://purl.obolibrary.org/obo/OBI_0000245> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000229)))
-
-# Class: <http://www.ebi.ac.uk/swo/SWO_0000002> (software license)
-
-EquivalentClasses(<http://www.ebi.ac.uk/swo/SWO_0000002> :NFDI_0000141)
 
 # Class: :NFDI_0000001 (obsolete NFDI resource)
 
@@ -442,10 +433,10 @@ SubClassOf(:NFDI_0000009 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000011 (obsolete plan)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0000011 <http://purl.obolibrary.org/obo/OBI_0000260>)
 AnnotationAssertion(rdfs:comment :NFDI_0000011 "A realizable entity that represents a structured set of intended actions or steps designed to achieve specific objectives or outcomes."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000011 "obsolete plan"@en)
 AnnotationAssertion(owl:deprecated :NFDI_0000011 "true"^^xsd:boolean)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000011 "use OBI plan: http://purl.obolibrary.org/obo/OBI_0000260")
 
 # Class: :NFDI_0000014 (publishing process)
 
@@ -454,12 +445,12 @@ AnnotationAssertion(rdfs:comment :NFDI_0000014 "A process of making information,
 AnnotationAssertion(rdfs:label :NFDI_0000014 "publishing process"@en)
 SubClassOf(:NFDI_0000014 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: :NFDI_0000015 (identifier)
+# Class: :NFDI_0000015 (obsolete identifier)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000015 "http://purl.obolibrary.org/obo/IAO_0020000")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0000015 "http://purl.obolibrary.org/obo/IAO_0020000")
 AnnotationAssertion(rdfs:comment :NFDI_0000015 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.")
-AnnotationAssertion(rdfs:label :NFDI_0000015 "identifier"@en)
-SubClassOf(:NFDI_0000015 <http://purl.obolibrary.org/obo/IAO_0000030>)
+AnnotationAssertion(rdfs:label :NFDI_0000015 "obsolete identifier"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000015 "true"^^xsd:boolean)
 
 # Class: :NFDI_0000016 (software development)
 
@@ -688,13 +679,14 @@ AnnotationAssertion(rdfs:label :NFDI_0000140 "software library"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0000140 "http://purl.obolibrary.org/obo/IAO_0000593")
 SubClassOf(:NFDI_0000140 :NFDI_0000198)
 
-# Class: :NFDI_0000141 (license)
+# Class: :NFDI_0000141 (obsolete license)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0000141 <http://www.ebi.ac.uk/swo/SWO_0000002>)
 AnnotationAssertion(rdfs:comment :NFDI_0000141 "An information content entity that refers to a legal instrument (usually by way of contract law, with or without printed material) governing the use or redistribution of the resource containing the licence."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000141 "license"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000141 "obsolete license"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000141 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000141 "A document that provides legal guidelines for the use of a resource, e.g. a software."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000141 "cc-by-3, Digital Peer Publishing Lizenz"@en)
-SubClassOf(:NFDI_0000141 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000145 (media type)
 
@@ -1055,7 +1047,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001034 "A Uniform Resource Locator (URL)
 AnnotationAssertion(rdfs:label :NFDI_0001034 "uniform resource locator"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0001034 "http://purl.allotrope.org/ontologies/result#AFR_0001068")
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001034 "issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95")
-SubClassOf(:NFDI_0001034 :NFDI_0000015)
+SubClassOf(:NFDI_0001034 <http://purl.obolibrary.org/obo/IAO_0020000>)
 
 # Class: :NFDI_0001035 (work package textual entity)
 
@@ -1094,14 +1086,14 @@ SubClassOf(:NFDI_0001039 :NFDI_0000006)
 AnnotationAssertion(rdfs:comment :NFDI_0001040 "An academic title is an identifier that denotes an individual’s academic rank, qualification, or honorary designation within educational and research institutions.")
 AnnotationAssertion(rdfs:label :NFDI_0001040 "academic title"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001040 "Professor, Associate Professor, Dr., PhD, Dr. Ing.")
-SubClassOf(:NFDI_0001040 :NFDI_0000015)
+SubClassOf(:NFDI_0001040 <http://purl.obolibrary.org/obo/IAO_0020000>)
 
 # Class: :NFDI_0001041 (postal code)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001041 "An identifier that denotes some postal delivery route, some aggregate of postal delivery routes or a geographical region and was created for the purpose of sorting and delivering mail.")
 AnnotationAssertion(rdfs:isDefinedBy :NFDI_0001041 "http://purl.obolibrary.org/obo/IAO_0000646")
 AnnotationAssertion(rdfs:label :NFDI_0001041 "postal code"@en)
-SubClassOf(:NFDI_0001041 :NFDI_0000015)
+SubClassOf(:NFDI_0001041 <http://purl.obolibrary.org/obo/IAO_0020000>)
 
 # Class: :NFDI_0001042 (zone improvement plan code)
 
@@ -1183,7 +1175,7 @@ SubClassOf(:NFDI_0001052 :NFDI_0000203)
 AnnotationAssertion(rdfs:comment :NFDI_0001053 "An ontology version IRI is a unique identifier that points to a specific version of an ontology. It helps distinguish between different updates or revisions of the same ontology. This ensures consistent referencing and compatibility across systems using the ontology."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001053 "ontology version IRI"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001053 "issue: issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95")
-SubClassOf(:NFDI_0001053 :NFDI_0000015)
+SubClassOf(:NFDI_0001053 <http://purl.obolibrary.org/obo/IAO_0020000>)
 
 # Class: :NFDI_0001054 (metadata specification)
 
@@ -1521,7 +1513,6 @@ SubClassOf(:NFDI_0010029 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010030 "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.")
 AnnotationAssertion(rdfs:label :NFDI_0010030 "data processing process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010030 <http://purl.obolibrary.org/obo/T4FS_0000044>)
 SubClassOf(:NFDI_0010030 :NFDI_0010028)
 
 # Class: :NFDI_0010031 (dataset creation process)
@@ -1540,7 +1531,6 @@ SubClassOf(:NFDI_0010033 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010034 "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.")
 AnnotationAssertion(rdfs:label :NFDI_0010034 "data cleaning process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010034 <http://purl.obolibrary.org/obo/T4FS_0000384>)
 SubClassOf(:NFDI_0010034 :NFDI_0010028)
 
 # Class: :NFDI_0010035 (data transformation process)
@@ -1553,7 +1543,6 @@ SubClassOf(:NFDI_0010035 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010036 "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.")
 AnnotationAssertion(rdfs:label :NFDI_0010036 "data integration process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010036 <http://purl.obolibrary.org/obo/T4FS_0000487>)
 SubClassOf(:NFDI_0010036 :NFDI_0010028)
 
 # Class: :NFDI_0010037 (data storage process)
@@ -1615,7 +1604,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001063 "Artificial Intelligence (AI) is 
 AnnotationAssertion(rdfs:label :NFDI_0001063 "artificial intelligence"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001063 "Deep learning for image recognition, reinforcement learning in robotics, and natural language processing fall under Artificial Intelligence.")
 ClassAssertion(:NFDI_0000100 :NFDI_0001063)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001063 :NFDI_0010017)
+ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#broader> :NFDI_0001063 :NFDI_0010017)
 
 # Individual: :NFDI_0001064 (theoretical computer science)
 
@@ -1623,7 +1612,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001064 "Theoretical Computer Science is 
 AnnotationAssertion(rdfs:label :NFDI_0001064 "theoretical computer science"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001064 "Studies on Turing machines, complexity classes (P vs NP), and formal languages belong to Theoretical Computer Science.")
 ClassAssertion(:NFDI_0000100 :NFDI_0001064)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001064 :NFDI_0010017)
+ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#broader> :NFDI_0001064 :NFDI_0010017)
 
 # Individual: :NFDI_0001065 (software engineering)
 
@@ -1631,7 +1620,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001065 "Software Engineering is a sub-di
 AnnotationAssertion(rdfs:label :NFDI_0001065 "software engineering"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001065 "Agile software development, DevOps practices, and software architecture design fall under Software Engineering.")
 ClassAssertion(:NFDI_0000100 :NFDI_0001065)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001065 :NFDI_0010017)
+ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#broader> :NFDI_0001065 :NFDI_0010017)
 
 # Individual: :NFDI_0001066 (data science)
 
@@ -1640,7 +1629,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001066 "Data Science is a sub-discipline
 AnnotationAssertion(rdfs:label :NFDI_0001066 "data science"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001066 "Predictive analytics, big data visualization, and recommendation systems are part of Data Science.")
 ClassAssertion(:NFDI_0000100 :NFDI_0001066)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001066 :NFDI_0010017)
+ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#broader> :NFDI_0001066 :NFDI_0010017)
 
 # Individual: :NFDI_0001067 (cybersecurity)
 
@@ -1649,7 +1638,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001067 "Cybersecurity is a sub-disciplin
 AnnotationAssertion(rdfs:label :NFDI_0001067 "cybersecurity"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001067 "Encryption techniques, intrusion detection systems, and ethical hacking studies belong to Cybersecurity.")
 ClassAssertion(:NFDI_0000100 :NFDI_0001067)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/IAO_0000136> :NFDI_0001067 :NFDI_0010017)
+ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#broader> :NFDI_0001067 :NFDI_0010017)
 
 # Individual: :NFDI_0001070 (active status)
 
@@ -1898,6 +1887,18 @@ AnnotationAssertion(rdfs:comment :NFDI_0010018 "An academic discipline that focu
 AnnotationAssertion(rdfs:label :NFDI_0010018 "construction engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010018 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 ClassAssertion(:NFDI_0000100 :NFDI_0010018)
+
+# Individual: :NFDI_0010030 (data processing process)
+
+ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010030 <http://purl.obolibrary.org/obo/T4FS_0000044>)
+
+# Individual: :NFDI_0010034 (data cleaning process)
+
+ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010034 <http://purl.obolibrary.org/obo/T4FS_0000384>)
+
+# Individual: :NFDI_0010036 (data integration process)
+
+ObjectPropertyAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> :NFDI_0010036 <http://purl.obolibrary.org/obo/T4FS_0000487>)
 
 
 EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002350> :NFDI_0000006))

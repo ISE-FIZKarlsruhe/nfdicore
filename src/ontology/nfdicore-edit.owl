@@ -17,6 +17,7 @@ Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/edam_import.owl>
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/obi_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/ro_import.owl>)
+Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/skos_import.owl>)
 Import(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/swo_import.owl>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E1925>)
 Annotation(dcterms:creator <https://nfdi4culture.de/id/E2415>)
