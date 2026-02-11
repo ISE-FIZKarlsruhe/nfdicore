@@ -43,10 +43,11 @@ Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri
 Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#repository>))
 
 
-AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E1925> "Harald Sack")
-AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2415> "Tabea Tietz")
-AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E2416> "Oleksandra Bruns")
-AnnotationAssertion(rdfs:label <https://nfdi4culture.de/id/E3095> "Etienne Posthumus")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7069-9804> "Harald Sack")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-1648-1684> "Tabea Tietz")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-8501-6700> "Oleksandra Bruns")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-0006-7542> "Etienne Posthumus")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-9618-6740> "Dilek Yargan")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-3092-0532> "Hossein Beygi Nasrabadi")
 )
