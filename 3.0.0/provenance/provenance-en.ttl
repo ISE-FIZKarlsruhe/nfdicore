@@ -1,0 +1,22 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://nfdi.fiz-karlsruhe.de/ontology/3.0.0> a prov:Entity;
+	 dc:title "NFDIcore Ontology";
+	 prov:wasAttributedTo <https://nfdi4culture.de/id/E1925>;
+	 dc:creator <https://nfdi4culture.de/id/E1925>;
+	 prov:wasAttributedTo <https://nfdi4culture.de/id/E2415>;
+	 dc:creator <https://nfdi4culture.de/id/E2415>;
+	 prov:wasAttributedTo <https://nfdi4culture.de/id/E2416>;
+	 dc:creator <https://nfdi4culture.de/id/E2416>;
+	 prov:wasAttributedTo <https://nfdi4culture.de/id/E3095>;
+	 dc:creator <https://nfdi4culture.de/id/E3095>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-7192-7143>;
+	 dc:creator <https://orcid.org/0000-0001-7192-7143>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-3092-0532>;
+	 dc:creator <https://orcid.org/0000-0002-3092-0532>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <https://nfdi.fiz-karlsruhe.de/ontology/2.1.0>;
+	 prov:wasGeneratedAt "2025-02-07";
+.

@@ -1,0 +1,2145 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "de", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "https://nfdi.fiz-karlsruhe.de/ontology", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "undefined" : "NFDIcore Ontology"
+    },
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "version" : "v1.1.1-alpha1",
+    "author" : [ "https://nfdi4culture.de/id/E1925", "https://nfdi4culture.de/id/E3095", "https://orcid.org/0000-0001-7192-7143", "https://nfdi4culture.de/id/E2416", "https://nfdi4culture.de/id/E2415" ],
+    "labels" : {
+      "undefined" : "NFDIcore"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0001-7192-7143",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://nfdi4culture.de/id/E1925",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://nfdi4culture.de/id/E3095",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://nfdi4culture.de/id/E2416",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://nfdi4culture.de/id/E2415",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2024-03-08",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "https://nfdi.fiz-karlsruhe.de/ontology/nfdi",
+        "type" : "iri"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file. \n                                          Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues.\n                                          ",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://nfdi.fiz-karlsruhe.de/ontology/",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v1.1.1-alpha1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "NFDIcore Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "121",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "75",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "122",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "114",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "99",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/City",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Berlin, Hannover, Kyiv",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "city"
+    },
+    "comment" : {
+      "en" : "A city or a town where the thing is located."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource",
+      "en" : "resource"
+    },
+    "subClasses" : [ "51", "45", "66", "67", "59", "54", "42" ],
+    "comment" : {
+      "en" : "The most generic kind of a resource and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://schema.org/CreativeWork",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CreativeWork"
+    },
+    "subClasses" : [ "64", "44" ],
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Collection",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "RISM catalogue of musical sources",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Collection",
+      "en" : "collection"
+    },
+    "comment" : {
+      "en" : "A tangible collection of valuables published or curated by an organization or a person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "54",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "6",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Development of a controlled vocabulary for audivisual material in publication and research data; Extension of the AAT vocabulary for the history of architecture",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DevelopmentWork",
+      "en" : "development work"
+    },
+    "comment" : {
+      "en" : "A resource that identifies an ongoing development of standards, services, data models, vocabularies, ontologies, etc."
+    },
+    "attributes" : [ "external" ],
+    "id" : "84"
+  }, {
+    "instances" : 0,
+    "union" : [ "85", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Software",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Edirom, Muscat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Software",
+      "en" : "software"
+    },
+    "comment" : {
+      "en" : "A computer software provided by an organization or a person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "67",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Standard",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "ISO 15511, DINI-Zertifikat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Standard",
+      "en" : "standard"
+    },
+    "comment" : {
+      "en" : "An international standard and norm that can be used to evaluate or create a resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "24",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "http://schema.org/Intangible",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Intangible"
+    },
+    "subClasses" : [ "41" ],
+    "attributes" : [ "external" ],
+    "id" : "42",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://schema.org/Product",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Product"
+    },
+    "subClasses" : [ "50" ],
+    "attributes" : [ "external" ],
+    "id" : "51",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Service",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Data curation for HeiDATA, Expertise for the development and application of LIDO",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Service",
+      "en" : "service"
+    },
+    "comment" : {
+      "en" : "A service, expertise or skill provided by an organization or a person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "controlled vocabulary, ontology, taxonomy",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SemanticExpressivity",
+      "en" : "semantic expressivity"
+    },
+    "individuals" : [ {
+      "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus",
+      "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+      "comment" : {
+        "en" : "A structured list of terms and relations between the terms, as e.g. broader/narrower."
+      },
+      "labels" : {
+        "IRI-based" : "Thesaurus",
+        "en" : "thesaurus"
+      }
+    }, {
+      "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy",
+      "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+      "comment" : {
+        "en" : "A data model in a class hierarchy, where all concepts inherit their behaviour from the super-class concept. Taxonomies can be strict or non strict and can contain instances."
+      },
+      "labels" : {
+        "IRI-based" : "Taxonomy",
+        "en" : "taxonomy"
+      }
+    }, {
+      "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Glossary",
+      "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+      "comment" : {
+        "en" : "A list of terms and their with natural language definitions."
+      },
+      "labels" : {
+        "IRI-based" : "Glossary",
+        "en" : "glossary"
+      }
+    }, {
+      "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary",
+      "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+      "comment" : {
+        "en" : "A list of terms, natural language definitions and naming conventions. In comparisson to a glossary, there is a dedicated curation mechanism for new terms in a controlled vocabulary."
+      },
+      "labels" : {
+        "IRI-based" : "ControlledVocabulary",
+        "en" : "controlled vocabulary"
+      }
+    }, {
+      "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Ontology",
+      "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+      "comment" : {
+        "en" : "A complete, machine-readable specification of a conceptualization using URIs (and then IRIs) for all elements, properties and relationship types."
+      },
+      "labels" : {
+        "IRI-based" : "Ontology",
+        "en" : "ontology"
+      }
+    } ],
+    "comment" : {
+      "en" : "An entity that identifies the level of the semantic expressivity of a resource. Five instances are now included in nfdicore."
+    },
+    "attributes" : [ "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/MediaType",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MediaType",
+      "en" : "media type"
+    },
+    "subClasses" : [ "47" ],
+    "comment" : {
+      "en" : "A digital resource format or physical medium."
+    },
+    "attributes" : [ "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/FederalState",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "de",
+        "value" : "Sachsen, Berlin",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FederalState",
+      "en" : "federal state"
+    },
+    "comment" : {
+      "en" : "A federal state where the thing is located."
+    },
+    "attributes" : [ "external" ],
+    "id" : "28",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/ServiceType",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Expertise, advertisement, curation",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceType",
+      "en" : "service type"
+    },
+    "comment" : {
+      "en" : "A resource that identifies the type of a service."
+    },
+    "attributes" : [ "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Person",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "person"
+    },
+    "comment" : {
+      "en" : "A resource that represents a single person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MIME-Type",
+      "en" : "MIME-type"
+    },
+    "comment" : {
+      "en" : "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"
+    },
+    "attributes" : [ "external" ],
+    "id" : "47",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Country",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "en" : "country"
+    },
+    "comment" : {
+      "en" : "A country where the thing is located."
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Publication",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Publication",
+      "en" : "publication"
+    },
+    "comment" : {
+      "en" : "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."
+    },
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Project",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Freischütz digital, Corpus Vitrearum Medii Aevi",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Project",
+      "en" : "project"
+    },
+    "comment" : {
+      "en" : "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/License",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "cc-by-3, Digital Peer Publishing Lizenz",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "License",
+      "en" : "license"
+    },
+    "comment" : {
+      "en" : "A document that provides legal guidelines for the use of a resource, e.g. a software."
+    },
+    "attributes" : [ "external" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/DataPortal",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Bach digital, KultSam, MusiXplora",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataPortal",
+      "en" : "data portal"
+    },
+    "comment" : {
+      "en" : "An online platform that provides access to datasets."
+    },
+    "attributes" : [ "external" ],
+    "id" : "112",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Website",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "https:\\/\\/opac.rism.info",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Website",
+      "en" : "website"
+    },
+    "comment" : {
+      "en" : "A collection of webpages contributed by an organization or a person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Place",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Hessen, Berlin, Schweiz",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Place",
+      "en" : "place"
+    },
+    "subClasses" : [ "35", "28", "9" ],
+    "comment" : {
+      "en" : "A spatial region, e.g. country, city or district."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/ObjectType",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "book, photograph, music sheet",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ObjectType",
+      "en" : "object type"
+    },
+    "comment" : {
+      "en" : "A resource that identifies the type of object in a data set or collection."
+    },
+    "attributes" : [ "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Univerity Library in Leipzig, Museums of City Cologne",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "organization"
+    },
+    "subClasses" : [ "109" ],
+    "comment" : {
+      "en" : "An organization of some kind, e.g. research organization or business organization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "instances" : 0,
+    "union" : [ "28", "9" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "56"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "31"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "121"
+  }, {
+    "instances" : 0,
+    "union" : [ "64", "54" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "37"
+  }, {
+    "instances" : 0,
+    "union" : [ "85", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "75"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "122"
+  }, {
+    "instances" : 0,
+    "union" : [ "64", "112" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Consortium",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "NFDI4Culture, NFDI-MatWerk, DataPLANT.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Consortium",
+      "en" : "consortium"
+    },
+    "comment" : {
+      "en" : "NFDI consortia grouped by a discipline based in a science-led process managed by the German Research Foundation (DFG)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "109",
+    "superClasses" : [ "12" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "85", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Specification",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "RDF, SPARQL, Federation",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Specification",
+      "en" : "specification"
+    },
+    "subClasses" : [ "24" ],
+    "comment" : {
+      "en" : "A set of requirements, guidelines, standards contributed by an organization or a person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "51" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "85", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "117"
+  }, {
+    "instances" : 0,
+    "union" : [ "85", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProvidedResource",
+      "en" : "provided resource"
+    },
+    "comment" : {
+      "en" : "A resource that identifies a resource provided to the NFDI."
+    },
+    "attributes" : [ "external" ],
+    "id" : "66",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Java, Ruby, C++, Perl, PHP",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProgrammingLanguage",
+      "en" : "programming language"
+    },
+    "comment" : {
+      "en" : "A formal language used for implementing a software."
+    },
+    "attributes" : [ "external" ],
+    "id" : "96",
+    "superClasses" : [ "105" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/Dataset",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset",
+      "en" : "dataset"
+    },
+    "comment" : {
+      "en" : "A dataset is associated with a structured information about a resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://schema.org/Service",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Service"
+    },
+    "subClasses" : [ "112", "19" ],
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Architecture, Art History, Musicology, Media Studies, Performing Arts",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q12271",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AcademicDiscipline",
+      "en" : "academic discipline"
+    },
+    "comment" : {
+      "en" : "An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Groovy on Grails, Angular",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TechnologicalMeans",
+      "en" : "technological means"
+    },
+    "subClasses" : [ "96" ],
+    "comment" : {
+      "en" : "A technology, e.g. a web application or a programming framework used in a resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "105"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "120",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingProject",
+    "inverse" : "3",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "fundingProject",
+      "en" : "funding project"
+    },
+    "superproperty" : [ "4" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property relateds a resource to the project that provided funding for it."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/instanceOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "instanceOf",
+      "en" : "instance of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/softwareOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "softwareOf",
+      "en" : "software of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "7"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization",
+    "inverse" : "13",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "parentOrganization",
+      "en" : "parent organization"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "The property is a parental relationship between organizations."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/emailAddress",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "emailAddress",
+      "en" : "email address"
+    },
+    "domain" : "15",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/locationOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "locationOf",
+      "en" : "location of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/serviceType",
+    "inverse" : "21",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "serviceType",
+      "en" : "service type"
+    },
+    "domain" : "19",
+    "comment" : {
+      "undefined" : "The property relates a service to its type."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/publisherOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "publisherOf",
+      "en" : "publisher of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/standard",
+    "inverse" : "25",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "standard",
+      "en" : "standard"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property relates a resource to the standard it relies on."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "federalStateOf",
+      "en" : "federal state of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "26"
+  }, {
+    "range" : "10",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint",
+    "inverse" : "30",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "sparqlEndpoint",
+      "en" : "sparql endpoint"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property relates a data resource to its SPARQL Endpoint. "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/funder",
+    "inverse" : "32",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "funder",
+      "en" : "funder"
+    },
+    "domain" : "6",
+    "subproperty" : [ "0", "33" ],
+    "comment" : {
+      "en" : "The property relates thing to an organization or a project that provided funding for it. The subproperties are used to specify more specific funding relationships. "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "4"
+  }, {
+    "range" : "10",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/objectType",
+    "inverse" : "39",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "objectType",
+      "en" : "object type"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "The property relates a collection or a data set to the type of object it contains. "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "36"
+  }, {
+    "range" : "42",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "range" : "48",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "51",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/instance",
+    "inverse" : "5",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "instance",
+      "en" : "instance"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "The property is a relationship between a service and its running instance."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "52"
+  }, {
+    "range" : "1",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/country",
+    "inverse" : "57",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "country",
+      "en" : "country"
+    },
+    "domain" : "56",
+    "comment" : {
+      "en" : "The property relates a city or a state to a country where it is located."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/countryOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "countryOf",
+      "en" : "country of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "57"
+  }, {
+    "range" : "1",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity",
+    "inverse" : "62",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "semanticExpressivity",
+      "en" : "semantic expressivity"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property relates a resource to its semantic expressivity spectrum."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "60"
+  }, {
+    "range" : "45",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "range" : "1",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "semanticExpressivityOf",
+      "en" : "semantic expressivity of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/areaCode",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "areaCode",
+      "en" : "area code"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/mediaType",
+    "inverse" : "71",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "mediaType",
+      "en" : "media type"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property relates a resource to its data format."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/federalState",
+    "inverse" : "26",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "federalState",
+      "en" : "federal state"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "The property relates a city to a federal state where it is located."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "partnerOrganization",
+      "en" : "partner organization"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "The property is a partner relationship between organizations. The property is symmetric."
+    },
+    "attributes" : [ "object", "external", "symmetric" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/publisher",
+    "inverse" : "22",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "publisher",
+      "en" : "publisher"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property is a relationship between a resource and an organization or a person responsible for publishing it."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "74"
+  }, {
+    "range" : "1",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/exportFormat",
+    "inverse" : "78",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "exportFormat",
+      "en" : "export format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property relates a resource to the format available for the export of a resource."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "77"
+  }, {
+    "range" : "1",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "79"
+  }, {
+    "range" : "1",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "1",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "representedCollectionOf",
+      "en" : "represented collection of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/license",
+    "inverse" : "89",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "license",
+      "en" : "license"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The property is a relationship between a resource and a license file."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/funderOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "funderOf",
+      "en" : "funder of"
+    },
+    "domain" : "6",
+    "subproperty" : [ "3", "90" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/subjectArea",
+    "inverse" : "94",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "subjectArea",
+      "en" : "subject area"
+    },
+    "domain" : "92",
+    "comment" : {
+      "en" : "The property is a relationship between a resource and its academic discipline, subject area or domain."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage",
+    "inverse" : "97",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "programmingLanguage",
+      "en" : "programming language"
+    },
+    "domain" : "67",
+    "comment" : {
+      "undefined" : "The property links software to a programming language its written in."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "subsidiaryOrganization",
+      "en" : "subsidiary organization"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/contributor",
+    "inverse" : "100",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "contributor",
+      "en" : "contributor"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property related a resource to a person or an organization responsible for making contributions to a resource."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "bestPracticeOf",
+      "en" : "best practice of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/technologyOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "technologyOf",
+      "en" : "technology of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "fundingProjectOf",
+      "en" : "funding project of"
+    },
+    "superproperty" : [ "32" ],
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/location",
+    "inverse" : "17",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "location",
+      "en" : "location"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "The property is a relationship between a thing and a place its located at. "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/technology",
+    "inverse" : "102",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "105",
+    "label" : {
+      "IRI-based" : "technology",
+      "en" : "technology"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property is a relationship between a resource and a technology it uses. "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "104"
+  }, {
+    "range" : "105",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "106"
+  }, {
+    "range" : "50",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "107"
+  }, {
+    "range" : "12",
+    "domain" : "109",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "range" : "41",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "range" : "41",
+    "domain" : "112",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/representedCollection",
+    "inverse" : "86",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "representedCollection",
+      "en" : "represented collection"
+    },
+    "domain" : "114",
+    "comment" : {
+      "en" : "The property is a relationship between a dataset and a collection it represents."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "contactPointOf",
+      "en" : "contact point of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/licenseOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "licenseOf",
+      "en" : "license of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/contactPoint",
+    "inverse" : "115",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "contactPoint",
+      "en" : "contact point"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property is a relationship between a resource and a contact point."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/specification",
+    "inverse" : "119",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "specification",
+      "en" : "specification"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property is a relationship between a resource and the international standard or norm."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "118"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/standardOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "standardOf",
+      "en" : "standard of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "sparqlEndpointOf",
+      "en" : "sparql endpoint of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/software",
+    "inverse" : "7",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "software",
+      "en" : "software"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property is a relationship between a resource and a software it uses."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "120"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "programmingLanguageOf",
+      "en" : "programming language of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "mediaTypeOf",
+      "en" : "media type of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "subjectAreaOf",
+      "en" : "subject area of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "objectTypeOf",
+      "en" : "object type of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "exportFormatOf",
+      "en" : "export format of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization",
+    "inverse" : "90",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "fundingOrganization",
+      "en" : "funding organization"
+    },
+    "superproperty" : [ "4" ],
+    "domain" : "121",
+    "comment" : {
+      "en" : "The property relates a resource or a project to the organization that provided funding for it."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/url",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "url",
+      "en" : "url"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "URL of a thing"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "serviceTypeOf",
+      "en" : "service type of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/fileExtension",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "83",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "txt",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "mp4",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "ttl",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "xml",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fileExtension",
+      "undefined" : "file extension"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/relatedProject",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "relatedProject",
+      "en" : "related project"
+    },
+    "domain" : "122",
+    "comment" : {
+      "en" : "The property is a relationship between a project or a resource and related projects."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/specificationOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "specificationOf",
+      "en" : "specification of"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/contributorOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "contributorOf"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/bestPractice",
+    "inverse" : "101",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "bestPractice",
+      "en" : "best practice"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The property is a relationship between a resource and the best practice."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf",
+    "baseIri" : "https://nfdi.fiz-karlsruhe.de/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "fundingOrganizationOf",
+      "en" : "funding organization of"
+    },
+    "superproperty" : [ "32" ],
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "90"
+  } ]
+}

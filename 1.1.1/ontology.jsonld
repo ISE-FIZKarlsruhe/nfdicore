@@ -1,0 +1,1584 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Person"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Project"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Project"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Collection"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Dataset"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Person"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Project"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/DataPortal"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Dataset"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Person"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Person"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Person"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/City"
+    }, {
+      "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/FederalState"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/hasVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rdfs.org/ns/void#feature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/CreativeWork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ]
+}, {
+  "@id" : "http://schema.org/Intangible",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ]
+}, {
+  "@id" : "http://schema.org/Product",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ]
+}, {
+  "@id" : "http://schema.org/Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file. \n                                          Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues.\n                                          "
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2024-03-08"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://nfdi4culture.de/id/E1925"
+  }, {
+    "@id" : "https://nfdi4culture.de/id/E2415"
+  }, {
+    "@id" : "https://nfdi4culture.de/id/E2416"
+  }, {
+    "@id" : "https://nfdi4culture.de/id/E3095"
+  }, {
+    "@id" : "https://orcid.org/0000-0001-7192-7143"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "NFDIcore Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/nfdi"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NFDIcore"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/1.1.1"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.1.1-alpha1"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "academic discipline"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@id" : "https://www.wikidata.org/entity/Q12271"
+  }, {
+    "@language" : "en",
+    "@value" : "Architecture, Art History, Musicology, Media Studies, Performing Arts"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A city or a town where the thing is located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Place"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Berlin, Hannover, Kyiv"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Collection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tangible collection of valuables published or curated by an organization or a person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "RISM catalogue of musical sources"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Consortium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "NFDI consortia grouped by a discipline based in a science-led process managed by the German Research Foundation (DFG)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "consortium"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "NFDI4Culture, NFDI-MatWerk, DataPLANT."
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A list of terms, natural language definitions and naming conventions. In comparisson to a glossary, there is a dedicated curation mechanism for new terms in a controlled vocabulary."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "controlled vocabulary"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A country where the thing is located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Place"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/DataPortal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An online platform that provides access to datasets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "data portal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Service"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Bach digital, KultSam, MusiXplora"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A dataset is associated with a structured information about a resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A resource that identifies an ongoing development of standards, services, data models, vocabularies, ontologies, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "development work"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Development of a controlled vocabulary for audivisual material in publication and research data; Extension of the AAT vocabulary for the history of architecture"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/FederalState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A federal state where the thing is located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "federal state"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Place"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "de",
+    "@value" : "Sachsen, Berlin"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Glossary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A list of terms and their with natural language definitions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "glossary"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/License",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A document that provides legal guidelines for the use of a resource, e.g. a software."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "license"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "cc-by-3, Digital Peer Publishing Lizenz"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MIME-type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/MediaType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/MediaType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A digital resource format or physical medium."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "media type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/ObjectType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A resource that identifies the type of object in a data set or collection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "object type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "book, photograph, music sheet"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A complete, machine-readable specification of a conceptualization using URIs (and then IRIs) for all elements, properties and relationship types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ontology"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An organization of some kind, e.g. research organization or business organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "organization"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Univerity Library in Leipzig, Museums of City Cologne"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A resource that represents a single person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "person"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A spatial region, e.g. country, city or district."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "place"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Hessen, Berlin, Schweiz"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A formal language used for implementing a software."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "programming language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Java, Ruby, C++, Perl, PHP"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "project"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Freischütz digital, Corpus Vitrearum Medii Aevi"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A resource that identifies a resource provided to the NFDI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "provided resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Publication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The most generic kind of a resource and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "resource"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity that identifies the level of the semantic expressivity of a resource. Five instances are now included in nfdicore."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "semantic expressivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "controlled vocabulary, ontology, taxonomy"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A service, expertise or skill provided by an organization or a person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Service"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Data curation for HeiDATA, Expertise for the development and application of LIDO"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/ServiceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A resource that identifies the type of a service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "service type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Expertise, advertisement, curation"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Software",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A computer software provided by an organization or a person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "software"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Edirom, Muscat"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Specification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A set of requirements, guidelines, standards contributed by an organization or a person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "specification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Product"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "RDF, SPARQL, Federation"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Standard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An international standard and norm that can be used to evaluate or create a resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Specification"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "ISO 15511, DINI-Zertifikat"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A data model in a class hierarchy, where all concepts inherit their behaviour from the super-class concept. Taxonomies can be strict or non strict and can contain instances."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "taxonomy"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A technology, e.g. a web application or a programming framework used in a resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "technological means"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Groovy on Grails, Angular"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A structured list of terms and relations between the terms, as e.g. broader/narrower."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "thesaurus"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Website",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A collection of webpages contributed by an organization or a person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "website"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "https:\\/\\/opac.rism.info"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/acronym",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "nfdicore:acronym"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/areaCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "area code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/bestPractice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a resource and the best practice."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "best practice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Specification"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "best practice of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/contactPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a resource and a contact point."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contact point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contact point of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property related a resource to a person or an organization responsible for making contributions to a resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contributor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/contributorOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/contributorOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a city or a state to a country where it is located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Country"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/countryOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/countryOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "country of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/emailAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid31"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "email address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/exportFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a resource to the format available for the export of a resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "export format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/MediaType"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "export format of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/federalState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a city to a federal state where it is located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "federal state"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/FederalState"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "federal state of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/fileExtension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "file extension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "mp4"
+  }, {
+    "@value" : "ttl"
+  }, {
+    "@value" : "txt"
+  }, {
+    "@value" : "xml"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/funder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates thing to an organization or a project that provided funding for it. The subproperties are used to specify more specific funding relationships. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/funderOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/funderOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funder of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a resource or a project to the organization that provided funding for it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funding organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/funder"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funding organization of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/funderOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingProject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relateds a resource to the project that provided funding for it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funding project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/funder"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funding project of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/funderOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/instance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a service and its running instance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "instance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Service"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/instanceOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/instanceOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "instance of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The property is a relationship between a resource and a license file."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "license"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/License"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/licenseOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/licenseOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "license of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a thing and a place its located at. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Place"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/locationOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/locationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "location of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/mediaType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a resource to its data format."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "media type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/MediaType"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "media type of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/objectType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a collection or a data set to the type of object it contains. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid16"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "object type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/ObjectType"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "object type of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a parental relationship between organizations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "parent organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a partner relationship between organizations. The property is symmetric."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "partner organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Organization"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The property links software to a programming language its written in."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Software"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "programming language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "programming language of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a resource and an organization or a person responsible for publishing it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid19"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/publisherOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/publisherOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "publisher of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/relatedProject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a project or a resource and related projects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid22"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Project"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/representedCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a dataset and a collection it represents."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid25"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "represented collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Collection"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "represented collection of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a resource to its semantic expressivity spectrum."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "semantic expressivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "semantic expressivity of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/serviceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The property relates a service to its type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "service type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/ServiceType"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "service type of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/software",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a resource and a software it uses."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "software"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Software"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/softwareOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/softwareOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "software of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a data resource to its SPARQL Endpoint. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "sparql endpoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "sparql endpoint of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/specification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a resource and the international standard or norm."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "specification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Specification"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/specificationOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/specificationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "specification of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/standard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relates a resource to the standard it relies on."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Standard"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/standardOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/standardOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "standard of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/subjectArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a resource and its academic discipline, subject area or domain."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid28"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "subject area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "subject area of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "subsidiary organization"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/technology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property is a relationship between a resource and a technology it uses. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "technology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/technologyOf"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/technologyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "technology of"
+  } ]
+}, {
+  "@id" : "https://nfdi.fiz-karlsruhe.de/ontology/url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "URL of a thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "url"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://nfdi4culture.de/id/E1925",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Harald Sack"
+  } ]
+}, {
+  "@id" : "https://nfdi4culture.de/id/E2415",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tabea Tietz"
+  } ]
+}, {
+  "@id" : "https://nfdi4culture.de/id/E2416",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Oleksandra Bruns"
+  } ]
+}, {
+  "@id" : "https://nfdi4culture.de/id/E3095",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Etienne Posthumus"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0001-7192-7143",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Jörg Waitelonis"
+  } ]
+} ]
