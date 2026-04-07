@@ -1,0 +1,17 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ex:    <http://example.org/> .
+
+#
+#  Example: A publication (textual entity) that is about a dataset.
+#
+
+ex:publication_1
+    a <http://purl.obolibrary.org/obo/IAO_0000300> ;        # Textual Entity
+    rdfs:label "A paper on materials fatigue" ;
+    <http://purl.obolibrary.org/obo/IAO_0000136> ex:dataset_1 .  # is about
+
+ex:dataset_1
+    a <http://purl.obolibrary.org/obo/IAO_0000100> ;        # Data Set
+    rdfs:label "Fatigue test results dataset" .

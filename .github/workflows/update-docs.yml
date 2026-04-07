@@ -26,7 +26,8 @@ jobs:
            cp -r public 3.0.4
            mv 3.0.4 public/
 
-           pip install mkdocs
+           # Install mkdocs with ontoink plugin
+           pip install mkdocs ontoink
            cd main
            mkdocs build -f mkdocs.yaml
 

@@ -1,0 +1,22 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+
+#
+#  A "role" (BFO_0000023) must always be "realized in" (BFO_0000054) some process.
+#  This is a weaker constraint than RoleBearerShape — it only requires realization,
+#  not a bearer.
+#
+
+nfdicore:RoleRealizationShape
+    a sh:NodeShape ;
+    sh:targetClass <http://purl.obolibrary.org/obo/BFO_0000023> ;    # Role
+    sh:property [
+        sh:path <http://purl.obolibrary.org/obo/BFO_0000054> ;       # realized_in
+        sh:minCount 1 ;
+        sh:message "A 'role' (BFO_0000023) must always be 'realized in' (BFO_0000054) some process."
+    ] ;
+    .

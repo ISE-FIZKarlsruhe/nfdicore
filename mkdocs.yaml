@@ -6,13 +6,20 @@ nav:
   - Introduction: intro.md
   - Ontology: ontology.md
   - Patterns: patterns.md
+  - Shapes:
+    - Overview: shapes/index.md
+    - Textual Entity: shapes/textual-entity/pattern.md
+    - Role Bearer: shapes/role-bearer/pattern.md
+    - Role Realization: shapes/role-realization/pattern.md
   - Versions: versions.md
-  - Modular Extensions: extensions.md 
+  - Modular Extensions: extensions.md
   #- Competency Questions: questions.md
   - Contributing: contributing.md
   - Contact: contact.md
 
-
+plugins:
+  - search
+  - ontoink
 
 markdown_extensions:
   - pymdownx.superfences:

@@ -1,0 +1,20 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+
+#
+#  A "textual entity" (IAO_0000300) must always "be about" (IAO_0000136) something.
+#
+
+nfdicore:TextualEntityShape
+    a sh:NodeShape ;
+    sh:targetClass <http://purl.obolibrary.org/obo/IAO_0000300> ;    # Textual Entity
+    sh:property [
+        sh:path <http://purl.obolibrary.org/obo/IAO_0000136> ;       # is about
+        sh:minCount 1 ;
+        sh:message "A 'textual entity' (IAO_0000300) must always 'be about' (IAO_0000136) something."
+    ] ;
+    .

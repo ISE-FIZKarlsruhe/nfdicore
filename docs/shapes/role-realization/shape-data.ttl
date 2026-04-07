@@ -1,0 +1,17 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ex:    <http://example.org/> .
+
+#
+#  Example: A publisher role realized in a publishing process.
+#
+
+ex:publisher_role_1
+    a <http://purl.obolibrary.org/obo/BFO_0000023> ;                # Role
+    a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193> ;       # publisher role
+    <http://purl.obolibrary.org/obo/BFO_0000054> ex:publishing_process_1 .  # realized_in
+
+ex:publishing_process_1
+    a <http://purl.obolibrary.org/obo/BFO_0000015> ;                # Process
+    rdfs:label "Dataset publishing process" .
