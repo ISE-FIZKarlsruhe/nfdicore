@@ -24,6 +24,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000033>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000088>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000098>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000100>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000104>))
@@ -471,12 +472,11 @@ AnnotationAssertion(rdfs:comment :NFDI_0000011 "A realizable entity that represe
 AnnotationAssertion(rdfs:label :NFDI_0000011 "obsolete plan"@en)
 AnnotationAssertion(owl:deprecated :NFDI_0000011 "true"^^xsd:boolean)
 
-# Class: :NFDI_0000014 (publishing process)
+# Class: :NFDI_0000014 (obsolete publishing process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000014 "http://purl.obolibrary.org/obo/IAO_0000444")
 AnnotationAssertion(rdfs:comment :NFDI_0000014 "A process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000014 "publishing process"@en)
-SubClassOf(:NFDI_0000014 <http://purl.obolibrary.org/obo/BFO_0000015>)
+AnnotationAssertion(rdfs:label :NFDI_0000014 "obsolete publishing process"@en)
 
 # Class: :NFDI_0000015 (obsolete identifier)
 
@@ -524,13 +524,12 @@ AnnotationAssertion(owl:deprecated :NFDI_0000021 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000021 "A workflow defines the logical order and dependencies of steps, the roles or entities responsible for each step, and the inputs and outputs required for and produced by each task. It is a realizable entity that can be enacted or executed within a defined context, such as a business process, computational framework, or organizational procedure.")
 AnnotationAssertion(:NFDI_0010013 :NFDI_0000021 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/125")
 
-# Class: :NFDI_0000022 (document)
+# Class: :NFDI_0000022 (obsolete document)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> :NFDI_0000022 "A journal article, patent application, laboratory notebook, or a book")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000022 "http://purl.obolibrary.org/obo/IAO_0000310")
 AnnotationAssertion(rdfs:comment :NFDI_0000022 "A collection of information content entities intended to be understood together as a whole"@en)
-AnnotationAssertion(rdfs:label :NFDI_0000022 "document"@en)
-SubClassOf(:NFDI_0000022 <http://purl.obolibrary.org/obo/IAO_0000030>)
+AnnotationAssertion(rdfs:label :NFDI_0000022 "obsolete document"@en)
 
 # Class: :NFDI_0000023 (ontology)
 
@@ -564,12 +563,11 @@ AnnotationAssertion(rdfs:comment :NFDI_0000027 "A file data item is a data item 
 AnnotationAssertion(rdfs:label :NFDI_0000027 "file data item"@en)
 SubClassOf(:NFDI_0000027 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000027> ObjectSomeValuesFrom(:NFDI_0000226 <http://purl.obolibrary.org/obo/IAO_0000098>)))
 
-# Class: :NFDI_0000029 (report)
+# Class: :NFDI_0000029 (obsolete report)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000029 "A document that conveys information, data, or findings, typically structured in a formal or semi-formal manner, to communicate the results of an analysis, investigation, observation, or activity.")
-AnnotationAssertion(rdfs:label :NFDI_0000029 "report"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000029 "obsolete report"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000029 "A report is created with the intent of informing specific audiences and may include textual descriptions, visualizations, metrics, or conclusions. It is a realizable entity that is produced and maintained as part of a process or workflow.")
-SubClassOf(:NFDI_0000029 :NFDI_0000022)
 
 # Class: :NFDI_0000030 (source code repository)
 
@@ -749,13 +747,12 @@ AnnotationAssertion(owl:deprecated :NFDI_0000186 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000186 "A formal language used for implementing a software."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000186 "Java, Ruby, C++, Perl, PHP")
 
-# Class: :NFDI_0000190 (publication)
+# Class: :NFDI_0000190 (obsolete publication)
 
 AnnotationAssertion(rdfs:comment :NFDI_0000190 "A publication that is the output of a publishing process and a creative process."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000190 "publication"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000190 "obsolete publication"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000190 "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000190 "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten")
-SubClassOf(:NFDI_0000190 :NFDI_0000022)
 
 # Class: :NFDI_0000193 (publisher role)
 
@@ -1373,7 +1370,7 @@ SubClassOf(:NFDI_0001106 :NFDI_0000190)
 AnnotationAssertion(rdfs:comment :NFDI_0001200 "An Interim Report is a report that provides a temporary or progress-based assessment of an ongoing project, research, or operational activity, documenting current findings, challenges, and future directions before the final report is completed.")
 AnnotationAssertion(rdfs:label :NFDI_0001200 "interim report"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001200 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119")
-SubClassOf(:NFDI_0001200 :NFDI_0000029)
+SubClassOf(:NFDI_0001200 <http://purl.obolibrary.org/obo/IAO_0000088>)
 
 # Class: :NFDI_0001201 (research data repository)
 

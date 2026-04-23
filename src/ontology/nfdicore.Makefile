@@ -93,6 +93,8 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
 		extract -T $(IMPORTDIR)/iao_terms.txt --copy-ontology-annotations false --force true --individuals exclude --method STAR \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		remove --select "RO:*" \
+		remove --select "COB:*" \
+		remove --select "APOLLO_SV:*" \
 		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        --term-file $(IMPORTDIR)/iao_terms.txt  \
 		        --select complement --select annotation-properties \
