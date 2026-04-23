@@ -25,7 +25,7 @@ import_group:
       module_type: custom
     - id: iao
       module_type: custom
-      mirror_from: http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl
+      #mirror_from: http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl
 #    - id: schema
 #      mirror_from:  "https://raw.githubusercontent.com/schemaorg/schemaorg/refs/tags/v28.0-release/data/releases/28.0/schemaorg.owl"
 #      module_type: custom
@@ -33,11 +33,11 @@ import_group:
       mirror_from: "https://raw.githubusercontent.com/allysonlister/swo/master/swo.owl"
       module_type: custom
     - id: obi
-      mirror_from: https://raw.githubusercontent.com/obi-ontology/obi/refs/tags/v2025-12-18/views/obi-base.owl
+      #mirror_from: https://raw.githubusercontent.com/obi-ontology/obi/refs/tags/v2025-12-18/views/obi-base.owl
       module_type: slme
       module_type_slme: BOT
       slme_individuals: exclude
-      #use_base: true
+      use_base: true
     - id: edam
       mirror_from: "https://edamontology.org/EDAM_1.25.owl"
       module_type: custom
