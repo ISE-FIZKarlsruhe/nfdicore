@@ -1,4 +1,4 @@
-Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/imports/iao_import.owl#>)
+Prefix(:=<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,9 +6,9 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/imports/iao_import.owl>
-<https://nfdi.fiz-karlsruhe.de/ontology/3.0.4/imports/iao_import.owl>
-Annotation(owl:versionInfo "3.0.4")
+Ontology(<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/imports/iao_import.owl>
+<https://nfdi.fiz-karlsruhe.de/ontology/nfdicore/releases/2026-04-23/imports/iao_import.owl>
+Annotation(owl:versionInfo "2026-04-23")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -29,6 +29,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000098>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000100>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000102>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000104>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000129>))
@@ -49,6 +50,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000605>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000608>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000640>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000708>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020015>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020016>))
@@ -121,7 +123,7 @@ We don't have definitions of 'meaning' or 'expression' or 'property'. For 'refer
 
 Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
 
-We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  "@en)
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000115> "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition"@en)
 
@@ -396,10 +398,10 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000025> "programming language"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000025> <http://purl.obolibrary.org/obo/IAO_0000104>)
 
-# Class: <http://purl.obolibrary.org/obo/IAO_0000027> (data item)
+# Class: <http://purl.obolibrary.org/obo/IAO_0000027> (data entity)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/IAO_0000027> "Data items include counts of things, analyte concentrations, and statistical summaries."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000027> "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000027> "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000027> "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000027> "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000027> "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym."@en)
@@ -412,7 +414,8 @@ defer to Barry, or to Brian Cantwell Smith
 JAR: A data item is an approximately justified approximately true approximate belief"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000027> "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0000027> "data"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000027> "data item"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0000027> "data item"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000027> "data entity"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000027> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000028> (symbol)
@@ -472,6 +475,17 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000098> "OBI_0000187"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000098> "data format specification"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000098> <http://purl.obolibrary.org/obo/IAO_0000033>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000100> (homogenous data collection)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/IAO_0000100> "Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves)."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000100> "A data item that is an aggregate of other data items of the same type that have something in common. Averages and distributions can be determined for data sets."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000100> "2009/10/23 Alan Ruttenberg. The intention is that this term represent collections of like data. So this isn't for, e.g. the whole contents of a cel file, which includes parameters, metadata etc. This is more like java arrays of a certain rather specific type"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000100> "2014-05-05: Data sets are aggregates and thus must include two or more data items. We have chosen not to add logical axioms to make this restriction.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0000100> "data set"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000100> "group:OBI"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000100> "homogenous data collection"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000100> <http://purl.obolibrary.org/obo/IAO_0001000>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000102> (data about an ontology part)
 
@@ -655,6 +669,13 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000708> "ORCID identifier"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000708> <http://purl.obolibrary.org/obo/IAO_0000578>)
 
+# Class: <http://purl.obolibrary.org/obo/IAO_0001000> (data collection)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0001000> "A data entity that consists of multiple data entities."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0001000> "data set"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0001000> "data collection"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0001000> <http://purl.obolibrary.org/obo/IAO_0000027>)
+
 # Class: <http://purl.obolibrary.org/obo/IAO_0020000> (identifier)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020000> "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en)
@@ -742,7 +763,8 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000002> "exa
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000103> (failed exploratory term)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000103> "The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000103> "The term was initially used in an attempt to structure part of the ontology, but in retrospect failed to do a good job."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000103> "Terms created as placeholders with the expectation of being permanent should instead be deprecated using the \"placeholder removed\" (obo:IAO_0000226) justification."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000103> "failed exploratory term"@en)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000120> (metadata complete)
@@ -752,7 +774,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000120> "met
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000121> (organizational term)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000121> "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000121> "The term was created to ease viewing/sorting terms for development purposes, but will not be included in a release."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000121> "organizational term"@en)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000122> (ready for release)
@@ -777,21 +799,26 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000125> "pen
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000226> (placeholder removed)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000226> "The term was created to temporarily stand in for a semantic purpose, but is no longer needed, typically due to another permanent term being defined."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000226> "This reason is appropriate for a temporary term even if no permanent term is defined; for example if the need for the term no longer exists. If a permanent (replacement) term is defined, the deprecated term should reference the replacement with IAO:0100001. If no replacement is defined, it may be appropriate to reference alternative terms with oboInOwl:consider."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000226> "placeholder removed"@en)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000227> (terms merged)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000227> "An editor note should explain what were the merged terms and the reason for the merge."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000227> "The term has been combined with one or more other terms to create a more encompassing (merged) term."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000227> "The deprecated term should reference the merged term with obo:IAO_0100001. The replacement term should reference the original terms as sources using obo:RO_0001000 (derives_from). An editor note should explain what were the merged terms and the reason for the merge."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000227> "terms merged"@en)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000228> (term imported)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000228> "This is to be used when the original term has been replaced by a term imported from an other ontology. An editor note should indicate what is the URI of the new term to use."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000228> "The term has been replaced by a term imported from another ontology."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000228> "This is to be used when the original term has been replaced by a term imported from an other ontology. The deprecated term should reference the imported term with obo:IAO_0100001."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000228> "term imported"@en)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000229> (term split)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000229> "This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split and indicate the URIs of the new terms created."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000229> "The term has been split into two or more new terms."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000229> "This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split. The deprecated term should reference the replacement terms with obo:IAO_0100001."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000229> "term split"@en)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000410> (universal)
@@ -827,7 +854,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000428> "req
 # Individual: <http://purl.obolibrary.org/obo/OMO_0001000> (out of scope)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMO_0001000> "The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OMO_0001000> "This obsolesence reason should be used conservatively. Typical valid examples are: un-necessary grouping classes in disease ontologies, a phenotype term added on the assumption it was a disease."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OMO_0001000> "This obsolesence reason should be used conservatively. Typical valid examples in disease ontologies are: unnecessary class grouping; mistaked creation of a disease associated to a phenotype."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMO_0001000> "out of scope")
 
 
