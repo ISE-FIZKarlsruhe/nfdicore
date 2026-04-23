@@ -22,6 +22,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000031>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000034>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000010>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000028>))
@@ -46,6 +47,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000577>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000579>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000590>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000591>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000592>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000593>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000594>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000595>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000605>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000608>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000640>))
@@ -389,6 +395,15 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000007> "action specification"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000007> <http://purl.obolibrary.org/obo/IAO_0000033>)
 
+# Class: <http://purl.obolibrary.org/obo/IAO_0000010> (software)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000010> "Software is a plan specification composed of a series of instructions that can be 
+interpreted by or directly executed by a processing unit."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/IAO_0000010> "see sourceforge tracker discussion at http://sourceforge.net/tracker/index.php?func=detail&aid=1958818&group_id=177891&atid=886178"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000010> "GROUP: OBI"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000010> "software"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000010> <http://purl.obolibrary.org/obo/IAO_0000104>)
+
 # Class: <http://purl.obolibrary.org/obo/IAO_0000025> (programming language)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/IAO_0000025> "R, Perl, Java"@en)
@@ -626,6 +641,41 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000590> "https://github.com/information-artifact-ontology/IAO/issues/114"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000590> "written name"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000590> <http://purl.obolibrary.org/obo/IAO_0000300>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000591> (software method)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000591> "A software method (also called subroutine, subprogram, procedure, method, function, or routine) is software designed to execute a specific task."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000591> "https://github.com/information-artifact-ontology/IAO/issues/80"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000591> "software method"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000591> <http://purl.obolibrary.org/obo/IAO_0000010>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000592> (software module)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000592> "A software module is software composed of a collection of software methods."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000592> "https://github.com/information-artifact-ontology/IAO/issues/80"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000592> "software module"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000592> <http://purl.obolibrary.org/obo/IAO_0000010>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000593> (software library)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000593> "A software library is software composed of a collection of software modules and/or software methods in a form that can be statically or dynamically linked to some software application."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000593> "https://github.com/information-artifact-ontology/IAO/issues/80"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000593> "software library"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000593> <http://purl.obolibrary.org/obo/IAO_0000010>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000594> (software application)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000594> "A software application is software that can be directly executed by some processing unit."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000594> "https://github.com/information-artifact-ontology/IAO/issues/80"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000594> "software application"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000594> <http://purl.obolibrary.org/obo/IAO_0000010>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000595> (software script)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000595> "A software script is software whose instructions can be executed using a software interpreter."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000595> "https://github.com/information-artifact-ontology/IAO/issues/80"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000595> "software script"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000595> <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000605> (abbreviation textual entity)
 
