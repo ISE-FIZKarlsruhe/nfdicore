@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                ead9352553cf5cf2bc8f738276939a24708482dddc138684d03bc9c2b9168857
+CONFIG_HASH=                ed57d4e4d17576c36a189618b035013a4278f681304af7568b2c17d421cde992
 
 
 # ----------------------------------------
@@ -571,8 +571,7 @@ mirror-ro: | $(TMPDIR)
 .PHONY: mirror-iao
 .PRECIOUS: $(MIRRORDIR)/iao.owl
 mirror-iao: | $(TMPDIR)
-	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: swo
@@ -586,8 +585,7 @@ mirror-swo: | $(TMPDIR)
 .PHONY: mirror-obi
 .PRECIOUS: $(MIRRORDIR)/obi.owl
 mirror-obi: | $(TMPDIR)
-	curl -L $(OBOBASE)/obi/obi-base.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/obi-ontology/obi/refs/tags/v2025-12-18/views/obi-base.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: edam
