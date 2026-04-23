@@ -19,6 +19,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000029>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000141>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000010>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
@@ -664,7 +665,7 @@ SubClassOf(:NFDI_0000119 :NFDI_0000005)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000121 <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :NFDI_0000121 "Software that provides large amounts of structured data from repositories and archives to the user. Usually the data can be uploaded, accessed, searched and/or downloaded via a web browser."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000121 "database software"@en)
-SubClassOf(:NFDI_0000121 :NFDI_0000198)
+SubClassOf(:NFDI_0000121 <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :NFDI_0000122 (data curation service)
 
@@ -703,13 +704,14 @@ AnnotationAssertion(rdfs:comment :NFDI_0000139 "A role inherent in an organizati
 AnnotationAssertion(rdfs:label :NFDI_0000139 "funding organization role"@en)
 SubClassOf(:NFDI_0000139 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> <http://purl.obolibrary.org/obo/OBI_0000245>)))
 
-# Class: :NFDI_0000140 (software library)
+# Class: :NFDI_0000140 (obsolete software library)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000140 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0000140 <http://purl.obolibrary.org/obo/IAO_0000593>)
 AnnotationAssertion(rdfs:comment :NFDI_0000140 "Collection of pre-implemented functions for a specific task that can be accessed via a well-defined interface."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000140 "software library"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000140 "obsolete software library"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0000140 "http://purl.obolibrary.org/obo/IAO_0000593")
-SubClassOf(:NFDI_0000140 :NFDI_0000198)
+AnnotationAssertion(owl:deprecated :NFDI_0000140 "true"^^xsd:boolean)
 
 # Class: :NFDI_0000141 (obsolete license)
 
@@ -761,13 +763,14 @@ AnnotationAssertion(rdfs:comment :NFDI_0000193 "A role inherent in an agent that
 AnnotationAssertion(rdfs:label :NFDI_0000193 "publisher role"@en)
 SubClassOf(:NFDI_0000193 ObjectIntersectionOf(:NFDI_0000229 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> :NFDI_0000014)))
 
-# Class: :NFDI_0000198 (software)
+# Class: :NFDI_0000198 (obsolete software)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0000198 <http://purl.obolibrary.org/obo/IAO_0000010>)
 AnnotationAssertion(rdfs:comment :NFDI_0000198 "A plan specification that comprises a set of instructions, programs, or algorithms designed to perform specific tasks or functions on a computer or other electronic devices."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000198 "software"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000198 "obsolete software"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000198 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000198 "A computer software provided by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000198 "Edirom, Muscat")
-SubClassOf(:NFDI_0000198 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000104> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002353> :NFDI_0000224)))
 
 # Class: :NFDI_0000203 (specification)
 
@@ -808,13 +811,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000215 
 AnnotationAssertion(:NFDI_0000012 :NFDI_0000215 "TechnologicalMeans")
 SubClassOf(:NFDI_0000215 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
-# Class: :NFDI_0000218 (software application)
+# Class: :NFDI_0000218 (obsolete software application)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000218 <https://doi.org/10.5281/zenodo.10101412>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0000218 <http://purl.obolibrary.org/obo/IAO_0000594>)
 AnnotationAssertion(rdfs:comment :NFDI_0000218 "Software that can be downloaded and executed locally on the users' hardware."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000218 "software application"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000218 "obsolete software application"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0000218 "http://purl.obolibrary.org/obo/IAO_0000594")
-SubClassOf(:NFDI_0000218 :NFDI_0000198)
+AnnotationAssertion(owl:deprecated :NFDI_0000218 "true"^^xsd:boolean)
 
 # Class: :NFDI_0000219 (training service)
 
@@ -828,7 +832,7 @@ SubClassOf(:NFDI_0000219 :NFDI_0000101)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0000222 <https://doi.org/10.5281/zenodo.10101412>)
 AnnotationAssertion(rdfs:comment :NFDI_0000222 "Software that is installed on a server and can be used by users via a web page and the internet, for example Software-as-a-service (SaaS)."@en)
 AnnotationAssertion(rdfs:label :NFDI_0000222 "web application software"@en)
-SubClassOf(:NFDI_0000222 :NFDI_0000198)
+SubClassOf(:NFDI_0000222 <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :NFDI_0000223 (website)
 
@@ -1145,19 +1149,19 @@ SubClassOf(:NFDI_0001043 :NFDI_0000018)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001044 "Data Analysis Software is a subclass of Software designed to process, visualize, and interpret structured and unstructured data using statistical, machine learning, and computational techniques.")
 AnnotationAssertion(rdfs:label :NFDI_0001044 "data analysis software"@en)
-SubClassOf(:NFDI_0001044 :NFDI_0000198)
+SubClassOf(:NFDI_0001044 <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :NFDI_0001045 (electronic lab notebook)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001045 "An Electronic Lab Notebook (ELN) is a subclass of Software that provides a digital platform for recording, managing, and sharing experimental procedures, observations, and research data in scientific workflows.")
 AnnotationAssertion(rdfs:label :NFDI_0001045 "electronic lab notebook"@en)
-SubClassOf(:NFDI_0001045 :NFDI_0000198)
+SubClassOf(:NFDI_0001045 <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :NFDI_0001046 (image processing software)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001046 "Image Processing Software is a subclass of Software that enables the manipulation, enhancement, analysis, and visualization of images obtained from experimental, computational, or simulation-based sources.")
 AnnotationAssertion(rdfs:label :NFDI_0001046 "image processing software"@en)
-SubClassOf(:NFDI_0001046 :NFDI_0000198)
+SubClassOf(:NFDI_0001046 <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :NFDI_0001047 (operating system)
 
@@ -1165,20 +1169,20 @@ AnnotationAssertion(rdfs:comment :NFDI_0001047 "An Operating System (OS) is a so
 AnnotationAssertion(rdfs:label :NFDI_0001047 "operating system"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0001047 "Concerning the content of ‘Software’ datasheet and its related knowledge graph, the ‘Operating System’ class wase created to respond to competency questions like what operating systems are compatible with a specific software.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001047 "Windows, Linux, MacOS")
-SubClassOf(:NFDI_0001047 :NFDI_0000198)
+SubClassOf(:NFDI_0001047 <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :NFDI_0001048 (simulation software)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001048 "Simulation Software is a subclass of Software that facilitates the modeling and numerical simulation of physical, chemical, or computational systems to study behaviors, interactions, and performance under different conditions")
 AnnotationAssertion(rdfs:label :NFDI_0001048 "simulation software"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001048 "Examples include COMSOL Multiphysics, LAMMPS, Quantum ESPRESSO, and ANSYS.")
-SubClassOf(:NFDI_0001048 :NFDI_0000198)
+SubClassOf(:NFDI_0001048 <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :NFDI_0001049 (workflow management software)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001049 "Workflow Management Software is a subclass of Software that provides tools for designing, automating, executing, and monitoring scientific or computational workflows in research and engineering domains.")
 AnnotationAssertion(rdfs:label :NFDI_0001049 "workflow management software"@en)
-SubClassOf(:NFDI_0001049 :NFDI_0000198)
+SubClassOf(:NFDI_0001049 <http://purl.obolibrary.org/obo/IAO_0000010>)
 
 # Class: :NFDI_0001050 (event implementation specification)
 
@@ -1600,26 +1604,29 @@ AnnotationAssertion(rdfs:comment :NFDI_0010038 "A data handling process where da
 AnnotationAssertion(rdfs:label :NFDI_0010038 "data visualization process"@en)
 SubClassOf(:NFDI_0010038 :NFDI_0010028)
 
-# Class: :NFDI_0010039 (software method)
+# Class: :NFDI_0010039 (obsolete software method)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010039 "http://purl.obolibrary.org/obo/IAO_0000591")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0010039 <http://purl.obolibrary.org/obo/IAO_0000591>)
 AnnotationAssertion(rdfs:comment :NFDI_0010039 "A software method (also called subroutine, subprogram, procedure, method, function, or routine) is software designed to execute a specific task.")
-AnnotationAssertion(rdfs:label :NFDI_0010039 "software method"@en)
-SubClassOf(:NFDI_0010039 :NFDI_0000198)
+AnnotationAssertion(rdfs:label :NFDI_0010039 "obsolete software method"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0010039 "true"^^xsd:boolean)
 
-# Class: :NFDI_0010040 (software module)
+# Class: :NFDI_0010040 (obsolete software module)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010040 "http://purl.obolibrary.org/obo/IAO_0000592")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0010040 <http://purl.obolibrary.org/obo/IAO_0000592>)
 AnnotationAssertion(rdfs:comment :NFDI_0010040 "A software module is software composed of a collection of software methods.")
-AnnotationAssertion(rdfs:label :NFDI_0010040 "software module"@en)
-SubClassOf(:NFDI_0010040 :NFDI_0000198)
+AnnotationAssertion(rdfs:label :NFDI_0010040 "obsolete software module"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0010040 "true"^^xsd:boolean)
 
-# Class: :NFDI_0010041 (software script)
+# Class: :NFDI_0010041 (obsolete software script)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> :NFDI_0010041 "http://purl.obolibrary.org/obo/IAO_0000595")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0010041 <http://purl.obolibrary.org/obo/IAO_0000595>)
 AnnotationAssertion(rdfs:comment :NFDI_0010041 "A software script is software whose instructions can be executed using a software interpreter.")
-AnnotationAssertion(rdfs:label :NFDI_0010041 "software script"@en)
-SubClassOf(:NFDI_0010041 :NFDI_0000198)
+AnnotationAssertion(rdfs:label :NFDI_0010041 "obsolete software script"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0010041 "true"^^xsd:boolean)
 
 
 ############################
