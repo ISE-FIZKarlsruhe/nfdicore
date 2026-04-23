@@ -30,6 +30,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000100>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000104>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000300>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000310>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000311>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020000>))
@@ -211,6 +212,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000055>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000299>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000059>))
@@ -1358,21 +1360,21 @@ SubClassOf(:NFDI_0001103 <http://purl.obolibrary.org/obo/IAO_0000300>)
 AnnotationAssertion(rdfs:comment :NFDI_0001104 "A Conference Abstract is a brief summary of research findings or scholarly work submitted for presentation at an academic or professional conference, often serving as a precursor to a full paper or presentation.")
 AnnotationAssertion(rdfs:label :NFDI_0001104 "conference abstract"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001104 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119")
-SubClassOf(:NFDI_0001104 :NFDI_0000190)
+SubClassOf(:NFDI_0001104 <http://purl.obolibrary.org/obo/IAO_0000311>)
 
 # Class: :NFDI_0001105 (conference paper)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001105 "A Conference Paper is a scholarly publication that presents research findings at an academic or professional conference, typically published in conference proceedings.")
 AnnotationAssertion(rdfs:label :NFDI_0001105 "conference paper"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001105 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119")
-SubClassOf(:NFDI_0001105 :NFDI_0000190)
+SubClassOf(:NFDI_0001105 <http://purl.obolibrary.org/obo/IAO_0000311>)
 
 # Class: :NFDI_0001106 (conference poster)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001106 "A Conference Poster is a visual presentation of research findings, displayed at an academic or professional conference to facilitate discussion and knowledge exchange.")
 AnnotationAssertion(rdfs:label :NFDI_0001106 "conference poster"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001106 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119")
-SubClassOf(:NFDI_0001106 :NFDI_0000190)
+SubClassOf(:NFDI_0001106 <http://purl.obolibrary.org/obo/IAO_0000311>)
 
 # Class: :NFDI_0001200 (interim report)
 
@@ -1466,7 +1468,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001209 "A Journal Article is a peer-revi
 AnnotationAssertion(rdfs:label :NFDI_0001209 "journal article"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0001209 "http://purl.obolibrary.org/obo/IAO_0000013")
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001209 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119")
-SubClassOf(:NFDI_0001209 :NFDI_0000190)
+SubClassOf(:NFDI_0001209 <http://purl.obolibrary.org/obo/IAO_0000311>)
 
 # Class: :NFDI_0001210 (software repository)
 
@@ -1570,7 +1572,7 @@ SubClassOf(:NFDI_0010030 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010031 "A data handling process involving the organization and structuring of data into datasets for easier access, analysis, and sharing.")
 AnnotationAssertion(rdfs:label :NFDI_0010031 "dataset creation process"@en)
-SubClassOf(:NFDI_0010031 :NFDI_0010028)
+SubClassOf(:NFDI_0010031 ObjectIntersectionOf(:NFDI_0010028 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/IAO_0001000>)))
 
 # Class: :NFDI_0010033 (dataset documenting process)
 
