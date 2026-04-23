@@ -44,6 +44,14 @@ Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri
 Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#repository>))
 
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014> <http://purl.obolibrary.org/obo/IAO_0000444>)
+AnnotationAssertion(owl:deprecated <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014> "true"^^xsd:boolean)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022> <http://purl.obolibrary.org/obo/IAO_0000310>)
+AnnotationAssertion(owl:deprecated <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022> "true"^^xsd:boolean)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000029> <http://purl.obolibrary.org/obo/IAO_0000088>)
+AnnotationAssertion(owl:deprecated <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000029> "true"^^xsd:boolean)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> <http://purl.obolibrary.org/obo/IAO_0000311>)
+AnnotationAssertion(owl:deprecated <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> "true"^^xsd:boolean)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7069-9804> "Harald Sack")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-9618-6740> "Dilek Yargan")
