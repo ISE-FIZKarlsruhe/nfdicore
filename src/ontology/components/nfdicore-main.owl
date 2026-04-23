@@ -888,7 +888,7 @@ SubClassOf(:NFDI_0000244 <http://purl.obolibrary.org/obo/IAO_0000104>)
 
 AnnotationAssertion(rdfs:comment :NFDI_0001000 "A textual entity that uniquely identifies a specific software application, program, or system, often used for branding, categorization, and reference in documentation, licensing, and distribution.")
 AnnotationAssertion(rdfs:label :NFDI_0001000 "software title"@en)
-SubClassOf(:NFDI_0001000 ObjectIntersectionOf(:NFDI_0001019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> :NFDI_0000198)))
+SubClassOf(:NFDI_0001000 ObjectIntersectionOf(:NFDI_0001019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000010>)))
 
 # Class: :NFDI_0001001 (citation)
 
