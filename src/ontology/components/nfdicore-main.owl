@@ -268,9 +268,6 @@ Declaration(NamedIndividual(:NFDI_0010014))
 Declaration(NamedIndividual(:NFDI_0010016))
 Declaration(NamedIndividual(:NFDI_0010017))
 Declaration(NamedIndividual(:NFDI_0010018))
-
-
-
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000112>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
@@ -836,7 +833,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0000223 "An information content entity th
 AnnotationAssertion(rdfs:label :NFDI_0000223 "website"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000223 "A collection of webpages contributed by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000223 "https:\\/\\/opac.rism.info")
-SubClassOf(:NFDI_0000223 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/RO_0002234>) :NFDI_0000224)))
+SubClassOf(:NFDI_0000223 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002353> :NFDI_0000224)))
 
 # Class: :NFDI_0000224 (creative process)
 
@@ -1553,6 +1550,7 @@ SubClassOf(:NFDI_0010029 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010030 "A data handling process where raw data is cleaned, transformed, and analyzed to extract meaningful insights, patterns, or trends.")
 AnnotationAssertion(rdfs:label :NFDI_0010030 "data processing process"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010030 <http://purl.obolibrary.org/obo/T4FS_0000044>)
 SubClassOf(:NFDI_0010030 :NFDI_0010028)
 
 # Class: :NFDI_0010031 (dataset creation process)
@@ -1571,6 +1569,7 @@ SubClassOf(:NFDI_0010033 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010034 "A data handling process where incorrect, incomplete, or irrelevant data is identified and corrected or removed to improve the quality of the dataset.")
 AnnotationAssertion(rdfs:label :NFDI_0010034 "data cleaning process"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010034 <http://purl.obolibrary.org/obo/T4FS_0000384>)
 SubClassOf(:NFDI_0010034 :NFDI_0010028)
 
 # Class: :NFDI_0010035 (data transformation process)
@@ -1583,6 +1582,7 @@ SubClassOf(:NFDI_0010035 :NFDI_0010028)
 
 AnnotationAssertion(rdfs:comment :NFDI_0010036 "A data handling process where data from multiple sources are combined or merged to create a cohesive and comprehensive dataset for analysis.")
 AnnotationAssertion(rdfs:label :NFDI_0010036 "data integration process"@en)
+AnnotationAssertion(rdfs:seeAlso :NFDI_0010036 <http://purl.obolibrary.org/obo/T4FS_0000487>)
 SubClassOf(:NFDI_0010036 :NFDI_0010028)
 
 # Class: :NFDI_0010037 (data storage process)
@@ -1927,18 +1927,6 @@ AnnotationAssertion(rdfs:comment :NFDI_0010018 "An academic discipline that focu
 AnnotationAssertion(rdfs:label :NFDI_0010018 "construction engineering"@en)
 AnnotationAssertion(rdfs:seeAlso :NFDI_0010018 "https://www.dfg.de/en/research-funding/proposal-funding-process/interdisciplinarity/subject-area-structure")
 ClassAssertion(:NFDI_0000100 :NFDI_0010018)
-
-# Individual: :NFDI_0010030 (data processing process)
-
-AnnotationAssertion(<http://www.w3.org/2000/01/rdf-schema#seeAlso> :NFDI_0010030 <http://purl.obolibrary.org/obo/T4FS_0000044>)
-
-# Individual: :NFDI_0010034 (data cleaning process)
-
-AnnotationAssertion(<http://www.w3.org/2000/01/rdf-schema#seeAlso> :NFDI_0010034 <http://purl.obolibrary.org/obo/T4FS_0000384>)
-
-# Individual: :NFDI_0010036 (data integration process)
-
-AnnotationAssertion(<http://www.w3.org/2000/01/rdf-schema#seeAlso> :NFDI_0010036 <http://purl.obolibrary.org/obo/T4FS_0000487>)
 
 
 EquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> :NFDI_0000110) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002350> :NFDI_0000006))
