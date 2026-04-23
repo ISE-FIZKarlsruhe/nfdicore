@@ -24,9 +24,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000098>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000100>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000104>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000300>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000000>))
@@ -452,13 +454,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_00
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000008 "TRANSRAZ Data Model, NFDI4Culture Knowledge Graph, Guide for digital collection management at art museums, NFDI4Culture SPARQL Endpoint, Registry for Tools & Services, RADAR4Culture service, etc.")
 AnnotationAssertion(:NFDI_0010013 :NFDI_0000008 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/122")
 
-# Class: :NFDI_0000009 (dataset)
+# Class: :NFDI_0000009 (obsolete dataset)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> :NFDI_0000009 <http://purl.obolibrary.org/obo/IAO_0001000>)
 AnnotationAssertion(rdfs:comment :NFDI_0000009 "An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference. Dataset is structured information about a resource provided by an organization or a person."@en)
-AnnotationAssertion(rdfs:label :NFDI_0000009 "dataset"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000009 "obsolete dataset"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000009 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000009 "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000009 "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)")
-SubClassOf(:NFDI_0000009 <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: :NFDI_0000011 (obsolete plan)
 
@@ -1389,7 +1392,7 @@ SubClassOf(:NFDI_0001202 :NFDI_0000123)
 AnnotationAssertion(rdfs:comment :NFDI_0001203 "An Experimental Dataset is a dataset that contains measured or observed data collected from laboratory experiments, physical tests, or scientific investigations.")
 AnnotationAssertion(rdfs:label :NFDI_0001203 "experimental dataset"@en)
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001203 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119")
-SubClassOf(:NFDI_0001203 :NFDI_0000009)
+SubClassOf(:NFDI_0001203 <http://purl.obolibrary.org/obo/IAO_0001000>)
 
 # Class: :NFDI_0001204 (reference dataset)
 
@@ -1412,7 +1415,7 @@ standards should be as much as possible consistent).")
 AnnotationAssertion(rdfs:label :NFDI_0001204 "reference dataset"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001204 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy (https://doi.org/10.5281/zenodo.7764161)")
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001204 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119")
-SubClassOf(:NFDI_0001204 :NFDI_0000009)
+SubClassOf(:NFDI_0001204 <http://purl.obolibrary.org/obo/IAO_0001000>)
 
 # Class: :NFDI_0001205 (simulation dataset)
 
@@ -1420,7 +1423,7 @@ AnnotationAssertion(rdfs:comment :NFDI_0001205 "A Simulation Dataset is a datase
 AnnotationAssertion(rdfs:label :NFDI_0001205 "simulation dataset"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001205 "Examples include DFT simulation datasets, molecular dynamics (MD) trajectory files, and phase-field modeling results.")
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001205 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119")
-SubClassOf(:NFDI_0001205 :NFDI_0000009)
+SubClassOf(:NFDI_0001205 <http://purl.obolibrary.org/obo/IAO_0001000>)
 
 # Class: :NFDI_0001206 (large scale facility)
 
