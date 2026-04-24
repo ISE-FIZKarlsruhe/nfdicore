@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Patterns - NFDIcore Ontology</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Patterns";
+        var mkdocs_page_input_path = "patterns.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> NFDIcore Ontology
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ontology/">Ontology</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Patterns</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#nfdi-resources">NFDI Resources</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#agents">Agents</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#processes">Processes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#events-and-time">Events and Time</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../versions/">Versions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../extensions/">Modular Extensions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">NFDIcore Ontology</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Patterns</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="usage-patterns">Usage Patterns</h1>
+<p>In this section usage patterns and A-Box examples are introduced.</p>
+<h2 id="nfdi-resources">NFDI Resources</h2>
+<p>Within NFDIcore, resources are continuants which encompass a wide range of digital creative works, including datasets, collections, and metadata, as well as offered products and services such as data portals, data curation, and data digitization.  </p>
+<p><img alt="image" src="../figures/nfdicore-pattern-dataportal.png" /></p>
+<pre class="mermaid"><code>
+stateDiagram
+
+  direction BT
+
+#style definitions
+  classDef clazz fill:lightgrey,color:white
+  classDef individual font-size:small
+
+#styling of classes
+
+  class bfo_occurrent clazz  
+  class bfo_entity clazz
+  class bfo_continuant clazz
+  
+#relations
+
+  bfo_occurrent --&gt; bfo_entity: subClassOf 
+#  bfo_continuant --&gt; bfo_entity: subClassOf 
+#  bfo_process --&gt; bfo_occurrent: subClassOf 
+#  bfo_temporal_region --&gt; bfo_occurrent: subClassOf 
+#  bfo_one_dimensional --&gt; bfo_temporal_region: subClassOf 
+#  bfo_two_dimensional --&gt; bfo_temporal_region: subClassOf 
+</code></pre>
+<script>
+  var mermaidConfig = {
+    startOnLoad: false,
+    theme: "base",
+    fontFamily: "Inter, system-ui, sans-serif",
+    themeVariables: {
+      background: "#f3f7f8",
+      primaryColor: "#e6eef2",
+      primaryBorderColor: "#134f5c",
+      primaryTextColor: "#0b1320",
+      lineColor: "#134f5c",
+      tertiaryColor: "#ec941c",
+      edgeLabelBackground: "#ffffff",
+      fontSize: "14px"
+    }
+  };
+  // optional, but harmless
+  window.mermaidConfig = mermaidConfig;
+</script>
+
+<pre class="mermaid"><code>stateDiagram
+  direction BT
+  classDef clazz fill:lightgrey,color:white;
+
+  state "cto:CTO_0001005 (source item)" as CTO_SourceItem 
+  class CTO_SourceItem clazz
+  state "nfdicore:NFDI_0000003 (organization)" as NFDI_organization
+  class NFDI_organization clazz
+  state "schema:DataFeed" as SCHEMA_DataFeed
+  class SCHEMA_DataFeed clazz
+  state "cto:CTO_0001024 (incipit)" as CTO_Incipit
+  class CTO_Incipit clazz 
+  state "RISM Online" as org_rism
+  state "E5313" as feed_e5313 
+  state "RISM Resource 201001959" as si_201001959 
+  state "201001959 incipit 1.1.1" as inc_1_1_1
+
+  state "A''C/'B''D'BA/2G4BA/G-B''D/G4-2-/" as PATTERN_CLASS
+  class PATTERN_CLASS
+  state "C/" as TIMESIG 
+  class TIMESIG 
+
+
+  org_rism --&gt; NFDI_organization:a
+  si_201001959 --&gt; CTO_SourceItem:a
+  inc_1_1_1 --&gt; CTO_Incipit:a
+
+  
+  feed_e5313 --&gt; SCHEMA_DataFeed:a
+  si_201001959 --&gt; inc_1_1_1:CTO_has incipit
+  si_201001959 --&gt; org_rism: NFDI_publishedBy
+  si_201001959 --&gt; feed_e5313:CTO_isReferencedIn
+  inc_1_1_1 --&gt; PATTERN_CLASS:CTO_hasPattern
+  inc_1_1_1 --&gt; key_G:CTO_hasKey
+  inc_1_1_1 --&gt; clef_C1:CTO_hasClef
+  inc_1_1_1 --&gt; keysig_xF:CTO_hasKeySignature
+  inc_1_1_1 --&gt; TIMESIG:CTO_hasIncipitTimeSignature
+
+  class RISM_201001959
+  class RISM_inc_1_1_1
+  class RISM-online
+  class E5313
+  class G
+  class C1
+  state "xF" as keysig_xF 
+</code></pre>
+<p>NFDI resources can be associated with academic disciplines (nfdicore:academic discipline, NFDI_0000100) allowing for a more nuanced understanding of their context and relevance. </p>
+<p><img alt="image" src="../figures/nfdicore-pattern-discipline.png" /></p>
+<h2 id="agents">Agents</h2>
+<p>Likewise, in NFDIcore, the concept of Agents extends to both organizations and persons, serving as independent continuants within the BFO ontology. Agents are essential for management of research data resources, and include entities such as research institutions, consortia, universities, companies, and individual researchers or data scientists. </p>
+<p>Within NFDIcore, agents can be directly linked to resources via different relations; may participate in processes (BFO_0000015) and be associated with diverse roles (BFO_0000023), e.g. nfdicore:publisher role (NFDI_0000193), nfdicore:contributor role (NFDI_0000118), etc. within the processes. Moreover, agents engage in diverse relationships with other agents, e.g. nfdicore:parent organization (NFDI_0000182). </p>
+<p>Resources within NFDIcore engage in diverse relationships with agents, facilitated by various properties such as nfdicore:contributor, nfdicore:creator, nfdicore:publisher, and nfdicore:contactPoint. While these properties enable direct connections between agents and resources, they may lack some expressivity. E.g. additional information about the relationship like a temporal context, ordering (e.g. for authors). In scenarios requiring more detailed semantics to describe the relationship between an agent and a resource, the modeling proposed by BFO 2020 with processes and roles can be employed.  </p>
+<h2 id="processes">Processes</h2>
+<p>A process (BFO_0000015) can encompass subordinate processes and partial processes. Within NFDIcore, a process often serves to establish connections between agents and information content entities (IAO_0000030), defining the roles (BFO_0000023) of agents with respect to the involved information content entities. </p>
+<p><img alt="image" src="../figures/nfdicore-pattern-process.png" /></p>
+<h2 id="events-and-time">Events and Time</h2>
+<p>The bfo:temporal region (BFO_0000008) is an occurrent and is used to represent the structure of time. Thereby, the bfo:zero-dimensional temporal region (BFO_0000148) represents a single instant in time, a precise point in time without any duration, e.g. the date when the NFDI Verein was founded (nfdicore:act of foundation, NFDI_0001020). In contrast, the one-dimensional temporal region (BFO_0000038) refers to a time interval which has a duration, can be finite as well as infinite and events can occur within it. </p>
+<p><img alt="image" src="../figures/nfdicore-pattern-time.png" /></p>
+<p>The nfdicore:event (NFDI_0000131) is associated with processes that represent an organized happening that unfolds in time. The nfdicore:event, classified as an occurrent (BFO_0000003), serves as a representation for various happenings such as conferences, and workshops.</p>
+<p><img alt="image" src="../figures/nfdicore-pattern-agent.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ontology/" class="btn btn-neutral float-left" title="Ontology"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../versions/" class="btn btn-neutral float-right" title="Versions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ontology/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../versions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
+      <script src="../extra-loader.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

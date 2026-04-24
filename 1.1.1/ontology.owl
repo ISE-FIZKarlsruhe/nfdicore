@@ -1,0 +1,1380 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://nfdi.fiz-karlsruhe.de/ontology#"
+     xml:base="https://nfdi.fiz-karlsruhe.de/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
+    <owl:Ontology rdf:about="https://nfdi.fiz-karlsruhe.de/ontology">
+        <owl:versionIRI rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/1.1.1"/>
+        <terms:abstract xml:lang="en">The NFDIcore ontology  (prefix nfdicore) describes resouces (datasets, data providers, persons, projects and other entities) in the data domain of NFDI (https://www.nfdi.de/). It serves as the basis for further domain specific ontologies, e.g. nfdi4culture ontology, nfdi4matwerk ontology. Mappings to numerous external vocabularies and ontologies are provided in an extra file. 
+                                          Current development is managed via GitHub: https://github.com/ISE-FIZKarlsruhe/nfdicore . Feel free to give feedback, contribute, or raise issues.
+                                          </terms:abstract>
+        <terms:created>2024-03-08</terms:created>
+        <terms:creator rdf:resource="https://nfdi4culture.de/id/E1925"/>
+        <terms:creator rdf:resource="https://nfdi4culture.de/id/E2415"/>
+        <terms:creator rdf:resource="https://nfdi4culture.de/id/E2416"/>
+        <terms:creator rdf:resource="https://nfdi4culture.de/id/E3095"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:title>NFDIcore Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/nfdi"/>
+        <vann:preferredNamespaceUri rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/"/>
+        <rdfs:label>NFDIcore</rdfs:label>
+        <owl:versionInfo>v1.1.1-alpha1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://rdfs.org/ns/void#feature -->
+
+
+    <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#feature"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/acronym -->
+
+
+    <owl:AnnotationProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/acronym">
+        <rdfs:label xml:lang="en">nfdicore:acronym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/bestPractice -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/bestPractice">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Specification"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and the best practice.</rdfs:comment>
+        <rdfs:label xml:lang="en">best practice</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/bestPracticeOf">
+        <rdfs:label xml:lang="en">best practice of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/contactPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/contactPoint">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and a contact point.</rdfs:comment>
+        <rdfs:label xml:lang="en">contact point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/contactPointOf">
+        <rdfs:label xml:lang="en">contact point of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/contributor -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/contributor">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/contributorOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The property related a resource to a person or an organization responsible for making contributions to a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">contributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/contributorOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/contributorOf"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/country -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/country">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/countryOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/City"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/FederalState"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Country"/>
+        <rdfs:comment xml:lang="en">The property relates a city or a state to a country where it is located.</rdfs:comment>
+        <rdfs:label xml:lang="en">country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/countryOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/countryOf">
+        <rdfs:label xml:lang="en">country of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/exportFormat -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/exportFormat">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/MediaType"/>
+        <rdfs:comment xml:lang="en">The property relates a resource to the format available for the export of a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">export format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/exportFormatOf">
+        <rdfs:label xml:lang="en">export format of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/federalState -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/federalState">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/City"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/FederalState"/>
+        <rdfs:comment xml:lang="en">The property relates a city to a federal state where it is located.</rdfs:comment>
+        <rdfs:label xml:lang="en">federal state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/federalStateOf">
+        <rdfs:label xml:lang="en">federal state of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/funder -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/funder">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/funderOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The property relates thing to an organization or a project that provided funding for it. The subproperties are used to specify more specific funding relationships. </rdfs:comment>
+        <rdfs:label xml:lang="en">funder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/funderOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/funderOf">
+        <rdfs:label xml:lang="en">funder of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganization">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/funder"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <rdfs:comment xml:lang="en">The property relates a resource or a project to the organization that provided funding for it.</rdfs:comment>
+        <rdfs:label xml:lang="en">funding organization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/fundingOrganizationOf">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/funderOf"/>
+        <rdfs:label xml:lang="en">funding organization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/fundingProject -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/fundingProject">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/funder"/>
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
+        <rdfs:comment xml:lang="en">The property relateds a resource to the project that provided funding for it.</rdfs:comment>
+        <rdfs:label xml:lang="en">funding project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/fundingProjectOf">
+        <rdfs:subPropertyOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/funderOf"/>
+        <rdfs:label xml:lang="en">funding project of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/instance -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/instance">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/instanceOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a service and its running instance.</rdfs:comment>
+        <rdfs:label xml:lang="en">instance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/instanceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/instanceOf">
+        <rdfs:label xml:lang="en">instance of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/license -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/license">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/licenseOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/License"/>
+        <rdfs:comment>The property is a relationship between a resource and a license file.</rdfs:comment>
+        <rdfs:label xml:lang="en">license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/licenseOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/licenseOf">
+        <rdfs:label xml:lang="en">license of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/location -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/location">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/locationOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a thing and a place its located at. </rdfs:comment>
+        <rdfs:label xml:lang="en">location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/locationOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/locationOf">
+        <rdfs:label xml:lang="en">location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/mediaType -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/mediaType">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/MediaType"/>
+        <rdfs:comment xml:lang="en">The property relates a resource to its data format.</rdfs:comment>
+        <rdfs:label xml:lang="en">media type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/mediaTypeOf">
+        <rdfs:label xml:lang="en">media type of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/objectType -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/objectType">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Collection"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/ObjectType"/>
+        <rdfs:comment xml:lang="en">The property relates a collection or a data set to the type of object it contains. </rdfs:comment>
+        <rdfs:label xml:lang="en">object type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/objectTypeOf">
+        <rdfs:label xml:lang="en">object type of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/parentOrganization">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <rdfs:comment xml:lang="en">The property is a parental relationship between organizations.</rdfs:comment>
+        <rdfs:label xml:lang="en">parent organization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/partnerOrganization">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <rdfs:comment xml:lang="en">The property is a partner relationship between organizations. The property is symmetric.</rdfs:comment>
+        <rdfs:label xml:lang="en">partner organization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguage">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Software"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage"/>
+        <rdfs:comment>The property links software to a programming language its written in.</rdfs:comment>
+        <rdfs:label xml:lang="en">programming language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/programmingLanguageOf">
+        <rdfs:label xml:lang="en">programming language of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/publisher -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/publisher">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/publisherOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and an organization or a person responsible for publishing it.</rdfs:comment>
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/publisherOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/publisherOf">
+        <rdfs:label xml:lang="en">publisher of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/relatedProject -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/relatedProject">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Project"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a project or a resource and related projects.</rdfs:comment>
+        <rdfs:label xml:lang="en">related project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/representedCollection -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/representedCollection">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/DataPortal"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Collection"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a dataset and a collection it represents.</rdfs:comment>
+        <rdfs:label xml:lang="en">represented collection</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/representedCollectionOf">
+        <rdfs:label xml:lang="en">represented collection of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivity">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
+        <rdfs:comment xml:lang="en">The property relates a resource to its semantic expressivity spectrum.</rdfs:comment>
+        <rdfs:label xml:lang="en">semantic expressivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/semanticExpressivityOf">
+        <rdfs:label xml:lang="en">semantic expressivity of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/serviceType -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/serviceType">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Service"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/ServiceType"/>
+        <rdfs:comment>The property relates a service to its type.</rdfs:comment>
+        <rdfs:label xml:lang="en">service type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/serviceTypeOf">
+        <rdfs:label xml:lang="en">service type of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/software -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/software">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/softwareOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Software"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and a software it uses.</rdfs:comment>
+        <rdfs:label xml:lang="en">software</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/softwareOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/softwareOf">
+        <rdfs:label xml:lang="en">software of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpoint">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:comment xml:lang="en">The property relates a data resource to its SPARQL Endpoint. </rdfs:comment>
+        <rdfs:label xml:lang="en">sparql endpoint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/sparqlEndpointOf">
+        <rdfs:label xml:lang="en">sparql endpoint of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/specification -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/specification">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/specificationOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Specification"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and the international standard or norm.</rdfs:comment>
+        <rdfs:label xml:lang="en">specification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/specificationOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/specificationOf">
+        <rdfs:label xml:lang="en">specification of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/standard -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/standard">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/standardOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Standard"/>
+        <rdfs:comment xml:lang="en">The property relates a resource to the standard it relies on.</rdfs:comment>
+        <rdfs:label xml:lang="en">standard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/standardOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/standardOf">
+        <rdfs:label xml:lang="en">standard of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/subjectArea -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/subjectArea">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and its academic discipline, subject area or domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">subject area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/subjectAreaOf">
+        <rdfs:label xml:lang="en">subject area of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/subsidiaryOrganization">
+        <rdfs:label xml:lang="en">subsidiary organization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/technology -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/technology">
+        <owl:inverseOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/technologyOf"/>
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:range rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans"/>
+        <rdfs:comment xml:lang="en">The property is a relationship between a resource and a technology it uses. </rdfs:comment>
+        <rdfs:label xml:lang="en">technology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/technologyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/technologyOf">
+        <rdfs:label xml:lang="en">technology of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/areaCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/areaCode">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">area code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/emailAddress -->
+
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/emailAddress">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+                    <rdf:Description rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">email address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/fileExtension -->
+
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/fileExtension">
+        <rdfs:domain rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:comment xml:lang="en">An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don&apos;t use dot at start.</rdfs:comment>
+        <rdfs:label>file extension</rdfs:label>
+        <skos:example>mp4</skos:example>
+        <skos:example>ttl</skos:example>
+        <skos:example>txt</skos:example>
+        <skos:example>xml</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/url -->
+
+
+    <owl:DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/url">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">URL of a thing</rdfs:comment>
+        <rdfs:label xml:lang="en">url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/CreativeWork -->
+
+
+    <owl:Class rdf:about="http://schema.org/CreativeWork">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Intangible -->
+
+
+    <owl:Class rdf:about="http://schema.org/Intangible">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Product -->
+
+
+    <owl:Class rdf:about="http://schema.org/Product">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Service -->
+
+
+    <owl:Class rdf:about="http://schema.org/Service">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline">
+        <rdfs:comment xml:lang="en">An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person.</rdfs:comment>
+        <rdfs:label xml:lang="en">academic discipline</rdfs:label>
+        <skos:example rdf:resource="https://www.wikidata.org/entity/Q12271"/>
+        <skos:example xml:lang="en">Architecture, Art History, Musicology, Media Studies, Performing Arts</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/City -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/City">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
+        <rdfs:comment xml:lang="en">A city or a town where the thing is located.</rdfs:comment>
+        <rdfs:label xml:lang="en">city</rdfs:label>
+        <skos:example xml:lang="en">Berlin, Hannover, Kyiv</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Collection -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Collection">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:comment xml:lang="en">A tangible collection of valuables published or curated by an organization or a person.</rdfs:comment>
+        <rdfs:label xml:lang="en">collection</rdfs:label>
+        <skos:example xml:lang="en">RISM catalogue of musical sources</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Consortium -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Consortium">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Organization"/>
+        <rdfs:comment xml:lang="en">NFDI consortia grouped by a discipline based in a science-led process managed by the German Research Foundation (DFG).</rdfs:comment>
+        <rdfs:label xml:lang="en">consortium</rdfs:label>
+        <skos:example>NFDI4Culture, NFDI-MatWerk, DataPLANT.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Country -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Country">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
+        <rdfs:comment xml:lang="en">A country where the thing is located.</rdfs:comment>
+        <rdfs:label xml:lang="en">country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/DataPortal -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/DataPortal">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Service"/>
+        <rdfs:comment xml:lang="en">An online platform that provides access to datasets.</rdfs:comment>
+        <rdfs:label xml:lang="en">data portal</rdfs:label>
+        <skos:example xml:lang="en">Bach digital, KultSam, MusiXplora</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Dataset -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Dataset">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A dataset is associated with a structured information about a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/DevelopmentWork">
+        <rdfs:comment xml:lang="en">A resource that identifies an ongoing development of standards, services, data models, vocabularies, ontologies, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">development work</rdfs:label>
+        <skos:example xml:lang="en">Development of a controlled vocabulary for audivisual material in publication and research data; Extension of the AAT vocabulary for the history of architecture</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/FederalState -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/FederalState">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Place"/>
+        <rdfs:comment xml:lang="en">A federal state where the thing is located.</rdfs:comment>
+        <rdfs:label xml:lang="en">federal state</rdfs:label>
+        <skos:example xml:lang="de">Sachsen, Berlin</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/License -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/License">
+        <rdfs:comment xml:lang="en">A document that provides legal guidelines for the use of a resource, e.g. a software.</rdfs:comment>
+        <rdfs:label xml:lang="en">license</rdfs:label>
+        <skos:example xml:lang="en">cc-by-3, Digital Peer Publishing Lizenz</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/MediaType"/>
+        <rdfs:comment xml:lang="en">The MIME-type template of the resource (see https://www.iana.org/assignments/media-types/media-types.xhtml)</rdfs:comment>
+        <rdfs:label xml:lang="en">MIME-type</rdfs:label>
+        <skos:example xml:lang="en">https://www.iana.org/assignments/media-types/application/dicom, https://www.iana.org/assignments/media-types/video/mp4, https://www.iana.org/assignments/media-types/text/n3</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/MediaType -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/MediaType">
+        <rdfs:comment xml:lang="en">A digital resource format or physical medium.</rdfs:comment>
+        <rdfs:label xml:lang="en">media type</rdfs:label>
+        <skos:example>doc, avi, mpeg, epub, txt, MIME-type, record, cassette, VHS, LaserDiscs, CD, DVD, Blu-ray color lithograph, text book</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/ObjectType -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/ObjectType">
+        <rdfs:comment xml:lang="en">A resource that identifies the type of object in a data set or collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">object type</rdfs:label>
+        <skos:example xml:lang="en">book, photograph, music sheet</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Organization -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Organization">
+        <rdfs:comment xml:lang="en">An organization of some kind, e.g. research organization or business organization</rdfs:comment>
+        <rdfs:label xml:lang="en">organization</rdfs:label>
+        <skos:example>Univerity Library in Leipzig, Museums of City Cologne</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Person -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Person">
+        <rdfs:comment xml:lang="en">A resource that represents a single person.</rdfs:comment>
+        <rdfs:label xml:lang="en">person</rdfs:label>
+        <skos:example>Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Place -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Place">
+        <rdfs:comment xml:lang="en">A spatial region, e.g. country, city or district.</rdfs:comment>
+        <rdfs:label xml:lang="en">place</rdfs:label>
+        <skos:example>Hessen, Berlin, Schweiz</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans"/>
+        <rdfs:comment xml:lang="en">A formal language used for implementing a software.</rdfs:comment>
+        <rdfs:label xml:lang="en">programming language</rdfs:label>
+        <skos:example>Java, Ruby, C++, Perl, PHP</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Project -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Project">
+        <rdfs:comment xml:lang="en">A scientific or business endeavor that aims to conclude an investigation or to answer a research question.</rdfs:comment>
+        <rdfs:label xml:lang="en">project</rdfs:label>
+        <skos:example>Freischütz digital, Corpus Vitrearum Medii Aevi</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:comment xml:lang="en">A resource that identifies a resource provided to the NFDI.</rdfs:comment>
+        <rdfs:label xml:lang="en">provided resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Publication -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Publication">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">publication</rdfs:label>
+        <skos:example>MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Resource -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Resource">
+        <rdfs:comment xml:lang="en">The most generic kind of a resource and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations.</rdfs:comment>
+        <rdfs:label xml:lang="en">resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity">
+        <rdfs:comment xml:lang="en">An entity that identifies the level of the semantic expressivity of a resource. Five instances are now included in nfdicore.</rdfs:comment>
+        <rdfs:label xml:lang="en">semantic expressivity</rdfs:label>
+        <skos:example xml:lang="en">controlled vocabulary, ontology, taxonomy</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Service -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Service">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Service"/>
+        <rdfs:comment xml:lang="en">A service, expertise or skill provided by an organization or a person.</rdfs:comment>
+        <rdfs:label xml:lang="en">service</rdfs:label>
+        <skos:example xml:lang="en">Data curation for HeiDATA, Expertise for the development and application of LIDO</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/ServiceType -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/ServiceType">
+        <rdfs:comment xml:lang="en">A resource that identifies the type of a service.</rdfs:comment>
+        <rdfs:label xml:lang="en">service type</rdfs:label>
+        <skos:example xml:lang="en">Expertise, advertisement, curation</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Software -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Software">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:comment xml:lang="en">A computer software provided by an organization or a person.</rdfs:comment>
+        <rdfs:label xml:lang="en">software</rdfs:label>
+        <skos:example>Edirom, Muscat</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Specification -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Specification">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Product"/>
+        <rdfs:comment xml:lang="en">A set of requirements, guidelines, standards contributed by an organization or a person.</rdfs:comment>
+        <rdfs:label xml:lang="en">specification</rdfs:label>
+        <skos:example>RDF, SPARQL, Federation</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Standard -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Standard">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Specification"/>
+        <rdfs:comment xml:lang="en">An international standard and norm that can be used to evaluate or create a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">standard</rdfs:label>
+        <skos:example>ISO 15511, DINI-Zertifikat</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans">
+        <rdfs:comment xml:lang="en">A technology, e.g. a web application or a programming framework used in a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">technological means</rdfs:label>
+        <skos:example xml:lang="en">Groovy on Grails, Angular</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Website -->
+
+
+    <owl:Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Website">
+        <rdfs:subClassOf rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/Resource"/>
+        <rdfs:comment xml:lang="en">A collection of webpages contributed by an organization or a person.</rdfs:comment>
+        <rdfs:label xml:lang="en">website</rdfs:label>
+        <skos:example>https:\/\/opac.rism.info</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary -->
+
+
+    <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
+        <rdfs:comment xml:lang="en">A list of terms, natural language definitions and naming conventions. In comparisson to a glossary, there is a dedicated curation mechanism for new terms in a controlled vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">controlled vocabulary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Glossary -->
+
+
+    <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Glossary">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
+        <rdfs:comment xml:lang="en">A list of terms and their with natural language definitions.</rdfs:comment>
+        <rdfs:label xml:lang="en">glossary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Ontology -->
+
+
+    <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Ontology">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
+        <rdfs:comment xml:lang="en">A complete, machine-readable specification of a conceptualization using URIs (and then IRIs) for all elements, properties and relationship types.</rdfs:comment>
+        <rdfs:label xml:lang="en">ontology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy -->
+
+
+    <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
+        <rdfs:comment xml:lang="en">A data model in a class hierarchy, where all concepts inherit their behaviour from the super-class concept. Taxonomies can be strict or non strict and can contain instances.</rdfs:comment>
+        <rdfs:label xml:lang="en">taxonomy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus -->
+
+
+    <owl:NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity"/>
+        <rdfs:comment xml:lang="en">A structured list of terms and relations between the terms, as e.g. broader/narrower.</rdfs:comment>
+        <rdfs:label xml:lang="en">thesaurus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://nfdi4culture.de/id/E1925">
+        <rdfs:label>Harald Sack</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://nfdi4culture.de/id/E2415">
+        <rdfs:label>Tabea Tietz</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://nfdi4culture.de/id/E2416">
+        <rdfs:label>Oleksandra Bruns</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://nfdi4culture.de/id/E3095">
+        <rdfs:label>Etienne Posthumus</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://orcid.org/0000-0001-7192-7143">
+        <rdfs:label>Jörg Waitelonis</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
