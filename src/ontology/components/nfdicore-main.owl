@@ -42,6 +42,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000013>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000245>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000260>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0001930>))
 Declaration(Class(:NFDI_0000001))
 Declaration(Class(:NFDI_0000002))
 Declaration(Class(:NFDI_0000004))
@@ -785,13 +786,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_00001
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000198 "A computer software provided by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000198 "Edirom, Muscat")
 
-# Class: :NFDI_0000203 (specification)
+# Class: :NFDI_0000203 (obsolete specification)
 
-AnnotationAssertion(rdfs:label :NFDI_0000203 "specification"@en)
+AnnotationAssertion(rdfs:label :NFDI_0000203 "obsolete specification"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0000203 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0000203 "A directive information entity that defines the requirements, characteristics, or standards for the design, implementation, or operation of a system, product, or process.Specification is a set of requirements, guidelines, standards contributed by an organization or a person."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000203 "2024-03-24. Sasha Bruns: specifications have dual nature - they are both directive information entities guiding actions (plan specification) and digital intellectual resources providing relevant information and guidelines (creative work)."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000203 "Guidelines, technical specifications, design specifications"@en)
-SubClassOf(:NFDI_0000203 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000033> ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/RO_0002234>) :NFDI_0000224)))
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000203 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/133")
 
 # Class: :NFDI_0000206 (standard)
 
@@ -799,7 +801,9 @@ AnnotationAssertion(rdfs:label :NFDI_0000206 "standard"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0000206 "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0000206 "An international standard and norm that can be used to evaluate or create a resource."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0000206 "ISO 15511, DINI-Zertifikat")
-SubClassOf(:NFDI_0000206 :NFDI_0000203)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0000206 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/131
+https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/133")
+SubClassOf(:NFDI_0000206 <http://purl.obolibrary.org/obo/IAO_0000310>)
 
 # Class: :NFDI_0000210 (storage service)
 
@@ -1203,22 +1207,21 @@ AnnotationAssertion(rdfs:label :NFDI_0001050 "event implementation specification
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0001050 "An event implementation specification is a type of Directive Information Entity that provides formal guidelines, constraints, and details on how an event should be executed. It specifies the mode of implementation, including logistical, technical, and procedural aspects required to carry out an event successfully.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0001050 "HBN: Concerning the content of ‘Event’ datasheets and its related knowledge graph, the ‘Event Implementation Specification’ class and its instances were created to respond to competency questions like what are the implementation formats of a given event.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001050 "Specifications for organizing conferences, training workshops, and academic seminars in different formats such as virtual, in-person, or hybrid settings.")
-EquivalentClasses(:NFDI_0001050 ObjectIntersectionOf(:NFDI_0000203 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> :NFDI_0000131)))
-SubClassOf(:NFDI_0001050 :NFDI_0000203)
+SubClassOf(:NFDI_0001050 ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0001930> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> :NFDI_0000131)))
 
 # Class: :NFDI_0001051 (funding specification)
 
 AnnotationAssertion(rdfs:label :NFDI_0001051 "funding specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0001051 "A funding specification is a directive information entity that provides structured guidelines, policies, and requirements for securing, managing, and allocating financial resources for various activities, projects, or organizations.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0001051 "HBN: Concerning the content of ‘Service’ datasheets and its related knowledge graph, the ‘Funding Specification’ class and its instances were created to respond to competency questions like what funding models exist for a given service.")
-SubClassOf(:NFDI_0001051 :NFDI_0000203)
+SubClassOf(:NFDI_0001051 <http://purl.obolibrary.org/obo/OBI_0001930>)
 
 # Class: :NFDI_0001052 (information access specification)
 
 AnnotationAssertion(rdfs:label :NFDI_0001052 "information access specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0001052 "An information access specification is a directive information entity that defines the policies, conditions, and mechanisms governing the accessibility of digital or physical information resources for users or organizations.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0001052 "HBN: Concerning the content of ‘Publication’ datasheet and its related knowledge graph, the ‘Information Access Specification’ class and its instances were created to respond to competency questions like: what access policies apply to a specific publication document, which resources are available under open access, etc.")
-SubClassOf(:NFDI_0001052 :NFDI_0000203)
+SubClassOf(:NFDI_0001052 <http://purl.obolibrary.org/obo/OBI_0001930>)
 
 # Class: :NFDI_0001053 (ontology version IRI)
 
@@ -1227,12 +1230,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_00010
 AnnotationAssertion(:NFDI_0010013 :NFDI_0001053 "issue: issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/95")
 SubClassOf(:NFDI_0001053 <http://purl.obolibrary.org/obo/IAO_0020000>)
 
-# Class: :NFDI_0001054 (metadata specification)
+# Class: :NFDI_0001054 (obsolete metadata specification)
 
-AnnotationAssertion(rdfs:label :NFDI_0001054 "metadata specification"@en)
+AnnotationAssertion(rdfs:label :NFDI_0001054 "obsolete metadata specification"@en)
+AnnotationAssertion(owl:deprecated :NFDI_0001054 "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0001054 "A Metadata Specification is a detailed document that describes metadata structures, guidelines, and usage policies for standardization and adoption.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :NFDI_0001054 "metadata schema and standards")
-SubClassOf(:NFDI_0001054 :NFDI_0000203)
+AnnotationAssertion(:NFDI_0010013 :NFDI_0001054 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/132
+https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/133")
 
 # Class: :NFDI_0001055 (TGN identifier)
 
@@ -1248,7 +1253,7 @@ SubClassOf(:NFDI_0001055 <http://purl.obolibrary.org/obo/IAO_0000578>)
 AnnotationAssertion(rdfs:label :NFDI_0001056 "status specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :NFDI_0001056 "A status specification is a directive information entity that defines the current state, progress, or condition of an entity, process, or project based on predefined criteria and operational guidelines.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :NFDI_0001056 "HBN: Concerning the content of ‘Service’ and 'International collabrations' datasheets and their related knowledge graphs, the ‘Status Specification’ class and its instances were created to respond to competency questions like: what is the current status of a service or collaboration project, which collabrations are in an active state, etc.")
-SubClassOf(:NFDI_0001056 :NFDI_0000203)
+SubClassOf(:NFDI_0001056 <http://purl.obolibrary.org/obo/OBI_0001930>)
 
 # Class: :NFDI_0001057 (co organizer role)
 
