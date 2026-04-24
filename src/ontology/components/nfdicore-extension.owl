@@ -102,6 +102,7 @@ Declaration(ObjectProperty(:NFDI_0001024))
 Declaration(ObjectProperty(:NFDI_0001027))
 Declaration(ObjectProperty(:NFDI_0001028))
 Declaration(ObjectProperty(:NFDI_0001097))
+Declaration(ObjectProperty(:NFDI_0001121))
 Declaration(DataProperty(:NFDI_0000105))
 Declaration(DataProperty(:NFDI_0000127))
 Declaration(DataProperty(:NFDI_0000128))
@@ -570,11 +571,11 @@ SubObjectPropertyOf(:NFDI_0001028 :NFDI_0000241)
 
 # Object Property: :NFDI_0001097 (has manufacturer)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0001097 "prefix has_contact_point: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112>
+AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0001097 "prefix has_manufacturer: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001097>
 prefix participates_in: <http://purl.obolibrary.org/obo/RO_0000056> 
 prefix process: <http://purl.obolibrary.org/obo/BFO_0000015>   # process
 prefix has_role: <http://purl.obolibrary.org/obo/RO_0000087> 
-prefix role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00010604>  # manufacturer role
+prefix role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001060>  # manufacturer role
 prefix has_realization: <http://purl.obolibrary.org/obo/BFO_0000054> 
 
 construct {
@@ -587,7 +588,7 @@ _:role has_realization: _:proc .
 }
 where 
 {
-?s hasmanufacturer: ?o .
+?s has_manufacturer: ?o .
 FILTER NOT EXISTS {
  ?s participates_in: ?some_p . 
  ?some_p a process: .
@@ -600,6 +601,14 @@ FILTER NOT EXISTS {
 AnnotationAssertion(rdfs:comment :NFDI_0001097 "The property is a relationship between some resource and a person or organization (agent) as a manufacturer."@en)
 AnnotationAssertion(rdfs:label :NFDI_0001097 "has manufacturer"@en)
 SubObjectPropertyOf(:NFDI_0001097 :NFDI_0000240)
+InverseObjectProperties(:NFDI_0001097 :NFDI_0001121)
+ObjectPropertyRange(:NFDI_0001097 :NFDI_0001114)
+
+# Object Property: :NFDI_0001121 (manufacturer of)
+
+AnnotationAssertion(rdfs:comment :NFDI_0001121 "inverse of  property \"has manufacturer\"")
+AnnotationAssertion(rdfs:label :NFDI_0001121 "manufacturer of"@en)
+SubObjectPropertyOf(:NFDI_0001121 :NFDI_0000241)
 
 
 ############################
@@ -764,8 +773,8 @@ EquivalentClasses(:NFDI_0001005 ObjectIntersectionOf(<http://purl.obolibrary.org
 AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0001026 "prefix has_creator: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027>
 prefix participates_in: <http://purl.obolibrary.org/obo/RO_0000056> 
 prefix process: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001025>   # creation process
-prefix has_role: <http://purl.obolibrary.org/obo/RO_0000087> # creator role
-prefix role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026> 
+prefix has_role: <http://purl.obolibrary.org/obo/RO_0000087>
+prefix role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026>  # creator role
 prefix has_realization: <http://purl.obolibrary.org/obo/BFO_0000054> 
 
 construct {
@@ -793,7 +802,7 @@ EquivalentClasses(:NFDI_0001038 ObjectIntersectionOf(<http://purl.obolibrary.org
 
 # Class: :NFDI_0001060 (manufacturer role)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0001060 "prefix has_publisher: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191>
+AnnotationAssertion(<http://purl.obolibrary.org/obo/OMO_0002000> :NFDI_0001060 "prefix has_manufacturer: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001097>
 prefix participates_in: <http://purl.obolibrary.org/obo/RO_0000056> 
 prefix process: <http://purl.obolibrary.org/obo/BFO_0000015>   # process
 prefix has_role: <http://purl.obolibrary.org/obo/RO_0000087> 
