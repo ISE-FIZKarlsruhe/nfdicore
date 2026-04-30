@@ -23,8 +23,8 @@ jobs:
            cat public/doc/resources/extra.css
            mv public/doc/* public/
            cp public/index-en.html public/index.html
-           cp -r public 3.0.4
-           mv 3.0.4 public/
+           cp -r public 3.0.5
+           mv 3.0.5 public/
 
            pip install mkdocs
            cd main
@@ -33,6 +33,18 @@ jobs:
            cd ..
            mkdir public/docs
            cp -r main/site/* public/docs/
+
+    - uses: actions/checkout@v3
+      with:
+        ref: v3.0.4
+        path: v3.0.4
+    - name: Build HTML for 3.0.4
+      run: |
+           mkdir public/3.0.4
+           java -jar widoco.jar -ontFile v3.0.4/nfdicore.ttl -outFolder public/3.0.4  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           ls public/3.0.4/
+           mv public/3.0.4/doc/* public/3.0.4/
+           cp public/3.0.4/index-en.html public/3.0.4/index.html
 
 
     - uses: actions/checkout@v3
