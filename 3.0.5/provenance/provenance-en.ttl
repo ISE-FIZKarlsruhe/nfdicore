@@ -1,0 +1,24 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://nfdi.fiz-karlsruhe.de/ontology/3.0.5> a prov:Entity;
+	 dc:title "NFDIcore Ontology";
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-7069-9804>;
+	 dc:creator <https://orcid.org/0000-0001-7069-9804>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-7192-7143>;
+	 dc:creator <https://orcid.org/0000-0001-7192-7143>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-9618-6740>;
+	 dc:creator <https://orcid.org/0000-0001-9618-6740>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-0006-7542>;
+	 dc:creator <https://orcid.org/0000-0002-0006-7542>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-1648-1684>;
+	 dc:creator <https://orcid.org/0000-0002-1648-1684>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-3092-0532>;
+	 dc:creator <https://orcid.org/0000-0002-3092-0532>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-8501-6700>;
+	 dc:creator <https://orcid.org/0000-0002-8501-6700>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <https://nfdi.fiz-karlsruhe.de/ontology/3.0.4>;
+	 prov:wasGeneratedAt "2026-04-30";
+.
